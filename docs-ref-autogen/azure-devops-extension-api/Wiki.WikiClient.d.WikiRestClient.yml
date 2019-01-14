@@ -1,0 +1,504 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient
+    name: WikiRestClient
+    fullName: WikiRestClient
+    children:
+      - >-
+        azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.createOrUpdatePageViewStats
+      - azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.createWiki
+      - azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.deleteWiki
+      - azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getAllWikis
+      - >-
+        azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getPageByIdText
+      - >-
+        azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getPageByIdZip
+      - azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getPageText
+      - azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getPageZip
+      - azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getWiki
+      - >-
+        azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.RESOURCE_AREA_ID
+      - azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.updateWiki
+      - azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: azure-devops-extension-api.Common.RestClientBase.d.RestClientBase
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.createOrUpdatePageViewStats
+    name: >-
+      createOrUpdatePageViewStats(string, string, GitVersionDescriptor, string,
+      string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Creates a new page view stats resource or updates an existing page view
+      stats resource.
+    syntax:
+      content: >-
+        function createOrUpdatePageViewStats(project: string, wikiIdentifier:
+        string, wikiVersion: GitVersionDescriptor, path: string, oldPath?:
+        string)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: wikiIdentifier
+          type:
+            - string
+          description: Wiki name or Id.
+        - id: wikiVersion
+          type:
+            - azure-devops-extension-api.Git.Git.d.GitVersionDescriptor
+          description: Wiki version.
+        - id: path
+          type:
+            - string
+          description: Wiki page path.
+        - id: oldPath
+          type:
+            - string
+          description: >
+            Old page path. This is optional and required to rename path in
+            existing page view stats.
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Wiki.Wiki.d.WikiPageViewStats>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.createWiki
+    name: 'createWiki(WikiCreateParametersV2, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Creates the wiki resource.
+    syntax:
+      content: >-
+        function createWiki(wikiCreateParams: WikiCreateParametersV2, project?:
+        string)
+      parameters:
+        - id: wikiCreateParams
+          type:
+            - azure-devops-extension-api.Wiki.Wiki.d.WikiCreateParametersV2
+          description: Parameters for the wiki creation.
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Wiki.Wiki.d.WikiV2>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.deleteWiki
+    name: 'deleteWiki(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Deletes the wiki corresponding to the wiki name or Id provided.
+    syntax:
+      content: 'function deleteWiki(wikiIdentifier: string, project?: string)'
+      parameters:
+        - id: wikiIdentifier
+          type:
+            - string
+          description: Wiki name or Id.
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Wiki.Wiki.d.WikiV2>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getAllWikis
+    name: getAllWikis(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets all wikis in a project or collection.
+    syntax:
+      content: 'function getAllWikis(project?: string)'
+      parameters:
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      return:
+        type:
+          - 'Promise<azure-devops-extension-api.Wiki.Wiki.d.WikiV2[]>'
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getPageByIdText
+    name: >-
+      getPageByIdText(string, string, number, VersionControlRecursionType,
+      boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets metadata or content of the wiki page for the provided page id.
+      Content negotiation is done based on the \`Accept\` header sent in the
+      request.
+    syntax:
+      content: >-
+        function getPageByIdText(project: string, wikiIdentifier: string, id:
+        number, recursionLevel?: VersionControlRecursionType, includeContent?:
+        boolean)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: wikiIdentifier
+          type:
+            - string
+          description: Wiki Id or name.
+        - id: id
+          type:
+            - number
+          description: Wiki page id.
+        - id: recursionLevel
+          type:
+            - azure-devops-extension-api.Git.Git.d.VersionControlRecursionType
+          description: >-
+            Recursion level for subpages retrieval. Defaults to \`None\`
+            (Optional).
+          optional: true
+        - id: includeContent
+          type:
+            - boolean
+          description: >
+            True to include the content of the page in the response for Json
+            content type. Defaults to false (Optional)
+          optional: true
+      return:
+        type:
+          - Promise<string>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getPageByIdZip
+    name: >-
+      getPageByIdZip(string, string, number, VersionControlRecursionType,
+      boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets metadata or content of the wiki page for the provided page id.
+      Content negotiation is done based on the \`Accept\` header sent in the
+      request.
+    syntax:
+      content: >-
+        function getPageByIdZip(project: string, wikiIdentifier: string, id:
+        number, recursionLevel?: VersionControlRecursionType, includeContent?:
+        boolean)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: wikiIdentifier
+          type:
+            - string
+          description: Wiki Id or name.
+        - id: id
+          type:
+            - number
+          description: Wiki page id.
+        - id: recursionLevel
+          type:
+            - azure-devops-extension-api.Git.Git.d.VersionControlRecursionType
+          description: >-
+            Recursion level for subpages retrieval. Defaults to \`None\`
+            (Optional).
+          optional: true
+        - id: includeContent
+          type:
+            - boolean
+          description: >
+            True to include the content of the page in the response for Json
+            content type. Defaults to false (Optional)
+          optional: true
+      return:
+        type:
+          - Promise<ArrayBuffer>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getPageText
+    name: >-
+      getPageText(string, string, string, VersionControlRecursionType,
+      GitVersionDescriptor, boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets metadata or content of the wiki page for the provided path. Content
+      negotiation is done based on the \`Accept\` header sent in the request.
+    syntax:
+      content: >-
+        function getPageText(project: string, wikiIdentifier: string, path?:
+        string, recursionLevel?: VersionControlRecursionType,
+        versionDescriptor?: GitVersionDescriptor, includeContent?: boolean)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: wikiIdentifier
+          type:
+            - string
+          description: Wiki Id or name.
+        - id: path
+          type:
+            - string
+          description: Wiki page path.
+          optional: true
+        - id: recursionLevel
+          type:
+            - azure-devops-extension-api.Git.Git.d.VersionControlRecursionType
+          description: >-
+            Recursion level for subpages retrieval. Defaults to \`None\`
+            (Optional).
+          optional: true
+        - id: versionDescriptor
+          type:
+            - azure-devops-extension-api.Git.Git.d.GitVersionDescriptor
+          description: >-
+            GitVersionDescriptor for the page. Defaults to the default branch
+            (Optional).
+          optional: true
+        - id: includeContent
+          type:
+            - boolean
+          description: >
+            True to include the content of the page in the response for Json
+            content type. Defaults to false (Optional)
+          optional: true
+      return:
+        type:
+          - Promise<string>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getPageZip
+    name: >-
+      getPageZip(string, string, string, VersionControlRecursionType,
+      GitVersionDescriptor, boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets metadata or content of the wiki page for the provided path. Content
+      negotiation is done based on the \`Accept\` header sent in the request.
+    syntax:
+      content: >-
+        function getPageZip(project: string, wikiIdentifier: string, path?:
+        string, recursionLevel?: VersionControlRecursionType,
+        versionDescriptor?: GitVersionDescriptor, includeContent?: boolean)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: wikiIdentifier
+          type:
+            - string
+          description: Wiki Id or name.
+        - id: path
+          type:
+            - string
+          description: Wiki page path.
+          optional: true
+        - id: recursionLevel
+          type:
+            - azure-devops-extension-api.Git.Git.d.VersionControlRecursionType
+          description: >-
+            Recursion level for subpages retrieval. Defaults to \`None\`
+            (Optional).
+          optional: true
+        - id: versionDescriptor
+          type:
+            - azure-devops-extension-api.Git.Git.d.GitVersionDescriptor
+          description: >-
+            GitVersionDescriptor for the page. Defaults to the default branch
+            (Optional).
+          optional: true
+        - id: includeContent
+          type:
+            - boolean
+          description: >
+            True to include the content of the page in the response for Json
+            content type. Defaults to false (Optional)
+          optional: true
+      return:
+        type:
+          - Promise<ArrayBuffer>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.getWiki
+    name: 'getWiki(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the wiki corresponding to the wiki name or Id provided.
+    syntax:
+      content: 'function getWiki(wikiIdentifier: string, project?: string)'
+      parameters:
+        - id: wikiIdentifier
+          type:
+            - string
+          description: Wiki name or id.
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Wiki.Wiki.d.WikiV2>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.RESOURCE_AREA_ID
+    name: RESOURCE_AREA_ID
+    fullName: RESOURCE_AREA_ID
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'static RESOURCE_AREA_ID: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.updateWiki
+    name: 'updateWiki(WikiUpdateParameters, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Updates the wiki corresponding to the wiki Id or name provided using the
+      update parameters.
+    syntax:
+      content: >-
+        function updateWiki(updateParameters: WikiUpdateParameters,
+        wikiIdentifier: string, project?: string)
+      parameters:
+        - id: updateParameters
+          type:
+            - azure-devops-extension-api.Wiki.Wiki.d.WikiUpdateParameters
+          description: Update parameters.
+        - id: wikiIdentifier
+          type:
+            - string
+          description: Wiki name or Id.
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Wiki.Wiki.d.WikiV2>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Wiki.WikiClient.d.WikiRestClient.constructor
+    name: WikiRestClient(IVssRestClientOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new WikiRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-devops-extension-api.Common.Context.d.IVssRestClientOptions
+          description: ''
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.Common.RestClientBase.d.RestClientBase
+    name: RestClientBase
+    spec.typeScript:
+      - name: RestClientBase
+        fullName: RestClientBase
+        uid: azure-devops-extension-api.Common.RestClientBase.d.RestClientBase
+  - uid: azure-devops-extension-api.Common.Context.d.IVssRestClientOptions
+    name: IVssRestClientOptions
+    spec.typeScript:
+      - name: IVssRestClientOptions
+        fullName: IVssRestClientOptions
+        uid: azure-devops-extension-api.Common.Context.d.IVssRestClientOptions
+  - uid: azure-devops-extension-api.Git.Git.d.GitVersionDescriptor
+    name: GitVersionDescriptor
+    spec.typeScript:
+      - name: GitVersionDescriptor
+        fullName: GitVersionDescriptor
+        uid: azure-devops-extension-api.Git.Git.d.GitVersionDescriptor
+  - uid: Promise<azure-devops-extension-api.Wiki.Wiki.d.WikiPageViewStats>
+    name: WikiPageViewStats>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: WikiPageViewStats
+        fullName: WikiPageViewStats
+        uid: azure-devops-extension-api.Wiki.Wiki.d.WikiPageViewStats
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.Wiki.Wiki.d.WikiCreateParametersV2
+    name: WikiCreateParametersV2
+    spec.typeScript:
+      - name: WikiCreateParametersV2
+        fullName: WikiCreateParametersV2
+        uid: azure-devops-extension-api.Wiki.Wiki.d.WikiCreateParametersV2
+  - uid: Promise<azure-devops-extension-api.Wiki.Wiki.d.WikiV2>
+    name: WikiV2>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: WikiV2
+        fullName: WikiV2
+        uid: azure-devops-extension-api.Wiki.Wiki.d.WikiV2
+      - name: '>'
+        fullName: '>'
+  - uid: 'Promise<azure-devops-extension-api.Wiki.Wiki.d.WikiV2[]>'
+    name: 'WikiV2[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: WikiV2
+        fullName: WikiV2
+        uid: azure-devops-extension-api.Wiki.Wiki.d.WikiV2
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: azure-devops-extension-api.Git.Git.d.VersionControlRecursionType
+    name: VersionControlRecursionType
+    spec.typeScript:
+      - name: VersionControlRecursionType
+        fullName: VersionControlRecursionType
+        uid: azure-devops-extension-api.Git.Git.d.VersionControlRecursionType
+  - uid: azure-devops-extension-api.Wiki.Wiki.d.WikiUpdateParameters
+    name: WikiUpdateParameters
+    spec.typeScript:
+      - name: WikiUpdateParameters
+        fullName: WikiUpdateParameters
+        uid: azure-devops-extension-api.Wiki.Wiki.d.WikiUpdateParameters

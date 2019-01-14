@@ -1,0 +1,344 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-sdk.SDK.d
+    name: SDK.d
+    fullName: SDK.d
+    children:
+      - azure-devops-extension-sdk.SDK.d.applyTheme
+      - azure-devops-extension-sdk.SDK.d.getAccessToken
+      - azure-devops-extension-sdk.SDK.d.getAppToken
+      - azure-devops-extension-sdk.SDK.d.getConfiguration
+      - azure-devops-extension-sdk.SDK.d.getContributionId
+      - azure-devops-extension-sdk.SDK.d.getExtensionContext
+      - azure-devops-extension-sdk.SDK.d.getHost
+      - azure-devops-extension-sdk.SDK.d.getService
+      - azure-devops-extension-sdk.SDK.d.getUser
+      - azure-devops-extension-sdk.SDK.d.HostType
+      - azure-devops-extension-sdk.SDK.d.IExtensionContext
+      - azure-devops-extension-sdk.SDK.d.IExtensionInitOptions
+      - azure-devops-extension-sdk.SDK.d.IHostContext
+      - azure-devops-extension-sdk.SDK.d.init
+      - azure-devops-extension-sdk.SDK.d.IUserContext
+      - azure-devops-extension-sdk.SDK.d.notifyLoadFailed
+      - azure-devops-extension-sdk.SDK.d.notifyLoadSucceeded
+      - azure-devops-extension-sdk.SDK.d.ready
+      - azure-devops-extension-sdk.SDK.d.register
+      - azure-devops-extension-sdk.SDK.d.resize
+      - azure-devops-extension-sdk.SDK.d.unregister
+    langs:
+      - typeScript
+    type: external module
+    summary: ''
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.applyTheme
+    name: 'applyTheme([key: string]: string)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Applies theme variables to the current document
+    syntax:
+      content: 'function applyTheme(themeData: [key: string]: string)'
+      parameters:
+        - id: themeData
+          type:
+            - '[key: string]: string'
+          description: ''
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.getAccessToken
+    name: getAccessToken()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Fetch an access token which will allow calls to be made to other DevOps
+      services
+    syntax:
+      content: function getAccessToken()
+      parameters: []
+      return:
+        type:
+          - Promise<string>
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.getAppToken
+    name: getAppToken()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Fetch an token which can be used to identify the current user
+    syntax:
+      content: function getAppToken()
+      parameters: []
+      return:
+        type:
+          - Promise<string>
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.getConfiguration
+    name: getConfiguration()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get the configuration data passed in the initial handshake from the parent
+      frame
+    syntax:
+      content: function getConfiguration()
+      parameters: []
+      return:
+        type:
+          - '[key: string]: any'
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.getContributionId
+    name: getContributionId()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Gets the information about the contribution that first caused this
+      extension to load.
+    syntax:
+      content: function getContributionId()
+      parameters: []
+      return:
+        type:
+          - string
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.getExtensionContext
+    name: getExtensionContext()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get the context about the extension that owns the content that is being
+      hosted
+    syntax:
+      content: function getExtensionContext()
+      parameters: []
+      return:
+        type:
+          - azure-devops-extension-sdk.SDK.d.IExtensionContext
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.getHost
+    name: getHost()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Gets information about the host (i.e. an Azure DevOps organization) that
+      the page is targeting
+    syntax:
+      content: function getHost()
+      parameters: []
+      return:
+        type:
+          - azure-devops-extension-sdk.SDK.d.IHostContext
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.getService
+    name: getService(string)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get the contribution with the given contribution id. The returned
+      contribution has a method to get a registered object within that
+      contribution.
+    syntax:
+      content: 'function getService<T>(contributionId: string)'
+      parameters:
+        - id: contributionId
+          type:
+            - string
+          description: |
+            Id of the contribution to get
+      return:
+        type:
+          - Promise<T>
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.getUser
+    name: getUser()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets information about the current user
+    syntax:
+      content: function getUser()
+      parameters: []
+      return:
+        type:
+          - azure-devops-extension-sdk.SDK.d.IUserContext
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.init
+    name: init(IExtensionInitOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Initiates the handshake with the host window.
+    syntax:
+      content: 'function init(options?: IExtensionInitOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-devops-extension-sdk.SDK.d.IExtensionInitOptions
+          description: |
+            Initialization options for the extension.
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.notifyLoadFailed
+    name: notifyLoadFailed(Error | string)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Notifies the host that the extension failed to load
+    syntax:
+      content: 'function notifyLoadFailed(e: Error | string)'
+      parameters:
+        - id: e
+          type:
+            - Error | string
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.notifyLoadSucceeded
+    name: notifyLoadSucceeded()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Notifies the host that the extension successfully loaded (stop showing the
+      loading indicator)
+    syntax:
+      content: function notifyLoadSucceeded()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.ready
+    name: ready()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Register a callback that gets called once the initial setup/handshake has
+      completed.
+
+      If the initial setup is already completed, the callback is invoked at the
+      end of the current call stack.
+    syntax:
+      content: function ready()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.register
+    name: 'register(string, T)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Register an object (instance or factory method) that this extension
+      exposes to the host frame.
+    syntax:
+      content: 'function register<T>(instanceId: string, instance: T)'
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: unique id of the registered object
+        - id: instance
+          type:
+            - T
+          description: >
+            Either: (1) an object instance, or (2) a function that takes
+            optional context data and returns an object instance.
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.resize
+    name: 'resize(number, number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Requests the parent window to resize the container for this extension
+      based on the current extension size.
+    syntax:
+      content: 'function resize(width?: number, height?: number)'
+      parameters:
+        - id: width
+          type:
+            - number
+          description: 'Optional width, defaults to scrollWidth'
+          optional: true
+        - id: height
+          type:
+            - number
+          description: |
+            Optional height, defaults to scrollHeight
+          optional: true
+    package: azure-devops-extension-sdk
+  - uid: azure-devops-extension-sdk.SDK.d.unregister
+    name: unregister(string)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Removes an object that this extension exposed to the host frame.
+    syntax:
+      content: 'function unregister(instanceId: string)'
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: |
+            unique id of the registered object
+    package: azure-devops-extension-sdk
+references:
+  - uid: azure-devops-extension-sdk.SDK.d.HostType
+    name: HostType
+    spec.typeScript:
+      - name: HostType
+        fullName: HostType
+        uid: azure-devops-extension-sdk.SDK.d.HostType
+  - uid: azure-devops-extension-sdk.SDK.d.IExtensionContext
+    name: IExtensionContext
+    spec.typeScript:
+      - name: IExtensionContext
+        fullName: IExtensionContext
+        uid: azure-devops-extension-sdk.SDK.d.IExtensionContext
+  - uid: azure-devops-extension-sdk.SDK.d.IHostContext
+    name: IHostContext
+    spec.typeScript:
+      - name: IHostContext
+        fullName: IHostContext
+        uid: azure-devops-extension-sdk.SDK.d.IHostContext
+  - uid: azure-devops-extension-sdk.SDK.d.IUserContext
+    name: IUserContext
+    spec.typeScript:
+      - name: IUserContext
+        fullName: IUserContext
+        uid: azure-devops-extension-sdk.SDK.d.IUserContext
+  - uid: azure-devops-extension-sdk.SDK.d.IExtensionInitOptions
+    name: IExtensionInitOptions
+    spec.typeScript:
+      - name: IExtensionInitOptions
+        fullName: IExtensionInitOptions
+        uid: azure-devops-extension-sdk.SDK.d.IExtensionInitOptions

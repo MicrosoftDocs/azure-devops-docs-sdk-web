@@ -1,0 +1,948 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient
+    name: ServiceHooksRestClient
+    fullName: ServiceHooksRestClient
+    children:
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.createSubscription
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.createSubscriptionsQuery
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.createTestNotification
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.deleteSubscription
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getConsumer
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getConsumerAction
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getEventType
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getNotification
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getNotifications
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getPublisher
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getSubscription
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getSubscriptionDiagnostics
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listConsumerActions
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listConsumers
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listEventTypes
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listPublishers
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listSubscriptions
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.publishExternalEvent
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.queryInputValues
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.queryNotifications
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.queryPublishers
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.replaceSubscription
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.constructor
+      - >-
+        azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.updateSubscriptionDiagnostics
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: azure-devops-extension-api.Common.RestClientBase.d.RestClientBase
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.createSubscription
+    name: createSubscription(Subscription)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Create a subscription.
+    syntax:
+      content: 'function createSubscription(subscription: Subscription)'
+      parameters:
+        - id: subscription
+          type:
+            - >-
+              azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription
+          description: |
+            Subscription to be created.
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.createSubscriptionsQuery
+    name: createSubscriptionsQuery(SubscriptionsQuery)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Query for service hook subscriptions.
+    syntax:
+      content: 'function createSubscriptionsQuery(query: SubscriptionsQuery)'
+      parameters:
+        - id: query
+          type:
+            - >-
+              azure-devops-extension-api.ServiceHooks.ServiceHooks.d.SubscriptionsQuery
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.SubscriptionsQuery>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.createTestNotification
+    name: 'createTestNotification(Notification, boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Sends a test notification. This is useful for verifying the configuration
+      of an updated or new service hooks subscription.
+    syntax:
+      content: >-
+        function createTestNotification(testNotification: Notification,
+        useRealData?: boolean)
+      parameters:
+        - id: testNotification
+          type:
+            - >-
+              azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification
+          description: '-'
+        - id: useRealData
+          type:
+            - boolean
+          description: |
+            Only allow testing with real data in existing subscriptions.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.deleteSubscription
+    name: deleteSubscription(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Delete a specific service hooks subscription.
+    syntax:
+      content: 'function deleteSubscription(subscriptionId: string)'
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: |
+            ID for a subscription.
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getConsumer
+    name: 'getConsumer(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Get a specific consumer service. Optionally filter out consumer actions
+      that do not support any event types for the specified publisher.
+    syntax:
+      content: 'function getConsumer(consumerId: string, publisherId?: string)'
+      parameters:
+        - id: consumerId
+          type:
+            - string
+          description: ID for a consumer.
+        - id: publisherId
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Consumer>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getConsumerAction
+    name: 'getConsumerAction(string, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get details about a specific consumer action.
+    syntax:
+      content: >-
+        function getConsumerAction(consumerId: string, consumerActionId: string,
+        publisherId?: string)
+      parameters:
+        - id: consumerId
+          type:
+            - string
+          description: ID for a consumer.
+        - id: consumerActionId
+          type:
+            - string
+          description: ID for a consumerActionId.
+        - id: publisherId
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.ConsumerAction>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getEventType
+    name: 'getEventType(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get a specific event type.
+    syntax:
+      content: 'function getEventType(publisherId: string, eventTypeId: string)'
+      parameters:
+        - id: publisherId
+          type:
+            - string
+          description: ID for a publisher.
+        - id: eventTypeId
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.EventTypeDescriptor>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getNotification
+    name: 'getNotification(string, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get a specific notification for a subscription.
+    syntax:
+      content: 'function getNotification(subscriptionId: string, notificationId: number)'
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: ID for a subscription.
+        - id: notificationId
+          type:
+            - number
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getNotifications
+    name: 'getNotifications(string, number, NotificationStatus, NotificationResult)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Get a list of notifications for a specific subscription. A notification
+      includes details about the event, the request to and the response from the
+      consumer service.
+    syntax:
+      content: >-
+        function getNotifications(subscriptionId: string, maxResults?: number,
+        status?: NotificationStatus, result?: NotificationResult)
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: ID for a subscription.
+        - id: maxResults
+          type:
+            - number
+          description: Maximum number of notifications to return. Default is **100**.
+          optional: true
+        - id: status
+          type:
+            - >-
+              azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationStatus
+          description: Get only notifications with this status.
+          optional: true
+        - id: result
+          type:
+            - >-
+              azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationResult
+          description: |
+            Get only notifications with this result type.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getPublisher
+    name: getPublisher(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get a specific service hooks publisher.
+    syntax:
+      content: 'function getPublisher(publisherId: string)'
+      parameters:
+        - id: publisherId
+          type:
+            - string
+          description: |
+            ID for a publisher.
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Publisher>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getSubscription
+    name: getSubscription(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get a specific service hooks subscription.
+    syntax:
+      content: 'function getSubscription(subscriptionId: string)'
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: |
+            ID for a subscription.
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.getSubscriptionDiagnostics
+    name: getSubscriptionDiagnostics(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getSubscriptionDiagnostics(subscriptionId: string)'
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.Notification.Notification.d.SubscriptionDiagnostics>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listConsumerActions
+    name: 'listConsumerActions(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get a list of consumer actions for a specific consumer.
+    syntax:
+      content: 'function listConsumerActions(consumerId: string, publisherId?: string)'
+      parameters:
+        - id: consumerId
+          type:
+            - string
+          description: ID for a consumer.
+        - id: publisherId
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.ConsumerAction[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listConsumers
+    name: listConsumers(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Get a list of available service hook consumer services. Optionally filter
+      by consumers that support at least one event type from the specific
+      publisher.
+    syntax:
+      content: 'function listConsumers(publisherId?: string)'
+      parameters:
+        - id: publisherId
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Consumer[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listEventTypes
+    name: listEventTypes(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get the event types for a specific publisher.
+    syntax:
+      content: 'function listEventTypes(publisherId: string)'
+      parameters:
+        - id: publisherId
+          type:
+            - string
+          description: |
+            ID for a publisher.
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.EventTypeDescriptor[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listPublishers
+    name: listPublishers()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get a list of publishers.
+    syntax:
+      content: function listPublishers()
+      parameters: []
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Publisher[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.listSubscriptions
+    name: 'listSubscriptions(string, string, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get a list of subscriptions.
+    syntax:
+      content: >-
+        function listSubscriptions(publisherId?: string, eventType?: string,
+        consumerId?: string, consumerActionId?: string)
+      parameters:
+        - id: publisherId
+          type:
+            - string
+          description: ID for a subscription.
+          optional: true
+        - id: eventType
+          type:
+            - string
+          description: Maximum number of notifications to return. Default is 100.
+          optional: true
+        - id: consumerId
+          type:
+            - string
+          description: ID for a consumer.
+          optional: true
+        - id: consumerActionId
+          type:
+            - string
+          description: |
+            ID for a consumerActionId.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.publishExternalEvent
+    name: 'publishExternalEvent(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Publish an external event.
+    syntax:
+      content: 'function publishExternalEvent(publisherId: string, channelId?: string)'
+      parameters:
+        - id: publisherId
+          type:
+            - string
+          description: '-'
+        - id: channelId
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.PublisherEvent[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.queryInputValues
+    name: 'queryInputValues(InputValuesQuery, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function queryInputValues(inputValuesQuery: InputValuesQuery,
+        publisherId: string)
+      parameters:
+        - id: inputValuesQuery
+          type:
+            - azure-devops-extension-api.FormInput.FormInput.d.InputValuesQuery
+          description: '-'
+        - id: publisherId
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.FormInput.FormInput.d.InputValuesQuery>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.queryNotifications
+    name: queryNotifications(NotificationsQuery)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Query for notifications. A notification includes details about the event,
+      the request to and the response from the consumer service.
+    syntax:
+      content: 'function queryNotifications(query: NotificationsQuery)'
+      parameters:
+        - id: query
+          type:
+            - >-
+              azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationsQuery
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationsQuery>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.queryPublishers
+    name: queryPublishers(PublishersQuery)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Query for service hook publishers.
+    syntax:
+      content: 'function queryPublishers(query: PublishersQuery)'
+      parameters:
+        - id: query
+          type:
+            - >-
+              azure-devops-extension-api.ServiceHooks.ServiceHooks.d.PublishersQuery
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.PublishersQuery>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.replaceSubscription
+    name: 'replaceSubscription(Subscription, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Update a subscription. \<param name="subscriptionId"\>ID for a
+      subscription that you wish to update.\</param\>
+    syntax:
+      content: >-
+        function replaceSubscription(subscription: Subscription,
+        subscriptionId?: string)
+      parameters:
+        - id: subscription
+          type:
+            - >-
+              azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription
+          description: '-'
+        - id: subscriptionId
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.constructor
+    name: ServiceHooksRestClient(IVssRestClientOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new ServiceHooksRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-devops-extension-api.Common.Context.d.IVssRestClientOptions
+          description: ''
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ServiceHooks.ServiceHooksClient.d.ServiceHooksRestClient.updateSubscriptionDiagnostics
+    name: >-
+      updateSubscriptionDiagnostics(UpdateSubscripitonDiagnosticsParameters,
+      string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateSubscriptionDiagnostics(updateParameters:
+        UpdateSubscripitonDiagnosticsParameters, subscriptionId: string)
+      parameters:
+        - id: updateParameters
+          type:
+            - >-
+              azure-devops-extension-api.Notification.Notification.d.UpdateSubscripitonDiagnosticsParameters
+          description: '-'
+        - id: subscriptionId
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.Notification.Notification.d.SubscriptionDiagnostics>
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.Common.RestClientBase.d.RestClientBase
+    name: RestClientBase
+    spec.typeScript:
+      - name: RestClientBase
+        fullName: RestClientBase
+        uid: azure-devops-extension-api.Common.RestClientBase.d.RestClientBase
+  - uid: azure-devops-extension-api.Common.Context.d.IVssRestClientOptions
+    name: IVssRestClientOptions
+    spec.typeScript:
+      - name: IVssRestClientOptions
+        fullName: IVssRestClientOptions
+        uid: azure-devops-extension-api.Common.Context.d.IVssRestClientOptions
+  - uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription
+    name: Subscription
+    spec.typeScript:
+      - name: Subscription
+        fullName: Subscription
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription>
+    name: Subscription>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Subscription
+        fullName: Subscription
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.SubscriptionsQuery
+    name: SubscriptionsQuery
+    spec.typeScript:
+      - name: SubscriptionsQuery
+        fullName: SubscriptionsQuery
+        uid: >-
+          azure-devops-extension-api.ServiceHooks.ServiceHooks.d.SubscriptionsQuery
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.SubscriptionsQuery>
+    name: SubscriptionsQuery>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SubscriptionsQuery
+        fullName: SubscriptionsQuery
+        uid: >-
+          azure-devops-extension-api.ServiceHooks.ServiceHooks.d.SubscriptionsQuery
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification
+    name: Notification
+    spec.typeScript:
+      - name: Notification
+        fullName: Notification
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification>
+    name: Notification>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Notification
+        fullName: Notification
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Consumer>
+    name: Consumer>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Consumer
+        fullName: Consumer
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Consumer
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.ConsumerAction>
+    name: ConsumerAction>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ConsumerAction
+        fullName: ConsumerAction
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.ConsumerAction
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.EventTypeDescriptor>
+    name: EventTypeDescriptor>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventTypeDescriptor
+        fullName: EventTypeDescriptor
+        uid: >-
+          azure-devops-extension-api.ServiceHooks.ServiceHooks.d.EventTypeDescriptor
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationStatus
+    name: NotificationStatus
+    spec.typeScript:
+      - name: NotificationStatus
+        fullName: NotificationStatus
+        uid: >-
+          azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationStatus
+  - uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationResult
+    name: NotificationResult
+    spec.typeScript:
+      - name: NotificationResult
+        fullName: NotificationResult
+        uid: >-
+          azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationResult
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification[]>
+    name: 'Notification[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Notification
+        fullName: Notification
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Notification
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Publisher>
+    name: Publisher>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Publisher
+        fullName: Publisher
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Publisher
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<azure-devops-extension-api.Notification.Notification.d.SubscriptionDiagnostics>
+    name: SubscriptionDiagnostics>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SubscriptionDiagnostics
+        fullName: SubscriptionDiagnostics
+        uid: >-
+          azure-devops-extension-api.Notification.Notification.d.SubscriptionDiagnostics
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.ConsumerAction[]>
+    name: 'ConsumerAction[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ConsumerAction
+        fullName: ConsumerAction
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.ConsumerAction
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Consumer[]>'
+    name: 'Consumer[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Consumer
+        fullName: Consumer
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Consumer
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.EventTypeDescriptor[]>
+    name: 'EventTypeDescriptor[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventTypeDescriptor
+        fullName: EventTypeDescriptor
+        uid: >-
+          azure-devops-extension-api.ServiceHooks.ServiceHooks.d.EventTypeDescriptor
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Publisher[]>
+    name: 'Publisher[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Publisher
+        fullName: Publisher
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Publisher
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription[]>
+    name: 'Subscription[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Subscription
+        fullName: Subscription
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.Subscription
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.PublisherEvent[]>
+    name: 'PublisherEvent[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: PublisherEvent
+        fullName: PublisherEvent
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.PublisherEvent
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: azure-devops-extension-api.FormInput.FormInput.d.InputValuesQuery
+    name: InputValuesQuery
+    spec.typeScript:
+      - name: InputValuesQuery
+        fullName: InputValuesQuery
+        uid: azure-devops-extension-api.FormInput.FormInput.d.InputValuesQuery
+  - uid: Promise<azure-devops-extension-api.FormInput.FormInput.d.InputValuesQuery>
+    name: InputValuesQuery>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: InputValuesQuery
+        fullName: InputValuesQuery
+        uid: azure-devops-extension-api.FormInput.FormInput.d.InputValuesQuery
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationsQuery
+    name: NotificationsQuery
+    spec.typeScript:
+      - name: NotificationsQuery
+        fullName: NotificationsQuery
+        uid: >-
+          azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationsQuery
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationsQuery>
+    name: NotificationsQuery>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: NotificationsQuery
+        fullName: NotificationsQuery
+        uid: >-
+          azure-devops-extension-api.ServiceHooks.ServiceHooks.d.NotificationsQuery
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.PublishersQuery
+    name: PublishersQuery
+    spec.typeScript:
+      - name: PublishersQuery
+        fullName: PublishersQuery
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.PublishersQuery
+  - uid: >-
+      Promise<azure-devops-extension-api.ServiceHooks.ServiceHooks.d.PublishersQuery>
+    name: PublishersQuery>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: PublishersQuery
+        fullName: PublishersQuery
+        uid: azure-devops-extension-api.ServiceHooks.ServiceHooks.d.PublishersQuery
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      azure-devops-extension-api.Notification.Notification.d.UpdateSubscripitonDiagnosticsParameters
+    name: UpdateSubscripitonDiagnosticsParameters
+    spec.typeScript:
+      - name: UpdateSubscripitonDiagnosticsParameters
+        fullName: UpdateSubscripitonDiagnosticsParameters
+        uid: >-
+          azure-devops-extension-api.Notification.Notification.d.UpdateSubscripitonDiagnosticsParameters

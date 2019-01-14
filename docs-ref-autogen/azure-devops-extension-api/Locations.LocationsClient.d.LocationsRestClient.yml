@@ -1,0 +1,388 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient
+    name: LocationsRestClient
+    fullName: LocationsRestClient
+    children:
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.deleteServiceDefinition
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getConnectionData
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getResourceArea
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getResourceAreaByHost
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getResourceAreas
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getResourceAreasByHost
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getServiceDefinition
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getServiceDefinitions
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.constructor
+      - >-
+        azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.updateServiceDefinitions
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: azure-devops-extension-api.Common.RestClientBase.d.RestClientBase
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.deleteServiceDefinition
+    name: 'deleteServiceDefinition(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function deleteServiceDefinition(serviceType: string, identifier:
+        string)
+      parameters:
+        - id: serviceType
+          type:
+            - string
+          description: '-'
+        - id: identifier
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getConnectionData
+    name: 'getConnectionData(ConnectOptions, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: This was copied and adapted from TeamFoundationConnectionService.Connect()
+    syntax:
+      content: >-
+        function getConnectionData(connectOptions?: ConnectOptions,
+        lastChangeId?: number, lastChangeId64?: number)
+      parameters:
+        - id: connectOptions
+          type:
+            - azure-devops-extension-api.WebApi.WebApi.d.ConnectOptions
+          description: '-'
+          optional: true
+        - id: lastChangeId
+          type:
+            - number
+          description: Obsolete 32-bit LastChangeId
+          optional: true
+        - id: lastChangeId64
+          type:
+            - number
+          description: |
+            Non-truncated 64-bit LastChangeId
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.Locations.Locations.d.ConnectionData>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getResourceArea
+    name: 'getResourceArea(string, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getResourceArea(areaId: string, enterpriseName?: string,
+        organizationName?: string)
+      parameters:
+        - id: areaId
+          type:
+            - string
+          description: '-'
+        - id: enterpriseName
+          type:
+            - string
+          description: '-'
+          optional: true
+        - id: organizationName
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.Locations.Locations.d.ResourceAreaInfo>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getResourceAreaByHost
+    name: 'getResourceAreaByHost(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getResourceAreaByHost(areaId: string, hostId: string)'
+      parameters:
+        - id: areaId
+          type:
+            - string
+          description: '-'
+        - id: hostId
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.Locations.Locations.d.ResourceAreaInfo>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getResourceAreas
+    name: 'getResourceAreas(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getResourceAreas(enterpriseName?: string, organizationName?:
+        string)
+      parameters:
+        - id: enterpriseName
+          type:
+            - string
+          description: '-'
+          optional: true
+        - id: organizationName
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.Locations.Locations.d.ResourceAreaInfo[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getResourceAreasByHost
+    name: getResourceAreasByHost(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getResourceAreasByHost(hostId: string)'
+      parameters:
+        - id: hostId
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.Locations.Locations.d.ResourceAreaInfo[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getServiceDefinition
+    name: 'getServiceDefinition(string, string, boolean, boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Finds a given service definition.
+    syntax:
+      content: >-
+        function getServiceDefinition(serviceType: string, identifier: string,
+        allowFaultIn?: boolean, previewFaultIn?: boolean)
+      parameters:
+        - id: serviceType
+          type:
+            - string
+          description: '-'
+        - id: identifier
+          type:
+            - string
+          description: '-'
+        - id: allowFaultIn
+          type:
+            - boolean
+          description: >-
+            If true, we will attempt to fault in a host instance mapping if in
+            SPS.
+          optional: true
+        - id: previewFaultIn
+          type:
+            - boolean
+          description: >
+            If true, we will calculate and return a host instance mapping, but
+            not persist it.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.Locations.Locations.d.ServiceDefinition>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.getServiceDefinitions
+    name: getServiceDefinitions(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getServiceDefinitions(serviceType?: string)'
+      parameters:
+        - id: serviceType
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-devops-extension-api.Locations.Locations.d.ServiceDefinition[]>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.constructor
+    name: LocationsRestClient(IVssRestClientOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new LocationsRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-devops-extension-api.Common.Context.d.IVssRestClientOptions
+          description: ''
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Locations.LocationsClient.d.LocationsRestClient.updateServiceDefinitions
+    name: 'updateServiceDefinitions(VssJsonCollectionWrapperV<ServiceDefinition[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateServiceDefinitions(serviceDefinitions:
+        VssJsonCollectionWrapperV<ServiceDefinition[]>)
+      parameters:
+        - id: serviceDefinitions
+          type:
+            - >-
+              azure-devops-extension-api.WebApi.WebApi.d.VssJsonCollectionWrapperV<azure-devops-extension-api.Locations.Locations.d.ServiceDefinition[]>
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.Common.RestClientBase.d.RestClientBase
+    name: RestClientBase
+    spec.typeScript:
+      - name: RestClientBase
+        fullName: RestClientBase
+        uid: azure-devops-extension-api.Common.RestClientBase.d.RestClientBase
+  - uid: azure-devops-extension-api.Common.Context.d.IVssRestClientOptions
+    name: IVssRestClientOptions
+    spec.typeScript:
+      - name: IVssRestClientOptions
+        fullName: IVssRestClientOptions
+        uid: azure-devops-extension-api.Common.Context.d.IVssRestClientOptions
+  - uid: azure-devops-extension-api.WebApi.WebApi.d.ConnectOptions
+    name: ConnectOptions
+    spec.typeScript:
+      - name: ConnectOptions
+        fullName: ConnectOptions
+        uid: azure-devops-extension-api.WebApi.WebApi.d.ConnectOptions
+  - uid: Promise<azure-devops-extension-api.Locations.Locations.d.ConnectionData>
+    name: ConnectionData>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ConnectionData
+        fullName: ConnectionData
+        uid: azure-devops-extension-api.Locations.Locations.d.ConnectionData
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-devops-extension-api.Locations.Locations.d.ResourceAreaInfo>
+    name: ResourceAreaInfo>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ResourceAreaInfo
+        fullName: ResourceAreaInfo
+        uid: azure-devops-extension-api.Locations.Locations.d.ResourceAreaInfo
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<azure-devops-extension-api.Locations.Locations.d.ResourceAreaInfo[]>
+    name: 'ResourceAreaInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ResourceAreaInfo
+        fullName: ResourceAreaInfo
+        uid: azure-devops-extension-api.Locations.Locations.d.ResourceAreaInfo
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: >-
+      Promise<azure-devops-extension-api.Locations.Locations.d.ServiceDefinition>
+    name: ServiceDefinition>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceDefinition
+        fullName: ServiceDefinition
+        uid: azure-devops-extension-api.Locations.Locations.d.ServiceDefinition
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<azure-devops-extension-api.Locations.Locations.d.ServiceDefinition[]>
+    name: 'ServiceDefinition[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceDefinition
+        fullName: ServiceDefinition
+        uid: azure-devops-extension-api.Locations.Locations.d.ServiceDefinition
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: >-
+      azure-devops-extension-api.WebApi.WebApi.d.VssJsonCollectionWrapperV<azure-devops-extension-api.Locations.Locations.d.ServiceDefinition[]>
+    name: 'ServiceDefinition[]>'
+    spec.typeScript:
+      - name: VssJsonCollectionWrapperV
+        fullName: VssJsonCollectionWrapperV
+        uid: azure-devops-extension-api.WebApi.WebApi.d.VssJsonCollectionWrapperV
+      - name: <
+        fullName: <
+      - name: ServiceDefinition
+        fullName: ServiceDefinition
+        uid: azure-devops-extension-api.Locations.Locations.d.ServiceDefinition
+      - name: '[]>'
+        fullName: '[]>'

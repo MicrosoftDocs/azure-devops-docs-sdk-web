@@ -1,0 +1,219 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.Identities.Identities.d.IdentitySelf
+    name: IdentitySelf
+    fullName: IdentitySelf
+    children:
+      - >-
+        azure-devops-extension-api.Identities.Identities.d.IdentitySelf.accountName
+      - >-
+        azure-devops-extension-api.Identities.Identities.d.IdentitySelf.displayName
+      - azure-devops-extension-api.Identities.Identities.d.IdentitySelf.domain
+      - azure-devops-extension-api.Identities.Identities.d.IdentitySelf.id
+      - azure-devops-extension-api.Identities.Identities.d.IdentitySelf.origin
+      - azure-devops-extension-api.Identities.Identities.d.IdentitySelf.originId
+      - azure-devops-extension-api.Identities.Identities.d.IdentitySelf.tenants
+    langs:
+      - typeScript
+    type: interface
+    summary: Identity information.
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Identities.Identities.d.IdentitySelf.accountName
+    name: accountName
+    fullName: accountName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The UserPrincipalName (UPN) of the account. This value comes from the
+      source provider.
+    syntax:
+      content: 'accountName: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Identities.Identities.d.IdentitySelf.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The display name. For AAD accounts with multiple tenants this is the
+      display name of the profile in the home tenant.
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Identities.Identities.d.IdentitySelf.domain
+    name: domain
+    fullName: domain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This represents the name of the container of origin. For AAD accounts this
+      is the tenantID of the home tenant. For MSA accounts this is the string
+      "Windows Live ID".
+    syntax:
+      content: 'domain: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Identities.Identities.d.IdentitySelf.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This is the VSID of the home tenant profile. If the profile is signed into
+      the home tenant or if the profile has no tenants then this Id is the same
+      as the Id returned by the profile/profiles/me endpoint. Going forward it
+      is recommended that you use the combined values of Origin, OriginId and
+      Domain to uniquely identify a user rather than this Id.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Identities.Identities.d.IdentitySelf.origin
+    name: origin
+    fullName: origin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The type of source provider for the origin identifier. For MSA accounts
+      this is "msa". For AAD accounts this is "aad".
+    syntax:
+      content: 'origin: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Identities.Identities.d.IdentitySelf.originId
+    name: originId
+    fullName: originId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The unique identifier from the system of origin. If there are multiple
+      tenants this is the unique identifier of the account in the home tenant.
+      (For MSA this is the PUID in hex notation, for AAD this is the object id.)
+    syntax:
+      content: 'originId: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Identities.Identities.d.IdentitySelf.tenants
+    name: tenants
+    fullName: tenants
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      For AAD accounts this is all of the tenants that this account is a member
+      of.
+    syntax:
+      content: 'tenants: TenantInfo[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.Identities.Identities.d.TenantInfo[]'
+    package: azure-devops-extension-api
+references:
+  - uid: 'azure-devops-extension-api.Identities.Identities.d.Identity[]'
+    name: 'Identity[]'
+    spec.typeScript:
+      - name: Identity
+        fullName: Identity
+        uid: azure-devops-extension-api.Identities.Identities.d.Identity
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-devops-extension-api.Identities.Identities.d.ChangedIdentitiesContext
+    name: ChangedIdentitiesContext
+    spec.typeScript:
+      - name: ChangedIdentitiesContext
+        fullName: ChangedIdentitiesContext
+        uid: >-
+          azure-devops-extension-api.Identities.Identities.d.ChangedIdentitiesContext
+  - uid: azure-devops-extension-api.Identities.Identities.d.GroupScopeType
+    name: GroupScopeType
+    spec.typeScript:
+      - name: GroupScopeType
+        fullName: GroupScopeType
+        uid: azure-devops-extension-api.Identities.Identities.d.GroupScopeType
+  - uid: azure-devops-extension-api.Identities.Identities.d.FrameworkIdentityType
+    name: FrameworkIdentityType
+    spec.typeScript:
+      - name: FrameworkIdentityType
+        fullName: FrameworkIdentityType
+        uid: >-
+          azure-devops-extension-api.Identities.Identities.d.FrameworkIdentityType
+  - uid: azure-devops-extension-api.Identities.Identities.d.IdentityDescriptor
+    name: IdentityDescriptor
+    spec.typeScript:
+      - name: IdentityDescriptor
+        fullName: IdentityDescriptor
+        uid: azure-devops-extension-api.Identities.Identities.d.IdentityDescriptor
+  - uid: azure-devops-extension-api.Identities.Identities.d.IdentityBase
+    name: IdentityBase
+    spec.typeScript:
+      - name: IdentityBase
+        fullName: IdentityBase
+        uid: azure-devops-extension-api.Identities.Identities.d.IdentityBase
+  - uid: 'azure-devops-extension-api.Identities.Identities.d.IdentityDescriptor[]'
+    name: 'IdentityDescriptor[]'
+    spec.typeScript:
+      - name: IdentityDescriptor
+        fullName: IdentityDescriptor
+        uid: azure-devops-extension-api.Identities.Identities.d.IdentityDescriptor
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-devops-extension-api.Identities.Identities.d.QueryMembership
+    name: QueryMembership
+    spec.typeScript:
+      - name: QueryMembership
+        fullName: QueryMembership
+        uid: azure-devops-extension-api.Identities.Identities.d.QueryMembership
+  - uid: 'azure-devops-extension-api.Identities.Identities.d.TenantInfo[]'
+    name: 'TenantInfo[]'
+    spec.typeScript:
+      - name: TenantInfo
+        fullName: TenantInfo
+        uid: azure-devops-extension-api.Identities.Identities.d.TenantInfo
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-devops-extension-api.Identities.Identities.d.GroupMembership[]'
+    name: 'GroupMembership[]'
+    spec.typeScript:
+      - name: GroupMembership
+        fullName: GroupMembership
+        uid: azure-devops-extension-api.Identities.Identities.d.GroupMembership
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-devops-extension-api.Identities.Identities.d.IdentityScope[]'
+    name: 'IdentityScope[]'
+    spec.typeScript:
+      - name: IdentityScope
+        fullName: IdentityScope
+        uid: azure-devops-extension-api.Identities.Identities.d.IdentityScope
+      - name: '[]'
+        fullName: '[]'
