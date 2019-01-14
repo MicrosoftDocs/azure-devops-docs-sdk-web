@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.ExtensionFilterResult
+    name: ExtensionFilterResult
+    fullName: ExtensionFilterResult
+    children:
+      - azure-devops-extension-api.ExtensionFilterResult.extensions
+      - azure-devops-extension-api.ExtensionFilterResult.pagingToken
+      - azure-devops-extension-api.ExtensionFilterResult.resultMetadata
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      The FilterResult is the set of extensions that matched a particular query
+      filter.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ExtensionFilterResult.extensions
+    name: extensions
+    fullName: extensions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: This is the set of appplications that matched the query filter supplied.
+    syntax:
+      content: 'extensions: PublishedExtension[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.PublishedExtension[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ExtensionFilterResult.pagingToken
+    name: pagingToken
+    fullName: pagingToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The PagingToken is returned from a request when more records exist that
+      match the result than were requested or could be returned. A follow-up
+      query with this paging token can be used to retrieve more results.
+    syntax:
+      content: 'pagingToken: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ExtensionFilterResult.resultMetadata
+    name: resultMetadata
+    fullName: resultMetadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This is the additional optional metadata for the given result. E.g. Total
+      count of results which is useful in case of paged results
+    syntax:
+      content: 'resultMetadata: ExtensionFilterResultMetadata[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.ExtensionFilterResultMetadata[]'
+    package: azure-devops-extension-api
+references:
+  - uid: 'azure-devops-extension-api.PublishedExtension[]'
+    name: 'PublishedExtension[]'
+    spec.typeScript:
+      - name: PublishedExtension
+        fullName: PublishedExtension
+        uid: azure-devops-extension-api.PublishedExtension
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-devops-extension-api.ExtensionFilterResultMetadata[]'
+    name: 'ExtensionFilterResultMetadata[]'
+    spec.typeScript:
+      - name: ExtensionFilterResultMetadata
+        fullName: ExtensionFilterResultMetadata
+        uid: azure-devops-extension-api.ExtensionFilterResultMetadata
+      - name: '[]'
+        fullName: '[]'

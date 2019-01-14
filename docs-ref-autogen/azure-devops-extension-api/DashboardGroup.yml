@@ -1,0 +1,100 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.DashboardGroup
+    name: DashboardGroup
+    fullName: DashboardGroup
+    children:
+      - azure-devops-extension-api.DashboardGroup.dashboardEntries
+      - azure-devops-extension-api.DashboardGroup.permission
+      - azure-devops-extension-api.DashboardGroup.teamDashboardPermission
+      - azure-devops-extension-api.DashboardGroup.url
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Describes a list of dashboards associated to an owner. Currently, teams
+      own dashboard groups.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.DashboardGroup.dashboardEntries
+    name: dashboardEntries
+    fullName: dashboardEntries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A list of Dashboards held by the Dashboard Group
+    syntax:
+      content: 'dashboardEntries: DashboardGroupEntry[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.DashboardGroupEntry[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.DashboardGroup.permission
+    name: permission
+    fullName: permission
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Deprecated: The old permission model describing the level of permissions
+      for the current team. Pre-M125.
+    syntax:
+      content: 'permission: GroupMemberPermission'
+      return:
+        type:
+          - azure-devops-extension-api.GroupMemberPermission
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.DashboardGroup.teamDashboardPermission
+    name: teamDashboardPermission
+    fullName: teamDashboardPermission
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A permissions bit mask describing the security permissions of the current
+      team for dashboards. When this permission is the value None, use
+      GroupMemberPermission. Permissions are evaluated based on the presence of
+      a value other than None, else the GroupMemberPermission will be saved.
+    syntax:
+      content: 'teamDashboardPermission: TeamDashboardPermission'
+      return:
+        type:
+          - azure-devops-extension-api.TeamDashboardPermission
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.DashboardGroup.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'url: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: 'azure-devops-extension-api.DashboardGroupEntry[]'
+    name: 'DashboardGroupEntry[]'
+    spec.typeScript:
+      - name: DashboardGroupEntry
+        fullName: DashboardGroupEntry
+        uid: azure-devops-extension-api.DashboardGroupEntry
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-devops-extension-api.GroupMemberPermission
+    name: GroupMemberPermission
+    spec.typeScript:
+      - name: GroupMemberPermission
+        fullName: GroupMemberPermission
+        uid: azure-devops-extension-api.GroupMemberPermission
+  - uid: azure-devops-extension-api.TeamDashboardPermission
+    name: TeamDashboardPermission
+    spec.typeScript:
+      - name: TeamDashboardPermission
+        fullName: TeamDashboardPermission
+        uid: azure-devops-extension-api.TeamDashboardPermission

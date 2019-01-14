@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.ContributionType
+    name: ContributionType
+    fullName: ContributionType
+    children:
+      - azure-devops-extension-api.ContributionType.indexed
+      - azure-devops-extension-api.ContributionType.name
+      - azure-devops-extension-api.ContributionType.properties
+    langs:
+      - typeScript
+    type: interface
+    summary: 'A contribution type, given by a json schema'
+    extends:
+      name: azure-devops-extension-api.ContributionBase
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ContributionType.indexed
+    name: indexed
+    fullName: indexed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Controls whether or not contributions of this type have the type indexed
+      for queries. This allows clients to find all extensions that have a
+      contribution of this type.  NOTE: Only TrustedPartners are allowed to
+      specify indexed contribution types.
+    syntax:
+      content: 'indexed: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ContributionType.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Friendly name of the contribution/type
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ContributionType.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Describes the allowed properties for this contribution type
+    syntax:
+      content: 'properties: [key: string]: ContributionPropertyDescription'
+      return:
+        type:
+          - >-
+            [key: string]:
+            azure-devops-extension-api.ContributionPropertyDescription
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.ContributionBase
+    name: ContributionBase
+    spec.typeScript:
+      - name: ContributionBase
+        fullName: ContributionBase
+        uid: azure-devops-extension-api.ContributionBase
+  - uid: '[key: string]: azure-devops-extension-api.ContributionPropertyDescription'
+    name: ContributionPropertyDescription
+    spec.typeScript:
+      - name: '[key: string]: '
+        fullName: '[key: string]: '
+      - name: ContributionPropertyDescription
+        fullName: ContributionPropertyDescription
+        uid: azure-devops-extension-api.ContributionPropertyDescription

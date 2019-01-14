@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.IdentityRefWithVote
+    name: IdentityRefWithVote
+    fullName: IdentityRefWithVote
+    children:
+      - azure-devops-extension-api.IdentityRefWithVote.isRequired
+      - azure-devops-extension-api.IdentityRefWithVote.reviewerUrl
+      - azure-devops-extension-api.IdentityRefWithVote.vote
+      - azure-devops-extension-api.IdentityRefWithVote.votedFor
+    langs:
+      - typeScript
+    type: interface
+    summary: Identity information including a vote on a pull request.
+    extends:
+      name: azure-devops-extension-api.IdentityRef
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IdentityRefWithVote.isRequired
+    name: isRequired
+    fullName: isRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Indicates if this is a required reviewer for this pull request. \<br /\>
+      Branches can have policies that require particular reviewers are required
+      for pull requests.
+    syntax:
+      content: 'isRequired: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IdentityRefWithVote.reviewerUrl
+    name: reviewerUrl
+    fullName: reviewerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: URL to retrieve information about this identity
+    syntax:
+      content: 'reviewerUrl: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IdentityRefWithVote.vote
+    name: vote
+    fullName: vote
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Vote on a pull request:\<br /\> 10 - approved 5 - approved with
+      suggestions 0 - no vote -5 - waiting for author -10 - rejected
+    syntax:
+      content: 'vote: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IdentityRefWithVote.votedFor
+    name: votedFor
+    fullName: votedFor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Groups or teams that that this reviewer contributed to. \<br /\> Groups
+      and teams can be reviewers on pull requests but can not vote directly. 
+      When a member of the group or team votes, that vote is rolled up into the
+      group or team vote.  VotedFor is a list of such votes.
+    syntax:
+      content: 'votedFor: IdentityRefWithVote[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.IdentityRefWithVote[]'
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.IdentityRef
+    name: IdentityRef
+    spec.typeScript:
+      - name: IdentityRef
+        fullName: IdentityRef
+        uid: azure-devops-extension-api.IdentityRef
+  - uid: 'azure-devops-extension-api.IdentityRefWithVote[]'
+    name: 'IdentityRefWithVote[]'
+    spec.typeScript:
+      - name: IdentityRefWithVote
+        fullName: IdentityRefWithVote
+        uid: azure-devops-extension-api.IdentityRefWithVote
+      - name: '[]'
+        fullName: '[]'

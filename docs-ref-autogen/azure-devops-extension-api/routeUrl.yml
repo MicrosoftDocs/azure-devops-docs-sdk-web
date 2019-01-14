@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.routeUrl
+    name: 'routeUrl(IParsedRoute[], [key: string]: string)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Take a set of routes and route values and form a url using the best match.
+      The best match
+
+      is the route with the highest number of replacements (of the given
+      routeValues dictionary).
+
+      In the event of a tie (same number of replacements) the route that came
+      first wins.
+    syntax:
+      content: >-
+        function routeUrl(routeCollection: IParsedRoute[], routeValues: [key:
+        string]: string)
+      parameters:
+        - id: routeCollection
+          type:
+            - 'azure-devops-extension-api.IParsedRoute[]'
+          description: Array of parsed routes
+        - id: routeValues
+          type:
+            - '[key: string]: string'
+          description: |
+            Replacement values
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: 'azure-devops-extension-api.IParsedRoute[]'
+    name: 'IParsedRoute[]'
+    spec.typeScript:
+      - name: IParsedRoute
+        fullName: IParsedRoute
+        uid: azure-devops-extension-api.IParsedRoute
+      - name: '[]'
+        fullName: '[]'

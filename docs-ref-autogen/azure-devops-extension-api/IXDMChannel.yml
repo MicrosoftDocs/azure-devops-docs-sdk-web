@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.IXDMChannel
+    name: IXDMChannel
+    fullName: IXDMChannel
+    children:
+      - azure-devops-extension-api.IXDMChannel.getObjectRegistry
+      - azure-devops-extension-api.IXDMChannel.getRemoteObjectProxy
+      - azure-devops-extension-api.IXDMChannel.invokeRemoteMethod
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface for a single XDM channel
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IXDMChannel.getObjectRegistry
+    name: getObjectRegistry()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Get the object registry to handle messages from this specific channel.
+      Upon receiving a message, this channel registry will be used first, then
+      the global registry will be used if no handler is found here.
+    syntax:
+      content: function getObjectRegistry()
+      parameters: []
+      return:
+        type:
+          - azure-devops-extension-api.IXDMObjectRegistry
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IXDMChannel.getRemoteObjectProxy
+    name: 'getRemoteObjectProxy(string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Get a proxied object that represents the object registered with the given
+      instance id on the remote side of this channel.
+    syntax:
+      content: >-
+        function getRemoteObjectProxy<T>(instanceId: string, contextData?:
+        Object)
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: unique id of the registered object
+        - id: contextData
+          type:
+            - Object
+          description: >
+            Optional context data to pass to a registered object's factory
+            method
+          optional: true
+      return:
+        type:
+          - Promise<T>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IXDMChannel.invokeRemoteMethod
+    name: 'invokeRemoteMethod(string, string, any[], Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Invoke a method via RPC. Lookup the registered object on the remote end of
+      the channel and invoke the specified method.
+    syntax:
+      content: >-
+        function invokeRemoteMethod<T>(methodName: string, instanceId: string,
+        params?: any[], instanceContextData?: Object)
+      parameters:
+        - id: methodName
+          type:
+            - string
+          description: ''
+        - id: instanceId
+          type:
+            - string
+          description: unique id of the registered object
+        - id: params
+          type:
+            - 'any[]'
+          description: Arguments to the method to invoke
+          optional: true
+        - id: instanceContextData
+          type:
+            - Object
+          description: >
+            Optional context data to pass to a registered object's factory
+            method
+          optional: true
+      return:
+        type:
+          - Promise<T>
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.IXDMObjectRegistry
+    name: IXDMObjectRegistry
+    spec.typeScript:
+      - name: IXDMObjectRegistry
+        fullName: IXDMObjectRegistry
+        uid: azure-devops-extension-api.IXDMObjectRegistry

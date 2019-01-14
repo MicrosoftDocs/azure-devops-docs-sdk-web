@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.GitTreeDiff
+    name: GitTreeDiff
+    fullName: GitTreeDiff
+    children:
+      - azure-devops-extension-api.GitTreeDiff.baseTreeId
+      - azure-devops-extension-api.GitTreeDiff.diffEntries
+      - azure-devops-extension-api.GitTreeDiff.targetTreeId
+      - azure-devops-extension-api.GitTreeDiff.url
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitTreeDiff.baseTreeId
+    name: baseTreeId
+    fullName: baseTreeId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ObjectId of the base tree of this diff.
+    syntax:
+      content: 'baseTreeId: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitTreeDiff.diffEntries
+    name: diffEntries
+    fullName: diffEntries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      List of tree entries that differ between the base and target tree. 
+      Renames and object type changes are returned as a delete for the old
+      object and add for the new object.  If a continuation token is returned in
+      the response header, some tree entries are yet to be processed and may
+      yeild more diff entries. If the continuation token is not returned all the
+      diff entries have been included in this response.
+    syntax:
+      content: 'diffEntries: GitTreeDiffEntry[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.GitTreeDiffEntry[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitTreeDiff.targetTreeId
+    name: targetTreeId
+    fullName: targetTreeId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ObjectId of the target tree of this diff.
+    syntax:
+      content: 'targetTreeId: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitTreeDiff.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: REST Url to this resource.
+    syntax:
+      content: 'url: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: 'azure-devops-extension-api.GitTreeDiffEntry[]'
+    name: 'GitTreeDiffEntry[]'
+    spec.typeScript:
+      - name: GitTreeDiffEntry
+        fullName: GitTreeDiffEntry
+        uid: azure-devops-extension-api.GitTreeDiffEntry
+      - name: '[]'
+        fullName: '[]'
