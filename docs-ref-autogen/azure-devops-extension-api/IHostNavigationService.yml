@@ -1,0 +1,145 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.IHostNavigationService
+    name: IHostNavigationService
+    fullName: IHostNavigationService
+    children:
+      - azure-devops-extension-api.IHostNavigationService.getHash
+      - azure-devops-extension-api.IHostNavigationService.navigate
+      - azure-devops-extension-api.IHostNavigationService.onHashChanged
+      - azure-devops-extension-api.IHostNavigationService.openNewWindow
+      - azure-devops-extension-api.IHostNavigationService.reload
+      - azure-devops-extension-api.IHostNavigationService.replaceHash
+      - azure-devops-extension-api.IHostNavigationService.setDocumentTitle
+      - azure-devops-extension-api.IHostNavigationService.setHash
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Service for interacting with the host window's navigation (URLs, new
+      windows, etc.)
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IHostNavigationService.getHash
+    name: getHash()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the current hash.
+    syntax:
+      content: function getHash()
+      parameters: []
+      return:
+        type:
+          - Promise<string>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IHostNavigationService.navigate
+    name: navigate(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Navigate the parent page to the specified url
+    syntax:
+      content: 'function navigate(url: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: |
+            Url to navigate to
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IHostNavigationService.onHashChanged
+    name: 'onHashChanged((hash: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Add a callback to be invoked each time the hash navigation has changed
+    syntax:
+      content: 'function onHashChanged(callback: (hash: string) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(hash: string) => void'
+          description: |
+            Method invoked on each navigation hash change
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IHostNavigationService.openNewWindow
+    name: 'openNewWindow(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Open a new window to the specified url
+    syntax:
+      content: 'function openNewWindow(url: string, features: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: Url of the new window
+        - id: features
+          type:
+            - string
+          description: >
+            Comma-separated list of features/specs sent as the 3rd parameter to
+            window.open. For example: "height=400,width=400".
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IHostNavigationService.reload
+    name: reload()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Reloads the parent frame
+    syntax:
+      content: function reload()
+      parameters: []
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IHostNavigationService.replaceHash
+    name: replaceHash(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Replace existing hash with the provided hash from the hosted content.
+    syntax:
+      content: 'function replaceHash(hash: string)'
+      parameters:
+        - id: hash
+          type:
+            - string
+          description: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IHostNavigationService.setDocumentTitle
+    name: setDocumentTitle(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Update the host document's title (appears as the browser tab title).
+    syntax:
+      content: 'function setDocumentTitle(title: string)'
+      parameters:
+        - id: title
+          type:
+            - string
+          description: |
+            The new title of the window
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IHostNavigationService.setHash
+    name: setHash(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Sets the provided hash from the hosted content.
+    syntax:
+      content: 'function setHash(hash: string)'
+      parameters:
+        - id: hash
+          type:
+            - string
+          description: ''
+    package: azure-devops-extension-api

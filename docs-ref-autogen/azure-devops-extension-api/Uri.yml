@@ -1,0 +1,296 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.Uri
+    name: Uri
+    fullName: Uri
+    children:
+      - azure-devops-extension-api.Uri.absoluteUri
+      - azure-devops-extension-api.Uri.addQueryParam
+      - azure-devops-extension-api.Uri.addQueryParams
+      - azure-devops-extension-api.Uri.getEffectivePort
+      - azure-devops-extension-api.Uri.getQueryParam
+      - azure-devops-extension-api.Uri.hashString
+      - azure-devops-extension-api.Uri.host
+      - azure-devops-extension-api.Uri.noSchemeSeparator
+      - azure-devops-extension-api.Uri.path
+      - azure-devops-extension-api.Uri.port
+      - azure-devops-extension-api.Uri.queryParameters
+      - azure-devops-extension-api.Uri.queryString
+      - azure-devops-extension-api.Uri.removeQueryParam
+      - azure-devops-extension-api.Uri.scheme
+      - azure-devops-extension-api.Uri.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Class that represents a Uri and allows parsing/getting and setting of
+      individual parts
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.absoluteUri
+    name: absoluteUri
+    fullName: absoluteUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Set the absolute uri string for this Uri. Replaces all existing values
+    syntax:
+      content: 'absoluteUri: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.addQueryParam
+    name: 'addQueryParam(string, string, boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a query string parameter to the current uri
+    syntax:
+      content: >-
+        function addQueryParam(name: string, value: string, replaceExisting?:
+        boolean)
+      parameters:
+        - id: name
+          type:
+            - string
+          description: The Query parameter name
+        - id: value
+          type:
+            - string
+          description: The Query parameter value
+        - id: replaceExisting
+          type:
+            - boolean
+          description: |
+            If true, replace all existing parameters with the same name
+          optional: true
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.addQueryParams
+    name: 'addQueryParams([key: string]: function, boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds query string parameters to the current uri
+    syntax:
+      content: >-
+        function addQueryParams(parameters: [key: string]: function,
+        replaceExisting?: boolean)
+      parameters:
+        - id: parameters
+          type:
+            - '[key: string]: function'
+          description: Query parameters to add
+        - id: replaceExisting
+          type:
+            - boolean
+          description: |
+            If true, replace all existing parameters with the same name
+          optional: true
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.getEffectivePort
+    name: getEffectivePort()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets the effective port number, returning the default port number if
+      omitted for the given scheme.
+    syntax:
+      content: function getEffectivePort()
+      parameters: []
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.getQueryParam
+    name: getQueryParam(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get the value of the query parameter with the given key
+    syntax:
+      content: 'function getQueryParam(name: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: |
+            Query parameter name
+      return:
+        type:
+          - string | null | undefined
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.hashString
+    name: hashString
+    fullName: hashString
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The hash string of the uri
+    syntax:
+      content: 'hashString: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.host
+    name: host
+    fullName: host
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The uri hostname (does not include port or scheme)
+    syntax:
+      content: 'host: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.noSchemeSeparator
+    name: noSchemeSeparator
+    fullName: noSchemeSeparator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      If true, do not emit the "//" separator after the scheme:
+      Set to true for schemes like mailto (e.g. mailto:foo@bar)
+    syntax:
+      content: 'noSchemeSeparator: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.path
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The relative path of the uri
+    syntax:
+      content: 'path: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.port
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The port number of the uri as supplied in the url. 0 if left out in the
+      url (e.g. the default port for the scheme).
+    syntax:
+      content: 'port: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.queryParameters
+    name: queryParameters
+    fullName: queryParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The array of query parameters in the uri
+    syntax:
+      content: 'queryParameters: IQueryParameter[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.IQueryParameter[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.queryString
+    name: queryString
+    fullName: queryString
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Set the query string for this Uri. Replaces existing value
+    syntax:
+      content: 'queryString: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.removeQueryParam
+    name: removeQueryParam(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes a query string parameter
+    syntax:
+      content: 'function removeQueryParam(name: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: |
+            The Query parameter name
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.scheme
+    name: scheme
+    fullName: scheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The uri scheme such as http or https
+    syntax:
+      content: 'scheme: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Uri.constructor
+    name: 'Uri(string, IUriParseOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Create a new Uri.
+    syntax:
+      content: 'new Uri(uri?: string, options?: IUriParseOptions)'
+      parameters:
+        - id: uri
+          type:
+            - string
+          description: Optional uri string to populate values with
+          optional: true
+        - id: options
+          type:
+            - azure-devops-extension-api.IUriParseOptions
+          description: |
+            Options for parsing the uri string
+          optional: true
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.IUriParseOptions
+    name: IUriParseOptions
+    spec.typeScript:
+      - name: IUriParseOptions
+        fullName: IUriParseOptions
+        uid: azure-devops-extension-api.IUriParseOptions
+  - uid: 'azure-devops-extension-api.IQueryParameter[]'
+    name: 'IQueryParameter[]'
+    spec.typeScript:
+      - name: IQueryParameter
+        fullName: IQueryParameter
+        uid: azure-devops-extension-api.IQueryParameter
+      - name: '[]'
+        fullName: '[]'
