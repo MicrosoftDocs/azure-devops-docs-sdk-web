@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.GraphSubject
+    name: GraphSubject
+    fullName: GraphSubject
+    children:
+      - azure-devops-extension-api.GraphSubject.legacyDescriptor
+      - azure-devops-extension-api.GraphSubject.origin
+      - azure-devops-extension-api.GraphSubject.originId
+      - azure-devops-extension-api.GraphSubject.subjectKind
+    langs:
+      - typeScript
+    type: interface
+    summary: Top-level graph entity
+    extends:
+      name: azure-devops-extension-api.GraphSubjectBase
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphSubject.legacyDescriptor
+    name: legacyDescriptor
+    fullName: legacyDescriptor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      [Internal Use Only] The legacy descriptor is here in case you need to
+      access old version IMS using identity descriptor.
+    syntax:
+      content: 'legacyDescriptor: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphSubject.origin
+    name: origin
+    fullName: origin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The type of source provider for the origin identifier (ex:AD, AAD, MSA)'
+    syntax:
+      content: 'origin: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphSubject.originId
+    name: originId
+    fullName: originId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The unique identifier from the system of origin. Typically a sid, object
+      id or Guid. Linking and unlinking operations can cause this value to
+      change for a user because the user is not backed by a different provider
+      and has a different unique id in the new provider.
+    syntax:
+      content: 'originId: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphSubject.subjectKind
+    name: subjectKind
+    fullName: subjectKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This field identifies the type of the graph subject (ex: Group, Scope,
+      User).
+    syntax:
+      content: 'subjectKind: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.GraphSubjectBase
+    name: GraphSubjectBase
+    spec.typeScript:
+      - name: GraphSubjectBase
+        fullName: GraphSubjectBase
+        uid: azure-devops-extension-api.GraphSubjectBase

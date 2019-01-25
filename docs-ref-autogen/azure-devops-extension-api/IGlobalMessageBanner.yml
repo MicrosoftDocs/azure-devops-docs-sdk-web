@@ -1,0 +1,92 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.IGlobalMessageBanner
+    name: IGlobalMessageBanner
+    fullName: IGlobalMessageBanner
+    children:
+      - azure-devops-extension-api.IGlobalMessageBanner.level
+      - azure-devops-extension-api.IGlobalMessageBanner.message
+      - azure-devops-extension-api.IGlobalMessageBanner.messageFormat
+      - azure-devops-extension-api.IGlobalMessageBanner.messageLinks
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IGlobalMessageBanner.level
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: banner level (controls the background and icon of the banner)
+    optional: true
+    syntax:
+      content: 'level?: MessageBannerLevel'
+      return:
+        type:
+          - azure-devops-extension-api.MessageBannerLevel
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IGlobalMessageBanner.message
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Banner message. Ignored if messageFormat is also provided
+    optional: true
+    syntax:
+      content: 'message?: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IGlobalMessageBanner.messageFormat
+    name: messageFormat
+    fullName: messageFormat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Banner message format string. Arguments (like \{0\}, \{1\} are filled in
+      with hyperlinks supplied in messageLinks)
+    optional: true
+    syntax:
+      content: 'messageFormat?: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IGlobalMessageBanner.messageLinks
+    name: messageLinks
+    fullName: messageLinks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Links to supply to the format arguments in `messageFormat`
+    optional: true
+    syntax:
+      content: 'messageLinks?: IGlobalMessageLink[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.IGlobalMessageLink[]'
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.MessageBannerLevel
+    name: MessageBannerLevel
+    spec.typeScript:
+      - name: MessageBannerLevel
+        fullName: MessageBannerLevel
+        uid: azure-devops-extension-api.MessageBannerLevel
+  - uid: 'azure-devops-extension-api.IGlobalMessageLink[]'
+    name: 'IGlobalMessageLink[]'
+    spec.typeScript:
+      - name: IGlobalMessageLink
+        fullName: IGlobalMessageLink
+        uid: azure-devops-extension-api.IGlobalMessageLink
+      - name: '[]'
+        fullName: '[]'

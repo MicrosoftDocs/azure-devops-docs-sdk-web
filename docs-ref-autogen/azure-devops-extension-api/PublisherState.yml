@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.PublisherState
+    name: PublisherState
+    fullName: PublisherState
+    children:
+      - azure-devops-extension-api.PublisherState.None
+      - azure-devops-extension-api.PublisherState.VerificationPending
+      - azure-devops-extension-api.PublisherState.CertificationPending
+      - azure-devops-extension-api.PublisherState.CertificationRejected
+      - azure-devops-extension-api.PublisherState.CertificationRevoked
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherState.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No state exists for this publisher.
+    type: field
+    numericValue: 0
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherState.VerificationPending
+    name: VerificationPending
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This state indicates that publisher has applied for Marketplace
+      verification (via UI) and still not been certified. This state would be
+      reset once the publisher is verified.
+    type: field
+    numericValue: 1
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherState.CertificationPending
+    name: CertificationPending
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This state indicates that publisher has applied for Marketplace
+      certification (via UI) and still not been certified. This state would be
+      reset once the publisher is certified.
+    type: field
+    numericValue: 2
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherState.CertificationRejected
+    name: CertificationRejected
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This state indicates that publisher had applied for Marketplace
+      certification (via UI) but his/her certification got rejected. This state
+      would be reset if and when the publisher is certified.
+    type: field
+    numericValue: 4
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherState.CertificationRevoked
+    name: CertificationRevoked
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This state indicates that publisher was certified on the Marketplace, but
+      his/her certification got revoked. This state would never be reset, even
+      after publisher gets re-certified. It would indicate that the publisher
+      certification was revoked at least once.
+    type: field
+    numericValue: 8
+    package: azure-devops-extension-api

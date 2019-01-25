@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.TestActionResultModel
+    name: TestActionResultModel
+    fullName: TestActionResultModel
+    children:
+      - azure-devops-extension-api.TestActionResultModel.actionPath
+      - azure-devops-extension-api.TestActionResultModel.iterationId
+      - azure-devops-extension-api.TestActionResultModel.sharedStepModel
+      - azure-devops-extension-api.TestActionResultModel.stepIdentifier
+      - azure-devops-extension-api.TestActionResultModel.url
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents a test step result.
+    extends:
+      name: azure-devops-extension-api.TestResultModelBase
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestActionResultModel.actionPath
+    name: actionPath
+    fullName: actionPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Path identifier test step in test case workitem.
+    syntax:
+      content: 'actionPath: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestActionResultModel.iterationId
+    name: iterationId
+    fullName: iterationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Iteration ID of test action result.
+    syntax:
+      content: 'iterationId: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestActionResultModel.sharedStepModel
+    name: sharedStepModel
+    fullName: sharedStepModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Reference to shared step workitem.
+    syntax:
+      content: 'sharedStepModel: SharedStepModel'
+      return:
+        type:
+          - azure-devops-extension-api.SharedStepModel
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestActionResultModel.stepIdentifier
+    name: stepIdentifier
+    fullName: stepIdentifier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This is step Id of test case. For shared step, it is step Id of shared
+      step in test case workitem; step Id in shared step. Example: TestCase
+      workitem has two steps: 1) Normal step with Id = 1 2) Shared Step with Id
+      = 2. Inside shared step: a) Normal Step with Id = 1 Value for
+      StepIdentifier for First step: "1" Second step: "2;1"
+    syntax:
+      content: 'stepIdentifier: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestActionResultModel.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Url of test action result.
+    syntax:
+      content: 'url: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.TestResultModelBase
+    name: TestResultModelBase
+    spec.typeScript:
+      - name: TestResultModelBase
+        fullName: TestResultModelBase
+        uid: azure-devops-extension-api.TestResultModelBase
+  - uid: azure-devops-extension-api.SharedStepModel
+    name: SharedStepModel
+    spec.typeScript:
+      - name: SharedStepModel
+        fullName: SharedStepModel
+        uid: azure-devops-extension-api.SharedStepModel

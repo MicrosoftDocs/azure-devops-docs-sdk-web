@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.replaceParsedRouteValues
+    name: 'replaceParsedRouteValues(IParsedRoute, [key: string]: function, boolean)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Replace route values for a specific parsed route
+    syntax:
+      content: >-
+        function replaceParsedRouteValues(parsedRoute: IParsedRoute,
+        routeValues: [key: string]: function, continueOnUnmatchedSegements?:
+        boolean)
+      parameters:
+        - id: parsedRoute
+          type:
+            - azure-devops-extension-api.IParsedRoute
+          description: The route to evaluate
+        - id: routeValues
+          type:
+            - '[key: string]: function'
+          description: Dictionary of route replacement parameters
+        - id: continueOnUnmatchedSegements
+          type:
+            - boolean
+          description: >
+            If true, continue with replacements even after a miss. By default
+            (false), stop replacements once a parameter is not present.
+          optional: true
+      return:
+        type:
+          - azure-devops-extension-api.IRouteMatchResult | undefined
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.IParsedRoute
+    name: IParsedRoute
+    spec.typeScript:
+      - name: IParsedRoute
+        fullName: IParsedRoute
+        uid: azure-devops-extension-api.IParsedRoute
+  - uid: azure-devops-extension-api.IRouteMatchResult | undefined
+    name: IRouteMatchResult | undefined
+    spec.typeScript:
+      - name: IRouteMatchResult
+        fullName: IRouteMatchResult
+        uid: azure-devops-extension-api.IRouteMatchResult
+      - name: ' | undefined'
+        fullName: ' | undefined'

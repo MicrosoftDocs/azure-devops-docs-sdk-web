@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.GraphMember
+    name: GraphMember
+    fullName: GraphMember
+    children:
+      - azure-devops-extension-api.GraphMember.domain
+      - azure-devops-extension-api.GraphMember.mailAddress
+      - azure-devops-extension-api.GraphMember.principalName
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: azure-devops-extension-api.GraphSubject
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphMember.domain
+    name: domain
+    fullName: domain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This represents the name of the container of origin for a graph member.
+      (For MSA this is "Windows Live ID", for AD the name of the domain, for AAD
+      the tenantID of the directory, for VSTS groups the ScopeId, etc)
+    syntax:
+      content: 'domain: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphMember.mailAddress
+    name: mailAddress
+    fullName: mailAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The email address of record for a given graph member. This may be
+      different than the principal name.
+    syntax:
+      content: 'mailAddress: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphMember.principalName
+    name: principalName
+    fullName: principalName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This is the PrincipalName of this graph member from the source provider.
+      The source provider may change this field over time and it is not
+      guaranteed to be immutable for the life of the graph member by VSTS.
+    syntax:
+      content: 'principalName: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.GraphSubject
+    name: GraphSubject
+    spec.typeScript:
+      - name: GraphSubject
+        fullName: GraphSubject
+        uid: azure-devops-extension-api.GraphSubject
