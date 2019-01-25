@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.XDMObjectRegistry
+    name: XDMObjectRegistry
+    fullName: XDMObjectRegistry
+    children:
+      - azure-devops-extension-api.XDMObjectRegistry.getInstance
+      - azure-devops-extension-api.XDMObjectRegistry.register
+      - azure-devops-extension-api.XDMObjectRegistry.unregister
+    langs:
+      - typeScript
+    type: class
+    summary: Catalog of objects exposed for XDM
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.XDMObjectRegistry.getInstance
+    name: 'getInstance(string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get an instance of an object registered with the given id
+    syntax:
+      content: 'function getInstance<T>(instanceId: string, contextData?: Object)'
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: unique id of the registered object
+        - id: contextData
+          type:
+            - Object
+          description: >
+            Optional context data to pass to a registered object's factory
+            method
+          optional: true
+      return:
+        type:
+          - T | undefined
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.XDMObjectRegistry.register
+    name: 'register(string, Object | (contextData?: any) => Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Register an object (instance or factory method) exposed by this frame to
+      callers in a remote frame
+    syntax:
+      content: >-
+        function register(instanceId: string, instance: Object | (contextData?:
+        any) => Object)
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: unique id of the registered object
+        - id: instance
+          type:
+            - 'Object | (contextData?: any) => Object'
+          description: >
+            Either: (1) an object instance, or (2) a function that takes
+            optional context data and returns an object instance.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.XDMObjectRegistry.unregister
+    name: unregister(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Unregister an object (instance or factory method) that was previously
+      registered by this frame
+    syntax:
+      content: 'function unregister(instanceId: string)'
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: |
+            unique id of the registered object
+    package: azure-devops-extension-api

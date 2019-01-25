@@ -1,0 +1,38 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.BuildAuthorizationScope
+    name: BuildAuthorizationScope
+    fullName: BuildAuthorizationScope
+    children:
+      - azure-devops-extension-api.BuildAuthorizationScope.ProjectCollection
+      - azure-devops-extension-api.BuildAuthorizationScope.Project
+    langs:
+      - typeScript
+    type: enum
+    summary: Represents the desired scope of authorization for a build.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.BuildAuthorizationScope.ProjectCollection
+    name: ProjectCollection
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The identity used should have build service account permissions scoped to
+      the project collection. This is useful when resources for a single build
+      are spread across multiple projects.
+    type: field
+    numericValue: 1
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.BuildAuthorizationScope.Project
+    name: Project
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The identity used should have build service account permissions scoped to
+      the project in which the build definition resides. This is useful for
+      isolation of build jobs to a particular team project to avoid any
+      unintentional escalation of privilege attacks during a build.
+    type: field
+    numericValue: 2
+    package: azure-devops-extension-api

@@ -1,0 +1,149 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.QueryFilter
+    name: QueryFilter
+    fullName: QueryFilter
+    children:
+      - azure-devops-extension-api.QueryFilter.criteria
+      - azure-devops-extension-api.QueryFilter.direction
+      - azure-devops-extension-api.QueryFilter.pageNumber
+      - azure-devops-extension-api.QueryFilter.pageSize
+      - azure-devops-extension-api.QueryFilter.pagingToken
+      - azure-devops-extension-api.QueryFilter.sortBy
+      - azure-devops-extension-api.QueryFilter.sortOrder
+    langs:
+      - typeScript
+    type: interface
+    summary: A filter used to define a set of extensions to return during a query.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryFilter.criteria
+    name: criteria
+    fullName: criteria
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The filter values define the set of values in this query. They are applied
+      based on the QueryFilterType.
+    syntax:
+      content: 'criteria: FilterCriteria[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.FilterCriteria[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryFilter.direction
+    name: direction
+    fullName: direction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The PagingDirection is applied to a paging token if one exists. If not the
+      direction is ignored, and Forward from the start of the resultset is used.
+      Direction should be left out of the request unless a paging token is used
+      to help prevent future issues.
+    syntax:
+      content: 'direction: PagingDirection'
+      return:
+        type:
+          - azure-devops-extension-api.PagingDirection
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryFilter.pageNumber
+    name: pageNumber
+    fullName: pageNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The page number requested by the user. If not provided 1 is assumed by
+      default.
+    syntax:
+      content: 'pageNumber: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryFilter.pageSize
+    name: pageSize
+    fullName: pageSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The page size defines the number of results the caller wants for this
+      filter. The count can't exceed the overall query size limits.
+    syntax:
+      content: 'pageSize: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryFilter.pagingToken
+    name: pagingToken
+    fullName: pagingToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The paging token is a distinct type of filter and the other filter fields
+      are ignored. The paging token represents the continuation of a previously
+      executed query. The information about where in the result and what fields
+      are being filtered are embeded in the token.
+    syntax:
+      content: 'pagingToken: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryFilter.sortBy
+    name: sortBy
+    fullName: sortBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Defines the type of sorting to be applied on the results. The page slice
+      is cut of the sorted results only.
+    syntax:
+      content: 'sortBy: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryFilter.sortOrder
+    name: sortOrder
+    fullName: sortOrder
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Defines the order of sorting, 1 for Ascending, 2 for Descending, else
+      default ordering based on the SortBy value
+    syntax:
+      content: 'sortOrder: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+references:
+  - uid: 'azure-devops-extension-api.FilterCriteria[]'
+    name: 'FilterCriteria[]'
+    spec.typeScript:
+      - name: FilterCriteria
+        fullName: FilterCriteria
+        uid: azure-devops-extension-api.FilterCriteria
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-devops-extension-api.PagingDirection
+    name: PagingDirection
+    spec.typeScript:
+      - name: PagingDirection
+        fullName: PagingDirection
+        uid: azure-devops-extension-api.PagingDirection

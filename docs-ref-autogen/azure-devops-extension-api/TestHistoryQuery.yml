@@ -1,0 +1,193 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.TestHistoryQuery
+    name: TestHistoryQuery
+    fullName: TestHistoryQuery
+    children:
+      - azure-devops-extension-api.TestHistoryQuery.automatedTestName
+      - azure-devops-extension-api.TestHistoryQuery.branch
+      - azure-devops-extension-api.TestHistoryQuery.buildDefinitionId
+      - azure-devops-extension-api.TestHistoryQuery.continuationToken
+      - azure-devops-extension-api.TestHistoryQuery.groupBy
+      - azure-devops-extension-api.TestHistoryQuery.maxCompleteDate
+      - azure-devops-extension-api.TestHistoryQuery.releaseEnvDefinitionId
+      - azure-devops-extension-api.TestHistoryQuery.resultsForGroup
+      - azure-devops-extension-api.TestHistoryQuery.testCaseId
+      - azure-devops-extension-api.TestHistoryQuery.trendDays
+    langs:
+      - typeScript
+    type: interface
+    summary: Filter to get TestCase result history.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.automatedTestName
+    name: automatedTestName
+    fullName: automatedTestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Automated test name of the TestCase.
+    syntax:
+      content: 'automatedTestName: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.branch
+    name: branch
+    fullName: branch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Results to be get for a particular branches.
+    syntax:
+      content: 'branch: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.buildDefinitionId
+    name: buildDefinitionId
+    fullName: buildDefinitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Get the results history only for this BuildDefinationId. This to get used
+      in query GroupBy should be Branch. If this is provided, Branch will have
+      no use.
+    syntax:
+      content: 'buildDefinitionId: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.continuationToken
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      It will be filled by server. If not null means there are some results
+      still to be get, and we need to call this REST API with this
+      ContinuousToken. It is not supposed to be created (or altered, if received
+      from server in last batch) by user.
+    syntax:
+      content: 'continuationToken: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.groupBy
+    name: groupBy
+    fullName: groupBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Group the result on the basis of TestResultGroupBy. This can be Branch,
+      Environment or null(if results are fetched by BuildDefinitionId)
+    syntax:
+      content: 'groupBy: TestResultGroupBy'
+      return:
+        type:
+          - azure-devops-extension-api.TestResultGroupBy
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.maxCompleteDate
+    name: maxCompleteDate
+    fullName: maxCompleteDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      History to get between time interval MaxCompleteDate and  (MaxCompleteDate
+      - TrendDays). Default is current date time.
+    syntax:
+      content: 'maxCompleteDate: Date'
+      return:
+        type:
+          - Date
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.releaseEnvDefinitionId
+    name: releaseEnvDefinitionId
+    fullName: releaseEnvDefinitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Get the results history only for this ReleaseEnvDefinitionId. This to get
+      used in query GroupBy should be Environment.
+    syntax:
+      content: 'releaseEnvDefinitionId: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.resultsForGroup
+    name: resultsForGroup
+    fullName: resultsForGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of TestResultHistoryForGroup which are grouped by GroupBy
+    syntax:
+      content: 'resultsForGroup: TestResultHistoryForGroup[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.TestResultHistoryForGroup[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.testCaseId
+    name: testCaseId
+    fullName: testCaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Get the results history only for this testCaseId. This to get used in
+      query to filter the result along with automatedtestname
+    syntax:
+      content: 'testCaseId: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestHistoryQuery.trendDays
+    name: trendDays
+    fullName: trendDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Number of days for which history to collect. Maximum supported value is 7
+      days. Default is 7 days.
+    syntax:
+      content: 'trendDays: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.TestResultGroupBy
+    name: TestResultGroupBy
+    spec.typeScript:
+      - name: TestResultGroupBy
+        fullName: TestResultGroupBy
+        uid: azure-devops-extension-api.TestResultGroupBy
+  - uid: 'azure-devops-extension-api.TestResultHistoryForGroup[]'
+    name: 'TestResultHistoryForGroup[]'
+    spec.typeScript:
+      - name: TestResultHistoryForGroup
+        fullName: TestResultHistoryForGroup
+        uid: azure-devops-extension-api.TestResultHistoryForGroup
+      - name: '[]'
+        fullName: '[]'

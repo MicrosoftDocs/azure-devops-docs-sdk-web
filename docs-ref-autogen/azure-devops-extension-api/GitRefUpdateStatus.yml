@@ -1,0 +1,209 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.GitRefUpdateStatus
+    name: GitRefUpdateStatus
+    fullName: GitRefUpdateStatus
+    children:
+      - azure-devops-extension-api.GitRefUpdateStatus.Succeeded
+      - azure-devops-extension-api.GitRefUpdateStatus.ForcePushRequired
+      - azure-devops-extension-api.GitRefUpdateStatus.StaleOldObjectId
+      - azure-devops-extension-api.GitRefUpdateStatus.InvalidRefName
+      - azure-devops-extension-api.GitRefUpdateStatus.Unprocessed
+      - azure-devops-extension-api.GitRefUpdateStatus.UnresolvableToCommit
+      - azure-devops-extension-api.GitRefUpdateStatus.WritePermissionRequired
+      - >-
+        azure-devops-extension-api.GitRefUpdateStatus.ManageNotePermissionRequired
+      - >-
+        azure-devops-extension-api.GitRefUpdateStatus.CreateBranchPermissionRequired
+      - >-
+        azure-devops-extension-api.GitRefUpdateStatus.CreateTagPermissionRequired
+      - azure-devops-extension-api.GitRefUpdateStatus.RejectedByPlugin
+      - azure-devops-extension-api.GitRefUpdateStatus.Locked
+      - azure-devops-extension-api.GitRefUpdateStatus.RefNameConflict
+      - azure-devops-extension-api.GitRefUpdateStatus.RejectedByPolicy
+      - azure-devops-extension-api.GitRefUpdateStatus.SucceededNonExistentRef
+      - azure-devops-extension-api.GitRefUpdateStatus.SucceededCorruptRef
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      Represents the possible outcomes from a request to update a ref in a
+      repository.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.Succeeded
+    name: Succeeded
+    children: []
+    langs:
+      - typeScript
+    summary: Indicates that the ref update request was completed successfully.
+    type: field
+    numericValue: 0
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.ForcePushRequired
+    name: ForcePushRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request could not be completed because part
+      of the graph would be disconnected by this change, and the caller does not
+      have ForcePush permission on the repository.
+    type: field
+    numericValue: 1
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.StaleOldObjectId
+    name: StaleOldObjectId
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request could not be completed because the
+      old object ID presented in the request was not the object ID of the ref
+      when the database attempted the update. The most likely scenario is that
+      the caller lost a race to update the ref.
+    type: field
+    numericValue: 2
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.InvalidRefName
+    name: InvalidRefName
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request could not be completed because the
+      ref name presented in the request was not valid.
+    type: field
+    numericValue: 3
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.Unprocessed
+    name: Unprocessed
+    children: []
+    langs:
+      - typeScript
+    summary: The request was not processed
+    type: field
+    numericValue: 4
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.UnresolvableToCommit
+    name: UnresolvableToCommit
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the new object ID
+      for the ref could not be resolved to a commit object (potentially through
+      any number of tags)
+    type: field
+    numericValue: 5
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.WritePermissionRequired
+    name: WritePermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks write
+      permissions required to write this ref
+    type: field
+    numericValue: 6
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.ManageNotePermissionRequired
+    name: ManageNotePermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks note
+      creation permissions required to write this note
+    type: field
+    numericValue: 7
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.GitRefUpdateStatus.CreateBranchPermissionRequired
+    name: CreateBranchPermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks the
+      permission to create a branch
+    type: field
+    numericValue: 8
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.CreateTagPermissionRequired
+    name: CreateTagPermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks the
+      permission to create a tag
+    type: field
+    numericValue: 9
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.RejectedByPlugin
+    name: RejectedByPlugin
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update could not be completed because it was rejected by the
+      plugin.
+    type: field
+    numericValue: 10
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.Locked
+    name: Locked
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update could not be completed because the ref is locked by another
+      user.
+    type: field
+    numericValue: 11
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.RefNameConflict
+    name: RefNameConflict
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update could not be completed because, in case-insensitive mode,
+      the ref name conflicts with an existing, differently-cased ref name.
+    type: field
+    numericValue: 12
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.RejectedByPolicy
+    name: RejectedByPolicy
+    children: []
+    langs:
+      - typeScript
+    summary: The ref update could not be completed because it was rejected by policy.
+    type: field
+    numericValue: 13
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.SucceededNonExistentRef
+    name: SucceededNonExistentRef
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request was completed successfully, but the
+      ref doesn't actually exist so no changes were made.  This should only
+      happen during deletes.
+    type: field
+    numericValue: 14
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateStatus.SucceededCorruptRef
+    name: SucceededCorruptRef
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request was completed successfully, but the
+      passed-in ref was corrupt - as in, the old object ID was bad.  This should
+      only happen during deletes.
+    type: field
+    numericValue: 15
+    package: azure-devops-extension-api

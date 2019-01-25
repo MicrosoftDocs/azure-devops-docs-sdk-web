@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.GitPullRequestCommentThreadContext
+    name: GitPullRequestCommentThreadContext
+    fullName: GitPullRequestCommentThreadContext
+    children:
+      - >-
+        azure-devops-extension-api.GitPullRequestCommentThreadContext.changeTrackingId
+      - >-
+        azure-devops-extension-api.GitPullRequestCommentThreadContext.iterationContext
+      - >-
+        azure-devops-extension-api.GitPullRequestCommentThreadContext.trackingCriteria
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Comment thread context contains details about what diffs were being viewed
+      at the time of thread creation and whether or not the thread has been
+      tracked from that original diff.
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.GitPullRequestCommentThreadContext.changeTrackingId
+    name: changeTrackingId
+    fullName: changeTrackingId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Used to track a comment across iterations. This value can be found by
+      looking at the iteration's changes list. Must be set for pull requests
+      with iteration support. Otherwise, it's not required for 'legacy' pull
+      requests.
+    syntax:
+      content: 'changeTrackingId: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.GitPullRequestCommentThreadContext.iterationContext
+    name: iterationContext
+    fullName: iterationContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The iteration context being viewed when the thread was created.
+    syntax:
+      content: 'iterationContext: CommentIterationContext'
+      return:
+        type:
+          - azure-devops-extension-api.CommentIterationContext
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.GitPullRequestCommentThreadContext.trackingCriteria
+    name: trackingCriteria
+    fullName: trackingCriteria
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The criteria used to track this thread. If this property is filled out
+      when the thread is returned, then the thread has been tracked from its
+      original location using the given criteria.
+    syntax:
+      content: 'trackingCriteria: CommentTrackingCriteria'
+      return:
+        type:
+          - azure-devops-extension-api.CommentTrackingCriteria
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.CommentIterationContext
+    name: CommentIterationContext
+    spec.typeScript:
+      - name: CommentIterationContext
+        fullName: CommentIterationContext
+        uid: azure-devops-extension-api.CommentIterationContext
+  - uid: azure-devops-extension-api.CommentTrackingCriteria
+    name: CommentTrackingCriteria
+    spec.typeScript:
+      - name: CommentTrackingCriteria
+        fullName: CommentTrackingCriteria
+        uid: azure-devops-extension-api.CommentTrackingCriteria

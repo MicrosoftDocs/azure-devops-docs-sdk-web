@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.MetricsRow
+    name: MetricsRow
+    fullName: MetricsRow
+    children:
+      - azure-devops-extension-api.MetricsRow.dimensions
+      - azure-devops-extension-api.MetricsRow.metrics
+    langs:
+      - typeScript
+    type: interface
+    summary: Metrics row.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.MetricsRow.dimensions
+    name: dimensions
+    fullName: dimensions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The values of the properties mentioned as 'Dimensions' in column header.
+      E.g. 1: For a property 'LastJobStatus' - metrics will be provided for
+      'passed', 'failed', etc. E.g. 2: For a property 'TargetState' - metrics
+      will be provided for 'online', 'offline' targets.
+    syntax:
+      content: 'dimensions: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.MetricsRow.metrics
+    name: metrics
+    fullName: metrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Metrics in serialized format. Should be deserialized based on the data
+      type provided in header.
+    syntax:
+      content: 'metrics: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-devops-extension-api

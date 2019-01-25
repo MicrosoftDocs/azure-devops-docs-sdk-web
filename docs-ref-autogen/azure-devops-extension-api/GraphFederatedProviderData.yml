@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.GraphFederatedProviderData
+    name: GraphFederatedProviderData
+    fullName: GraphFederatedProviderData
+    children:
+      - azure-devops-extension-api.GraphFederatedProviderData.accessToken
+      - >-
+        azure-devops-extension-api.GraphFederatedProviderData.canQueryAccessToken
+      - azure-devops-extension-api.GraphFederatedProviderData.providerName
+      - azure-devops-extension-api.GraphFederatedProviderData.subjectDescriptor
+      - azure-devops-extension-api.GraphFederatedProviderData.version
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Represents a set of data used to communicate with a federated provider on
+      behalf of a particular user.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphFederatedProviderData.accessToken
+    name: accessToken
+    fullName: accessToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The access token that can be used to communicated with the federated
+      provider on behalf on the target identity, if we were able to successfully
+      acquire one, otherwise \<code\>null\</code\>, if we were not.
+    syntax:
+      content: 'accessToken: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphFederatedProviderData.canQueryAccessToken
+    name: canQueryAccessToken
+    fullName: canQueryAccessToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether or not the immediate provider (i.e. AAD) has indicated that we can
+      call them to attempt to get an access token to communicate with the
+      federated provider on behalf of the target identity.
+    syntax:
+      content: 'canQueryAccessToken: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphFederatedProviderData.providerName
+    name: providerName
+    fullName: providerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The name of the federated provider, e.g. "github.com".'
+    syntax:
+      content: 'providerName: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphFederatedProviderData.subjectDescriptor
+    name: subjectDescriptor
+    fullName: subjectDescriptor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The descriptor of the graph subject to which this federated provider data
+      corresponds.
+    syntax:
+      content: 'subjectDescriptor: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphFederatedProviderData.version
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The version number of this federated provider data, which corresponds to
+      when it was last updated. Can be used to prevent returning stale provider
+      data from the cache when the caller is aware of a newer version, such as
+      to prevent local cache poisoning from a remote cache or store. This is the
+      app layer equivalent of the data layer sequence ID.
+    syntax:
+      content: 'version: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api

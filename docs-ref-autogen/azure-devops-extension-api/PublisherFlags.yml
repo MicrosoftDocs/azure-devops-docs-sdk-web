@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.PublisherFlags
+    name: PublisherFlags
+    fullName: PublisherFlags
+    children:
+      - azure-devops-extension-api.PublisherFlags.None
+      - azure-devops-extension-api.PublisherFlags.Disabled
+      - azure-devops-extension-api.PublisherFlags.Verified
+      - azure-devops-extension-api.PublisherFlags.Certified
+      - azure-devops-extension-api.PublisherFlags.ServiceFlags
+      - azure-devops-extension-api.PublisherFlags.UnChanged
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherFlags.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No flags exist for this publisher.
+    type: field
+    numericValue: 0
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherFlags.Disabled
+    name: Disabled
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The Disabled flag for a publisher means the publisher can't be changed and
+      won't be used by consumers, this extends to extensions owned by the
+      publisher as well. The disabled flag is managed by the service and can't
+      be supplied by the Extension Developers.
+    type: field
+    numericValue: 1
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherFlags.Verified
+    name: Verified
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      A verified publisher is one that Microsoft has done some review of and
+      ensured the publisher meets a set of requirements. The requirements to
+      become a verified publisher are not listed here.  They can be found in
+      public documentation (TBD).
+    type: field
+    numericValue: 2
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherFlags.Certified
+    name: Certified
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      A Certified publisher is one that is Microsoft verified and in addition
+      meets a set of requirements for its published extensions. The requirements
+      to become a certified publisher are not listed here.  They can be found in
+      public documentation (TBD).
+    type: field
+    numericValue: 4
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherFlags.ServiceFlags
+    name: ServiceFlags
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This is the set of flags that can't be supplied by the developer and is
+      managed by the service itself.
+    type: field
+    numericValue: 7
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PublisherFlags.UnChanged
+    name: UnChanged
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This should never be returned, it is used to represent a publisher who's
+      flags havent changed during update calls.
+    type: field
+    numericValue: 1073741824
+    package: azure-devops-extension-api

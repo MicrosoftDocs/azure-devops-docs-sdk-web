@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.RuleCondition
+    name: RuleCondition
+    fullName: RuleCondition
+    children:
+      - azure-devops-extension-api.RuleCondition.conditionType
+      - azure-devops-extension-api.RuleCondition.field
+      - azure-devops-extension-api.RuleCondition.value
+    langs:
+      - typeScript
+    type: interface
+    summary: Defines a condition on a field when the rule should be triggered.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.RuleCondition.conditionType
+    name: conditionType
+    fullName: conditionType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Type of condition. $When. This condition limits the execution of its
+      children to cases when another field has a particular value, i.e. when the
+      Is value of the referenced field is equal to the given literal value.
+      $WhenNot.This condition limits the execution of its children to cases when
+      another field does not have a particular value, i.e.when the Is value of
+      the referenced field is not equal to the given literal value.
+      $WhenChanged.This condition limits the execution of its children to cases
+      when another field has changed, i.e.when the Is value of the referenced
+      field is not equal to the Was value of that field. $WhenNotChanged.This
+      condition limits the execution of its children to cases when another field
+      has not changed, i.e.when the Is value of the referenced field is equal to
+      the Was value of that field.
+    syntax:
+      content: 'conditionType: RuleConditionType'
+      return:
+        type:
+          - azure-devops-extension-api.RuleConditionType
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.RuleCondition.field
+    name: field
+    fullName: field
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Field that defines condition.
+    syntax:
+      content: 'field: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.RuleCondition.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Value of field to define the condition for rule.
+    syntax:
+      content: 'value: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.RuleConditionType
+    name: RuleConditionType
+    spec.typeScript:
+      - name: RuleConditionType
+        fullName: RuleConditionType
+        uid: azure-devops-extension-api.RuleConditionType
