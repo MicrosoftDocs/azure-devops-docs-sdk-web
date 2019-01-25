@@ -4,11 +4,30 @@
     "content": [
       {
         "files": [
+          "**/toc.yml"
+        ],
+        "src": "docs-ref-autogen",
+        "version": "azdevops-ext-latest",
+        "dest": "az_devops_ext_js_toc",
+        "group": "latest",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
           "**/*.md",
           "**/*.yml"
         ],
         "src": "docs-ref-autogen",
         "version": "azdevops-ext-latest",
+        "dest": "api",
+        "group": "latest",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -23,7 +42,8 @@
           "**/*.yml"
         ],
         "src": "breadcrumb",
-        "dest": "breadcrumb",
+        "dest": "az_devops_ext_js_breadcrumb",
+        "group": "latest",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -39,14 +59,16 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**"
-        ]
+        ],
+        "group": "latest"
       }
     ],
     "overwrite": [],
     "externalReference": [],
-    "versions": {
-      "azdevops-ext-latest": {
-        "dest": "latest"
+    "groups": {
+      "latest": {
+        "dest": "latest",
+        "moniker_range": "azdevops-ext-latest"
       }
     },
     "globalMetadata": {
