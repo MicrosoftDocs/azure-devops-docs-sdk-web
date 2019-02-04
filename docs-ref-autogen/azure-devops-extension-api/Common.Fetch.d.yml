@@ -1,0 +1,69 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.Common.Fetch.d
+    name: Common.Fetch.d
+    fullName: Common.Fetch.d
+    children:
+      - azure-devops-extension-api.Common.Fetch.d.IPostRequestEvent
+      - azure-devops-extension-api.Common.Fetch.d.IPreRequestEvent
+      - azure-devops-extension-api.Common.Fetch.d.issueRequest
+      - azure-devops-extension-api.Common.Fetch.d.IVssRequestOptions
+      - azure-devops-extension-api.Common.Fetch.d.VssServerError
+    langs:
+      - typeScript
+    type: external module
+    summary: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Common.Fetch.d.issueRequest
+    name: 'issueRequest(string, RequestInit, IVssRequestOptions)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Issue a fetch request. This is a wrapper around the browser fetch method
+      that handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
+    syntax:
+      content: >-
+        function issueRequest(requestUrl: string, options?: RequestInit,
+        vssRequestOptions?: IVssRequestOptions)
+      parameters:
+        - id: requestUrl
+          type:
+            - string
+          description: Url to send the request to
+        - id: options
+          type:
+            - RequestInit
+          description: fetch settings/options for the request
+          optional: true
+        - id: vssRequestOptions
+          type:
+            - azure-devops-extension-api.Common.Fetch.d.IVssRequestOptions
+          description: |
+            VSS specific request options
+
+            Triggered Events:
+             afterRequest -> IPostRequestEvent is sent after the request has completed.
+             beforeRequest -> IPreRequestEvent is sent before the request is made.
+          optional: true
+      return:
+        type:
+          - Promise<Response>
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.Common.Fetch.d.IVssRequestOptions
+    name: IVssRequestOptions
+    spec.typeScript:
+      - name: IVssRequestOptions
+        fullName: IVssRequestOptions
+        uid: azure-devops-extension-api.Common.Fetch.d.IVssRequestOptions
+  - uid: azure-devops-extension-api.Common.Context.d.IAuthorizationTokenProvider
+    name: IAuthorizationTokenProvider
+    spec.typeScript:
+      - name: IAuthorizationTokenProvider
+        fullName: IAuthorizationTokenProvider
+        uid: >-
+          azure-devops-extension-api.Common.Context.d.IAuthorizationTokenProvider

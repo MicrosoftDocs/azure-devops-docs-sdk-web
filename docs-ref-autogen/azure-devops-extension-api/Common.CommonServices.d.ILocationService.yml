@@ -1,0 +1,205 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.Common.CommonServices.d.ILocationService
+    name: ILocationService
+    fullName: ILocationService
+    children:
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.ILocationService.getResourceAreaLocation
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.ILocationService.getServiceLocation
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.ILocationService.routeUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: Service for external content to get locations
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.ILocationService.getResourceAreaLocation
+    name: getResourceAreaLocation(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the URL for the given REST resource area
+    syntax:
+      content: 'function getResourceAreaLocation(resourceAreaId: string)'
+      parameters:
+        - id: resourceAreaId
+          type:
+            - string
+          description: |
+            Id of the resource area
+      return:
+        type:
+          - Promise<string>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.ILocationService.getServiceLocation
+    name: 'getServiceLocation(string, TeamFoundationHostType)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the location of a remote service at a given host type.
+    syntax:
+      content: >-
+        function getServiceLocation(serviceInstanceType?: string, hostType?:
+        TeamFoundationHostType)
+      parameters:
+        - id: serviceInstanceType
+          type:
+            - string
+          description: The GUID of the service instance type to lookup
+          optional: true
+        - id: hostType
+          type:
+            - >-
+              azure-devops-extension-api.Common.CommonServices.d.TeamFoundationHostType
+          description: >
+            The host type to lookup (defaults to the host type of the current
+            page data)
+          optional: true
+      return:
+        type:
+          - Promise<string>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.ILocationService.routeUrl
+    name: 'routeUrl(string, [key: string]: string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      Attemps to create a url for the specified route template and paramaters. 
+      The url will include host path.
+
+      For example, if the page url is https://dev.azure.com/foo and you try to
+      create admin settings url for project "bar",
+
+      the output will be /foo/bar/_admin.
+
+      This will asynchronously fetch a route contribution if it has not been
+      included in page data.
+    syntax:
+      content: >-
+        function routeUrl(routeId: string, routeValues?: [key: string]: string,
+        hostPath?: string)
+      parameters:
+        - id: routeId
+          type:
+            - string
+          description: Id of the route contribution
+        - id: routeValues
+          type:
+            - '[key: string]: string'
+          description: Route value replacements
+          optional: true
+        - id: hostPath
+          type:
+            - string
+          description: >
+            Optional host path to use rather than the default host path for the
+            page.
+          optional: true
+      return:
+        type:
+          - Promise<string>
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.Common.CommonServices.d.IDocumentOptions
+    name: IDocumentOptions
+    spec.typeScript:
+      - name: IDocumentOptions
+        fullName: IDocumentOptions
+        uid: azure-devops-extension-api.Common.CommonServices.d.IDocumentOptions
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.ExtensionDataCollection[]
+    name: 'ExtensionDataCollection[]'
+    spec.typeScript:
+      - name: ExtensionDataCollection
+        fullName: ExtensionDataCollection
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.ExtensionDataCollection
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      Promise<azure-devops-extension-api.Common.CommonServices.d.ExtensionDataCollection[]>
+    name: 'ExtensionDataCollection[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ExtensionDataCollection
+        fullName: ExtensionDataCollection
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.ExtensionDataCollection
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: >-
+      Promise<azure-devops-extension-api.Common.CommonServices.d.IExtensionDataManager>
+    name: IExtensionDataManager>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: IExtensionDataManager
+        fullName: IExtensionDataManager
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.IExtensionDataManager
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.Common.CommonServices.d.MessageBannerLevel
+    name: MessageBannerLevel
+    spec.typeScript:
+      - name: MessageBannerLevel
+        fullName: MessageBannerLevel
+        uid: azure-devops-extension-api.Common.CommonServices.d.MessageBannerLevel
+  - uid: 'azure-devops-extension-api.Common.CommonServices.d.IGlobalMessageLink[]'
+    name: 'IGlobalMessageLink[]'
+    spec.typeScript:
+      - name: IGlobalMessageLink
+        fullName: IGlobalMessageLink
+        uid: azure-devops-extension-api.Common.CommonServices.d.IGlobalMessageLink
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-devops-extension-api.Common.CommonServices.d.IGlobalMessageBanner
+    name: IGlobalMessageBanner
+    spec.typeScript:
+      - name: IGlobalMessageBanner
+        fullName: IGlobalMessageBanner
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.IGlobalMessageBanner
+  - uid: azure-devops-extension-api.Common.CommonServices.d.TeamFoundationHostType
+    name: TeamFoundationHostType
+    spec.typeScript:
+      - name: TeamFoundationHostType
+        fullName: TeamFoundationHostType
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.TeamFoundationHostType
+  - uid: azure-devops-extension-api.Common.CommonServices.d.IDialogOptions<boolean>
+    name: IDialogOptions<boolean>
+    spec.typeScript:
+      - name: IDialogOptions
+        fullName: IDialogOptions
+        uid: azure-devops-extension-api.Common.CommonServices.d.IDialogOptions
+      - name: <boolean>
+        fullName: <boolean>
+  - uid: azure-devops-extension-api.Common.CommonServices.d.PanelSize
+    name: PanelSize
+    spec.typeScript:
+      - name: PanelSize
+        fullName: PanelSize
+        uid: azure-devops-extension-api.Common.CommonServices.d.PanelSize
+  - uid: >-
+      Promise<azure-devops-extension-api.Common.CommonServices.d.IProjectInfo |
+      undefined>
+    name: IProjectInfo | undefined>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: IProjectInfo
+        fullName: IProjectInfo
+        uid: azure-devops-extension-api.Common.CommonServices.d.IProjectInfo
+      - name: ' | undefined>'
+        fullName: ' | undefined>'

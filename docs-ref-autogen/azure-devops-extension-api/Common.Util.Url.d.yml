@@ -1,0 +1,238 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.Common.Util.Url.d
+    name: Common.Util.Url.d
+    fullName: Common.Util.Url.d
+    children:
+      - azure-devops-extension-api.Common.Util.Url.d.combineUrlPaths
+      - azure-devops-extension-api.Common.Util.Url.d.getBestRouteMatch
+      - azure-devops-extension-api.Common.Util.Url.d.IParsedRoute
+      - azure-devops-extension-api.Common.Util.Url.d.IParsedRouteSegment
+      - azure-devops-extension-api.Common.Util.Url.d.IQueryParameter
+      - azure-devops-extension-api.Common.Util.Url.d.IRouteMatchResult
+      - azure-devops-extension-api.Common.Util.Url.d.IUriParseOptions
+      - azure-devops-extension-api.Common.Util.Url.d.parseRouteTemplate
+      - azure-devops-extension-api.Common.Util.Url.d.replaceParsedRouteValues
+      - azure-devops-extension-api.Common.Util.Url.d.replaceRouteValues
+      - azure-devops-extension-api.Common.Util.Url.d.routeUrl
+      - azure-devops-extension-api.Common.Util.Url.d.Uri
+    langs:
+      - typeScript
+    type: external module
+    summary: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Common.Util.Url.d.combineUrlPaths
+    name: 'combineUrlPaths(string[])'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Take url segments and join them with a single slash character. Takes care
+      of path segements that start and/or end
+
+      with a slash to ensure that the resulting URL does not have double-slashes
+    syntax:
+      content: 'function combineUrlPaths(paths: string[])'
+      parameters:
+        - id: paths
+          type:
+            - 'string[]'
+          description: |
+            Path segments to concatenate
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Common.Util.Url.d.getBestRouteMatch
+    name: 'getBestRouteMatch(IParsedRoute[], [key: string]: string)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Take a set of routes and find the best match. The best match is the route
+      with the highest number of replacements
+
+      (of the given routeValues dictionary). In the event of a tie (same number
+      of replacements) the route that came first wins.
+    syntax:
+      content: >-
+        function getBestRouteMatch(routeCollection: IParsedRoute[], routeValues:
+        [key: string]: string)
+      parameters:
+        - id: routeCollection
+          type:
+            - 'azure-devops-extension-api.Common.Util.Url.d.IParsedRoute[]'
+          description: Array of parsed routes
+        - id: routeValues
+          type:
+            - '[key: string]: string'
+          description: |
+            Replacement values
+      return:
+        type:
+          - >-
+            azure-devops-extension-api.Common.Util.Url.d.IRouteMatchResult |
+            undefined
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Common.Util.Url.d.parseRouteTemplate
+    name: parseRouteTemplate(string)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Parse a route template into a structure that can be used to quickly do
+      route replacements
+    syntax:
+      content: 'function parseRouteTemplate(routeTemplate: string)'
+      parameters:
+        - id: routeTemplate
+          type:
+            - string
+          description: |
+            MVC route template string (like "/foo/{id}/{*params}")
+      return:
+        type:
+          - azure-devops-extension-api.Common.Util.Url.d.IParsedRoute
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Common.Util.Url.d.replaceParsedRouteValues
+    name: 'replaceParsedRouteValues(IParsedRoute, [key: string]: function, boolean)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Replace route values for a specific parsed route
+    syntax:
+      content: >-
+        function replaceParsedRouteValues(parsedRoute: IParsedRoute,
+        routeValues: [key: string]: function, continueOnUnmatchedSegements?:
+        boolean)
+      parameters:
+        - id: parsedRoute
+          type:
+            - azure-devops-extension-api.Common.Util.Url.d.IParsedRoute
+          description: The route to evaluate
+        - id: routeValues
+          type:
+            - '[key: string]: function'
+          description: Dictionary of route replacement parameters
+        - id: continueOnUnmatchedSegements
+          type:
+            - boolean
+          description: >
+            If true, continue with replacements even after a miss. By default
+            (false), stop replacements once a parameter is not present.
+          optional: true
+      return:
+        type:
+          - >-
+            azure-devops-extension-api.Common.Util.Url.d.IRouteMatchResult |
+            undefined
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Common.Util.Url.d.replaceRouteValues
+    name: 'replaceRouteValues(string, [key: string]: function)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Take an MVC route template (like "/foo/{id}/{*params}") and replace the
+      templated parts with values from the given dictionary
+    syntax:
+      content: >-
+        function replaceRouteValues(routeTemplate: string, routeValues: [key:
+        string]: function)
+      parameters:
+        - id: routeTemplate
+          type:
+            - string
+          description: 'MVC route template (like "/foo/{id}/{*params}")'
+        - id: routeValues
+          type:
+            - '[key: string]: function'
+          description: |
+            Route value replacements
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Common.Util.Url.d.routeUrl
+    name: 'routeUrl(IParsedRoute[], [key: string]: string)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Take a set of routes and route values and form a url using the best match.
+      The best match
+
+      is the route with the highest number of replacements (of the given
+      routeValues dictionary).
+
+      In the event of a tie (same number of replacements) the route that came
+      first wins.
+    syntax:
+      content: >-
+        function routeUrl(routeCollection: IParsedRoute[], routeValues: [key:
+        string]: string)
+      parameters:
+        - id: routeCollection
+          type:
+            - 'azure-devops-extension-api.Common.Util.Url.d.IParsedRoute[]'
+          description: Array of parsed routes
+        - id: routeValues
+          type:
+            - '[key: string]: string'
+          description: |
+            Replacement values
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.Common.Util.Url.d.IUriParseOptions
+    name: IUriParseOptions
+    spec.typeScript:
+      - name: IUriParseOptions
+        fullName: IUriParseOptions
+        uid: azure-devops-extension-api.Common.Util.Url.d.IUriParseOptions
+  - uid: 'azure-devops-extension-api.Common.Util.Url.d.IQueryParameter[]'
+    name: 'IQueryParameter[]'
+    spec.typeScript:
+      - name: IQueryParameter
+        fullName: IQueryParameter
+        uid: azure-devops-extension-api.Common.Util.Url.d.IQueryParameter
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-devops-extension-api.Common.Util.Url.d.IParsedRouteSegment[]'
+    name: 'IParsedRouteSegment[]'
+    spec.typeScript:
+      - name: IParsedRouteSegment
+        fullName: IParsedRouteSegment
+        uid: azure-devops-extension-api.Common.Util.Url.d.IParsedRouteSegment
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-devops-extension-api.Common.Util.Url.d.IParsedRoute[]'
+    name: 'IParsedRoute[]'
+    spec.typeScript:
+      - name: IParsedRoute
+        fullName: IParsedRoute
+        uid: azure-devops-extension-api.Common.Util.Url.d.IParsedRoute
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-devops-extension-api.Common.Util.Url.d.IRouteMatchResult | undefined
+    name: IRouteMatchResult | undefined
+    spec.typeScript:
+      - name: IRouteMatchResult
+        fullName: IRouteMatchResult
+        uid: azure-devops-extension-api.Common.Util.Url.d.IRouteMatchResult
+      - name: ' | undefined'
+        fullName: ' | undefined'
+  - uid: azure-devops-extension-api.Common.Util.Url.d.IParsedRoute
+    name: IParsedRoute
+    spec.typeScript:
+      - name: IParsedRoute
+        fullName: IParsedRoute
+        uid: azure-devops-extension-api.Common.Util.Url.d.IParsedRoute

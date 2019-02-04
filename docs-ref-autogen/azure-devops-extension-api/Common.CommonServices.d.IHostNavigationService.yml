@@ -1,0 +1,256 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService
+    name: IHostNavigationService
+    fullName: IHostNavigationService
+    children:
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.getHash
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.navigate
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.onHashChanged
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.openNewWindow
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.reload
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.replaceHash
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.setDocumentTitle
+      - >-
+        azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.setHash
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Service for interacting with the host window's navigation (URLs, new
+      windows, etc.)
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.getHash
+    name: getHash()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the current hash.
+    syntax:
+      content: function getHash()
+      parameters: []
+      return:
+        type:
+          - Promise<string>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.navigate
+    name: navigate(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Navigate the parent page to the specified url
+    syntax:
+      content: 'function navigate(url: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: |
+            Url to navigate to
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.onHashChanged
+    name: 'onHashChanged((hash: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Add a callback to be invoked each time the hash navigation has changed
+    syntax:
+      content: 'function onHashChanged(callback: (hash: string) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(hash: string) => void'
+          description: |
+            Method invoked on each navigation hash change
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.openNewWindow
+    name: 'openNewWindow(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Open a new window to the specified url
+    syntax:
+      content: 'function openNewWindow(url: string, features: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: Url of the new window
+        - id: features
+          type:
+            - string
+          description: >
+            Comma-separated list of features/specs sent as the 3rd parameter to
+            window.open. For example: "height=400,width=400".
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.reload
+    name: reload()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Reloads the parent frame
+    syntax:
+      content: function reload()
+      parameters: []
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.replaceHash
+    name: replaceHash(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Replace existing hash with the provided hash from the hosted content.
+    syntax:
+      content: 'function replaceHash(hash: string)'
+      parameters:
+        - id: hash
+          type:
+            - string
+          description: ''
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.setDocumentTitle
+    name: setDocumentTitle(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Update the host document's title (appears as the browser tab title).
+    syntax:
+      content: 'function setDocumentTitle(title: string)'
+      parameters:
+        - id: title
+          type:
+            - string
+          description: |
+            The new title of the window
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.IHostNavigationService.setHash
+    name: setHash(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Sets the provided hash from the hosted content.
+    syntax:
+      content: 'function setHash(hash: string)'
+      parameters:
+        - id: hash
+          type:
+            - string
+          description: ''
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.Common.CommonServices.d.IDocumentOptions
+    name: IDocumentOptions
+    spec.typeScript:
+      - name: IDocumentOptions
+        fullName: IDocumentOptions
+        uid: azure-devops-extension-api.Common.CommonServices.d.IDocumentOptions
+  - uid: >-
+      azure-devops-extension-api.Common.CommonServices.d.ExtensionDataCollection[]
+    name: 'ExtensionDataCollection[]'
+    spec.typeScript:
+      - name: ExtensionDataCollection
+        fullName: ExtensionDataCollection
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.ExtensionDataCollection
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      Promise<azure-devops-extension-api.Common.CommonServices.d.ExtensionDataCollection[]>
+    name: 'ExtensionDataCollection[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ExtensionDataCollection
+        fullName: ExtensionDataCollection
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.ExtensionDataCollection
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: >-
+      Promise<azure-devops-extension-api.Common.CommonServices.d.IExtensionDataManager>
+    name: IExtensionDataManager>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: IExtensionDataManager
+        fullName: IExtensionDataManager
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.IExtensionDataManager
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.Common.CommonServices.d.MessageBannerLevel
+    name: MessageBannerLevel
+    spec.typeScript:
+      - name: MessageBannerLevel
+        fullName: MessageBannerLevel
+        uid: azure-devops-extension-api.Common.CommonServices.d.MessageBannerLevel
+  - uid: 'azure-devops-extension-api.Common.CommonServices.d.IGlobalMessageLink[]'
+    name: 'IGlobalMessageLink[]'
+    spec.typeScript:
+      - name: IGlobalMessageLink
+        fullName: IGlobalMessageLink
+        uid: azure-devops-extension-api.Common.CommonServices.d.IGlobalMessageLink
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-devops-extension-api.Common.CommonServices.d.IGlobalMessageBanner
+    name: IGlobalMessageBanner
+    spec.typeScript:
+      - name: IGlobalMessageBanner
+        fullName: IGlobalMessageBanner
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.IGlobalMessageBanner
+  - uid: azure-devops-extension-api.Common.CommonServices.d.TeamFoundationHostType
+    name: TeamFoundationHostType
+    spec.typeScript:
+      - name: TeamFoundationHostType
+        fullName: TeamFoundationHostType
+        uid: >-
+          azure-devops-extension-api.Common.CommonServices.d.TeamFoundationHostType
+  - uid: azure-devops-extension-api.Common.CommonServices.d.IDialogOptions<boolean>
+    name: IDialogOptions<boolean>
+    spec.typeScript:
+      - name: IDialogOptions
+        fullName: IDialogOptions
+        uid: azure-devops-extension-api.Common.CommonServices.d.IDialogOptions
+      - name: <boolean>
+        fullName: <boolean>
+  - uid: azure-devops-extension-api.Common.CommonServices.d.PanelSize
+    name: PanelSize
+    spec.typeScript:
+      - name: PanelSize
+        fullName: PanelSize
+        uid: azure-devops-extension-api.Common.CommonServices.d.PanelSize
+  - uid: >-
+      Promise<azure-devops-extension-api.Common.CommonServices.d.IProjectInfo |
+      undefined>
+    name: IProjectInfo | undefined>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: IProjectInfo
+        fullName: IProjectInfo
+        uid: azure-devops-extension-api.Common.CommonServices.d.IProjectInfo
+      - name: ' | undefined>'
+        fullName: ' | undefined>'
