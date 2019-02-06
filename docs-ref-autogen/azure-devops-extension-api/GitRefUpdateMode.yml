@@ -1,0 +1,40 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.GitRefUpdateMode
+    name: GitRefUpdateMode
+    fullName: GitRefUpdateMode
+    children:
+      - azure-devops-extension-api.GitRefUpdateMode.BestEffort
+      - azure-devops-extension-api.GitRefUpdateMode.AllOrNone
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      Enumerates the modes under which ref updates can be written to their
+      repositories.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateMode.BestEffort
+    name: BestEffort
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates the Git protocol model where any refs that can be updated will
+      be updated, but any failures will not prevent other updates from
+      succeeding.
+    type: field
+    numericValue: 0
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GitRefUpdateMode.AllOrNone
+    name: AllOrNone
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that all ref updates must succeed or none will succeed. All ref
+      updates will be atomically written. If any failure is encountered,
+      previously successful updates will be rolled back and the entire operation
+      will fail.
+    type: field
+    numericValue: 1
+    package: azure-devops-extension-api

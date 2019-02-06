@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.IVssRestClientOptions
+    name: IVssRestClientOptions
+    fullName: IVssRestClientOptions
+    children:
+      - azure-devops-extension-api.IVssRestClientOptions.authTokenProvider
+      - azure-devops-extension-api.IVssRestClientOptions.command
+      - azure-devops-extension-api.IVssRestClientOptions.rootPath
+      - azure-devops-extension-api.IVssRestClientOptions.sessionId
+    langs:
+      - typeScript
+    type: interface
+    summary: Options for a specific instance of a REST client.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IVssRestClientOptions.authTokenProvider
+    name: authTokenProvider
+    fullName: authTokenProvider
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Auth token manager that can be used to get and attach auth tokens to
+      requests.
+
+      If not supplied, the default token provider is used if the
+      serviceInstanceType option is supplied
+
+      and is different from the hosting page's service instance type.
+    optional: true
+    syntax:
+      content: 'authTokenProvider?: IAuthorizationTokenProvider'
+      return:
+        type:
+          - azure-devops-extension-api.IAuthorizationTokenProvider
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IVssRestClientOptions.command
+    name: command
+    fullName: command
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current command for activity logging.
+    optional: true
+    syntax:
+      content: 'command?: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IVssRestClientOptions.rootPath
+    name: rootPath
+    fullName: rootPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The root URL path to use for this client. Can be relative or absolute.
+    optional: true
+    syntax:
+      content: 'rootPath?: string | Promise<string>'
+      return:
+        type:
+          - string | Promise<string>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IVssRestClientOptions.sessionId
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current session id.
+    optional: true
+    syntax:
+      content: 'sessionId?: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.IAuthorizationTokenProvider
+    name: IAuthorizationTokenProvider
+    spec.typeScript:
+      - name: IAuthorizationTokenProvider
+        fullName: IAuthorizationTokenProvider
+        uid: azure-devops-extension-api.IAuthorizationTokenProvider

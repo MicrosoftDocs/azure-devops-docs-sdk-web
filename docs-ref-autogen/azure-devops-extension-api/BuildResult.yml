@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.BuildResult
+    name: BuildResult
+    fullName: BuildResult
+    children:
+      - azure-devops-extension-api.BuildResult.None
+      - azure-devops-extension-api.BuildResult.Succeeded
+      - azure-devops-extension-api.BuildResult.PartiallySucceeded
+      - azure-devops-extension-api.BuildResult.Failed
+      - azure-devops-extension-api.BuildResult.Canceled
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      This is not a Flags enum because we don't want to set multiple statuses on
+      a build. However, when adding values, please stick to powers of 2 as if it
+      were a Flags enum This will ensure that things that key off multiple
+      result types (like labelling sources) continue to work
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.BuildResult.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No result
+    type: field
+    numericValue: 0
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.BuildResult.Succeeded
+    name: Succeeded
+    children: []
+    langs:
+      - typeScript
+    summary: The build completed successfully.
+    type: field
+    numericValue: 2
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.BuildResult.PartiallySucceeded
+    name: PartiallySucceeded
+    children: []
+    langs:
+      - typeScript
+    summary: The build completed compilation successfully but had other errors.
+    type: field
+    numericValue: 4
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.BuildResult.Failed
+    name: Failed
+    children: []
+    langs:
+      - typeScript
+    summary: The build completed unsuccessfully.
+    type: field
+    numericValue: 8
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.BuildResult.Canceled
+    name: Canceled
+    children: []
+    langs:
+      - typeScript
+    summary: The build was canceled before starting.
+    type: field
+    numericValue: 32
+    package: azure-devops-extension-api

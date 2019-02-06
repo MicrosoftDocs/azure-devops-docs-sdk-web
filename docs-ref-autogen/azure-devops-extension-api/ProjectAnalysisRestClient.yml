@@ -1,0 +1,238 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.ProjectAnalysisRestClient
+    name: ProjectAnalysisRestClient
+    fullName: ProjectAnalysisRestClient
+    children:
+      - >-
+        azure-devops-extension-api.ProjectAnalysisRestClient.getGitRepositoriesActivityMetrics
+      - >-
+        azure-devops-extension-api.ProjectAnalysisRestClient.getProjectActivityMetrics
+      - >-
+        azure-devops-extension-api.ProjectAnalysisRestClient.getProjectLanguageAnalytics
+      - >-
+        azure-devops-extension-api.ProjectAnalysisRestClient.getRepositoryActivityMetrics
+      - azure-devops-extension-api.ProjectAnalysisRestClient.constructor
+      - azure-devops-extension-api.ProjectAnalysisRestClient.RESOURCE_AREA_ID
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: azure-devops-extension-api.RestClientBase
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ProjectAnalysisRestClient.getGitRepositoriesActivityMetrics
+    name: >-
+      getGitRepositoriesActivityMetrics(string, Date, AggregationType, number,
+      number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Retrieves git activity metrics for repositories matching a specified
+      criteria.
+    syntax:
+      content: >-
+        function getGitRepositoriesActivityMetrics(project: string, fromDate:
+        Date, aggregationType: AggregationType, skip: number, top: number)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: fromDate
+          type:
+            - Date
+          description: 'Date from which, the trends are to be fetched.'
+        - id: aggregationType
+          type:
+            - azure-devops-extension-api.AggregationType
+          description: 'Bucket size on which, trends are to be aggregated.'
+        - id: skip
+          type:
+            - number
+          description: The number of repositories to ignore.
+        - id: top
+          type:
+            - number
+          description: >
+            The number of repositories for which activity metrics are to be
+            retrieved.
+      return:
+        type:
+          - 'Promise<azure-devops-extension-api.RepositoryActivityMetrics[]>'
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ProjectAnalysisRestClient.getProjectActivityMetrics
+    name: 'getProjectActivityMetrics(string, Date, AggregationType)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getProjectActivityMetrics(project: string, fromDate: Date,
+        aggregationType: AggregationType)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: fromDate
+          type:
+            - Date
+          description: '-'
+        - id: aggregationType
+          type:
+            - azure-devops-extension-api.AggregationType
+          description: |
+            -
+      return:
+        type:
+          - Promise<azure-devops-extension-api.ProjectActivityMetrics>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ProjectAnalysisRestClient.getProjectLanguageAnalytics
+    name: getProjectLanguageAnalytics(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProjectLanguageAnalytics(project: string)'
+      parameters:
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+      return:
+        type:
+          - Promise<azure-devops-extension-api.ProjectLanguageAnalytics>
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.ProjectAnalysisRestClient.getRepositoryActivityMetrics
+    name: 'getRepositoryActivityMetrics(string, string, Date, AggregationType)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getRepositoryActivityMetrics(project: string, repositoryId:
+        string, fromDate: Date, aggregationType: AggregationType)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: '-'
+        - id: fromDate
+          type:
+            - Date
+          description: '-'
+        - id: aggregationType
+          type:
+            - azure-devops-extension-api.AggregationType
+          description: |
+            -
+      return:
+        type:
+          - Promise<azure-devops-extension-api.RepositoryActivityMetrics>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProjectAnalysisRestClient.constructor
+    name: ProjectAnalysisRestClient(IVssRestClientOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new ProjectAnalysisRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-devops-extension-api.IVssRestClientOptions
+          description: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProjectAnalysisRestClient.RESOURCE_AREA_ID
+    name: RESOURCE_AREA_ID
+    fullName: RESOURCE_AREA_ID
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'static RESOURCE_AREA_ID: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.RestClientBase
+    name: RestClientBase
+    spec.typeScript:
+      - name: RestClientBase
+        fullName: RestClientBase
+        uid: azure-devops-extension-api.RestClientBase
+  - uid: azure-devops-extension-api.IVssRestClientOptions
+    name: IVssRestClientOptions
+    spec.typeScript:
+      - name: IVssRestClientOptions
+        fullName: IVssRestClientOptions
+        uid: azure-devops-extension-api.IVssRestClientOptions
+  - uid: azure-devops-extension-api.AggregationType
+    name: AggregationType
+    spec.typeScript:
+      - name: AggregationType
+        fullName: AggregationType
+        uid: azure-devops-extension-api.AggregationType
+  - uid: 'Promise<azure-devops-extension-api.RepositoryActivityMetrics[]>'
+    name: 'RepositoryActivityMetrics[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: RepositoryActivityMetrics
+        fullName: RepositoryActivityMetrics
+        uid: azure-devops-extension-api.RepositoryActivityMetrics
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: Promise<azure-devops-extension-api.ProjectActivityMetrics>
+    name: ProjectActivityMetrics>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ProjectActivityMetrics
+        fullName: ProjectActivityMetrics
+        uid: azure-devops-extension-api.ProjectActivityMetrics
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-devops-extension-api.ProjectLanguageAnalytics>
+    name: ProjectLanguageAnalytics>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ProjectLanguageAnalytics
+        fullName: ProjectLanguageAnalytics
+        uid: azure-devops-extension-api.ProjectLanguageAnalytics
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-devops-extension-api.RepositoryActivityMetrics>
+    name: RepositoryActivityMetrics>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: RepositoryActivityMetrics
+        fullName: RepositoryActivityMetrics
+        uid: azure-devops-extension-api.RepositoryActivityMetrics
+      - name: '>'
+        fullName: '>'

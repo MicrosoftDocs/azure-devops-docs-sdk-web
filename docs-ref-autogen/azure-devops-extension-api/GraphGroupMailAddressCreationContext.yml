@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.GraphGroupMailAddressCreationContext
+    name: GraphGroupMailAddressCreationContext
+    fullName: GraphGroupMailAddressCreationContext
+    children:
+      - >-
+        azure-devops-extension-api.GraphGroupMailAddressCreationContext.mailAddress
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Use this type to create a new group using the mail address as a reference
+      to an existing group from an external AD or AAD backed provider. This is
+      the subset of GraphGroup fields required for creation of a group for the
+      AAD and AD use case.
+    extends:
+      name: azure-devops-extension-api.GraphGroupCreationContext
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.GraphGroupMailAddressCreationContext.mailAddress
+    name: mailAddress
+    fullName: mailAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This should be the mail address or the group in the source AD or AAD
+      provider. Example: jamal\@contoso.com Team Services will communicate with
+      the source provider to fill all other fields on creation.
+    syntax:
+      content: 'mailAddress: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.GraphGroupCreationContext
+    name: GraphGroupCreationContext
+    spec.typeScript:
+      - name: GraphGroupCreationContext
+        fullName: GraphGroupCreationContext
+        uid: azure-devops-extension-api.GraphGroupCreationContext

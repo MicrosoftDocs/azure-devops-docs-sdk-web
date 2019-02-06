@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.IParsedRouteSegment
+    name: IParsedRouteSegment
+    fullName: IParsedRouteSegment
+    children:
+      - azure-devops-extension-api.IParsedRouteSegment.isRequiredParam
+      - azure-devops-extension-api.IParsedRouteSegment.isWildCardParam
+      - azure-devops-extension-api.IParsedRouteSegment.paramName
+      - azure-devops-extension-api.IParsedRouteSegment.text
+    langs:
+      - typeScript
+    type: interface
+    summary: And individual segment of the route (fixed text or a parameter)
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IParsedRouteSegment.isRequiredParam
+    name: isRequiredParam
+    fullName: isRequiredParam
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether the parameter is required in order for the URL to be valid.
+    optional: true
+    syntax:
+      content: 'isRequiredParam?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IParsedRouteSegment.isWildCardParam
+    name: isWildCardParam
+    fullName: isWildCardParam
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      For parameters, whether or not this parameter is a wildcard (*) parameter,
+      which means it allows multiple path segments (i.e. don't escape "/")
+    optional: true
+    syntax:
+      content: 'isWildCardParam?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IParsedRouteSegment.paramName
+    name: paramName
+    fullName: paramName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If present, the name of the route value parameter to substitute for this
+      segment. Either text or paramName will be defined for a segment, never
+      both.
+    optional: true
+    syntax:
+      content: 'paramName?: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IParsedRouteSegment.text
+    name: text
+    fullName: text
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If present, the fixed text for this segement. Either text or paramName
+      will be defined for a segment, never both.
+    optional: true
+    syntax:
+      content: 'text?: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api

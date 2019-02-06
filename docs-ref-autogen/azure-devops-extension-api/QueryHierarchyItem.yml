@@ -1,0 +1,456 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.QueryHierarchyItem
+    name: QueryHierarchyItem
+    fullName: QueryHierarchyItem
+    children:
+      - azure-devops-extension-api.QueryHierarchyItem.children
+      - azure-devops-extension-api.QueryHierarchyItem.clauses
+      - azure-devops-extension-api.QueryHierarchyItem.columns
+      - azure-devops-extension-api.QueryHierarchyItem.createdBy
+      - azure-devops-extension-api.QueryHierarchyItem.createdDate
+      - azure-devops-extension-api.QueryHierarchyItem.filterOptions
+      - azure-devops-extension-api.QueryHierarchyItem.hasChildren
+      - azure-devops-extension-api.QueryHierarchyItem.id
+      - azure-devops-extension-api.QueryHierarchyItem.isDeleted
+      - azure-devops-extension-api.QueryHierarchyItem.isFolder
+      - azure-devops-extension-api.QueryHierarchyItem.isInvalidSyntax
+      - azure-devops-extension-api.QueryHierarchyItem.isPublic
+      - azure-devops-extension-api.QueryHierarchyItem.lastExecutedBy
+      - azure-devops-extension-api.QueryHierarchyItem.lastExecutedDate
+      - azure-devops-extension-api.QueryHierarchyItem.lastModifiedBy
+      - azure-devops-extension-api.QueryHierarchyItem.lastModifiedDate
+      - azure-devops-extension-api.QueryHierarchyItem.linkClauses
+      - azure-devops-extension-api.QueryHierarchyItem.name
+      - azure-devops-extension-api.QueryHierarchyItem.path
+      - azure-devops-extension-api.QueryHierarchyItem.queryRecursionOption
+      - azure-devops-extension-api.QueryHierarchyItem.queryType
+      - azure-devops-extension-api.QueryHierarchyItem.sortColumns
+      - azure-devops-extension-api.QueryHierarchyItem.sourceClauses
+      - azure-devops-extension-api.QueryHierarchyItem.targetClauses
+      - azure-devops-extension-api.QueryHierarchyItem.wiql
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Represents an item in the work item query hierarchy. This can be either a
+      query or a folder.
+    extends:
+      name: azure-devops-extension-api.WorkItemTrackingResource
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.children
+    name: children
+    fullName: children
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The child query items inside a query folder.
+    syntax:
+      content: 'children: QueryHierarchyItem[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.QueryHierarchyItem[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.clauses
+    name: clauses
+    fullName: clauses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The clauses for a flat query.
+    syntax:
+      content: 'clauses: WorkItemQueryClause'
+      return:
+        type:
+          - azure-devops-extension-api.WorkItemQueryClause
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.columns
+    name: columns
+    fullName: columns
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The columns of the query.
+    syntax:
+      content: 'columns: WorkItemFieldReference[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.WorkItemFieldReference[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.createdBy
+    name: createdBy
+    fullName: createdBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The identity who created the query item.
+    syntax:
+      content: 'createdBy: IdentityReference'
+      return:
+        type:
+          - azure-devops-extension-api.IdentityReference
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.createdDate
+    name: createdDate
+    fullName: createdDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: When the query item was created.
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        type:
+          - Date
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.filterOptions
+    name: filterOptions
+    fullName: filterOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The link query mode.
+    syntax:
+      content: 'filterOptions: LinkQueryMode'
+      return:
+        type:
+          - azure-devops-extension-api.LinkQueryMode
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.hasChildren
+    name: hasChildren
+    fullName: hasChildren
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If this is a query folder, indicates if it contains any children.'
+    syntax:
+      content: 'hasChildren: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The id of the query item.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.isDeleted
+    name: isDeleted
+    fullName: isDeleted
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Indicates if this query item is deleted. Setting this to false on a
+      deleted query item will undelete it. Undeleting a query or folder will not
+      bring back the permission changes that were previously applied to it.
+    syntax:
+      content: 'isDeleted: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.isFolder
+    name: isFolder
+    fullName: isFolder
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates if this is a query folder or a query.
+    syntax:
+      content: 'isFolder: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.isInvalidSyntax
+    name: isInvalidSyntax
+    fullName: isInvalidSyntax
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Indicates if the WIQL of this query is invalid. This could be due to
+      invalid syntax or a no longer valid area/iteration path.
+    syntax:
+      content: 'isInvalidSyntax: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.isPublic
+    name: isPublic
+    fullName: isPublic
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates if this query item is public or private.
+    syntax:
+      content: 'isPublic: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.lastExecutedBy
+    name: lastExecutedBy
+    fullName: lastExecutedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The identity who last ran the query.
+    syntax:
+      content: 'lastExecutedBy: IdentityReference'
+      return:
+        type:
+          - azure-devops-extension-api.IdentityReference
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.lastExecutedDate
+    name: lastExecutedDate
+    fullName: lastExecutedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: When the query was last run.
+    syntax:
+      content: 'lastExecutedDate: Date'
+      return:
+        type:
+          - Date
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.lastModifiedBy
+    name: lastModifiedBy
+    fullName: lastModifiedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The identity who last modified the query item.
+    syntax:
+      content: 'lastModifiedBy: IdentityReference'
+      return:
+        type:
+          - azure-devops-extension-api.IdentityReference
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.lastModifiedDate
+    name: lastModifiedDate
+    fullName: lastModifiedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: When the query item was last modified.
+    syntax:
+      content: 'lastModifiedDate: Date'
+      return:
+        type:
+          - Date
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.linkClauses
+    name: linkClauses
+    fullName: linkClauses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The link query clause.
+    syntax:
+      content: 'linkClauses: WorkItemQueryClause'
+      return:
+        type:
+          - azure-devops-extension-api.WorkItemQueryClause
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The name of the query item.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.path
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The path of the query item.
+    syntax:
+      content: 'path: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.queryRecursionOption
+    name: queryRecursionOption
+    fullName: queryRecursionOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The recursion option for use in a tree query.
+    syntax:
+      content: 'queryRecursionOption: QueryRecursionOption'
+      return:
+        type:
+          - azure-devops-extension-api.QueryRecursionOption
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.queryType
+    name: queryType
+    fullName: queryType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The type of query.
+    syntax:
+      content: 'queryType: QueryType'
+      return:
+        type:
+          - azure-devops-extension-api.QueryType
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.sortColumns
+    name: sortColumns
+    fullName: sortColumns
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The sort columns of the query.
+    syntax:
+      content: 'sortColumns: WorkItemQuerySortColumn[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.WorkItemQuerySortColumn[]'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.sourceClauses
+    name: sourceClauses
+    fullName: sourceClauses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The source clauses in a tree or one-hop link query.
+    syntax:
+      content: 'sourceClauses: WorkItemQueryClause'
+      return:
+        type:
+          - azure-devops-extension-api.WorkItemQueryClause
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.targetClauses
+    name: targetClauses
+    fullName: targetClauses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The target clauses in a tree or one-hop link query.
+    syntax:
+      content: 'targetClauses: WorkItemQueryClause'
+      return:
+        type:
+          - azure-devops-extension-api.WorkItemQueryClause
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.QueryHierarchyItem.wiql
+    name: wiql
+    fullName: wiql
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The WIQL text of the query
+    syntax:
+      content: 'wiql: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.WorkItemTrackingResource
+    name: WorkItemTrackingResource
+    spec.typeScript:
+      - name: WorkItemTrackingResource
+        fullName: WorkItemTrackingResource
+        uid: azure-devops-extension-api.WorkItemTrackingResource
+  - uid: 'azure-devops-extension-api.QueryHierarchyItem[]'
+    name: 'QueryHierarchyItem[]'
+    spec.typeScript:
+      - name: QueryHierarchyItem
+        fullName: QueryHierarchyItem
+        uid: azure-devops-extension-api.QueryHierarchyItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-devops-extension-api.WorkItemQueryClause
+    name: WorkItemQueryClause
+    spec.typeScript:
+      - name: WorkItemQueryClause
+        fullName: WorkItemQueryClause
+        uid: azure-devops-extension-api.WorkItemQueryClause
+  - uid: 'azure-devops-extension-api.WorkItemFieldReference[]'
+    name: 'WorkItemFieldReference[]'
+    spec.typeScript:
+      - name: WorkItemFieldReference
+        fullName: WorkItemFieldReference
+        uid: azure-devops-extension-api.WorkItemFieldReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-devops-extension-api.IdentityReference
+    name: IdentityReference
+    spec.typeScript:
+      - name: IdentityReference
+        fullName: IdentityReference
+        uid: azure-devops-extension-api.IdentityReference
+  - uid: azure-devops-extension-api.LinkQueryMode
+    name: LinkQueryMode
+    spec.typeScript:
+      - name: LinkQueryMode
+        fullName: LinkQueryMode
+        uid: azure-devops-extension-api.LinkQueryMode
+  - uid: azure-devops-extension-api.QueryRecursionOption
+    name: QueryRecursionOption
+    spec.typeScript:
+      - name: QueryRecursionOption
+        fullName: QueryRecursionOption
+        uid: azure-devops-extension-api.QueryRecursionOption
+  - uid: azure-devops-extension-api.QueryType
+    name: QueryType
+    spec.typeScript:
+      - name: QueryType
+        fullName: QueryType
+        uid: azure-devops-extension-api.QueryType
+  - uid: 'azure-devops-extension-api.WorkItemQuerySortColumn[]'
+    name: 'WorkItemQuerySortColumn[]'
+    spec.typeScript:
+      - name: WorkItemQuerySortColumn
+        fullName: WorkItemQuerySortColumn
+        uid: azure-devops-extension-api.WorkItemQuerySortColumn
+      - name: '[]'
+        fullName: '[]'
