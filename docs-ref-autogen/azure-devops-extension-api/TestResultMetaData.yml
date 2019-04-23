@@ -6,6 +6,7 @@ items:
     children:
       - azure-devops-extension-api.TestResultMetaData.automatedTestName
       - azure-devops-extension-api.TestResultMetaData.automatedTestStorage
+      - azure-devops-extension-api.TestResultMetaData.flakyIdentifiers
       - azure-devops-extension-api.TestResultMetaData.owner
       - azure-devops-extension-api.TestResultMetaData.priority
       - azure-devops-extension-api.TestResultMetaData.testCaseReferenceId
@@ -42,6 +43,20 @@ items:
       return:
         type:
           - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestResultMetaData.flakyIdentifiers
+    name: flakyIdentifiers
+    fullName: flakyIdentifiers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of Flaky Identifier for TestCaseReferenceId
+    syntax:
+      content: 'flakyIdentifiers: TestFlakyIdentifier[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.TestFlakyIdentifier[]'
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TestResultMetaData.owner
     name: owner
@@ -99,3 +114,12 @@ items:
         type:
           - string
     package: azure-devops-extension-api
+references:
+  - uid: 'azure-devops-extension-api.TestFlakyIdentifier[]'
+    name: 'TestFlakyIdentifier[]'
+    spec.typeScript:
+      - name: TestFlakyIdentifier
+        fullName: TestFlakyIdentifier
+        uid: azure-devops-extension-api.TestFlakyIdentifier
+      - name: '[]'
+        fullName: '[]'

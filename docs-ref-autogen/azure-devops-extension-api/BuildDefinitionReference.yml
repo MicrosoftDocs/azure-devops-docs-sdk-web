@@ -4,181 +4,38 @@ items:
     name: BuildDefinitionReference
     fullName: BuildDefinitionReference
     children:
-      - azure-devops-extension-api.BuildDefinitionReference.authoredBy
-      - azure-devops-extension-api.BuildDefinitionReference.draftOf
-      - azure-devops-extension-api.BuildDefinitionReference.drafts
-      - azure-devops-extension-api.BuildDefinitionReference.latestBuild
-      - azure-devops-extension-api.BuildDefinitionReference.latestCompletedBuild
-      - azure-devops-extension-api.BuildDefinitionReference.metrics
-      - azure-devops-extension-api.BuildDefinitionReference.quality
-      - azure-devops-extension-api.BuildDefinitionReference.queue
+      - azure-devops-extension-api.BuildDefinitionReference.id
+      - azure-devops-extension-api.BuildDefinitionReference.name
     langs:
       - typeScript
     type: interface
-    summary: Represents a reference to a build definition.
-    extends:
-      name: azure-devops-extension-api.DefinitionReference
+    summary: The build definition reference resource
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildDefinitionReference.authoredBy
-    name: authoredBy
-    fullName: authoredBy
+  - uid: azure-devops-extension-api.BuildDefinitionReference.id
+    name: id
+    fullName: id
     children: []
     langs:
       - typeScript
     type: property
-    summary: The author of the definition.
+    summary: ID of the build definition
     syntax:
-      content: 'authoredBy: IdentityRef'
+      content: 'id: number'
       return:
         type:
-          - azure-devops-extension-api.IdentityRef
+          - number
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildDefinitionReference.draftOf
-    name: draftOf
-    fullName: draftOf
+  - uid: azure-devops-extension-api.BuildDefinitionReference.name
+    name: name
+    fullName: name
     children: []
     langs:
       - typeScript
     type: property
-    summary: >-
-      A reference to the definition that this definition is a draft of, if this
-      is a draft definition.
+    summary: Name of the build definition
     syntax:
-      content: 'draftOf: DefinitionReference'
+      content: 'name: string'
       return:
         type:
-          - azure-devops-extension-api.DefinitionReference
+          - string
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildDefinitionReference.drafts
-    name: drafts
-    fullName: drafts
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The list of drafts associated with this definition, if this is not a draft
-      definition.
-    syntax:
-      content: 'drafts: DefinitionReference[]'
-      return:
-        type:
-          - 'azure-devops-extension-api.DefinitionReference[]'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildDefinitionReference.latestBuild
-    name: latestBuild
-    fullName: latestBuild
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'latestBuild: Build'
-      return:
-        type:
-          - azure-devops-extension-api.Build
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildDefinitionReference.latestCompletedBuild
-    name: latestCompletedBuild
-    fullName: latestCompletedBuild
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'latestCompletedBuild: Build'
-      return:
-        type:
-          - azure-devops-extension-api.Build
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildDefinitionReference.metrics
-    name: metrics
-    fullName: metrics
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'metrics: BuildMetric[]'
-      return:
-        type:
-          - 'azure-devops-extension-api.BuildMetric[]'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildDefinitionReference.quality
-    name: quality
-    fullName: quality
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'The quality of the definition document (draft, etc.)'
-    syntax:
-      content: 'quality: DefinitionQuality'
-      return:
-        type:
-          - azure-devops-extension-api.DefinitionQuality
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildDefinitionReference.queue
-    name: queue
-    fullName: queue
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The default queue for builds run against this definition.
-    syntax:
-      content: 'queue: AgentPoolQueue'
-      return:
-        type:
-          - azure-devops-extension-api.AgentPoolQueue
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.DefinitionReference
-    name: DefinitionReference
-    spec.typeScript:
-      - name: DefinitionReference
-        fullName: DefinitionReference
-        uid: azure-devops-extension-api.DefinitionReference
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
-  - uid: 'azure-devops-extension-api.DefinitionReference[]'
-    name: 'DefinitionReference[]'
-    spec.typeScript:
-      - name: DefinitionReference
-        fullName: DefinitionReference
-        uid: azure-devops-extension-api.DefinitionReference
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.Build
-    name: Build
-    spec.typeScript:
-      - name: Build
-        fullName: Build
-        uid: azure-devops-extension-api.Build
-  - uid: 'azure-devops-extension-api.BuildMetric[]'
-    name: 'BuildMetric[]'
-    spec.typeScript:
-      - name: BuildMetric
-        fullName: BuildMetric
-        uid: azure-devops-extension-api.BuildMetric
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.DefinitionQuality
-    name: DefinitionQuality
-    spec.typeScript:
-      - name: DefinitionQuality
-        fullName: DefinitionQuality
-        uid: azure-devops-extension-api.DefinitionQuality
-  - uid: azure-devops-extension-api.AgentPoolQueue
-    name: AgentPoolQueue
-    spec.typeScript:
-      - name: AgentPoolQueue
-        fullName: AgentPoolQueue
-        uid: azure-devops-extension-api.AgentPoolQueue

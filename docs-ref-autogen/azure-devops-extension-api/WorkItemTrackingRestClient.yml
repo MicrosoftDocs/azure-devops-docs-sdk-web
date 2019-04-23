@@ -222,7 +222,7 @@ items:
           - Promise<azure-devops-extension-api.WorkItemClassificationNode>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.WorkItemTrackingRestClient.createQuery
-    name: 'createQuery(QueryHierarchyItem, string, string)'
+    name: 'createQuery(QueryHierarchyItem, string, string, boolean)'
     children: []
     type: method
     langs:
@@ -231,7 +231,7 @@ items:
     syntax:
       content: >-
         function createQuery(postedQuery: QueryHierarchyItem, project: string,
-        query: string)
+        query: string, validateWiqlOnly?: boolean)
       parameters:
         - id: postedQuery
           type:
@@ -244,8 +244,14 @@ items:
         - id: query
           type:
             - string
-          description: |
-            The parent id or path under which the query is to be created.
+          description: The parent id or path under which the query is to be created.
+        - id: validateWiqlOnly
+          type:
+            - boolean
+          description: >
+            If you only want to validate your WIQL query without actually
+            creating one, set it to true. Default is false.
+          optional: true
       return:
         type:
           - Promise<azure-devops-extension-api.QueryHierarchyItem>
@@ -459,7 +465,11 @@ items:
     summary: >-
       Deletes the specified work item and sends it to the Recycle Bin, so that
       it can be restored back, if required. Optionally, if the destroy parameter
-      has been set to true, it destroys the work item permanently.
+      has been set to true, it destroys the work item permanently. WARNING: If
+      the destroy parameter is set to true, work items deleted by this command
+      will NOT go to recycle-bin and there is no way to restore/recover them
+      after deletion. It is recommended NOT to use this parameter. If you do,
+      please use this parameter with extreme caution.
     syntax:
       content: 'function deleteWorkItem(id: number, project?: string, destroy?: boolean)'
       parameters:
@@ -477,7 +487,8 @@ items:
             - boolean
           description: >
             Optional parameter, if set to true, the work item is deleted
-            permanently
+            permanently. Please note: the destroy action is PERMANENT and cannot
+            be undone.
           optional: true
       return:
         type:
@@ -1088,16 +1099,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      INTERNAL ONLY: USED BY ACCOUNT MY WORK PAGE. This returns Doing, Done,
-      Follows and activity work items details.
+    summary: Gets recent work item activities
     syntax:
       content: function getRecentActivityData()
       parameters: []
       return:
         type:
           - >-
-            Promise<azure-devops-extension-api.AccountRecentActivityWorkItemModel[]>
+            Promise<azure-devops-extension-api.AccountRecentActivityWorkItemModel2[]>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.WorkItemTrackingRestClient.getRecentMentions
     name: getRecentMentions()
@@ -2792,14 +2801,14 @@ references:
       - name: QueryBatchGetRequest
         fullName: QueryBatchGetRequest
         uid: azure-devops-extension-api.QueryBatchGetRequest
-  - uid: 'Promise<azure-devops-extension-api.AccountRecentActivityWorkItemModel[]>'
-    name: 'AccountRecentActivityWorkItemModel[]>'
+  - uid: 'Promise<azure-devops-extension-api.AccountRecentActivityWorkItemModel2[]>'
+    name: 'AccountRecentActivityWorkItemModel2[]>'
     spec.typeScript:
       - name: Promise<
         fullName: Promise<
-      - name: AccountRecentActivityWorkItemModel
-        fullName: AccountRecentActivityWorkItemModel
-        uid: azure-devops-extension-api.AccountRecentActivityWorkItemModel
+      - name: AccountRecentActivityWorkItemModel2
+        fullName: AccountRecentActivityWorkItemModel2
+        uid: azure-devops-extension-api.AccountRecentActivityWorkItemModel2
       - name: '[]>'
         fullName: '[]>'
   - uid: 'Promise<azure-devops-extension-api.AccountRecentMentionWorkItemModel[]>'

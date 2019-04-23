@@ -6,6 +6,7 @@ items:
     children:
       - azure-devops-extension-api.TaskAgentPoolReference.id
       - azure-devops-extension-api.TaskAgentPoolReference.isHosted
+      - azure-devops-extension-api.TaskAgentPoolReference.isLegacy
       - azure-devops-extension-api.TaskAgentPoolReference.name
       - azure-devops-extension-api.TaskAgentPoolReference.poolType
       - azure-devops-extension-api.TaskAgentPoolReference.scope
@@ -41,6 +42,20 @@ items:
       service.
     syntax:
       content: 'isHosted: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentPoolReference.isLegacy
+    name: isLegacy
+    fullName: isLegacy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Determines whether the pool is legacy.
+    syntax:
+      content: 'isLegacy: boolean'
       return:
         type:
           - boolean

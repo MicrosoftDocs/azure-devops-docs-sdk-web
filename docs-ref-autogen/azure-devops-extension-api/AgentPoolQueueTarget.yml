@@ -4,6 +4,7 @@ items:
     name: AgentPoolQueueTarget
     fullName: AgentPoolQueueTarget
     children:
+      - azure-devops-extension-api.AgentPoolQueueTarget.agentSpecification
       - >-
         azure-devops-extension-api.AgentPoolQueueTarget.allowScriptsAuthAccessOption
       - azure-devops-extension-api.AgentPoolQueueTarget.demands
@@ -15,6 +16,20 @@ items:
     summary: Describes how a phase should run against an agent queue.
     extends:
       name: azure-devops-extension-api.PhaseTarget
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.AgentPoolQueueTarget.agentSpecification
+    name: agentSpecification
+    fullName: agentSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Agent specification of the target.
+    syntax:
+      content: 'agentSpecification: AgentSpecification'
+      return:
+        type:
+          - azure-devops-extension-api.AgentSpecification
     package: azure-devops-extension-api
   - uid: >-
       azure-devops-extension-api.AgentPoolQueueTarget.allowScriptsAuthAccessOption
@@ -82,6 +97,12 @@ references:
       - name: PhaseTarget
         fullName: PhaseTarget
         uid: azure-devops-extension-api.PhaseTarget
+  - uid: azure-devops-extension-api.AgentSpecification
+    name: AgentSpecification
+    spec.typeScript:
+      - name: AgentSpecification
+        fullName: AgentSpecification
+        uid: azure-devops-extension-api.AgentSpecification
   - uid: 'azure-devops-extension-api.Demand[]'
     name: 'Demand[]'
     spec.typeScript:

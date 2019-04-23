@@ -91,6 +91,7 @@ items:
         azure-devops-extension-api.GalleryRestClient.updatePayloadInDraftForNewExtension
       - azure-devops-extension-api.GalleryRestClient.updatePublisher
       - azure-devops-extension-api.GalleryRestClient.updatePublisherAsset
+      - azure-devops-extension-api.GalleryRestClient.updatePublisherMembers
       - azure-devops-extension-api.GalleryRestClient.updateQuestion
       - azure-devops-extension-api.GalleryRestClient.updateResponse
       - azure-devops-extension-api.GalleryRestClient.updateReview
@@ -2438,6 +2439,42 @@ items:
         type:
           - 'Promise<[key: string]: string>'
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GalleryRestClient.updatePublisherMembers
+    name: 'updatePublisherMembers(PublisherUserRoleAssignmentRef[], string, boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Endpoint to add/modify publisher membership. Currently Supports only
+      addition/modification of 1 user at a time Works only for adding members of
+      same tenant.
+    syntax:
+      content: >-
+        function updatePublisherMembers(roleAssignments:
+        PublisherUserRoleAssignmentRef[], publisherName: string,
+        limitToCallerIdentityDomain?: boolean)
+      parameters:
+        - id: roleAssignments
+          type:
+            - 'azure-devops-extension-api.PublisherUserRoleAssignmentRef[]'
+          description: >-
+            List of user identifiers(email address) and role to be added.
+            Currently only one entry is supported.
+        - id: publisherName
+          type:
+            - string
+          description: The name/id of publisher to which users have to be added
+        - id: limitToCallerIdentityDomain
+          type:
+            - boolean
+          description: |
+            Should cross tenant addtions be allowed or not.
+          optional: true
+      return:
+        type:
+          - 'Promise<azure-devops-extension-api.PublisherRoleAssignment[]>'
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.GalleryRestClient.updateQuestion
     name: 'updateQuestion(Question, string, string, number)'
     children: []
@@ -2882,6 +2919,24 @@ references:
       - name: ExtensionStatisticUpdate
         fullName: ExtensionStatisticUpdate
         uid: azure-devops-extension-api.ExtensionStatisticUpdate
+  - uid: 'azure-devops-extension-api.PublisherUserRoleAssignmentRef[]'
+    name: 'PublisherUserRoleAssignmentRef[]'
+    spec.typeScript:
+      - name: PublisherUserRoleAssignmentRef
+        fullName: PublisherUserRoleAssignmentRef
+        uid: azure-devops-extension-api.PublisherUserRoleAssignmentRef
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'Promise<azure-devops-extension-api.PublisherRoleAssignment[]>'
+    name: 'PublisherRoleAssignment[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: PublisherRoleAssignment
+        fullName: PublisherRoleAssignment
+        uid: azure-devops-extension-api.PublisherRoleAssignment
+      - name: '[]>'
+        fullName: '[]>'
   - uid: azure-devops-extension-api.ReviewPatch
     name: ReviewPatch
     spec.typeScript:

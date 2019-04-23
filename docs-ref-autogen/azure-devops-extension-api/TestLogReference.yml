@@ -6,6 +6,8 @@ items:
     children:
       - azure-devops-extension-api.TestLogReference.buildId
       - azure-devops-extension-api.TestLogReference.filePath
+      - azure-devops-extension-api.TestLogReference.releaseEnvId
+      - azure-devops-extension-api.TestLogReference.releaseId
       - azure-devops-extension-api.TestLogReference.resultId
       - azure-devops-extension-api.TestLogReference.runId
       - azure-devops-extension-api.TestLogReference.scope
@@ -43,6 +45,34 @@ items:
       return:
         type:
           - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestLogReference.releaseEnvId
+    name: releaseEnvId
+    fullName: releaseEnvId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ReleaseEnvId for test log, if context is Release'
+    syntax:
+      content: 'releaseEnvId: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestLogReference.releaseId
+    name: releaseId
+    fullName: releaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ReleaseId for test log, if context is Release'
+    syntax:
+      content: 'releaseId: number'
+      return:
+        type:
+          - number
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TestLogReference.resultId
     name: resultId

@@ -4,6 +4,7 @@ items:
     name: IUserContext
     fullName: IUserContext
     children:
+      - azure-devops-extension-api.IUserContext.descriptor
       - azure-devops-extension-api.IUserContext.displayName
       - azure-devops-extension-api.IUserContext.id
       - azure-devops-extension-api.IUserContext.imageUrl
@@ -12,6 +13,22 @@ items:
       - typeScript
     type: interface
     summary: Information about the current user
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IUserContext.descriptor
+    name: descriptor
+    fullName: descriptor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Identity descriptor used to represent this user. In the format of
+      {subject-type}.{base64-encoded-subject-id}
+    syntax:
+      content: 'descriptor: string'
+      return:
+        type:
+          - string
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.IUserContext.displayName
     name: displayName

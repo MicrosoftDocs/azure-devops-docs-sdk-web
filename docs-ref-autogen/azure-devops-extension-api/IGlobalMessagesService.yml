@@ -4,27 +4,44 @@ items:
     name: IGlobalMessagesService
     fullName: IGlobalMessagesService
     children:
-      - azure-devops-extension-api.IGlobalMessagesService.setGlobalMessageBanner
+      - azure-devops-extension-api.IGlobalMessagesService.addBanner
+      - azure-devops-extension-api.IGlobalMessagesService.addToast
     langs:
       - typeScript
     type: interface
     summary: ''
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IGlobalMessagesService.setGlobalMessageBanner
-    name: setGlobalMessageBanner(IGlobalMessageBanner)
+  - uid: azure-devops-extension-api.IGlobalMessagesService.addBanner
+    name: addBanner(IGlobalMessageBanner)
     children: []
     type: method
     langs:
       - typeScript
-    summary: Sets the currently displayed global message banner
+    summary: Adds a new message banner to the displayed banners
     syntax:
-      content: 'function setGlobalMessageBanner(banner: IGlobalMessageBanner)'
+      content: 'function addBanner(banner: IGlobalMessageBanner)'
       parameters:
         - id: banner
           type:
             - azure-devops-extension-api.IGlobalMessageBanner
           description: |
             The message banner to display
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.IGlobalMessagesService.addToast
+    name: addToast(IToast)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Displays or queues a Toast to display at the bottom of the page
+    syntax:
+      content: 'function addToast(toast: IToast)'
+      parameters:
+        - id: toast
+          type:
+            - azure-devops-extension-api.IToast
+          description: |
+            The toast to display
     package: azure-devops-extension-api
 references:
   - uid: azure-devops-extension-api.IGlobalMessageBanner
@@ -33,3 +50,9 @@ references:
       - name: IGlobalMessageBanner
         fullName: IGlobalMessageBanner
         uid: azure-devops-extension-api.IGlobalMessageBanner
+  - uid: azure-devops-extension-api.IToast
+    name: IToast
+    spec.typeScript:
+      - name: IToast
+        fullName: IToast
+        uid: azure-devops-extension-api.IToast

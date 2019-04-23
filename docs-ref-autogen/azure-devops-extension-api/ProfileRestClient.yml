@@ -1,0 +1,486 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-devops-extension-api.ProfileRestClient
+    name: ProfileRestClient
+    fullName: ProfileRestClient
+    children:
+      - azure-devops-extension-api.ProfileRestClient.createProfile
+      - azure-devops-extension-api.ProfileRestClient.deleteProfileAttribute
+      - azure-devops-extension-api.ProfileRestClient.getAvatar
+      - azure-devops-extension-api.ProfileRestClient.getAvatarPreview
+      - azure-devops-extension-api.ProfileRestClient.getProfile
+      - azure-devops-extension-api.ProfileRestClient.getProfileAttribute
+      - azure-devops-extension-api.ProfileRestClient.getProfileAttributes
+      - azure-devops-extension-api.ProfileRestClient.constructor
+      - azure-devops-extension-api.ProfileRestClient.resetAvatar
+      - azure-devops-extension-api.ProfileRestClient.setAvatar
+      - azure-devops-extension-api.ProfileRestClient.setProfileAttribute
+      - azure-devops-extension-api.ProfileRestClient.setProfileAttributes
+      - azure-devops-extension-api.ProfileRestClient.updateProfile
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: azure-devops-extension-api.RestClientBase
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.createProfile
+    name: 'createProfile(CreateProfileContext, boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Create profile
+    syntax:
+      content: >-
+        function createProfile(createProfileContext: CreateProfileContext,
+        autoCreate?: boolean)
+      parameters:
+        - id: createProfileContext
+          type:
+            - azure-devops-extension-api.CreateProfileContext
+          description: Context for profile creation
+        - id: autoCreate
+          type:
+            - boolean
+          description: |
+            Create profile automatically
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Profile>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.deleteProfileAttribute
+    name: 'deleteProfileAttribute(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteProfileAttribute(id: string, descriptor: string)'
+      parameters:
+        - id: id
+          type:
+            - string
+          description: '-'
+        - id: descriptor
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.getAvatar
+    name: 'getAvatar(string, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAvatar(id: string, size?: string, format?: string)'
+      parameters:
+        - id: id
+          type:
+            - string
+          description: '-'
+        - id: size
+          type:
+            - string
+          description: '-'
+          optional: true
+        - id: format
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Avatar>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.getAvatarPreview
+    name: 'getAvatarPreview(any, string, string, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getAvatarPreview(container: any, id: string, size?: string,
+        format?: string, displayName?: string)
+      parameters:
+        - id: container
+          type:
+            - any
+          description: '-'
+        - id: id
+          type:
+            - string
+          description: '-'
+        - id: size
+          type:
+            - string
+          description: '-'
+          optional: true
+        - id: format
+          type:
+            - string
+          description: '-'
+          optional: true
+        - id: displayName
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Avatar>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.getProfile
+    name: 'getProfile(string, boolean, boolean, string, string, boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets a user profile.
+    syntax:
+      content: >-
+        function getProfile(id: string, details?: boolean, withAttributes?:
+        boolean, partition?: string, coreAttributes?: string, forceRefresh?:
+        boolean)
+      parameters:
+        - id: id
+          type:
+            - string
+          description: >-
+            The ID of the target user profile within the same organization, or
+            'me' to get the profile of the current authenticated user.
+        - id: details
+          type:
+            - boolean
+          description: >-
+            Return public profile information such as display name, email
+            address, country, etc. If false, the withAttributes parameter is
+            ignored.
+          optional: true
+        - id: withAttributes
+          type:
+            - boolean
+          description: >-
+            If true, gets the attributes (named key-value pairs of arbitrary
+            data) associated with the profile. The partition parameter must also
+            have a value.
+          optional: true
+        - id: partition
+          type:
+            - string
+          description: The partition (named group) of attributes to return.
+          optional: true
+        - id: coreAttributes
+          type:
+            - string
+          description: >-
+            A comma-delimited list of core profile attributes to return. Valid
+            values are Email, Avatar, DisplayName, and ContactWithOffers.
+          optional: true
+        - id: forceRefresh
+          type:
+            - boolean
+          description: |
+            Not used in this version of the API.
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Profile>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.getProfileAttribute
+    name: 'getProfileAttribute(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProfileAttribute(id: string, descriptor: string)'
+      parameters:
+        - id: id
+          type:
+            - string
+          description: '-'
+        - id: descriptor
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - Promise<azure-devops-extension-api.ProfileAttribute>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.getProfileAttributes
+    name: 'getProfileAttributes(string, string, string, string, boolean, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getProfileAttributes(id: string, partition: string,
+        modifiedSince?: string, modifiedAfterRevision?: string,
+        withCoreAttributes?: boolean, coreAttributes?: string)
+      parameters:
+        - id: id
+          type:
+            - string
+          description: '-'
+        - id: partition
+          type:
+            - string
+          description: '-'
+        - id: modifiedSince
+          type:
+            - string
+          description: '-'
+          optional: true
+        - id: modifiedAfterRevision
+          type:
+            - string
+          description: '-'
+          optional: true
+        - id: withCoreAttributes
+          type:
+            - boolean
+          description: '-'
+          optional: true
+        - id: coreAttributes
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - 'Promise<azure-devops-extension-api.ProfileAttribute[]>'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.constructor
+    name: ProfileRestClient(IVssRestClientOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new ProfileRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-devops-extension-api.IVssRestClientOptions
+          description: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.resetAvatar
+    name: resetAvatar(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function resetAvatar(id: string)'
+      parameters:
+        - id: id
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.setAvatar
+    name: 'setAvatar(any, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setAvatar(container: any, id: string)'
+      parameters:
+        - id: container
+          type:
+            - any
+          description: '-'
+        - id: id
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.setProfileAttribute
+    name: 'setProfileAttribute(any, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function setProfileAttribute(container: any, id: string, descriptor:
+        string)
+      parameters:
+        - id: container
+          type:
+            - any
+          description: '-'
+        - id: id
+          type:
+            - string
+          description: '-'
+        - id: descriptor
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.setProfileAttributes
+    name: >-
+      setProfileAttributes(VssJsonCollectionWrapperV<ProfileAttributeBase<any>[]>,
+      string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function setProfileAttributes(attributesCollection:
+        VssJsonCollectionWrapperV<ProfileAttributeBase<any>[]>, id: string)
+      parameters:
+        - id: attributesCollection
+          type:
+            - >-
+              azure-devops-extension-api.VssJsonCollectionWrapperV<azure-devops-extension-api.ProfileAttributeBase<any>[]>
+          description: '-'
+        - id: id
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ProfileRestClient.updateProfile
+    name: 'updateProfile(Profile, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Update profile
+    syntax:
+      content: 'function updateProfile(profile: Profile, id: string)'
+      parameters:
+        - id: profile
+          type:
+            - azure-devops-extension-api.Profile
+          description: Update profile
+        - id: id
+          type:
+            - string
+          description: |
+            Profile ID
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+references:
+  - uid: azure-devops-extension-api.RestClientBase
+    name: RestClientBase
+    spec.typeScript:
+      - name: RestClientBase
+        fullName: RestClientBase
+        uid: azure-devops-extension-api.RestClientBase
+  - uid: azure-devops-extension-api.IVssRestClientOptions
+    name: IVssRestClientOptions
+    spec.typeScript:
+      - name: IVssRestClientOptions
+        fullName: IVssRestClientOptions
+        uid: azure-devops-extension-api.IVssRestClientOptions
+  - uid: azure-devops-extension-api.CreateProfileContext
+    name: CreateProfileContext
+    spec.typeScript:
+      - name: CreateProfileContext
+        fullName: CreateProfileContext
+        uid: azure-devops-extension-api.CreateProfileContext
+  - uid: Promise<azure-devops-extension-api.Profile>
+    name: Profile>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Profile
+        fullName: Profile
+        uid: azure-devops-extension-api.Profile
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-devops-extension-api.Avatar>
+    name: Avatar>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Avatar
+        fullName: Avatar
+        uid: azure-devops-extension-api.Avatar
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-devops-extension-api.ProfileAttribute>
+    name: ProfileAttribute>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ProfileAttribute
+        fullName: ProfileAttribute
+        uid: azure-devops-extension-api.ProfileAttribute
+      - name: '>'
+        fullName: '>'
+  - uid: 'Promise<azure-devops-extension-api.ProfileAttribute[]>'
+    name: 'ProfileAttribute[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ProfileAttribute
+        fullName: ProfileAttribute
+        uid: azure-devops-extension-api.ProfileAttribute
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: >-
+      azure-devops-extension-api.VssJsonCollectionWrapperV<azure-devops-extension-api.ProfileAttributeBase<any>[]>
+    name: 'ProfileAttributeBase<any>[]>'
+    spec.typeScript:
+      - name: VssJsonCollectionWrapperV
+        fullName: VssJsonCollectionWrapperV
+        uid: azure-devops-extension-api.VssJsonCollectionWrapperV
+      - name: <
+        fullName: <
+      - name: ProfileAttributeBase
+        fullName: ProfileAttributeBase
+        uid: azure-devops-extension-api.ProfileAttributeBase
+      - name: '<any>[]>'
+        fullName: '<any>[]>'
+  - uid: azure-devops-extension-api.Profile
+    name: Profile
+    spec.typeScript:
+      - name: Profile
+        fullName: Profile
+        uid: azure-devops-extension-api.Profile

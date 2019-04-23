@@ -4,6 +4,7 @@ items:
     name: WorkItem
     fullName: WorkItem
     children:
+      - azure-devops-extension-api.WorkItem.commentVersionRef
       - azure-devops-extension-api.WorkItem.fields
       - azure-devops-extension-api.WorkItem.id
       - azure-devops-extension-api.WorkItem.relations
@@ -14,6 +15,22 @@ items:
     summary: Describes a work item.
     extends:
       name: azure-devops-extension-api.WorkItemTrackingResource
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.WorkItem.commentVersionRef
+    name: commentVersionRef
+    fullName: commentVersionRef
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Reference to a specific version of the comment added/edited/deleted in
+      this revision.
+    syntax:
+      content: 'commentVersionRef: WorkItemCommentVersionRef'
+      return:
+        type:
+          - azure-devops-extension-api.WorkItemCommentVersionRef
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.WorkItem.fields
     name: fields
@@ -78,6 +95,12 @@ references:
       - name: WorkItemTrackingResource
         fullName: WorkItemTrackingResource
         uid: azure-devops-extension-api.WorkItemTrackingResource
+  - uid: azure-devops-extension-api.WorkItemCommentVersionRef
+    name: WorkItemCommentVersionRef
+    spec.typeScript:
+      - name: WorkItemCommentVersionRef
+        fullName: WorkItemCommentVersionRef
+        uid: azure-devops-extension-api.WorkItemCommentVersionRef
   - uid: 'azure-devops-extension-api.WorkItemRelation[]'
     name: 'WorkItemRelation[]'
     spec.typeScript:

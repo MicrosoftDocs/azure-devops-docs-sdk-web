@@ -12,6 +12,8 @@ items:
       - azure-devops-extension-api.WorkRestClient.getBacklogLevelWorkItems
       - azure-devops-extension-api.WorkRestClient.getBacklogs
       - azure-devops-extension-api.WorkRestClient.getBoard
+      - azure-devops-extension-api.WorkRestClient.getBoardBadge
+      - azure-devops-extension-api.WorkRestClient.getBoardBadgeData
       - azure-devops-extension-api.WorkRestClient.getBoardCardRuleSettings
       - azure-devops-extension-api.WorkRestClient.getBoardCardSettings
       - azure-devops-extension-api.WorkRestClient.getBoardChart
@@ -21,8 +23,8 @@ items:
       - azure-devops-extension-api.WorkRestClient.getBoardRows
       - azure-devops-extension-api.WorkRestClient.getBoards
       - azure-devops-extension-api.WorkRestClient.getBoardUserSettings
-      - azure-devops-extension-api.WorkRestClient.getCapacities
-      - azure-devops-extension-api.WorkRestClient.getCapacity
+      - azure-devops-extension-api.WorkRestClient.getCapacitiesWithIdentityRef
+      - azure-devops-extension-api.WorkRestClient.getCapacityWithIdentityRef
       - azure-devops-extension-api.WorkRestClient.getColumnSuggestedValues
       - azure-devops-extension-api.WorkRestClient.getDeliveryTimelineData
       - azure-devops-extension-api.WorkRestClient.getIterationWorkItems
@@ -36,7 +38,8 @@ items:
       - azure-devops-extension-api.WorkRestClient.getTeamIterations
       - azure-devops-extension-api.WorkRestClient.getTeamSettings
       - azure-devops-extension-api.WorkRestClient.postTeamIteration
-      - azure-devops-extension-api.WorkRestClient.replaceCapacities
+      - >-
+        azure-devops-extension-api.WorkRestClient.replaceCapacitiesWithIdentityRef
       - azure-devops-extension-api.WorkRestClient.RESOURCE_AREA_ID
       - azure-devops-extension-api.WorkRestClient.setBoardOptions
       - azure-devops-extension-api.WorkRestClient.updateBoardCardRuleSettings
@@ -45,7 +48,7 @@ items:
       - azure-devops-extension-api.WorkRestClient.updateBoardColumns
       - azure-devops-extension-api.WorkRestClient.updateBoardRows
       - azure-devops-extension-api.WorkRestClient.updateBoardUserSettings
-      - azure-devops-extension-api.WorkRestClient.updateCapacity
+      - azure-devops-extension-api.WorkRestClient.updateCapacityWithIdentityRef
       - azure-devops-extension-api.WorkRestClient.updatePlan
       - azure-devops-extension-api.WorkRestClient.updateTeamDaysOff
       - azure-devops-extension-api.WorkRestClient.updateTeamFieldValues
@@ -236,6 +239,76 @@ items:
       return:
         type:
           - Promise<azure-devops-extension-api.Board>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.WorkRestClient.getBoardBadge
+    name: 'getBoardBadge(TeamContext, string, BoardBadgeColumnOptions, string[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets a badge that displays the status of columns on the board.
+    syntax:
+      content: >-
+        function getBoardBadge(teamContext: TeamContext, id: string,
+        columnOptions?: BoardBadgeColumnOptions, columns?: string[])
+      parameters:
+        - id: teamContext
+          type:
+            - azure-devops-extension-api.TeamContext
+          description: The team context for the operation
+        - id: id
+          type:
+            - string
+          description: The id of the board.
+        - id: columnOptions
+          type:
+            - azure-devops-extension-api.BoardBadgeColumnOptions
+          description: Determines what columns to show.
+          optional: true
+        - id: columns
+          type:
+            - 'string[]'
+          description: |
+            If columnOptions is set to custom, specify the list of column names.
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.BoardBadge>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.WorkRestClient.getBoardBadgeData
+    name: 'getBoardBadgeData(TeamContext, string, BoardBadgeColumnOptions, string[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets a badge that displays the status of columns on the board.
+    syntax:
+      content: >-
+        function getBoardBadgeData(teamContext: TeamContext, id: string,
+        columnOptions?: BoardBadgeColumnOptions, columns?: string[])
+      parameters:
+        - id: teamContext
+          type:
+            - azure-devops-extension-api.TeamContext
+          description: The team context for the operation
+        - id: id
+          type:
+            - string
+          description: The id of the board.
+        - id: columnOptions
+          type:
+            - azure-devops-extension-api.BoardBadgeColumnOptions
+          description: Determines what columns to show.
+          optional: true
+        - id: columns
+          type:
+            - 'string[]'
+          description: |
+            If columnOptions is set to custom, specify the list of column names.
+          optional: true
+      return:
+        type:
+          - Promise<string>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.WorkRestClient.getBoardCardRuleSettings
     name: 'getBoardCardRuleSettings(TeamContext, string)'
@@ -459,15 +532,17 @@ items:
         type:
           - Promise<azure-devops-extension-api.BoardUserSettings>
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkRestClient.getCapacities
-    name: 'getCapacities(TeamContext, string)'
+  - uid: azure-devops-extension-api.WorkRestClient.getCapacitiesWithIdentityRef
+    name: 'getCapacitiesWithIdentityRef(TeamContext, string)'
     children: []
     type: method
     langs:
       - typeScript
     summary: Get a team's capacity
     syntax:
-      content: 'function getCapacities(teamContext: TeamContext, iterationId: string)'
+      content: >-
+        function getCapacitiesWithIdentityRef(teamContext: TeamContext,
+        iterationId: string)
       parameters:
         - id: teamContext
           type:
@@ -480,10 +555,10 @@ items:
             ID of the iteration
       return:
         type:
-          - 'Promise<azure-devops-extension-api.TeamMemberCapacity[]>'
+          - 'Promise<azure-devops-extension-api.TeamMemberCapacityIdentityRef[]>'
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkRestClient.getCapacity
-    name: 'getCapacity(TeamContext, string, string)'
+  - uid: azure-devops-extension-api.WorkRestClient.getCapacityWithIdentityRef
+    name: 'getCapacityWithIdentityRef(TeamContext, string, string)'
     children: []
     type: method
     langs:
@@ -491,8 +566,8 @@ items:
     summary: Get a team member's capacity
     syntax:
       content: >-
-        function getCapacity(teamContext: TeamContext, iterationId: string,
-        teamMemberId: string)
+        function getCapacityWithIdentityRef(teamContext: TeamContext,
+        iterationId: string, teamMemberId: string)
       parameters:
         - id: teamContext
           type:
@@ -509,7 +584,7 @@ items:
             ID of the team member
       return:
         type:
-          - Promise<azure-devops-extension-api.TeamMemberCapacity>
+          - Promise<azure-devops-extension-api.TeamMemberCapacityIdentityRef>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.WorkRestClient.getColumnSuggestedValues
     name: getColumnSuggestedValues(string)
@@ -815,8 +890,10 @@ items:
         type:
           - Promise<azure-devops-extension-api.TeamSettingsIteration>
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkRestClient.replaceCapacities
-    name: 'replaceCapacities(TeamMemberCapacity[], TeamContext, string)'
+  - uid: azure-devops-extension-api.WorkRestClient.replaceCapacitiesWithIdentityRef
+    name: >-
+      replaceCapacitiesWithIdentityRef(TeamMemberCapacityIdentityRef[],
+      TeamContext, string)
     children: []
     type: method
     langs:
@@ -824,12 +901,13 @@ items:
     summary: Replace a team's capacity
     syntax:
       content: >-
-        function replaceCapacities(capacities: TeamMemberCapacity[],
-        teamContext: TeamContext, iterationId: string)
+        function replaceCapacitiesWithIdentityRef(capacities:
+        TeamMemberCapacityIdentityRef[], teamContext: TeamContext, iterationId:
+        string)
       parameters:
         - id: capacities
           type:
-            - 'azure-devops-extension-api.TeamMemberCapacity[]'
+            - 'azure-devops-extension-api.TeamMemberCapacityIdentityRef[]'
           description: Team capacity to replace
         - id: teamContext
           type:
@@ -842,7 +920,7 @@ items:
             ID of the iteration
       return:
         type:
-          - 'Promise<azure-devops-extension-api.TeamMemberCapacity[]>'
+          - 'Promise<azure-devops-extension-api.TeamMemberCapacityIdentityRef[]>'
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.WorkRestClient.RESOURCE_AREA_ID
     name: RESOURCE_AREA_ID
@@ -1068,8 +1146,8 @@ items:
         type:
           - Promise<azure-devops-extension-api.BoardUserSettings>
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkRestClient.updateCapacity
-    name: 'updateCapacity(CapacityPatch, TeamContext, string, string)'
+  - uid: azure-devops-extension-api.WorkRestClient.updateCapacityWithIdentityRef
+    name: 'updateCapacityWithIdentityRef(CapacityPatch, TeamContext, string, string)'
     children: []
     type: method
     langs:
@@ -1077,8 +1155,8 @@ items:
     summary: Update a team member's capacity
     syntax:
       content: >-
-        function updateCapacity(patch: CapacityPatch, teamContext: TeamContext,
-        iterationId: string, teamMemberId: string)
+        function updateCapacityWithIdentityRef(patch: CapacityPatch,
+        teamContext: TeamContext, iterationId: string, teamMemberId: string)
       parameters:
         - id: patch
           type:
@@ -1099,7 +1177,7 @@ items:
             ID of the team member
       return:
         type:
-          - Promise<azure-devops-extension-api.TeamMemberCapacity>
+          - Promise<azure-devops-extension-api.TeamMemberCapacityIdentityRef>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.WorkRestClient.updatePlan
     name: 'updatePlan(UpdatePlan, string, string)'
@@ -1309,6 +1387,22 @@ references:
         uid: azure-devops-extension-api.Board
       - name: '>'
         fullName: '>'
+  - uid: azure-devops-extension-api.BoardBadgeColumnOptions
+    name: BoardBadgeColumnOptions
+    spec.typeScript:
+      - name: BoardBadgeColumnOptions
+        fullName: BoardBadgeColumnOptions
+        uid: azure-devops-extension-api.BoardBadgeColumnOptions
+  - uid: Promise<azure-devops-extension-api.BoardBadge>
+    name: BoardBadge>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: BoardBadge
+        fullName: BoardBadge
+        uid: azure-devops-extension-api.BoardBadge
+      - name: '>'
+        fullName: '>'
   - uid: Promise<azure-devops-extension-api.BoardCardRuleSettings>
     name: BoardCardRuleSettings>
     spec.typeScript:
@@ -1399,24 +1493,24 @@ references:
         uid: azure-devops-extension-api.BoardReference
       - name: '[]>'
         fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.TeamMemberCapacity[]>'
-    name: 'TeamMemberCapacity[]>'
+  - uid: 'Promise<azure-devops-extension-api.TeamMemberCapacityIdentityRef[]>'
+    name: 'TeamMemberCapacityIdentityRef[]>'
     spec.typeScript:
       - name: Promise<
         fullName: Promise<
-      - name: TeamMemberCapacity
-        fullName: TeamMemberCapacity
-        uid: azure-devops-extension-api.TeamMemberCapacity
+      - name: TeamMemberCapacityIdentityRef
+        fullName: TeamMemberCapacityIdentityRef
+        uid: azure-devops-extension-api.TeamMemberCapacityIdentityRef
       - name: '[]>'
         fullName: '[]>'
-  - uid: Promise<azure-devops-extension-api.TeamMemberCapacity>
-    name: TeamMemberCapacity>
+  - uid: Promise<azure-devops-extension-api.TeamMemberCapacityIdentityRef>
+    name: TeamMemberCapacityIdentityRef>
     spec.typeScript:
       - name: Promise<
         fullName: Promise<
-      - name: TeamMemberCapacity
-        fullName: TeamMemberCapacity
-        uid: azure-devops-extension-api.TeamMemberCapacity
+      - name: TeamMemberCapacityIdentityRef
+        fullName: TeamMemberCapacityIdentityRef
+        uid: azure-devops-extension-api.TeamMemberCapacityIdentityRef
       - name: '>'
         fullName: '>'
   - uid: 'Promise<azure-devops-extension-api.BoardSuggestedValue[]>'
@@ -1525,12 +1619,12 @@ references:
       - name: TeamSettingsIteration
         fullName: TeamSettingsIteration
         uid: azure-devops-extension-api.TeamSettingsIteration
-  - uid: 'azure-devops-extension-api.TeamMemberCapacity[]'
-    name: 'TeamMemberCapacity[]'
+  - uid: 'azure-devops-extension-api.TeamMemberCapacityIdentityRef[]'
+    name: 'TeamMemberCapacityIdentityRef[]'
     spec.typeScript:
-      - name: TeamMemberCapacity
-        fullName: TeamMemberCapacity
-        uid: azure-devops-extension-api.TeamMemberCapacity
+      - name: TeamMemberCapacityIdentityRef
+        fullName: TeamMemberCapacityIdentityRef
+        uid: azure-devops-extension-api.TeamMemberCapacityIdentityRef
       - name: '[]'
         fullName: '[]'
   - uid: azure-devops-extension-api.BoardCardRuleSettings

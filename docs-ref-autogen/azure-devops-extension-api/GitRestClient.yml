@@ -2218,7 +2218,9 @@ items:
         - id: versionDescriptor
           type:
             - azure-devops-extension-api.GitVersionDescriptor
-          description: Version descriptor.  Default is null.
+          description: >-
+            Version descriptor.  Default is the default branch for the
+            repository.
           optional: true
         - id: includeContent
           type:
@@ -2303,7 +2305,9 @@ items:
         - id: versionDescriptor
           type:
             - azure-devops-extension-api.GitVersionDescriptor
-          description: Version descriptor.  Default is null.
+          description: >-
+            Version descriptor.  Default is the default branch for the
+            repository.
           optional: true
         - id: includeContent
           type:
@@ -2388,8 +2392,9 @@ items:
         - id: versionDescriptor
           type:
             - azure-devops-extension-api.GitVersionDescriptor
-          description: |
-            Version descriptor.  Default is null.
+          description: >
+            Version descriptor.  Default is the default branch for the
+            repository.
           optional: true
       return:
         type:
@@ -2498,7 +2503,9 @@ items:
         - id: versionDescriptor
           type:
             - azure-devops-extension-api.GitVersionDescriptor
-          description: Version descriptor.  Default is null.
+          description: >-
+            Version descriptor.  Default is the default branch for the
+            repository.
           optional: true
         - id: includeContent
           type:
@@ -2582,7 +2589,9 @@ items:
         - id: versionDescriptor
           type:
             - azure-devops-extension-api.GitVersionDescriptor
-          description: Version descriptor.  Default is null.
+          description: >-
+            Version descriptor.  Default is the default branch for the
+            repository.
           optional: true
         - id: includeContent
           type:
@@ -3031,7 +3040,9 @@ items:
           - Promise<azure-devops-extension-api.GitPullRequestIterationChanges>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.GitRestClient.getPullRequestIterationCommits
-    name: 'getPullRequestIterationCommits(string, number, number, string)'
+    name: >-
+      getPullRequestIterationCommits(string, number, number, string, number,
+      number)
     children: []
     type: method
     langs:
@@ -3040,7 +3051,8 @@ items:
     syntax:
       content: >-
         function getPullRequestIterationCommits(repositoryId: string,
-        pullRequestId: number, iterationId: number, project?: string)
+        pullRequestId: number, iterationId: number, project?: string, top?:
+        number, skip?: number)
       parameters:
         - id: repositoryId
           type:
@@ -3057,8 +3069,20 @@ items:
         - id: project
           type:
             - string
+          description: Project ID or project name
+          optional: true
+        - id: top
+          type:
+            - number
+          description: >-
+            Maximum number of commits to return. The maximum number of commits
+            that can be returned per batch is 500.
+          optional: true
+        - id: skip
+          type:
+            - number
           description: |
-            Project ID or project name
+            Number of commits to skip.
           optional: true
       return:
         type:

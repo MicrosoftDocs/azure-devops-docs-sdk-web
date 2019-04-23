@@ -4,61 +4,25 @@ items:
     name: TestPoint
     fullName: TestPoint
     children:
-      - azure-devops-extension-api.TestPoint.assignedTo
-      - azure-devops-extension-api.TestPoint.automated
       - azure-devops-extension-api.TestPoint.comment
       - azure-devops-extension-api.TestPoint.configuration
-      - azure-devops-extension-api.TestPoint.failureType
       - azure-devops-extension-api.TestPoint.id
+      - azure-devops-extension-api.TestPoint.isActive
+      - azure-devops-extension-api.TestPoint.isAutomated
       - azure-devops-extension-api.TestPoint.lastResetToActive
-      - azure-devops-extension-api.TestPoint.lastResolutionStateId
-      - azure-devops-extension-api.TestPoint.lastResult
-      - azure-devops-extension-api.TestPoint.lastResultDetails
-      - azure-devops-extension-api.TestPoint.lastResultState
-      - azure-devops-extension-api.TestPoint.lastRunBuildNumber
-      - azure-devops-extension-api.TestPoint.lastTestRun
       - azure-devops-extension-api.TestPoint.lastUpdatedBy
       - azure-devops-extension-api.TestPoint.lastUpdatedDate
-      - azure-devops-extension-api.TestPoint.outcome
-      - azure-devops-extension-api.TestPoint.revision
-      - azure-devops-extension-api.TestPoint.state
-      - azure-devops-extension-api.TestPoint.suite
-      - azure-devops-extension-api.TestPoint.testCase
+      - azure-devops-extension-api.TestPoint.links
+      - azure-devops-extension-api.TestPoint.project
+      - azure-devops-extension-api.TestPoint.results
+      - azure-devops-extension-api.TestPoint.testCaseReference
+      - azure-devops-extension-api.TestPoint.tester
       - azure-devops-extension-api.TestPoint.testPlan
-      - azure-devops-extension-api.TestPoint.url
-      - azure-devops-extension-api.TestPoint.workItemProperties
+      - azure-devops-extension-api.TestPoint.testSuite
     langs:
       - typeScript
     type: interface
-    summary: Test point.
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.assignedTo
-    name: assignedTo
-    fullName: assignedTo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: AssignedTo. Type IdentityRef.
-    syntax:
-      content: 'assignedTo: IdentityRef'
-      return:
-        type:
-          - azure-devops-extension-api.IdentityRef
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.automated
-    name: automated
-    fullName: automated
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Automated.
-    syntax:
-      content: 'automated: boolean'
-      return:
-        type:
-          - boolean
+    summary: Test Point Class
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TestPoint.comment
     name: comment
@@ -67,7 +31,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Comment associated with test point.
+    summary: Comment associated to the Test Point
     syntax:
       content: 'comment: string'
       return:
@@ -81,26 +45,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Configuration. Type ShallowReference.
+    summary: Configuration associated with the Test Point
     syntax:
-      content: 'configuration: ShallowReference'
+      content: 'configuration: TestConfigurationReference'
       return:
         type:
-          - azure-devops-extension-api.ShallowReference
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.failureType
-    name: failureType
-    fullName: failureType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Failure type of test point.
-    syntax:
-      content: 'failureType: string'
-      return:
-        type:
-          - string
+          - azure-devops-extension-api.TestConfigurationReference
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TestPoint.id
     name: id
@@ -109,12 +59,40 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ID of the test point.
+    summary: Id of the Test Point
     syntax:
       content: 'id: number'
       return:
         type:
           - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestPoint.isActive
+    name: isActive
+    fullName: isActive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Variable to decide whether the test case is Active or not
+    syntax:
+      content: 'isActive: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestPoint.isAutomated
+    name: isAutomated
+    fullName: isAutomated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Is the Test Point for Automated Test Case or Manual
+    syntax:
+      content: 'isAutomated: boolean'
+      return:
+        type:
+          - boolean
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TestPoint.lastResetToActive
     name: lastResetToActive
@@ -123,96 +101,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Last date when test point was reset to Active.
+    summary: Last Reset to Active Time Stamp for the Test Point
     syntax:
       content: 'lastResetToActive: Date'
       return:
         type:
           - Date
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.lastResolutionStateId
-    name: lastResolutionStateId
-    fullName: lastResolutionStateId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Last resolution state id of test point.
-    syntax:
-      content: 'lastResolutionStateId: number'
-      return:
-        type:
-          - number
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.lastResult
-    name: lastResult
-    fullName: lastResult
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Last result of test point. Type ShallowReference.
-    syntax:
-      content: 'lastResult: ShallowReference'
-      return:
-        type:
-          - azure-devops-extension-api.ShallowReference
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.lastResultDetails
-    name: lastResultDetails
-    fullName: lastResultDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Last result details of test point. Type LastResultDetails.
-    syntax:
-      content: 'lastResultDetails: LastResultDetails'
-      return:
-        type:
-          - azure-devops-extension-api.LastResultDetails
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.lastResultState
-    name: lastResultState
-    fullName: lastResultState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Last result state of test point.
-    syntax:
-      content: 'lastResultState: string'
-      return:
-        type:
-          - string
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.lastRunBuildNumber
-    name: lastRunBuildNumber
-    fullName: lastRunBuildNumber
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: LastRun build number of test point.
-    syntax:
-      content: 'lastRunBuildNumber: string'
-      return:
-        type:
-          - string
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.lastTestRun
-    name: lastTestRun
-    fullName: lastTestRun
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Last testRun of test point. Type ShallowReference.
-    syntax:
-      content: 'lastTestRun: ShallowReference'
-      return:
-        type:
-          - azure-devops-extension-api.ShallowReference
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TestPoint.lastUpdatedBy
     name: lastUpdatedBy
@@ -221,7 +115,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Test point last updated by. Type IdentityRef.
+    summary: Last Updated details for the Test Point
     syntax:
       content: 'lastUpdatedBy: IdentityRef'
       return:
@@ -235,82 +129,82 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Last updated date of test point.
+    summary: Last Update Time Stamp for the Test Point
     syntax:
       content: 'lastUpdatedDate: Date'
       return:
         type:
           - Date
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.outcome
-    name: outcome
-    fullName: outcome
+  - uid: azure-devops-extension-api.TestPoint.links
+    name: links
+    fullName: links
     children: []
     langs:
       - typeScript
     type: property
-    summary: Outcome of test point.
+    summary: Reference links
     syntax:
-      content: 'outcome: string'
+      content: 'links: any'
       return:
         type:
-          - string
+          - any
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.revision
-    name: revision
-    fullName: revision
+  - uid: azure-devops-extension-api.TestPoint.project
+    name: project
+    fullName: project
     children: []
     langs:
       - typeScript
     type: property
-    summary: Revision number.
+    summary: Project under which the Test Point is
     syntax:
-      content: 'revision: number'
+      content: 'project: TeamProjectReference'
       return:
         type:
-          - number
+          - azure-devops-extension-api.TeamProjectReference
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.state
-    name: state
-    fullName: state
+  - uid: azure-devops-extension-api.TestPoint.results
+    name: results
+    fullName: results
     children: []
     langs:
       - typeScript
     type: property
-    summary: State of test point.
+    summary: Results associated to the Test Point
     syntax:
-      content: 'state: string'
+      content: 'results: TestPointResults'
       return:
         type:
-          - string
+          - azure-devops-extension-api.TestPointResults
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.suite
-    name: suite
-    fullName: suite
+  - uid: azure-devops-extension-api.TestPoint.testCaseReference
+    name: testCaseReference
+    fullName: testCaseReference
     children: []
     langs:
       - typeScript
     type: property
-    summary: Suite of test point. Type ShallowReference.
+    summary: Test Case Reference
     syntax:
-      content: 'suite: ShallowReference'
+      content: 'testCaseReference: TestCaseReference'
       return:
         type:
-          - azure-devops-extension-api.ShallowReference
+          - azure-devops-extension-api.TestCaseReference
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.testCase
-    name: testCase
-    fullName: testCase
+  - uid: azure-devops-extension-api.TestPoint.tester
+    name: tester
+    fullName: tester
     children: []
     langs:
       - typeScript
     type: property
-    summary: TestCase associated to test point. Type WorkItemReference.
+    summary: Tester associated with the Test Point
     syntax:
-      content: 'testCase: WorkItemReference'
+      content: 'tester: IdentityRef'
       return:
         type:
-          - azure-devops-extension-api.WorkItemReference
+          - azure-devops-extension-api.IdentityRef
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TestPoint.testPlan
     name: testPlan
@@ -319,63 +213,67 @@ items:
     langs:
       - typeScript
     type: property
-    summary: TestPlan of test point. Type ShallowReference.
+    summary: Test Plan under which the Test Point is
     syntax:
-      content: 'testPlan: ShallowReference'
+      content: 'testPlan: TestPlanReference'
       return:
         type:
-          - azure-devops-extension-api.ShallowReference
+          - azure-devops-extension-api.TestPlanReference
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.url
-    name: url
-    fullName: url
+  - uid: azure-devops-extension-api.TestPoint.testSuite
+    name: testSuite
+    fullName: testSuite
     children: []
     langs:
       - typeScript
     type: property
-    summary: Test point Url.
+    summary: Test Suite under which the Test Point is
     syntax:
-      content: 'url: string'
+      content: 'testSuite: TestSuiteReference'
       return:
         type:
-          - string
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPoint.workItemProperties
-    name: workItemProperties
-    fullName: workItemProperties
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Work item properties of test point.
-    syntax:
-      content: 'workItemProperties: any[]'
-      return:
-        type:
-          - 'any[]'
+          - azure-devops-extension-api.TestSuiteReference
     package: azure-devops-extension-api
 references:
+  - uid: azure-devops-extension-api.TestConfigurationReference
+    name: TestConfigurationReference
+    spec.typeScript:
+      - name: TestConfigurationReference
+        fullName: TestConfigurationReference
+        uid: azure-devops-extension-api.TestConfigurationReference
   - uid: azure-devops-extension-api.IdentityRef
     name: IdentityRef
     spec.typeScript:
       - name: IdentityRef
         fullName: IdentityRef
         uid: azure-devops-extension-api.IdentityRef
-  - uid: azure-devops-extension-api.ShallowReference
-    name: ShallowReference
+  - uid: azure-devops-extension-api.TeamProjectReference
+    name: TeamProjectReference
     spec.typeScript:
-      - name: ShallowReference
-        fullName: ShallowReference
-        uid: azure-devops-extension-api.ShallowReference
-  - uid: azure-devops-extension-api.LastResultDetails
-    name: LastResultDetails
+      - name: TeamProjectReference
+        fullName: TeamProjectReference
+        uid: azure-devops-extension-api.TeamProjectReference
+  - uid: azure-devops-extension-api.TestPointResults
+    name: TestPointResults
     spec.typeScript:
-      - name: LastResultDetails
-        fullName: LastResultDetails
-        uid: azure-devops-extension-api.LastResultDetails
-  - uid: azure-devops-extension-api.WorkItemReference
-    name: WorkItemReference
+      - name: TestPointResults
+        fullName: TestPointResults
+        uid: azure-devops-extension-api.TestPointResults
+  - uid: azure-devops-extension-api.TestCaseReference
+    name: TestCaseReference
     spec.typeScript:
-      - name: WorkItemReference
-        fullName: WorkItemReference
-        uid: azure-devops-extension-api.WorkItemReference
+      - name: TestCaseReference
+        fullName: TestCaseReference
+        uid: azure-devops-extension-api.TestCaseReference
+  - uid: azure-devops-extension-api.TestPlanReference
+    name: TestPlanReference
+    spec.typeScript:
+      - name: TestPlanReference
+        fullName: TestPlanReference
+        uid: azure-devops-extension-api.TestPlanReference
+  - uid: azure-devops-extension-api.TestSuiteReference
+    name: TestSuiteReference
+    spec.typeScript:
+      - name: TestSuiteReference
+        fullName: TestSuiteReference
+        uid: azure-devops-extension-api.TestSuiteReference

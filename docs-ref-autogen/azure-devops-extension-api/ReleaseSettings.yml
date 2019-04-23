@@ -4,11 +4,26 @@ items:
     name: ReleaseSettings
     fullName: ReleaseSettings
     children:
+      - azure-devops-extension-api.ReleaseSettings.complianceSettings
       - azure-devops-extension-api.ReleaseSettings.retentionSettings
     langs:
       - typeScript
     type: interface
     summary: ''
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ReleaseSettings.complianceSettings
+    name: complianceSettings
+    fullName: complianceSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Release Compliance settings.
+    syntax:
+      content: 'complianceSettings: ComplianceSettings'
+      return:
+        type:
+          - azure-devops-extension-api.ComplianceSettings
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.ReleaseSettings.retentionSettings
     name: retentionSettings
@@ -25,6 +40,12 @@ items:
           - azure-devops-extension-api.RetentionSettings
     package: azure-devops-extension-api
 references:
+  - uid: azure-devops-extension-api.ComplianceSettings
+    name: ComplianceSettings
+    spec.typeScript:
+      - name: ComplianceSettings
+        fullName: ComplianceSettings
+        uid: azure-devops-extension-api.ComplianceSettings
   - uid: azure-devops-extension-api.RetentionSettings
     name: RetentionSettings
     spec.typeScript:

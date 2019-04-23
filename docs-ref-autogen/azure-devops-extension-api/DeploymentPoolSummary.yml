@@ -8,6 +8,7 @@ items:
       - azure-devops-extension-api.DeploymentPoolSummary.offlineAgentsCount
       - azure-devops-extension-api.DeploymentPoolSummary.onlineAgentsCount
       - azure-devops-extension-api.DeploymentPoolSummary.pool
+      - azure-devops-extension-api.DeploymentPoolSummary.resource
     langs:
       - typeScript
     type: interface
@@ -69,6 +70,20 @@ items:
         type:
           - azure-devops-extension-api.TaskAgentPoolReference
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.DeploymentPoolSummary.resource
+    name: resource
+    fullName: resource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Virtual machine Resource referring in pool.
+    syntax:
+      content: 'resource: EnvironmentResourceReference'
+      return:
+        type:
+          - azure-devops-extension-api.EnvironmentResourceReference
+    package: azure-devops-extension-api
 references:
   - uid: 'azure-devops-extension-api.DeploymentGroupReference[]'
     name: 'DeploymentGroupReference[]'
@@ -84,3 +99,9 @@ references:
       - name: TaskAgentPoolReference
         fullName: TaskAgentPoolReference
         uid: azure-devops-extension-api.TaskAgentPoolReference
+  - uid: azure-devops-extension-api.EnvironmentResourceReference
+    name: EnvironmentResourceReference
+    spec.typeScript:
+      - name: EnvironmentResourceReference
+        fullName: EnvironmentResourceReference
+        uid: azure-devops-extension-api.EnvironmentResourceReference

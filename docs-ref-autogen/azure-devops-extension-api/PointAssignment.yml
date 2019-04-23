@@ -4,30 +4,43 @@ items:
     name: PointAssignment
     fullName: PointAssignment
     children:
-      - azure-devops-extension-api.PointAssignment.configuration
+      - azure-devops-extension-api.PointAssignment.configurationName
+      - azure-devops-extension-api.PointAssignment.id
       - azure-devops-extension-api.PointAssignment.tester
     langs:
       - typeScript
     type: interface
-    summary: >-
-      Adding test cases to a suite creates one of more test points based on the
-      default configurations and testers assigned to the test suite.
-      PointAssignment is the list of test points that were created for each of
-      the test cases that were added to the test suite.
+    summary: Assignments for the Test Point
+    extends:
+      name: azure-devops-extension-api.Configuration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PointAssignment.configuration
-    name: configuration
-    fullName: configuration
+  - uid: azure-devops-extension-api.PointAssignment.configurationName
+    name: configurationName
+    fullName: configurationName
     children: []
     langs:
       - typeScript
     type: property
-    summary: Configuration that was assigned to the test case.
+    summary: Name of the Configuration Assigned to the Test Point
     syntax:
-      content: 'configuration: ShallowReference'
+      content: 'configurationName: string'
       return:
         type:
-          - azure-devops-extension-api.ShallowReference
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.PointAssignment.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id of the Test Point
+    syntax:
+      content: 'id: number'
+      return:
+        type:
+          - number
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.PointAssignment.tester
     name: tester
@@ -36,7 +49,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Tester that was assigned to the test case
+    summary: Tester Assigned to the Test Point
     syntax:
       content: 'tester: IdentityRef'
       return:
@@ -44,12 +57,12 @@ items:
           - azure-devops-extension-api.IdentityRef
     package: azure-devops-extension-api
 references:
-  - uid: azure-devops-extension-api.ShallowReference
-    name: ShallowReference
+  - uid: azure-devops-extension-api.Configuration
+    name: Configuration
     spec.typeScript:
-      - name: ShallowReference
-        fullName: ShallowReference
-        uid: azure-devops-extension-api.ShallowReference
+      - name: Configuration
+        fullName: Configuration
+        uid: azure-devops-extension-api.Configuration
   - uid: azure-devops-extension-api.IdentityRef
     name: IdentityRef
     spec.typeScript:

@@ -11,7 +11,7 @@ items:
       - azure-devops-extension-api.EnvironmentInstance.lastModifiedBy
       - azure-devops-extension-api.EnvironmentInstance.lastModifiedOn
       - azure-devops-extension-api.EnvironmentInstance.name
-      - azure-devops-extension-api.EnvironmentInstance.serviceGroups
+      - azure-devops-extension-api.EnvironmentInstance.resources
     langs:
       - typeScript
     type: interface
@@ -115,19 +115,19 @@ items:
         type:
           - string
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.EnvironmentInstance.serviceGroups
-    name: serviceGroups
-    fullName: serviceGroups
+  - uid: azure-devops-extension-api.EnvironmentInstance.resources
+    name: resources
+    fullName: resources
     children: []
     langs:
       - typeScript
     type: property
     summary: ''
     syntax:
-      content: 'serviceGroups: ServiceGroupReference[]'
+      content: 'resources: EnvironmentResourceReference[]'
       return:
         type:
-          - 'azure-devops-extension-api.ServiceGroupReference[]'
+          - 'azure-devops-extension-api.EnvironmentResourceReference[]'
     package: azure-devops-extension-api
 references:
   - uid: azure-devops-extension-api.IdentityRef
@@ -136,11 +136,11 @@ references:
       - name: IdentityRef
         fullName: IdentityRef
         uid: azure-devops-extension-api.IdentityRef
-  - uid: 'azure-devops-extension-api.ServiceGroupReference[]'
-    name: 'ServiceGroupReference[]'
+  - uid: 'azure-devops-extension-api.EnvironmentResourceReference[]'
+    name: 'EnvironmentResourceReference[]'
     spec.typeScript:
-      - name: ServiceGroupReference
-        fullName: ServiceGroupReference
-        uid: azure-devops-extension-api.ServiceGroupReference
+      - name: EnvironmentResourceReference
+        fullName: EnvironmentResourceReference
+        uid: azure-devops-extension-api.EnvironmentResourceReference
       - name: '[]'
         fullName: '[]'

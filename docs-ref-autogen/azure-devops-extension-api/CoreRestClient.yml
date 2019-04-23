@@ -31,7 +31,9 @@ items:
       - azure-devops-extension-api.CoreRestClient.getTeams
       - azure-devops-extension-api.CoreRestClient.queueCreateProject
       - azure-devops-extension-api.CoreRestClient.queueDeleteProject
+      - azure-devops-extension-api.CoreRestClient.removeProjectAvatar
       - azure-devops-extension-api.CoreRestClient.RESOURCE_AREA_ID
+      - azure-devops-extension-api.CoreRestClient.setProjectAvatar
       - azure-devops-extension-api.CoreRestClient.setProjectProperties
       - azure-devops-extension-api.CoreRestClient.updateIdentityMru
       - azure-devops-extension-api.CoreRestClient.updateProject
@@ -686,6 +688,25 @@ items:
         type:
           - Promise<azure-devops-extension-api.OperationReference>
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.CoreRestClient.removeProjectAvatar
+    name: removeProjectAvatar(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes the avatar for the project.
+    syntax:
+      content: 'function removeProjectAvatar(projectId: string)'
+      parameters:
+        - id: projectId
+          type:
+            - string
+          description: |
+            The ID or name of the project.
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.CoreRestClient.RESOURCE_AREA_ID
     name: RESOURCE_AREA_ID
     fullName: RESOURCE_AREA_ID
@@ -699,6 +720,29 @@ items:
       return:
         type:
           - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.CoreRestClient.setProjectAvatar
+    name: 'setProjectAvatar(ProjectAvatar, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Sets the avatar for the project.
+    syntax:
+      content: 'function setProjectAvatar(avatarBlob: ProjectAvatar, projectId: string)'
+      parameters:
+        - id: avatarBlob
+          type:
+            - azure-devops-extension-api.ProjectAvatar
+          description: The avatar blob data object to upload.
+        - id: projectId
+          type:
+            - string
+          description: |
+            The ID or name of the project.
+      return:
+        type:
+          - Promise<void>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.CoreRestClient.setProjectProperties
     name: 'setProjectProperties(string, JsonPatchDocument)'
@@ -1039,6 +1083,12 @@ references:
         uid: azure-devops-extension-api.OperationReference
       - name: '>'
         fullName: '>'
+  - uid: azure-devops-extension-api.ProjectAvatar
+    name: ProjectAvatar
+    spec.typeScript:
+      - name: ProjectAvatar
+        fullName: ProjectAvatar
+        uid: azure-devops-extension-api.ProjectAvatar
   - uid: azure-devops-extension-api.JsonPatchDocument
     name: JsonPatchDocument
     spec.typeScript:

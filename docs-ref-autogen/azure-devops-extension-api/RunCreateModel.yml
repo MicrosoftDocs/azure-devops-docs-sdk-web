@@ -34,6 +34,7 @@ items:
       - azure-devops-extension-api.RunCreateModel.sourceWorkflow
       - azure-devops-extension-api.RunCreateModel.startDate
       - azure-devops-extension-api.RunCreateModel.state
+      - azure-devops-extension-api.RunCreateModel.tags
       - azure-devops-extension-api.RunCreateModel.testConfigurationsMapping
       - azure-devops-extension-api.RunCreateModel.testEnvironmentId
       - azure-devops-extension-api.RunCreateModel.testSettings
@@ -467,6 +468,20 @@ items:
         type:
           - string
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.RunCreateModel.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Tags to attach with the test run, maximum of 5 tags can be added to run.'
+    syntax:
+      content: 'tags: TestTag[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.TestTag[]'
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.RunCreateModel.testConfigurationsMapping
     name: testConfigurationsMapping
     fullName: testConfigurationsMapping
@@ -574,5 +589,13 @@ references:
       - name: RunSummaryModel
         fullName: RunSummaryModel
         uid: azure-devops-extension-api.RunSummaryModel
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-devops-extension-api.TestTag[]'
+    name: 'TestTag[]'
+    spec.typeScript:
+      - name: TestTag
+        fullName: TestTag
+        uid: azure-devops-extension-api.TestTag
       - name: '[]'
         fullName: '[]'

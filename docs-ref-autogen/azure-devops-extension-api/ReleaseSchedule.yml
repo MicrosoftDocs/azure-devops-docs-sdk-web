@@ -6,6 +6,7 @@ items:
     children:
       - azure-devops-extension-api.ReleaseSchedule.daysToRelease
       - azure-devops-extension-api.ReleaseSchedule.jobId
+      - azure-devops-extension-api.ReleaseSchedule.scheduleOnlyWithChanges
       - azure-devops-extension-api.ReleaseSchedule.startHours
       - azure-devops-extension-api.ReleaseSchedule.startMinutes
       - azure-devops-extension-api.ReleaseSchedule.timeZoneId
@@ -41,6 +42,22 @@ items:
       return:
         type:
           - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ReleaseSchedule.scheduleOnlyWithChanges
+    name: scheduleOnlyWithChanges
+    fullName: scheduleOnlyWithChanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Flag to determine if this schedule should only release if the associated
+      artifact has been changed or release definition changed.
+    syntax:
+      content: 'scheduleOnlyWithChanges: boolean'
+      return:
+        type:
+          - boolean
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.ReleaseSchedule.startHours
     name: startHours

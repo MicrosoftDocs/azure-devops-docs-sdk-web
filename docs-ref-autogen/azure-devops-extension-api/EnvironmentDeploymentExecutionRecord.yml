@@ -11,12 +11,26 @@ items:
       - >-
         azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.finishTime
       - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.id
+      - >-
+        azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.jobAttempt
+      - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.jobName
       - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.owner
+      - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.planId
       - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.planType
+      - >-
+        azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.queueTime
+      - >-
+        azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.requestIdentifier
+      - >-
+        azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.resourceId
       - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.result
       - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.scopeId
       - >-
-        azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.serviceGroupId
+        azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.serviceOwner
+      - >-
+        azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.stageAttempt
+      - >-
+        azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.stageName
       - >-
         azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.startTime
     langs:
@@ -81,6 +95,34 @@ items:
         type:
           - number
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.jobAttempt
+    name: jobAttempt
+    fullName: jobAttempt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Job Attempt
+    syntax:
+      content: 'jobAttempt: number'
+      return:
+        type:
+          - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.jobName
+    name: jobName
+    fullName: jobName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Job name
+    syntax:
+      content: 'jobName: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.owner
     name: owner
     fullName: owner
@@ -95,6 +137,20 @@ items:
         type:
           - azure-devops-extension-api.TaskOrchestrationOwner
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.planId
+    name: planId
+    fullName: planId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Plan Id
+    syntax:
+      content: 'planId: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.planType
     name: planType
     fullName: planType
@@ -108,6 +164,49 @@ items:
       return:
         type:
           - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.queueTime
+    name: queueTime
+    fullName: queueTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Queue time of the environment deployment execution
+    syntax:
+      content: 'queueTime: Date'
+      return:
+        type:
+          - Date
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.requestIdentifier
+    name: requestIdentifier
+    fullName: requestIdentifier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Request identifier of the Environment deployment execution history record
+    syntax:
+      content: 'requestIdentifier: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.resourceId
+    name: resourceId
+    fullName: resourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Resource Id
+    syntax:
+      content: 'resourceId: number'
+      return:
+        type:
+          - number
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.result
     name: result
@@ -138,19 +237,48 @@ items:
           - string
     package: azure-devops-extension-api
   - uid: >-
-      azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.serviceGroupId
-    name: serviceGroupId
-    fullName: serviceGroupId
+      azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.serviceOwner
+    name: serviceOwner
+    fullName: serviceOwner
     children: []
     langs:
       - typeScript
     type: property
-    summary: Service group Id
+    summary: Service owner Id
     syntax:
-      content: 'serviceGroupId: number'
+      content: 'serviceOwner: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: >-
+      azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.stageAttempt
+    name: stageAttempt
+    fullName: stageAttempt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Stage Attempt
+    syntax:
+      content: 'stageAttempt: number'
       return:
         type:
           - number
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.stageName
+    name: stageName
+    fullName: stageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Stage name
+    syntax:
+      content: 'stageName: string'
+      return:
+        type:
+          - string
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord.startTime
     name: startTime

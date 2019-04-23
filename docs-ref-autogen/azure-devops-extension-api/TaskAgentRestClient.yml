@@ -14,16 +14,14 @@ items:
       - azure-devops-extension-api.TaskAgentRestClient.addDeploymentMachineGroup
       - azure-devops-extension-api.TaskAgentRestClient.addDeploymentTarget
       - azure-devops-extension-api.TaskAgentRestClient.addEnvironment
-      - >-
-        azure-devops-extension-api.TaskAgentRestClient.addEnvironmentDeploymentExecutionRecord
-      - azure-devops-extension-api.TaskAgentRestClient.addServiceGroup
+      - azure-devops-extension-api.TaskAgentRestClient.addKubernetesResource
       - azure-devops-extension-api.TaskAgentRestClient.addTaskGroup
       - azure-devops-extension-api.TaskAgentRestClient.addVariableGroup
+      - azure-devops-extension-api.TaskAgentRestClient.addVirtualMachineGroup
       - azure-devops-extension-api.TaskAgentRestClient.createAadOAuthRequest
       - >-
         azure-devops-extension-api.TaskAgentRestClient.createAgentPoolMaintenanceDefinition
       - azure-devops-extension-api.TaskAgentRestClient.createAgentSession
-      - azure-devops-extension-api.TaskAgentRestClient.createApproval
       - azure-devops-extension-api.TaskAgentRestClient.createTeamProject
       - azure-devops-extension-api.TaskAgentRestClient.deleteAgent
       - azure-devops-extension-api.TaskAgentRestClient.deleteAgentCloud
@@ -41,12 +39,13 @@ items:
         azure-devops-extension-api.TaskAgentRestClient.deleteDeploymentMachineGroup
       - azure-devops-extension-api.TaskAgentRestClient.deleteDeploymentTarget
       - azure-devops-extension-api.TaskAgentRestClient.deleteEnvironment
+      - azure-devops-extension-api.TaskAgentRestClient.deleteKubernetesResource
       - azure-devops-extension-api.TaskAgentRestClient.deleteMessage
       - azure-devops-extension-api.TaskAgentRestClient.deleteSecureFile
-      - azure-devops-extension-api.TaskAgentRestClient.deleteServiceGroup
       - azure-devops-extension-api.TaskAgentRestClient.deleteTaskDefinition
       - azure-devops-extension-api.TaskAgentRestClient.deleteTaskGroup
       - azure-devops-extension-api.TaskAgentRestClient.deleteVariableGroup
+      - azure-devops-extension-api.TaskAgentRestClient.deleteVirtualMachineGroup
       - azure-devops-extension-api.TaskAgentRestClient.downloadSecureFile
       - >-
         azure-devops-extension-api.TaskAgentRestClient.generateDeploymentGroupAccessToken
@@ -91,7 +90,6 @@ items:
       - azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForPlan
       - azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForQueue
       - azure-devops-extension-api.TaskAgentRestClient.getAgents
-      - azure-devops-extension-api.TaskAgentRestClient.getApproval
       - azure-devops-extension-api.TaskAgentRestClient.getAzureManagementGroups
       - azure-devops-extension-api.TaskAgentRestClient.getAzureSubscriptions
       - azure-devops-extension-api.TaskAgentRestClient.getDeploymentGroup
@@ -112,6 +110,7 @@ items:
       - >-
         azure-devops-extension-api.TaskAgentRestClient.getEnvironmentDeploymentExecutionRecords
       - azure-devops-extension-api.TaskAgentRestClient.getEnvironments
+      - azure-devops-extension-api.TaskAgentRestClient.getKubernetesResource
       - azure-devops-extension-api.TaskAgentRestClient.getMessage
       - azure-devops-extension-api.TaskAgentRestClient.getPackage
       - azure-devops-extension-api.TaskAgentRestClient.getPackages
@@ -121,7 +120,6 @@ items:
       - azure-devops-extension-api.TaskAgentRestClient.getSecureFiles
       - azure-devops-extension-api.TaskAgentRestClient.getSecureFilesByIds
       - azure-devops-extension-api.TaskAgentRestClient.getSecureFilesByNames
-      - azure-devops-extension-api.TaskAgentRestClient.getServiceGroup
       - azure-devops-extension-api.TaskAgentRestClient.getTaskContentZip
       - azure-devops-extension-api.TaskAgentRestClient.getTaskDefinition
       - azure-devops-extension-api.TaskAgentRestClient.getTaskDefinitions
@@ -133,7 +131,10 @@ items:
       - azure-devops-extension-api.TaskAgentRestClient.getVariableGroup
       - azure-devops-extension-api.TaskAgentRestClient.getVariableGroups
       - azure-devops-extension-api.TaskAgentRestClient.getVariableGroupsById
+      - azure-devops-extension-api.TaskAgentRestClient.getVirtualMachineGroup
+      - azure-devops-extension-api.TaskAgentRestClient.getVirtualMachines
       - azure-devops-extension-api.TaskAgentRestClient.getVstsAadTenantId
+      - azure-devops-extension-api.TaskAgentRestClient.getYamlSchema
       - azure-devops-extension-api.TaskAgentRestClient.publishPreviewTaskGroup
       - azure-devops-extension-api.TaskAgentRestClient.publishTaskGroup
       - azure-devops-extension-api.TaskAgentRestClient.queryEndpoint
@@ -141,7 +142,6 @@ items:
         azure-devops-extension-api.TaskAgentRestClient.querySecureFilesByProperties
       - >-
         azure-devops-extension-api.TaskAgentRestClient.querySharedProjectsForVariableGroup
-      - azure-devops-extension-api.TaskAgentRestClient.querySteps
       - >-
         azure-devops-extension-api.TaskAgentRestClient.queueAgentPoolMaintenanceJob
       - azure-devops-extension-api.TaskAgentRestClient.queueAgentRequest
@@ -169,7 +169,6 @@ items:
       - azure-devops-extension-api.TaskAgentRestClient.updateAgentUpdateState
       - >-
         azure-devops-extension-api.TaskAgentRestClient.updateAgentUserCapabilities
-      - azure-devops-extension-api.TaskAgentRestClient.updateApproval
       - azure-devops-extension-api.TaskAgentRestClient.updateDeploymentGroup
       - azure-devops-extension-api.TaskAgentRestClient.updateDeploymentMachine
       - >-
@@ -180,16 +179,15 @@ items:
       - azure-devops-extension-api.TaskAgentRestClient.updateDeploymentTarget
       - azure-devops-extension-api.TaskAgentRestClient.updateDeploymentTargets
       - azure-devops-extension-api.TaskAgentRestClient.updateEnvironment
-      - >-
-        azure-devops-extension-api.TaskAgentRestClient.updateEnvironmentDeploymentExecutionRecord
+      - azure-devops-extension-api.TaskAgentRestClient.updateKubernetesResource
       - azure-devops-extension-api.TaskAgentRestClient.updateSecureFile
       - azure-devops-extension-api.TaskAgentRestClient.updateSecureFiles
-      - azure-devops-extension-api.TaskAgentRestClient.updateServiceGroup
-      - azure-devops-extension-api.TaskAgentRestClient.updateSteps
       - azure-devops-extension-api.TaskAgentRestClient.updateTaskGroup
       - >-
         azure-devops-extension-api.TaskAgentRestClient.updateTaskHubLicenseDetails
       - azure-devops-extension-api.TaskAgentRestClient.updateVariableGroup
+      - azure-devops-extension-api.TaskAgentRestClient.updateVirtualMachineGroup
+      - azure-devops-extension-api.TaskAgentRestClient.updateVirtualMachines
       - azure-devops-extension-api.TaskAgentRestClient.uploadSecureFile
       - azure-devops-extension-api.TaskAgentRestClient.validateInputs
     langs:
@@ -224,19 +222,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Adds an agent to a pool.  You probably don't want to call this endpoint
+      directly. Instead, [configure an
+      agent](https://docs.microsoft.com/azure/devops/pipelines/agents/agents)
+      using the agent download package.
     syntax:
       content: 'function addAgent(agent: TaskAgent, poolId: number)'
       parameters:
         - id: agent
           type:
             - azure-devops-extension-api.TaskAgent
-          description: '-'
+          description: Details about the agent being added
         - id: poolId
           type:
             - number
           description: |
-            -
+            The agent pool in which to add the agent
       return:
         type:
           - Promise<azure-devops-extension-api.TaskAgent>
@@ -266,7 +268,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Create an agent pool.
     syntax:
       content: 'function addAgentPool(pool: TaskAgentPool)'
       parameters:
@@ -274,7 +276,7 @@ items:
           type:
             - azure-devops-extension-api.TaskAgentPool
           description: |
-            -
+            Details about the new agent pool
       return:
         type:
           - Promise<azure-devops-extension-api.TaskAgentPool>
@@ -285,7 +287,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Create a new agent queue to connect a project to an agent pool.
     syntax:
       content: >-
         function addAgentQueue(queue: TaskAgentQueue, project?: string,
@@ -294,7 +296,7 @@ items:
         - id: queue
           type:
             - azure-devops-extension-api.TaskAgentQueue
-          description: '-'
+          description: Details about the queue to create
         - id: project
           type:
             - string
@@ -304,7 +306,7 @@ items:
           type:
             - boolean
           description: |
-            -
+            Automatically authorize this queue when using YAML
           optional: true
       return:
         type:
@@ -446,32 +448,8 @@ items:
         type:
           - Promise<azure-devops-extension-api.EnvironmentInstance>
     package: azure-devops-extension-api
-  - uid: >-
-      azure-devops-extension-api.TaskAgentRestClient.addEnvironmentDeploymentExecutionRecord
-    name: >-
-      addEnvironmentDeploymentExecutionRecord(EnvironmentDeploymentExecutionRecord)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Add an environment deployment execution history record.
-    syntax:
-      content: >-
-        function addEnvironmentDeploymentExecutionRecord(executionRecord:
-        EnvironmentDeploymentExecutionRecord)
-      parameters:
-        - id: executionRecord
-          type:
-            - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord
-          description: |
-            -
-      return:
-        type:
-          - >-
-            Promise<azure-devops-extension-api.EnvironmentDeploymentExecutionRecord>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentRestClient.addServiceGroup
-    name: 'addServiceGroup(KubernetesServiceGroupCreateParameters, string, number)'
+  - uid: azure-devops-extension-api.TaskAgentRestClient.addKubernetesResource
+    name: 'addKubernetesResource(KubernetesResourceCreateParameters, string, number)'
     children: []
     type: method
     langs:
@@ -479,13 +457,13 @@ items:
     summary: ''
     syntax:
       content: >-
-        function addServiceGroup(createParameters:
-        KubernetesServiceGroupCreateParameters, project: string, environmentId:
+        function addKubernetesResource(createParameters:
+        KubernetesResourceCreateParameters, project: string, environmentId:
         number)
       parameters:
         - id: createParameters
           type:
-            - azure-devops-extension-api.KubernetesServiceGroupCreateParameters
+            - azure-devops-extension-api.KubernetesResourceCreateParameters
           description: '-'
         - id: project
           type:
@@ -498,7 +476,7 @@ items:
             -
       return:
         type:
-          - Promise<azure-devops-extension-api.KubernetesServiceGroup>
+          - Promise<azure-devops-extension-api.KubernetesResource>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.addTaskGroup
     name: 'addTaskGroup(TaskGroupCreateParameter, string)'
@@ -549,6 +527,38 @@ items:
       return:
         type:
           - Promise<azure-devops-extension-api.VariableGroup>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentRestClient.addVirtualMachineGroup
+    name: >-
+      addVirtualMachineGroup(VirtualMachineGroupCreateParameters, string,
+      number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function addVirtualMachineGroup(createParameters:
+        VirtualMachineGroupCreateParameters, project: string, environmentId:
+        number)
+      parameters:
+        - id: createParameters
+          type:
+            - azure-devops-extension-api.VirtualMachineGroupCreateParameters
+          description: '-'
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: environmentId
+          type:
+            - number
+          description: |
+            -
+      return:
+        type:
+          - Promise<azure-devops-extension-api.VirtualMachineGroup>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.createAadOAuthRequest
     name: >-
@@ -645,42 +655,13 @@ items:
         type:
           - Promise<azure-devops-extension-api.TaskAgentSession>
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentRestClient.createApproval
-    name: 'createApproval(ApprovalConfig, string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Create an approval.
-    syntax:
-      content: >-
-        function createApproval(config: ApprovalConfig, project: string,
-        approvalId: string)
-      parameters:
-        - id: config
-          type:
-            - azure-devops-extension-api.ApprovalConfig
-          description: '-'
-        - id: project
-          type:
-            - string
-          description: Project ID or project name
-        - id: approvalId
-          type:
-            - string
-          description: |
-            Id of the approval.
-      return:
-        type:
-          - Promise<azure-devops-extension-api.Approval>
-    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.createTeamProject
     name: createTeamProject(string)
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Create a new team project.
     syntax:
       content: 'function createTeamProject(project?: string)'
       parameters:
@@ -700,19 +681,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Delete an agent.  You probably don't want to call this endpoint directly.
+      Instead, [use the agent configuration
+      script](https://docs.microsoft.com/azure/devops/pipelines/agents/agents)
+      to remove an agent from your organization.
     syntax:
       content: 'function deleteAgent(poolId: number, agentId: number)'
       parameters:
         - id: poolId
           type:
             - number
-          description: '-'
+          description: The pool ID to remove the agent from
         - id: agentId
           type:
             - number
           description: |
-            -
+            The agent ID to remove
       return:
         type:
           - Promise<void>
@@ -742,7 +727,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Delete an agent pool.
     syntax:
       content: 'function deleteAgentPool(poolId: number)'
       parameters:
@@ -750,7 +735,7 @@ items:
           type:
             - number
           description: |
-            -
+            ID of the agent pool to delete
       return:
         type:
           - Promise<void>
@@ -811,14 +796,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Removes an agent queue from a project.
     syntax:
       content: 'function deleteAgentQueue(queueId: number, project?: string)'
       parameters:
         - id: queueId
           type:
             - number
-          description: '-'
+          description: The agent queue to remove
         - id: project
           type:
             - string
@@ -1020,6 +1005,35 @@ items:
         type:
           - Promise<void>
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentRestClient.deleteKubernetesResource
+    name: 'deleteKubernetesResource(string, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function deleteKubernetesResource(project: string, environmentId:
+        number, resourceId: number)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: environmentId
+          type:
+            - number
+          description: '-'
+        - id: resourceId
+          type:
+            - number
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.deleteMessage
     name: 'deleteMessage(number, number, string)'
     children: []
@@ -1068,35 +1082,6 @@ items:
             - string
           description: |
             The unique secure file Id
-      return:
-        type:
-          - Promise<void>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentRestClient.deleteServiceGroup
-    name: 'deleteServiceGroup(string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function deleteServiceGroup(project: string, environmentId: number,
-        serviceGroupId: number)
-      parameters:
-        - id: project
-          type:
-            - string
-          description: Project ID or project name
-        - id: environmentId
-          type:
-            - number
-          description: '-'
-        - id: serviceGroupId
-          type:
-            - number
-          description: |
-            -
       return:
         type:
           - Promise<void>
@@ -1169,6 +1154,35 @@ items:
             - number
           description: |
             Id of the variable group.
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentRestClient.deleteVirtualMachineGroup
+    name: 'deleteVirtualMachineGroup(string, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function deleteVirtualMachineGroup(project: string, environmentId:
+        number, resourceId: number)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: environmentId
+          type:
+            - number
+          description: '-'
+        - id: resourceId
+          type:
+            - number
+          description: |
+            -
       return:
         type:
           - Promise<void>
@@ -1286,40 +1300,48 @@ items:
           - Promise<string>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.getAgent
-    name: 'getAgent(number, number, boolean, boolean, string[])'
+    name: 'getAgent(number, number, boolean, boolean, boolean, string[])'
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get information about an agent.
     syntax:
       content: >-
         function getAgent(poolId: number, agentId: number, includeCapabilities?:
-        boolean, includeAssignedRequest?: boolean, propertyFilters?: string[])
+        boolean, includeAssignedRequest?: boolean, includeLastCompletedRequest?:
+        boolean, propertyFilters?: string[])
       parameters:
         - id: poolId
           type:
             - number
-          description: '-'
+          description: The agent pool containing the agent
         - id: agentId
           type:
             - number
-          description: '-'
+          description: The agent ID to get information about
         - id: includeCapabilities
           type:
             - boolean
-          description: '-'
+          description: Whether to include the agent's capabilities in the response
           optional: true
         - id: includeAssignedRequest
           type:
             - boolean
-          description: '-'
+          description: Whether to include details about the agent's current work
+          optional: true
+        - id: includeLastCompletedRequest
+          type:
+            - boolean
+          description: >-
+            Whether to include details about the agents' most recent completed
+            work
           optional: true
         - id: propertyFilters
           type:
             - 'string[]'
           description: |
-            -
+            Filter which custom properties will be returned
           optional: true
       return:
         type:
@@ -1397,7 +1419,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get information about an agent pool.
     syntax:
       content: >-
         function getAgentPool(poolId: number, properties?: string[],
@@ -1406,17 +1428,17 @@ items:
         - id: poolId
           type:
             - number
-          description: '-'
+          description: An agent pool ID
         - id: properties
           type:
             - 'string[]'
-          description: '-'
+          description: Agent pool properties (comma-separated)
           optional: true
         - id: actionFilter
           type:
             - azure-devops-extension-api.TaskAgentPoolActionFilter
           description: |
-            -
+            Filter by whether the calling user has use or manage permissions
           optional: true
       return:
         type:
@@ -1570,7 +1592,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get a list of agent pools.
     syntax:
       content: >-
         function getAgentPools(poolName?: string, properties?: string[],
@@ -1579,23 +1601,23 @@ items:
         - id: poolName
           type:
             - string
-          description: '-'
+          description: Filter by name
           optional: true
         - id: properties
           type:
             - 'string[]'
-          description: '-'
+          description: Filter by agent pool properties (comma-separated)
           optional: true
         - id: poolType
           type:
             - azure-devops-extension-api.TaskAgentPoolType
-          description: '-'
+          description: Filter by pool type
           optional: true
         - id: actionFilter
           type:
             - azure-devops-extension-api.TaskAgentPoolActionFilter
           description: |
-            -
+            Filter by whether the calling user has use or manage permissions
           optional: true
       return:
         type:
@@ -1607,7 +1629,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get information about an agent queue.
     syntax:
       content: >-
         function getAgentQueue(queueId: number, project?: string, actionFilter?:
@@ -1616,7 +1638,7 @@ items:
         - id: queueId
           type:
             - number
-          description: '-'
+          description: The agent queue to get information about
         - id: project
           type:
             - string
@@ -1626,7 +1648,7 @@ items:
           type:
             - azure-devops-extension-api.TaskAgentQueueActionFilter
           description: |
-            -
+            Filter by whether the calling user has use or manage permissions
           optional: true
       return:
         type:
@@ -1638,7 +1660,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get a list of agent queues.
     syntax:
       content: >-
         function getAgentQueues(project?: string, queueName?: string,
@@ -1652,13 +1674,13 @@ items:
         - id: queueName
           type:
             - string
-          description: '-'
+          description: Filter on the agent queue name
           optional: true
         - id: actionFilter
           type:
             - azure-devops-extension-api.TaskAgentQueueActionFilter
           description: |
-            -
+            Filter by whether the calling user has use or manage permissions
           optional: true
       return:
         type:
@@ -1670,7 +1692,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get a list of agent queues by their IDs
     syntax:
       content: >-
         function getAgentQueuesByIds(queueIds: number[], project?: string,
@@ -1679,7 +1701,7 @@ items:
         - id: queueIds
           type:
             - 'number[]'
-          description: '-'
+          description: A comma-separated list of agent queue IDs to retrieve
         - id: project
           type:
             - string
@@ -1689,7 +1711,7 @@ items:
           type:
             - azure-devops-extension-api.TaskAgentQueueActionFilter
           description: |
-            -
+            Filter by whether the calling user has use or manage permissions
           optional: true
       return:
         type:
@@ -1701,7 +1723,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get a list of agent queues by their names
     syntax:
       content: >-
         function getAgentQueuesByNames(queueNames: string[], project?: string,
@@ -1710,7 +1732,7 @@ items:
         - id: queueNames
           type:
             - 'string[]'
-          description: '-'
+          description: A comma-separated list of agent names to retrieve
         - id: project
           type:
             - string
@@ -1720,21 +1742,23 @@ items:
           type:
             - azure-devops-extension-api.TaskAgentQueueActionFilter
           description: |
-            -
+            Filter by whether the calling user has use or manage permissions
           optional: true
       return:
         type:
           - 'Promise<azure-devops-extension-api.TaskAgentQueue[]>'
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.getAgentRequest
-    name: 'getAgentRequest(number, number)'
+    name: 'getAgentRequest(number, number, boolean)'
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function getAgentRequest(poolId: number, requestId: number)'
+      content: >-
+        function getAgentRequest(poolId: number, requestId: number,
+        includeStatus?: boolean)
       parameters:
         - id: poolId
           type:
@@ -1743,8 +1767,13 @@ items:
         - id: requestId
           type:
             - number
+          description: '-'
+        - id: includeStatus
+          type:
+            - boolean
           description: |
             -
+          optional: true
       return:
         type:
           - Promise<azure-devops-extension-api.TaskAgentJobRequest>
@@ -2060,74 +2089,59 @@ items:
           - 'Promise<azure-devops-extension-api.TaskAgentJobRequest[]>'
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.getAgents
-    name: 'getAgents(number, string, boolean, boolean, string[], string[])'
+    name: 'getAgents(number, string, boolean, boolean, boolean, string[], string[])'
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get a list of agents.
     syntax:
       content: >-
         function getAgents(poolId: number, agentName?: string,
         includeCapabilities?: boolean, includeAssignedRequest?: boolean,
-        propertyFilters?: string[], demands?: string[])
+        includeLastCompletedRequest?: boolean, propertyFilters?: string[],
+        demands?: string[])
       parameters:
         - id: poolId
           type:
             - number
-          description: '-'
+          description: The agent pool containing the agents
         - id: agentName
           type:
             - string
-          description: '-'
+          description: Filter on agent name
           optional: true
         - id: includeCapabilities
           type:
             - boolean
-          description: '-'
+          description: Whether to include the agents' capabilities in the response
           optional: true
         - id: includeAssignedRequest
           type:
             - boolean
-          description: '-'
+          description: Whether to include details about the agents' current work
+          optional: true
+        - id: includeLastCompletedRequest
+          type:
+            - boolean
+          description: >-
+            Whether to include details about the agents' most recent completed
+            work
           optional: true
         - id: propertyFilters
           type:
             - 'string[]'
-          description: '-'
+          description: Filter which custom properties will be returned
           optional: true
         - id: demands
           type:
             - 'string[]'
           description: |
-            -
+            Filter by demands the agents can satisfy
           optional: true
       return:
         type:
           - 'Promise<azure-devops-extension-api.TaskAgent[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentRestClient.getApproval
-    name: 'getApproval(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Get an approval.
-    syntax:
-      content: 'function getApproval(project: string, approvalId: string)'
-      parameters:
-        - id: project
-          type:
-            - string
-          description: Project ID or project name
-        - id: approvalId
-          type:
-            - string
-          description: |
-            Id of the approval.
-      return:
-        type:
-          - Promise<azure-devops-extension-api.Approval>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.getAzureManagementGroups
     name: getAzureManagementGroups()
@@ -2461,7 +2475,7 @@ items:
           - 'Promise<azure-devops-extension-api.DeploymentMachine[]>'
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentPoolsSummary
-    name: 'getDeploymentPoolsSummary(string, DeploymentPoolSummaryExpands)'
+    name: 'getDeploymentPoolsSummary(string, DeploymentPoolSummaryExpands, number[])'
     children: []
     type: method
     langs:
@@ -2470,7 +2484,7 @@ items:
     syntax:
       content: >-
         function getDeploymentPoolsSummary(poolName?: string, expands?:
-        DeploymentPoolSummaryExpands)
+        DeploymentPoolSummaryExpands, poolIds?: number[])
       parameters:
         - id: poolName
           type:
@@ -2480,8 +2494,13 @@ items:
         - id: expands
           type:
             - azure-devops-extension-api.DeploymentPoolSummaryExpands
+          description: Include these additional details in the returned objects.
+          optional: true
+        - id: poolIds
+          type:
+            - 'number[]'
           description: |
-            Include these additional details in the returned objects.
+            List of deployment pool ids.
           optional: true
       return:
         type:
@@ -2642,9 +2661,7 @@ items:
     package: azure-devops-extension-api
   - uid: >-
       azure-devops-extension-api.TaskAgentRestClient.getEnvironmentDeploymentExecutionRecords
-    name: >-
-      getEnvironmentDeploymentExecutionRecords(number, string, number, string,
-      number)
+    name: 'getEnvironmentDeploymentExecutionRecords(string, number, string, number)'
     children: []
     type: method
     langs:
@@ -2652,24 +2669,17 @@ items:
     summary: Get environment deployment execution history
     syntax:
       content: >-
-        function getEnvironmentDeploymentExecutionRecords(environmentId: number,
-        scopeId?: string, serviceGroupId?: number, continuationToken?: string,
-        top?: number)
+        function getEnvironmentDeploymentExecutionRecords(project: string,
+        environmentId: number, continuationToken?: string, top?: number)
       parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
         - id: environmentId
           type:
             - number
           description: '-'
-        - id: scopeId
-          type:
-            - string
-          description: '-'
-          optional: true
-        - id: serviceGroupId
-          type:
-            - number
-          description: '-'
-          optional: true
         - id: continuationToken
           type:
             - string
@@ -2721,6 +2731,35 @@ items:
       return:
         type:
           - 'Promise<azure-devops-extension-api.EnvironmentInstance[]>'
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentRestClient.getKubernetesResource
+    name: 'getKubernetesResource(string, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getKubernetesResource(project: string, environmentId: number,
+        resourceId: number)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: environmentId
+          type:
+            - number
+          description: '-'
+        - id: resourceId
+          type:
+            - number
+          description: |
+            -
+      return:
+        type:
+          - Promise<azure-devops-extension-api.KubernetesResource>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.getMessage
     name: 'getMessage(number, string, number)'
@@ -3010,35 +3049,6 @@ items:
       return:
         type:
           - 'Promise<azure-devops-extension-api.SecureFile[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentRestClient.getServiceGroup
-    name: 'getServiceGroup(string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function getServiceGroup(project: string, environmentId: number,
-        serviceGroupId: number)
-      parameters:
-        - id: project
-          type:
-            - string
-          description: Project ID or project name
-        - id: environmentId
-          type:
-            - number
-          description: '-'
-        - id: serviceGroupId
-          type:
-            - number
-          description: |
-            -
-      return:
-        type:
-          - Promise<azure-devops-extension-api.KubernetesServiceGroup>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.getTaskContentZip
     name: 'getTaskContentZip(string, string, string[], boolean)'
@@ -3418,6 +3428,92 @@ items:
         type:
           - 'Promise<azure-devops-extension-api.VariableGroup[]>'
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentRestClient.getVirtualMachineGroup
+    name: 'getVirtualMachineGroup(string, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getVirtualMachineGroup(project: string, environmentId: number,
+        resourceId: number)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: environmentId
+          type:
+            - number
+          description: '-'
+        - id: resourceId
+          type:
+            - number
+          description: |
+            -
+      return:
+        type:
+          - Promise<azure-devops-extension-api.VirtualMachineGroup>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentRestClient.getVirtualMachines
+    name: >-
+      getVirtualMachines(string, number, number, string, string, boolean,
+      string[], number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getVirtualMachines(project: string, environmentId: number,
+        resourceId: number, continuationToken?: string, name?: string,
+        partialNameMatch?: boolean, tags?: string[], top?: number)
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: environmentId
+          type:
+            - number
+          description: '-'
+        - id: resourceId
+          type:
+            - number
+          description: '-'
+        - id: continuationToken
+          type:
+            - string
+          description: '-'
+          optional: true
+        - id: name
+          type:
+            - string
+          description: '-'
+          optional: true
+        - id: partialNameMatch
+          type:
+            - boolean
+          description: '-'
+          optional: true
+        - id: tags
+          type:
+            - 'string[]'
+          description: '-'
+          optional: true
+        - id: top
+          type:
+            - number
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - 'Promise<azure-devops-extension-api.VirtualMachine[]>'
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.getVstsAadTenantId
     name: getVstsAadTenantId()
     children: []
@@ -3431,6 +3527,20 @@ items:
       return:
         type:
           - Promise<string>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentRestClient.getYamlSchema
+    name: getYamlSchema()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getYamlSchema()
+      parameters: []
+      return:
+        type:
+          - Promise<any>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.publishPreviewTaskGroup
     name: 'publishPreviewTaskGroup(TaskGroup, string, string, boolean)'
@@ -3583,31 +3693,6 @@ items:
       return:
         type:
           - 'Promise<azure-devops-extension-api.ProjectReference[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentRestClient.querySteps
-    name: 'querySteps(ApprovalStepQueryParameters, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Query approval steps.
-    syntax:
-      content: >-
-        function querySteps(queryParameters: ApprovalStepQueryParameters,
-        project: string)
-      parameters:
-        - id: queryParameters
-          type:
-            - azure-devops-extension-api.ApprovalStepQueryParameters
-          description: '-'
-        - id: project
-          type:
-            - string
-          description: |
-            Project ID or project name
-      return:
-        type:
-          - 'Promise<azure-devops-extension-api.ApprovalStep[]>'
     package: azure-devops-extension-api
   - uid: >-
       azure-devops-extension-api.TaskAgentRestClient.queueAgentPoolMaintenanceJob
@@ -3783,23 +3868,27 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Replace an agent.  You probably don't want to call this endpoint directly.
+      Instead, [use the agent configuration
+      script](https://docs.microsoft.com/azure/devops/pipelines/agents/agents)
+      to remove and reconfigure an agent from your organization.
     syntax:
       content: 'function replaceAgent(agent: TaskAgent, poolId: number, agentId: number)'
       parameters:
         - id: agent
           type:
             - azure-devops-extension-api.TaskAgent
-          description: '-'
+          description: Updated details about the replacing agent
         - id: poolId
           type:
             - number
-          description: '-'
+          description: The agent pool to use
         - id: agentId
           type:
             - number
           description: |
-            -
+            The agent to replace
       return:
         type:
           - Promise<azure-devops-extension-api.TaskAgent>
@@ -3989,23 +4078,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Update agent details.
     syntax:
       content: 'function updateAgent(agent: TaskAgent, poolId: number, agentId: number)'
       parameters:
         - id: agent
           type:
             - azure-devops-extension-api.TaskAgent
-          description: '-'
+          description: Updated details about the agent
         - id: poolId
           type:
             - number
-          description: '-'
+          description: The agent pool to use
         - id: agentId
           type:
             - number
           description: |
-            -
+            The agent to update
       return:
         type:
           - Promise<azure-devops-extension-api.TaskAgent>
@@ -4016,19 +4105,19 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Update properties on an agent pool
     syntax:
       content: 'function updateAgentPool(pool: TaskAgentPool, poolId: number)'
       parameters:
         - id: pool
           type:
             - azure-devops-extension-api.TaskAgentPool
-          description: '-'
+          description: Updated agent pool details
         - id: poolId
           type:
             - number
           description: |
-            -
+            The agent pool to update
       return:
         type:
           - Promise<azure-devops-extension-api.TaskAgentPool>
@@ -4187,35 +4276,6 @@ items:
       return:
         type:
           - Promise<azure-devops-extension-api.TaskAgent>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentRestClient.updateApproval
-    name: 'updateApproval(ApprovalStatusUpdateParameter, string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Update an approval.
-    syntax:
-      content: >-
-        function updateApproval(updateParameter: ApprovalStatusUpdateParameter,
-        project: string, approvalId: string)
-      parameters:
-        - id: updateParameter
-          type:
-            - azure-devops-extension-api.ApprovalStatusUpdateParameter
-          description: '-'
-        - id: project
-          type:
-            - string
-          description: Project ID or project name
-        - id: approvalId
-          type:
-            - string
-          description: |
-            -
-      return:
-        type:
-          - Promise<azure-devops-extension-api.Approval>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.updateDeploymentGroup
     name: 'updateDeploymentGroup(DeploymentGroupUpdateParameter, string, number)'
@@ -4463,29 +4523,34 @@ items:
         type:
           - Promise<azure-devops-extension-api.EnvironmentInstance>
     package: azure-devops-extension-api
-  - uid: >-
-      azure-devops-extension-api.TaskAgentRestClient.updateEnvironmentDeploymentExecutionRecord
-    name: >-
-      updateEnvironmentDeploymentExecutionRecord(EnvironmentDeploymentExecutionRecord)
+  - uid: azure-devops-extension-api.TaskAgentRestClient.updateKubernetesResource
+    name: 'updateKubernetesResource(KubernetesResource, string, number)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: Updates environment deployment execution record
+    summary: ''
     syntax:
       content: >-
-        function updateEnvironmentDeploymentExecutionRecord(executionRecord:
-        EnvironmentDeploymentExecutionRecord)
+        function updateKubernetesResource(resource: KubernetesResource, project:
+        string, environmentId: number)
       parameters:
-        - id: executionRecord
+        - id: resource
           type:
-            - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord
+            - azure-devops-extension-api.KubernetesResource
+          description: '-'
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: environmentId
+          type:
+            - number
           description: |
-            Environment deployment execution record to update.
+            -
       return:
         type:
-          - >-
-            Promise<azure-devops-extension-api.EnvironmentDeploymentExecutionRecord>
+          - Promise<azure-devops-extension-api.KubernetesResource>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.updateSecureFile
     name: 'updateSecureFile(SecureFile, string, string)'
@@ -4544,60 +4609,6 @@ items:
       return:
         type:
           - 'Promise<azure-devops-extension-api.SecureFile[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentRestClient.updateServiceGroup
-    name: 'updateServiceGroup(KubernetesServiceGroup, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function updateServiceGroup(serviceGroup: KubernetesServiceGroup,
-        project: string, environmentId: number)
-      parameters:
-        - id: serviceGroup
-          type:
-            - azure-devops-extension-api.KubernetesServiceGroup
-          description: '-'
-        - id: project
-          type:
-            - string
-          description: Project ID or project name
-        - id: environmentId
-          type:
-            - number
-          description: |
-            -
-      return:
-        type:
-          - Promise<azure-devops-extension-api.KubernetesServiceGroup>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentRestClient.updateSteps
-    name: 'updateSteps(ApprovalStatusUpdateParameter[], string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Update approval steps.
-    syntax:
-      content: >-
-        function updateSteps(updateParameters: ApprovalStatusUpdateParameter[],
-        project: string)
-      parameters:
-        - id: updateParameters
-          type:
-            - 'azure-devops-extension-api.ApprovalStatusUpdateParameter[]'
-          description: '-'
-        - id: project
-          type:
-            - string
-          description: |
-            Project ID or project name
-      return:
-        type:
-          - 'Promise<azure-devops-extension-api.ApprovalStep[]>'
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.updateTaskGroup
     name: 'updateTaskGroup(TaskGroupUpdateParameter, string, string)'
@@ -4682,6 +4693,68 @@ items:
       return:
         type:
           - Promise<azure-devops-extension-api.VariableGroup>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentRestClient.updateVirtualMachineGroup
+    name: 'updateVirtualMachineGroup(VirtualMachineGroup, string, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateVirtualMachineGroup(resource: VirtualMachineGroup,
+        project: string, environmentId: number)
+      parameters:
+        - id: resource
+          type:
+            - azure-devops-extension-api.VirtualMachineGroup
+          description: '-'
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: environmentId
+          type:
+            - number
+          description: |
+            -
+      return:
+        type:
+          - Promise<azure-devops-extension-api.VirtualMachineGroup>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentRestClient.updateVirtualMachines
+    name: 'updateVirtualMachines(VirtualMachine[], string, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateVirtualMachines(machines: VirtualMachine[], project:
+        string, environmentId: number, resourceId: number)
+      parameters:
+        - id: machines
+          type:
+            - 'azure-devops-extension-api.VirtualMachine[]'
+          description: '-'
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: environmentId
+          type:
+            - number
+          description: '-'
+        - id: resourceId
+          type:
+            - number
+          description: |
+            -
+      return:
+        type:
+          - 'Promise<azure-devops-extension-api.VirtualMachine[]>'
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentRestClient.uploadSecureFile
     name: 'uploadSecureFile(any, string, string, boolean)'
@@ -4894,36 +4967,20 @@ references:
         uid: azure-devops-extension-api.EnvironmentInstance
       - name: '>'
         fullName: '>'
-  - uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord
-    name: EnvironmentDeploymentExecutionRecord
+  - uid: azure-devops-extension-api.KubernetesResourceCreateParameters
+    name: KubernetesResourceCreateParameters
     spec.typeScript:
-      - name: EnvironmentDeploymentExecutionRecord
-        fullName: EnvironmentDeploymentExecutionRecord
-        uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord
-  - uid: Promise<azure-devops-extension-api.EnvironmentDeploymentExecutionRecord>
-    name: EnvironmentDeploymentExecutionRecord>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: EnvironmentDeploymentExecutionRecord
-        fullName: EnvironmentDeploymentExecutionRecord
-        uid: azure-devops-extension-api.EnvironmentDeploymentExecutionRecord
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.KubernetesServiceGroupCreateParameters
-    name: KubernetesServiceGroupCreateParameters
-    spec.typeScript:
-      - name: KubernetesServiceGroupCreateParameters
-        fullName: KubernetesServiceGroupCreateParameters
-        uid: azure-devops-extension-api.KubernetesServiceGroupCreateParameters
-  - uid: Promise<azure-devops-extension-api.KubernetesServiceGroup>
-    name: KubernetesServiceGroup>
+      - name: KubernetesResourceCreateParameters
+        fullName: KubernetesResourceCreateParameters
+        uid: azure-devops-extension-api.KubernetesResourceCreateParameters
+  - uid: Promise<azure-devops-extension-api.KubernetesResource>
+    name: KubernetesResource>
     spec.typeScript:
       - name: Promise<
         fullName: Promise<
-      - name: KubernetesServiceGroup
-        fullName: KubernetesServiceGroup
-        uid: azure-devops-extension-api.KubernetesServiceGroup
+      - name: KubernetesResource
+        fullName: KubernetesResource
+        uid: azure-devops-extension-api.KubernetesResource
       - name: '>'
         fullName: '>'
   - uid: azure-devops-extension-api.TaskGroupCreateParameter
@@ -4956,6 +5013,22 @@ references:
       - name: VariableGroup
         fullName: VariableGroup
         uid: azure-devops-extension-api.VariableGroup
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.VirtualMachineGroupCreateParameters
+    name: VirtualMachineGroupCreateParameters
+    spec.typeScript:
+      - name: VirtualMachineGroupCreateParameters
+        fullName: VirtualMachineGroupCreateParameters
+        uid: azure-devops-extension-api.VirtualMachineGroupCreateParameters
+  - uid: Promise<azure-devops-extension-api.VirtualMachineGroup>
+    name: VirtualMachineGroup>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: VirtualMachineGroup
+        fullName: VirtualMachineGroup
+        uid: azure-devops-extension-api.VirtualMachineGroup
       - name: '>'
         fullName: '>'
   - uid: azure-devops-extension-api.AadLoginPromptOption
@@ -4994,22 +5067,6 @@ references:
       - name: TaskAgentSession
         fullName: TaskAgentSession
         uid: azure-devops-extension-api.TaskAgentSession
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.ApprovalConfig
-    name: ApprovalConfig
-    spec.typeScript:
-      - name: ApprovalConfig
-        fullName: ApprovalConfig
-        uid: azure-devops-extension-api.ApprovalConfig
-  - uid: Promise<azure-devops-extension-api.Approval>
-    name: Approval>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: Approval
-        fullName: Approval
-        uid: azure-devops-extension-api.Approval
       - name: '>'
         fullName: '>'
   - uid: azure-devops-extension-api.TaskResult
@@ -5450,6 +5507,16 @@ references:
         uid: azure-devops-extension-api.VariableGroup
       - name: '[]>'
         fullName: '[]>'
+  - uid: 'Promise<azure-devops-extension-api.VirtualMachine[]>'
+    name: 'VirtualMachine[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: VirtualMachine
+        fullName: VirtualMachine
+        uid: azure-devops-extension-api.VirtualMachine
+      - name: '[]>'
+        fullName: '[]>'
   - uid: azure-devops-extension-api.TaskGroup
     name: TaskGroup
     spec.typeScript:
@@ -5478,22 +5545,6 @@ references:
         uid: azure-devops-extension-api.ProjectReference
       - name: '[]>'
         fullName: '[]>'
-  - uid: azure-devops-extension-api.ApprovalStepQueryParameters
-    name: ApprovalStepQueryParameters
-    spec.typeScript:
-      - name: ApprovalStepQueryParameters
-        fullName: ApprovalStepQueryParameters
-        uid: azure-devops-extension-api.ApprovalStepQueryParameters
-  - uid: 'Promise<azure-devops-extension-api.ApprovalStep[]>'
-    name: 'ApprovalStep[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: ApprovalStep
-        fullName: ApprovalStep
-        uid: azure-devops-extension-api.ApprovalStep
-      - name: '[]>'
-        fullName: '[]>'
   - uid: azure-devops-extension-api.TaskAgentPoolMaintenanceJob
     name: TaskAgentPoolMaintenanceJob
     spec.typeScript:
@@ -5512,12 +5563,6 @@ references:
       - name: TaskAgentMessage
         fullName: TaskAgentMessage
         uid: azure-devops-extension-api.TaskAgentMessage
-  - uid: azure-devops-extension-api.ApprovalStatusUpdateParameter
-    name: ApprovalStatusUpdateParameter
-    spec.typeScript:
-      - name: ApprovalStatusUpdateParameter
-        fullName: ApprovalStatusUpdateParameter
-        uid: azure-devops-extension-api.ApprovalStatusUpdateParameter
   - uid: azure-devops-extension-api.DeploymentGroupUpdateParameter
     name: DeploymentGroupUpdateParameter
     spec.typeScript:
@@ -5546,6 +5591,12 @@ references:
       - name: EnvironmentUpdateParameter
         fullName: EnvironmentUpdateParameter
         uid: azure-devops-extension-api.EnvironmentUpdateParameter
+  - uid: azure-devops-extension-api.KubernetesResource
+    name: KubernetesResource
+    spec.typeScript:
+      - name: KubernetesResource
+        fullName: KubernetesResource
+        uid: azure-devops-extension-api.KubernetesResource
   - uid: azure-devops-extension-api.SecureFile
     name: SecureFile
     spec.typeScript:
@@ -5560,20 +5611,6 @@ references:
         uid: azure-devops-extension-api.SecureFile
       - name: '[]'
         fullName: '[]'
-  - uid: azure-devops-extension-api.KubernetesServiceGroup
-    name: KubernetesServiceGroup
-    spec.typeScript:
-      - name: KubernetesServiceGroup
-        fullName: KubernetesServiceGroup
-        uid: azure-devops-extension-api.KubernetesServiceGroup
-  - uid: 'azure-devops-extension-api.ApprovalStatusUpdateParameter[]'
-    name: 'ApprovalStatusUpdateParameter[]'
-    spec.typeScript:
-      - name: ApprovalStatusUpdateParameter
-        fullName: ApprovalStatusUpdateParameter
-        uid: azure-devops-extension-api.ApprovalStatusUpdateParameter
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-devops-extension-api.TaskGroupUpdateParameter
     name: TaskGroupUpdateParameter
     spec.typeScript:
@@ -5586,6 +5623,20 @@ references:
       - name: TaskHubLicenseDetails
         fullName: TaskHubLicenseDetails
         uid: azure-devops-extension-api.TaskHubLicenseDetails
+  - uid: azure-devops-extension-api.VirtualMachineGroup
+    name: VirtualMachineGroup
+    spec.typeScript:
+      - name: VirtualMachineGroup
+        fullName: VirtualMachineGroup
+        uid: azure-devops-extension-api.VirtualMachineGroup
+  - uid: 'azure-devops-extension-api.VirtualMachine[]'
+    name: 'VirtualMachine[]'
+    spec.typeScript:
+      - name: VirtualMachine
+        fullName: VirtualMachine
+        uid: azure-devops-extension-api.VirtualMachine
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-devops-extension-api.InputValidationRequest
     name: InputValidationRequest
     spec.typeScript:

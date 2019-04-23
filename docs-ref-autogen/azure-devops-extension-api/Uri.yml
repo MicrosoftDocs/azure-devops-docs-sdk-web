@@ -41,7 +41,7 @@ items:
           - string
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.Uri.addQueryParam
-    name: 'addQueryParam(string, string, boolean)'
+    name: 'addQueryParam(string, string | null, boolean)'
     children: []
     type: method
     langs:
@@ -49,8 +49,8 @@ items:
     summary: Adds a query string parameter to the current uri
     syntax:
       content: >-
-        function addQueryParam(name: string, value: string, replaceExisting?:
-        boolean)
+        function addQueryParam(name: string, value: string | null,
+        replaceExisting?: boolean)
       parameters:
         - id: name
           type:
@@ -58,7 +58,7 @@ items:
           description: The Query parameter name
         - id: value
           type:
-            - string
+            - string | null
           description: The Query parameter value
         - id: replaceExisting
           type:
@@ -68,7 +68,7 @@ items:
           optional: true
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.Uri.addQueryParams
-    name: 'addQueryParams([key: string]: function, boolean)'
+    name: 'addQueryParams([key: string]: QueryParameterValueType, boolean, string)'
     children: []
     type: method
     langs:
@@ -76,18 +76,23 @@ items:
     summary: Adds query string parameters to the current uri
     syntax:
       content: >-
-        function addQueryParams(parameters: [key: string]: function,
-        replaceExisting?: boolean)
+        function addQueryParams(parameters: [key: string]:
+        QueryParameterValueType, replaceExisting?: boolean, keyPrefix?: string)
       parameters:
         - id: parameters
           type:
-            - '[key: string]: function'
+            - '[key: string]: azure-devops-extension-api.QueryParameterValueType'
           description: Query parameters to add
         - id: replaceExisting
           type:
             - boolean
+          description: 'If true, replace all existing parameters with the same name'
+          optional: true
+        - id: keyPrefix
+          type:
+            - string
           description: |
-            If true, replace all existing parameters with the same name
+            If specified, a value to prepend to all query parameter keys
           optional: true
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.Uri.getEffectivePort
@@ -294,3 +299,11 @@ references:
         uid: azure-devops-extension-api.IQueryParameter
       - name: '[]'
         fullName: '[]'
+  - uid: '[key: string]: azure-devops-extension-api.QueryParameterValueType'
+    name: QueryParameterValueType
+    spec.typeScript:
+      - name: '[key: string]: '
+        fullName: '[key: string]: '
+      - name: QueryParameterValueType
+        fullName: QueryParameterValueType
+        uid: azure-devops-extension-api.QueryParameterValueType

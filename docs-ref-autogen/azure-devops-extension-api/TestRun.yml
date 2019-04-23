@@ -40,6 +40,7 @@ items:
       - azure-devops-extension-api.TestRun.startedDate
       - azure-devops-extension-api.TestRun.state
       - azure-devops-extension-api.TestRun.substate
+      - azure-devops-extension-api.TestRun.tags
       - azure-devops-extension-api.TestRun.testEnvironment
       - azure-devops-extension-api.TestRun.testMessageLogId
       - azure-devops-extension-api.TestRun.testSettings
@@ -556,6 +557,20 @@ items:
         type:
           - azure-devops-extension-api.TestRunSubstate
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TestRun.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tags attached with this test run.
+    syntax:
+      content: 'tags: TestTag[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.TestTag[]'
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TestRun.testEnvironment
     name: testEnvironment
     fullName: testEnvironment
@@ -713,6 +728,14 @@ references:
       - name: TestRunSubstate
         fullName: TestRunSubstate
         uid: azure-devops-extension-api.TestRunSubstate
+  - uid: 'azure-devops-extension-api.TestTag[]'
+    name: 'TestTag[]'
+    spec.typeScript:
+      - name: TestTag
+        fullName: TestTag
+        uid: azure-devops-extension-api.TestTag
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-devops-extension-api.TestEnvironment
     name: TestEnvironment
     spec.typeScript:

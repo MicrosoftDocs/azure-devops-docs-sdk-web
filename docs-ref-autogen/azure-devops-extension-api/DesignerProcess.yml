@@ -5,6 +5,7 @@ items:
     fullName: DesignerProcess
     children:
       - azure-devops-extension-api.DesignerProcess.phases
+      - azure-devops-extension-api.DesignerProcess.target
     langs:
       - typeScript
     type: interface
@@ -26,6 +27,20 @@ items:
         type:
           - 'azure-devops-extension-api.Phase[]'
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.DesignerProcess.target
+    name: target
+    fullName: target
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The target for the build process.
+    syntax:
+      content: 'target: DesignerProcessTarget'
+      return:
+        type:
+          - azure-devops-extension-api.DesignerProcessTarget
+    package: azure-devops-extension-api
 references:
   - uid: azure-devops-extension-api.BuildProcess
     name: BuildProcess
@@ -41,3 +56,9 @@ references:
         uid: azure-devops-extension-api.Phase
       - name: '[]'
         fullName: '[]'
+  - uid: azure-devops-extension-api.DesignerProcessTarget
+    name: DesignerProcessTarget
+    spec.typeScript:
+      - name: DesignerProcessTarget
+        fullName: DesignerProcessTarget
+        uid: azure-devops-extension-api.DesignerProcessTarget

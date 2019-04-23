@@ -9,6 +9,7 @@ items:
       - azure-devops-extension-api.SubscriptionFlags.ContributedSubscription
       - azure-devops-extension-api.SubscriptionFlags.CanOptOut
       - azure-devops-extension-api.SubscriptionFlags.TeamSubscription
+      - azure-devops-extension-api.SubscriptionFlags.OneActorMatches
     langs:
       - typeScript
     type: enum
@@ -62,4 +63,15 @@ items:
     summary: 'If the subscriber is a group, is it a team.'
     type: field
     numericValue: 8
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.SubscriptionFlags.OneActorMatches
+    name: OneActorMatches
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      For role based subscriptions, there is an expectation that there will
+      always be at least one actor that matches
+    type: field
+    numericValue: 16
     package: azure-devops-extension-api

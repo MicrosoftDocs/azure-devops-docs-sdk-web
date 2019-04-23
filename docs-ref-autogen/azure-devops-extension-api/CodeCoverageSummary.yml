@@ -7,6 +7,7 @@ items:
       - azure-devops-extension-api.CodeCoverageSummary.build
       - azure-devops-extension-api.CodeCoverageSummary.coverageData
       - azure-devops-extension-api.CodeCoverageSummary.deltaBuild
+      - azure-devops-extension-api.CodeCoverageSummary.status
     langs:
       - typeScript
     type: interface
@@ -56,6 +57,20 @@ items:
         type:
           - azure-devops-extension-api.ShallowReference
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.CodeCoverageSummary.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri of build against which difference in coverage is computed
+    syntax:
+      content: 'status: CoverageSummaryStatus'
+      return:
+        type:
+          - azure-devops-extension-api.CoverageSummaryStatus
+    package: azure-devops-extension-api
 references:
   - uid: azure-devops-extension-api.ShallowReference
     name: ShallowReference
@@ -71,3 +86,9 @@ references:
         uid: azure-devops-extension-api.CodeCoverageData
       - name: '[]'
         fullName: '[]'
+  - uid: azure-devops-extension-api.CoverageSummaryStatus
+    name: CoverageSummaryStatus
+    spec.typeScript:
+      - name: CoverageSummaryStatus
+        fullName: CoverageSummaryStatus
+        uid: azure-devops-extension-api.CoverageSummaryStatus

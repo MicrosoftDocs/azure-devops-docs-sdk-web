@@ -9,9 +9,11 @@ items:
       - azure-devops-extension-api.GraphRestClient.createGroup
       - azure-devops-extension-api.GraphRestClient.createScope
       - azure-devops-extension-api.GraphRestClient.createUser
+      - azure-devops-extension-api.GraphRestClient.deleteAvatar
       - azure-devops-extension-api.GraphRestClient.deleteGroup
       - azure-devops-extension-api.GraphRestClient.deleteScope
       - azure-devops-extension-api.GraphRestClient.deleteUser
+      - azure-devops-extension-api.GraphRestClient.getAvatar
       - azure-devops-extension-api.GraphRestClient.getCachePolicies
       - azure-devops-extension-api.GraphRestClient.getDescriptor
       - azure-devops-extension-api.GraphRestClient.getFederatedProviderData
@@ -31,9 +33,11 @@ items:
       - azure-devops-extension-api.GraphRestClient.lookupSubjects
       - azure-devops-extension-api.GraphRestClient.removeMembership
       - azure-devops-extension-api.GraphRestClient.RESOURCE_AREA_ID
+      - azure-devops-extension-api.GraphRestClient.setAvatar
       - azure-devops-extension-api.GraphRestClient.traverseMemberships
       - azure-devops-extension-api.GraphRestClient.updateGroup
       - azure-devops-extension-api.GraphRestClient.updateScope
+      - azure-devops-extension-api.GraphRestClient.updateUser
     langs:
       - typeScript
     type: class
@@ -189,6 +193,25 @@ items:
         type:
           - Promise<azure-devops-extension-api.GraphUser>
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphRestClient.deleteAvatar
+    name: deleteAvatar(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteAvatar(subjectDescriptor: string)'
+      parameters:
+        - id: subjectDescriptor
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.GraphRestClient.deleteGroup
     name: deleteGroup(string)
     children: []
@@ -245,6 +268,37 @@ items:
       return:
         type:
           - Promise<void>
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphRestClient.getAvatar
+    name: 'getAvatar(string, AvatarSize, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getAvatar(subjectDescriptor: string, size?: AvatarSize,
+        format?: string)
+      parameters:
+        - id: subjectDescriptor
+          type:
+            - string
+          description: '-'
+        - id: size
+          type:
+            - azure-devops-extension-api.AvatarSize
+          description: '-'
+          optional: true
+        - id: format
+          type:
+            - string
+          description: |
+            -
+          optional: true
+      return:
+        type:
+          - Promise<azure-devops-extension-api.Avatar>
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.GraphRestClient.getCachePolicies
     name: getCachePolicies()
@@ -663,6 +717,29 @@ items:
         type:
           - string
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphRestClient.setAvatar
+    name: 'setAvatar(Avatar, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setAvatar(avatar: Avatar, subjectDescriptor: string)'
+      parameters:
+        - id: avatar
+          type:
+            - azure-devops-extension-api.Avatar
+          description: '-'
+        - id: subjectDescriptor
+          type:
+            - string
+          description: |
+            -
+      return:
+        type:
+          - Promise<void>
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.GraphRestClient.traverseMemberships
     name: 'traverseMemberships(string, GraphTraversalDirection, number)'
     children: []
@@ -746,6 +823,33 @@ items:
         type:
           - Promise<void>
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.GraphRestClient.updateUser
+    name: 'updateUser(GraphUserUpdateContext, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Map an existing user to a different identity
+    syntax:
+      content: >-
+        function updateUser(updateContext: GraphUserUpdateContext,
+        userDescriptor: string)
+      parameters:
+        - id: updateContext
+          type:
+            - azure-devops-extension-api.GraphUserUpdateContext
+          description: >-
+            The subset of the full graph user used to uniquely find the graph
+            subject in an external provider.
+        - id: userDescriptor
+          type:
+            - string
+          description: |
+            the descriptor of the user to update
+      return:
+        type:
+          - Promise<azure-devops-extension-api.GraphUser>
+    package: azure-devops-extension-api
 references:
   - uid: azure-devops-extension-api.RestClientBase
     name: RestClientBase
@@ -815,6 +919,22 @@ references:
       - name: GraphUser
         fullName: GraphUser
         uid: azure-devops-extension-api.GraphUser
+      - name: '>'
+        fullName: '>'
+  - uid: azure-devops-extension-api.AvatarSize
+    name: AvatarSize
+    spec.typeScript:
+      - name: AvatarSize
+        fullName: AvatarSize
+        uid: azure-devops-extension-api.AvatarSize
+  - uid: Promise<azure-devops-extension-api.Avatar>
+    name: Avatar>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Avatar
+        fullName: Avatar
+        uid: azure-devops-extension-api.Avatar
       - name: '>'
         fullName: '>'
   - uid: Promise<azure-devops-extension-api.GraphCachePolicies>
@@ -951,6 +1071,12 @@ references:
         uid: azure-devops-extension-api.GraphSubject
       - name: '>'
         fullName: '>'
+  - uid: azure-devops-extension-api.Avatar
+    name: Avatar
+    spec.typeScript:
+      - name: Avatar
+        fullName: Avatar
+        uid: azure-devops-extension-api.Avatar
   - uid: Promise<azure-devops-extension-api.GraphMembershipTraversal>
     name: GraphMembershipTraversal>
     spec.typeScript:
@@ -967,3 +1093,9 @@ references:
       - name: JsonPatchDocument
         fullName: JsonPatchDocument
         uid: azure-devops-extension-api.JsonPatchDocument
+  - uid: azure-devops-extension-api.GraphUserUpdateContext
+    name: GraphUserUpdateContext
+    spec.typeScript:
+      - name: GraphUserUpdateContext
+        fullName: GraphUserUpdateContext
+        uid: azure-devops-extension-api.GraphUserUpdateContext

@@ -27,6 +27,7 @@ items:
       - azure-devops-extension-api.RunUpdateModel.startedDate
       - azure-devops-extension-api.RunUpdateModel.state
       - azure-devops-extension-api.RunUpdateModel.substate
+      - azure-devops-extension-api.RunUpdateModel.tags
       - azure-devops-extension-api.RunUpdateModel.testEnvironmentId
       - azure-devops-extension-api.RunUpdateModel.testSettings
     langs:
@@ -360,6 +361,20 @@ items:
         type:
           - azure-devops-extension-api.TestRunSubstate
     package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.RunUpdateModel.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tags to attach with the test run.
+    syntax:
+      content: 'tags: TestTag[]'
+      return:
+        type:
+          - 'azure-devops-extension-api.TestTag[]'
+    package: azure-devops-extension-api
   - uid: azure-devops-extension-api.RunUpdateModel.testEnvironmentId
     name: testEnvironmentId
     fullName: testEnvironmentId
@@ -423,3 +438,11 @@ references:
       - name: TestRunSubstate
         fullName: TestRunSubstate
         uid: azure-devops-extension-api.TestRunSubstate
+  - uid: 'azure-devops-extension-api.TestTag[]'
+    name: 'TestTag[]'
+    spec.typeScript:
+      - name: TestTag
+        fullName: TestTag
+        uid: azure-devops-extension-api.TestTag
+      - name: '[]'
+        fullName: '[]'

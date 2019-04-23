@@ -3,13 +3,28 @@ items:
   - uid: azure-devops-extension-api.DockerProcess
     name: DockerProcess
     fullName: DockerProcess
-    children: []
+    children:
+      - azure-devops-extension-api.DockerProcess.target
     langs:
       - typeScript
     type: interface
     summary: ''
     extends:
       name: azure-devops-extension-api.BuildProcess
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.DockerProcess.target
+    name: target
+    fullName: target
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'target: DockerProcessTarget'
+      return:
+        type:
+          - azure-devops-extension-api.DockerProcessTarget
     package: azure-devops-extension-api
 references:
   - uid: azure-devops-extension-api.BuildProcess
@@ -18,3 +33,9 @@ references:
       - name: BuildProcess
         fullName: BuildProcess
         uid: azure-devops-extension-api.BuildProcess
+  - uid: azure-devops-extension-api.DockerProcessTarget
+    name: DockerProcessTarget
+    spec.typeScript:
+      - name: DockerProcessTarget
+        fullName: DockerProcessTarget
+        uid: azure-devops-extension-api.DockerProcessTarget

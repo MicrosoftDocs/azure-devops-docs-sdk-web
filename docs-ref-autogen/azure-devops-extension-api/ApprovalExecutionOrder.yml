@@ -4,28 +4,38 @@ items:
     name: ApprovalExecutionOrder
     fullName: ApprovalExecutionOrder
     children:
-      - azure-devops-extension-api.ApprovalExecutionOrder.AnyOrder
-      - azure-devops-extension-api.ApprovalExecutionOrder.InSequence
+      - azure-devops-extension-api.ApprovalExecutionOrder.BeforeGates
+      - azure-devops-extension-api.ApprovalExecutionOrder.AfterSuccessfulGates
+      - azure-devops-extension-api.ApprovalExecutionOrder.AfterGatesAlways
     langs:
       - typeScript
     type: enum
     summary: ''
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ApprovalExecutionOrder.AnyOrder
-    name: AnyOrder
+  - uid: azure-devops-extension-api.ApprovalExecutionOrder.BeforeGates
+    name: BeforeGates
     children: []
     langs:
       - typeScript
-    summary: Indicates that the approvers can approve in any order.
-    type: field
-    numericValue: 0
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ApprovalExecutionOrder.InSequence
-    name: InSequence
-    children: []
-    langs:
-      - typeScript
-    summary: Indicates that the approvers can approve in sequential order.
+    summary: Approvals shown before gates.
     type: field
     numericValue: 1
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ApprovalExecutionOrder.AfterSuccessfulGates
+    name: AfterSuccessfulGates
+    children: []
+    langs:
+      - typeScript
+    summary: Approvals shown after successful execution of gates.
+    type: field
+    numericValue: 2
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.ApprovalExecutionOrder.AfterGatesAlways
+    name: AfterGatesAlways
+    children: []
+    langs:
+      - typeScript
+    summary: Approvals shown always after execution of gates.
+    type: field
+    numericValue: 4
     package: azure-devops-extension-api

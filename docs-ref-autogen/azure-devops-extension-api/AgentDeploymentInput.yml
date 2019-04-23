@@ -4,6 +4,7 @@ items:
     name: AgentDeploymentInput
     fullName: AgentDeploymentInput
     children:
+      - azure-devops-extension-api.AgentDeploymentInput.agentSpecification
       - azure-devops-extension-api.AgentDeploymentInput.imageId
       - azure-devops-extension-api.AgentDeploymentInput.parallelExecution
     langs:
@@ -12,6 +13,20 @@ items:
     summary: ''
     extends:
       name: azure-devops-extension-api.DeploymentInput
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.AgentDeploymentInput.agentSpecification
+    name: agentSpecification
+    fullName: agentSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specification for an agent on which a job gets executed.
+    syntax:
+      content: 'agentSpecification: AgentSpecification'
+      return:
+        type:
+          - azure-devops-extension-api.AgentSpecification
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.AgentDeploymentInput.imageId
     name: imageId
@@ -48,6 +63,12 @@ references:
       - name: DeploymentInput
         fullName: DeploymentInput
         uid: azure-devops-extension-api.DeploymentInput
+  - uid: azure-devops-extension-api.AgentSpecification
+    name: AgentSpecification
+    spec.typeScript:
+      - name: AgentSpecification
+        fullName: AgentSpecification
+        uid: azure-devops-extension-api.AgentSpecification
   - uid: azure-devops-extension-api.ExecutionInput
     name: ExecutionInput
     spec.typeScript:

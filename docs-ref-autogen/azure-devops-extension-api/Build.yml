@@ -4,6 +4,7 @@ items:
     name: Build
     fullName: Build
     children:
+      - azure-devops-extension-api.Build.agentSpecification
       - azure-devops-extension-api.Build.buildNumber
       - azure-devops-extension-api.Build.buildNumberRevision
       - azure-devops-extension-api.Build.controller
@@ -50,6 +51,20 @@ items:
       - typeScript
     type: interface
     summary: Data representation of a build.
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.Build.agentSpecification
+    name: agentSpecification
+    fullName: agentSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The agent specification for the build.
+    syntax:
+      content: 'agentSpecification: AgentSpecification'
+      return:
+        type:
+          - azure-devops-extension-api.AgentSpecification
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.Build.buildNumber
     name: buildNumber
@@ -644,6 +659,12 @@ items:
           - 'azure-devops-extension-api.BuildRequestValidationResult[]'
     package: azure-devops-extension-api
 references:
+  - uid: azure-devops-extension-api.AgentSpecification
+    name: AgentSpecification
+    spec.typeScript:
+      - name: AgentSpecification
+        fullName: AgentSpecification
+        uid: azure-devops-extension-api.AgentSpecification
   - uid: azure-devops-extension-api.BuildController
     name: BuildController
     spec.typeScript:

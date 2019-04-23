@@ -32,10 +32,11 @@ items:
       - azure-devops-extension-api.TaskAgentJobRequest.result
       - azure-devops-extension-api.TaskAgentJobRequest.scopeId
       - azure-devops-extension-api.TaskAgentJobRequest.serviceOwner
+      - azure-devops-extension-api.TaskAgentJobRequest.statusMessage
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: A job request for an agent.
     package: azure-devops-extension-api
   - uid: azure-devops-extension-api.TaskAgentJobRequest.agentDelays
     name: agentDelays
@@ -72,7 +73,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The date/time this request was assigned.
     syntax:
       content: 'assignTime: Date'
       return:
@@ -86,7 +87,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Additional data about the request.
     syntax:
       content: 'data: [key: string]: string'
       return:
@@ -100,7 +101,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The pipeline definition associated with this request
     syntax:
       content: 'definition: TaskOrchestrationOwner'
       return:
@@ -114,7 +115,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A list of demands required to fulfill this request.
     syntax:
       content: 'demands: Demand[]'
       return:
@@ -142,7 +143,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The date/time this request was finished.
     syntax:
       content: 'finishTime: Date'
       return:
@@ -156,7 +157,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The host which triggered this request.
     syntax:
       content: 'hostId: string'
       return:
@@ -170,7 +171,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ID of the job resulting from this request.
     syntax:
       content: 'jobId: string'
       return:
@@ -184,7 +185,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Name of the job resulting from this request.
     syntax:
       content: 'jobName: string'
       return:
@@ -198,7 +199,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The deadline for the agent to renew the lock.
     syntax:
       content: 'lockedUntil: Date'
       return:
@@ -254,7 +255,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The pipeline associated with this request
     syntax:
       content: 'owner: TaskOrchestrationOwner'
       return:
@@ -282,7 +283,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Internal ID for the orchestration plan connected with this request.
     syntax:
       content: 'planId: string'
       return:
@@ -296,7 +297,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Internal detail representing the type of orchestration plan.
     syntax:
       content: 'planType: string'
       return:
@@ -310,7 +311,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The ID of the pool this request targets
     syntax:
       content: 'poolId: number'
       return:
@@ -324,7 +325,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The ID of the queue this request targets
     syntax:
       content: 'queueId: number'
       return:
@@ -338,7 +339,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The date/time this request was queued.
     syntax:
       content: 'queueTime: Date'
       return:
@@ -352,7 +353,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The date/time this request was receieved by an agent.
     syntax:
       content: 'receiveTime: Date'
       return:
@@ -366,7 +367,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: ID of the request.
     syntax:
       content: 'requestId: number'
       return:
@@ -380,7 +381,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The agent allocated for this request.
     syntax:
       content: 'reservedAgent: TaskAgentReference'
       return:
@@ -394,7 +395,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The result of this request.
     syntax:
       content: 'result: TaskResult'
       return:
@@ -408,7 +409,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Scope of the pipeline; matches the project ID.
     syntax:
       content: 'scopeId: string'
       return:
@@ -422,9 +423,23 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The service which owns this request.
     syntax:
       content: 'serviceOwner: string'
+      return:
+        type:
+          - string
+    package: azure-devops-extension-api
+  - uid: azure-devops-extension-api.TaskAgentJobRequest.statusMessage
+    name: statusMessage
+    fullName: statusMessage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'statusMessage: string'
       return:
         type:
           - string
