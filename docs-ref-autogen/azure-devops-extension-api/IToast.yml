@@ -1,96 +1,75 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IToast
-    name: IToast
-    fullName: IToast
-    children:
-      - azure-devops-extension-api.IToast.callToAction
-      - azure-devops-extension-api.IToast.duration
-      - azure-devops-extension-api.IToast.forceOverrideExisting
-      - azure-devops-extension-api.IToast.message
-      - azure-devops-extension-api.IToast.onCallToActionClick
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Toast Props with metadata to specify how it will be rendered by the
-      service
+### YamlMime:TSType
+name: IToast
+uid: azure-devops-extension-api.IToast
+package: azure-devops-extension-api
+summary: Toast Props with metadata to specify how it will be rendered by the service
+fullName: IToast
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: callToAction
+    uid: azure-devops-extension-api.IToast.callToAction
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IToast.callToAction
-    name: callToAction
-    fullName: callToAction
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Optional text for the Call to Action
-    optional: true
+    fullName: callToAction
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'callToAction?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: duration
+    uid: azure-devops-extension-api.IToast.duration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IToast.duration
-    name: duration
-    fullName: duration
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Duration in ms the toast will appear for
+    fullName: duration
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'duration: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: forceOverrideExisting
+    uid: azure-devops-extension-api.IToast.forceOverrideExisting
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IToast.forceOverrideExisting
-    name: forceOverrideExisting
-    fullName: forceOverrideExisting
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       If true, we'll immediately take down any existing toast and display this
       instead
 
       Otherwise, it adds it to an internal queue in the GlobalToast and will
       display after others in the queue
-    optional: true
+    fullName: forceOverrideExisting
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'forceOverrideExisting?: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: message
+    uid: azure-devops-extension-api.IToast.message
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IToast.message
-    name: message
-    fullName: message
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Message to display on the Toast
+    fullName: message
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'message: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: onCallToActionClick
+    uid: azure-devops-extension-api.IToast.onCallToActionClick
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IToast.onCallToActionClick
-    name: onCallToActionClick
-    fullName: onCallToActionClick
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Optional handler for when the Call to Action is clicked
-    optional: true
+    fullName: onCallToActionClick
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'onCallToActionClick?: () => void'
       return:
-        type:
-          - () => void
-    package: azure-devops-extension-api
+        type: () =&gt; void
+        description: ''

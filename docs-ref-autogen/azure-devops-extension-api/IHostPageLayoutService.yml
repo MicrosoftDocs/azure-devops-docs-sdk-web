@@ -1,104 +1,87 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IHostPageLayoutService
-    name: IHostPageLayoutService
-    fullName: IHostPageLayoutService
-    children:
-      - azure-devops-extension-api.IHostPageLayoutService.getFullScreenMode
-      - azure-devops-extension-api.IHostPageLayoutService.openCustomDialog
-      - azure-devops-extension-api.IHostPageLayoutService.openMessageDialog
-      - azure-devops-extension-api.IHostPageLayoutService.openPanel
-      - azure-devops-extension-api.IHostPageLayoutService.setFullScreenMode
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Service for interacting with the layout of the page: managing full-screen
-      mode,
+### YamlMime:TSType
+name: IHostPageLayoutService
+uid: azure-devops-extension-api.IHostPageLayoutService
+package: azure-devops-extension-api
+summary: >-
+  Service for interacting with the layout of the page: managing full-screen
+  mode,
 
-      opening dialogs and panels
+  opening dialogs and panels
+fullName: IHostPageLayoutService
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: openCustomDialog
+    uid: azure-devops-extension-api.IHostPageLayoutService.openCustomDialog
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostPageLayoutService.getFullScreenMode
-    name: getFullScreenMode()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets whether the page is currently in full screen mode
-    syntax:
-      content: function getFullScreenMode()
-      parameters: []
-      return:
-        type:
-          - Promise<boolean>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostPageLayoutService.openCustomDialog
-    name: openCustomDialog
-    fullName: openCustomDialog
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'Open a dialog in the host frame, showing custom external content'
+    fullName: openCustomDialog
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         openCustomDialog: (contentContributionId: string, options?:
         IDialogOptions<TResult>) => void
       return:
-        type:
-          - >-
-            (contentContributionId: string, options?: IDialogOptions<TResult>)
-            => void
+        type: >-
+          (contentContributionId: string, options?:
+          IDialogOptions&lt;TResult&gt;) =&gt; void
+        description: ''
+  - name: openMessageDialog
+    uid: azure-devops-extension-api.IHostPageLayoutService.openMessageDialog
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostPageLayoutService.openMessageDialog
-    name: openMessageDialog
-    fullName: openMessageDialog
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Open a dialog in the host frame, showing the specified text message, an OK
       and optional Cancel button
+    fullName: openMessageDialog
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         openMessageDialog: (message: string, options?: IMessageDialogOptions) =>
         void
       return:
-        type:
-          - '(message: string, options?: IMessageDialogOptions) => void'
+        type: '(message: string, options?: IMessageDialogOptions) =&gt; void'
+        description: ''
+  - name: openPanel
+    uid: azure-devops-extension-api.IHostPageLayoutService.openPanel
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostPageLayoutService.openPanel
-    name: openPanel
-    fullName: openPanel
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'Open a panel in the host frame, showing custom external content'
+    fullName: openPanel
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         openPanel: (contentContributionId: string, options:
         IPanelOptions<TResult>) => void
       return:
-        type:
-          - >-
-            (contentContributionId: string, options: IPanelOptions<TResult>) =>
-            void
+        type: >-
+          (contentContributionId: string, options: IPanelOptions&lt;TResult&gt;)
+          =&gt; void
+        description: ''
+methods:
+  - name: getFullScreenMode()
+    uid: azure-devops-extension-api.IHostPageLayoutService.getFullScreenMode
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostPageLayoutService.setFullScreenMode
-    name: setFullScreenMode(boolean)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: Gets whether the page is currently in full screen mode
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getFullScreenMode()
+      return:
+        type: Promise&lt;boolean&gt;
+        description: ''
+  - name: setFullScreenMode(boolean)
+    uid: azure-devops-extension-api.IHostPageLayoutService.setFullScreenMode
+    package: azure-devops-extension-api
     summary: Enter or exit full screen mode
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function setFullScreenMode(fullScreenMode: boolean)'
       parameters:
         - id: fullScreenMode
-          type:
-            - boolean
+          type: boolean
           description: |
             True to enter full-screen mode, false to exit.
-    package: azure-devops-extension-api

@@ -1,152 +1,199 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TaskAgentPool
-    name: TaskAgentPool
-    fullName: TaskAgentPool
-    children:
-      - azure-devops-extension-api.TaskAgentPool.agentCloudId
-      - azure-devops-extension-api.TaskAgentPool.autoProvision
-      - azure-devops-extension-api.TaskAgentPool.autoSize
-      - azure-devops-extension-api.TaskAgentPool.createdBy
-      - azure-devops-extension-api.TaskAgentPool.createdOn
-      - azure-devops-extension-api.TaskAgentPool.owner
-      - azure-devops-extension-api.TaskAgentPool.properties
-      - azure-devops-extension-api.TaskAgentPool.targetSize
-    langs:
-      - typeScript
-    type: interface
-    summary: An organization-level grouping of agents.
-    extends:
-      name: azure-devops-extension-api.TaskAgentPoolReference
+### YamlMime:TSType
+name: TaskAgentPool
+uid: azure-devops-extension-api.TaskAgentPool
+package: azure-devops-extension-api
+summary: An organization-level grouping of agents.
+fullName: TaskAgentPool
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: agentCloudId
+    uid: azure-devops-extension-api.TaskAgentPool.agentCloudId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentPool.agentCloudId
-    name: agentCloudId
-    fullName: agentCloudId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The ID of the associated agent cloud.
+    fullName: agentCloudId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'agentCloudId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: autoProvision
+    uid: azure-devops-extension-api.TaskAgentPool.autoProvision
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentPool.autoProvision
-    name: autoProvision
-    fullName: autoProvision
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Whether or not a queue should be automatically provisioned for each
       project collection.
+    fullName: autoProvision
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'autoProvision: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: autoSize
+    uid: azure-devops-extension-api.TaskAgentPool.autoSize
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentPool.autoSize
-    name: autoSize
-    fullName: autoSize
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Whether or not the pool should autosize itself based on the Agent Cloud
       Provider settings.
+    fullName: autoSize
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'autoSize: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: createdBy
+    uid: azure-devops-extension-api.TaskAgentPool.createdBy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentPool.createdBy
-    name: createdBy
-    fullName: createdBy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Creator of the pool. The creator of the pool is automatically added into
       the administrators group for the pool on creation.
+    fullName: createdBy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createdBy: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: createdOn
+    uid: azure-devops-extension-api.TaskAgentPool.createdOn
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentPool.createdOn
-    name: createdOn
-    fullName: createdOn
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The date/time of the pool creation.
+    fullName: createdOn
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createdOn: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.TaskAgentPool.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentPool.owner
-    name: owner
-    fullName: owner
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ''
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+  - name: isHosted
+    uid: azure-devops-extension-api.TaskAgentPool.isHosted
+    package: azure-devops-extension-api
+    summary: >-
+      Gets or sets a value indicating whether or not this pool is managed by the
+      service.
+    fullName: isHosted
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isHosted: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: isLegacy
+    uid: azure-devops-extension-api.TaskAgentPool.isLegacy
+    package: azure-devops-extension-api
+    summary: Determines whether the pool is legacy.
+    fullName: isLegacy
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isLegacy: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TaskAgentPool.name
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: owner
+    uid: azure-devops-extension-api.TaskAgentPool.owner
+    package: azure-devops-extension-api
     summary: Owner or administrator of the pool.
+    fullName: owner
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'owner: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: poolType
+    uid: azure-devops-extension-api.TaskAgentPool.poolType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentPool.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Gets or sets the type of the pool
+    fullName: poolType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'poolType: TaskAgentPoolType'
+      return:
+        type: <xref uid="azure-devops-extension-api.TaskAgentPoolType" />
+        description: ''
+  - name: properties
+    uid: azure-devops-extension-api.TaskAgentPool.properties
+    package: azure-devops-extension-api
     summary: ''
+    fullName: properties
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: scope
+    uid: azure-devops-extension-api.TaskAgentPool.scope
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentPool.targetSize
-    name: targetSize
-    fullName: targetSize
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ''
+    fullName: scope
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'scope: string'
+      return:
+        type: string
+        description: ''
+  - name: size
+    uid: azure-devops-extension-api.TaskAgentPool.size
+    package: azure-devops-extension-api
+    summary: Gets the current size of the pool.
+    fullName: size
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'size: number'
+      return:
+        type: number
+        description: ''
+  - name: targetSize
+    uid: azure-devops-extension-api.TaskAgentPool.targetSize
+    package: azure-devops-extension-api
     summary: Target parallelism.
+    fullName: targetSize
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'targetSize: number'
       return:
-        type:
-          - number
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TaskAgentPoolReference
-    name: TaskAgentPoolReference
-    spec.typeScript:
-      - name: TaskAgentPoolReference
-        fullName: TaskAgentPoolReference
-        uid: azure-devops-extension-api.TaskAgentPoolReference
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
+        type: number
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TaskAgentPoolReference" />

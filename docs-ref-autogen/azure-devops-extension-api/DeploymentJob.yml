@@ -1,56 +1,34 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.DeploymentJob
-    name: DeploymentJob
-    fullName: DeploymentJob
-    children:
-      - azure-devops-extension-api.DeploymentJob.job
-      - azure-devops-extension-api.DeploymentJob.tasks
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: DeploymentJob
+uid: azure-devops-extension-api.DeploymentJob
+package: azure-devops-extension-api
+summary: ''
+fullName: DeploymentJob
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: job
+    uid: azure-devops-extension-api.DeploymentJob.job
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentJob.job
-    name: job
-    fullName: job
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Parent task of all executed tasks.
+    fullName: job
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'job: ReleaseTask'
       return:
-        type:
-          - azure-devops-extension-api.ReleaseTask
+        type: <xref uid="azure-devops-extension-api.ReleaseTask" />
+        description: ''
+  - name: tasks
+    uid: azure-devops-extension-api.DeploymentJob.tasks
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentJob.tasks
-    name: tasks
-    fullName: tasks
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: List of  executed tasks with in job.
+    fullName: tasks
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tasks: ReleaseTask[]'
       return:
-        type:
-          - 'azure-devops-extension-api.ReleaseTask[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ReleaseTask
-    name: ReleaseTask
-    spec.typeScript:
-      - name: ReleaseTask
-        fullName: ReleaseTask
-        uid: azure-devops-extension-api.ReleaseTask
-  - uid: 'azure-devops-extension-api.ReleaseTask[]'
-    name: 'ReleaseTask[]'
-    spec.typeScript:
-      - name: ReleaseTask
-        fullName: ReleaseTask
-        uid: azure-devops-extension-api.ReleaseTask
-      - name: '[]'
-        fullName: '[]'
+        type: '<xref uid="azure-devops-extension-api.ReleaseTask" />[]'
+        description: ''

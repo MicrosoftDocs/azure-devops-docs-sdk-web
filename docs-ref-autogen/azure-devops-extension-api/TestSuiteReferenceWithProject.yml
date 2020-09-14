@@ -1,41 +1,47 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TestSuiteReferenceWithProject
-    name: TestSuiteReferenceWithProject
-    fullName: TestSuiteReferenceWithProject
-    children:
-      - azure-devops-extension-api.TestSuiteReferenceWithProject.project
-    langs:
-      - typeScript
-    type: interface
-    summary: Test Suite Reference with Project
-    extends:
-      name: azure-devops-extension-api.TestSuiteReference
+### YamlMime:TSType
+name: TestSuiteReferenceWithProject
+uid: azure-devops-extension-api.TestSuiteReferenceWithProject
+package: azure-devops-extension-api
+summary: Test Suite Reference with Project
+fullName: TestSuiteReferenceWithProject
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.TestSuiteReferenceWithProject.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuiteReferenceWithProject.project
-    name: project
+    summary: ID of the test suite.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TestSuiteReferenceWithProject.name
+    package: azure-devops-extension-api
+    summary: Name of the test suite.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: project
+    uid: azure-devops-extension-api.TestSuiteReferenceWithProject.project
+    package: azure-devops-extension-api
+    summary: Reference of destination Project
     fullName: project
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Refernce of destination Project
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
       return:
-        type:
-          - azure-devops-extension-api.TeamProjectReference
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TestSuiteReference
-    name: TestSuiteReference
-    spec.typeScript:
-      - name: TestSuiteReference
-        fullName: TestSuiteReference
-        uid: azure-devops-extension-api.TestSuiteReference
-  - uid: azure-devops-extension-api.TeamProjectReference
-    name: TeamProjectReference
-    spec.typeScript:
-      - name: TeamProjectReference
-        fullName: TeamProjectReference
-        uid: azure-devops-extension-api.TeamProjectReference
+        type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TestSuiteReference" />

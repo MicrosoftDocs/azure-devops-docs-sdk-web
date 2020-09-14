@@ -1,56 +1,97 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TestConfiguration
-    name: TestConfiguration
-    fullName: TestConfiguration
-    children:
-      - azure-devops-extension-api.TestConfiguration.id
-      - azure-devops-extension-api.TestConfiguration.project
-    langs:
-      - typeScript
-    type: interface
-    summary: Test configuration
-    extends:
-      name: azure-devops-extension-api.TestConfigurationCreateUpdateParameters
+### YamlMime:TSType
+name: TestConfiguration
+uid: azure-devops-extension-api.TestConfiguration
+package: azure-devops-extension-api
+summary: Test configuration
+fullName: TestConfiguration
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.TestConfiguration.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestConfiguration.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Description of the configuration
+    fullName: description
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        type: string
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.TestConfiguration.id
+    package: azure-devops-extension-api
     summary: Id of the configuration
+    fullName: id
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: isDefault
+    uid: azure-devops-extension-api.TestConfiguration.isDefault
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestConfiguration.project
-    name: project
-    fullName: project
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Is the configuration a default for the test plans
+    fullName: isDefault
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isDefault: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TestConfiguration.name
+    package: azure-devops-extension-api
+    summary: Name of the configuration
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: project
+    uid: azure-devops-extension-api.TestConfiguration.project
+    package: azure-devops-extension-api
     summary: Id of the test configuration variable
+    fullName: project
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
       return:
-        type:
-          - azure-devops-extension-api.TeamProjectReference
+        type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+        description: ''
+  - name: state
+    uid: azure-devops-extension-api.TestConfiguration.state
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TestConfigurationCreateUpdateParameters
-    name: TestConfigurationCreateUpdateParameters
-    spec.typeScript:
-      - name: TestConfigurationCreateUpdateParameters
-        fullName: TestConfigurationCreateUpdateParameters
-        uid: azure-devops-extension-api.TestConfigurationCreateUpdateParameters
-  - uid: azure-devops-extension-api.TeamProjectReference
-    name: TeamProjectReference
-    spec.typeScript:
-      - name: TeamProjectReference
-        fullName: TeamProjectReference
-        uid: azure-devops-extension-api.TeamProjectReference
+    summary: State of the configuration
+    fullName: state
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'state: TestConfigurationState'
+      return:
+        type: <xref uid="azure-devops-extension-api.TestConfigurationState" />
+        description: ''
+  - name: values
+    uid: azure-devops-extension-api.TestConfiguration.values
+    package: azure-devops-extension-api
+    summary: 'Dictionary of Test Variable, Selected Value'
+    fullName: values
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'values: NameValuePair[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.NameValuePair" />[]'
+        description: ''
+extends: >-
+  <xref uid="azure-devops-extension-api.TestConfigurationCreateUpdateParameters"
+  />

@@ -1,20 +1,35 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BoardRowUpdate
-    name: BoardRowUpdate
-    fullName: BoardRowUpdate
-    children: []
-    langs:
-      - typeScript
-    type: interface
-    summary: Describes a row to update on a board.
-    extends:
-      name: azure-devops-extension-api.BoardRowCreate
+### YamlMime:TSType
+name: BoardRowUpdate
+uid: azure-devops-extension-api.BoardRowUpdate
+package: azure-devops-extension-api
+summary: Describes a row to update on a board.
+fullName: BoardRowUpdate
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: name
+    uid: azure-devops-extension-api.BoardRowUpdate.name
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.BoardRowCreate
-    name: BoardRowCreate
-    spec.typeScript:
-      - name: BoardRowCreate
-        fullName: BoardRowCreate
-        uid: azure-devops-extension-api.BoardRowCreate
+    summary: Row name.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: nextRowId
+    uid: azure-devops-extension-api.BoardRowUpdate.nextRowId
+    package: azure-devops-extension-api
+    summary: 'Next row identifier or supported directive: $first or $last.'
+    fullName: nextRowId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nextRowId: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.BoardRowCreate" />

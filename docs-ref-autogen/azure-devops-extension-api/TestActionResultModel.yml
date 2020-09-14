@@ -1,106 +1,148 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TestActionResultModel
-    name: TestActionResultModel
-    fullName: TestActionResultModel
-    children:
-      - azure-devops-extension-api.TestActionResultModel.actionPath
-      - azure-devops-extension-api.TestActionResultModel.iterationId
-      - azure-devops-extension-api.TestActionResultModel.sharedStepModel
-      - azure-devops-extension-api.TestActionResultModel.stepIdentifier
-      - azure-devops-extension-api.TestActionResultModel.url
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents a test step result.
-    extends:
-      name: azure-devops-extension-api.TestResultModelBase
+### YamlMime:TSType
+name: TestActionResultModel
+uid: azure-devops-extension-api.TestActionResultModel
+package: azure-devops-extension-api
+summary: Represents a test step result.
+fullName: TestActionResultModel
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: actionPath
+    uid: azure-devops-extension-api.TestActionResultModel.actionPath
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestActionResultModel.actionPath
-    name: actionPath
-    fullName: actionPath
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Path identifier test step in test case workitem.
+    fullName: actionPath
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'actionPath: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: comment
+    uid: azure-devops-extension-api.TestActionResultModel.comment
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestActionResultModel.iterationId
-    name: iterationId
-    fullName: iterationId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Comment in result.
+    fullName: comment
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        type: string
+        description: ''
+  - name: completedDate
+    uid: azure-devops-extension-api.TestActionResultModel.completedDate
+    package: azure-devops-extension-api
+    summary: Time when execution completed.
+    fullName: completedDate
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'completedDate: Date'
+      return:
+        type: Date
+        description: ''
+  - name: durationInMs
+    uid: azure-devops-extension-api.TestActionResultModel.durationInMs
+    package: azure-devops-extension-api
+    summary: Duration of execution.
+    fullName: durationInMs
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'durationInMs: number'
+      return:
+        type: number
+        description: ''
+  - name: errorMessage
+    uid: azure-devops-extension-api.TestActionResultModel.errorMessage
+    package: azure-devops-extension-api
+    summary: Error message in result.
+    fullName: errorMessage
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        type: string
+        description: ''
+  - name: iterationId
+    uid: azure-devops-extension-api.TestActionResultModel.iterationId
+    package: azure-devops-extension-api
     summary: Iteration ID of test action result.
+    fullName: iterationId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'iterationId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: outcome
+    uid: azure-devops-extension-api.TestActionResultModel.outcome
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestActionResultModel.sharedStepModel
-    name: sharedStepModel
-    fullName: sharedStepModel
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Test outcome of result.
+    fullName: outcome
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'outcome: string'
+      return:
+        type: string
+        description: ''
+  - name: sharedStepModel
+    uid: azure-devops-extension-api.TestActionResultModel.sharedStepModel
+    package: azure-devops-extension-api
     summary: Reference to shared step workitem.
+    fullName: sharedStepModel
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sharedStepModel: SharedStepModel'
       return:
-        type:
-          - azure-devops-extension-api.SharedStepModel
+        type: <xref uid="azure-devops-extension-api.SharedStepModel" />
+        description: ''
+  - name: startedDate
+    uid: azure-devops-extension-api.TestActionResultModel.startedDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestActionResultModel.stepIdentifier
-    name: stepIdentifier
-    fullName: stepIdentifier
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Time when execution started.
+    fullName: startedDate
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'startedDate: Date'
+      return:
+        type: Date
+        description: ''
+  - name: stepIdentifier
+    uid: azure-devops-extension-api.TestActionResultModel.stepIdentifier
+    package: azure-devops-extension-api
     summary: >-
       This is step Id of test case. For shared step, it is step Id of shared
       step in test case workitem; step Id in shared step. Example: TestCase
       workitem has two steps: 1) Normal step with Id = 1 2) Shared Step with Id
       = 2. Inside shared step: a) Normal Step with Id = 1 Value for
       StepIdentifier for First step: "1" Second step: "2;1"
+    fullName: stepIdentifier
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'stepIdentifier: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.TestActionResultModel.url
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestActionResultModel.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Url of test action result.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'url: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TestResultModelBase
-    name: TestResultModelBase
-    spec.typeScript:
-      - name: TestResultModelBase
-        fullName: TestResultModelBase
-        uid: azure-devops-extension-api.TestResultModelBase
-  - uid: azure-devops-extension-api.SharedStepModel
-    name: SharedStepModel
-    spec.typeScript:
-      - name: SharedStepModel
-        fullName: SharedStepModel
-        uid: azure-devops-extension-api.SharedStepModel
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TestResultModelBase" />

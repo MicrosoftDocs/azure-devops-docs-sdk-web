@@ -1,70 +1,95 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IMessageDialogOptions
-    name: IMessageDialogOptions
-    fullName: IMessageDialogOptions
-    children:
-      - azure-devops-extension-api.IMessageDialogOptions.cancelText
-      - azure-devops-extension-api.IMessageDialogOptions.okText
-      - azure-devops-extension-api.IMessageDialogOptions.showCancel
-    langs:
-      - typeScript
-    type: interface
-    summary: Options for showing a message dialog
-    extends:
-      name: azure-devops-extension-api.IDialogOptions<boolean>
+### YamlMime:TSType
+name: IMessageDialogOptions
+uid: azure-devops-extension-api.IMessageDialogOptions
+package: azure-devops-extension-api
+summary: Options for showing a message dialog
+fullName: IMessageDialogOptions
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: cancelText
+    uid: azure-devops-extension-api.IMessageDialogOptions.cancelText
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IMessageDialogOptions.cancelText
-    name: cancelText
-    fullName: cancelText
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Custom text for the Cancel button
-    optional: true
+    fullName: cancelText
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'cancelText?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: configuration
+    uid: azure-devops-extension-api.IMessageDialogOptions.configuration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IMessageDialogOptions.okText
-    name: okText
-    fullName: okText
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Optional initial configuration for the dialog content
+    fullName: configuration
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'configuration?: any'
+      return:
+        type: any
+        description: ''
+  - name: lightDismiss
+    uid: azure-devops-extension-api.IMessageDialogOptions.lightDismiss
+    package: azure-devops-extension-api
+    summary: 'If true, clicking outside the dialog closes it'
+    fullName: lightDismiss
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lightDismiss?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: okText
+    uid: azure-devops-extension-api.IMessageDialogOptions.okText
+    package: azure-devops-extension-api
     summary: Custom text for the OK button
-    optional: true
+    fullName: okText
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'okText?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: onClose
+    uid: azure-devops-extension-api.IMessageDialogOptions.onClose
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IMessageDialogOptions.showCancel
-    name: showCancel
-    fullName: showCancel
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Callback invoked when the dialog is closed
+    fullName: onClose
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onClose?: (result: boolean | undefined) => void'
+      return:
+        type: '(result: boolean | undefined) =&gt; void'
+        description: ''
+  - name: showCancel
+    uid: azure-devops-extension-api.IMessageDialogOptions.showCancel
+    package: azure-devops-extension-api
     summary: 'If true, show the cancel button'
-    optional: true
+    fullName: showCancel
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'showCancel?: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: title
+    uid: azure-devops-extension-api.IMessageDialogOptions.title
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.IDialogOptions<boolean>
-    name: IDialogOptions<boolean>
-    spec.typeScript:
-      - name: IDialogOptions
-        fullName: IDialogOptions
-        uid: azure-devops-extension-api.IDialogOptions
-      - name: <boolean>
-        fullName: <boolean>
+    summary: Dialog title
+    fullName: title
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'title?: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.IDialogOptions" />&lt;boolean&gt;

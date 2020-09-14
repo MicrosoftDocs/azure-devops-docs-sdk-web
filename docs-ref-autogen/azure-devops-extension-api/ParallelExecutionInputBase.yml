@@ -1,50 +1,48 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ParallelExecutionInputBase
-    name: ParallelExecutionInputBase
-    fullName: ParallelExecutionInputBase
-    children:
-      - azure-devops-extension-api.ParallelExecutionInputBase.continueOnError
-      - azure-devops-extension-api.ParallelExecutionInputBase.maxNumberOfAgents
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.ExecutionInput
+### YamlMime:TSType
+name: ParallelExecutionInputBase
+uid: azure-devops-extension-api.ParallelExecutionInputBase
+package: azure-devops-extension-api
+summary: ''
+fullName: ParallelExecutionInputBase
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: continueOnError
+    uid: azure-devops-extension-api.ParallelExecutionInputBase.continueOnError
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ParallelExecutionInputBase.continueOnError
-    name: continueOnError
-    fullName: continueOnError
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Indicate whether continue execution of deployment on error or not.
+    fullName: continueOnError
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'continueOnError: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: maxNumberOfAgents
+    uid: azure-devops-extension-api.ParallelExecutionInputBase.maxNumberOfAgents
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ParallelExecutionInputBase.maxNumberOfAgents
-    name: maxNumberOfAgents
-    fullName: maxNumberOfAgents
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Maximum number of agents used while parallel execution.
+    fullName: maxNumberOfAgents
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'maxNumberOfAgents: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: parallelExecutionType
+    uid: >-
+      azure-devops-extension-api.ParallelExecutionInputBase.parallelExecutionType
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ExecutionInput
-    name: ExecutionInput
-    spec.typeScript:
-      - name: ExecutionInput
-        fullName: ExecutionInput
-        uid: azure-devops-extension-api.ExecutionInput
+    summary: 'Parallel execution type, for example MultiConfiguration or MultiMachine.'
+    fullName: parallelExecutionType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'parallelExecutionType: ParallelExecutionTypes'
+      return:
+        type: <xref uid="azure-devops-extension-api.ParallelExecutionTypes" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.ExecutionInput" />

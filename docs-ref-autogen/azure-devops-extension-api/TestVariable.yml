@@ -1,56 +1,71 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TestVariable
-    name: TestVariable
-    fullName: TestVariable
-    children:
-      - azure-devops-extension-api.TestVariable.id
-      - azure-devops-extension-api.TestVariable.project
-    langs:
-      - typeScript
-    type: interface
-    summary: Test Variable
-    extends:
-      name: azure-devops-extension-api.TestVariableCreateUpdateParameters
+### YamlMime:TSType
+name: TestVariable
+uid: azure-devops-extension-api.TestVariable
+package: azure-devops-extension-api
+summary: Test Variable
+fullName: TestVariable
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.TestVariable.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestVariable.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Description of the test variable
+    fullName: description
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        type: string
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.TestVariable.id
+    package: azure-devops-extension-api
     summary: Id of the test variable
+    fullName: id
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TestVariable.name
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestVariable.project
-    name: project
-    fullName: project
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Name of the test variable
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: project
+    uid: azure-devops-extension-api.TestVariable.project
+    package: azure-devops-extension-api
     summary: Id of the test variable
+    fullName: project
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
       return:
-        type:
-          - azure-devops-extension-api.TeamProjectReference
+        type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+        description: ''
+  - name: values
+    uid: azure-devops-extension-api.TestVariable.values
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TestVariableCreateUpdateParameters
-    name: TestVariableCreateUpdateParameters
-    spec.typeScript:
-      - name: TestVariableCreateUpdateParameters
-        fullName: TestVariableCreateUpdateParameters
-        uid: azure-devops-extension-api.TestVariableCreateUpdateParameters
-  - uid: azure-devops-extension-api.TeamProjectReference
-    name: TeamProjectReference
-    spec.typeScript:
-      - name: TeamProjectReference
-        fullName: TeamProjectReference
-        uid: azure-devops-extension-api.TeamProjectReference
+    summary: List of allowed values
+    fullName: values
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'values: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TestVariableCreateUpdateParameters" />

@@ -1,0 +1,48 @@
+### YamlMime:TSType
+name: ProjectRetentionSetting
+uid: azure-devops-extension-api.ProjectRetentionSetting
+package: azure-devops-extension-api
+summary: Contains the settings for the retention rules.
+fullName: ProjectRetentionSetting
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: purgeArtifacts
+    uid: azure-devops-extension-api.ProjectRetentionSetting.purgeArtifacts
+    package: azure-devops-extension-api
+    summary: >-
+      The rules for artifact retention. Artifacts can not live longer than a
+      run, so will be overridden by a shorter run purge setting.
+    fullName: purgeArtifacts
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'purgeArtifacts: RetentionSetting'
+      return:
+        type: <xref uid="azure-devops-extension-api.RetentionSetting" />
+        description: ''
+  - name: purgePullRequestRuns
+    uid: azure-devops-extension-api.ProjectRetentionSetting.purgePullRequestRuns
+    package: azure-devops-extension-api
+    summary: The rules for pull request pipeline run retention.
+    fullName: purgePullRequestRuns
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'purgePullRequestRuns: RetentionSetting'
+      return:
+        type: <xref uid="azure-devops-extension-api.RetentionSetting" />
+        description: ''
+  - name: purgeRuns
+    uid: azure-devops-extension-api.ProjectRetentionSetting.purgeRuns
+    package: azure-devops-extension-api
+    summary: The rules for pipeline run retention.
+    fullName: purgeRuns
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'purgeRuns: RetentionSetting'
+      return:
+        type: <xref uid="azure-devops-extension-api.RetentionSetting" />
+        description: ''

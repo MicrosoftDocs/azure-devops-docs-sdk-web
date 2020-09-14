@@ -1,0 +1,48 @@
+### YamlMime:TSType
+name: GraphSubjectQuery
+uid: azure-devops-extension-api.GraphSubjectQuery
+package: azure-devops-extension-api
+summary: Subject to search using the Graph API
+fullName: GraphSubjectQuery
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: query
+    uid: azure-devops-extension-api.GraphSubjectQuery.query
+    package: azure-devops-extension-api
+    summary: Search term to search for Azure Devops users or/and groups
+    fullName: query
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'query: string'
+      return:
+        type: string
+        description: ''
+  - name: scopeDescriptor
+    uid: azure-devops-extension-api.GraphSubjectQuery.scopeDescriptor
+    package: azure-devops-extension-api
+    summary: >-
+      Optional parameter. Specify a non-default scope (collection, project) to
+      search for users or groups within the scope.
+    fullName: scopeDescriptor
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'scopeDescriptor: string'
+      return:
+        type: string
+        description: ''
+  - name: subjectKind
+    uid: azure-devops-extension-api.GraphSubjectQuery.subjectKind
+    package: azure-devops-extension-api
+    summary: '"User" or "Group" can be specified, both or either'
+    fullName: subjectKind
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subjectKind: string[]'
+      return:
+        type: 'string[]'
+        description: ''

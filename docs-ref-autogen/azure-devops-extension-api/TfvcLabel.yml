@@ -1,43 +1,107 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TfvcLabel
-    name: TfvcLabel
-    fullName: TfvcLabel
-    children:
-      - azure-devops-extension-api.TfvcLabel.items
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.TfvcLabelRef
+### YamlMime:TSType
+name: TfvcLabel
+uid: azure-devops-extension-api.TfvcLabel
+package: azure-devops-extension-api
+summary: Metadata for a label.
+fullName: TfvcLabel
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.TfvcLabel.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcLabel.items
-    name: items
+    summary: Label description.
+    fullName: description
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        type: string
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.TfvcLabel.id
+    package: azure-devops-extension-api
+    summary: Label Id.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+  - name: items
+    uid: azure-devops-extension-api.TfvcLabel.items
+    package: azure-devops-extension-api
+    summary: List of items.
     fullName: items
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'items: TfvcItem[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TfvcItem[]'
+        type: '<xref uid="azure-devops-extension-api.TfvcItem" />[]'
+        description: ''
+  - name: labelScope
+    uid: azure-devops-extension-api.TfvcLabel.labelScope
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TfvcLabelRef
-    name: TfvcLabelRef
-    spec.typeScript:
-      - name: TfvcLabelRef
-        fullName: TfvcLabelRef
-        uid: azure-devops-extension-api.TfvcLabelRef
-  - uid: 'azure-devops-extension-api.TfvcItem[]'
-    name: 'TfvcItem[]'
-    spec.typeScript:
-      - name: TfvcItem
-        fullName: TfvcItem
-        uid: azure-devops-extension-api.TfvcItem
-      - name: '[]'
-        fullName: '[]'
+    summary: Label scope.
+    fullName: labelScope
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'labelScope: string'
+      return:
+        type: string
+        description: ''
+  - name: modifiedDate
+    uid: azure-devops-extension-api.TfvcLabel.modifiedDate
+    package: azure-devops-extension-api
+    summary: Last modified datetime for the label.
+    fullName: modifiedDate
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'modifiedDate: Date'
+      return:
+        type: Date
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TfvcLabel.name
+    package: azure-devops-extension-api
+    summary: Label name.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: owner
+    uid: azure-devops-extension-api.TfvcLabel.owner
+    package: azure-devops-extension-api
+    summary: Label owner.
+    fullName: owner
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'owner: IdentityRef'
+      return:
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.TfvcLabel.url
+    package: azure-devops-extension-api
+    summary: Label Url.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TfvcLabelRef" />

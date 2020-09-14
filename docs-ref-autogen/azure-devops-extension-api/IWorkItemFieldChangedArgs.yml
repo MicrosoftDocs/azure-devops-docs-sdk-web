@@ -1,37 +1,37 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IWorkItemFieldChangedArgs
-    name: IWorkItemFieldChangedArgs
-    fullName: IWorkItemFieldChangedArgs
-    children:
-      - azure-devops-extension-api.IWorkItemFieldChangedArgs.changedFields
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Interface defining the arguments for the 'onFieldChanged' notification
-      sent by the ActiveWorkItemService
-    extends:
-      name: azure-devops-extension-api.IWorkItemChangedArgs
+### YamlMime:TSType
+name: IWorkItemFieldChangedArgs
+uid: azure-devops-extension-api.IWorkItemFieldChangedArgs
+package: azure-devops-extension-api
+summary: >-
+  Interface defining the arguments for the 'onFieldChanged' notification sent by
+  the ActiveWorkItemService
+fullName: IWorkItemFieldChangedArgs
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: changedFields
+    uid: azure-devops-extension-api.IWorkItemFieldChangedArgs.changedFields
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFieldChangedArgs.changedFields
-    name: changedFields
-    fullName: changedFields
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Set of fields that have been changed.  'key' is the field reference name.
+    fullName: changedFields
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'changedFields: [key: string]: any'
       return:
-        type:
-          - '[key: string]: any'
+        type: '[key: string]\: any'
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.IWorkItemFieldChangedArgs.id
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.IWorkItemChangedArgs
-    name: IWorkItemChangedArgs
-    spec.typeScript:
-      - name: IWorkItemChangedArgs
-        fullName: IWorkItemChangedArgs
-        uid: azure-devops-extension-api.IWorkItemChangedArgs
+    summary: Id of the work item.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+extends: <xref uid="azure-devops-extension-api.IWorkItemChangedArgs" />

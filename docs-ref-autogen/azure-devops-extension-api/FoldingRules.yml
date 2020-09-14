@@ -1,0 +1,44 @@
+### YamlMime:TSType
+name: FoldingRules
+uid: azure-devops-extension-api.FoldingRules
+package: azure-devops-extension-api
+summary: Describes folding rules for a language.
+fullName: FoldingRules
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: markers
+    uid: azure-devops-extension-api.FoldingRules.markers
+    package: azure-devops-extension-api
+    summary: Region markers used by the language.
+    fullName: markers
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'markers?: FoldingMarkers'
+      return:
+        type: <xref uid="azure-devops-extension-api.FoldingMarkers" />
+        description: ''
+  - name: offSide
+    uid: azure-devops-extension-api.FoldingRules.offSide
+    package: azure-devops-extension-api
+    summary: >-
+      Used by the indentation based strategy to decide wheter empty lines belong
+      to the previous or the next block.
+
+      A language adheres to the off-side rule if blocks in that language are
+      expressed by their indentation.
+
+      See [wikipedia](https://en.wikipedia.org/wiki/Off-side_rule) for more
+      information.
+
+      If not set, `false` is used and empty lines belong to the previous block.
+    fullName: offSide
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'offSide?: boolean'
+      return:
+        type: boolean
+        description: ''

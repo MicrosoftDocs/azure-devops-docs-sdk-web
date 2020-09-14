@@ -1,43 +1,59 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.UpdateBoardItemList
-    name: UpdateBoardItemList
-    fullName: UpdateBoardItemList
-    children:
-      - azure-devops-extension-api.UpdateBoardItemList.items
-    langs:
-      - typeScript
-    type: interface
-    summary: List of items to update in the board.
-    extends:
-      name: azure-devops-extension-api.UpdateBoardItem
+### YamlMime:TSType
+name: UpdateBoardItemList
+uid: azure-devops-extension-api.UpdateBoardItemList
+package: azure-devops-extension-api
+summary: List of items to update in the board.
+fullName: UpdateBoardItemList
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: columnId
+    uid: azure-devops-extension-api.UpdateBoardItemList.columnId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.UpdateBoardItemList.items
-    name: items
-    fullName: items
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Board column identifier.
+    fullName: columnId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'columnId: string'
+      return:
+        type: string
+        description: ''
+  - name: items
+    uid: azure-devops-extension-api.UpdateBoardItemList.items
+    package: azure-devops-extension-api
     summary: List of items by id and etag.
+    fullName: items
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'items: BoardItemIdAndEtag[]'
       return:
-        type:
-          - 'azure-devops-extension-api.BoardItemIdAndEtag[]'
+        type: '<xref uid="azure-devops-extension-api.BoardItemIdAndEtag" />[]'
+        description: ''
+  - name: nextId
+    uid: azure-devops-extension-api.UpdateBoardItemList.nextId
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.UpdateBoardItem
-    name: UpdateBoardItem
-    spec.typeScript:
-      - name: UpdateBoardItem
-        fullName: UpdateBoardItem
-        uid: azure-devops-extension-api.UpdateBoardItem
-  - uid: 'azure-devops-extension-api.BoardItemIdAndEtag[]'
-    name: 'BoardItemIdAndEtag[]'
-    spec.typeScript:
-      - name: BoardItemIdAndEtag
-        fullName: BoardItemIdAndEtag
-        uid: azure-devops-extension-api.BoardItemIdAndEtag
-      - name: '[]'
-        fullName: '[]'
+    summary: 'Next board item id or supported directive: $first or $last.'
+    fullName: nextId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nextId: string'
+      return:
+        type: string
+        description: ''
+  - name: rowId
+    uid: azure-devops-extension-api.UpdateBoardItemList.rowId
+    package: azure-devops-extension-api
+    summary: Board row identifier.
+    fullName: rowId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rowId: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.UpdateBoardItem" />

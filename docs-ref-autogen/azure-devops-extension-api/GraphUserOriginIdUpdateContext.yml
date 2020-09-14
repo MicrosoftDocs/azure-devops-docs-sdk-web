@@ -1,43 +1,43 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GraphUserOriginIdUpdateContext
-    name: GraphUserOriginIdUpdateContext
-    fullName: GraphUserOriginIdUpdateContext
-    children:
-      - azure-devops-extension-api.GraphUserOriginIdUpdateContext.originId
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Use this type to update an existing user using the OriginID as a reference
-      to an existing user from an external AD or AAD backed provider. This is
-      the subset of GraphUser fields required for creation of a GraphUser for
-      the AD and AAD use case when looking up the user by its unique ID in the
-      backing provider.
-    extends:
-      name: azure-devops-extension-api.GraphUserUpdateContext
+### YamlMime:TSType
+name: GraphUserOriginIdUpdateContext
+uid: azure-devops-extension-api.GraphUserOriginIdUpdateContext
+package: azure-devops-extension-api
+summary: >-
+  Use this type to update an existing user using the OriginID as a reference to
+  an existing user from an external AD or AAD backed provider. This is the
+  subset of GraphUser fields required for creation of a GraphUser for the AD and
+  AAD use case when looking up the user by its unique ID in the backing
+  provider.
+fullName: GraphUserOriginIdUpdateContext
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: originId
+    uid: azure-devops-extension-api.GraphUserOriginIdUpdateContext.originId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphUserOriginIdUpdateContext.originId
-    name: originId
-    fullName: originId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       This should be the object id or sid of the user from the source AD or AAD
       provider. Example: d47d025a-ce2f-4a79-8618-e8862ade30dd Azure Devops will
       communicate with the source provider to fill all other fields on creation.
+    fullName: originId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'originId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: storageKey
+    uid: azure-devops-extension-api.GraphUserOriginIdUpdateContext.storageKey
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GraphUserUpdateContext
-    name: GraphUserUpdateContext
-    spec.typeScript:
-      - name: GraphUserUpdateContext
-        fullName: GraphUserUpdateContext
-        uid: azure-devops-extension-api.GraphUserUpdateContext
+    summary: Storage key should not be specified in case of updating user
+    fullName: storageKey
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'storageKey: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.GraphUserUpdateContext" />

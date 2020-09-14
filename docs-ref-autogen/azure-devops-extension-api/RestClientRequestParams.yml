@@ -1,48 +1,30 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.RestClientRequestParams
-    name: RestClientRequestParams
-    fullName: RestClientRequestParams
-    children:
-      - azure-devops-extension-api.RestClientRequestParams.apiVersion
-      - azure-devops-extension-api.RestClientRequestParams.body
-      - azure-devops-extension-api.RestClientRequestParams.command
-      - azure-devops-extension-api.RestClientRequestParams.customHeaders
-      - azure-devops-extension-api.RestClientRequestParams.httpResponseType
-      - azure-devops-extension-api.RestClientRequestParams.isRawData
-      - azure-devops-extension-api.RestClientRequestParams.method
-      - azure-devops-extension-api.RestClientRequestParams.queryParams
-      - azure-devops-extension-api.RestClientRequestParams.returnRawResponse
-      - azure-devops-extension-api.RestClientRequestParams.routeTemplate
-      - azure-devops-extension-api.RestClientRequestParams.routeValues
-    langs:
-      - typeScript
-    type: interface
-    summary: Parameters for sending a WebApi request
+### YamlMime:TSType
+name: RestClientRequestParams
+uid: azure-devops-extension-api.RestClientRequestParams
+package: azure-devops-extension-api
+summary: Parameters for sending a WebApi request
+fullName: RestClientRequestParams
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: apiVersion
+    uid: azure-devops-extension-api.RestClientRequestParams.apiVersion
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.apiVersion
-    name: apiVersion
-    fullName: apiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The api version string to send in the request (e.g. "1.0" or
       "2.0-preview.2")
+    fullName: apiVersion
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'apiVersion: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: body
+    uid: azure-devops-extension-api.RestClientRequestParams.body
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.body
-    name: body
-    fullName: body
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Data to post. In this case of a GET, this indicates query parameters.
 
@@ -50,52 +32,43 @@ items:
       serialized
 
       into a JSON string unless isRawData is set to true).
-    optional: true
+    fullName: body
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'body?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: command
+    uid: azure-devops-extension-api.RestClientRequestParams.command
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.command
-    name: command
-    fullName: command
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Current command for activity logging. This will override the RestClient's
       base option.
-    optional: true
+    fullName: command
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'command?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: customHeaders
+    uid: azure-devops-extension-api.RestClientRequestParams.customHeaders
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.customHeaders
-    name: customHeaders
-    fullName: customHeaders
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Allows the caller to specify custom request headers.
-    optional: true
+    fullName: customHeaders
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'customHeaders?: [key: string]: any'
       return:
-        type:
-          - '[key: string]: any'
+        type: '[key: string]\: any'
+        description: ''
+  - name: httpResponseType
+    uid: azure-devops-extension-api.RestClientRequestParams.httpResponseType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.httpResponseType
-    name: httpResponseType
-    fullName: httpResponseType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The http response (Accept) type. This is "json" (corresponds to
       application/json Accept header)
@@ -104,20 +77,17 @@ items:
       "zip", or "binary" or their accept
 
       header equivalents (e.g. application/zip).
-    optional: true
+    fullName: httpResponseType
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'httpResponseType?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: isRawData
+    uid: azure-devops-extension-api.RestClientRequestParams.isRawData
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.isRawData
-    name: isRawData
-    fullName: isRawData
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       If true, this indicates that no processing should be done on the 'data'
       object
@@ -126,35 +96,29 @@ items:
       when posting
 
       an HTML5 File object.
-    optional: true
+    fullName: isRawData
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isRawData?: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: method
+    uid: azure-devops-extension-api.RestClientRequestParams.method
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.method
-    name: method
-    fullName: method
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: HTTP verb (GET by default if not specified)
-    optional: true
+    fullName: method
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'method?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: queryParams
+    uid: azure-devops-extension-api.RestClientRequestParams.queryParams
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.queryParams
-    name: queryParams
-    fullName: queryParams
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Query parameters to add to the url. In the case of a GET, query parameters
       can
@@ -165,62 +129,55 @@ items:
 
       parameters to add to the query string of the url (not included in the post
       body).
-    optional: true
+    fullName: queryParams
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queryParams?: [key: string]: any'
       return:
-        type:
-          - '[key: string]: any'
+        type: '[key: string]\: any'
+        description: ''
+  - name: returnRawResponse
+    uid: azure-devops-extension-api.RestClientRequestParams.returnRawResponse
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.returnRawResponse
-    name: returnRawResponse
-    fullName: returnRawResponse
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       If true, indicates that the raw Response should be returned in the
       request's resulting promise
 
       rather than deserializing the response (the default).
-    optional: true
+    fullName: returnRawResponse
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'returnRawResponse?: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: routeTemplate
+    uid: azure-devops-extension-api.RestClientRequestParams.routeTemplate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.routeTemplate
-    name: routeTemplate
-    fullName: routeTemplate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Route template that is used to form the request path. If routeTemplate is
       NOT specified, then locationId
 
       is used to lookup the template via an OPTIONS request.
+    fullName: routeTemplate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'routeTemplate: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: routeValues
+    uid: azure-devops-extension-api.RestClientRequestParams.routeValues
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RestClientRequestParams.routeValues
-    name: routeValues
-    fullName: routeValues
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Dictionary of route template replacement values
-    optional: true
+    fullName: routeValues
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'routeValues?: [key: string]: any'
       return:
-        type:
-          - '[key: string]: any'
-    package: azure-devops-extension-api
+        type: '[key: string]\: any'
+        description: ''

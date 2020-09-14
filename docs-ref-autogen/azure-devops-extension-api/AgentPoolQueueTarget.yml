@@ -1,125 +1,86 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.AgentPoolQueueTarget
-    name: AgentPoolQueueTarget
-    fullName: AgentPoolQueueTarget
-    children:
-      - azure-devops-extension-api.AgentPoolQueueTarget.agentSpecification
-      - >-
-        azure-devops-extension-api.AgentPoolQueueTarget.allowScriptsAuthAccessOption
-      - azure-devops-extension-api.AgentPoolQueueTarget.demands
-      - azure-devops-extension-api.AgentPoolQueueTarget.executionOptions
-      - azure-devops-extension-api.AgentPoolQueueTarget.queue
-    langs:
-      - typeScript
-    type: interface
-    summary: Describes how a phase should run against an agent queue.
-    extends:
-      name: azure-devops-extension-api.PhaseTarget
+### YamlMime:TSType
+name: AgentPoolQueueTarget
+uid: azure-devops-extension-api.AgentPoolQueueTarget
+package: azure-devops-extension-api
+summary: Describes how a phase should run against an agent queue.
+fullName: AgentPoolQueueTarget
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: agentSpecification
+    uid: azure-devops-extension-api.AgentPoolQueueTarget.agentSpecification
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AgentPoolQueueTarget.agentSpecification
-    name: agentSpecification
-    fullName: agentSpecification
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Agent specification of the target.
+    fullName: agentSpecification
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'agentSpecification: AgentSpecification'
       return:
-        type:
-          - azure-devops-extension-api.AgentSpecification
-    package: azure-devops-extension-api
-  - uid: >-
+        type: <xref uid="azure-devops-extension-api.AgentSpecification" />
+        description: ''
+  - name: allowScriptsAuthAccessOption
+    uid: >-
       azure-devops-extension-api.AgentPoolQueueTarget.allowScriptsAuthAccessOption
-    name: allowScriptsAuthAccessOption
-    fullName: allowScriptsAuthAccessOption
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       Enables scripts and other processes launched while executing phase to
       access the OAuth token
+    fullName: allowScriptsAuthAccessOption
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'allowScriptsAuthAccessOption: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: demands
+    uid: azure-devops-extension-api.AgentPoolQueueTarget.demands
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AgentPoolQueueTarget.demands
-    name: demands
-    fullName: demands
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: demands
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'demands: Demand[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Demand[]'
+        type: '<xref uid="azure-devops-extension-api.Demand" />[]'
+        description: ''
+  - name: executionOptions
+    uid: azure-devops-extension-api.AgentPoolQueueTarget.executionOptions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AgentPoolQueueTarget.executionOptions
-    name: executionOptions
-    fullName: executionOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The execution options.
+    fullName: executionOptions
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'executionOptions: AgentTargetExecutionOptions'
       return:
-        type:
-          - azure-devops-extension-api.AgentTargetExecutionOptions
+        type: <xref uid="azure-devops-extension-api.AgentTargetExecutionOptions" />
+        description: ''
+  - name: queue
+    uid: azure-devops-extension-api.AgentPoolQueueTarget.queue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AgentPoolQueueTarget.queue
-    name: queue
-    fullName: queue
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The queue.
+    fullName: queue
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queue: AgentPoolQueue'
       return:
-        type:
-          - azure-devops-extension-api.AgentPoolQueue
+        type: <xref uid="azure-devops-extension-api.AgentPoolQueue" />
+        description: ''
+  - name: type
+    uid: azure-devops-extension-api.AgentPoolQueueTarget.type
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.PhaseTarget
-    name: PhaseTarget
-    spec.typeScript:
-      - name: PhaseTarget
-        fullName: PhaseTarget
-        uid: azure-devops-extension-api.PhaseTarget
-  - uid: azure-devops-extension-api.AgentSpecification
-    name: AgentSpecification
-    spec.typeScript:
-      - name: AgentSpecification
-        fullName: AgentSpecification
-        uid: azure-devops-extension-api.AgentSpecification
-  - uid: 'azure-devops-extension-api.Demand[]'
-    name: 'Demand[]'
-    spec.typeScript:
-      - name: Demand
-        fullName: Demand
-        uid: azure-devops-extension-api.Demand
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.AgentTargetExecutionOptions
-    name: AgentTargetExecutionOptions
-    spec.typeScript:
-      - name: AgentTargetExecutionOptions
-        fullName: AgentTargetExecutionOptions
-        uid: azure-devops-extension-api.AgentTargetExecutionOptions
-  - uid: azure-devops-extension-api.AgentPoolQueue
-    name: AgentPoolQueue
-    spec.typeScript:
-      - name: AgentPoolQueue
-        fullName: AgentPoolQueue
-        uid: azure-devops-extension-api.AgentPoolQueue
+    summary: The type of the target.
+    fullName: type
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type: number'
+      return:
+        type: number
+        description: ''
+extends: <xref uid="azure-devops-extension-api.PhaseTarget" />

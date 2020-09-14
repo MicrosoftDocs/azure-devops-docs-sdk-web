@@ -1,66 +1,47 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.CapacityContractBase
-    name: CapacityContractBase
-    fullName: CapacityContractBase
-    children:
-      - azure-devops-extension-api.CapacityContractBase.activities
-      - azure-devops-extension-api.CapacityContractBase.daysOff
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.TeamSettingsDataContractBase
+### YamlMime:TSType
+name: CapacityContractBase
+uid: azure-devops-extension-api.CapacityContractBase
+package: azure-devops-extension-api
+summary: ''
+fullName: CapacityContractBase
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: activities
+    uid: azure-devops-extension-api.CapacityContractBase.activities
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CapacityContractBase.activities
-    name: activities
-    fullName: activities
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Collection of capacities associated with the team member
+    fullName: activities
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'activities: Activity[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Activity[]'
+        type: '<xref uid="azure-devops-extension-api.Activity" />[]'
+        description: ''
+  - name: daysOff
+    uid: azure-devops-extension-api.CapacityContractBase.daysOff
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CapacityContractBase.daysOff
-    name: daysOff
-    fullName: daysOff
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The days off associated with the team member
+    fullName: daysOff
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'daysOff: DateRange[]'
       return:
-        type:
-          - 'azure-devops-extension-api.DateRange[]'
+        type: '<xref uid="azure-devops-extension-api.DateRange" />[]'
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.CapacityContractBase.url
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TeamSettingsDataContractBase
-    name: TeamSettingsDataContractBase
-    spec.typeScript:
-      - name: TeamSettingsDataContractBase
-        fullName: TeamSettingsDataContractBase
-        uid: azure-devops-extension-api.TeamSettingsDataContractBase
-  - uid: 'azure-devops-extension-api.Activity[]'
-    name: 'Activity[]'
-    spec.typeScript:
-      - name: Activity
-        fullName: Activity
-        uid: azure-devops-extension-api.Activity
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-devops-extension-api.DateRange[]'
-    name: 'DateRange[]'
-    spec.typeScript:
-      - name: DateRange
-        fullName: DateRange
-        uid: azure-devops-extension-api.DateRange
-      - name: '[]'
-        fullName: '[]'
+    summary: Full http link to the resource
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TeamSettingsDataContractBase" />

@@ -1,50 +1,83 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.DeploymentMachineChangedData
-    name: DeploymentMachineChangedData
-    fullName: DeploymentMachineChangedData
-    children:
-      - azure-devops-extension-api.DeploymentMachineChangedData.addedTags
-      - azure-devops-extension-api.DeploymentMachineChangedData.deletedTags
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.DeploymentMachine
+### YamlMime:TSType
+name: DeploymentMachineChangedData
+uid: azure-devops-extension-api.DeploymentMachineChangedData
+package: azure-devops-extension-api
+summary: ''
+fullName: DeploymentMachineChangedData
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: addedTags
+    uid: azure-devops-extension-api.DeploymentMachineChangedData.addedTags
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentMachineChangedData.addedTags
-    name: addedTags
-    fullName: addedTags
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: addedTags
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'addedTags: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: agent
+    uid: azure-devops-extension-api.DeploymentMachineChangedData.agent
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentMachineChangedData.deletedTags
-    name: deletedTags
-    fullName: deletedTags
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Deployment agent.
+    fullName: agent
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'agent: TaskAgent'
+      return:
+        type: <xref uid="azure-devops-extension-api.TaskAgent" />
+        description: ''
+  - name: deletedTags
+    uid: azure-devops-extension-api.DeploymentMachineChangedData.deletedTags
+    package: azure-devops-extension-api
     summary: ''
+    fullName: deletedTags
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deletedTags: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.DeploymentMachineChangedData.id
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.DeploymentMachine
-    name: DeploymentMachine
-    spec.typeScript:
-      - name: DeploymentMachine
-        fullName: DeploymentMachine
-        uid: azure-devops-extension-api.DeploymentMachine
+    summary: Deployment target Identifier.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+  - name: properties
+    uid: azure-devops-extension-api.DeploymentMachineChangedData.properties
+    package: azure-devops-extension-api
+    summary: Properties of the deployment target.
+    fullName: properties
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'properties: any'
+      return:
+        type: any
+        description: ''
+  - name: tags
+    uid: azure-devops-extension-api.DeploymentMachineChangedData.tags
+    package: azure-devops-extension-api
+    summary: Tags of the deployment target.
+    fullName: tags
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tags: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.DeploymentMachine" />

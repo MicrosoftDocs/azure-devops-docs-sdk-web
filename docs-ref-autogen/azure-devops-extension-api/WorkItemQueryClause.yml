@@ -1,145 +1,96 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.WorkItemQueryClause
-    name: WorkItemQueryClause
-    fullName: WorkItemQueryClause
-    children:
-      - azure-devops-extension-api.WorkItemQueryClause.clauses
-      - azure-devops-extension-api.WorkItemQueryClause.field
-      - azure-devops-extension-api.WorkItemQueryClause.fieldValue
-      - azure-devops-extension-api.WorkItemQueryClause.isFieldValue
-      - azure-devops-extension-api.WorkItemQueryClause.logicalOperator
-      - azure-devops-extension-api.WorkItemQueryClause.operator
-      - azure-devops-extension-api.WorkItemQueryClause.value
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Represents a clause in a work item query. This shows the structure of a
-      work item query.
+### YamlMime:TSType
+name: WorkItemQueryClause
+uid: azure-devops-extension-api.WorkItemQueryClause
+package: azure-devops-extension-api
+summary: >-
+  Represents a clause in a work item query. This shows the structure of a work
+  item query.
+fullName: WorkItemQueryClause
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: clauses
+    uid: azure-devops-extension-api.WorkItemQueryClause.clauses
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemQueryClause.clauses
-    name: clauses
-    fullName: clauses
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Child clauses if the current clause is a logical operator
+    fullName: clauses
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'clauses: WorkItemQueryClause[]'
       return:
-        type:
-          - 'azure-devops-extension-api.WorkItemQueryClause[]'
+        type: '<xref uid="azure-devops-extension-api.WorkItemQueryClause" />[]'
+        description: ''
+  - name: field
+    uid: azure-devops-extension-api.WorkItemQueryClause.field
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemQueryClause.field
-    name: field
-    fullName: field
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Field associated with condition
+    fullName: field
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'field: WorkItemFieldReference'
       return:
-        type:
-          - azure-devops-extension-api.WorkItemFieldReference
+        type: <xref uid="azure-devops-extension-api.WorkItemFieldReference" />
+        description: ''
+  - name: fieldValue
+    uid: azure-devops-extension-api.WorkItemQueryClause.fieldValue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemQueryClause.fieldValue
-    name: fieldValue
-    fullName: fieldValue
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Right side of the condition when a field to field comparison
+    fullName: fieldValue
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'fieldValue: WorkItemFieldReference'
       return:
-        type:
-          - azure-devops-extension-api.WorkItemFieldReference
+        type: <xref uid="azure-devops-extension-api.WorkItemFieldReference" />
+        description: ''
+  - name: isFieldValue
+    uid: azure-devops-extension-api.WorkItemQueryClause.isFieldValue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemQueryClause.isFieldValue
-    name: isFieldValue
-    fullName: isFieldValue
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Determines if this is a field to field comparison
+    fullName: isFieldValue
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isFieldValue: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: logicalOperator
+    uid: azure-devops-extension-api.WorkItemQueryClause.logicalOperator
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemQueryClause.logicalOperator
-    name: logicalOperator
-    fullName: logicalOperator
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Logical operator separating the condition clause
+    fullName: logicalOperator
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'logicalOperator: LogicalOperation'
       return:
-        type:
-          - azure-devops-extension-api.LogicalOperation
+        type: <xref uid="azure-devops-extension-api.LogicalOperation" />
+        description: ''
+  - name: operator
+    uid: azure-devops-extension-api.WorkItemQueryClause.operator
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemQueryClause.operator
-    name: operator
-    fullName: operator
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The field operator
+    fullName: operator
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'operator: WorkItemFieldOperation'
       return:
-        type:
-          - azure-devops-extension-api.WorkItemFieldOperation
+        type: <xref uid="azure-devops-extension-api.WorkItemFieldOperation" />
+        description: ''
+  - name: value
+    uid: azure-devops-extension-api.WorkItemQueryClause.value
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemQueryClause.value
-    name: value
-    fullName: value
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Right side of the condition when a field to value comparison
+    fullName: value
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'value: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.WorkItemQueryClause[]'
-    name: 'WorkItemQueryClause[]'
-    spec.typeScript:
-      - name: WorkItemQueryClause
-        fullName: WorkItemQueryClause
-        uid: azure-devops-extension-api.WorkItemQueryClause
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.WorkItemFieldReference
-    name: WorkItemFieldReference
-    spec.typeScript:
-      - name: WorkItemFieldReference
-        fullName: WorkItemFieldReference
-        uid: azure-devops-extension-api.WorkItemFieldReference
-  - uid: azure-devops-extension-api.LogicalOperation
-    name: LogicalOperation
-    spec.typeScript:
-      - name: LogicalOperation
-        fullName: LogicalOperation
-        uid: azure-devops-extension-api.LogicalOperation
-  - uid: azure-devops-extension-api.WorkItemFieldOperation
-    name: WorkItemFieldOperation
-    spec.typeScript:
-      - name: WorkItemFieldOperation
-        fullName: WorkItemFieldOperation
-        uid: azure-devops-extension-api.WorkItemFieldOperation
+        type: string
+        description: ''

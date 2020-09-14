@@ -1,108 +1,175 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GraphScope
-    name: GraphScope
-    fullName: GraphScope
-    children:
-      - azure-devops-extension-api.GraphScope.administratorDescriptor
-      - azure-devops-extension-api.GraphScope.isGlobal
-      - azure-devops-extension-api.GraphScope.parentDescriptor
-      - azure-devops-extension-api.GraphScope.scopeType
-      - azure-devops-extension-api.GraphScope.securingHostDescriptor
-    langs:
-      - typeScript
-    type: interface
-    summary: 'Container where a graph entity is defined (organization, project, team)'
-    extends:
-      name: azure-devops-extension-api.GraphSubject
+### YamlMime:TSType
+name: GraphScope
+uid: azure-devops-extension-api.GraphScope
+package: azure-devops-extension-api
+summary: 'Container where a graph entity is defined (organization, project, team)'
+fullName: GraphScope
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: administratorDescriptor
+    uid: azure-devops-extension-api.GraphScope.administratorDescriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphScope.administratorDescriptor
-    name: administratorDescriptor
-    fullName: administratorDescriptor
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The subject descriptor that references the administrators group for this
       scope. Only members of this group can change the contents of this scope or
       assign other users permissions to access this scope.
+    fullName: administratorDescriptor
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'administratorDescriptor: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: descriptor
+    uid: azure-devops-extension-api.GraphScope.descriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphScope.isGlobal
-    name: isGlobal
-    fullName: isGlobal
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      The descriptor is the primary way to reference the graph subject while the
+      system is running. This field will uniquely identify the same graph
+      subject across both Accounts and Organizations.
+    fullName: descriptor
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'descriptor: string'
+      return:
+        type: string
+        description: ''
+  - name: displayName
+    uid: azure-devops-extension-api.GraphScope.displayName
+    package: azure-devops-extension-api
+    summary: >-
+      This is the non-unique display name of the graph subject. To change this
+      field, you must alter its value in the source provider.
+    fullName: displayName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        type: string
+        description: ''
+  - name: isGlobal
+    uid: azure-devops-extension-api.GraphScope.isGlobal
+    package: azure-devops-extension-api
     summary: 'When true, this scope is also a securing host for one or more scopes.'
+    fullName: isGlobal
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isGlobal: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: legacyDescriptor
+    uid: azure-devops-extension-api.GraphScope.legacyDescriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphScope.parentDescriptor
-    name: parentDescriptor
-    fullName: parentDescriptor
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      [Internal Use Only] The legacy descriptor is here in case you need to
+      access old version IMS using identity descriptor.
+    fullName: legacyDescriptor
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'legacyDescriptor: string'
+      return:
+        type: string
+        description: ''
+  - name: origin
+    uid: azure-devops-extension-api.GraphScope.origin
+    package: azure-devops-extension-api
+    summary: 'The type of source provider for the origin identifier (ex:AD, AAD, MSA)'
+    fullName: origin
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'origin: string'
+      return:
+        type: string
+        description: ''
+  - name: originId
+    uid: azure-devops-extension-api.GraphScope.originId
+    package: azure-devops-extension-api
+    summary: >-
+      The unique identifier from the system of origin. Typically a sid, object
+      id or Guid. Linking and unlinking operations can cause this value to
+      change for a user because the user is not backed by a different provider
+      and has a different unique id in the new provider.
+    fullName: originId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'originId: string'
+      return:
+        type: string
+        description: ''
+  - name: parentDescriptor
+    uid: azure-devops-extension-api.GraphScope.parentDescriptor
+    package: azure-devops-extension-api
     summary: >-
       The subject descriptor for the closest account or organization in the
       ancestor tree of this scope.
+    fullName: parentDescriptor
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parentDescriptor: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: scopeType
+    uid: azure-devops-extension-api.GraphScope.scopeType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphScope.scopeType
-    name: scopeType
-    fullName: scopeType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The type of this scope. Typically ServiceHost or TeamProject.
+    fullName: scopeType
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scopeType: GroupScopeType'
       return:
-        type:
-          - azure-devops-extension-api.GroupScopeType
+        type: <xref uid="azure-devops-extension-api.GroupScopeType" />
+        description: ''
+  - name: securingHostDescriptor
+    uid: azure-devops-extension-api.GraphScope.securingHostDescriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphScope.securingHostDescriptor
-    name: securingHostDescriptor
-    fullName: securingHostDescriptor
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The subject descriptor for the containing organization in the ancestor
       tree of this scope.
+    fullName: securingHostDescriptor
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'securingHostDescriptor: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: subjectKind
+    uid: azure-devops-extension-api.GraphScope.subjectKind
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GraphSubject
-    name: GraphSubject
-    spec.typeScript:
-      - name: GraphSubject
-        fullName: GraphSubject
-        uid: azure-devops-extension-api.GraphSubject
-  - uid: azure-devops-extension-api.GroupScopeType
-    name: GroupScopeType
-    spec.typeScript:
-      - name: GroupScopeType
-        fullName: GroupScopeType
-        uid: azure-devops-extension-api.GroupScopeType
+    summary: >-
+      This field identifies the type of the graph subject (ex: Group, Scope,
+      User).
+    fullName: subjectKind
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subjectKind: string'
+      return:
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.GraphScope.url
+    package: azure-devops-extension-api
+    summary: This url is the full route to the source resource of this graph subject.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.GraphSubject" />

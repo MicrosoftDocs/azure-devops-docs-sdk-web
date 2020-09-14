@@ -1,126 +1,132 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.Contribution
-    name: Contribution
-    fullName: Contribution
-    children:
-      - azure-devops-extension-api.Contribution.constraints
-      - azure-devops-extension-api.Contribution.includes
-      - azure-devops-extension-api.Contribution.properties
-      - azure-devops-extension-api.Contribution.restrictedTo
-      - azure-devops-extension-api.Contribution.targets
-      - azure-devops-extension-api.Contribution.type
-    langs:
-      - typeScript
-    type: interface
-    summary: An individual contribution made by an extension
-    extends:
-      name: azure-devops-extension-api.ContributionBase
+### YamlMime:TSType
+name: Contribution
+uid: azure-devops-extension-api.Contribution
+package: azure-devops-extension-api
+summary: An individual contribution made by an extension
+fullName: Contribution
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: constraints
+    uid: azure-devops-extension-api.Contribution.constraints
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Contribution.constraints
-    name: constraints
-    fullName: constraints
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       List of constraints (filters) that should be applied to the availability
       of this contribution
+    fullName: constraints
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'constraints: ContributionConstraint[]'
       return:
-        type:
-          - 'azure-devops-extension-api.ContributionConstraint[]'
+        type: '<xref uid="azure-devops-extension-api.ContributionConstraint" />[]'
+        description: ''
+  - name: description
+    uid: azure-devops-extension-api.Contribution.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Contribution.includes
-    name: includes
-    fullName: includes
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Description of the contribution/type
+    fullName: description
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        type: string
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.Contribution.id
+    package: azure-devops-extension-api
+    summary: Fully qualified identifier of the contribution/type
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        type: string
+        description: ''
+  - name: includes
+    uid: azure-devops-extension-api.Contribution.includes
+    package: azure-devops-extension-api
     summary: >-
       Includes is a set of contributions that should have this contribution
       included in their targets list.
+    fullName: includes
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'includes: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: properties
+    uid: azure-devops-extension-api.Contribution.properties
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Contribution.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Properties/attributes of this contribution
+    fullName: properties
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: restrictedTo
+    uid: azure-devops-extension-api.Contribution.restrictedTo
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Contribution.restrictedTo
-    name: restrictedTo
-    fullName: restrictedTo
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       List of demanded claims in order for the user to see this contribution
       (like anonymous, public, member...).
+    fullName: restrictedTo
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'restrictedTo: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: targets
+    uid: azure-devops-extension-api.Contribution.targets
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Contribution.targets
-    name: targets
-    fullName: targets
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The ids of the contribution(s) that this contribution targets. (parent
       contributions)
+    fullName: targets
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'targets: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: type
+    uid: azure-devops-extension-api.Contribution.type
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Contribution.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Id of the Contribution Type
+    fullName: type
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: visibleTo
+    uid: azure-devops-extension-api.Contribution.visibleTo
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ContributionBase
-    name: ContributionBase
-    spec.typeScript:
-      - name: ContributionBase
-        fullName: ContributionBase
-        uid: azure-devops-extension-api.ContributionBase
-  - uid: 'azure-devops-extension-api.ContributionConstraint[]'
-    name: 'ContributionConstraint[]'
-    spec.typeScript:
-      - name: ContributionConstraint
-        fullName: ContributionConstraint
-        uid: azure-devops-extension-api.ContributionConstraint
-      - name: '[]'
-        fullName: '[]'
+    summary: >-
+      VisibleTo can be used to restrict whom can reference a given
+      contribution/type. This value should be a list of publishers or extensions
+      access is restricted too.  Examples: "ms" - Means only the "ms" publisher
+      can reference this. "ms.vss-web" - Means only the "vss-web" extension from
+      the "ms" publisher can reference this.
+    fullName: visibleTo
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'visibleTo: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.ContributionBase" />

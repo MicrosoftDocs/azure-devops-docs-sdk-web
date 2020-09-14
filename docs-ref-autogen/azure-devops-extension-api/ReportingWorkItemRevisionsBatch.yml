@@ -1,29 +1,62 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ReportingWorkItemRevisionsBatch
-    name: ReportingWorkItemRevisionsBatch
-    fullName: ReportingWorkItemRevisionsBatch
-    children: []
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: >-
-        azure-devops-extension-api.StreamedBatch<azure-devops-extension-api.WorkItem>
+### YamlMime:TSType
+name: ReportingWorkItemRevisionsBatch
+uid: azure-devops-extension-api.ReportingWorkItemRevisionsBatch
+package: azure-devops-extension-api
+summary: ''
+fullName: ReportingWorkItemRevisionsBatch
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: continuationToken
+    uid: >-
+      azure-devops-extension-api.ReportingWorkItemRevisionsBatch.continuationToken
     package: azure-devops-extension-api
-references:
-  - uid: >-
-      azure-devops-extension-api.StreamedBatch<azure-devops-extension-api.WorkItem>
-    name: WorkItem>
-    spec.typeScript:
-      - name: StreamedBatch
-        fullName: StreamedBatch
-        uid: azure-devops-extension-api.StreamedBatch
-      - name: <
-        fullName: <
-      - name: WorkItem
-        fullName: WorkItem
-        uid: azure-devops-extension-api.WorkItem
-      - name: '>'
-        fullName: '>'
+    summary: ContinuationToken acts as a waterMark. Used while querying large results.
+    fullName: continuationToken
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'continuationToken: string'
+      return:
+        type: string
+        description: ''
+  - name: isLastBatch
+    uid: azure-devops-extension-api.ReportingWorkItemRevisionsBatch.isLastBatch
+    package: azure-devops-extension-api
+    summary: 'Returns ''true'' if it''s last batch, ''false'' otherwise.'
+    fullName: isLastBatch
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isLastBatch: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: nextLink
+    uid: azure-devops-extension-api.ReportingWorkItemRevisionsBatch.nextLink
+    package: azure-devops-extension-api
+    summary: The next link for the work item.
+    fullName: nextLink
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nextLink: string'
+      return:
+        type: string
+        description: ''
+  - name: values
+    uid: azure-devops-extension-api.ReportingWorkItemRevisionsBatch.values
+    package: azure-devops-extension-api
+    summary: 'Values such as rel, sourceId, TargetId, ChangedDate, isActive.'
+    fullName: values
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'values: WorkItem[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.WorkItem" />[]'
+        description: ''
+extends: >-
+  <xref uid="azure-devops-extension-api.StreamedBatch" />&lt;<xref
+  uid="azure-devops-extension-api.WorkItem" />&gt;

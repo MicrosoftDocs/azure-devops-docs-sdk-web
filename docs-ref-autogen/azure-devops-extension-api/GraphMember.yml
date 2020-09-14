@@ -1,73 +1,152 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GraphMember
-    name: GraphMember
-    fullName: GraphMember
-    children:
-      - azure-devops-extension-api.GraphMember.domain
-      - azure-devops-extension-api.GraphMember.mailAddress
-      - azure-devops-extension-api.GraphMember.principalName
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.GraphSubject
+### YamlMime:TSType
+name: GraphMember
+uid: azure-devops-extension-api.GraphMember
+package: azure-devops-extension-api
+summary: ''
+fullName: GraphMember
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: descriptor
+    uid: azure-devops-extension-api.GraphMember.descriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphMember.domain
-    name: domain
-    fullName: domain
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      The descriptor is the primary way to reference the graph subject while the
+      system is running. This field will uniquely identify the same graph
+      subject across both Accounts and Organizations.
+    fullName: descriptor
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'descriptor: string'
+      return:
+        type: string
+        description: ''
+  - name: displayName
+    uid: azure-devops-extension-api.GraphMember.displayName
+    package: azure-devops-extension-api
+    summary: >-
+      This is the non-unique display name of the graph subject. To change this
+      field, you must alter its value in the source provider.
+    fullName: displayName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        type: string
+        description: ''
+  - name: domain
+    uid: azure-devops-extension-api.GraphMember.domain
+    package: azure-devops-extension-api
     summary: >-
       This represents the name of the container of origin for a graph member.
       (For MSA this is "Windows Live ID", for AD the name of the domain, for AAD
       the tenantID of the directory, for VSTS groups the ScopeId, etc)
+    fullName: domain
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'domain: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: legacyDescriptor
+    uid: azure-devops-extension-api.GraphMember.legacyDescriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphMember.mailAddress
-    name: mailAddress
-    fullName: mailAddress
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      [Internal Use Only] The legacy descriptor is here in case you need to
+      access old version IMS using identity descriptor.
+    fullName: legacyDescriptor
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'legacyDescriptor: string'
+      return:
+        type: string
+        description: ''
+  - name: mailAddress
+    uid: azure-devops-extension-api.GraphMember.mailAddress
+    package: azure-devops-extension-api
     summary: >-
       The email address of record for a given graph member. This may be
       different than the principal name.
+    fullName: mailAddress
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mailAddress: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: origin
+    uid: azure-devops-extension-api.GraphMember.origin
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphMember.principalName
-    name: principalName
-    fullName: principalName
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: 'The type of source provider for the origin identifier (ex:AD, AAD, MSA)'
+    fullName: origin
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'origin: string'
+      return:
+        type: string
+        description: ''
+  - name: originId
+    uid: azure-devops-extension-api.GraphMember.originId
+    package: azure-devops-extension-api
+    summary: >-
+      The unique identifier from the system of origin. Typically a sid, object
+      id or Guid. Linking and unlinking operations can cause this value to
+      change for a user because the user is not backed by a different provider
+      and has a different unique id in the new provider.
+    fullName: originId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'originId: string'
+      return:
+        type: string
+        description: ''
+  - name: principalName
+    uid: azure-devops-extension-api.GraphMember.principalName
+    package: azure-devops-extension-api
     summary: >-
       This is the PrincipalName of this graph member from the source provider.
       The source provider may change this field over time and it is not
       guaranteed to be immutable for the life of the graph member by VSTS.
+    fullName: principalName
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'principalName: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: subjectKind
+    uid: azure-devops-extension-api.GraphMember.subjectKind
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GraphSubject
-    name: GraphSubject
-    spec.typeScript:
-      - name: GraphSubject
-        fullName: GraphSubject
-        uid: azure-devops-extension-api.GraphSubject
+    summary: >-
+      This field identifies the type of the graph subject (ex: Group, Scope,
+      User).
+    fullName: subjectKind
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subjectKind: string'
+      return:
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.GraphMember.url
+    package: azure-devops-extension-api
+    summary: This url is the full route to the source resource of this graph subject.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.GraphSubject" />

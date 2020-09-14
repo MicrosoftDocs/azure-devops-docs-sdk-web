@@ -1,196 +1,227 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TestSuite
-    name: TestSuite
-    fullName: TestSuite
-    children:
-      - azure-devops-extension-api.TestSuite.children
-      - azure-devops-extension-api.TestSuite.hasChildren
-      - azure-devops-extension-api.TestSuite.id
-      - azure-devops-extension-api.TestSuite.lastError
-      - azure-devops-extension-api.TestSuite.lastPopulatedDate
-      - azure-devops-extension-api.TestSuite.lastUpdatedBy
-      - azure-devops-extension-api.TestSuite.lastUpdatedDate
-      - azure-devops-extension-api.TestSuite.plan
-      - azure-devops-extension-api.TestSuite.project
-      - azure-devops-extension-api.TestSuite.revision
-    langs:
-      - typeScript
-    type: interface
-    summary: Test suite
-    extends:
-      name: azure-devops-extension-api.TestSuiteCreateParams
+### YamlMime:TSType
+name: TestSuite
+uid: azure-devops-extension-api.TestSuite
+package: azure-devops-extension-api
+summary: Test suite
+fullName: TestSuite
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: children
+    uid: azure-devops-extension-api.TestSuite.children
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.children
-    name: children
-    fullName: children
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Child test suites of current test suite.
+    fullName: children
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'children: TestSuite[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TestSuite[]'
+        type: '<xref uid="azure-devops-extension-api.TestSuite" />[]'
+        description: ''
+  - name: defaultConfigurations
+    uid: azure-devops-extension-api.TestSuite.defaultConfigurations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.hasChildren
-    name: hasChildren
-    fullName: hasChildren
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Test suite default configurations.
+    fullName: defaultConfigurations
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'defaultConfigurations: TestConfigurationReference[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.TestConfigurationReference" />[]'
+        description: ''
+  - name: defaultTesters
+    uid: azure-devops-extension-api.TestSuite.defaultTesters
+    package: azure-devops-extension-api
+    summary: Test suite default testers.
+    fullName: defaultTesters
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'defaultTesters: IdentityRef[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.IdentityRef" />[]'
+        description: ''
+  - name: hasChildren
+    uid: azure-devops-extension-api.TestSuite.hasChildren
+    package: azure-devops-extension-api
     summary: Boolean value dictating if Child test suites are present
+    fullName: hasChildren
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'hasChildren: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.TestSuite.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Id of test suite.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: inheritDefaultConfigurations
+    uid: azure-devops-extension-api.TestSuite.inheritDefaultConfigurations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.lastError
-    name: lastError
-    fullName: lastError
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Default configuration was inherited or not.
+    fullName: inheritDefaultConfigurations
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'inheritDefaultConfigurations: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: lastError
+    uid: azure-devops-extension-api.TestSuite.lastError
+    package: azure-devops-extension-api
     summary: Last error for test suite.
+    fullName: lastError
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastError: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: lastPopulatedDate
+    uid: azure-devops-extension-api.TestSuite.lastPopulatedDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.lastPopulatedDate
-    name: lastPopulatedDate
-    fullName: lastPopulatedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Last populated date.
+    fullName: lastPopulatedDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastPopulatedDate: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: lastUpdatedBy
+    uid: azure-devops-extension-api.TestSuite.lastUpdatedBy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.lastUpdatedBy
-    name: lastUpdatedBy
-    fullName: lastUpdatedBy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: IdentityRef of user who has updated test suite recently.
+    fullName: lastUpdatedBy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastUpdatedBy: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: lastUpdatedDate
+    uid: azure-devops-extension-api.TestSuite.lastUpdatedDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.lastUpdatedDate
-    name: lastUpdatedDate
-    fullName: lastUpdatedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Last update date.
+    fullName: lastUpdatedDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastUpdatedDate: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TestSuite.name
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.plan
-    name: plan
-    fullName: plan
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Name of test suite.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: parentSuite
+    uid: azure-devops-extension-api.TestSuite.parentSuite
+    package: azure-devops-extension-api
+    summary: Test suite parent shallow reference.
+    fullName: parentSuite
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'parentSuite: TestSuiteReference'
+      return:
+        type: <xref uid="azure-devops-extension-api.TestSuiteReference" />
+        description: ''
+  - name: plan
+    uid: azure-devops-extension-api.TestSuite.plan
+    package: azure-devops-extension-api
     summary: Test plan to which the test suite belongs.
+    fullName: plan
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'plan: TestPlanReference'
       return:
-        type:
-          - azure-devops-extension-api.TestPlanReference
+        type: <xref uid="azure-devops-extension-api.TestPlanReference" />
+        description: ''
+  - name: project
+    uid: azure-devops-extension-api.TestSuite.project
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.project
-    name: project
-    fullName: project
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Test suite project shallow reference.
+    fullName: project
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
       return:
-        type:
-          - azure-devops-extension-api.TeamProjectReference
+        type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+        description: ''
+  - name: queryString
+    uid: azure-devops-extension-api.TestSuite.queryString
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestSuite.revision
-    name: revision
-    fullName: revision
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: 'Test suite query string, for dynamic suites.'
+    fullName: queryString
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'queryString: string'
+      return:
+        type: string
+        description: ''
+  - name: requirementId
+    uid: azure-devops-extension-api.TestSuite.requirementId
+    package: azure-devops-extension-api
+    summary: Test suite requirement id.
+    fullName: requirementId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'requirementId: number'
+      return:
+        type: number
+        description: ''
+  - name: revision
+    uid: azure-devops-extension-api.TestSuite.revision
+    package: azure-devops-extension-api
     summary: Test suite revision.
+    fullName: revision
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'revision: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: suiteType
+    uid: azure-devops-extension-api.TestSuite.suiteType
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TestSuiteCreateParams
-    name: TestSuiteCreateParams
-    spec.typeScript:
-      - name: TestSuiteCreateParams
-        fullName: TestSuiteCreateParams
-        uid: azure-devops-extension-api.TestSuiteCreateParams
-  - uid: 'azure-devops-extension-api.TestSuite[]'
-    name: 'TestSuite[]'
-    spec.typeScript:
-      - name: TestSuite
-        fullName: TestSuite
-        uid: azure-devops-extension-api.TestSuite
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
-  - uid: azure-devops-extension-api.TestPlanReference
-    name: TestPlanReference
-    spec.typeScript:
-      - name: TestPlanReference
-        fullName: TestPlanReference
-        uid: azure-devops-extension-api.TestPlanReference
-  - uid: azure-devops-extension-api.TeamProjectReference
-    name: TeamProjectReference
-    spec.typeScript:
-      - name: TeamProjectReference
-        fullName: TeamProjectReference
-        uid: azure-devops-extension-api.TeamProjectReference
+    summary: Test suite type.
+    fullName: suiteType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'suiteType: TestSuiteType'
+      return:
+        type: <xref uid="azure-devops-extension-api.TestSuiteType" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TestSuiteCreateParams" />

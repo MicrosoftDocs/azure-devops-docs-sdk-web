@@ -1,41 +1,131 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.WorkItemDelete
-    name: WorkItemDelete
-    fullName: WorkItemDelete
-    children:
-      - azure-devops-extension-api.WorkItemDelete.resource
-    langs:
-      - typeScript
-    type: interface
-    summary: Full deleted work item object. Includes the work item itself.
-    extends:
-      name: azure-devops-extension-api.WorkItemDeleteReference
+### YamlMime:TSType
+name: WorkItemDelete
+uid: azure-devops-extension-api.WorkItemDelete
+package: azure-devops-extension-api
+summary: Full deleted work item object. Includes the work item itself.
+fullName: WorkItemDelete
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: code
+    uid: azure-devops-extension-api.WorkItemDelete.code
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemDelete.resource
-    name: resource
-    fullName: resource
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: The HTTP status code for work item operation in a batch request.
+    fullName: code
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'code: number'
+      return:
+        type: number
+        description: ''
+  - name: deletedBy
+    uid: azure-devops-extension-api.WorkItemDelete.deletedBy
+    package: azure-devops-extension-api
+    summary: The user who deleted the work item type.
+    fullName: deletedBy
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deletedBy: string'
+      return:
+        type: string
+        description: ''
+  - name: deletedDate
+    uid: azure-devops-extension-api.WorkItemDelete.deletedDate
+    package: azure-devops-extension-api
+    summary: The work item deletion date.
+    fullName: deletedDate
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deletedDate: string'
+      return:
+        type: string
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.WorkItemDelete.id
+    package: azure-devops-extension-api
+    summary: Work item ID.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+  - name: message
+    uid: azure-devops-extension-api.WorkItemDelete.message
+    package: azure-devops-extension-api
+    summary: The exception message for work item operation in a batch request.
+    fullName: message
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        type: string
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.WorkItemDelete.name
+    package: azure-devops-extension-api
+    summary: Name or title of the work item.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: project
+    uid: azure-devops-extension-api.WorkItemDelete.project
+    package: azure-devops-extension-api
+    summary: Parent project of the deleted work item.
+    fullName: project
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'project: string'
+      return:
+        type: string
+        description: ''
+  - name: resource
+    uid: azure-devops-extension-api.WorkItemDelete.resource
+    package: azure-devops-extension-api
     summary: The work item object that was deleted.
+    fullName: resource
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'resource: WorkItem'
       return:
-        type:
-          - azure-devops-extension-api.WorkItem
+        type: <xref uid="azure-devops-extension-api.WorkItem" />
+        description: ''
+  - name: type
+    uid: azure-devops-extension-api.WorkItemDelete.type
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.WorkItemDeleteReference
-    name: WorkItemDeleteReference
-    spec.typeScript:
-      - name: WorkItemDeleteReference
-        fullName: WorkItemDeleteReference
-        uid: azure-devops-extension-api.WorkItemDeleteReference
-  - uid: azure-devops-extension-api.WorkItem
-    name: WorkItem
-    spec.typeScript:
-      - name: WorkItem
-        fullName: WorkItem
-        uid: azure-devops-extension-api.WorkItem
+    summary: Type of work item.
+    fullName: type
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.WorkItemDelete.url
+    package: azure-devops-extension-api
+    summary: REST API URL of the resource
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.WorkItemDeleteReference" />

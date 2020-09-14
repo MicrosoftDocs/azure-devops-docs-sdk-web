@@ -1,865 +1,587 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BoardsRestClient
-    name: BoardsRestClient
-    fullName: BoardsRestClient
-    children:
-      - azure-devops-extension-api.BoardsRestClient.addBoardItem
-      - azure-devops-extension-api.BoardsRestClient.constructor
-      - azure-devops-extension-api.BoardsRestClient.createBoard
-      - azure-devops-extension-api.BoardsRestClient.createBoardColumn
-      - azure-devops-extension-api.BoardsRestClient.createBoardRow
-      - azure-devops-extension-api.BoardsRestClient.createBoardSyncAction
-      - azure-devops-extension-api.BoardsRestClient.deleteBoard
-      - azure-devops-extension-api.BoardsRestClient.deleteBoardColumn
-      - azure-devops-extension-api.BoardsRestClient.deleteBoardRow
-      - azure-devops-extension-api.BoardsRestClient.getBoard
-      - azure-devops-extension-api.BoardsRestClient.getBoardColumn
-      - azure-devops-extension-api.BoardsRestClient.getBoardColumns
-      - azure-devops-extension-api.BoardsRestClient.getBoardItem
-      - azure-devops-extension-api.BoardsRestClient.getBoardItems
-      - azure-devops-extension-api.BoardsRestClient.getBoardRow
-      - azure-devops-extension-api.BoardsRestClient.getBoardRows
-      - azure-devops-extension-api.BoardsRestClient.getBoards
-      - azure-devops-extension-api.BoardsRestClient.removeBoardItem
-      - azure-devops-extension-api.BoardsRestClient.RESOURCE_AREA_ID
-      - azure-devops-extension-api.BoardsRestClient.updateBoard
-      - azure-devops-extension-api.BoardsRestClient.updateBoardColumn
-      - azure-devops-extension-api.BoardsRestClient.updateBoardItem
-      - azure-devops-extension-api.BoardsRestClient.updateBoardItems
-      - azure-devops-extension-api.BoardsRestClient.updateBoardRow
-    langs:
-      - typeScript
-    type: class
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.RestClientBase
+### YamlMime:TSType
+name: BoardsRestClient
+uid: azure-devops-extension-api.BoardsRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: BoardsRestClient
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: BoardsRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.BoardsRestClient.constructor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.addBoardItem
-    name: 'addBoardItem(NewBoardItem, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new BoardsRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+properties:
+  - name: RESOURCE_AREA_ID
+    uid: azure-devops-extension-api.BoardsRestClient.RESOURCE_AREA_ID
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: RESOURCE_AREA_ID
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static RESOURCE_AREA_ID: string'
+      return:
+        type: string
+        description: ''
+methods:
+  - name: 'addBoardItem(NewBoardItem, string, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.addBoardItem
+    package: azure-devops-extension-api
     summary: Adds a single item to a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function addBoardItem(item: NewBoardItem, project: string, board:
         number)
       parameters:
         - id: item
-          type:
-            - azure-devops-extension-api.NewBoardItem
+          type: <xref uid="azure-devops-extension-api.NewBoardItem" />
           description: Item to add to the board.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: |
             Board identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardItemResponse>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardItemResponse"
+          />&gt;
+        description: ''
+  - name: 'createBoard(CreateBoard, string)'
+    uid: azure-devops-extension-api.BoardsRestClient.createBoard
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.constructor
-    name: BoardsRestClient(IVssRestClientOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new BoardsRestClient(options: IVssRestClientOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-devops-extension-api.IVssRestClientOptions
-          description: ''
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.createBoard
-    name: 'createBoard(CreateBoard, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Add a new board for the project.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function createBoard(postedBoard: CreateBoard, project: string)'
       parameters:
         - id: postedBoard
-          type:
-            - azure-devops-extension-api.CreateBoard
+          type: <xref uid="azure-devops-extension-api.CreateBoard" />
           description: Board definition.
         - id: project
-          type:
-            - string
+          type: string
           description: |
             Project ID or project name
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardResponse>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BoardResponse" />&gt;
+        description: ''
+  - name: 'createBoardColumn(BoardColumnCreate, string, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.createBoardColumn
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.createBoardColumn
-    name: 'createBoardColumn(BoardColumnCreate, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Creates a new column on a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createBoardColumn(boardColumn: BoardColumnCreate, project:
         string, board: number)
       parameters:
         - id: boardColumn
-          type:
-            - azure-devops-extension-api.BoardColumnCreate
+          type: <xref uid="azure-devops-extension-api.BoardColumnCreate" />
           description: Column data.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: |
             Board identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardColumnResponse>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardColumnResponse"
+          />&gt;
+        description: ''
+  - name: 'createBoardRow(BoardRowCreate, string, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.createBoardRow
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.createBoardRow
-    name: 'createBoardRow(BoardRowCreate, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Creates a new row on a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createBoardRow(boardRow: BoardRowCreate, project: string,
         board: number)
       parameters:
         - id: boardRow
-          type:
-            - azure-devops-extension-api.BoardRowCreate
+          type: <xref uid="azure-devops-extension-api.BoardRowCreate" />
           description: Row data.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: |
             Board identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardRowResponse>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardRowResponse"
+          />&gt;
+        description: ''
+  - name: 'createBoardSyncAction(BoardItemStateSyncCreate, string, number, string)'
+    uid: azure-devops-extension-api.BoardsRestClient.createBoardSyncAction
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.createBoardSyncAction
-    name: 'createBoardSyncAction(BoardItemStateSyncCreate, string, number, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Creates a new sync for a column on a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createBoardSyncAction(boardSync: BoardItemStateSyncCreate,
         project: string, board: number, column: string)
       parameters:
         - id: boardSync
-          type:
-            - azure-devops-extension-api.BoardItemStateSyncCreate
+          type: <xref uid="azure-devops-extension-api.BoardItemStateSyncCreate" />
           description: '-'
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: '-'
         - id: column
-          type:
-            - string
+          type: string
           description: |
             -
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardItemStateSync>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardItemStateSync"
+          />&gt;
+        description: ''
+  - name: 'deleteBoard(string, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.deleteBoard
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.deleteBoard
-    name: 'deleteBoard(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Deletes a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function deleteBoard(project: string, id: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: id
-          type:
-            - number
+          type: number
           description: |
             Board identifier.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'deleteBoardColumn(string, number, string, boolean)'
+    uid: azure-devops-extension-api.BoardsRestClient.deleteBoardColumn
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.deleteBoardColumn
-    name: 'deleteBoardColumn(string, number, string, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Deletes a column from a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function deleteBoardColumn(project: string, board: number, id: string,
         forceRemoveItems: boolean)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: Board identifier.
         - id: id
-          type:
-            - string
+          type: string
           description: Column identifier.
         - id: forceRemoveItems
-          type:
-            - boolean
+          type: boolean
           description: >
             Boolean indicating if items are to be force removed during the
             column delete.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'deleteBoardRow(string, number, string, boolean)'
+    uid: azure-devops-extension-api.BoardsRestClient.deleteBoardRow
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.deleteBoardRow
-    name: 'deleteBoardRow(string, number, string, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Deletes a row from a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function deleteBoardRow(project: string, board: number, id: string,
         forceRemoveItems: boolean)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: Board identifier.
         - id: id
-          type:
-            - string
+          type: string
           description: Row identifier.
         - id: forceRemoveItems
-          type:
-            - boolean
+          type: boolean
           description: >
             Boolean indicating if items are to be force removed during the row
             delete.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'getBoard(string, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.getBoard
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.getBoard
-    name: 'getBoard(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Returns information for a board given its unique identifier.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getBoard(project: string, id: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: id
-          type:
-            - number
+          type: number
           description: |
             Board's unique identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardResponse>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BoardResponse" />&gt;
+        description: ''
+  - name: 'getBoardColumn(string, number, string)'
+    uid: azure-devops-extension-api.BoardsRestClient.getBoardColumn
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.getBoardColumn
-    name: 'getBoardColumn(string, number, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets column data for a board given its identifier.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getBoardColumn(project: string, board: number, id: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: Board identifier.
         - id: id
-          type:
-            - string
+          type: string
           description: |
             Column identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardColumnResponse>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardColumnResponse"
+          />&gt;
+        description: ''
+  - name: 'getBoardColumns(string, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.getBoardColumns
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.getBoardColumns
-    name: 'getBoardColumns(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get columns in a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getBoardColumns(project: string, board: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: |
             Board identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardColumnCollectionResponse>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.BoardColumnCollectionResponse" />&gt;
+        description: ''
+  - name: 'getBoardItem(string, number, string)'
+    uid: azure-devops-extension-api.BoardsRestClient.getBoardItem
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.getBoardItem
-    name: 'getBoardItem(string, number, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets data for a single board's item.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getBoardItem(project: string, board: number, id: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: Board identifier.
         - id: id
-          type:
-            - string
+          type: string
           description: |
             Item identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardItemResponse>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardItemResponse"
+          />&gt;
+        description: ''
+  - name: 'getBoardItems(string, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.getBoardItems
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.getBoardItems
-    name: 'getBoardItems(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get items information for a board given its identifier.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getBoardItems(project: string, board: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: |
             Board identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardItemCollectionResponse>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.BoardItemCollectionResponse" />&gt;
+        description: ''
+  - name: 'getBoardRow(string, number, string)'
+    uid: azure-devops-extension-api.BoardsRestClient.getBoardRow
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.getBoardRow
-    name: 'getBoardRow(string, number, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets a row given its identifier and board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getBoardRow(project: string, board: number, id: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: Board identifier.
         - id: id
-          type:
-            - string
+          type: string
           description: |
             Board row identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardRowResponse>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardRowResponse"
+          />&gt;
+        description: ''
+  - name: 'getBoardRows(string, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.getBoardRows
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.getBoardRows
-    name: 'getBoardRows(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get rows in a board given its identifier.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getBoardRows(project: string, board: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: |
             Board identifier.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardRowCollectionResponse>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.BoardRowCollectionResponse" />&gt;
+        description: ''
+  - name: 'getBoards(string, number, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.getBoards
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.getBoards
-    name: 'getBoards(string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get boards.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getBoards(project: string, top?: number, skip?: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: top
-          type:
-            - number
+          type: number
           description: The maximum number of boards to get.
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: |
             The number of boards to skip.
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.BoardReference[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardReference"
+          />[]&gt;
+        description: ''
+  - name: 'removeBoardItem(string, number, string)'
+    uid: azure-devops-extension-api.BoardsRestClient.removeBoardItem
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.removeBoardItem
-    name: 'removeBoardItem(string, number, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Removes an item from a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function removeBoardItem(project: string, board: number, id: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: Board identifier.
         - id: id
-          type:
-            - string
+          type: string
           description: |
             Board Item identifier to remove.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'updateBoard(UpdateBoard, string, number, String)'
+    uid: azure-devops-extension-api.BoardsRestClient.updateBoard
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.RESOURCE_AREA_ID
-    name: RESOURCE_AREA_ID
-    fullName: RESOURCE_AREA_ID
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'static RESOURCE_AREA_ID: string'
-      return:
-        type:
-          - string
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.updateBoard
-    name: 'updateBoard(UpdateBoard, string, number, String)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Updates a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateBoard(updatedBoard: UpdateBoard, project: string, id:
         number, eTag: String)
       parameters:
         - id: updatedBoard
-          type:
-            - azure-devops-extension-api.UpdateBoard
+          type: <xref uid="azure-devops-extension-api.UpdateBoard" />
           description: New board data.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: id
-          type:
-            - number
+          type: number
           description: Id of the board to update.
         - id: eTag
-          type:
-            - String
+          type: String
           description: |
             Board Latest Changed Date
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardResponse>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BoardResponse" />&gt;
+        description: ''
+  - name: 'updateBoardColumn(BoardColumnUpdate, string, number, string, String)'
+    uid: azure-devops-extension-api.BoardsRestClient.updateBoardColumn
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.updateBoardColumn
-    name: 'updateBoardColumn(BoardColumnUpdate, string, number, string, String)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Updates a board column.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateBoardColumn(boardColumn: BoardColumnUpdate, project:
         string, board: number, id: string, eTag: String)
       parameters:
         - id: boardColumn
-          type:
-            - azure-devops-extension-api.BoardColumnUpdate
+          type: <xref uid="azure-devops-extension-api.BoardColumnUpdate" />
           description: Column data.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: Board identifier.
         - id: id
-          type:
-            - string
+          type: string
           description: Column identifier.
         - id: eTag
-          type:
-            - String
+          type: String
           description: |
             Column Latest Changed Date
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardColumnResponse>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardColumnResponse"
+          />&gt;
+        description: ''
+  - name: 'updateBoardItem(UpdateBoardItem, string, number, string, String)'
+    uid: azure-devops-extension-api.BoardsRestClient.updateBoardItem
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.updateBoardItem
-    name: 'updateBoardItem(UpdateBoardItem, string, number, string, String)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Updates a single item in a board.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateBoardItem(updateItemDef: UpdateBoardItem, project:
         string, board: number, id: string, eTag: String)
       parameters:
         - id: updateItemDef
-          type:
-            - azure-devops-extension-api.UpdateBoardItem
+          type: <xref uid="azure-devops-extension-api.UpdateBoardItem" />
           description: Updated item data.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: Board identifier.
         - id: id
-          type:
-            - string
+          type: string
           description: Update item id.
         - id: eTag
-          type:
-            - String
+          type: String
           description: |
             Item Latest Changed Date
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardItemResponse>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardItemResponse"
+          />&gt;
+        description: ''
+  - name: 'updateBoardItems(BoardItemBatchOperation, string, number)'
+    uid: azure-devops-extension-api.BoardsRestClient.updateBoardItems
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.updateBoardItems
-    name: 'updateBoardItems(BoardItemBatchOperation, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Do an operation on a batch of items.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateBoardItems(batchRequest: BoardItemBatchOperation,
         project: string, board: number)
       parameters:
         - id: batchRequest
-          type:
-            - azure-devops-extension-api.BoardItemBatchOperation
+          type: <xref uid="azure-devops-extension-api.BoardItemBatchOperation" />
           description: Data defining the batch operation.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: |
             The id of the board containing the items.
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardItemCollectionResponse>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.BoardItemCollectionResponse" />&gt;
+        description: ''
+  - name: 'updateBoardRow(BoardRowUpdate, string, number, string, String)'
+    uid: azure-devops-extension-api.BoardsRestClient.updateBoardRow
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardsRestClient.updateBoardRow
-    name: 'updateBoardRow(BoardRowUpdate, string, number, string, String)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Updates a board row.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateBoardRow(boardRow: BoardRowUpdate, project: string,
         board: number, id: string, eTag: String)
       parameters:
         - id: boardRow
-          type:
-            - azure-devops-extension-api.BoardRowUpdate
+          type: <xref uid="azure-devops-extension-api.BoardRowUpdate" />
           description: Row data.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: board
-          type:
-            - number
+          type: number
           description: Board identifier.
         - id: id
-          type:
-            - string
+          type: string
           description: Row identifier.
         - id: eTag
-          type:
-            - String
+          type: String
           description: |
             Row Latest Changed Date
       return:
-        type:
-          - Promise<azure-devops-extension-api.BoardRowResponse>
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RestClientBase
-    name: RestClientBase
-    spec.typeScript:
-      - name: RestClientBase
-        fullName: RestClientBase
-        uid: azure-devops-extension-api.RestClientBase
-  - uid: azure-devops-extension-api.IVssRestClientOptions
-    name: IVssRestClientOptions
-    spec.typeScript:
-      - name: IVssRestClientOptions
-        fullName: IVssRestClientOptions
-        uid: azure-devops-extension-api.IVssRestClientOptions
-  - uid: azure-devops-extension-api.NewBoardItem
-    name: NewBoardItem
-    spec.typeScript:
-      - name: NewBoardItem
-        fullName: NewBoardItem
-        uid: azure-devops-extension-api.NewBoardItem
-  - uid: Promise<azure-devops-extension-api.BoardItemResponse>
-    name: BoardItemResponse>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: BoardItemResponse
-        fullName: BoardItemResponse
-        uid: azure-devops-extension-api.BoardItemResponse
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.CreateBoard
-    name: CreateBoard
-    spec.typeScript:
-      - name: CreateBoard
-        fullName: CreateBoard
-        uid: azure-devops-extension-api.CreateBoard
-  - uid: Promise<azure-devops-extension-api.BoardResponse>
-    name: BoardResponse>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: BoardResponse
-        fullName: BoardResponse
-        uid: azure-devops-extension-api.BoardResponse
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.BoardColumnCreate
-    name: BoardColumnCreate
-    spec.typeScript:
-      - name: BoardColumnCreate
-        fullName: BoardColumnCreate
-        uid: azure-devops-extension-api.BoardColumnCreate
-  - uid: Promise<azure-devops-extension-api.BoardColumnResponse>
-    name: BoardColumnResponse>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: BoardColumnResponse
-        fullName: BoardColumnResponse
-        uid: azure-devops-extension-api.BoardColumnResponse
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.BoardRowCreate
-    name: BoardRowCreate
-    spec.typeScript:
-      - name: BoardRowCreate
-        fullName: BoardRowCreate
-        uid: azure-devops-extension-api.BoardRowCreate
-  - uid: Promise<azure-devops-extension-api.BoardRowResponse>
-    name: BoardRowResponse>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: BoardRowResponse
-        fullName: BoardRowResponse
-        uid: azure-devops-extension-api.BoardRowResponse
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.BoardItemStateSyncCreate
-    name: BoardItemStateSyncCreate
-    spec.typeScript:
-      - name: BoardItemStateSyncCreate
-        fullName: BoardItemStateSyncCreate
-        uid: azure-devops-extension-api.BoardItemStateSyncCreate
-  - uid: Promise<azure-devops-extension-api.BoardItemStateSync>
-    name: BoardItemStateSync>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: BoardItemStateSync
-        fullName: BoardItemStateSync
-        uid: azure-devops-extension-api.BoardItemStateSync
-      - name: '>'
-        fullName: '>'
-  - uid: Promise<azure-devops-extension-api.BoardColumnCollectionResponse>
-    name: BoardColumnCollectionResponse>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: BoardColumnCollectionResponse
-        fullName: BoardColumnCollectionResponse
-        uid: azure-devops-extension-api.BoardColumnCollectionResponse
-      - name: '>'
-        fullName: '>'
-  - uid: Promise<azure-devops-extension-api.BoardItemCollectionResponse>
-    name: BoardItemCollectionResponse>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: BoardItemCollectionResponse
-        fullName: BoardItemCollectionResponse
-        uid: azure-devops-extension-api.BoardItemCollectionResponse
-      - name: '>'
-        fullName: '>'
-  - uid: Promise<azure-devops-extension-api.BoardRowCollectionResponse>
-    name: BoardRowCollectionResponse>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: BoardRowCollectionResponse
-        fullName: BoardRowCollectionResponse
-        uid: azure-devops-extension-api.BoardRowCollectionResponse
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.BoardReference[]>'
-    name: 'BoardReference[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: BoardReference
-        fullName: BoardReference
-        uid: azure-devops-extension-api.BoardReference
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.UpdateBoard
-    name: UpdateBoard
-    spec.typeScript:
-      - name: UpdateBoard
-        fullName: UpdateBoard
-        uid: azure-devops-extension-api.UpdateBoard
-  - uid: azure-devops-extension-api.BoardColumnUpdate
-    name: BoardColumnUpdate
-    spec.typeScript:
-      - name: BoardColumnUpdate
-        fullName: BoardColumnUpdate
-        uid: azure-devops-extension-api.BoardColumnUpdate
-  - uid: azure-devops-extension-api.UpdateBoardItem
-    name: UpdateBoardItem
-    spec.typeScript:
-      - name: UpdateBoardItem
-        fullName: UpdateBoardItem
-        uid: azure-devops-extension-api.UpdateBoardItem
-  - uid: azure-devops-extension-api.BoardItemBatchOperation
-    name: BoardItemBatchOperation
-    spec.typeScript:
-      - name: BoardItemBatchOperation
-        fullName: BoardItemBatchOperation
-        uid: azure-devops-extension-api.BoardItemBatchOperation
-  - uid: azure-devops-extension-api.BoardRowUpdate
-    name: BoardRowUpdate
-    spec.typeScript:
-      - name: BoardRowUpdate
-        fullName: BoardRowUpdate
-        uid: azure-devops-extension-api.BoardRowUpdate
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BoardRowResponse"
+          />&gt;
+        description: ''
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

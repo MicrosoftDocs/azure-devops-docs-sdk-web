@@ -1,49 +1,42 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.EnvironmentExecutionPolicy
-    name: EnvironmentExecutionPolicy
-    fullName: EnvironmentExecutionPolicy
-    children:
-      - azure-devops-extension-api.EnvironmentExecutionPolicy.concurrencyCount
-      - azure-devops-extension-api.EnvironmentExecutionPolicy.queueDepthCount
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Defines policy on environment queuing at Release Management side queue. We
-      will send to Environment Runner [creating pre-deploy and other steps] only
-      when the policies mentioned are satisfied.
+### YamlMime:TSType
+name: EnvironmentExecutionPolicy
+uid: azure-devops-extension-api.EnvironmentExecutionPolicy
+package: azure-devops-extension-api
+summary: >-
+  Defines policy on environment queuing at Release Management side queue. We
+  will send to Environment Runner [creating pre-deploy and other steps] only
+  when the policies mentioned are satisfied.
+fullName: EnvironmentExecutionPolicy
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: concurrencyCount
+    uid: azure-devops-extension-api.EnvironmentExecutionPolicy.concurrencyCount
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.EnvironmentExecutionPolicy.concurrencyCount
-    name: concurrencyCount
-    fullName: concurrencyCount
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       This policy decides, how many environments would be with Environment
       Runner.
+    fullName: concurrencyCount
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'concurrencyCount: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: queueDepthCount
+    uid: azure-devops-extension-api.EnvironmentExecutionPolicy.queueDepthCount
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.EnvironmentExecutionPolicy.queueDepthCount
-    name: queueDepthCount
-    fullName: queueDepthCount
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Queue depth in the EnvironmentQueue table, this table keeps the
       environment entries till Environment Runner is free [as per it's policy]
       to take another environment for running.
+    fullName: queueDepthCount
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queueDepthCount: number'
       return:
-        type:
-          - number
-    package: azure-devops-extension-api
+        type: number
+        description: ''

@@ -1,489 +1,370 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TaskAgentJobRequest
-    name: TaskAgentJobRequest
-    fullName: TaskAgentJobRequest
-    children:
-      - azure-devops-extension-api.TaskAgentJobRequest.agentDelays
-      - azure-devops-extension-api.TaskAgentJobRequest.agentSpecification
-      - azure-devops-extension-api.TaskAgentJobRequest.assignTime
-      - azure-devops-extension-api.TaskAgentJobRequest.data
-      - azure-devops-extension-api.TaskAgentJobRequest.definition
-      - azure-devops-extension-api.TaskAgentJobRequest.demands
-      - azure-devops-extension-api.TaskAgentJobRequest.expectedDuration
-      - azure-devops-extension-api.TaskAgentJobRequest.finishTime
-      - azure-devops-extension-api.TaskAgentJobRequest.hostId
-      - azure-devops-extension-api.TaskAgentJobRequest.jobId
-      - azure-devops-extension-api.TaskAgentJobRequest.jobName
-      - azure-devops-extension-api.TaskAgentJobRequest.lockedUntil
-      - azure-devops-extension-api.TaskAgentJobRequest.matchedAgents
-      - azure-devops-extension-api.TaskAgentJobRequest.matchesAllAgentsInPool
-      - azure-devops-extension-api.TaskAgentJobRequest.orchestrationId
-      - azure-devops-extension-api.TaskAgentJobRequest.owner
-      - azure-devops-extension-api.TaskAgentJobRequest.planGroup
-      - azure-devops-extension-api.TaskAgentJobRequest.planId
-      - azure-devops-extension-api.TaskAgentJobRequest.planType
-      - azure-devops-extension-api.TaskAgentJobRequest.poolId
-      - azure-devops-extension-api.TaskAgentJobRequest.queueId
-      - azure-devops-extension-api.TaskAgentJobRequest.queueTime
-      - azure-devops-extension-api.TaskAgentJobRequest.receiveTime
-      - azure-devops-extension-api.TaskAgentJobRequest.requestId
-      - azure-devops-extension-api.TaskAgentJobRequest.reservedAgent
-      - azure-devops-extension-api.TaskAgentJobRequest.result
-      - azure-devops-extension-api.TaskAgentJobRequest.scopeId
-      - azure-devops-extension-api.TaskAgentJobRequest.serviceOwner
-      - azure-devops-extension-api.TaskAgentJobRequest.statusMessage
-    langs:
-      - typeScript
-    type: interface
-    summary: A job request for an agent.
+### YamlMime:TSType
+name: TaskAgentJobRequest
+uid: azure-devops-extension-api.TaskAgentJobRequest
+package: azure-devops-extension-api
+summary: A job request for an agent.
+fullName: TaskAgentJobRequest
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: agentDelays
+    uid: azure-devops-extension-api.TaskAgentJobRequest.agentDelays
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.agentDelays
-    name: agentDelays
-    fullName: agentDelays
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: agentDelays
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'agentDelays: TaskAgentDelaySource[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TaskAgentDelaySource[]'
+        type: '<xref uid="azure-devops-extension-api.TaskAgentDelaySource" />[]'
+        description: ''
+  - name: agentSpecification
+    uid: azure-devops-extension-api.TaskAgentJobRequest.agentSpecification
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.agentSpecification
-    name: agentSpecification
-    fullName: agentSpecification
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: agentSpecification
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'agentSpecification: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: assignTime
+    uid: azure-devops-extension-api.TaskAgentJobRequest.assignTime
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.assignTime
-    name: assignTime
-    fullName: assignTime
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The date/time this request was assigned.
+    fullName: assignTime
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'assignTime: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: data
+    uid: azure-devops-extension-api.TaskAgentJobRequest.data
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.data
-    name: data
-    fullName: data
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Additional data about the request.
+    fullName: data
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'data: [key: string]: string'
       return:
-        type:
-          - '[key: string]: string'
+        type: '[key: string]\: string'
+        description: ''
+  - name: definition
+    uid: azure-devops-extension-api.TaskAgentJobRequest.definition
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.definition
-    name: definition
-    fullName: definition
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The pipeline definition associated with this request
+    fullName: definition
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'definition: TaskOrchestrationOwner'
       return:
-        type:
-          - azure-devops-extension-api.TaskOrchestrationOwner
+        type: <xref uid="azure-devops-extension-api.TaskOrchestrationOwner" />
+        description: ''
+  - name: demands
+    uid: azure-devops-extension-api.TaskAgentJobRequest.demands
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.demands
-    name: demands
-    fullName: demands
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: A list of demands required to fulfill this request.
+    fullName: demands
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'demands: Demand[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Demand[]'
+        type: '<xref uid="azure-devops-extension-api.Demand" />[]'
+        description: ''
+  - name: expectedDuration
+    uid: azure-devops-extension-api.TaskAgentJobRequest.expectedDuration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.expectedDuration
-    name: expectedDuration
-    fullName: expectedDuration
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: expectedDuration
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'expectedDuration: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: finishTime
+    uid: azure-devops-extension-api.TaskAgentJobRequest.finishTime
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.finishTime
-    name: finishTime
-    fullName: finishTime
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The date/time this request was finished.
+    fullName: finishTime
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'finishTime: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: hostId
+    uid: azure-devops-extension-api.TaskAgentJobRequest.hostId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.hostId
-    name: hostId
-    fullName: hostId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The host which triggered this request.
+    fullName: hostId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'hostId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: jobId
+    uid: azure-devops-extension-api.TaskAgentJobRequest.jobId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.jobId
-    name: jobId
-    fullName: jobId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ID of the job resulting from this request.
+    fullName: jobId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'jobId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: jobName
+    uid: azure-devops-extension-api.TaskAgentJobRequest.jobName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.jobName
-    name: jobName
-    fullName: jobName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Name of the job resulting from this request.
+    fullName: jobName
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'jobName: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: lockedUntil
+    uid: azure-devops-extension-api.TaskAgentJobRequest.lockedUntil
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.lockedUntil
-    name: lockedUntil
-    fullName: lockedUntil
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The deadline for the agent to renew the lock.
+    fullName: lockedUntil
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lockedUntil: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: matchedAgents
+    uid: azure-devops-extension-api.TaskAgentJobRequest.matchedAgents
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.matchedAgents
-    name: matchedAgents
-    fullName: matchedAgents
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: matchedAgents
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'matchedAgents: TaskAgentReference[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TaskAgentReference[]'
+        type: '<xref uid="azure-devops-extension-api.TaskAgentReference" />[]'
+        description: ''
+  - name: matchesAllAgentsInPool
+    uid: azure-devops-extension-api.TaskAgentJobRequest.matchesAllAgentsInPool
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.matchesAllAgentsInPool
-    name: matchesAllAgentsInPool
-    fullName: matchesAllAgentsInPool
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: matchesAllAgentsInPool
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'matchesAllAgentsInPool: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: orchestrationId
+    uid: azure-devops-extension-api.TaskAgentJobRequest.orchestrationId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.orchestrationId
-    name: orchestrationId
-    fullName: orchestrationId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: orchestrationId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'orchestrationId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: owner
+    uid: azure-devops-extension-api.TaskAgentJobRequest.owner
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.owner
-    name: owner
-    fullName: owner
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The pipeline associated with this request
+    fullName: owner
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'owner: TaskOrchestrationOwner'
       return:
-        type:
-          - azure-devops-extension-api.TaskOrchestrationOwner
+        type: <xref uid="azure-devops-extension-api.TaskOrchestrationOwner" />
+        description: ''
+  - name: planGroup
+    uid: azure-devops-extension-api.TaskAgentJobRequest.planGroup
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.planGroup
-    name: planGroup
-    fullName: planGroup
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: planGroup
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'planGroup: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: planId
+    uid: azure-devops-extension-api.TaskAgentJobRequest.planId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.planId
-    name: planId
-    fullName: planId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Internal ID for the orchestration plan connected with this request.
+    fullName: planId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'planId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: planType
+    uid: azure-devops-extension-api.TaskAgentJobRequest.planType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.planType
-    name: planType
-    fullName: planType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Internal detail representing the type of orchestration plan.
+    fullName: planType
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'planType: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: poolId
+    uid: azure-devops-extension-api.TaskAgentJobRequest.poolId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.poolId
-    name: poolId
-    fullName: poolId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The ID of the pool this request targets
+    fullName: poolId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'poolId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: queueId
+    uid: azure-devops-extension-api.TaskAgentJobRequest.queueId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.queueId
-    name: queueId
-    fullName: queueId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The ID of the queue this request targets
+    fullName: queueId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queueId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: queueTime
+    uid: azure-devops-extension-api.TaskAgentJobRequest.queueTime
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.queueTime
-    name: queueTime
-    fullName: queueTime
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The date/time this request was queued.
+    fullName: queueTime
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queueTime: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: receiveTime
+    uid: azure-devops-extension-api.TaskAgentJobRequest.receiveTime
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.receiveTime
-    name: receiveTime
-    fullName: receiveTime
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The date/time this request was receieved by an agent.
+    fullName: receiveTime
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'receiveTime: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: requestId
+    uid: azure-devops-extension-api.TaskAgentJobRequest.requestId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.requestId
-    name: requestId
-    fullName: requestId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ID of the request.
+    fullName: requestId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'requestId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: reservedAgent
+    uid: azure-devops-extension-api.TaskAgentJobRequest.reservedAgent
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.reservedAgent
-    name: reservedAgent
-    fullName: reservedAgent
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The agent allocated for this request.
+    fullName: reservedAgent
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'reservedAgent: TaskAgentReference'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentReference
+        type: <xref uid="azure-devops-extension-api.TaskAgentReference" />
+        description: ''
+  - name: result
+    uid: azure-devops-extension-api.TaskAgentJobRequest.result
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.result
-    name: result
-    fullName: result
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The result of this request.
+    fullName: result
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'result: TaskResult'
       return:
-        type:
-          - azure-devops-extension-api.TaskResult
+        type: <xref uid="azure-devops-extension-api.TaskResult" />
+        description: ''
+  - name: scopeId
+    uid: azure-devops-extension-api.TaskAgentJobRequest.scopeId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.scopeId
-    name: scopeId
-    fullName: scopeId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Scope of the pipeline; matches the project ID.
+    fullName: scopeId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scopeId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: serviceOwner
+    uid: azure-devops-extension-api.TaskAgentJobRequest.serviceOwner
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.serviceOwner
-    name: serviceOwner
-    fullName: serviceOwner
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The service which owns this request.
+    fullName: serviceOwner
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'serviceOwner: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: statusMessage
+    uid: azure-devops-extension-api.TaskAgentJobRequest.statusMessage
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobRequest.statusMessage
-    name: statusMessage
-    fullName: statusMessage
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: statusMessage
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'statusMessage: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: userDelayed
+    uid: azure-devops-extension-api.TaskAgentJobRequest.userDelayed
     package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.TaskAgentDelaySource[]'
-    name: 'TaskAgentDelaySource[]'
-    spec.typeScript:
-      - name: TaskAgentDelaySource
-        fullName: TaskAgentDelaySource
-        uid: azure-devops-extension-api.TaskAgentDelaySource
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.TaskOrchestrationOwner
-    name: TaskOrchestrationOwner
-    spec.typeScript:
-      - name: TaskOrchestrationOwner
-        fullName: TaskOrchestrationOwner
-        uid: azure-devops-extension-api.TaskOrchestrationOwner
-  - uid: 'azure-devops-extension-api.Demand[]'
-    name: 'Demand[]'
-    spec.typeScript:
-      - name: Demand
-        fullName: Demand
-        uid: azure-devops-extension-api.Demand
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-devops-extension-api.TaskAgentReference[]'
-    name: 'TaskAgentReference[]'
-    spec.typeScript:
-      - name: TaskAgentReference
-        fullName: TaskAgentReference
-        uid: azure-devops-extension-api.TaskAgentReference
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.TaskAgentReference
-    name: TaskAgentReference
-    spec.typeScript:
-      - name: TaskAgentReference
-        fullName: TaskAgentReference
-        uid: azure-devops-extension-api.TaskAgentReference
-  - uid: azure-devops-extension-api.TaskResult
-    name: TaskResult
-    spec.typeScript:
-      - name: TaskResult
-        fullName: TaskResult
-        uid: azure-devops-extension-api.TaskResult
+    summary: ''
+    fullName: userDelayed
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'userDelayed: boolean'
+      return:
+        type: boolean
+        description: ''

@@ -1,61 +1,39 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitPullRequestMergeStrategy
-    name: GitPullRequestMergeStrategy
-    fullName: GitPullRequestMergeStrategy
-    children:
-      - azure-devops-extension-api.GitPullRequestMergeStrategy.NoFastForward
-      - azure-devops-extension-api.GitPullRequestMergeStrategy.Squash
-      - azure-devops-extension-api.GitPullRequestMergeStrategy.Rebase
-      - azure-devops-extension-api.GitPullRequestMergeStrategy.RebaseMerge
-    langs:
-      - typeScript
-    type: enum
-    summary: >-
-      Enumeration of possible merge strategies which can be used to complete a
-      pull request.
+### YamlMime:TSEnum
+name: GitPullRequestMergeStrategy
+uid: azure-devops-extension-api.GitPullRequestMergeStrategy
+package: azure-devops-extension-api
+summary: >-
+  Enumeration of possible merge strategies which can be used to complete a pull
+  request.
+fullName: GitPullRequestMergeStrategy
+isPreview: false
+isDeprecated: false
+fields:
+  - name: NoFastForward
+    uid: azure-devops-extension-api.GitPullRequestMergeStrategy.NoFastForward
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestMergeStrategy.NoFastForward
-    name: NoFastForward
-    children: []
-    langs:
-      - typeScript
     summary: >-
       A two-parent, no-fast-forward merge. The source branch is unchanged. This
       is the default behavior.
-    type: field
     numericValue: 1
+  - name: Squash
+    uid: azure-devops-extension-api.GitPullRequestMergeStrategy.Squash
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestMergeStrategy.Squash
-    name: Squash
-    children: []
-    langs:
-      - typeScript
     summary: Put all changes from the pull request into a single-parent commit.
-    type: field
     numericValue: 2
+  - name: Rebase
+    uid: azure-devops-extension-api.GitPullRequestMergeStrategy.Rebase
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestMergeStrategy.Rebase
-    name: Rebase
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Rebase the source branch on top of the target branch HEAD commit, and
       fast-forward the target branch. The source branch is updated during the
       rebase operation.
-    type: field
     numericValue: 3
+  - name: RebaseMerge
+    uid: azure-devops-extension-api.GitPullRequestMergeStrategy.RebaseMerge
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestMergeStrategy.RebaseMerge
-    name: RebaseMerge
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Rebase the source branch on top of the target branch HEAD commit, and
       create a two-parent, no-fast-forward merge. The source branch is updated
       during the rebase operation.
-    type: field
     numericValue: 4
-    package: azure-devops-extension-api

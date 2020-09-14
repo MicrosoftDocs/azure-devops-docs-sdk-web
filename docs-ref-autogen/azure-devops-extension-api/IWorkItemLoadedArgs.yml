@@ -1,54 +1,51 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IWorkItemLoadedArgs
-    name: IWorkItemLoadedArgs
-    fullName: IWorkItemLoadedArgs
-    children:
-      - azure-devops-extension-api.IWorkItemLoadedArgs.isNew
-      - azure-devops-extension-api.IWorkItemLoadedArgs.isReadOnly
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Interface defining the arguments for the 'onLoaded' notification sent by
-      the ActiveWorkItemService
-    extends:
-      name: azure-devops-extension-api.IWorkItemChangedArgs
+### YamlMime:TSType
+name: IWorkItemLoadedArgs
+uid: azure-devops-extension-api.IWorkItemLoadedArgs
+package: azure-devops-extension-api
+summary: >-
+  Interface defining the arguments for the 'onLoaded' notification sent by the
+  ActiveWorkItemService
+fullName: IWorkItemLoadedArgs
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.IWorkItemLoadedArgs.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemLoadedArgs.isNew
-    name: isNew
-    fullName: isNew
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Id of the work item.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+  - name: isNew
+    uid: azure-devops-extension-api.IWorkItemLoadedArgs.isNew
+    package: azure-devops-extension-api
     summary: '''true'' if the work item is a ''new'', unsaved work item, ''false'' otherwise.'
+    fullName: isNew
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isNew: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: isReadOnly
+    uid: azure-devops-extension-api.IWorkItemLoadedArgs.isReadOnly
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemLoadedArgs.isReadOnly
-    name: isReadOnly
-    fullName: isReadOnly
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       'true' write rest apis are disabled. All controls should be rendered as
       readonly
+    fullName: isReadOnly
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isReadOnly: boolean'
       return:
-        type:
-          - boolean
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.IWorkItemChangedArgs
-    name: IWorkItemChangedArgs
-    spec.typeScript:
-      - name: IWorkItemChangedArgs
-        fullName: IWorkItemChangedArgs
-        uid: azure-devops-extension-api.IWorkItemChangedArgs
+        type: boolean
+        description: ''
+extends: <xref uid="azure-devops-extension-api.IWorkItemChangedArgs" />
