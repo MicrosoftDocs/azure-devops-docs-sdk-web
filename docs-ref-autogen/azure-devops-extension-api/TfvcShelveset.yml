@@ -1,110 +1,143 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TfvcShelveset
-    name: TfvcShelveset
-    fullName: TfvcShelveset
-    children:
-      - azure-devops-extension-api.TfvcShelveset.changes
-      - azure-devops-extension-api.TfvcShelveset.notes
-      - azure-devops-extension-api.TfvcShelveset.policyOverride
-      - azure-devops-extension-api.TfvcShelveset.workItems
-    langs:
-      - typeScript
-    type: interface
-    summary: This is the deep shelveset class
-    extends:
-      name: azure-devops-extension-api.TfvcShelvesetRef
+### YamlMime:TSType
+name: TfvcShelveset
+uid: azure-devops-extension-api.TfvcShelveset
+package: azure-devops-extension-api
+summary: Metadata for a shelveset.
+fullName: TfvcShelveset
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: changes
+    uid: azure-devops-extension-api.TfvcShelveset.changes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcShelveset.changes
-    name: changes
+    summary: List of changes.
     fullName: changes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'changes: TfvcChange[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TfvcChange[]'
+        type: '<xref uid="azure-devops-extension-api.TfvcChange" />[]'
+        description: ''
+  - name: comment
+    uid: azure-devops-extension-api.TfvcShelveset.comment
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcShelveset.notes
-    name: notes
+    summary: Shelveset comment.
+    fullName: comment
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        type: string
+        description: ''
+  - name: commentTruncated
+    uid: azure-devops-extension-api.TfvcShelveset.commentTruncated
+    package: azure-devops-extension-api
+    summary: Shelveset comment truncated as applicable.
+    fullName: commentTruncated
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'commentTruncated: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: createdDate
+    uid: azure-devops-extension-api.TfvcShelveset.createdDate
+    package: azure-devops-extension-api
+    summary: Shelveset create date.
+    fullName: createdDate
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        type: Date
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.TfvcShelveset.id
+    package: azure-devops-extension-api
+    summary: Shelveset Id.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        type: string
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TfvcShelveset.name
+    package: azure-devops-extension-api
+    summary: Shelveset name.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: notes
+    uid: azure-devops-extension-api.TfvcShelveset.notes
+    package: azure-devops-extension-api
+    summary: List of checkin notes.
     fullName: notes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'notes: CheckinNote[]'
       return:
-        type:
-          - 'azure-devops-extension-api.CheckinNote[]'
+        type: '<xref uid="azure-devops-extension-api.CheckinNote" />[]'
+        description: ''
+  - name: owner
+    uid: azure-devops-extension-api.TfvcShelveset.owner
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcShelveset.policyOverride
-    name: policyOverride
+    summary: Shelveset Owner.
+    fullName: owner
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'owner: IdentityRef'
+      return:
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: policyOverride
+    uid: azure-devops-extension-api.TfvcShelveset.policyOverride
+    package: azure-devops-extension-api
+    summary: Policy override information if applicable.
     fullName: policyOverride
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'policyOverride: TfvcPolicyOverrideInfo'
       return:
-        type:
-          - azure-devops-extension-api.TfvcPolicyOverrideInfo
+        type: <xref uid="azure-devops-extension-api.TfvcPolicyOverrideInfo" />
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.TfvcShelveset.url
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcShelveset.workItems
-    name: workItems
+    summary: Shelveset Url.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+  - name: workItems
+    uid: azure-devops-extension-api.TfvcShelveset.workItems
+    package: azure-devops-extension-api
+    summary: List of associated workitems.
     fullName: workItems
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workItems: AssociatedWorkItem[]'
       return:
-        type:
-          - 'azure-devops-extension-api.AssociatedWorkItem[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TfvcShelvesetRef
-    name: TfvcShelvesetRef
-    spec.typeScript:
-      - name: TfvcShelvesetRef
-        fullName: TfvcShelvesetRef
-        uid: azure-devops-extension-api.TfvcShelvesetRef
-  - uid: 'azure-devops-extension-api.TfvcChange[]'
-    name: 'TfvcChange[]'
-    spec.typeScript:
-      - name: TfvcChange
-        fullName: TfvcChange
-        uid: azure-devops-extension-api.TfvcChange
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-devops-extension-api.CheckinNote[]'
-    name: 'CheckinNote[]'
-    spec.typeScript:
-      - name: CheckinNote
-        fullName: CheckinNote
-        uid: azure-devops-extension-api.CheckinNote
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.TfvcPolicyOverrideInfo
-    name: TfvcPolicyOverrideInfo
-    spec.typeScript:
-      - name: TfvcPolicyOverrideInfo
-        fullName: TfvcPolicyOverrideInfo
-        uid: azure-devops-extension-api.TfvcPolicyOverrideInfo
-  - uid: 'azure-devops-extension-api.AssociatedWorkItem[]'
-    name: 'AssociatedWorkItem[]'
-    spec.typeScript:
-      - name: AssociatedWorkItem
-        fullName: AssociatedWorkItem
-        uid: azure-devops-extension-api.AssociatedWorkItem
-      - name: '[]'
-        fullName: '[]'
+        type: '<xref uid="azure-devops-extension-api.AssociatedWorkItem" />[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TfvcShelvesetRef" />

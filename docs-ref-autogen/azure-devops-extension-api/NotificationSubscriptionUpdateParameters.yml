@@ -1,199 +1,129 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters
-    name: NotificationSubscriptionUpdateParameters
-    fullName: NotificationSubscriptionUpdateParameters
-    children:
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionUpdateParameters.adminSettings
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionUpdateParameters.channel
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionUpdateParameters.description
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionUpdateParameters.filter
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionUpdateParameters.scope
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionUpdateParameters.status
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionUpdateParameters.statusMessage
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionUpdateParameters.userSettings
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Parameters for updating an existing subscription. A subscription defines
-      criteria for matching events and how the subscription's subscriber should
-      be notified about those events. Note: only the fields to be updated should
-      be set.
-    package: azure-devops-extension-api
-  - uid: >-
+### YamlMime:TSType
+name: NotificationSubscriptionUpdateParameters
+uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters
+package: azure-devops-extension-api
+summary: >-
+  Parameters for updating an existing subscription. A subscription defines
+  criteria for matching events and how the subscription's subscriber should be
+  notified about those events. Note: only the fields to be updated should be
+  set.
+fullName: NotificationSubscriptionUpdateParameters
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: adminSettings
+    uid: >-
       azure-devops-extension-api.NotificationSubscriptionUpdateParameters.adminSettings
-    name: adminSettings
-    fullName: adminSettings
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       Admin-managed settings for the subscription. Only applies to subscriptions
       where the subscriber is a group.
+    fullName: adminSettings
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'adminSettings: SubscriptionAdminSettings'
       return:
-        type:
-          - azure-devops-extension-api.SubscriptionAdminSettings
-    package: azure-devops-extension-api
-  - uid: >-
+        type: <xref uid="azure-devops-extension-api.SubscriptionAdminSettings" />
+        description: ''
+  - name: channel
+    uid: >-
       azure-devops-extension-api.NotificationSubscriptionUpdateParameters.channel
-    name: channel
-    fullName: channel
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: Channel for delivering notifications triggered by the subscription.
+    fullName: channel
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'channel: ISubscriptionChannel'
       return:
-        type:
-          - azure-devops-extension-api.ISubscriptionChannel
-    package: azure-devops-extension-api
-  - uid: >-
+        type: <xref uid="azure-devops-extension-api.ISubscriptionChannel" />
+        description: ''
+  - name: description
+    uid: >-
       azure-devops-extension-api.NotificationSubscriptionUpdateParameters.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       Updated description for the subscription. Typically describes filter
       criteria which helps identity the subscription.
+    fullName: description
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: filter
+    uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters.filter
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters.filter
-    name: filter
-    fullName: filter
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Matching criteria for the subscription. ExpressionFilter
+    fullName: filter
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'filter: ISubscriptionFilter'
       return:
-        type:
-          - azure-devops-extension-api.ISubscriptionFilter
+        type: <xref uid="azure-devops-extension-api.ISubscriptionFilter" />
+        description: ''
+  - name: scope
+    uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters.scope
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters.scope
-    name: scope
-    fullName: scope
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The container in which events must be published from in order to be
       matched by the new subscription. If not specified, defaults to the current
       host (typically the current account or project collection). For example, a
       subscription scoped to project A will not produce notifications for events
       published from project B.
+    fullName: scope
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scope: SubscriptionScope'
       return:
-        type:
-          - azure-devops-extension-api.SubscriptionScope
+        type: <xref uid="azure-devops-extension-api.SubscriptionScope" />
+        description: ''
+  - name: status
+    uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters.status
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Updated status for the subscription. Typically used to enable or disable a
       subscription.
+    fullName: status
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'status: SubscriptionStatus'
       return:
-        type:
-          - azure-devops-extension-api.SubscriptionStatus
-    package: azure-devops-extension-api
-  - uid: >-
+        type: <xref uid="azure-devops-extension-api.SubscriptionStatus" />
+        description: ''
+  - name: statusMessage
+    uid: >-
       azure-devops-extension-api.NotificationSubscriptionUpdateParameters.statusMessage
-    name: statusMessage
-    fullName: statusMessage
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: Optional message that provides more details about the updated status.
+    fullName: statusMessage
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'statusMessage: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-  - uid: >-
+        type: string
+        description: ''
+  - name: userSettings
+    uid: >-
       azure-devops-extension-api.NotificationSubscriptionUpdateParameters.userSettings
-    name: userSettings
-    fullName: userSettings
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       User-managed settings for the subscription. Only applies to subscriptions
       where the subscriber is a group. Typically used to opt-in or opt-out a
       user from a group subscription.
+    fullName: userSettings
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'userSettings: SubscriptionUserSettings'
       return:
-        type:
-          - azure-devops-extension-api.SubscriptionUserSettings
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.SubscriptionAdminSettings
-    name: SubscriptionAdminSettings
-    spec.typeScript:
-      - name: SubscriptionAdminSettings
-        fullName: SubscriptionAdminSettings
-        uid: azure-devops-extension-api.SubscriptionAdminSettings
-  - uid: azure-devops-extension-api.ISubscriptionChannel
-    name: ISubscriptionChannel
-    spec.typeScript:
-      - name: ISubscriptionChannel
-        fullName: ISubscriptionChannel
-        uid: azure-devops-extension-api.ISubscriptionChannel
-  - uid: azure-devops-extension-api.ISubscriptionFilter
-    name: ISubscriptionFilter
-    spec.typeScript:
-      - name: ISubscriptionFilter
-        fullName: ISubscriptionFilter
-        uid: azure-devops-extension-api.ISubscriptionFilter
-  - uid: azure-devops-extension-api.SubscriptionScope
-    name: SubscriptionScope
-    spec.typeScript:
-      - name: SubscriptionScope
-        fullName: SubscriptionScope
-        uid: azure-devops-extension-api.SubscriptionScope
-  - uid: azure-devops-extension-api.SubscriptionStatus
-    name: SubscriptionStatus
-    spec.typeScript:
-      - name: SubscriptionStatus
-        fullName: SubscriptionStatus
-        uid: azure-devops-extension-api.SubscriptionStatus
-  - uid: azure-devops-extension-api.SubscriptionUserSettings
-    name: SubscriptionUserSettings
-    spec.typeScript:
-      - name: SubscriptionUserSettings
-        fullName: SubscriptionUserSettings
-        uid: azure-devops-extension-api.SubscriptionUserSettings
+        type: <xref uid="azure-devops-extension-api.SubscriptionUserSettings" />
+        description: ''

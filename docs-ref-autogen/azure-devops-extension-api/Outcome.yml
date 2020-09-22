@@ -1,183 +1,101 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.Outcome
-    name: Outcome
-    fullName: Outcome
-    children:
-      - azure-devops-extension-api.Outcome.Unspecified
-      - azure-devops-extension-api.Outcome.None
-      - azure-devops-extension-api.Outcome.Passed
-      - azure-devops-extension-api.Outcome.Failed
-      - azure-devops-extension-api.Outcome.Inconclusive
-      - azure-devops-extension-api.Outcome.Timeout
-      - azure-devops-extension-api.Outcome.Aborted
-      - azure-devops-extension-api.Outcome.Blocked
-      - azure-devops-extension-api.Outcome.NotExecuted
-      - azure-devops-extension-api.Outcome.Warning
-      - azure-devops-extension-api.Outcome.Error
-      - azure-devops-extension-api.Outcome.NotApplicable
-      - azure-devops-extension-api.Outcome.Paused
-      - azure-devops-extension-api.Outcome.InProgress
-      - azure-devops-extension-api.Outcome.MaxValue
-      - azure-devops-extension-api.Outcome.NotImpacted
-    langs:
-      - typeScript
-    type: enum
-    summary: ''
+### YamlMime:TSEnum
+name: Outcome
+uid: azure-devops-extension-api.Outcome
+package: azure-devops-extension-api
+summary: ''
+fullName: Outcome
+isPreview: false
+isDeprecated: false
+fields:
+  - name: Unspecified
+    uid: azure-devops-extension-api.Outcome.Unspecified
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Unspecified
-    name: Unspecified
-    children: []
-    langs:
-      - typeScript
     summary: Only used during an update to preserve the existing value.
-    type: field
     numericValue: 0
+  - name: None
+    uid: azure-devops-extension-api.Outcome.None
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.None
-    name: None
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Test has not been completed, or the test type does not report
       pass/failure.
-    type: field
     numericValue: 1
+  - name: Passed
+    uid: azure-devops-extension-api.Outcome.Passed
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Passed
-    name: Passed
-    children: []
-    langs:
-      - typeScript
     summary: Test was executed w/o any issues.
-    type: field
     numericValue: 2
+  - name: Failed
+    uid: azure-devops-extension-api.Outcome.Failed
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Failed
-    name: Failed
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Test was executed, but there were issues. Issues may involve exceptions or
       failed assertions.
-    type: field
     numericValue: 3
+  - name: Inconclusive
+    uid: azure-devops-extension-api.Outcome.Inconclusive
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Inconclusive
-    name: Inconclusive
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Test has completed, but we can't say if it passed or failed. May be used
       for aborted tests...
-    type: field
     numericValue: 4
+  - name: Timeout
+    uid: azure-devops-extension-api.Outcome.Timeout
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Timeout
-    name: Timeout
-    children: []
-    langs:
-      - typeScript
     summary: The test timed out
-    type: field
     numericValue: 5
+  - name: Aborted
+    uid: azure-devops-extension-api.Outcome.Aborted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Aborted
-    name: Aborted
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Test was aborted. This was not caused by a user gesture, but rather by a
       framework decision.
-    type: field
     numericValue: 6
+  - name: Blocked
+    uid: azure-devops-extension-api.Outcome.Blocked
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Blocked
-    name: Blocked
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Test had it chance for been executed but was not, as
       ITestElement.IsRunnable == false.
-    type: field
     numericValue: 7
+  - name: NotExecuted
+    uid: azure-devops-extension-api.Outcome.NotExecuted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.NotExecuted
-    name: NotExecuted
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Test was not executed. This was caused by a user gesture - e.g. user hit
       stop button.
-    type: field
     numericValue: 8
+  - name: Warning
+    uid: azure-devops-extension-api.Outcome.Warning
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Warning
-    name: Warning
-    children: []
-    langs:
-      - typeScript
     summary: To be used by Run level results. This is not a failure.
-    type: field
     numericValue: 9
+  - name: Error
+    uid: azure-devops-extension-api.Outcome.Error
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Error
-    name: Error
-    children: []
-    langs:
-      - typeScript
     summary: There was a system error while we were trying to execute a test.
-    type: field
     numericValue: 10
+  - name: NotApplicable
+    uid: azure-devops-extension-api.Outcome.NotApplicable
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.NotApplicable
-    name: NotApplicable
-    children: []
-    langs:
-      - typeScript
     summary: Test is Not Applicable for execution.
-    type: field
     numericValue: 11
+  - name: Paused
+    uid: azure-devops-extension-api.Outcome.Paused
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.Paused
-    name: Paused
-    children: []
-    langs:
-      - typeScript
     summary: Test is paused.
-    type: field
     numericValue: 12
+  - name: InProgress
+    uid: azure-devops-extension-api.Outcome.InProgress
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.InProgress
-    name: InProgress
-    children: []
-    langs:
-      - typeScript
     summary: Test is currently executing. Added this for TCM charts
-    type: field
     numericValue: 13
+  - name: MaxValue
+    uid: azure-devops-extension-api.Outcome.MaxValue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.MaxValue
-    name: MaxValue
-    children: []
-    langs:
-      - typeScript
     summary: ''
-    type: field
     numericValue: 14
+  - name: NotImpacted
+    uid: azure-devops-extension-api.Outcome.NotImpacted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Outcome.NotImpacted
-    name: NotImpacted
-    children: []
-    langs:
-      - typeScript
     summary: Test is not impacted. Added fot TIA.
-    type: field
     numericValue: 14
-    package: azure-devops-extension-api

@@ -1,48 +1,33 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IExtensionDataService
-    name: IExtensionDataService
-    fullName: IExtensionDataService
-    children:
-      - azure-devops-extension-api.IExtensionDataService.getExtensionDataManager
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: IExtensionDataService
+uid: azure-devops-extension-api.IExtensionDataService
+package: azure-devops-extension-api
+summary: ''
+fullName: IExtensionDataService
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: 'getExtensionDataManager(string, string)'
+    uid: azure-devops-extension-api.IExtensionDataService.getExtensionDataManager
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IExtensionDataService.getExtensionDataManager
-    name: 'getExtensionDataManager(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets a class that can be used to manage extension data.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getExtensionDataManager(extensionId: string, accessToken:
         string)
       parameters:
         - id: extensionId
-          type:
-            - string
+          type: string
           description: Id of the extension (publisher.extension)
         - id: accessToken
-          type:
-            - string
+          type: string
           description: |
             Access token to use for the extension
       return:
-        type:
-          - Promise<azure-devops-extension-api.IExtensionDataManager>
-    package: azure-devops-extension-api
-references:
-  - uid: Promise<azure-devops-extension-api.IExtensionDataManager>
-    name: IExtensionDataManager>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: IExtensionDataManager
-        fullName: IExtensionDataManager
-        uid: azure-devops-extension-api.IExtensionDataManager
-      - name: '>'
-        fullName: '>'
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.IExtensionDataManager" />&gt;
+        description: ''

@@ -1,101 +1,72 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TaskAgentSession
-    name: TaskAgentSession
-    fullName: TaskAgentSession
-    children:
-      - azure-devops-extension-api.TaskAgentSession.agent
-      - azure-devops-extension-api.TaskAgentSession.encryptionKey
-      - azure-devops-extension-api.TaskAgentSession.ownerName
-      - azure-devops-extension-api.TaskAgentSession.sessionId
-      - azure-devops-extension-api.TaskAgentSession.systemCapabilities
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents a session for performing message exchanges from an agent.
+### YamlMime:TSType
+name: TaskAgentSession
+uid: azure-devops-extension-api.TaskAgentSession
+package: azure-devops-extension-api
+summary: Represents a session for performing message exchanges from an agent.
+fullName: TaskAgentSession
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: agent
+    uid: azure-devops-extension-api.TaskAgentSession.agent
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentSession.agent
-    name: agent
-    fullName: agent
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets or sets the agent which is the target of the session.
+    fullName: agent
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'agent: TaskAgentReference'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentReference
+        type: <xref uid="azure-devops-extension-api.TaskAgentReference" />
+        description: ''
+  - name: encryptionKey
+    uid: azure-devops-extension-api.TaskAgentSession.encryptionKey
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentSession.encryptionKey
-    name: encryptionKey
-    fullName: encryptionKey
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets the key used to encrypt message traffic for this session.
+    fullName: encryptionKey
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'encryptionKey: TaskAgentSessionKey'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentSessionKey
+        type: <xref uid="azure-devops-extension-api.TaskAgentSessionKey" />
+        description: ''
+  - name: ownerName
+    uid: azure-devops-extension-api.TaskAgentSession.ownerName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentSession.ownerName
-    name: ownerName
-    fullName: ownerName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Gets or sets the owner name of this session. Generally this will be the
       machine of origination.
+    fullName: ownerName
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'ownerName: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: sessionId
+    uid: azure-devops-extension-api.TaskAgentSession.sessionId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentSession.sessionId
-    name: sessionId
-    fullName: sessionId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets the unique identifier for this session.
+    fullName: sessionId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sessionId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: systemCapabilities
+    uid: azure-devops-extension-api.TaskAgentSession.systemCapabilities
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentSession.systemCapabilities
-    name: systemCapabilities
-    fullName: systemCapabilities
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: systemCapabilities
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'systemCapabilities: [key: string]: string'
       return:
-        type:
-          - '[key: string]: string'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TaskAgentReference
-    name: TaskAgentReference
-    spec.typeScript:
-      - name: TaskAgentReference
-        fullName: TaskAgentReference
-        uid: azure-devops-extension-api.TaskAgentReference
-  - uid: azure-devops-extension-api.TaskAgentSessionKey
-    name: TaskAgentSessionKey
-    spec.typeScript:
-      - name: TaskAgentSessionKey
-        fullName: TaskAgentSessionKey
-        uid: azure-devops-extension-api.TaskAgentSessionKey
+        type: '[key: string]\: string'
+        description: ''

@@ -1,80 +1,97 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ExtensionState
-    name: ExtensionState
-    fullName: ExtensionState
-    children:
-      - azure-devops-extension-api.ExtensionState.extensionName
-      - azure-devops-extension-api.ExtensionState.lastVersionCheck
-      - azure-devops-extension-api.ExtensionState.publisherName
-      - azure-devops-extension-api.ExtensionState.version
-    langs:
-      - typeScript
-    type: interface
-    summary: The state of an extension
-    extends:
-      name: azure-devops-extension-api.InstalledExtensionState
+### YamlMime:TSType
+name: ExtensionState
+uid: azure-devops-extension-api.ExtensionState
+package: azure-devops-extension-api
+summary: The state of an extension
+fullName: ExtensionState
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: extensionName
+    uid: azure-devops-extension-api.ExtensionState.extensionName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionState.extensionName
-    name: extensionName
-    fullName: extensionName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: extensionName
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'extensionName: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: flags
+    uid: azure-devops-extension-api.ExtensionState.flags
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionState.lastVersionCheck
-    name: lastVersionCheck
-    fullName: lastVersionCheck
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: States of an installed extension
+    fullName: flags
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'flags: ExtensionStateFlags'
+      return:
+        type: <xref uid="azure-devops-extension-api.ExtensionStateFlags" />
+        description: ''
+  - name: installationIssues
+    uid: azure-devops-extension-api.ExtensionState.installationIssues
+    package: azure-devops-extension-api
+    summary: List of installation issues
+    fullName: installationIssues
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'installationIssues: InstalledExtensionStateIssue[]'
+      return:
+        type: >-
+          <xref uid="azure-devops-extension-api.InstalledExtensionStateIssue"
+          />[]
+        description: ''
+  - name: lastUpdated
+    uid: azure-devops-extension-api.ExtensionState.lastUpdated
+    package: azure-devops-extension-api
+    summary: The time at which this installation was last updated
+    fullName: lastUpdated
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lastUpdated: Date'
+      return:
+        type: Date
+        description: ''
+  - name: lastVersionCheck
+    uid: azure-devops-extension-api.ExtensionState.lastVersionCheck
+    package: azure-devops-extension-api
     summary: The time at which the version was last checked
+    fullName: lastVersionCheck
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastVersionCheck: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: publisherName
+    uid: azure-devops-extension-api.ExtensionState.publisherName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionState.publisherName
-    name: publisherName
-    fullName: publisherName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: publisherName
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'publisherName: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: version
+    uid: azure-devops-extension-api.ExtensionState.version
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionState.version
-    name: version
-    fullName: version
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: version
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'version: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.InstalledExtensionState
-    name: InstalledExtensionState
-    spec.typeScript:
-      - name: InstalledExtensionState
-        fullName: InstalledExtensionState
-        uid: azure-devops-extension-api.InstalledExtensionState
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.InstalledExtensionState" />

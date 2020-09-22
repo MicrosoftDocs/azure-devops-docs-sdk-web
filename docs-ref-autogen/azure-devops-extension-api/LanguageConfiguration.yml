@@ -1,0 +1,139 @@
+### YamlMime:TSType
+name: LanguageConfiguration
+uid: azure-devops-extension-api.LanguageConfiguration
+package: azure-devops-extension-api
+summary: >-
+  The language configuration interface defines the contract between extensions
+  and
+
+  various editor features, like automatic bracket insertion, automatic
+  indentation etc.
+fullName: LanguageConfiguration
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: autoClosingPairs
+    uid: azure-devops-extension-api.LanguageConfiguration.autoClosingPairs
+    package: azure-devops-extension-api
+    summary: >-
+      The language's auto closing pairs. The 'close' character is automatically
+      inserted with the
+
+      'open' character is typed. If not set, the configured brackets will be
+      used.
+    fullName: autoClosingPairs
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'autoClosingPairs?: IAutoClosingPairConditional[]'
+      return:
+        type: >-
+          <xref uid="azure-devops-extension-api.IAutoClosingPairConditional"
+          />[]
+        description: ''
+  - name: brackets
+    uid: azure-devops-extension-api.LanguageConfiguration.brackets
+    package: azure-devops-extension-api
+    summary: >-
+      The language's brackets.
+
+      This configuration implicitly affects pressing Enter around these
+      brackets.
+    fullName: brackets
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'brackets?: CharacterPair[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.CharacterPair" />[]'
+        description: ''
+  - name: comments
+    uid: azure-devops-extension-api.LanguageConfiguration.comments
+    package: azure-devops-extension-api
+    summary: The language's comment settings.
+    fullName: comments
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'comments?: CommentRule'
+      return:
+        type: <xref uid="azure-devops-extension-api.CommentRule" />
+        description: ''
+  - name: folding
+    uid: azure-devops-extension-api.LanguageConfiguration.folding
+    package: azure-devops-extension-api
+    summary: The language's folding rules.
+    fullName: folding
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'folding?: FoldingRules'
+      return:
+        type: <xref uid="azure-devops-extension-api.FoldingRules" />
+        description: ''
+  - name: indentationRules
+    uid: azure-devops-extension-api.LanguageConfiguration.indentationRules
+    package: azure-devops-extension-api
+    summary: The language's indentation settings.
+    fullName: indentationRules
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'indentationRules?: IndentationRule'
+      return:
+        type: <xref uid="azure-devops-extension-api.IndentationRule" />
+        description: ''
+  - name: onEnterRules
+    uid: azure-devops-extension-api.LanguageConfiguration.onEnterRules
+    package: azure-devops-extension-api
+    summary: The language's rules to be evaluated when pressing Enter.
+    fullName: onEnterRules
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onEnterRules?: OnEnterRule[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.OnEnterRule" />[]'
+        description: ''
+  - name: surroundingPairs
+    uid: azure-devops-extension-api.LanguageConfiguration.surroundingPairs
+    package: azure-devops-extension-api
+    summary: >-
+      The language's surrounding pairs. When the 'open' character is typed on a
+      selection, the
+
+      selected string is surrounded by the open and close characters. If not
+      set, the autoclosing pairs
+
+      settings will be used.
+    fullName: surroundingPairs
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'surroundingPairs?: IAutoClosingPair[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.IAutoClosingPair" />[]'
+        description: ''
+  - name: wordPattern
+    uid: azure-devops-extension-api.LanguageConfiguration.wordPattern
+    package: azure-devops-extension-api
+    summary: >-
+      The language's word definition.
+
+      If the language supports Unicode identifiers (e.g. JavaScript), it is
+      preferable
+
+      to provide a word definition that uses exclusion of known separators.
+
+      e.g.: A regex that matches anything except known separators (and dot is
+      allowed to occur in a floating point number):
+        /(-?\d*\.\d\w*)|([^\`\~\!\@\#\%\^\&\*\(\)\-\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g
+    fullName: wordPattern
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'wordPattern?: RegExp'
+      return:
+        type: RegExp
+        description: ''

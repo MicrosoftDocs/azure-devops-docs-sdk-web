@@ -1,43 +1,35 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TimelineRecordsUpdatedEvent
-    name: TimelineRecordsUpdatedEvent
-    fullName: TimelineRecordsUpdatedEvent
-    children:
-      - azure-devops-extension-api.TimelineRecordsUpdatedEvent.timelineRecords
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.RealtimeBuildEvent
+### YamlMime:TSType
+name: TimelineRecordsUpdatedEvent
+uid: azure-devops-extension-api.TimelineRecordsUpdatedEvent
+package: azure-devops-extension-api
+summary: ''
+fullName: TimelineRecordsUpdatedEvent
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: buildId
+    uid: azure-devops-extension-api.TimelineRecordsUpdatedEvent.buildId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TimelineRecordsUpdatedEvent.timelineRecords
-    name: timelineRecords
-    fullName: timelineRecords
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: buildId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'buildId: number'
+      return:
+        type: number
+        description: ''
+  - name: timelineRecords
+    uid: azure-devops-extension-api.TimelineRecordsUpdatedEvent.timelineRecords
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: timelineRecords
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'timelineRecords: TimelineRecord[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TimelineRecord[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RealtimeBuildEvent
-    name: RealtimeBuildEvent
-    spec.typeScript:
-      - name: RealtimeBuildEvent
-        fullName: RealtimeBuildEvent
-        uid: azure-devops-extension-api.RealtimeBuildEvent
-  - uid: 'azure-devops-extension-api.TimelineRecord[]'
-    name: 'TimelineRecord[]'
-    spec.typeScript:
-      - name: TimelineRecord
-        fullName: TimelineRecord
-        uid: azure-devops-extension-api.TimelineRecord
-      - name: '[]'
-        fullName: '[]'
+        type: '<xref uid="azure-devops-extension-api.TimelineRecord" />[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.RealtimeBuildEvent" />

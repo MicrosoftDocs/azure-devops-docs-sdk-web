@@ -1,775 +1,536 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.Build
-    name: Build
-    fullName: Build
-    children:
-      - azure-devops-extension-api.Build.agentSpecification
-      - azure-devops-extension-api.Build.buildNumber
-      - azure-devops-extension-api.Build.buildNumberRevision
-      - azure-devops-extension-api.Build.controller
-      - azure-devops-extension-api.Build.definition
-      - azure-devops-extension-api.Build.deleted
-      - azure-devops-extension-api.Build.deletedBy
-      - azure-devops-extension-api.Build.deletedDate
-      - azure-devops-extension-api.Build.deletedReason
-      - azure-devops-extension-api.Build.demands
-      - azure-devops-extension-api.Build.finishTime
-      - azure-devops-extension-api.Build.id
-      - azure-devops-extension-api.Build.keepForever
-      - azure-devops-extension-api.Build.lastChangedBy
-      - azure-devops-extension-api.Build.lastChangedDate
-      - azure-devops-extension-api.Build.logs
-      - azure-devops-extension-api.Build.orchestrationPlan
-      - azure-devops-extension-api.Build.parameters
-      - azure-devops-extension-api.Build.plans
-      - azure-devops-extension-api.Build.priority
-      - azure-devops-extension-api.Build.project
-      - azure-devops-extension-api.Build.properties
-      - azure-devops-extension-api.Build.quality
-      - azure-devops-extension-api.Build.queue
-      - azure-devops-extension-api.Build.queueOptions
-      - azure-devops-extension-api.Build.queuePosition
-      - azure-devops-extension-api.Build.queueTime
-      - azure-devops-extension-api.Build.reason
-      - azure-devops-extension-api.Build.repository
-      - azure-devops-extension-api.Build.requestedBy
-      - azure-devops-extension-api.Build.requestedFor
-      - azure-devops-extension-api.Build.result
-      - azure-devops-extension-api.Build.retainedByRelease
-      - azure-devops-extension-api.Build.sourceBranch
-      - azure-devops-extension-api.Build.sourceVersion
-      - azure-devops-extension-api.Build.startTime
-      - azure-devops-extension-api.Build.status
-      - azure-devops-extension-api.Build.tags
-      - azure-devops-extension-api.Build.triggeredByBuild
-      - azure-devops-extension-api.Build.triggerInfo
-      - azure-devops-extension-api.Build.uri
-      - azure-devops-extension-api.Build.url
-      - azure-devops-extension-api.Build.validationResults
-    langs:
-      - typeScript
-    type: interface
-    summary: Data representation of a build.
+### YamlMime:TSType
+name: Build
+uid: azure-devops-extension-api.Build
+package: azure-devops-extension-api
+summary: Data representation of a build.
+fullName: Build
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: agentSpecification
+    uid: azure-devops-extension-api.Build.agentSpecification
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.agentSpecification
-    name: agentSpecification
-    fullName: agentSpecification
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The agent specification for the build.
+    fullName: agentSpecification
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'agentSpecification: AgentSpecification'
       return:
-        type:
-          - azure-devops-extension-api.AgentSpecification
+        type: <xref uid="azure-devops-extension-api.AgentSpecification" />
+        description: ''
+  - name: buildNumber
+    uid: azure-devops-extension-api.Build.buildNumber
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.buildNumber
-    name: buildNumber
-    fullName: buildNumber
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The build number/name of the build.
+    fullName: buildNumber
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'buildNumber: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: buildNumberRevision
+    uid: azure-devops-extension-api.Build.buildNumberRevision
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.buildNumberRevision
-    name: buildNumberRevision
-    fullName: buildNumberRevision
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The build number revision.
+    fullName: buildNumberRevision
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'buildNumberRevision: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: controller
+    uid: azure-devops-extension-api.Build.controller
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.controller
-    name: controller
-    fullName: controller
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The build controller. This is only set if the definition type is Xaml.
+    fullName: controller
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'controller: BuildController'
       return:
-        type:
-          - azure-devops-extension-api.BuildController
+        type: <xref uid="azure-devops-extension-api.BuildController" />
+        description: ''
+  - name: definition
+    uid: azure-devops-extension-api.Build.definition
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.definition
-    name: definition
-    fullName: definition
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The definition associated with the build.
+    fullName: definition
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'definition: DefinitionReference'
       return:
-        type:
-          - azure-devops-extension-api.DefinitionReference
+        type: <xref uid="azure-devops-extension-api.DefinitionReference" />
+        description: ''
+  - name: deleted
+    uid: azure-devops-extension-api.Build.deleted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.deleted
-    name: deleted
-    fullName: deleted
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Indicates whether the build has been deleted.
+    fullName: deleted
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deleted: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: deletedBy
+    uid: azure-devops-extension-api.Build.deletedBy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.deletedBy
-    name: deletedBy
-    fullName: deletedBy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The identity of the process or person that deleted the build.
+    fullName: deletedBy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deletedBy: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: deletedDate
+    uid: azure-devops-extension-api.Build.deletedDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.deletedDate
-    name: deletedDate
-    fullName: deletedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The date the build was deleted.
+    fullName: deletedDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deletedDate: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: deletedReason
+    uid: azure-devops-extension-api.Build.deletedReason
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.deletedReason
-    name: deletedReason
-    fullName: deletedReason
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The description of how the build was deleted.
+    fullName: deletedReason
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deletedReason: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: demands
+    uid: azure-devops-extension-api.Build.demands
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.demands
-    name: demands
-    fullName: demands
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       A list of demands that represents the agent capabilities required by this
       build.
+    fullName: demands
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'demands: Demand[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Demand[]'
+        type: '<xref uid="azure-devops-extension-api.Demand" />[]'
+        description: ''
+  - name: finishTime
+    uid: azure-devops-extension-api.Build.finishTime
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.finishTime
-    name: finishTime
-    fullName: finishTime
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The time that the build was completed.
+    fullName: finishTime
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'finishTime: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.Build.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The ID of the build.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: keepForever
+    uid: azure-devops-extension-api.Build.keepForever
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.keepForever
-    name: keepForever
-    fullName: keepForever
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Indicates whether the build should be skipped by retention policies.
+    fullName: keepForever
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'keepForever: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: lastChangedBy
+    uid: azure-devops-extension-api.Build.lastChangedBy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.lastChangedBy
-    name: lastChangedBy
-    fullName: lastChangedBy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The identity representing the process or person that last changed the
       build.
+    fullName: lastChangedBy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastChangedBy: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: lastChangedDate
+    uid: azure-devops-extension-api.Build.lastChangedDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.lastChangedDate
-    name: lastChangedDate
-    fullName: lastChangedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The date the build was last changed.
+    fullName: lastChangedDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastChangedDate: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: logs
+    uid: azure-devops-extension-api.Build.logs
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.logs
-    name: logs
-    fullName: logs
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Information about the build logs.
+    fullName: logs
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'logs: BuildLogReference'
       return:
-        type:
-          - azure-devops-extension-api.BuildLogReference
+        type: <xref uid="azure-devops-extension-api.BuildLogReference" />
+        description: ''
+  - name: orchestrationPlan
+    uid: azure-devops-extension-api.Build.orchestrationPlan
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.orchestrationPlan
-    name: orchestrationPlan
-    fullName: orchestrationPlan
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The orchestration plan for the build.
+    fullName: orchestrationPlan
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'orchestrationPlan: TaskOrchestrationPlanReference'
       return:
-        type:
-          - azure-devops-extension-api.TaskOrchestrationPlanReference
+        type: >-
+          <xref uid="azure-devops-extension-api.TaskOrchestrationPlanReference"
+          />
+        description: ''
+  - name: parameters
+    uid: azure-devops-extension-api.Build.parameters
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.parameters
-    name: parameters
-    fullName: parameters
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The parameters for the build.
+    fullName: parameters
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parameters: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: plans
+    uid: azure-devops-extension-api.Build.plans
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.plans
-    name: plans
-    fullName: plans
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'Orchestration plans associated with the build (build, cleanup)'
+    fullName: plans
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'plans: TaskOrchestrationPlanReference[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TaskOrchestrationPlanReference[]'
+        type: >-
+          <xref uid="azure-devops-extension-api.TaskOrchestrationPlanReference"
+          />[]
+        description: ''
+  - name: priority
+    uid: azure-devops-extension-api.Build.priority
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.priority
-    name: priority
-    fullName: priority
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The build's priority.
+    fullName: priority
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'priority: QueuePriority'
       return:
-        type:
-          - azure-devops-extension-api.QueuePriority
+        type: <xref uid="azure-devops-extension-api.QueuePriority" />
+        description: ''
+  - name: project
+    uid: azure-devops-extension-api.Build.project
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.project
-    name: project
-    fullName: project
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The team project.
+    fullName: project
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
       return:
-        type:
-          - azure-devops-extension-api.TeamProjectReference
+        type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+        description: ''
+  - name: properties
+    uid: azure-devops-extension-api.Build.properties
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: properties
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: quality
+    uid: azure-devops-extension-api.Build.quality
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.quality
-    name: quality
-    fullName: quality
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'The quality of the xaml build (good, bad, etc.)'
+    fullName: quality
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'quality: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: queue
+    uid: azure-devops-extension-api.Build.queue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.queue
-    name: queue
-    fullName: queue
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The queue. This is only set if the definition type is Build.
+    fullName: queue
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queue: AgentPoolQueue'
       return:
-        type:
-          - azure-devops-extension-api.AgentPoolQueue
+        type: <xref uid="azure-devops-extension-api.AgentPoolQueue" />
+        description: ''
+  - name: queueOptions
+    uid: azure-devops-extension-api.Build.queueOptions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.queueOptions
-    name: queueOptions
-    fullName: queueOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Additional options for queueing the build.
+    fullName: queueOptions
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queueOptions: QueueOptions'
       return:
-        type:
-          - azure-devops-extension-api.QueueOptions
+        type: <xref uid="azure-devops-extension-api.QueueOptions" />
+        description: ''
+  - name: queuePosition
+    uid: azure-devops-extension-api.Build.queuePosition
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.queuePosition
-    name: queuePosition
-    fullName: queuePosition
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The current position of the build in the queue.
+    fullName: queuePosition
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queuePosition: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: queueTime
+    uid: azure-devops-extension-api.Build.queueTime
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.queueTime
-    name: queueTime
-    fullName: queueTime
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The time that the build was queued.
+    fullName: queueTime
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queueTime: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: reason
+    uid: azure-devops-extension-api.Build.reason
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.reason
-    name: reason
-    fullName: reason
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The reason that the build was created.
+    fullName: reason
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'reason: BuildReason'
       return:
-        type:
-          - azure-devops-extension-api.BuildReason
+        type: <xref uid="azure-devops-extension-api.BuildReason" />
+        description: ''
+  - name: repository
+    uid: azure-devops-extension-api.Build.repository
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.repository
-    name: repository
-    fullName: repository
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The repository.
+    fullName: repository
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'repository: BuildRepository'
       return:
-        type:
-          - azure-devops-extension-api.BuildRepository
+        type: <xref uid="azure-devops-extension-api.BuildRepository" />
+        description: ''
+  - name: requestedBy
+    uid: azure-devops-extension-api.Build.requestedBy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.requestedBy
-    name: requestedBy
-    fullName: requestedBy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The identity that queued the build.
+    fullName: requestedBy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'requestedBy: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: requestedFor
+    uid: azure-devops-extension-api.Build.requestedFor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.requestedFor
-    name: requestedFor
-    fullName: requestedFor
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The identity on whose behalf the build was queued.
+    fullName: requestedFor
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'requestedFor: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: result
+    uid: azure-devops-extension-api.Build.result
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.result
-    name: result
-    fullName: result
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The build result.
+    fullName: result
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'result: BuildResult'
       return:
-        type:
-          - azure-devops-extension-api.BuildResult
+        type: <xref uid="azure-devops-extension-api.BuildResult" />
+        description: ''
+  - name: retainedByRelease
+    uid: azure-devops-extension-api.Build.retainedByRelease
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.retainedByRelease
-    name: retainedByRelease
-    fullName: retainedByRelease
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Indicates whether the build is retained by a release.
+    fullName: retainedByRelease
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'retainedByRelease: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: sourceBranch
+    uid: azure-devops-extension-api.Build.sourceBranch
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.sourceBranch
-    name: sourceBranch
-    fullName: sourceBranch
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The source branch.
+    fullName: sourceBranch
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceBranch: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: sourceVersion
+    uid: azure-devops-extension-api.Build.sourceVersion
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.sourceVersion
-    name: sourceVersion
-    fullName: sourceVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The source version.
+    fullName: sourceVersion
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceVersion: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: startTime
+    uid: azure-devops-extension-api.Build.startTime
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.startTime
-    name: startTime
-    fullName: startTime
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The time that the build was started.
+    fullName: startTime
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'startTime: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: status
+    uid: azure-devops-extension-api.Build.status
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The status of the build.
+    fullName: status
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'status: BuildStatus'
       return:
-        type:
-          - azure-devops-extension-api.BuildStatus
+        type: <xref uid="azure-devops-extension-api.BuildStatus" />
+        description: ''
+  - name: tags
+    uid: azure-devops-extension-api.Build.tags
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.tags
-    name: tags
-    fullName: tags
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: tags
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tags: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: triggeredByBuild
+    uid: azure-devops-extension-api.Build.triggeredByBuild
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.triggeredByBuild
-    name: triggeredByBuild
-    fullName: triggeredByBuild
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The build that triggered this build via a Build completion trigger.
+    fullName: triggeredByBuild
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'triggeredByBuild: Build'
       return:
-        type:
-          - azure-devops-extension-api.Build
+        type: <xref uid="azure-devops-extension-api.Build" />
+        description: ''
+  - name: triggerInfo
+    uid: azure-devops-extension-api.Build.triggerInfo
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.triggerInfo
-    name: triggerInfo
-    fullName: triggerInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Sourceprovider-specific information about what triggered the build
+    fullName: triggerInfo
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'triggerInfo: [key: string]: string'
       return:
-        type:
-          - '[key: string]: string'
+        type: '[key: string]\: string'
+        description: ''
+  - name: uri
+    uid: azure-devops-extension-api.Build.uri
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.uri
-    name: uri
-    fullName: uri
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The URI of the build.
+    fullName: uri
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'uri: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.Build.url
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The REST URL of the build.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'url: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: validationResults
+    uid: azure-devops-extension-api.Build.validationResults
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Build.validationResults
-    name: validationResults
-    fullName: validationResults
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: validationResults
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'validationResults: BuildRequestValidationResult[]'
       return:
-        type:
-          - 'azure-devops-extension-api.BuildRequestValidationResult[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.AgentSpecification
-    name: AgentSpecification
-    spec.typeScript:
-      - name: AgentSpecification
-        fullName: AgentSpecification
-        uid: azure-devops-extension-api.AgentSpecification
-  - uid: azure-devops-extension-api.BuildController
-    name: BuildController
-    spec.typeScript:
-      - name: BuildController
-        fullName: BuildController
-        uid: azure-devops-extension-api.BuildController
-  - uid: azure-devops-extension-api.DefinitionReference
-    name: DefinitionReference
-    spec.typeScript:
-      - name: DefinitionReference
-        fullName: DefinitionReference
-        uid: azure-devops-extension-api.DefinitionReference
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
-  - uid: 'azure-devops-extension-api.Demand[]'
-    name: 'Demand[]'
-    spec.typeScript:
-      - name: Demand
-        fullName: Demand
-        uid: azure-devops-extension-api.Demand
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.BuildLogReference
-    name: BuildLogReference
-    spec.typeScript:
-      - name: BuildLogReference
-        fullName: BuildLogReference
-        uid: azure-devops-extension-api.BuildLogReference
-  - uid: azure-devops-extension-api.TaskOrchestrationPlanReference
-    name: TaskOrchestrationPlanReference
-    spec.typeScript:
-      - name: TaskOrchestrationPlanReference
-        fullName: TaskOrchestrationPlanReference
-        uid: azure-devops-extension-api.TaskOrchestrationPlanReference
-  - uid: 'azure-devops-extension-api.TaskOrchestrationPlanReference[]'
-    name: 'TaskOrchestrationPlanReference[]'
-    spec.typeScript:
-      - name: TaskOrchestrationPlanReference
-        fullName: TaskOrchestrationPlanReference
-        uid: azure-devops-extension-api.TaskOrchestrationPlanReference
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.QueuePriority
-    name: QueuePriority
-    spec.typeScript:
-      - name: QueuePriority
-        fullName: QueuePriority
-        uid: azure-devops-extension-api.QueuePriority
-  - uid: azure-devops-extension-api.TeamProjectReference
-    name: TeamProjectReference
-    spec.typeScript:
-      - name: TeamProjectReference
-        fullName: TeamProjectReference
-        uid: azure-devops-extension-api.TeamProjectReference
-  - uid: azure-devops-extension-api.AgentPoolQueue
-    name: AgentPoolQueue
-    spec.typeScript:
-      - name: AgentPoolQueue
-        fullName: AgentPoolQueue
-        uid: azure-devops-extension-api.AgentPoolQueue
-  - uid: azure-devops-extension-api.QueueOptions
-    name: QueueOptions
-    spec.typeScript:
-      - name: QueueOptions
-        fullName: QueueOptions
-        uid: azure-devops-extension-api.QueueOptions
-  - uid: azure-devops-extension-api.BuildReason
-    name: BuildReason
-    spec.typeScript:
-      - name: BuildReason
-        fullName: BuildReason
-        uid: azure-devops-extension-api.BuildReason
-  - uid: azure-devops-extension-api.BuildRepository
-    name: BuildRepository
-    spec.typeScript:
-      - name: BuildRepository
-        fullName: BuildRepository
-        uid: azure-devops-extension-api.BuildRepository
-  - uid: azure-devops-extension-api.BuildResult
-    name: BuildResult
-    spec.typeScript:
-      - name: BuildResult
-        fullName: BuildResult
-        uid: azure-devops-extension-api.BuildResult
-  - uid: azure-devops-extension-api.BuildStatus
-    name: BuildStatus
-    spec.typeScript:
-      - name: BuildStatus
-        fullName: BuildStatus
-        uid: azure-devops-extension-api.BuildStatus
-  - uid: azure-devops-extension-api.Build
-    name: Build
-    spec.typeScript:
-      - name: Build
-        fullName: Build
-        uid: azure-devops-extension-api.Build
-  - uid: 'azure-devops-extension-api.BuildRequestValidationResult[]'
-    name: 'BuildRequestValidationResult[]'
-    spec.typeScript:
-      - name: BuildRequestValidationResult
-        fullName: BuildRequestValidationResult
-        uid: azure-devops-extension-api.BuildRequestValidationResult
-      - name: '[]'
-        fullName: '[]'
+        type: >-
+          <xref uid="azure-devops-extension-api.BuildRequestValidationResult"
+          />[]
+        description: ''

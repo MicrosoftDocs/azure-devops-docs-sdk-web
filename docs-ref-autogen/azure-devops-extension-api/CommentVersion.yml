@@ -1,195 +1,159 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.CommentVersion
-    name: CommentVersion
-    fullName: CommentVersion
-    children:
-      - azure-devops-extension-api.CommentVersion.createdBy
-      - azure-devops-extension-api.CommentVersion.createdDate
-      - azure-devops-extension-api.CommentVersion.createdOnBehalfDate
-      - azure-devops-extension-api.CommentVersion.createdOnBehalfOf
-      - azure-devops-extension-api.CommentVersion.id
-      - azure-devops-extension-api.CommentVersion.isDeleted
-      - azure-devops-extension-api.CommentVersion.modifiedBy
-      - azure-devops-extension-api.CommentVersion.modifiedDate
-      - azure-devops-extension-api.CommentVersion.renderedText
-      - azure-devops-extension-api.CommentVersion.text
-      - azure-devops-extension-api.CommentVersion.version
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents a specific version of a comment on a work item.
-    extends:
-      name: azure-devops-extension-api.WorkItemTrackingResource
+### YamlMime:TSType
+name: CommentVersion
+uid: azure-devops-extension-api.CommentVersion
+package: azure-devops-extension-api
+summary: Represents a specific version of a comment on a work item.
+fullName: CommentVersion
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: createdBy
+    uid: azure-devops-extension-api.CommentVersion.createdBy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.createdBy
-    name: createdBy
-    fullName: createdBy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: IdentityRef of the creator of the comment.
+    fullName: createdBy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createdBy: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: createdDate
+    uid: azure-devops-extension-api.CommentVersion.createdDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.createdDate
-    name: createdDate
-    fullName: createdDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The creation date of the comment.
+    fullName: createdDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createdDate: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: createdOnBehalfDate
+    uid: azure-devops-extension-api.CommentVersion.createdOnBehalfDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.createdOnBehalfDate
-    name: createdOnBehalfDate
-    fullName: createdOnBehalfDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Effective Date/time value for adding the comment. Can be optionally
       different from CreatedDate.
+    fullName: createdOnBehalfDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createdOnBehalfDate: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: createdOnBehalfOf
+    uid: azure-devops-extension-api.CommentVersion.createdOnBehalfOf
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.createdOnBehalfOf
-    name: createdOnBehalfOf
-    fullName: createdOnBehalfOf
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Identity on whose behalf this comment has been added. Can be optionally
       different from CreatedBy.
+    fullName: createdOnBehalfOf
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createdOnBehalfOf: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.CommentVersion.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The id assigned to the comment.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: isDeleted
+    uid: azure-devops-extension-api.CommentVersion.isDeleted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.isDeleted
-    name: isDeleted
-    fullName: isDeleted
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Indicates if the comment has been deleted at this version.
+    fullName: isDeleted
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isDeleted: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: modifiedBy
+    uid: azure-devops-extension-api.CommentVersion.modifiedBy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.modifiedBy
-    name: modifiedBy
-    fullName: modifiedBy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: IdentityRef of the user who modified the comment at this version.
+    fullName: modifiedBy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'modifiedBy: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: modifiedDate
+    uid: azure-devops-extension-api.CommentVersion.modifiedDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.modifiedDate
-    name: modifiedDate
-    fullName: modifiedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The modification date of the comment for this version.
+    fullName: modifiedDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'modifiedDate: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: renderedText
+    uid: azure-devops-extension-api.CommentVersion.renderedText
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.renderedText
-    name: renderedText
-    fullName: renderedText
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The rendered content of the comment at this version.
+    fullName: renderedText
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'renderedText: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: text
+    uid: azure-devops-extension-api.CommentVersion.text
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.text
-    name: text
-    fullName: text
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The text of the comment at this version.
+    fullName: text
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'text: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.CommentVersion.url
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentVersion.version
-    name: version
-    fullName: version
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ''
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+  - name: version
+    uid: azure-devops-extension-api.CommentVersion.version
+    package: azure-devops-extension-api
     summary: The version number.
+    fullName: version
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'version: number'
       return:
-        type:
-          - number
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.WorkItemTrackingResource
-    name: WorkItemTrackingResource
-    spec.typeScript:
-      - name: WorkItemTrackingResource
-        fullName: WorkItemTrackingResource
-        uid: azure-devops-extension-api.WorkItemTrackingResource
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
+        type: number
+        description: ''
+extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

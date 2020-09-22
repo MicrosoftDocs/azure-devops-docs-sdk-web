@@ -1,820 +1,517 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.NotificationRestClient
-    name: NotificationRestClient
-    fullName: NotificationRestClient
-    children:
-      - azure-devops-extension-api.NotificationRestClient.createSubscription
-      - azure-devops-extension-api.NotificationRestClient.deleteSubscription
-      - azure-devops-extension-api.NotificationRestClient.getEventType
-      - azure-devops-extension-api.NotificationRestClient.getNotificationReasons
-      - azure-devops-extension-api.NotificationRestClient.getSettings
-      - azure-devops-extension-api.NotificationRestClient.getSubscriber
-      - azure-devops-extension-api.NotificationRestClient.getSubscription
-      - >-
-        azure-devops-extension-api.NotificationRestClient.getSubscriptionDiagnostics
-      - >-
-        azure-devops-extension-api.NotificationRestClient.getSubscriptionTemplates
-      - azure-devops-extension-api.NotificationRestClient.listEventTypes
-      - azure-devops-extension-api.NotificationRestClient.listLogs
-      - >-
-        azure-devops-extension-api.NotificationRestClient.listNotificationReasons
-      - azure-devops-extension-api.NotificationRestClient.listSubscriptions
-      - azure-devops-extension-api.NotificationRestClient.constructor
-      - >-
-        azure-devops-extension-api.NotificationRestClient.performBatchNotificationOperations
-      - azure-devops-extension-api.NotificationRestClient.publishEvent
-      - azure-devops-extension-api.NotificationRestClient.queryEventTypes
-      - azure-devops-extension-api.NotificationRestClient.querySubscriptions
-      - azure-devops-extension-api.NotificationRestClient.transformEvent
-      - azure-devops-extension-api.NotificationRestClient.updateSettings
-      - azure-devops-extension-api.NotificationRestClient.updateSubscriber
-      - azure-devops-extension-api.NotificationRestClient.updateSubscription
-      - >-
-        azure-devops-extension-api.NotificationRestClient.updateSubscriptionDiagnostics
-      - >-
-        azure-devops-extension-api.NotificationRestClient.updateSubscriptionUserSettings
-    langs:
-      - typeScript
-    type: class
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.RestClientBase
+### YamlMime:TSType
+name: NotificationRestClient
+uid: azure-devops-extension-api.NotificationRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: NotificationRestClient
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: NotificationRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.NotificationRestClient.constructor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.createSubscription
-    name: createSubscription(NotificationSubscriptionCreateParameters)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new NotificationRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+methods:
+  - name: createSubscription(NotificationSubscriptionCreateParameters)
+    uid: azure-devops-extension-api.NotificationRestClient.createSubscription
+    package: azure-devops-extension-api
     summary: Create a new subscription.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createSubscription(createParameters:
         NotificationSubscriptionCreateParameters)
       parameters:
         - id: createParameters
-          type:
-            - >-
-              azure-devops-extension-api.NotificationSubscriptionCreateParameters
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.NotificationSubscriptionCreateParameters"
+            />
           description: |
             -
       return:
-        type:
-          - Promise<azure-devops-extension-api.NotificationSubscription>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationSubscription" />&gt;
+        description: ''
+  - name: deleteSubscription(string)
+    uid: azure-devops-extension-api.NotificationRestClient.deleteSubscription
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.deleteSubscription
-    name: deleteSubscription(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Delete a subscription.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function deleteSubscription(subscriptionId: string)'
       parameters:
         - id: subscriptionId
-          type:
-            - string
+          type: string
           description: |
             -
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: getEventType(string)
+    uid: azure-devops-extension-api.NotificationRestClient.getEventType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.getEventType
-    name: getEventType(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a specific event type.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getEventType(eventType: string)'
       parameters:
         - id: eventType
-          type:
-            - string
+          type: string
           description: |
-            -
+            The ID of the event type.
       return:
-        type:
-          - Promise<azure-devops-extension-api.NotificationEventType>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationEventType" />&gt;
+        description: ''
+  - name: getNotificationReasons(number)
+    uid: azure-devops-extension-api.NotificationRestClient.getNotificationReasons
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.getNotificationReasons
-    name: getNotificationReasons(number)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getNotificationReasons(notificationId: number)'
       parameters:
         - id: notificationId
-          type:
-            - number
+          type: number
           description: |
             -
       return:
-        type:
-          - Promise<azure-devops-extension-api.NotificationReason>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.NotificationReason"
+          />&gt;
+        description: ''
+  - name: getSettings()
+    uid: azure-devops-extension-api.NotificationRestClient.getSettings
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.getSettings
-    name: getSettings()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getSettings()
-      parameters: []
       return:
-        type:
-          - Promise<azure-devops-extension-api.NotificationAdminSettings>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationAdminSettings" />&gt;
+        description: ''
+  - name: getSubscriber(string)
+    uid: azure-devops-extension-api.NotificationRestClient.getSubscriber
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.getSubscriber
-    name: getSubscriber(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
+    summary: Get delivery preferences of a notifications subscriber.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getSubscriber(subscriberId: string)'
       parameters:
         - id: subscriberId
-          type:
-            - string
+          type: string
           description: |
-            -
+            ID of the user or group.
       return:
-        type:
-          - Promise<azure-devops-extension-api.NotificationSubscriber>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationSubscriber" />&gt;
+        description: ''
+  - name: 'getSubscription(string, SubscriptionQueryFlags)'
+    uid: azure-devops-extension-api.NotificationRestClient.getSubscription
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.getSubscription
-    name: 'getSubscription(string, SubscriptionQueryFlags)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a notification subscription by its ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getSubscription(subscriptionId: string, queryFlags?:
         SubscriptionQueryFlags)
       parameters:
         - id: subscriptionId
-          type:
-            - string
+          type: string
           description: '-'
         - id: queryFlags
-          type:
-            - azure-devops-extension-api.SubscriptionQueryFlags
+          type: <xref uid="azure-devops-extension-api.SubscriptionQueryFlags" />
           description: |
             -
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.NotificationSubscription>
-    package: azure-devops-extension-api
-  - uid: >-
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationSubscription" />&gt;
+        description: ''
+  - name: getSubscriptionDiagnostics(string)
+    uid: >-
       azure-devops-extension-api.NotificationRestClient.getSubscriptionDiagnostics
-    name: getSubscriptionDiagnostics(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
+    package: azure-devops-extension-api
+    summary: Get the diagnostics settings for a subscription.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getSubscriptionDiagnostics(subscriptionId: string)'
       parameters:
         - id: subscriptionId
-          type:
-            - string
+          type: string
           description: |
-            -
+            The id of the notifications subscription.
       return:
-        type:
-          - Promise<azure-devops-extension-api.SubscriptionDiagnostics>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.SubscriptionDiagnostics" />&gt;
+        description: ''
+  - name: getSubscriptionTemplates()
+    uid: azure-devops-extension-api.NotificationRestClient.getSubscriptionTemplates
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.getSubscriptionTemplates
-    name: getSubscriptionTemplates()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get available subscription templates.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getSubscriptionTemplates()
-      parameters: []
       return:
-        type:
-          - >-
-            Promise<azure-devops-extension-api.NotificationSubscriptionTemplate[]>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationSubscriptionTemplate"
+          />[]&gt;
+        description: ''
+  - name: listEventTypes(string)
+    uid: azure-devops-extension-api.NotificationRestClient.listEventTypes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.listEventTypes
-    name: listEventTypes(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       List available event types for this service. Optionally filter by only
       event types for the specified publisher.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function listEventTypes(publisherId?: string)'
       parameters:
         - id: publisherId
-          type:
-            - string
+          type: string
           description: |
             Limit to event types for this publisher
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.NotificationEventType[]>'
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationEventType" />[]&gt;
+        description: ''
+  - name: 'listLogs(string, string, Date, Date)'
+    uid: azure-devops-extension-api.NotificationRestClient.listLogs
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.listLogs
-    name: 'listLogs(string, string, Date, Date)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: List diagnostic logs this service.
+    summary: Get a list of diagnostic logs for this service.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listLogs(source: string, entryId?: string, startTime?: Date,
         endTime?: Date)
       parameters:
         - id: source
-          type:
-            - string
-          description: '-'
+          type: string
+          description: ID specifying which type of logs to check diagnostics for.
         - id: entryId
-          type:
-            - string
-          description: '-'
-          optional: true
+          type: string
+          description: The ID of the specific log to query for.
         - id: startTime
-          type:
-            - Date
-          description: '-'
-          optional: true
+          type: Date
+          description: Start time for the time range to query in.
         - id: endTime
-          type:
-            - Date
+          type: Date
           description: |
-            -
-          optional: true
+            End time for the time range to query in.
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.INotificationDiagnosticLog[]>'
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.INotificationDiagnosticLog" />[]&gt;
+        description: ''
+  - name: listNotificationReasons(number)
+    uid: azure-devops-extension-api.NotificationRestClient.listNotificationReasons
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.listNotificationReasons
-    name: listNotificationReasons(number)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function listNotificationReasons(notificationIds?: number)'
       parameters:
         - id: notificationIds
-          type:
-            - number
+          type: number
           description: |
             -
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.NotificationReason[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.NotificationReason"
+          />[]&gt;
+        description: ''
+  - name: 'listSubscriptions(string, string[], SubscriptionQueryFlags)'
+    uid: azure-devops-extension-api.NotificationRestClient.listSubscriptions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.listSubscriptions
-    name: 'listSubscriptions(string, string[], SubscriptionQueryFlags)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
+    summary: >-
+      Get a list of notification subscriptions, either by subscription IDs or by
+      all subscriptions for a given user or group.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function listSubscriptions(targetId?: string, ids?: string[],
         queryFlags?: SubscriptionQueryFlags)
       parameters:
         - id: targetId
-          type:
-            - string
-          description: '-'
-          optional: true
+          type: string
+          description: User or Group ID
         - id: ids
-          type:
-            - 'string[]'
-          description: '-'
-          optional: true
+          type: 'string[]'
+          description: List of subscription IDs
         - id: queryFlags
-          type:
-            - azure-devops-extension-api.SubscriptionQueryFlags
+          type: <xref uid="azure-devops-extension-api.SubscriptionQueryFlags" />
           description: |
             -
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.NotificationSubscription[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.constructor
-    name: NotificationRestClient(IVssRestClientOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new NotificationRestClient(options: IVssRestClientOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-devops-extension-api.IVssRestClientOptions
-          description: ''
-    package: azure-devops-extension-api
-  - uid: >-
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationSubscription" />[]&gt;
+        description: ''
+  - name: performBatchNotificationOperations(BatchNotificationOperation)
+    uid: >-
       azure-devops-extension-api.NotificationRestClient.performBatchNotificationOperations
-    name: performBatchNotificationOperations(BatchNotificationOperation)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    package: azure-devops-extension-api
     summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function performBatchNotificationOperations(operation:
         BatchNotificationOperation)
       parameters:
         - id: operation
-          type:
-            - azure-devops-extension-api.BatchNotificationOperation
+          type: <xref uid="azure-devops-extension-api.BatchNotificationOperation" />
           description: |
             -
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: publishEvent(VssNotificationEvent)
+    uid: azure-devops-extension-api.NotificationRestClient.publishEvent
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.publishEvent
-    name: publishEvent(VssNotificationEvent)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Publish an event. This request must be directed to the service "extmgmt".
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function publishEvent(notificationEvent: VssNotificationEvent)'
       parameters:
         - id: notificationEvent
-          type:
-            - azure-devops-extension-api.VssNotificationEvent
+          type: <xref uid="azure-devops-extension-api.VssNotificationEvent" />
           description: |
             -
       return:
-        type:
-          - Promise<azure-devops-extension-api.VssNotificationEvent>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.VssNotificationEvent"
+          />&gt;
+        description: ''
+  - name: 'queryEventTypes(FieldValuesQuery, string)'
+    uid: azure-devops-extension-api.NotificationRestClient.queryEventTypes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.queryEventTypes
-    name: 'queryEventTypes(FieldValuesQuery, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function queryEventTypes(inputValuesQuery: FieldValuesQuery, eventType:
         string)
       parameters:
         - id: inputValuesQuery
-          type:
-            - azure-devops-extension-api.FieldValuesQuery
+          type: <xref uid="azure-devops-extension-api.FieldValuesQuery" />
           description: '-'
         - id: eventType
-          type:
-            - string
+          type: string
           description: |
             -
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.NotificationEventField[]>'
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationEventField" />[]&gt;
+        description: ''
+  - name: querySubscriptions(SubscriptionQuery)
+    uid: azure-devops-extension-api.NotificationRestClient.querySubscriptions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.querySubscriptions
-    name: querySubscriptions(SubscriptionQuery)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Query for subscriptions. A subscription is returned if it matches one or
       more of the specified conditions.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function querySubscriptions(subscriptionQuery: SubscriptionQuery)'
       parameters:
         - id: subscriptionQuery
-          type:
-            - azure-devops-extension-api.SubscriptionQuery
+          type: <xref uid="azure-devops-extension-api.SubscriptionQuery" />
           description: |
             -
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.NotificationSubscription[]>'
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationSubscription" />[]&gt;
+        description: ''
+  - name: transformEvent(EventTransformRequest)
+    uid: azure-devops-extension-api.NotificationRestClient.transformEvent
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.transformEvent
-    name: transformEvent(EventTransformRequest)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Tranform a notification event.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function transformEvent(transformRequest: EventTransformRequest)'
       parameters:
         - id: transformRequest
-          type:
-            - azure-devops-extension-api.EventTransformRequest
+          type: <xref uid="azure-devops-extension-api.EventTransformRequest" />
           description: |
             Object to be transformed.
       return:
-        type:
-          - Promise<azure-devops-extension-api.EventTransformResult>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.EventTransformResult"
+          />&gt;
+        description: ''
+  - name: updateSettings(NotificationAdminSettingsUpdateParameters)
+    uid: azure-devops-extension-api.NotificationRestClient.updateSettings
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.updateSettings
-    name: updateSettings(NotificationAdminSettingsUpdateParameters)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateSettings(updateParameters:
         NotificationAdminSettingsUpdateParameters)
       parameters:
         - id: updateParameters
-          type:
-            - >-
-              azure-devops-extension-api.NotificationAdminSettingsUpdateParameters
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.NotificationAdminSettingsUpdateParameters"
+            />
           description: |
             -
       return:
-        type:
-          - Promise<azure-devops-extension-api.NotificationAdminSettings>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationAdminSettings" />&gt;
+        description: ''
+  - name: 'updateSubscriber(NotificationSubscriberUpdateParameters, string)'
+    uid: azure-devops-extension-api.NotificationRestClient.updateSubscriber
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.updateSubscriber
-    name: 'updateSubscriber(NotificationSubscriberUpdateParameters, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
+    summary: Update delivery preferences of a notifications subscriber.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateSubscriber(updateParameters:
         NotificationSubscriberUpdateParameters, subscriberId: string)
       parameters:
         - id: updateParameters
-          type:
-            - azure-devops-extension-api.NotificationSubscriberUpdateParameters
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.NotificationSubscriberUpdateParameters"
+            />
           description: '-'
         - id: subscriberId
-          type:
-            - string
+          type: string
           description: |
-            -
+            ID of the user or group.
       return:
-        type:
-          - Promise<azure-devops-extension-api.NotificationSubscriber>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationSubscriber" />&gt;
+        description: ''
+  - name: 'updateSubscription(NotificationSubscriptionUpdateParameters, string)'
+    uid: azure-devops-extension-api.NotificationRestClient.updateSubscription
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationRestClient.updateSubscription
-    name: 'updateSubscription(NotificationSubscriptionUpdateParameters, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Update an existing subscription. Depending on the type of subscription and
       permissions, the caller can update the description, filter settings,
       channel (delivery) settings and more.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateSubscription(updateParameters:
         NotificationSubscriptionUpdateParameters, subscriptionId: string)
       parameters:
         - id: updateParameters
-          type:
-            - >-
-              azure-devops-extension-api.NotificationSubscriptionUpdateParameters
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.NotificationSubscriptionUpdateParameters"
+            />
           description: '-'
         - id: subscriptionId
-          type:
-            - string
+          type: string
           description: |
             -
       return:
-        type:
-          - Promise<azure-devops-extension-api.NotificationSubscription>
-    package: azure-devops-extension-api
-  - uid: >-
-      azure-devops-extension-api.NotificationRestClient.updateSubscriptionDiagnostics
-    name: >-
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.NotificationSubscription" />&gt;
+        description: ''
+  - name: >-
       updateSubscriptionDiagnostics(UpdateSubscripitonDiagnosticsParameters,
       string)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
+    uid: >-
+      azure-devops-extension-api.NotificationRestClient.updateSubscriptionDiagnostics
+    package: azure-devops-extension-api
+    summary: Update the diagnostics settings for a subscription.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateSubscriptionDiagnostics(updateParameters:
         UpdateSubscripitonDiagnosticsParameters, subscriptionId: string)
       parameters:
         - id: updateParameters
-          type:
-            - azure-devops-extension-api.UpdateSubscripitonDiagnosticsParameters
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.UpdateSubscripitonDiagnosticsParameters"
+            />
           description: '-'
         - id: subscriptionId
-          type:
-            - string
+          type: string
           description: |
-            -
+            The id of the notifications subscription.
       return:
-        type:
-          - Promise<azure-devops-extension-api.SubscriptionDiagnostics>
-    package: azure-devops-extension-api
-  - uid: >-
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.SubscriptionDiagnostics" />&gt;
+        description: ''
+  - name: 'updateSubscriptionUserSettings(SubscriptionUserSettings, string, string)'
+    uid: >-
       azure-devops-extension-api.NotificationRestClient.updateSubscriptionUserSettings
-    name: 'updateSubscriptionUserSettings(SubscriptionUserSettings, string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
+    package: azure-devops-extension-api
     summary: >-
       Update the specified user's settings for the specified subscription. This
       API is typically used to opt in or out of a shared subscription. User
       settings can only be applied to shared subscriptions, like team
       subscriptions or default subscriptions.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateSubscriptionUserSettings(userSettings:
         SubscriptionUserSettings, subscriptionId: string, userId: string)
       parameters:
         - id: userSettings
-          type:
-            - azure-devops-extension-api.SubscriptionUserSettings
+          type: <xref uid="azure-devops-extension-api.SubscriptionUserSettings" />
           description: '-'
         - id: subscriptionId
-          type:
-            - string
+          type: string
           description: '-'
         - id: userId
-          type:
-            - string
+          type: string
           description: |
             ID of the user
       return:
-        type:
-          - Promise<azure-devops-extension-api.SubscriptionUserSettings>
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RestClientBase
-    name: RestClientBase
-    spec.typeScript:
-      - name: RestClientBase
-        fullName: RestClientBase
-        uid: azure-devops-extension-api.RestClientBase
-  - uid: azure-devops-extension-api.IVssRestClientOptions
-    name: IVssRestClientOptions
-    spec.typeScript:
-      - name: IVssRestClientOptions
-        fullName: IVssRestClientOptions
-        uid: azure-devops-extension-api.IVssRestClientOptions
-  - uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters
-    name: NotificationSubscriptionCreateParameters
-    spec.typeScript:
-      - name: NotificationSubscriptionCreateParameters
-        fullName: NotificationSubscriptionCreateParameters
-        uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters
-  - uid: Promise<azure-devops-extension-api.NotificationSubscription>
-    name: NotificationSubscription>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationSubscription
-        fullName: NotificationSubscription
-        uid: azure-devops-extension-api.NotificationSubscription
-      - name: '>'
-        fullName: '>'
-  - uid: Promise<azure-devops-extension-api.NotificationEventType>
-    name: NotificationEventType>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationEventType
-        fullName: NotificationEventType
-        uid: azure-devops-extension-api.NotificationEventType
-      - name: '>'
-        fullName: '>'
-  - uid: Promise<azure-devops-extension-api.NotificationReason>
-    name: NotificationReason>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationReason
-        fullName: NotificationReason
-        uid: azure-devops-extension-api.NotificationReason
-      - name: '>'
-        fullName: '>'
-  - uid: Promise<azure-devops-extension-api.NotificationAdminSettings>
-    name: NotificationAdminSettings>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationAdminSettings
-        fullName: NotificationAdminSettings
-        uid: azure-devops-extension-api.NotificationAdminSettings
-      - name: '>'
-        fullName: '>'
-  - uid: Promise<azure-devops-extension-api.NotificationSubscriber>
-    name: NotificationSubscriber>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationSubscriber
-        fullName: NotificationSubscriber
-        uid: azure-devops-extension-api.NotificationSubscriber
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.SubscriptionQueryFlags
-    name: SubscriptionQueryFlags
-    spec.typeScript:
-      - name: SubscriptionQueryFlags
-        fullName: SubscriptionQueryFlags
-        uid: azure-devops-extension-api.SubscriptionQueryFlags
-  - uid: Promise<azure-devops-extension-api.SubscriptionDiagnostics>
-    name: SubscriptionDiagnostics>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: SubscriptionDiagnostics
-        fullName: SubscriptionDiagnostics
-        uid: azure-devops-extension-api.SubscriptionDiagnostics
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.NotificationSubscriptionTemplate[]>'
-    name: 'NotificationSubscriptionTemplate[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationSubscriptionTemplate
-        fullName: NotificationSubscriptionTemplate
-        uid: azure-devops-extension-api.NotificationSubscriptionTemplate
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.NotificationEventType[]>'
-    name: 'NotificationEventType[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationEventType
-        fullName: NotificationEventType
-        uid: azure-devops-extension-api.NotificationEventType
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.INotificationDiagnosticLog[]>'
-    name: 'INotificationDiagnosticLog[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: INotificationDiagnosticLog
-        fullName: INotificationDiagnosticLog
-        uid: azure-devops-extension-api.INotificationDiagnosticLog
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.NotificationReason[]>'
-    name: 'NotificationReason[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationReason
-        fullName: NotificationReason
-        uid: azure-devops-extension-api.NotificationReason
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.NotificationSubscription[]>'
-    name: 'NotificationSubscription[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationSubscription
-        fullName: NotificationSubscription
-        uid: azure-devops-extension-api.NotificationSubscription
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.BatchNotificationOperation
-    name: BatchNotificationOperation
-    spec.typeScript:
-      - name: BatchNotificationOperation
-        fullName: BatchNotificationOperation
-        uid: azure-devops-extension-api.BatchNotificationOperation
-  - uid: azure-devops-extension-api.VssNotificationEvent
-    name: VssNotificationEvent
-    spec.typeScript:
-      - name: VssNotificationEvent
-        fullName: VssNotificationEvent
-        uid: azure-devops-extension-api.VssNotificationEvent
-  - uid: Promise<azure-devops-extension-api.VssNotificationEvent>
-    name: VssNotificationEvent>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: VssNotificationEvent
-        fullName: VssNotificationEvent
-        uid: azure-devops-extension-api.VssNotificationEvent
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.FieldValuesQuery
-    name: FieldValuesQuery
-    spec.typeScript:
-      - name: FieldValuesQuery
-        fullName: FieldValuesQuery
-        uid: azure-devops-extension-api.FieldValuesQuery
-  - uid: 'Promise<azure-devops-extension-api.NotificationEventField[]>'
-    name: 'NotificationEventField[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: NotificationEventField
-        fullName: NotificationEventField
-        uid: azure-devops-extension-api.NotificationEventField
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.SubscriptionQuery
-    name: SubscriptionQuery
-    spec.typeScript:
-      - name: SubscriptionQuery
-        fullName: SubscriptionQuery
-        uid: azure-devops-extension-api.SubscriptionQuery
-  - uid: azure-devops-extension-api.EventTransformRequest
-    name: EventTransformRequest
-    spec.typeScript:
-      - name: EventTransformRequest
-        fullName: EventTransformRequest
-        uid: azure-devops-extension-api.EventTransformRequest
-  - uid: Promise<azure-devops-extension-api.EventTransformResult>
-    name: EventTransformResult>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: EventTransformResult
-        fullName: EventTransformResult
-        uid: azure-devops-extension-api.EventTransformResult
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.NotificationAdminSettingsUpdateParameters
-    name: NotificationAdminSettingsUpdateParameters
-    spec.typeScript:
-      - name: NotificationAdminSettingsUpdateParameters
-        fullName: NotificationAdminSettingsUpdateParameters
-        uid: azure-devops-extension-api.NotificationAdminSettingsUpdateParameters
-  - uid: azure-devops-extension-api.NotificationSubscriberUpdateParameters
-    name: NotificationSubscriberUpdateParameters
-    spec.typeScript:
-      - name: NotificationSubscriberUpdateParameters
-        fullName: NotificationSubscriberUpdateParameters
-        uid: azure-devops-extension-api.NotificationSubscriberUpdateParameters
-  - uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters
-    name: NotificationSubscriptionUpdateParameters
-    spec.typeScript:
-      - name: NotificationSubscriptionUpdateParameters
-        fullName: NotificationSubscriptionUpdateParameters
-        uid: azure-devops-extension-api.NotificationSubscriptionUpdateParameters
-  - uid: azure-devops-extension-api.UpdateSubscripitonDiagnosticsParameters
-    name: UpdateSubscripitonDiagnosticsParameters
-    spec.typeScript:
-      - name: UpdateSubscripitonDiagnosticsParameters
-        fullName: UpdateSubscripitonDiagnosticsParameters
-        uid: azure-devops-extension-api.UpdateSubscripitonDiagnosticsParameters
-  - uid: azure-devops-extension-api.SubscriptionUserSettings
-    name: SubscriptionUserSettings
-    spec.typeScript:
-      - name: SubscriptionUserSettings
-        fullName: SubscriptionUserSettings
-        uid: azure-devops-extension-api.SubscriptionUserSettings
-  - uid: Promise<azure-devops-extension-api.SubscriptionUserSettings>
-    name: SubscriptionUserSettings>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: SubscriptionUserSettings
-        fullName: SubscriptionUserSettings
-        uid: azure-devops-extension-api.SubscriptionUserSettings
-      - name: '>'
-        fullName: '>'
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.SubscriptionUserSettings" />&gt;
+        description: ''
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

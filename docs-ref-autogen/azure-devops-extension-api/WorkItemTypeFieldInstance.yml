@@ -1,50 +1,107 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.WorkItemTypeFieldInstance
-    name: WorkItemTypeFieldInstance
-    fullName: WorkItemTypeFieldInstance
-    children:
-      - azure-devops-extension-api.WorkItemTypeFieldInstance.allowedValues
-      - azure-devops-extension-api.WorkItemTypeFieldInstance.defaultValue
-    langs:
-      - typeScript
-    type: interface
-    summary: Field instance of a work item type.
-    extends:
-      name: azure-devops-extension-api.WorkItemTypeFieldInstanceBase
+### YamlMime:TSType
+name: WorkItemTypeFieldInstance
+uid: azure-devops-extension-api.WorkItemTypeFieldInstance
+package: azure-devops-extension-api
+summary: Field instance of a work item type.
+fullName: WorkItemTypeFieldInstance
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: allowedValues
+    uid: azure-devops-extension-api.WorkItemTypeFieldInstance.allowedValues
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemTypeFieldInstance.allowedValues
-    name: allowedValues
-    fullName: allowedValues
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The list of field allowed values.
+    fullName: allowedValues
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'allowedValues: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: alwaysRequired
+    uid: azure-devops-extension-api.WorkItemTypeFieldInstance.alwaysRequired
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemTypeFieldInstance.defaultValue
-    name: defaultValue
-    fullName: defaultValue
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Indicates whether field value is always required.
+    fullName: alwaysRequired
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'alwaysRequired: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: defaultValue
+    uid: azure-devops-extension-api.WorkItemTypeFieldInstance.defaultValue
+    package: azure-devops-extension-api
     summary: Represents the default value of the field.
+    fullName: defaultValue
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'defaultValue: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: dependentFields
+    uid: azure-devops-extension-api.WorkItemTypeFieldInstance.dependentFields
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.WorkItemTypeFieldInstanceBase
-    name: WorkItemTypeFieldInstanceBase
-    spec.typeScript:
-      - name: WorkItemTypeFieldInstanceBase
-        fullName: WorkItemTypeFieldInstanceBase
-        uid: azure-devops-extension-api.WorkItemTypeFieldInstanceBase
+    summary: The list of dependent fields.
+    fullName: dependentFields
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dependentFields: WorkItemFieldReference[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.WorkItemFieldReference" />[]'
+        description: ''
+  - name: helpText
+    uid: azure-devops-extension-api.WorkItemTypeFieldInstance.helpText
+    package: azure-devops-extension-api
+    summary: Gets the help text for the field.
+    fullName: helpText
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'helpText: string'
+      return:
+        type: string
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.WorkItemTypeFieldInstance.name
+    package: azure-devops-extension-api
+    summary: The friendly name of the field.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: referenceName
+    uid: azure-devops-extension-api.WorkItemTypeFieldInstance.referenceName
+    package: azure-devops-extension-api
+    summary: The reference name of the field.
+    fullName: referenceName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'referenceName: string'
+      return:
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.WorkItemTypeFieldInstance.url
+    package: azure-devops-extension-api
+    summary: The REST URL of the resource.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.WorkItemTypeFieldInstanceBase" />

@@ -1,56 +1,40 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.Schedule
-    name: Schedule
-    fullName: Schedule
-    children:
-      - azure-devops-extension-api.Schedule.branchFilters
-      - azure-devops-extension-api.Schedule.daysToBuild
-      - azure-devops-extension-api.Schedule.scheduleJobId
-      - azure-devops-extension-api.Schedule.scheduleOnlyWithChanges
-      - azure-devops-extension-api.Schedule.startHours
-      - azure-devops-extension-api.Schedule.startMinutes
-      - azure-devops-extension-api.Schedule.timeZoneId
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: Schedule
+uid: azure-devops-extension-api.Schedule
+package: azure-devops-extension-api
+summary: ''
+fullName: Schedule
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: branchFilters
+    uid: azure-devops-extension-api.Schedule.branchFilters
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Schedule.branchFilters
-    name: branchFilters
-    fullName: branchFilters
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: branchFilters
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'branchFilters: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: daysToBuild
+    uid: azure-devops-extension-api.Schedule.daysToBuild
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Schedule.daysToBuild
-    name: daysToBuild
-    fullName: daysToBuild
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Days for a build (flags enum for days of the week)
+    fullName: daysToBuild
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'daysToBuild: ScheduleDays'
       return:
-        type:
-          - azure-devops-extension-api.ScheduleDays
+        type: <xref uid="azure-devops-extension-api.ScheduleDays" />
+        description: ''
+  - name: scheduleJobId
+    uid: azure-devops-extension-api.Schedule.scheduleJobId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Schedule.scheduleJobId
-    name: scheduleJobId
-    fullName: scheduleJobId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The Job Id of the Scheduled job that will queue the scheduled build. Since
       a single trigger can have multiple schedules and we want a single job to
@@ -58,76 +42,63 @@ items:
       build), the schedule itself needs to define the Job Id. This value will be
       filled in when a definition is added or updated.  The UI does not provide
       it or use it.
+    fullName: scheduleJobId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scheduleJobId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: scheduleOnlyWithChanges
+    uid: azure-devops-extension-api.Schedule.scheduleOnlyWithChanges
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Schedule.scheduleOnlyWithChanges
-    name: scheduleOnlyWithChanges
-    fullName: scheduleOnlyWithChanges
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Flag to determine if this schedule should only build if the associated
       source has been changed.
+    fullName: scheduleOnlyWithChanges
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scheduleOnlyWithChanges: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: startHours
+    uid: azure-devops-extension-api.Schedule.startHours
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Schedule.startHours
-    name: startHours
-    fullName: startHours
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Local timezone hour to start
+    fullName: startHours
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'startHours: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: startMinutes
+    uid: azure-devops-extension-api.Schedule.startMinutes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Schedule.startMinutes
-    name: startMinutes
-    fullName: startMinutes
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Local timezone minute to start
+    fullName: startMinutes
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'startMinutes: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: timeZoneId
+    uid: azure-devops-extension-api.Schedule.timeZoneId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Schedule.timeZoneId
-    name: timeZoneId
-    fullName: timeZoneId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Time zone of the build schedule (String representation of the time zone
       ID)
+    fullName: timeZoneId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'timeZoneId: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ScheduleDays
-    name: ScheduleDays
-    spec.typeScript:
-      - name: ScheduleDays
-        fullName: ScheduleDays
-        uid: azure-devops-extension-api.ScheduleDays
+        type: string
+        description: ''

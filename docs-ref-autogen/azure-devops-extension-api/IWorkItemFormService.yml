@@ -1,625 +1,470 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IWorkItemFormService
-    name: IWorkItemFormService
-    fullName: IWorkItemFormService
-    children:
-      - azure-devops-extension-api.IWorkItemFormService.addWorkItemRelations
-      - azure-devops-extension-api.IWorkItemFormService.beginSaveWorkItem
-      - azure-devops-extension-api.IWorkItemFormService.clearError
-      - azure-devops-extension-api.IWorkItemFormService.getAllowedFieldValues
-      - azure-devops-extension-api.IWorkItemFormService.getDirtyFields
-      - azure-devops-extension-api.IWorkItemFormService.getFields
-      - azure-devops-extension-api.IWorkItemFormService.getFieldValue
-      - azure-devops-extension-api.IWorkItemFormService.getFieldValue_1
-      - azure-devops-extension-api.IWorkItemFormService.getFieldValues
-      - azure-devops-extension-api.IWorkItemFormService.getFieldValues_1
-      - azure-devops-extension-api.IWorkItemFormService.getId
-      - azure-devops-extension-api.IWorkItemFormService.getIdentityFieldValue
-      - azure-devops-extension-api.IWorkItemFormService.getInvalidFields
-      - azure-devops-extension-api.IWorkItemFormService.getRevision
-      - azure-devops-extension-api.IWorkItemFormService.getWorkItemRelations
-      - azure-devops-extension-api.IWorkItemFormService.getWorkItemRelationTypes
-      - azure-devops-extension-api.IWorkItemFormService.getWorkItemResourceUrl
-      - azure-devops-extension-api.IWorkItemFormService.hasActiveWorkItem
-      - azure-devops-extension-api.IWorkItemFormService.isDirty
-      - azure-devops-extension-api.IWorkItemFormService.isNew
-      - azure-devops-extension-api.IWorkItemFormService.isValid
-      - azure-devops-extension-api.IWorkItemFormService.refresh
-      - azure-devops-extension-api.IWorkItemFormService.removeWorkItemRelations
-      - azure-devops-extension-api.IWorkItemFormService.reset
-      - azure-devops-extension-api.IWorkItemFormService.save
-      - azure-devops-extension-api.IWorkItemFormService.setError
-      - azure-devops-extension-api.IWorkItemFormService.setFieldValue
-      - azure-devops-extension-api.IWorkItemFormService.setFieldValues
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Host service for interacting with the currently active work item form
-      (work item currently displayed in the UI).
+### YamlMime:TSType
+name: IWorkItemFormService
+uid: azure-devops-extension-api.IWorkItemFormService
+package: azure-devops-extension-api
+summary: >-
+  Host service for interacting with the currently active work item form (work
+  item currently displayed in the UI).
 
-      Form service depends on the current active work item context. Will throw
-      an error when there is no open work item.
+  Form service depends on the current active work item context. Will throw an
+  error when there is no open work item.
+fullName: IWorkItemFormService
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: 'addWorkItemRelations(WorkItemRelation[])'
+    uid: azure-devops-extension-api.IWorkItemFormService.addWorkItemRelations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.addWorkItemRelations
-    name: 'addWorkItemRelations(WorkItemRelation[])'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Adds links of another work items or artifacts (e.g. commits, hyperlinks)
       to the work item. Attachment is currently not supported by this function.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function addWorkItemRelations(workItemRelations: WorkItemRelation[])'
       parameters:
         - id: workItemRelations
-          type:
-            - 'azure-devops-extension-api.WorkItemRelation[]'
+          type: '<xref uid="azure-devops-extension-api.WorkItemRelation" />[]'
           description: Work item links to add.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: An empty promise.
+  - name: 'beginSaveWorkItem(() => void, () => void)'
+    uid: azure-devops-extension-api.IWorkItemFormService.beginSaveWorkItem
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.beginSaveWorkItem
-    name: 'beginSaveWorkItem(() => void, () => void)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function beginSaveWorkItem(successCallback: () => void, errorCallback:
         () => void)
       parameters:
         - id: successCallback
-          type:
-            - () => void
+          type: () =&gt; void
           description: ''
         - id: errorCallback
-          type:
-            - () => void
+          type: () =&gt; void
           description: ''
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: clearError()
+    uid: azure-devops-extension-api.IWorkItemFormService.clearError
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.clearError
-    name: clearError()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Clears the error set by setError method and unblocks saving of the work
       item in the form.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function clearError()
-      parameters: []
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: getAllowedFieldValues(string)
+    uid: azure-devops-extension-api.IWorkItemFormService.getAllowedFieldValues
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getAllowedFieldValues
-    name: getAllowedFieldValues(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets the allowed values for the field on the active work item.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getAllowedFieldValues(fieldReferenceName: string)'
       parameters:
         - id: fieldReferenceName
-          type:
-            - string
+          type: string
           description: Field reference name
       return:
-        type:
-          - 'Promise<Object[]>'
+        type: 'Promise&lt;Object[]&gt;'
+        description: A promise that returns an array of allowed values.
+  - name: getDirtyFields(boolean)
+    uid: azure-devops-extension-api.IWorkItemFormService.getDirtyFields
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getDirtyFields
-    name: getDirtyFields(boolean)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Gets fields that have been changed either by user or by a work item rule
       and are in a dirty state.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getDirtyFields(includeSystemChanges?: boolean)'
       parameters:
         - id: includeSystemChanges
-          type:
-            - boolean
+          type: boolean
           description: >-
             A boolean value indicating if the result should include changes set
             by work item rules.
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.WorkItemField[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.WorkItemField"
+          />[]&gt;
+        description: A promise that returns an array of dirty work item fields.
+  - name: getFields()
+    uid: azure-devops-extension-api.IWorkItemFormService.getFields
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getFields
-    name: getFields()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets active work item fields.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getFields()
-      parameters: []
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.WorkItemField[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.WorkItemField"
+          />[]&gt;
+        description: A promise that returns an array of work item field.
+  - name: 'getFieldValue(string, boolean)'
+    uid: azure-devops-extension-api.IWorkItemFormService.getFieldValue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getFieldValue
-    name: 'getFieldValue(string, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets field value of the active work item.
+    isPreview: false
+    isDeprecated: true
+    customDeprecatedMessage: Please use options instead of returnOriginalValue
     syntax:
       content: >-
         function getFieldValue(fieldReferenceName: string, returnOriginalValue?:
         boolean)
       parameters:
         - id: fieldReferenceName
-          type:
-            - string
+          type: string
           description: Field reference name
         - id: returnOriginalValue
-          type:
-            - boolean
+          type: boolean
           description: '(Optional) If false, gets unsaved field values. Default is false.'
-          optional: true
       return:
-        type:
-          - Promise<Object>
+        type: Promise&lt;Object&gt;
+        description: A promise that returns the value of the work item field.
+  - name: 'getFieldValue(string, WorkItemOptions)'
+    uid: azure-devops-extension-api.IWorkItemFormService.getFieldValue_1
     package: azure-devops-extension-api
-    deprecated:
-      content: Please use options instead of returnOriginalValue
-  - uid: azure-devops-extension-api.IWorkItemFormService.getFieldValue_1
-    name: 'getFieldValue(string, WorkItemOptions)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets field value of the active work item.
+    isPreview: false
+    isDeprecated: true
+    customDeprecatedMessage: Please use options instead of returnOriginalValue
     syntax:
       content: >-
         function getFieldValue(fieldReferenceName: string, options?:
         WorkItemOptions)
       parameters:
         - id: fieldReferenceName
-          type:
-            - string
+          type: string
           description: Field reference name
         - id: options
-          type:
-            - azure-devops-extension-api.WorkItemOptions
+          type: <xref uid="azure-devops-extension-api.WorkItemOptions" />
           description: work item options
-          optional: true
       return:
-        type:
-          - Promise<Object>
+        type: Promise&lt;Object&gt;
+        description: A promise that returns the value of the work item field.
+  - name: 'getFieldValues(string[], boolean)'
+    uid: azure-devops-extension-api.IWorkItemFormService.getFieldValues
     package: azure-devops-extension-api
-    deprecated:
-      content: Please use options instead of returnOriginalValue
-  - uid: azure-devops-extension-api.IWorkItemFormService.getFieldValues
-    name: 'getFieldValues(string[], boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets field values of the active work item.
+    isPreview: false
+    isDeprecated: true
+    customDeprecatedMessage: Please use options instead of returnOriginalValue
     syntax:
       content: >-
         function getFieldValues(fieldReferenceNames: string[],
         returnOriginalValue?: boolean)
       parameters:
         - id: fieldReferenceNames
-          type:
-            - 'string[]'
+          type: 'string[]'
           description: An arrary of field reference names
         - id: returnOriginalValue
-          type:
-            - boolean
+          type: boolean
           description: '(Optional) If false, gets unsaved field values. Default is false.'
-          optional: true
       return:
-        type:
-          - 'Promise<[key: string]: Object>'
+        type: 'Promise&lt;[key: string]: Object&gt;'
+        description: >-
+          >} A promise that returns a dictionary of work item field values
+          (refName to values pairs).
+  - name: 'getFieldValues(string[], WorkItemOptions)'
+    uid: azure-devops-extension-api.IWorkItemFormService.getFieldValues_1
     package: azure-devops-extension-api
-    deprecated:
-      content: Please use options instead of returnOriginalValue
-  - uid: azure-devops-extension-api.IWorkItemFormService.getFieldValues_1
-    name: 'getFieldValues(string[], WorkItemOptions)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets field values of the active work item.
+    isPreview: false
+    isDeprecated: true
+    customDeprecatedMessage: Please use options instead of returnOriginalValue
     syntax:
       content: >-
         function getFieldValues(fieldReferenceNames: string[], options?:
         WorkItemOptions)
       parameters:
         - id: fieldReferenceNames
-          type:
-            - 'string[]'
+          type: 'string[]'
           description: An arrary of field reference names
         - id: options
-          type:
-            - azure-devops-extension-api.WorkItemOptions
+          type: <xref uid="azure-devops-extension-api.WorkItemOptions" />
           description: work item options
-          optional: true
       return:
-        type:
-          - 'Promise<[key: string]: Object>'
+        type: 'Promise&lt;[key: string]: Object&gt;'
+        description: >-
+          >} A promise that returns a dictionary of work item field values
+          (refName to values pairs).
+  - name: getId()
+    uid: azure-devops-extension-api.IWorkItemFormService.getId
     package: azure-devops-extension-api
-    deprecated:
-      content: Please use options instead of returnOriginalValue
-  - uid: azure-devops-extension-api.IWorkItemFormService.getId
-    name: getId()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets id of active work item.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getId()
-      parameters: []
       return:
-        type:
-          - Promise<number>
+        type: Promise&lt;number&gt;
+        description: A promise that returns the active work item id.
+  - name: 'getIdentityFieldValue(string, WorkItemOptions)'
+    uid: azure-devops-extension-api.IWorkItemFormService.getIdentityFieldValue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getIdentityFieldValue
-    name: 'getIdentityFieldValue(string, WorkItemOptions)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets identity field value of the active work item.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getIdentityFieldValue(fieldReferenceName: string, options?:
         WorkItemOptions)
       parameters:
         - id: fieldReferenceName
-          type:
-            - string
+          type: string
           description: Field reference name
         - id: options
-          type:
-            - azure-devops-extension-api.WorkItemOptions
+          type: <xref uid="azure-devops-extension-api.WorkItemOptions" />
           description: work item options
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.IdentityRef>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.IdentityRef" />&gt;
+        description: A promise that returns the value of the work item field.
+  - name: getInvalidFields()
+    uid: azure-devops-extension-api.IWorkItemFormService.getInvalidFields
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getInvalidFields
-    name: getInvalidFields()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Gets fields who are in an invalid state according to the work item rules.
       These fields need to be changed before the work item can be saved.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getInvalidFields()
-      parameters: []
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.WorkItemField[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.WorkItemField"
+          />[]&gt;
+        description: A promise that returns an array of invalid work item fields.
+  - name: getRevision()
+    uid: azure-devops-extension-api.IWorkItemFormService.getRevision
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getRevision
-    name: getRevision()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets active work item's latest revision.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getRevision()
-      parameters: []
       return:
-        type:
-          - Promise<number>
+        type: Promise&lt;number&gt;
+        description: A promise that returns the active work item's latest revision id.
+  - name: getWorkItemRelations()
+    uid: azure-devops-extension-api.IWorkItemFormService.getWorkItemRelations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getWorkItemRelations
-    name: getWorkItemRelations()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Returns an array of  work item links to other work items or artifacts
       (e.g. commits, hyperlinks). Attachment is currently not supported by this
       function.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getWorkItemRelations()
-      parameters: []
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.WorkItemRelation[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.WorkItemRelation"
+          />[]&gt;
+        description: >-
+          A promise that returns an array of work item relations of active work
+          item.
+  - name: getWorkItemRelationTypes()
+    uid: azure-devops-extension-api.IWorkItemFormService.getWorkItemRelationTypes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getWorkItemRelationTypes
-    name: getWorkItemRelationTypes()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Returns an array of work item relation types.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getWorkItemRelationTypes()
-      parameters: []
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.WorkItemRelationType[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.WorkItemRelationType"
+          />[]&gt;
+        description: A promise that returns an array of work item relation types.
+  - name: getWorkItemResourceUrl(number)
+    uid: azure-devops-extension-api.IWorkItemFormService.getWorkItemResourceUrl
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.getWorkItemResourceUrl
-    name: getWorkItemResourceUrl(number)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Returns the REST API url of the specified work item resource.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getWorkItemResourceUrl(workItemId: number)'
       parameters:
         - id: workItemId
-          type:
-            - number
+          type: number
           description: Id of the work item that the resource url is requested for.
       return:
-        type:
-          - Promise<string>
+        type: Promise&lt;string&gt;
+        description: A promise that returns the requested resource url of the work item.
+  - name: hasActiveWorkItem()
+    uid: azure-devops-extension-api.IWorkItemFormService.hasActiveWorkItem
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.hasActiveWorkItem
-    name: hasActiveWorkItem()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Returns true if the active work item available.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function hasActiveWorkItem()
-      parameters: []
       return:
-        type:
-          - Promise<boolean>
+        type: Promise&lt;boolean&gt;
+        description: >-
+          A promise that returns a boolean value indicates whether the active
+          work item is available.
+  - name: isDirty()
+    uid: azure-devops-extension-api.IWorkItemFormService.isDirty
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.isDirty
-    name: isDirty()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Returns true if the active work item is dirty.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function isDirty()
-      parameters: []
       return:
-        type:
-          - Promise<boolean>
+        type: Promise&lt;boolean&gt;
+        description: >-
+          A promise that returns a boolean value indicates whether the active
+          work item is dirty.
+  - name: isNew()
+    uid: azure-devops-extension-api.IWorkItemFormService.isNew
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.isNew
-    name: isNew()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Returns true if the active work item is new.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function isNew()
-      parameters: []
       return:
-        type:
-          - Promise<boolean>
+        type: Promise&lt;boolean&gt;
+        description: >-
+          A promise that returns a boolean value indicates whether the active
+          work item is new.
+  - name: isValid()
+    uid: azure-devops-extension-api.IWorkItemFormService.isValid
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.isValid
-    name: isValid()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Returns true if the active work item fields are all valid.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function isValid()
-      parameters: []
       return:
-        type:
-          - Promise<boolean>
+        type: Promise&lt;boolean&gt;
+        description: >-
+          A promise that returns a boolean value indicates whether all field
+          values are valid.
+  - name: refresh()
+    uid: azure-devops-extension-api.IWorkItemFormService.refresh
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.refresh
-    name: refresh()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Refreshes the active work item. Will prompt the user if the work item is
       dirty.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function refresh()
-      parameters: []
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'removeWorkItemRelations(WorkItemRelation[])'
+    uid: azure-devops-extension-api.IWorkItemFormService.removeWorkItemRelations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.removeWorkItemRelations
-    name: 'removeWorkItemRelations(WorkItemRelation[])'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Removes links to another work items or artifacts (e.g. commits,
       hyperlinks) from the work item. Attachment is currently not supported by
       this function.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function removeWorkItemRelations(workItemRelations: WorkItemRelation[])'
       parameters:
         - id: workItemRelations
-          type:
-            - 'azure-devops-extension-api.WorkItemRelation[]'
+          type: '<xref uid="azure-devops-extension-api.WorkItemRelation" />[]'
           description: Work item links to remove.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: An empty promise.
+  - name: reset()
+    uid: azure-devops-extension-api.IWorkItemFormService.reset
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.reset
-    name: reset()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Reset any changes in the active work item. Will prompt the user to
       confirm.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function reset()
-      parameters: []
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: save()
+    uid: azure-devops-extension-api.IWorkItemFormService.save
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.save
-    name: save()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Saves the active work item.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function save()
-      parameters: []
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: >-
+          A promise that is resolved if the work item is saved successfully and
+          rejected if it fails.
+  - name: setError(string)
+    uid: azure-devops-extension-api.IWorkItemFormService.setError
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.setError
-    name: setError(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Marks the work item as invalid and disable saving the work item on the
       form.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function setError(errorMessage: string)'
       parameters:
         - id: errorMessage
-          type:
-            - string
+          type: string
           description: >
             A custom error message that would be shown on top of the work item
             form.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'setFieldValue(string, Object)'
+    uid: azure-devops-extension-api.IWorkItemFormService.setFieldValue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.setFieldValue
-    name: 'setFieldValue(string, Object)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Sets field value of the active work item.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function setFieldValue(fieldReferenceName: string, value: Object)'
       parameters:
         - id: fieldReferenceName
-          type:
-            - string
+          type: string
           description: Field reference name
         - id: value
-          type:
-            - Object
+          type: Object
           description: Field value
       return:
-        type:
-          - Promise<boolean>
+        type: Promise&lt;boolean&gt;
+        description: >-
+          A promise that returns a boolean value indicates whether the function
+          completed successfully.
+  - name: 'setFieldValues([key: string]: Object)'
+    uid: azure-devops-extension-api.IWorkItemFormService.setFieldValues
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IWorkItemFormService.setFieldValues
-    name: 'setFieldValues([key: string]: Object)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Sets field values of the active work item.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function setFieldValues(fields: [key: string]: Object)'
       parameters:
         - id: fields
-          type:
-            - '[key: string]: Object'
+          type: '[key: string]\: Object'
           description: A dictionary of field refName/values
       return:
-        type:
-          - 'Promise<[key: string]: boolean>'
-    package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.WorkItemRelation[]'
-    name: 'WorkItemRelation[]'
-    spec.typeScript:
-      - name: WorkItemRelation
-        fullName: WorkItemRelation
-        uid: azure-devops-extension-api.WorkItemRelation
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'Promise<azure-devops-extension-api.WorkItemField[]>'
-    name: 'WorkItemField[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: WorkItemField
-        fullName: WorkItemField
-        uid: azure-devops-extension-api.WorkItemField
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.WorkItemOptions
-    name: WorkItemOptions
-    spec.typeScript:
-      - name: WorkItemOptions
-        fullName: WorkItemOptions
-        uid: azure-devops-extension-api.WorkItemOptions
-  - uid: Promise<azure-devops-extension-api.IdentityRef>
-    name: IdentityRef>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.WorkItemRelationType[]>'
-    name: 'WorkItemRelationType[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: WorkItemRelationType
-        fullName: WorkItemRelationType
-        uid: azure-devops-extension-api.WorkItemRelationType
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.WorkItemRelation[]>'
-    name: 'WorkItemRelation[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: WorkItemRelation
-        fullName: WorkItemRelation
-        uid: azure-devops-extension-api.WorkItemRelation
-      - name: '[]>'
-        fullName: '[]>'
+        type: 'Promise&lt;[key: string]: boolean&gt;'
+        description: >-
+          >} A promise that returns a dictionary of field value update results
+          (refName to results pairs).

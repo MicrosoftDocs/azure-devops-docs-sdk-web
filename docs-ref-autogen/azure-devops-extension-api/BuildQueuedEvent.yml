@@ -1,20 +1,35 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BuildQueuedEvent
-    name: BuildQueuedEvent
-    fullName: BuildQueuedEvent
-    children: []
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.BuildUpdatedEvent
+### YamlMime:TSType
+name: BuildQueuedEvent
+uid: azure-devops-extension-api.BuildQueuedEvent
+package: azure-devops-extension-api
+summary: ''
+fullName: BuildQueuedEvent
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: build
+    uid: azure-devops-extension-api.BuildQueuedEvent.build
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.BuildUpdatedEvent
-    name: BuildUpdatedEvent
-    spec.typeScript:
-      - name: BuildUpdatedEvent
-        fullName: BuildUpdatedEvent
-        uid: azure-devops-extension-api.BuildUpdatedEvent
+    summary: ''
+    fullName: build
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'build: Build'
+      return:
+        type: <xref uid="azure-devops-extension-api.Build" />
+        description: ''
+  - name: buildId
+    uid: azure-devops-extension-api.BuildQueuedEvent.buildId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: buildId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'buildId: number'
+      return:
+        type: number
+        description: ''
+extends: <xref uid="azure-devops-extension-api.BuildUpdatedEvent" />

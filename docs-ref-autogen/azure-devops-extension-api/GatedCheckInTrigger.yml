@@ -1,69 +1,63 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GatedCheckInTrigger
-    name: GatedCheckInTrigger
-    fullName: GatedCheckInTrigger
-    children:
-      - azure-devops-extension-api.GatedCheckInTrigger.pathFilters
-      - azure-devops-extension-api.GatedCheckInTrigger.runContinuousIntegration
-      - azure-devops-extension-api.GatedCheckInTrigger.useWorkspaceMappings
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents a gated check-in trigger.
-    extends:
-      name: azure-devops-extension-api.BuildTrigger
+### YamlMime:TSType
+name: GatedCheckInTrigger
+uid: azure-devops-extension-api.GatedCheckInTrigger
+package: azure-devops-extension-api
+summary: Represents a gated check-in trigger.
+fullName: GatedCheckInTrigger
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: pathFilters
+    uid: azure-devops-extension-api.GatedCheckInTrigger.pathFilters
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GatedCheckInTrigger.pathFilters
-    name: pathFilters
-    fullName: pathFilters
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: pathFilters
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pathFilters: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: runContinuousIntegration
+    uid: azure-devops-extension-api.GatedCheckInTrigger.runContinuousIntegration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GatedCheckInTrigger.runContinuousIntegration
-    name: runContinuousIntegration
-    fullName: runContinuousIntegration
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Indicates whether CI triggers should run after the gated check-in
       succeeds.
+    fullName: runContinuousIntegration
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'runContinuousIntegration: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: triggerType
+    uid: azure-devops-extension-api.GatedCheckInTrigger.triggerType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GatedCheckInTrigger.useWorkspaceMappings
-    name: useWorkspaceMappings
-    fullName: useWorkspaceMappings
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: The type of the trigger.
+    fullName: triggerType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'triggerType: DefinitionTriggerType'
+      return:
+        type: <xref uid="azure-devops-extension-api.DefinitionTriggerType" />
+        description: ''
+  - name: useWorkspaceMappings
+    uid: azure-devops-extension-api.GatedCheckInTrigger.useWorkspaceMappings
+    package: azure-devops-extension-api
     summary: >-
       Indicates whether to take workspace mappings into account when determining
       whether a build should run.
+    fullName: useWorkspaceMappings
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'useWorkspaceMappings: boolean'
       return:
-        type:
-          - boolean
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.BuildTrigger
-    name: BuildTrigger
-    spec.typeScript:
-      - name: BuildTrigger
-        fullName: BuildTrigger
-        uid: azure-devops-extension-api.BuildTrigger
+        type: boolean
+        description: ''
+extends: <xref uid="azure-devops-extension-api.BuildTrigger" />

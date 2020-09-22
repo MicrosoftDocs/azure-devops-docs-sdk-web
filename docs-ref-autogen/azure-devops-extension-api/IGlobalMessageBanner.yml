@@ -1,92 +1,112 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IGlobalMessageBanner
-    name: IGlobalMessageBanner
-    fullName: IGlobalMessageBanner
-    children:
-      - azure-devops-extension-api.IGlobalMessageBanner.level
-      - azure-devops-extension-api.IGlobalMessageBanner.message
-      - azure-devops-extension-api.IGlobalMessageBanner.messageFormat
-      - azure-devops-extension-api.IGlobalMessageBanner.messageLinks
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: IGlobalMessageBanner
+uid: azure-devops-extension-api.IGlobalMessageBanner
+package: azure-devops-extension-api
+summary: Banner Props specifying how it will be rendered by the service
+fullName: IGlobalMessageBanner
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: buttons
+    uid: azure-devops-extension-api.IGlobalMessageBanner.buttons
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IGlobalMessageBanner.level
-    name: level
-    fullName: level
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Buttons to display after the message
+    fullName: buttons
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'buttons?: IContributedButton[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.IContributedButton" />[]'
+        description: ''
+  - name: customIcon
+    uid: azure-devops-extension-api.IGlobalMessageBanner.customIcon
+    package: azure-devops-extension-api
+    summary: Custom icon name. Must be an icon in the Azure DevOps icon font.
+    fullName: customIcon
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'customIcon?: string'
+      return:
+        type: string
+        description: ''
+  - name: dismissable
+    uid: azure-devops-extension-api.IGlobalMessageBanner.dismissable
+    package: azure-devops-extension-api
+    summary: >-
+      Whether or not the message banner is dismissable. If false, do not show
+      the close (X) icon.
+    fullName: dismissable
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dismissable?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: helpInfo
+    uid: azure-devops-extension-api.IGlobalMessageBanner.helpInfo
+    package: azure-devops-extension-api
+    summary: >-
+      Optional "?" icon to show after the message that has a tooltip with more
+      information and/or a hyperlink.
+    fullName: helpInfo
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'helpInfo?: IGlobalMessageHelpInfo'
+      return:
+        type: <xref uid="azure-devops-extension-api.IGlobalMessageHelpInfo" />
+        description: ''
+  - name: level
+    uid: azure-devops-extension-api.IGlobalMessageBanner.level
+    package: azure-devops-extension-api
     summary: banner level (controls the background and icon of the banner)
-    optional: true
+    fullName: level
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'level?: MessageBannerLevel'
       return:
-        type:
-          - azure-devops-extension-api.MessageBannerLevel
+        type: <xref uid="azure-devops-extension-api.MessageBannerLevel" />
+        description: ''
+  - name: message
+    uid: azure-devops-extension-api.IGlobalMessageBanner.message
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IGlobalMessageBanner.message
-    name: message
-    fullName: message
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Banner message. Ignored if messageFormat is also provided
-    optional: true
+    fullName: message
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'message?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: messageFormat
+    uid: azure-devops-extension-api.IGlobalMessageBanner.messageFormat
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IGlobalMessageBanner.messageFormat
-    name: messageFormat
-    fullName: messageFormat
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Banner message format string. Arguments (like \{0\}, \{1\} are filled in
       with hyperlinks supplied in messageLinks)
-    optional: true
+    fullName: messageFormat
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'messageFormat?: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: messageLinks
+    uid: azure-devops-extension-api.IGlobalMessageBanner.messageLinks
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IGlobalMessageBanner.messageLinks
-    name: messageLinks
-    fullName: messageLinks
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Links to supply to the format arguments in `messageFormat`
-    optional: true
+    fullName: messageLinks
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'messageLinks?: IGlobalMessageLink[]'
       return:
-        type:
-          - 'azure-devops-extension-api.IGlobalMessageLink[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.MessageBannerLevel
-    name: MessageBannerLevel
-    spec.typeScript:
-      - name: MessageBannerLevel
-        fullName: MessageBannerLevel
-        uid: azure-devops-extension-api.MessageBannerLevel
-  - uid: 'azure-devops-extension-api.IGlobalMessageLink[]'
-    name: 'IGlobalMessageLink[]'
-    spec.typeScript:
-      - name: IGlobalMessageLink
-        fullName: IGlobalMessageLink
-        uid: azure-devops-extension-api.IGlobalMessageLink
-      - name: '[]'
-        fullName: '[]'
+        type: '<xref uid="azure-devops-extension-api.IGlobalMessageLink" />[]'
+        description: ''

@@ -1,111 +1,85 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.WorkItem
-    name: WorkItem
-    fullName: WorkItem
-    children:
-      - azure-devops-extension-api.WorkItem.commentVersionRef
-      - azure-devops-extension-api.WorkItem.fields
-      - azure-devops-extension-api.WorkItem.id
-      - azure-devops-extension-api.WorkItem.relations
-      - azure-devops-extension-api.WorkItem.rev
-    langs:
-      - typeScript
-    type: interface
-    summary: Describes a work item.
-    extends:
-      name: azure-devops-extension-api.WorkItemTrackingResource
+### YamlMime:TSType
+name: WorkItem
+uid: azure-devops-extension-api.WorkItem
+package: azure-devops-extension-api
+summary: Describes a work item.
+fullName: WorkItem
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: commentVersionRef
+    uid: azure-devops-extension-api.WorkItem.commentVersionRef
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItem.commentVersionRef
-    name: commentVersionRef
-    fullName: commentVersionRef
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Reference to a specific version of the comment added/edited/deleted in
       this revision.
+    fullName: commentVersionRef
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'commentVersionRef: WorkItemCommentVersionRef'
       return:
-        type:
-          - azure-devops-extension-api.WorkItemCommentVersionRef
+        type: <xref uid="azure-devops-extension-api.WorkItemCommentVersionRef" />
+        description: ''
+  - name: fields
+    uid: azure-devops-extension-api.WorkItem.fields
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItem.fields
-    name: fields
-    fullName: fields
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Map of field and values for the work item.
+    fullName: fields
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'fields: [key: string]: any'
       return:
-        type:
-          - '[key: string]: any'
+        type: '[key: string]\: any'
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.WorkItem.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItem.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The work item ID.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: relations
+    uid: azure-devops-extension-api.WorkItem.relations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItem.relations
-    name: relations
-    fullName: relations
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Relations of the work item.
+    fullName: relations
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'relations: WorkItemRelation[]'
       return:
-        type:
-          - 'azure-devops-extension-api.WorkItemRelation[]'
+        type: '<xref uid="azure-devops-extension-api.WorkItemRelation" />[]'
+        description: ''
+  - name: rev
+    uid: azure-devops-extension-api.WorkItem.rev
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItem.rev
-    name: rev
-    fullName: rev
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Revision number of the work item.
+    fullName: rev
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'rev: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.WorkItem.url
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.WorkItemTrackingResource
-    name: WorkItemTrackingResource
-    spec.typeScript:
-      - name: WorkItemTrackingResource
-        fullName: WorkItemTrackingResource
-        uid: azure-devops-extension-api.WorkItemTrackingResource
-  - uid: azure-devops-extension-api.WorkItemCommentVersionRef
-    name: WorkItemCommentVersionRef
-    spec.typeScript:
-      - name: WorkItemCommentVersionRef
-        fullName: WorkItemCommentVersionRef
-        uid: azure-devops-extension-api.WorkItemCommentVersionRef
-  - uid: 'azure-devops-extension-api.WorkItemRelation[]'
-    name: 'WorkItemRelation[]'
-    spec.typeScript:
-      - name: WorkItemRelation
-        fullName: WorkItemRelation
-        uid: azure-devops-extension-api.WorkItemRelation
-      - name: '[]'
-        fullName: '[]'
+    summary: ''
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

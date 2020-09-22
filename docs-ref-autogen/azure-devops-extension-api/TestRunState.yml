@@ -1,85 +1,48 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TestRunState
-    name: TestRunState
-    fullName: TestRunState
-    children:
-      - azure-devops-extension-api.TestRunState.Unspecified
-      - azure-devops-extension-api.TestRunState.NotStarted
-      - azure-devops-extension-api.TestRunState.InProgress
-      - azure-devops-extension-api.TestRunState.Completed
-      - azure-devops-extension-api.TestRunState.Aborted
-      - azure-devops-extension-api.TestRunState.Waiting
-      - azure-devops-extension-api.TestRunState.NeedsInvestigation
-    langs:
-      - typeScript
-    type: enum
-    summary: The types of states for test run.
+### YamlMime:TSEnum
+name: TestRunState
+uid: azure-devops-extension-api.TestRunState
+package: azure-devops-extension-api
+summary: The types of states for test run.
+fullName: TestRunState
+isPreview: false
+isDeprecated: false
+fields:
+  - name: Unspecified
+    uid: azure-devops-extension-api.TestRunState.Unspecified
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestRunState.Unspecified
-    name: Unspecified
-    children: []
-    langs:
-      - typeScript
     summary: Only used during an update to preserve the existing value.
-    type: field
     numericValue: 0
+  - name: NotStarted
+    uid: azure-devops-extension-api.TestRunState.NotStarted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestRunState.NotStarted
-    name: NotStarted
-    children: []
-    langs:
-      - typeScript
     summary: The run is still being created.  No tests have started yet.
-    type: field
     numericValue: 1
+  - name: InProgress
+    uid: azure-devops-extension-api.TestRunState.InProgress
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestRunState.InProgress
-    name: InProgress
-    children: []
-    langs:
-      - typeScript
     summary: Tests are running.
-    type: field
     numericValue: 2
+  - name: Completed
+    uid: azure-devops-extension-api.TestRunState.Completed
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestRunState.Completed
-    name: Completed
-    children: []
-    langs:
-      - typeScript
     summary: All tests have completed or been skipped.
-    type: field
     numericValue: 3
+  - name: Aborted
+    uid: azure-devops-extension-api.TestRunState.Aborted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestRunState.Aborted
-    name: Aborted
-    children: []
-    langs:
-      - typeScript
-    summary: Run is stopped and remaing tests have been aborted
-    type: field
+    summary: Run is stopped and remaining tests have been aborted
     numericValue: 4
+  - name: Waiting
+    uid: azure-devops-extension-api.TestRunState.Waiting
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestRunState.Waiting
-    name: Waiting
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Run is currently initializing This is a legacy state and should not be
       used any more
-    type: field
     numericValue: 5
+  - name: NeedsInvestigation
+    uid: azure-devops-extension-api.TestRunState.NeedsInvestigation
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestRunState.NeedsInvestigation
-    name: NeedsInvestigation
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Run requires investigation because of a test point failure This is a
       legacy state and should not be used any more
-    type: field
     numericValue: 6
-    package: azure-devops-extension-api

@@ -1,77 +1,83 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitBaseVersionDescriptor
-    name: GitBaseVersionDescriptor
-    fullName: GitBaseVersionDescriptor
-    children:
-      - azure-devops-extension-api.GitBaseVersionDescriptor.baseVersion
-      - azure-devops-extension-api.GitBaseVersionDescriptor.baseVersionOptions
-      - azure-devops-extension-api.GitBaseVersionDescriptor.baseVersionType
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.GitVersionDescriptor
+### YamlMime:TSType
+name: GitBaseVersionDescriptor
+uid: azure-devops-extension-api.GitBaseVersionDescriptor
+package: azure-devops-extension-api
+summary: ''
+fullName: GitBaseVersionDescriptor
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: baseVersion
+    uid: azure-devops-extension-api.GitBaseVersionDescriptor.baseVersion
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitBaseVersionDescriptor.baseVersion
-    name: baseVersion
-    fullName: baseVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'Version string identifier (name of tag/branch, SHA1 of commit)'
+    fullName: baseVersion
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'baseVersion: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: baseVersionOptions
+    uid: azure-devops-extension-api.GitBaseVersionDescriptor.baseVersionOptions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitBaseVersionDescriptor.baseVersionOptions
-    name: baseVersionOptions
-    fullName: baseVersionOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Version options - Specify additional modifiers to version (e.g Previous)
+    fullName: baseVersionOptions
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'baseVersionOptions: GitVersionOptions'
       return:
-        type:
-          - azure-devops-extension-api.GitVersionOptions
+        type: <xref uid="azure-devops-extension-api.GitVersionOptions" />
+        description: ''
+  - name: baseVersionType
+    uid: azure-devops-extension-api.GitBaseVersionDescriptor.baseVersionType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitBaseVersionDescriptor.baseVersionType
-    name: baseVersionType
-    fullName: baseVersionType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'Version type (branch, tag, or commit). Determines how Id is interpreted'
+    fullName: baseVersionType
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'baseVersionType: GitVersionType'
       return:
-        type:
-          - azure-devops-extension-api.GitVersionType
+        type: <xref uid="azure-devops-extension-api.GitVersionType" />
+        description: ''
+  - name: version
+    uid: azure-devops-extension-api.GitBaseVersionDescriptor.version
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitVersionDescriptor
-    name: GitVersionDescriptor
-    spec.typeScript:
-      - name: GitVersionDescriptor
-        fullName: GitVersionDescriptor
-        uid: azure-devops-extension-api.GitVersionDescriptor
-  - uid: azure-devops-extension-api.GitVersionOptions
-    name: GitVersionOptions
-    spec.typeScript:
-      - name: GitVersionOptions
-        fullName: GitVersionOptions
-        uid: azure-devops-extension-api.GitVersionOptions
-  - uid: azure-devops-extension-api.GitVersionType
-    name: GitVersionType
-    spec.typeScript:
-      - name: GitVersionType
-        fullName: GitVersionType
-        uid: azure-devops-extension-api.GitVersionType
+    summary: 'Version string identifier (name of tag/branch, SHA1 of commit)'
+    fullName: version
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'version: string'
+      return:
+        type: string
+        description: ''
+  - name: versionOptions
+    uid: azure-devops-extension-api.GitBaseVersionDescriptor.versionOptions
+    package: azure-devops-extension-api
+    summary: Version options - Specify additional modifiers to version (e.g Previous)
+    fullName: versionOptions
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'versionOptions: GitVersionOptions'
+      return:
+        type: <xref uid="azure-devops-extension-api.GitVersionOptions" />
+        description: ''
+  - name: versionType
+    uid: azure-devops-extension-api.GitBaseVersionDescriptor.versionType
+    package: azure-devops-extension-api
+    summary: 'Version type (branch, tag, or commit). Determines how Id is interpreted'
+    fullName: versionType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'versionType: GitVersionType'
+      return:
+        type: <xref uid="azure-devops-extension-api.GitVersionType" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />

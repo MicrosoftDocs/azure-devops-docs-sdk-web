@@ -1,65 +1,48 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TaskAgentAuthorization
-    name: TaskAgentAuthorization
-    fullName: TaskAgentAuthorization
-    children:
-      - azure-devops-extension-api.TaskAgentAuthorization.authorizationUrl
-      - azure-devops-extension-api.TaskAgentAuthorization.clientId
-      - azure-devops-extension-api.TaskAgentAuthorization.publicKey
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Provides data necessary for authorizing the agent using OAuth 2.0
-      authentication flows.
+### YamlMime:TSType
+name: TaskAgentAuthorization
+uid: azure-devops-extension-api.TaskAgentAuthorization
+package: azure-devops-extension-api
+summary: >-
+  Provides data necessary for authorizing the agent using OAuth 2.0
+  authentication flows.
+fullName: TaskAgentAuthorization
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: authorizationUrl
+    uid: azure-devops-extension-api.TaskAgentAuthorization.authorizationUrl
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentAuthorization.authorizationUrl
-    name: authorizationUrl
-    fullName: authorizationUrl
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Endpoint used to obtain access tokens from the configured token service.
+    fullName: authorizationUrl
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'authorizationUrl: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: clientId
+    uid: azure-devops-extension-api.TaskAgentAuthorization.clientId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentAuthorization.clientId
-    name: clientId
-    fullName: clientId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Client identifier for this agent.
+    fullName: clientId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'clientId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: publicKey
+    uid: azure-devops-extension-api.TaskAgentAuthorization.publicKey
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentAuthorization.publicKey
-    name: publicKey
-    fullName: publicKey
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Public key used to verify the identity of this agent.
+    fullName: publicKey
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'publicKey: TaskAgentPublicKey'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentPublicKey
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TaskAgentPublicKey
-    name: TaskAgentPublicKey
-    spec.typeScript:
-      - name: TaskAgentPublicKey
-        fullName: TaskAgentPublicKey
-        uid: azure-devops-extension-api.TaskAgentPublicKey
+        type: <xref uid="azure-devops-extension-api.TaskAgentPublicKey" />
+        description: ''

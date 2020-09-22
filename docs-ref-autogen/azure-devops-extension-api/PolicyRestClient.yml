@@ -1,481 +1,335 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.PolicyRestClient
-    name: PolicyRestClient
-    fullName: PolicyRestClient
-    children:
-      - azure-devops-extension-api.PolicyRestClient.createPolicyConfiguration
-      - azure-devops-extension-api.PolicyRestClient.deletePolicyConfiguration
-      - azure-devops-extension-api.PolicyRestClient.getPolicyConfiguration
-      - >-
-        azure-devops-extension-api.PolicyRestClient.getPolicyConfigurationRevision
-      - >-
-        azure-devops-extension-api.PolicyRestClient.getPolicyConfigurationRevisions
-      - azure-devops-extension-api.PolicyRestClient.getPolicyConfigurations
-      - azure-devops-extension-api.PolicyRestClient.getPolicyEvaluation
-      - azure-devops-extension-api.PolicyRestClient.getPolicyEvaluations
-      - azure-devops-extension-api.PolicyRestClient.getPolicyType
-      - azure-devops-extension-api.PolicyRestClient.getPolicyTypes
-      - azure-devops-extension-api.PolicyRestClient.constructor
-      - azure-devops-extension-api.PolicyRestClient.requeuePolicyEvaluation
-      - azure-devops-extension-api.PolicyRestClient.RESOURCE_AREA_ID
-      - azure-devops-extension-api.PolicyRestClient.updatePolicyConfiguration
-    langs:
-      - typeScript
-    type: class
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.RestClientBase
+### YamlMime:TSType
+name: PolicyRestClient
+uid: azure-devops-extension-api.PolicyRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: PolicyRestClient
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: PolicyRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.PolicyRestClient.constructor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.createPolicyConfiguration
-    name: 'createPolicyConfiguration(PolicyConfiguration, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new PolicyRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+properties:
+  - name: RESOURCE_AREA_ID
+    uid: azure-devops-extension-api.PolicyRestClient.RESOURCE_AREA_ID
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: RESOURCE_AREA_ID
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static RESOURCE_AREA_ID: string'
+      return:
+        type: string
+        description: ''
+methods:
+  - name: 'createPolicyConfiguration(PolicyConfiguration, string, number)'
+    uid: azure-devops-extension-api.PolicyRestClient.createPolicyConfiguration
+    package: azure-devops-extension-api
     summary: Create a policy configuration of a given policy type.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createPolicyConfiguration(configuration: PolicyConfiguration,
         project: string, configurationId?: number)
       parameters:
         - id: configuration
-          type:
-            - azure-devops-extension-api.PolicyConfiguration
+          type: <xref uid="azure-devops-extension-api.PolicyConfiguration" />
           description: The policy configuration to create.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: configurationId
-          type:
-            - number
+          type: number
           description: |
             -
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.PolicyConfiguration>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
+          />&gt;
+        description: ''
+  - name: 'deletePolicyConfiguration(string, number)'
+    uid: azure-devops-extension-api.PolicyRestClient.deletePolicyConfiguration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.deletePolicyConfiguration
-    name: 'deletePolicyConfiguration(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Delete a policy configuration by its ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function deletePolicyConfiguration(project: string, configurationId:
         number)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: configurationId
-          type:
-            - number
+          type: number
           description: |
             ID of the policy configuration to delete.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'getPolicyConfiguration(string, number)'
+    uid: azure-devops-extension-api.PolicyRestClient.getPolicyConfiguration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.getPolicyConfiguration
-    name: 'getPolicyConfiguration(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a policy configuration by its ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getPolicyConfiguration(project: string, configurationId:
         number)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: configurationId
-          type:
-            - number
+          type: number
           description: |
             ID of the policy configuration
       return:
-        type:
-          - Promise<azure-devops-extension-api.PolicyConfiguration>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
+          />&gt;
+        description: ''
+  - name: 'getPolicyConfigurationRevision(string, number, number)'
+    uid: azure-devops-extension-api.PolicyRestClient.getPolicyConfigurationRevision
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.getPolicyConfigurationRevision
-    name: 'getPolicyConfigurationRevision(string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Retrieve a specific revision of a given policy by ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getPolicyConfigurationRevision(project: string,
         configurationId: number, revisionId: number)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: configurationId
-          type:
-            - number
+          type: number
           description: The policy configuration ID.
         - id: revisionId
-          type:
-            - number
+          type: number
           description: |
             The revision ID.
       return:
-        type:
-          - Promise<azure-devops-extension-api.PolicyConfiguration>
-    package: azure-devops-extension-api
-  - uid: >-
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
+          />&gt;
+        description: ''
+  - name: 'getPolicyConfigurationRevisions(string, number, number, number)'
+    uid: >-
       azure-devops-extension-api.PolicyRestClient.getPolicyConfigurationRevisions
-    name: 'getPolicyConfigurationRevisions(string, number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
+    package: azure-devops-extension-api
     summary: Retrieve all revisions for a given policy.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getPolicyConfigurationRevisions(project: string,
         configurationId: number, top?: number, skip?: number)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: configurationId
-          type:
-            - number
+          type: number
           description: The policy configuration ID.
         - id: top
-          type:
-            - number
+          type: number
           description: The number of revisions to retrieve.
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: >
             The number of revisions to ignore. For example, to retrieve results
             101-150, set top to 50 and skip to 100.
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.PolicyConfiguration[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
+          />[]&gt;
+        description: ''
+  - name: 'getPolicyConfigurations(string, string, string)'
+    uid: azure-devops-extension-api.PolicyRestClient.getPolicyConfigurations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.getPolicyConfigurations
-    name: 'getPolicyConfigurations(string, string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a list of policy configurations in a project.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getPolicyConfigurations(project: string, scope?: string,
         policyType?: string)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: scope
-          type:
-            - string
+          type: string
           description: >-
             [Provided for legacy reasons] The scope on which a subset of
             policies is defined.
-          optional: true
         - id: policyType
-          type:
-            - string
+          type: string
           description: |
             Filter returned policies to only this type
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.PolicyConfiguration[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
+          />[]&gt;
+        description: ''
+  - name: 'getPolicyEvaluation(string, string)'
+    uid: azure-devops-extension-api.PolicyRestClient.getPolicyEvaluation
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.getPolicyEvaluation
-    name: 'getPolicyEvaluation(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets the present evaluation state of a policy.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getPolicyEvaluation(project: string, evaluationId: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: evaluationId
-          type:
-            - string
+          type: string
           description: |
             ID of the policy evaluation to be retrieved.
       return:
-        type:
-          - Promise<azure-devops-extension-api.PolicyEvaluationRecord>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.PolicyEvaluationRecord" />&gt;
+        description: ''
+  - name: 'getPolicyEvaluations(string, string, boolean, number, number)'
+    uid: azure-devops-extension-api.PolicyRestClient.getPolicyEvaluations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.getPolicyEvaluations
-    name: 'getPolicyEvaluations(string, string, boolean, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Retrieves a list of all the policy evaluation statuses for a specific pull
       request.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getPolicyEvaluations(project: string, artifactId: string,
         includeNotApplicable?: boolean, top?: number, skip?: number)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: artifactId
-          type:
-            - string
+          type: string
           description: >-
             A string which uniquely identifies the target of a policy
             evaluation.
         - id: includeNotApplicable
-          type:
-            - boolean
+          type: boolean
           description: >-
             Some policies might determine that they do not apply to a specific
             pull request. Setting this parameter to true will return evaluation
             records even for policies which don't apply to this pull request.
-          optional: true
         - id: top
-          type:
-            - number
+          type: number
           description: The number of policy evaluation records to retrieve.
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: >
             The number of policy evaluation records to ignore. For example, to
             retrieve results 101-150, set top to 50 and skip to 100.
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.PolicyEvaluationRecord[]>'
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.PolicyEvaluationRecord" />[]&gt;
+        description: ''
+  - name: 'getPolicyType(string, string)'
+    uid: azure-devops-extension-api.PolicyRestClient.getPolicyType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.getPolicyType
-    name: 'getPolicyType(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Retrieve a specific policy type by ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getPolicyType(project: string, typeId: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: typeId
-          type:
-            - string
+          type: string
           description: |
             The policy ID.
       return:
-        type:
-          - Promise<azure-devops-extension-api.PolicyType>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.PolicyType" />&gt;
+        description: ''
+  - name: getPolicyTypes(string)
+    uid: azure-devops-extension-api.PolicyRestClient.getPolicyTypes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.getPolicyTypes
-    name: getPolicyTypes(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Retrieve all available policy types.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getPolicyTypes(project: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: |
             Project ID or project name
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.PolicyType[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.PolicyType" />[]&gt;'
+        description: ''
+  - name: 'requeuePolicyEvaluation(string, string)'
+    uid: azure-devops-extension-api.PolicyRestClient.requeuePolicyEvaluation
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.constructor
-    name: PolicyRestClient(IVssRestClientOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new PolicyRestClient(options: IVssRestClientOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-devops-extension-api.IVssRestClientOptions
-          description: ''
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.requeuePolicyEvaluation
-    name: 'requeuePolicyEvaluation(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Requeue the policy evaluation.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function requeuePolicyEvaluation(project: string, evaluationId: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: evaluationId
-          type:
-            - string
+          type: string
           description: |
             ID of the policy evaluation to be retrieved.
       return:
-        type:
-          - Promise<azure-devops-extension-api.PolicyEvaluationRecord>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.PolicyEvaluationRecord" />&gt;
+        description: ''
+  - name: 'updatePolicyConfiguration(PolicyConfiguration, string, number)'
+    uid: azure-devops-extension-api.PolicyRestClient.updatePolicyConfiguration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.RESOURCE_AREA_ID
-    name: RESOURCE_AREA_ID
-    fullName: RESOURCE_AREA_ID
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'static RESOURCE_AREA_ID: string'
-      return:
-        type:
-          - string
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyRestClient.updatePolicyConfiguration
-    name: 'updatePolicyConfiguration(PolicyConfiguration, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Update a policy configuration by its ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updatePolicyConfiguration(configuration: PolicyConfiguration,
         project: string, configurationId: number)
       parameters:
         - id: configuration
-          type:
-            - azure-devops-extension-api.PolicyConfiguration
+          type: <xref uid="azure-devops-extension-api.PolicyConfiguration" />
           description: The policy configuration to update.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: configurationId
-          type:
-            - number
+          type: number
           description: |
             ID of the existing policy configuration to be updated.
       return:
-        type:
-          - Promise<azure-devops-extension-api.PolicyConfiguration>
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RestClientBase
-    name: RestClientBase
-    spec.typeScript:
-      - name: RestClientBase
-        fullName: RestClientBase
-        uid: azure-devops-extension-api.RestClientBase
-  - uid: azure-devops-extension-api.IVssRestClientOptions
-    name: IVssRestClientOptions
-    spec.typeScript:
-      - name: IVssRestClientOptions
-        fullName: IVssRestClientOptions
-        uid: azure-devops-extension-api.IVssRestClientOptions
-  - uid: azure-devops-extension-api.PolicyConfiguration
-    name: PolicyConfiguration
-    spec.typeScript:
-      - name: PolicyConfiguration
-        fullName: PolicyConfiguration
-        uid: azure-devops-extension-api.PolicyConfiguration
-  - uid: Promise<azure-devops-extension-api.PolicyConfiguration>
-    name: PolicyConfiguration>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: PolicyConfiguration
-        fullName: PolicyConfiguration
-        uid: azure-devops-extension-api.PolicyConfiguration
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.PolicyConfiguration[]>'
-    name: 'PolicyConfiguration[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: PolicyConfiguration
-        fullName: PolicyConfiguration
-        uid: azure-devops-extension-api.PolicyConfiguration
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: Promise<azure-devops-extension-api.PolicyEvaluationRecord>
-    name: PolicyEvaluationRecord>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: PolicyEvaluationRecord
-        fullName: PolicyEvaluationRecord
-        uid: azure-devops-extension-api.PolicyEvaluationRecord
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.PolicyEvaluationRecord[]>'
-    name: 'PolicyEvaluationRecord[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: PolicyEvaluationRecord
-        fullName: PolicyEvaluationRecord
-        uid: azure-devops-extension-api.PolicyEvaluationRecord
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: Promise<azure-devops-extension-api.PolicyType>
-    name: PolicyType>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: PolicyType
-        fullName: PolicyType
-        uid: azure-devops-extension-api.PolicyType
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.PolicyType[]>'
-    name: 'PolicyType[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: PolicyType
-        fullName: PolicyType
-        uid: azure-devops-extension-api.PolicyType
-      - name: '[]>'
-        fullName: '[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
+          />&gt;
+        description: ''
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

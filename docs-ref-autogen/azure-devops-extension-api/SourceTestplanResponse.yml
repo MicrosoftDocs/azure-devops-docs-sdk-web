@@ -1,56 +1,59 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.SourceTestplanResponse
-    name: SourceTestplanResponse
-    fullName: SourceTestplanResponse
-    children:
-      - azure-devops-extension-api.SourceTestplanResponse.project
-      - azure-devops-extension-api.SourceTestplanResponse.suiteIds
-    langs:
-      - typeScript
-    type: interface
-    summary: Source Test Plan Response for Test Plan clone operation
-    extends:
-      name: azure-devops-extension-api.TestPlanReference
+### YamlMime:TSType
+name: SourceTestplanResponse
+uid: azure-devops-extension-api.SourceTestplanResponse
+package: azure-devops-extension-api
+summary: Source Test Plan Response for Test Plan clone operation
+fullName: SourceTestplanResponse
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.SourceTestplanResponse.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.SourceTestplanResponse.project
-    name: project
-    fullName: project
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ID of the test plan.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.SourceTestplanResponse.name
+    package: azure-devops-extension-api
+    summary: Name of the test plan.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: project
+    uid: azure-devops-extension-api.SourceTestplanResponse.project
+    package: azure-devops-extension-api
     summary: project reference
+    fullName: project
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
       return:
-        type:
-          - azure-devops-extension-api.TeamProjectReference
+        type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+        description: ''
+  - name: suiteIds
+    uid: azure-devops-extension-api.SourceTestplanResponse.suiteIds
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.SourceTestplanResponse.suiteIds
-    name: suiteIds
-    fullName: suiteIds
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Id of suites to be cloned inside source Test Plan
+    fullName: suiteIds
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'suiteIds: number[]'
       return:
-        type:
-          - 'number[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TestPlanReference
-    name: TestPlanReference
-    spec.typeScript:
-      - name: TestPlanReference
-        fullName: TestPlanReference
-        uid: azure-devops-extension-api.TestPlanReference
-  - uid: azure-devops-extension-api.TeamProjectReference
-    name: TeamProjectReference
-    spec.typeScript:
-      - name: TeamProjectReference
-        fullName: TeamProjectReference
-        uid: azure-devops-extension-api.TeamProjectReference
+        type: 'number[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TestPlanReference" />

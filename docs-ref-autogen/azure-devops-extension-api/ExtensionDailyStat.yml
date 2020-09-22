@@ -1,80 +1,60 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ExtensionDailyStat
-    name: ExtensionDailyStat
-    fullName: ExtensionDailyStat
-    children:
-      - azure-devops-extension-api.ExtensionDailyStat.counts
-      - azure-devops-extension-api.ExtensionDailyStat.extendedStats
-      - azure-devops-extension-api.ExtensionDailyStat.statisticDate
-      - azure-devops-extension-api.ExtensionDailyStat.version
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ExtensionDailyStat
+uid: azure-devops-extension-api.ExtensionDailyStat
+package: azure-devops-extension-api
+summary: ''
+fullName: ExtensionDailyStat
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: counts
+    uid: azure-devops-extension-api.ExtensionDailyStat.counts
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionDailyStat.counts
-    name: counts
-    fullName: counts
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Stores the event counts
+    fullName: counts
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'counts: EventCounts'
       return:
-        type:
-          - azure-devops-extension-api.EventCounts
+        type: <xref uid="azure-devops-extension-api.EventCounts" />
+        description: ''
+  - name: extendedStats
+    uid: azure-devops-extension-api.ExtensionDailyStat.extendedStats
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionDailyStat.extendedStats
-    name: extendedStats
-    fullName: extendedStats
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Generic key/value pair to store extended statistics. Used for sending paid
       extension stats like Upgrade, Downgrade, Cancel trend etc.
+    fullName: extendedStats
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'extendedStats: [key: string]: any'
       return:
-        type:
-          - '[key: string]: any'
+        type: '[key: string]\: any'
+        description: ''
+  - name: statisticDate
+    uid: azure-devops-extension-api.ExtensionDailyStat.statisticDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionDailyStat.statisticDate
-    name: statisticDate
-    fullName: statisticDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Timestamp of this data point
+    fullName: statisticDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'statisticDate: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: version
+    uid: azure-devops-extension-api.ExtensionDailyStat.version
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionDailyStat.version
-    name: version
-    fullName: version
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Version of the extension
+    fullName: version
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'version: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.EventCounts
-    name: EventCounts
-    spec.typeScript:
-      - name: EventCounts
-        fullName: EventCounts
-        uid: azure-devops-extension-api.EventCounts
+        type: string
+        description: ''

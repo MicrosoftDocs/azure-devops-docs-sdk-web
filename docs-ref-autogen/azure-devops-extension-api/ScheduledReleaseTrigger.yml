@@ -1,41 +1,35 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ScheduledReleaseTrigger
-    name: ScheduledReleaseTrigger
-    fullName: ScheduledReleaseTrigger
-    children:
-      - azure-devops-extension-api.ScheduledReleaseTrigger.schedule
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.ReleaseTriggerBase
+### YamlMime:TSType
+name: ScheduledReleaseTrigger
+uid: azure-devops-extension-api.ScheduledReleaseTrigger
+package: azure-devops-extension-api
+summary: ''
+fullName: ScheduledReleaseTrigger
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: schedule
+    uid: azure-devops-extension-api.ScheduledReleaseTrigger.schedule
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ScheduledReleaseTrigger.schedule
-    name: schedule
-    fullName: schedule
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Release schedule for Scheduled Release trigger type.
+    fullName: schedule
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'schedule: ReleaseSchedule'
       return:
-        type:
-          - azure-devops-extension-api.ReleaseSchedule
+        type: <xref uid="azure-devops-extension-api.ReleaseSchedule" />
+        description: ''
+  - name: triggerType
+    uid: azure-devops-extension-api.ScheduledReleaseTrigger.triggerType
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ReleaseTriggerBase
-    name: ReleaseTriggerBase
-    spec.typeScript:
-      - name: ReleaseTriggerBase
-        fullName: ReleaseTriggerBase
-        uid: azure-devops-extension-api.ReleaseTriggerBase
-  - uid: azure-devops-extension-api.ReleaseSchedule
-    name: ReleaseSchedule
-    spec.typeScript:
-      - name: ReleaseSchedule
-        fullName: ReleaseSchedule
-        uid: azure-devops-extension-api.ReleaseSchedule
+    summary: Type of release trigger.
+    fullName: triggerType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'triggerType: ReleaseTriggerType'
+      return:
+        type: <xref uid="azure-devops-extension-api.ReleaseTriggerType" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.ReleaseTriggerBase" />

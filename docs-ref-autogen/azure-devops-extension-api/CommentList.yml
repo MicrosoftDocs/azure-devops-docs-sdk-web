@@ -1,105 +1,85 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.CommentList
-    name: CommentList
-    fullName: CommentList
-    children:
-      - azure-devops-extension-api.CommentList.comments
-      - azure-devops-extension-api.CommentList.continuationToken
-      - azure-devops-extension-api.CommentList.count
-      - azure-devops-extension-api.CommentList.nextPage
-      - azure-devops-extension-api.CommentList.totalCount
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents a list of work item comments.
-    extends:
-      name: azure-devops-extension-api.WorkItemTrackingResource
+### YamlMime:TSType
+name: CommentList
+uid: azure-devops-extension-api.CommentList
+package: azure-devops-extension-api
+summary: Represents a list of work item comments.
+fullName: CommentList
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: comments
+    uid: azure-devops-extension-api.CommentList.comments
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentList.comments
-    name: comments
-    fullName: comments
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: List of comments in the current batch.
+    fullName: comments
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'comments: Comment[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Comment[]'
+        type: '<xref uid="azure-devops-extension-api.Comment" />[]'
+        description: ''
+  - name: continuationToken
+    uid: azure-devops-extension-api.CommentList.continuationToken
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentList.continuationToken
-    name: continuationToken
-    fullName: continuationToken
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       A string token that can be used to retrieving next page of comments if
       available. Otherwise null.
+    fullName: continuationToken
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'continuationToken: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: count
+    uid: azure-devops-extension-api.CommentList.count
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentList.count
-    name: count
-    fullName: count
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The count of comments in the current batch.
+    fullName: count
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'count: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: nextPage
+    uid: azure-devops-extension-api.CommentList.nextPage
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentList.nextPage
-    name: nextPage
-    fullName: nextPage
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Uri to the next page of comments if it is available. Otherwise null.
+    fullName: nextPage
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'nextPage: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: totalCount
+    uid: azure-devops-extension-api.CommentList.totalCount
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentList.totalCount
-    name: totalCount
-    fullName: totalCount
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Total count of comments on a work item.
+    fullName: totalCount
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'totalCount: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.CommentList.url
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.WorkItemTrackingResource
-    name: WorkItemTrackingResource
-    spec.typeScript:
-      - name: WorkItemTrackingResource
-        fullName: WorkItemTrackingResource
-        uid: azure-devops-extension-api.WorkItemTrackingResource
-  - uid: 'azure-devops-extension-api.Comment[]'
-    name: 'Comment[]'
-    spec.typeScript:
-      - name: Comment
-        fullName: Comment
-        uid: azure-devops-extension-api.Comment
-      - name: '[]'
-        fullName: '[]'
+    summary: ''
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

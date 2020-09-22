@@ -1,128 +1,296 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TestPlan
-    name: TestPlan
-    fullName: TestPlan
-    children:
-      - azure-devops-extension-api.TestPlan.id
-      - azure-devops-extension-api.TestPlan.previousBuildId
-      - azure-devops-extension-api.TestPlan.project
-      - azure-devops-extension-api.TestPlan.rootSuite
-      - azure-devops-extension-api.TestPlan.updatedBy
-      - azure-devops-extension-api.TestPlan.updatedDate
-    langs:
-      - typeScript
-    type: interface
-    summary: The test plan resource.
-    extends:
-      name: azure-devops-extension-api.TestPlanUpdateParams
+### YamlMime:TSType
+name: TestPlan
+uid: azure-devops-extension-api.TestPlan
+package: azure-devops-extension-api
+summary: The test plan resource.
+fullName: TestPlan
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: areaPath
+    uid: azure-devops-extension-api.TestPlan.areaPath
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlan.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Area of the test plan.
+    fullName: areaPath
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'areaPath: string'
+      return:
+        type: string
+        description: ''
+  - name: automatedTestEnvironment
+    uid: azure-devops-extension-api.TestPlan.automatedTestEnvironment
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: automatedTestEnvironment
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'automatedTestEnvironment: TestEnvironment'
+      return:
+        type: <xref uid="azure-devops-extension-api.TestEnvironment" />
+        description: ''
+  - name: automatedTestSettings
+    uid: azure-devops-extension-api.TestPlan.automatedTestSettings
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: automatedTestSettings
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'automatedTestSettings: TestSettings'
+      return:
+        type: <xref uid="azure-devops-extension-api.TestSettings" />
+        description: ''
+  - name: buildDefinition
+    uid: azure-devops-extension-api.TestPlan.buildDefinition
+    package: azure-devops-extension-api
+    summary: >-
+      The Build Definition that generates a build associated with this test
+      plan.
+    fullName: buildDefinition
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'buildDefinition: BuildDefinitionReference'
+      return:
+        type: <xref uid="azure-devops-extension-api.BuildDefinitionReference" />
+        description: ''
+  - name: buildId
+    uid: azure-devops-extension-api.TestPlan.buildId
+    package: azure-devops-extension-api
+    summary: Build to be tested.
+    fullName: buildId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'buildId: number'
+      return:
+        type: number
+        description: ''
+  - name: description
+    uid: azure-devops-extension-api.TestPlan.description
+    package: azure-devops-extension-api
+    summary: Description of the test plan.
+    fullName: description
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        type: string
+        description: ''
+  - name: endDate
+    uid: azure-devops-extension-api.TestPlan.endDate
+    package: azure-devops-extension-api
+    summary: End date for the test plan.
+    fullName: endDate
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'endDate: Date'
+      return:
+        type: Date
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.TestPlan.id
+    package: azure-devops-extension-api
     summary: ID of the test plan.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: iteration
+    uid: azure-devops-extension-api.TestPlan.iteration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlan.previousBuildId
-    name: previousBuildId
+    summary: Iteration path of the test plan.
+    fullName: iteration
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'iteration: string'
+      return:
+        type: string
+        description: ''
+  - name: manualTestEnvironment
+    uid: azure-devops-extension-api.TestPlan.manualTestEnvironment
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: manualTestEnvironment
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'manualTestEnvironment: TestEnvironment'
+      return:
+        type: <xref uid="azure-devops-extension-api.TestEnvironment" />
+        description: ''
+  - name: manualTestSettings
+    uid: azure-devops-extension-api.TestPlan.manualTestSettings
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: manualTestSettings
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'manualTestSettings: TestSettings'
+      return:
+        type: <xref uid="azure-devops-extension-api.TestSettings" />
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TestPlan.name
+    package: azure-devops-extension-api
+    summary: Name of the test plan.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: owner
+    uid: azure-devops-extension-api.TestPlan.owner
+    package: azure-devops-extension-api
+    summary: Owner of the test plan.
+    fullName: owner
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'owner: IdentityRef'
+      return:
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: previousBuildId
+    uid: azure-devops-extension-api.TestPlan.previousBuildId
+    package: azure-devops-extension-api
+    summary: Previous build Id associated with the test plan
     fullName: previousBuildId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Previous build Id assocaited with the test plan
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'previousBuildId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: project
+    uid: azure-devops-extension-api.TestPlan.project
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlan.project
-    name: project
-    fullName: project
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Project which contains the test plan.
+    fullName: project
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
       return:
-        type:
-          - azure-devops-extension-api.TeamProjectReference
+        type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+        description: ''
+  - name: releaseEnvironmentDefinition
+    uid: azure-devops-extension-api.TestPlan.releaseEnvironmentDefinition
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlan.rootSuite
-    name: rootSuite
-    fullName: rootSuite
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Release Environment to be used to deploy the build and run automated tests
+      from this test plan.
+    fullName: releaseEnvironmentDefinition
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'releaseEnvironmentDefinition: ReleaseEnvironmentDefinitionReference'
+      return:
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ReleaseEnvironmentDefinitionReference"
+          />
+        description: ''
+  - name: revision
+    uid: azure-devops-extension-api.TestPlan.revision
+    package: azure-devops-extension-api
+    summary: Revision of the test plan.
+    fullName: revision
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'revision: number'
+      return:
+        type: number
+        description: ''
+  - name: rootSuite
+    uid: azure-devops-extension-api.TestPlan.rootSuite
+    package: azure-devops-extension-api
     summary: Root test suite of the test plan.
+    fullName: rootSuite
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'rootSuite: TestSuiteReference'
       return:
-        type:
-          - azure-devops-extension-api.TestSuiteReference
+        type: <xref uid="azure-devops-extension-api.TestSuiteReference" />
+        description: ''
+  - name: startDate
+    uid: azure-devops-extension-api.TestPlan.startDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlan.updatedBy
-    name: updatedBy
-    fullName: updatedBy
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Start date for the test plan.
+    fullName: startDate
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'startDate: Date'
+      return:
+        type: Date
+        description: ''
+  - name: state
+    uid: azure-devops-extension-api.TestPlan.state
+    package: azure-devops-extension-api
+    summary: State of the test plan.
+    fullName: state
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'state: string'
+      return:
+        type: string
+        description: ''
+  - name: testOutcomeSettings
+    uid: azure-devops-extension-api.TestPlan.testOutcomeSettings
+    package: azure-devops-extension-api
+    summary: >-
+      Value to configure how same tests across test suites under a test plan
+      need to behave
+    fullName: testOutcomeSettings
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'testOutcomeSettings: TestOutcomeSettings'
+      return:
+        type: <xref uid="azure-devops-extension-api.TestOutcomeSettings" />
+        description: ''
+  - name: updatedBy
+    uid: azure-devops-extension-api.TestPlan.updatedBy
+    package: azure-devops-extension-api
     summary: Identity Reference for the last update of the test plan
+    fullName: updatedBy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'updatedBy: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: updatedDate
+    uid: azure-devops-extension-api.TestPlan.updatedDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlan.updatedDate
-    name: updatedDate
-    fullName: updatedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Updated date of the test plan
+    fullName: updatedDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'updatedDate: Date'
       return:
-        type:
-          - Date
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TestPlanUpdateParams
-    name: TestPlanUpdateParams
-    spec.typeScript:
-      - name: TestPlanUpdateParams
-        fullName: TestPlanUpdateParams
-        uid: azure-devops-extension-api.TestPlanUpdateParams
-  - uid: azure-devops-extension-api.TeamProjectReference
-    name: TeamProjectReference
-    spec.typeScript:
-      - name: TeamProjectReference
-        fullName: TeamProjectReference
-        uid: azure-devops-extension-api.TeamProjectReference
-  - uid: azure-devops-extension-api.TestSuiteReference
-    name: TestSuiteReference
-    spec.typeScript:
-      - name: TestSuiteReference
-        fullName: TestSuiteReference
-        uid: azure-devops-extension-api.TestSuiteReference
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
+        type: Date
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TestPlanUpdateParams" />

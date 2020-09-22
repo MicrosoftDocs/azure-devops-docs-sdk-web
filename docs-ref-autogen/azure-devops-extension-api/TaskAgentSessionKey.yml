@@ -1,46 +1,39 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TaskAgentSessionKey
-    name: TaskAgentSessionKey
-    fullName: TaskAgentSessionKey
-    children:
-      - azure-devops-extension-api.TaskAgentSessionKey.encrypted
-      - azure-devops-extension-api.TaskAgentSessionKey.value
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Represents a symmetric key used for message-level encryption for
-      communication sent to an agent.
+### YamlMime:TSType
+name: TaskAgentSessionKey
+uid: azure-devops-extension-api.TaskAgentSessionKey
+package: azure-devops-extension-api
+summary: >-
+  Represents a symmetric key used for message-level encryption for communication
+  sent to an agent.
+fullName: TaskAgentSessionKey
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: encrypted
+    uid: azure-devops-extension-api.TaskAgentSessionKey.encrypted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentSessionKey.encrypted
-    name: encrypted
-    fullName: encrypted
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Gets or sets a value indicating whether or not the key value is encrypted.
       If this value is true, the Value property should be decrypted using the
       \<c\>RSA\</c\> key exchanged with the server during registration.
+    fullName: encrypted
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'encrypted: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: value
+    uid: azure-devops-extension-api.TaskAgentSessionKey.value
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentSessionKey.value
-    name: value
-    fullName: value
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets or sets the symmetric key value.
+    fullName: value
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'value: number[]'
       return:
-        type:
-          - 'number[]'
-    package: azure-devops-extension-api
+        type: 'number[]'
+        description: ''

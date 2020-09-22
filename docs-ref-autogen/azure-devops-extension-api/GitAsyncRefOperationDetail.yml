@@ -1,118 +1,94 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitAsyncRefOperationDetail
-    name: GitAsyncRefOperationDetail
-    fullName: GitAsyncRefOperationDetail
-    children:
-      - azure-devops-extension-api.GitAsyncRefOperationDetail.conflict
-      - azure-devops-extension-api.GitAsyncRefOperationDetail.currentCommitId
-      - azure-devops-extension-api.GitAsyncRefOperationDetail.failureMessage
-      - azure-devops-extension-api.GitAsyncRefOperationDetail.progress
-      - azure-devops-extension-api.GitAsyncRefOperationDetail.status
-      - azure-devops-extension-api.GitAsyncRefOperationDetail.timedout
-    langs:
-      - typeScript
-    type: interface
-    summary: Information about the progress of a cherry pick or revert operation.
+### YamlMime:TSType
+name: GitAsyncRefOperationDetail
+uid: azure-devops-extension-api.GitAsyncRefOperationDetail
+package: azure-devops-extension-api
+summary: Information about the progress of a cherry pick or revert operation.
+fullName: GitAsyncRefOperationDetail
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: conflict
+    uid: azure-devops-extension-api.GitAsyncRefOperationDetail.conflict
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitAsyncRefOperationDetail.conflict
-    name: conflict
-    fullName: conflict
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Indicates if there was a conflict generated when trying to cherry pick or
       revert the changes.
+    fullName: conflict
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'conflict: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: currentCommitId
+    uid: azure-devops-extension-api.GitAsyncRefOperationDetail.currentCommitId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitAsyncRefOperationDetail.currentCommitId
-    name: currentCommitId
-    fullName: currentCommitId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The current commit from the list of commits that are being cherry picked
       or reverted.
+    fullName: currentCommitId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'currentCommitId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: failureMessage
+    uid: azure-devops-extension-api.GitAsyncRefOperationDetail.failureMessage
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitAsyncRefOperationDetail.failureMessage
-    name: failureMessage
-    fullName: failureMessage
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Detailed information about why the cherry pick or revert failed to
       complete.
+    fullName: failureMessage
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'failureMessage: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: progress
+    uid: azure-devops-extension-api.GitAsyncRefOperationDetail.progress
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitAsyncRefOperationDetail.progress
-    name: progress
-    fullName: progress
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: A number between 0 and 1 indicating the percent complete of the operation.
+    fullName: progress
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'progress: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: status
+    uid: azure-devops-extension-api.GitAsyncRefOperationDetail.status
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitAsyncRefOperationDetail.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Provides a status code that indicates the reason the cherry pick or revert
       failed.
+    fullName: status
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'status: GitAsyncRefOperationFailureStatus'
       return:
-        type:
-          - azure-devops-extension-api.GitAsyncRefOperationFailureStatus
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.GitAsyncRefOperationFailureStatus" />
+        description: ''
+  - name: timedout
+    uid: azure-devops-extension-api.GitAsyncRefOperationDetail.timedout
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitAsyncRefOperationDetail.timedout
-    name: timedout
-    fullName: timedout
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Indicates if the operation went beyond the maximum time allowed for a
       cherry pick or revert operation.
+    fullName: timedout
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'timedout: boolean'
       return:
-        type:
-          - boolean
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitAsyncRefOperationFailureStatus
-    name: GitAsyncRefOperationFailureStatus
-    spec.typeScript:
-      - name: GitAsyncRefOperationFailureStatus
-        fullName: GitAsyncRefOperationFailureStatus
-        uid: azure-devops-extension-api.GitAsyncRefOperationFailureStatus
+        type: boolean
+        description: ''

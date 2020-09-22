@@ -1,90 +1,75 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.CommentReaction
-    name: CommentReaction
-    fullName: CommentReaction
-    children:
-      - azure-devops-extension-api.CommentReaction.commentId
-      - azure-devops-extension-api.CommentReaction.count
-      - azure-devops-extension-api.CommentReaction.isCurrentUserEngaged
-      - azure-devops-extension-api.CommentReaction.type
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Contains information about work item comment reaction for a particular
-      reaction type.
-    extends:
-      name: azure-devops-extension-api.WorkItemTrackingResource
+### YamlMime:TSType
+name: CommentReaction
+uid: azure-devops-extension-api.CommentReaction
+package: azure-devops-extension-api
+summary: >-
+  Contains information about work item comment reaction for a particular
+  reaction type.
+fullName: CommentReaction
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: commentId
+    uid: azure-devops-extension-api.CommentReaction.commentId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentReaction.commentId
-    name: commentId
-    fullName: commentId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The id of the comment this reaction belongs to.
+    fullName: commentId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'commentId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: count
+    uid: azure-devops-extension-api.CommentReaction.count
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentReaction.count
-    name: count
-    fullName: count
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Total number of reactions for the CommentReactionType.
+    fullName: count
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'count: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: isCurrentUserEngaged
+    uid: azure-devops-extension-api.CommentReaction.isCurrentUserEngaged
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentReaction.isCurrentUserEngaged
-    name: isCurrentUserEngaged
-    fullName: isCurrentUserEngaged
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Flag to indicate if the current user has engaged on this particular
       EngagementType (e.g. if they liked the associated comment).
+    fullName: isCurrentUserEngaged
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isCurrentUserEngaged: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: type
+    uid: azure-devops-extension-api.CommentReaction.type
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentReaction.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Type of the reaction.
+    fullName: type
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'type: CommentReactionType'
       return:
-        type:
-          - azure-devops-extension-api.CommentReactionType
+        type: <xref uid="azure-devops-extension-api.CommentReactionType" />
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.CommentReaction.url
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.WorkItemTrackingResource
-    name: WorkItemTrackingResource
-    spec.typeScript:
-      - name: WorkItemTrackingResource
-        fullName: WorkItemTrackingResource
-        uid: azure-devops-extension-api.WorkItemTrackingResource
-  - uid: azure-devops-extension-api.CommentReactionType
-    name: CommentReactionType
-    spec.typeScript:
-      - name: CommentReactionType
-        fullName: CommentReactionType
-        uid: azure-devops-extension-api.CommentReactionType
+    summary: ''
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

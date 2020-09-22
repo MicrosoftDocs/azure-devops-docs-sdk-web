@@ -1,88 +1,145 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.AgentJobRequestMessage
-    name: AgentJobRequestMessage
-    fullName: AgentJobRequestMessage
-    children:
-      - azure-devops-extension-api.AgentJobRequestMessage.lockedUntil
-      - azure-devops-extension-api.AgentJobRequestMessage.lockToken
-      - azure-devops-extension-api.AgentJobRequestMessage.requestId
-      - azure-devops-extension-api.AgentJobRequestMessage.tasks
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.JobRequestMessage
+### YamlMime:TSType
+name: AgentJobRequestMessage
+uid: azure-devops-extension-api.AgentJobRequestMessage
+package: azure-devops-extension-api
+summary: ''
+fullName: AgentJobRequestMessage
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: environment
+    uid: azure-devops-extension-api.AgentJobRequestMessage.environment
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AgentJobRequestMessage.lockedUntil
-    name: lockedUntil
-    fullName: lockedUntil
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: environment
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'environment: JobEnvironment'
+      return:
+        type: <xref uid="azure-devops-extension-api.JobEnvironment" />
+        description: ''
+  - name: jobId
+    uid: azure-devops-extension-api.AgentJobRequestMessage.jobId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: jobId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jobId: string'
+      return:
+        type: string
+        description: ''
+  - name: jobName
+    uid: azure-devops-extension-api.AgentJobRequestMessage.jobName
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: jobName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jobName: string'
+      return:
+        type: string
+        description: ''
+  - name: jobRefName
+    uid: azure-devops-extension-api.AgentJobRequestMessage.jobRefName
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: jobRefName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jobRefName: string'
+      return:
+        type: string
+        description: ''
+  - name: lockedUntil
+    uid: azure-devops-extension-api.AgentJobRequestMessage.lockedUntil
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: lockedUntil
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lockedUntil: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: lockToken
+    uid: azure-devops-extension-api.AgentJobRequestMessage.lockToken
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AgentJobRequestMessage.lockToken
-    name: lockToken
-    fullName: lockToken
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: lockToken
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lockToken: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: messageType
+    uid: azure-devops-extension-api.AgentJobRequestMessage.messageType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AgentJobRequestMessage.requestId
-    name: requestId
-    fullName: requestId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: messageType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'messageType: string'
+      return:
+        type: string
+        description: ''
+  - name: plan
+    uid: azure-devops-extension-api.AgentJobRequestMessage.plan
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: plan
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'plan: TaskOrchestrationPlanReference'
+      return:
+        type: >-
+          <xref uid="azure-devops-extension-api.TaskOrchestrationPlanReference"
+          />
+        description: ''
+  - name: requestId
+    uid: azure-devops-extension-api.AgentJobRequestMessage.requestId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: requestId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'requestId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: tasks
+    uid: azure-devops-extension-api.AgentJobRequestMessage.tasks
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AgentJobRequestMessage.tasks
-    name: tasks
-    fullName: tasks
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: tasks
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tasks: TaskInstance[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TaskInstance[]'
+        type: '<xref uid="azure-devops-extension-api.TaskInstance" />[]'
+        description: ''
+  - name: timeline
+    uid: azure-devops-extension-api.AgentJobRequestMessage.timeline
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.JobRequestMessage
-    name: JobRequestMessage
-    spec.typeScript:
-      - name: JobRequestMessage
-        fullName: JobRequestMessage
-        uid: azure-devops-extension-api.JobRequestMessage
-  - uid: 'azure-devops-extension-api.TaskInstance[]'
-    name: 'TaskInstance[]'
-    spec.typeScript:
-      - name: TaskInstance
-        fullName: TaskInstance
-        uid: azure-devops-extension-api.TaskInstance
-      - name: '[]'
-        fullName: '[]'
+    summary: ''
+    fullName: timeline
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeline: TimelineReference'
+      return:
+        type: <xref uid="azure-devops-extension-api.TimelineReference" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.JobRequestMessage" />

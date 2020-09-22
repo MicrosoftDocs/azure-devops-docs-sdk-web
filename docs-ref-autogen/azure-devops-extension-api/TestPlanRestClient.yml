@@ -1,62 +1,34 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TestPlanRestClient
-    name: TestPlanRestClient
-    fullName: TestPlanRestClient
-    children:
-      - azure-devops-extension-api.TestPlanRestClient.addTestCasesToSuite
-      - azure-devops-extension-api.TestPlanRestClient.cloneTestPlan
-      - azure-devops-extension-api.TestPlanRestClient.cloneTestSuite
-      - azure-devops-extension-api.TestPlanRestClient.createTestConfiguration
-      - azure-devops-extension-api.TestPlanRestClient.createTestPlan
-      - azure-devops-extension-api.TestPlanRestClient.createTestSuite
-      - azure-devops-extension-api.TestPlanRestClient.createTestVariable
-      - azure-devops-extension-api.TestPlanRestClient.deleteTestCase
-      - azure-devops-extension-api.TestPlanRestClient.deleteTestConfguration
-      - azure-devops-extension-api.TestPlanRestClient.deleteTestPlan
-      - azure-devops-extension-api.TestPlanRestClient.deleteTestSuite
-      - azure-devops-extension-api.TestPlanRestClient.deleteTestVariable
-      - azure-devops-extension-api.TestPlanRestClient.getCloneInformation
-      - azure-devops-extension-api.TestPlanRestClient.getPoints
-      - azure-devops-extension-api.TestPlanRestClient.getPointsList
-      - azure-devops-extension-api.TestPlanRestClient.getSuiteCloneInformation
-      - azure-devops-extension-api.TestPlanRestClient.getSuiteEntries
-      - azure-devops-extension-api.TestPlanRestClient.getSuitesByTestCaseId
-      - azure-devops-extension-api.TestPlanRestClient.getTestCase
-      - azure-devops-extension-api.TestPlanRestClient.getTestCaseList
-      - azure-devops-extension-api.TestPlanRestClient.getTestConfigurationById
-      - azure-devops-extension-api.TestPlanRestClient.getTestConfigurations
-      - azure-devops-extension-api.TestPlanRestClient.getTestPlanById
-      - azure-devops-extension-api.TestPlanRestClient.getTestPlans
-      - azure-devops-extension-api.TestPlanRestClient.getTestSuiteById
-      - azure-devops-extension-api.TestPlanRestClient.getTestSuitesForPlan
-      - azure-devops-extension-api.TestPlanRestClient.getTestVariableById
-      - azure-devops-extension-api.TestPlanRestClient.getTestVariables
-      - azure-devops-extension-api.TestPlanRestClient.removeTestCasesFromSuite
-      - azure-devops-extension-api.TestPlanRestClient.reorderSuiteEntries
-      - azure-devops-extension-api.TestPlanRestClient.constructor
-      - azure-devops-extension-api.TestPlanRestClient.updateSuiteTestCases
-      - azure-devops-extension-api.TestPlanRestClient.updateTestConfiguration
-      - azure-devops-extension-api.TestPlanRestClient.updateTestPlan
-      - azure-devops-extension-api.TestPlanRestClient.updateTestPoints
-      - azure-devops-extension-api.TestPlanRestClient.updateTestSuite
-      - azure-devops-extension-api.TestPlanRestClient.updateTestVariable
-    langs:
-      - typeScript
-    type: class
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.RestClientBase
+### YamlMime:TSType
+name: TestPlanRestClient
+uid: azure-devops-extension-api.TestPlanRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: TestPlanRestClient
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: TestPlanRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.TestPlanRestClient.constructor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.addTestCasesToSuite
-    name: >-
+    summary: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new TestPlanRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+methods:
+  - name: >-
       addTestCasesToSuite(SuiteTestCaseCreateUpdateParameters[], string, number,
       number)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TestPlanRestClient.addTestCasesToSuite
+    package: azure-devops-extension-api
     summary: Add test cases to a suite with specified configurations
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function addTestCasesToSuite(suiteTestCaseCreateUpdateParameters:
@@ -64,95 +36,84 @@ items:
         suiteId: number)
       parameters:
         - id: suiteTestCaseCreateUpdateParameters
-          type:
-            - 'azure-devops-extension-api.SuiteTestCaseCreateUpdateParameters[]'
-          description: '-'
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.SuiteTestCaseCreateUpdateParameters"
+            />[]
+          description: SuiteTestCaseCreateUpdateParameters object.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test plan to which test cases are to be added.
         - id: suiteId
-          type:
-            - number
+          type: number
           description: |
-            -
+            ID of the test suite to which test cases are to be added.
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestCase[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestCase" />[]&gt;'
+        description: ''
+  - name: 'cloneTestPlan(CloneTestPlanParams, string, boolean)'
+    uid: azure-devops-extension-api.TestPlanRestClient.cloneTestPlan
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.cloneTestPlan
-    name: 'cloneTestPlan(CloneTestPlanParams, string, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Clone test plan
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function cloneTestPlan(cloneRequestBody: CloneTestPlanParams, project:
         string, deepClone?: boolean)
       parameters:
         - id: cloneRequestBody
-          type:
-            - azure-devops-extension-api.CloneTestPlanParams
+          type: <xref uid="azure-devops-extension-api.CloneTestPlanParams" />
           description: Plan Clone Request Body detail TestPlanCloneRequest
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: deepClone
-          type:
-            - boolean
+          type: boolean
           description: |
             Clones all the associated test cases as well
-          optional: true
       return:
-        type:
-          - >-
-            Promise<azure-devops-extension-api.CloneTestPlanOperationInformation>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CloneTestPlanOperationInformation"
+          />&gt;
+        description: ''
+  - name: 'cloneTestSuite(CloneTestSuiteParams, string, boolean)'
+    uid: azure-devops-extension-api.TestPlanRestClient.cloneTestSuite
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.cloneTestSuite
-    name: 'cloneTestSuite(CloneTestSuiteParams, string, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Clone test suite
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function cloneTestSuite(cloneRequestBody: CloneTestSuiteParams, project:
         string, deepClone?: boolean)
       parameters:
         - id: cloneRequestBody
-          type:
-            - azure-devops-extension-api.CloneTestSuiteParams
+          type: <xref uid="azure-devops-extension-api.CloneTestSuiteParams" />
           description: Suite Clone Request Body detail TestSuiteCloneRequest
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: deepClone
-          type:
-            - boolean
+          type: boolean
           description: |
             Clones all the associated test cases as well
-          optional: true
       return:
-        type:
-          - >-
-            Promise<azure-devops-extension-api.CloneTestSuiteOperationInformation>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CloneTestSuiteOperationInformation"
+          />&gt;
+        description: ''
+  - name: 'createTestConfiguration(TestConfigurationCreateUpdateParameters, string)'
+    uid: azure-devops-extension-api.TestPlanRestClient.createTestConfiguration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.createTestConfiguration
-    name: 'createTestConfiguration(TestConfigurationCreateUpdateParameters, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Create a test configuration.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function
@@ -160,574 +121,541 @@ items:
         TestConfigurationCreateUpdateParameters, project: string)
       parameters:
         - id: testConfigurationCreateUpdateParameters
-          type:
-            - azure-devops-extension-api.TestConfigurationCreateUpdateParameters
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.TestConfigurationCreateUpdateParameters"
+            />
           description: TestConfigurationCreateUpdateParameters
         - id: project
-          type:
-            - string
+          type: string
           description: |
             Project ID or project name
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestConfiguration>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestConfiguration"
+          />&gt;
+        description: ''
+  - name: 'createTestPlan(TestPlanCreateParams, string)'
+    uid: azure-devops-extension-api.TestPlanRestClient.createTestPlan
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.createTestPlan
-    name: 'createTestPlan(TestPlanCreateParams, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Create a test plan.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createTestPlan(testPlanCreateParams: TestPlanCreateParams,
         project: string)
       parameters:
         - id: testPlanCreateParams
-          type:
-            - azure-devops-extension-api.TestPlanCreateParams
+          type: <xref uid="azure-devops-extension-api.TestPlanCreateParams" />
           description: A testPlanCreateParams object.TestPlanCreateParams
         - id: project
-          type:
-            - string
+          type: string
           description: |
             Project ID or project name
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestPlan>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestPlan" />&gt;
+        description: ''
+  - name: 'createTestSuite(TestSuiteCreateParams, string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.createTestSuite
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.createTestSuite
-    name: 'createTestSuite(TestSuiteCreateParams, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Create test suite.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createTestSuite(testSuiteCreateParams: TestSuiteCreateParams,
         project: string, planId: number)
       parameters:
         - id: testSuiteCreateParams
-          type:
-            - azure-devops-extension-api.TestSuiteCreateParams
+          type: <xref uid="azure-devops-extension-api.TestSuiteCreateParams" />
           description: Parameters for suite creation
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
+          type: number
           description: |
             ID of the test plan that contains the suites.
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestSuite>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestSuite" />&gt;
+        description: ''
+  - name: 'createTestVariable(TestVariableCreateUpdateParameters, string)'
+    uid: azure-devops-extension-api.TestPlanRestClient.createTestVariable
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.createTestVariable
-    name: 'createTestVariable(TestVariableCreateUpdateParameters, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Create a test variable.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function createTestVariable(testVariableCreateUpdateParameters:
         TestVariableCreateUpdateParameters, project: string)
       parameters:
         - id: testVariableCreateUpdateParameters
-          type:
-            - azure-devops-extension-api.TestVariableCreateUpdateParameters
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.TestVariableCreateUpdateParameters"
+            />
           description: TestVariableCreateUpdateParameters
         - id: project
-          type:
-            - string
+          type: string
           description: |
             Project ID or project name
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestVariable>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestVariable" />&gt;
+        description: ''
+  - name: 'deleteTestCase(string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.deleteTestCase
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.deleteTestCase
-    name: 'deleteTestCase(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Delete a test case.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function deleteTestCase(project: string, testCaseId: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: testCaseId
-          type:
-            - number
+          type: number
           description: |
             Id of test case to be deleted.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'deleteTestConfguration(string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.deleteTestConfguration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.deleteTestConfguration
-    name: 'deleteTestConfguration(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Delete a test configuration by its ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function deleteTestConfguration(project: string, testConfiguartionId:
         number)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: testConfiguartionId
-          type:
-            - number
+          type: number
           description: |
             ID of the test configuration to delete.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'deleteTestPlan(string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.deleteTestPlan
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.deleteTestPlan
-    name: 'deleteTestPlan(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Delete a test plan.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function deleteTestPlan(project: string, planId: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
+          type: number
           description: |
             ID of the test plan to be deleted.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'deleteTestSuite(string, number, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.deleteTestSuite
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.deleteTestSuite
-    name: 'deleteTestSuite(string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Delete test suite.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function deleteTestSuite(project: string, planId: number, suiteId:
         number)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
+          type: number
           description: ID of the test plan that contains the suite.
         - id: suiteId
-          type:
-            - number
+          type: number
           description: |
             ID of the test suite to delete.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'deleteTestVariable(string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.deleteTestVariable
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.deleteTestVariable
-    name: 'deleteTestVariable(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Delete a test variable by its ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function deleteTestVariable(project: string, testVariableId: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: testVariableId
-          type:
-            - number
+          type: number
           description: |
             ID of the test variable to delete.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'getCloneInformation(string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getCloneInformation
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getCloneInformation
-    name: 'getCloneInformation(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get clone information.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getCloneInformation(project: string, cloneOperationId: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: cloneOperationId
-          type:
-            - number
+          type: number
           description: |
             Operation ID returned when we queue a clone operation
       return:
-        type:
-          - >-
-            Promise<azure-devops-extension-api.CloneTestPlanOperationInformation>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CloneTestPlanOperationInformation"
+          />&gt;
+        description: ''
+  - name: 'getPoints(string, number, number, string, boolean, boolean)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getPoints
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getPoints
-    name: 'getPoints(string, number, number, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a list of points based on point Ids provided.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getPoints(project: string, planId: number, suiteId: number,
-        pointIds: string)
+        pointIds: string, returnIdentityRef?: boolean, includePointDetails?:
+        boolean)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test plan for which test points are requested.
         - id: suiteId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test suite for which test points are requested.
         - id: pointIds
-          type:
-            - string
-          description: |
-            -
+          type: string
+          description: ID of test points to be fetched.
+        - id: returnIdentityRef
+          type: boolean
+          description: >-
+            If set to true, returns the AssignedTo field in TestCaseReference as
+            IdentityRef object.
+        - id: includePointDetails
+          type: boolean
+          description: >
+            If set to false, will get a smaller payload containing only basic
+            details about the test point object
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestPoint[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestPoint" />[]&gt;'
+        description: ''
+  - name: >-
+      getPointsList(string, number, number, string, string, string, boolean,
+      boolean)
+    uid: azure-devops-extension-api.TestPlanRestClient.getPointsList
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getPointsList
-    name: 'getPointsList(string, number, number, string, string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get all the points inside a suite based on some filters
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getPointsList(project: string, planId: number, suiteId: number,
-        testPointIds?: string, testCaseId?: string, continuationToken?: string)
+        testPointIds?: string, testCaseId?: string, continuationToken?: string,
+        returnIdentityRef?: boolean, includePointDetails?: boolean)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test plan for which test points are requested.
         - id: suiteId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test suite for which test points are requested
         - id: testPointIds
-          type:
-            - string
-          description: '-'
-          optional: true
+          type: string
+          description: ID of test points to fetch.
         - id: testCaseId
-          type:
-            - string
-          description: '-'
-          optional: true
+          type: string
+          description: Get Test Points for specific test case Ids.
         - id: continuationToken
-          type:
-            - string
-          description: |
-            -
-          optional: true
+          type: string
+          description: >-
+            If the list of test point returned is not complete, a continuation
+            token to query next batch of test points is included in the response
+            header as "x-ms-continuationtoken". Omit this parameter to get the
+            first batch of test points.
+        - id: returnIdentityRef
+          type: boolean
+          description: >-
+            If set to true, returns the AssignedTo field in TestCaseReference as
+            IdentityRef object.
+        - id: includePointDetails
+          type: boolean
+          description: >
+            If set to false, will get a smaller payload containing only basic
+            details about the test point object
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestPoint[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestPoint" />[]&gt;'
+        description: ''
+  - name: 'getSuiteCloneInformation(string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getSuiteCloneInformation
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getSuiteCloneInformation
-    name: 'getSuiteCloneInformation(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get clone information.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getSuiteCloneInformation(project: string, cloneOperationId:
         number)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: cloneOperationId
-          type:
-            - number
+          type: number
           description: |
             Operation ID returned when we queue a clone operation
       return:
-        type:
-          - >-
-            Promise<azure-devops-extension-api.CloneTestSuiteOperationInformation>
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CloneTestSuiteOperationInformation"
+          />&gt;
+        description: ''
+  - name: 'getSuiteEntries(string, number, SuiteEntryTypes)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getSuiteEntries
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getSuiteEntries
-    name: 'getSuiteEntries(string, number, SuiteEntryTypes)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a list of test suite entries in the test suite.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getSuiteEntries(project: string, suiteId: number,
         suiteEntryType?: SuiteEntryTypes)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: suiteId
-          type:
-            - number
+          type: number
           description: Id of the parent suite.
         - id: suiteEntryType
-          type:
-            - azure-devops-extension-api.SuiteEntryTypes
+          type: <xref uid="azure-devops-extension-api.SuiteEntryTypes" />
           description: |
             -
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.SuiteEntry[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SuiteEntry" />[]&gt;'
+        description: ''
+  - name: getSuitesByTestCaseId(number)
+    uid: azure-devops-extension-api.TestPlanRestClient.getSuitesByTestCaseId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getSuitesByTestCaseId
-    name: getSuitesByTestCaseId(number)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Find the list of all test suites in which a given test case is present.
       This is helpful if you need to find out which test suites are using a test
       case, when you need to make changes to a test case.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getSuitesByTestCaseId(testCaseId: number)'
       parameters:
         - id: testCaseId
-          type:
-            - number
+          type: number
           description: |
             ID of the test case for which suites need to be fetched.
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestSuite[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestSuite" />[]&gt;'
+        description: ''
+  - name: 'getTestCase(string, number, number, string, string, boolean)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestCase
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestCase
-    name: 'getTestCase(string, number, number, string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
+    summary: Get Test Cases For a Suite.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getTestCase(project: string, planId: number, suiteId: number,
-        testCaseIds: string, witFields?: string)
+        testCaseIds: string, witFields?: string, returnIdentityRef?: boolean)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test plan for which test cases are requested.
         - id: suiteId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test suite for which test cases are requested.
         - id: testCaseIds
-          type:
-            - string
-          description: '-'
+          type: string
+          description: Test Case Ids to be fetched.
         - id: witFields
-          type:
-            - string
-          description: |
-            -
-          optional: true
+          type: string
+          description: Get the list of witFields.
+        - id: returnIdentityRef
+          type: boolean
+          description: >
+            If set to true, returns all identity fields, like AssignedTo,
+            ActivatedBy etc., as IdentityRef objects. If set to false, these
+            fields are returned as unique names in string format. This is false
+            by default.
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestCase[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestCase" />[]&gt;'
+        description: ''
+  - name: >-
+      getTestCaseList(string, number, number, string, string, string, string,
+      boolean, boolean, ExcludeFlags)
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestCaseList
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestCaseList
-    name: 'getTestCaseList(string, number, number, string, string, string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Get Test Case List return those test cases which have all the
       configuration Ids as mentioned in the optional paramter. If configuration
       Ids is null, it return all the test cases
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getTestCaseList(project: string, planId: number, suiteId:
         number, testIds?: string, configurationIds?: string, witFields?: string,
-        continuationToken?: string)
+        continuationToken?: string, returnIdentityRef?: boolean, expand?:
+        boolean, excludeFlags?: ExcludeFlags)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test plan for which test cases are requested.
         - id: suiteId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test suite for which test cases are requested.
         - id: testIds
-          type:
-            - string
-          description: '-'
-          optional: true
+          type: string
+          description: Test Case Ids to be fetched.
         - id: configurationIds
-          type:
-            - string
-          description: '-'
-          optional: true
+          type: string
+          description: Fetch Test Cases which contains all the configuration Ids specified.
         - id: witFields
-          type:
-            - string
-          description: '-'
-          optional: true
+          type: string
+          description: Get the list of witFields.
         - id: continuationToken
-          type:
-            - string
-          description: |
-            -
-          optional: true
+          type: string
+          description: >-
+            If the list of test cases returned is not complete, a continuation
+            token to query next batch of test cases is included in the response
+            header as "x-ms-continuationtoken". Omit this parameter to get the
+            first batch of test cases.
+        - id: returnIdentityRef
+          type: boolean
+          description: >-
+            If set to true, returns all identity fields, like AssignedTo,
+            ActivatedBy etc., as IdentityRef objects. If set to false, these
+            fields are returned as unique names in string format. This is false
+            by default.
+        - id: expand
+          type: boolean
+          description: >-
+            If set to false, will get a smaller payload containing only basic
+            details about the suite test case object
+        - id: excludeFlags
+          type: <xref uid="azure-devops-extension-api.ExcludeFlags" />
+          description: >
+            Flag to exclude various values from payload. For example to remove
+            point assignments pass exclude = 1. To remove extra information
+            (links, test plan , test suite) pass exclude = 2. To remove both
+            extra information and point assignments pass exclude = 3 (1 + 2).
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestCase[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestCase" />[]&gt;'
+        description: ''
+  - name: 'getTestConfigurationById(string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestConfigurationById
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestConfigurationById
-    name: 'getTestConfigurationById(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a test configuration
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getTestConfigurationById(project: string, testConfigurationId:
         number)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: testConfigurationId
-          type:
-            - number
+          type: number
           description: |
             ID of the test configuration to get.
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestConfiguration>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestConfiguration"
+          />&gt;
+        description: ''
+  - name: 'getTestConfigurations(string, string)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestConfigurations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestConfigurations
-    name: 'getTestConfigurations(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a list of test configurations.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getTestConfigurations(project: string, continuationToken?:
         string)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: continuationToken
-          type:
-            - string
+          type: string
           description: >
             If the list of configurations returned is not complete, a
             continuation token to query next batch of configurations is included
             in the response header as "x-ms-continuationtoken". Omit this
             parameter to get the first batch of test configurations.
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestConfiguration[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestConfiguration"
+          />[]&gt;
+        description: ''
+  - name: 'getTestPlanById(string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestPlanById
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestPlanById
-    name: 'getTestPlanById(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a test plan by Id.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getTestPlanById(project: string, planId: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
+          type: number
           description: |
             ID of the test plan to get.
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestPlan>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestPlan" />&gt;
+        description: ''
+  - name: 'getTestPlans(string, string, string, boolean, boolean)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestPlans
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestPlans
-    name: 'getTestPlans(string, string, string, boolean, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a list of test plans
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getTestPlans(project: string, owner?: string,
@@ -735,254 +663,234 @@ items:
         filterActivePlans?: boolean)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: owner
-          type:
-            - string
+          type: string
           description: Filter for test plan by owner ID or name
-          optional: true
         - id: continuationToken
-          type:
-            - string
+          type: string
           description: >-
             If the list of plans returned is not complete, a continuation token
             to query next batch of plans is included in the response header as
             "x-ms-continuationtoken". Omit this parameter to get the first batch
             of test plans.
-          optional: true
         - id: includePlanDetails
-          type:
-            - boolean
+          type: boolean
           description: Get all properties of the test plan
-          optional: true
         - id: filterActivePlans
-          type:
-            - boolean
+          type: boolean
           description: |
             Get just the active plans
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestPlan[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestPlan" />[]&gt;'
+        description: ''
+  - name: >-
+      getTestPointCountByPlanId(string, number, string, UserFriendlyTestOutcome,
+      string, string, string)
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestPointCountByPlanId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestSuiteById
-    name: 'getTestSuiteById(string, number, number, SuiteExpand)'
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTestPointCountByPlanId(project: string, planId: number,
+        states?: string, outcome?: UserFriendlyTestOutcome, configurations?:
+        string, testers?: string, assignedTo?: string)
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: planId
+          type: number
+          description: '-'
+        - id: states
+          type: string
+          description: '-'
+        - id: outcome
+          type: <xref uid="azure-devops-extension-api.UserFriendlyTestOutcome" />
+          description: '-'
+        - id: configurations
+          type: string
+          description: '-'
+        - id: testers
+          type: string
+          description: '-'
+        - id: assignedTo
+          type: string
+          description: |
+            -
+      return:
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestPointCount"
+          />[]&gt;
+        description: ''
+  - name: 'getTestSuiteById(string, number, number, SuiteExpand)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestSuiteById
+    package: azure-devops-extension-api
     summary: Get test suite by suite id.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getTestSuiteById(project: string, planId: number, suiteId:
         number, expand?: SuiteExpand)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
+          type: number
           description: ID of the test plan that contains the suites.
         - id: suiteId
-          type:
-            - number
+          type: number
           description: ID of the suite to get.
         - id: expand
-          type:
-            - azure-devops-extension-api.SuiteExpand
+          type: <xref uid="azure-devops-extension-api.SuiteExpand" />
           description: |
             Include the children suites and testers details
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestSuite>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestSuite" />&gt;
+        description: ''
+  - name: 'getTestSuitesForPlan(string, number, SuiteExpand, string, boolean)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestSuitesForPlan
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestSuitesForPlan
-    name: 'getTestSuitesForPlan(string, number, SuiteExpand, string, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get test suites for plan.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getTestSuitesForPlan(project: string, planId: number, expand?:
         SuiteExpand, continuationToken?: string, asTreeView?: boolean)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
+          type: number
           description: ID of the test plan for which suites are requested.
         - id: expand
-          type:
-            - azure-devops-extension-api.SuiteExpand
+          type: <xref uid="azure-devops-extension-api.SuiteExpand" />
           description: Include the children suites and testers details.
-          optional: true
         - id: continuationToken
-          type:
-            - string
+          type: string
           description: >-
             If the list of suites returned is not complete, a continuation token
             to query next batch of suites is included in the response header as
             "x-ms-continuationtoken". Omit this parameter to get the first batch
             of test suites.
-          optional: true
         - id: asTreeView
-          type:
-            - boolean
+          type: boolean
           description: |
             If the suites returned should be in a tree structure.
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestSuite[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestSuite" />[]&gt;'
+        description: ''
+  - name: 'getTestVariableById(string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestVariableById
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestVariableById
-    name: 'getTestVariableById(string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a test variable by its ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getTestVariableById(project: string, testVariableId: number)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: testVariableId
-          type:
-            - number
+          type: number
           description: |
             ID of the test variable to get.
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestVariable>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestVariable" />&gt;
+        description: ''
+  - name: 'getTestVariables(string, string)'
+    uid: azure-devops-extension-api.TestPlanRestClient.getTestVariables
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.getTestVariables
-    name: 'getTestVariables(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a list of test variables.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getTestVariables(project: string, continuationToken?: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: continuationToken
-          type:
-            - string
+          type: string
           description: >
             If the list of variables returned is not complete, a continuation
             token to query next batch of variables is included in the response
             header as "x-ms-continuationtoken". Omit this parameter to get the
             first batch of test variables.
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestVariable[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestVariable"
+          />[]&gt;
+        description: ''
+  - name: 'removeTestCasesFromSuite(string, number, number, string)'
+    uid: azure-devops-extension-api.TestPlanRestClient.removeTestCasesFromSuite
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.removeTestCasesFromSuite
-    name: 'removeTestCasesFromSuite(string, number, number, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Removes test cases from a suite based on the list of test case Ids
       provided.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function removeTestCasesFromSuite(project: string, planId: number,
         suiteId: number, testCaseIds: string)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test plan from which test cases are to be removed.
         - id: suiteId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test suite from which test cases are to be removed.
         - id: testCaseIds
-          type:
-            - string
+          type: string
           description: |
-            -
+            Test Case Ids to be removed.
       return:
-        type:
-          - Promise<void>
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: 'reorderSuiteEntries(SuiteEntryUpdateParams[], string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.reorderSuiteEntries
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.reorderSuiteEntries
-    name: 'reorderSuiteEntries(SuiteEntryUpdateParams[], string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Reorder test suite entries in the test suite.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function reorderSuiteEntries(suiteEntries: SuiteEntryUpdateParams[],
         project: string, suiteId: number)
       parameters:
         - id: suiteEntries
-          type:
-            - 'azure-devops-extension-api.SuiteEntryUpdateParams[]'
+          type: '<xref uid="azure-devops-extension-api.SuiteEntryUpdateParams" />[]'
           description: List of SuiteEntry to reorder.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: suiteId
-          type:
-            - number
+          type: number
           description: |
             Id of the parent test suite.
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.SuiteEntry[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.constructor
-    name: TestPlanRestClient(IVssRestClientOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new TestPlanRestClient(options: IVssRestClientOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-devops-extension-api.IVssRestClientOptions
-          description: ''
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.updateSuiteTestCases
-    name: >-
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SuiteEntry" />[]&gt;'
+        description: ''
+  - name: >-
       updateSuiteTestCases(SuiteTestCaseCreateUpdateParameters[], string,
       number, number)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TestPlanRestClient.updateSuiteTestCases
+    package: azure-devops-extension-api
     summary: Update the configurations for test cases
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateSuiteTestCases(suiteTestCaseCreateUpdateParameters:
@@ -990,35 +898,32 @@ items:
         suiteId: number)
       parameters:
         - id: suiteTestCaseCreateUpdateParameters
-          type:
-            - 'azure-devops-extension-api.SuiteTestCaseCreateUpdateParameters[]'
-          description: '-'
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.SuiteTestCaseCreateUpdateParameters"
+            />[]
+          description: A SuiteTestCaseCreateUpdateParameters object.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test plan to which test cases are to be updated.
         - id: suiteId
-          type:
-            - number
+          type: number
           description: |
-            -
+            ID of the test suite to which test cases are to be updated.
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestCase[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.updateTestConfiguration
-    name: >-
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestCase" />[]&gt;'
+        description: ''
+  - name: >-
       updateTestConfiguration(TestConfigurationCreateUpdateParameters, string,
       number)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TestPlanRestClient.updateTestConfiguration
+    package: azure-devops-extension-api
     summary: Update a test configuration by its ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function
@@ -1027,127 +932,121 @@ items:
         testConfiguartionId: number)
       parameters:
         - id: testConfigurationCreateUpdateParameters
-          type:
-            - azure-devops-extension-api.TestConfigurationCreateUpdateParameters
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.TestConfigurationCreateUpdateParameters"
+            />
           description: TestConfigurationCreateUpdateParameters
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: testConfiguartionId
-          type:
-            - number
+          type: number
           description: |
             ID of the test configuration to update.
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestConfiguration>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestConfiguration"
+          />&gt;
+        description: ''
+  - name: 'updateTestPlan(TestPlanUpdateParams, string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.updateTestPlan
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.updateTestPlan
-    name: 'updateTestPlan(TestPlanUpdateParams, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Update a test plan.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateTestPlan(testPlanUpdateParams: TestPlanUpdateParams,
         project: string, planId: number)
       parameters:
         - id: testPlanUpdateParams
-          type:
-            - azure-devops-extension-api.TestPlanUpdateParams
+          type: <xref uid="azure-devops-extension-api.TestPlanUpdateParams" />
           description: A testPlanUpdateParams object.TestPlanUpdateParams
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
+          type: number
           description: |
             ID of the test plan to be updated.
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestPlan>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestPlan" />&gt;
+        description: ''
+  - name: >-
+      updateTestPoints(TestPointUpdateParams[], string, number, number, boolean,
+      boolean)
+    uid: azure-devops-extension-api.TestPlanRestClient.updateTestPoints
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.updateTestPoints
-    name: 'updateTestPoints(TestPointUpdateParams[], string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Update Test Points. This is used to Reset test point to active, update the
       outcome of a test point or update the tester of a test point
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateTestPoints(testPointUpdateParams:
         TestPointUpdateParams[], project: string, planId: number, suiteId:
-        number)
+        number, includePointDetails?: boolean, returnIdentityRef?: boolean)
       parameters:
         - id: testPointUpdateParams
-          type:
-            - 'azure-devops-extension-api.TestPointUpdateParams[]'
-          description: '-'
+          type: '<xref uid="azure-devops-extension-api.TestPointUpdateParams" />[]'
+          description: A TestPointUpdateParams Object.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
-          description: '-'
+          type: number
+          description: ID of the test plan for which test points are requested.
         - id: suiteId
-          type:
-            - number
-          description: |
-            -
+          type: number
+          description: ID of the test suite for which test points are requested.
+        - id: includePointDetails
+          type: boolean
+          description: >-
+            If set to false, will get a smaller payload containing only basic
+            details about the test point object
+        - id: returnIdentityRef
+          type: boolean
+          description: >
+            If set to true, returns the AssignedTo field in TestCaseReference as
+            IdentityRef object.
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TestPoint[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestPoint" />[]&gt;'
+        description: ''
+  - name: 'updateTestSuite(TestSuiteUpdateParams, string, number, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.updateTestSuite
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.updateTestSuite
-    name: 'updateTestSuite(TestSuiteUpdateParams, string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Update test suite.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateTestSuite(testSuiteUpdateParams: TestSuiteUpdateParams,
         project: string, planId: number, suiteId: number)
       parameters:
         - id: testSuiteUpdateParams
-          type:
-            - azure-devops-extension-api.TestSuiteUpdateParams
+          type: <xref uid="azure-devops-extension-api.TestSuiteUpdateParams" />
           description: Parameters for suite updation
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: planId
-          type:
-            - number
+          type: number
           description: ID of the test plan that contains the suites.
         - id: suiteId
-          type:
-            - number
+          type: number
           description: |
             ID of the parent suite.
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestSuite>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestSuite" />&gt;
+        description: ''
+  - name: 'updateTestVariable(TestVariableCreateUpdateParameters, string, number)'
+    uid: azure-devops-extension-api.TestPlanRestClient.updateTestVariable
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TestPlanRestClient.updateTestVariable
-    name: 'updateTestVariable(TestVariableCreateUpdateParameters, string, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Update a test variable by its ID.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function updateTestVariable(testVariableCreateUpdateParameters:
@@ -1155,246 +1054,19 @@ items:
         number)
       parameters:
         - id: testVariableCreateUpdateParameters
-          type:
-            - azure-devops-extension-api.TestVariableCreateUpdateParameters
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.TestVariableCreateUpdateParameters"
+            />
           description: TestVariableCreateUpdateParameters
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
         - id: testVariableId
-          type:
-            - number
+          type: number
           description: |
             ID of the test variable to update.
       return:
-        type:
-          - Promise<azure-devops-extension-api.TestVariable>
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RestClientBase
-    name: RestClientBase
-    spec.typeScript:
-      - name: RestClientBase
-        fullName: RestClientBase
-        uid: azure-devops-extension-api.RestClientBase
-  - uid: azure-devops-extension-api.IVssRestClientOptions
-    name: IVssRestClientOptions
-    spec.typeScript:
-      - name: IVssRestClientOptions
-        fullName: IVssRestClientOptions
-        uid: azure-devops-extension-api.IVssRestClientOptions
-  - uid: 'azure-devops-extension-api.SuiteTestCaseCreateUpdateParameters[]'
-    name: 'SuiteTestCaseCreateUpdateParameters[]'
-    spec.typeScript:
-      - name: SuiteTestCaseCreateUpdateParameters
-        fullName: SuiteTestCaseCreateUpdateParameters
-        uid: azure-devops-extension-api.SuiteTestCaseCreateUpdateParameters
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'Promise<azure-devops-extension-api.TestCase[]>'
-    name: 'TestCase[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestCase
-        fullName: TestCase
-        uid: azure-devops-extension-api.TestCase
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.CloneTestPlanParams
-    name: CloneTestPlanParams
-    spec.typeScript:
-      - name: CloneTestPlanParams
-        fullName: CloneTestPlanParams
-        uid: azure-devops-extension-api.CloneTestPlanParams
-  - uid: Promise<azure-devops-extension-api.CloneTestPlanOperationInformation>
-    name: CloneTestPlanOperationInformation>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: CloneTestPlanOperationInformation
-        fullName: CloneTestPlanOperationInformation
-        uid: azure-devops-extension-api.CloneTestPlanOperationInformation
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.CloneTestSuiteParams
-    name: CloneTestSuiteParams
-    spec.typeScript:
-      - name: CloneTestSuiteParams
-        fullName: CloneTestSuiteParams
-        uid: azure-devops-extension-api.CloneTestSuiteParams
-  - uid: Promise<azure-devops-extension-api.CloneTestSuiteOperationInformation>
-    name: CloneTestSuiteOperationInformation>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: CloneTestSuiteOperationInformation
-        fullName: CloneTestSuiteOperationInformation
-        uid: azure-devops-extension-api.CloneTestSuiteOperationInformation
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.TestConfigurationCreateUpdateParameters
-    name: TestConfigurationCreateUpdateParameters
-    spec.typeScript:
-      - name: TestConfigurationCreateUpdateParameters
-        fullName: TestConfigurationCreateUpdateParameters
-        uid: azure-devops-extension-api.TestConfigurationCreateUpdateParameters
-  - uid: Promise<azure-devops-extension-api.TestConfiguration>
-    name: TestConfiguration>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestConfiguration
-        fullName: TestConfiguration
-        uid: azure-devops-extension-api.TestConfiguration
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.TestPlanCreateParams
-    name: TestPlanCreateParams
-    spec.typeScript:
-      - name: TestPlanCreateParams
-        fullName: TestPlanCreateParams
-        uid: azure-devops-extension-api.TestPlanCreateParams
-  - uid: Promise<azure-devops-extension-api.TestPlan>
-    name: TestPlan>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestPlan
-        fullName: TestPlan
-        uid: azure-devops-extension-api.TestPlan
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.TestSuiteCreateParams
-    name: TestSuiteCreateParams
-    spec.typeScript:
-      - name: TestSuiteCreateParams
-        fullName: TestSuiteCreateParams
-        uid: azure-devops-extension-api.TestSuiteCreateParams
-  - uid: Promise<azure-devops-extension-api.TestSuite>
-    name: TestSuite>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestSuite
-        fullName: TestSuite
-        uid: azure-devops-extension-api.TestSuite
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.TestVariableCreateUpdateParameters
-    name: TestVariableCreateUpdateParameters
-    spec.typeScript:
-      - name: TestVariableCreateUpdateParameters
-        fullName: TestVariableCreateUpdateParameters
-        uid: azure-devops-extension-api.TestVariableCreateUpdateParameters
-  - uid: Promise<azure-devops-extension-api.TestVariable>
-    name: TestVariable>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestVariable
-        fullName: TestVariable
-        uid: azure-devops-extension-api.TestVariable
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.TestPoint[]>'
-    name: 'TestPoint[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestPoint
-        fullName: TestPoint
-        uid: azure-devops-extension-api.TestPoint
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.SuiteEntryTypes
-    name: SuiteEntryTypes
-    spec.typeScript:
-      - name: SuiteEntryTypes
-        fullName: SuiteEntryTypes
-        uid: azure-devops-extension-api.SuiteEntryTypes
-  - uid: 'Promise<azure-devops-extension-api.SuiteEntry[]>'
-    name: 'SuiteEntry[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: SuiteEntry
-        fullName: SuiteEntry
-        uid: azure-devops-extension-api.SuiteEntry
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.TestSuite[]>'
-    name: 'TestSuite[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestSuite
-        fullName: TestSuite
-        uid: azure-devops-extension-api.TestSuite
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.TestConfiguration[]>'
-    name: 'TestConfiguration[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestConfiguration
-        fullName: TestConfiguration
-        uid: azure-devops-extension-api.TestConfiguration
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.TestPlan[]>'
-    name: 'TestPlan[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestPlan
-        fullName: TestPlan
-        uid: azure-devops-extension-api.TestPlan
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.SuiteExpand
-    name: SuiteExpand
-    spec.typeScript:
-      - name: SuiteExpand
-        fullName: SuiteExpand
-        uid: azure-devops-extension-api.SuiteExpand
-  - uid: 'Promise<azure-devops-extension-api.TestVariable[]>'
-    name: 'TestVariable[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TestVariable
-        fullName: TestVariable
-        uid: azure-devops-extension-api.TestVariable
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'azure-devops-extension-api.SuiteEntryUpdateParams[]'
-    name: 'SuiteEntryUpdateParams[]'
-    spec.typeScript:
-      - name: SuiteEntryUpdateParams
-        fullName: SuiteEntryUpdateParams
-        uid: azure-devops-extension-api.SuiteEntryUpdateParams
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.TestPlanUpdateParams
-    name: TestPlanUpdateParams
-    spec.typeScript:
-      - name: TestPlanUpdateParams
-        fullName: TestPlanUpdateParams
-        uid: azure-devops-extension-api.TestPlanUpdateParams
-  - uid: 'azure-devops-extension-api.TestPointUpdateParams[]'
-    name: 'TestPointUpdateParams[]'
-    spec.typeScript:
-      - name: TestPointUpdateParams
-        fullName: TestPointUpdateParams
-        uid: azure-devops-extension-api.TestPointUpdateParams
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.TestSuiteUpdateParams
-    name: TestSuiteUpdateParams
-    spec.typeScript:
-      - name: TestSuiteUpdateParams
-        fullName: TestSuiteUpdateParams
-        uid: azure-devops-extension-api.TestSuiteUpdateParams
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestVariable" />&gt;
+        description: ''
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

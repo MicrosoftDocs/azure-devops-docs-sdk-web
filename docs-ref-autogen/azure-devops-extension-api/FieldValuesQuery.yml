@@ -1,58 +1,61 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.FieldValuesQuery
-    name: FieldValuesQuery
-    fullName: FieldValuesQuery
-    children:
-      - azure-devops-extension-api.FieldValuesQuery.inputValues
-      - azure-devops-extension-api.FieldValuesQuery.scope
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.InputValuesQuery
+### YamlMime:TSType
+name: FieldValuesQuery
+uid: azure-devops-extension-api.FieldValuesQuery
+package: azure-devops-extension-api
+summary: ''
+fullName: FieldValuesQuery
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: currentValues
+    uid: azure-devops-extension-api.FieldValuesQuery.currentValues
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.FieldValuesQuery.inputValues
-    name: inputValues
-    fullName: inputValues
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: currentValues
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'currentValues: [key: string]: string'
+      return:
+        type: '[key: string]\: string'
+        description: ''
+  - name: inputValues
+    uid: azure-devops-extension-api.FieldValuesQuery.inputValues
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: inputValues
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'inputValues: FieldInputValues[]'
       return:
-        type:
-          - 'azure-devops-extension-api.FieldInputValues[]'
+        type: '<xref uid="azure-devops-extension-api.FieldInputValues" />[]'
+        description: ''
+  - name: resource
+    uid: azure-devops-extension-api.FieldValuesQuery.resource
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.FieldValuesQuery.scope
-    name: scope
-    fullName: scope
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Subscription containing information about the publisher/consumer and the
+      current input values
+    fullName: resource
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'resource: any'
+      return:
+        type: any
+        description: ''
+  - name: scope
+    uid: azure-devops-extension-api.FieldValuesQuery.scope
+    package: azure-devops-extension-api
     summary: ''
+    fullName: scope
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scope: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.InputValuesQuery
-    name: InputValuesQuery
-    spec.typeScript:
-      - name: InputValuesQuery
-        fullName: InputValuesQuery
-        uid: azure-devops-extension-api.InputValuesQuery
-  - uid: 'azure-devops-extension-api.FieldInputValues[]'
-    name: 'FieldInputValues[]'
-    spec.typeScript:
-      - name: FieldInputValues
-        fullName: FieldInputValues
-        uid: azure-devops-extension-api.FieldInputValues
-      - name: '[]'
-        fullName: '[]'
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.InputValuesQuery" />
