@@ -1,0 +1,37 @@
+### YamlMime:TSType
+name: JobReference
+uid: azure-devops-extension-api.JobReference
+package: azure-devops-extension-api
+summary: Job in pipeline. This is related to matrixing in YAML.
+fullName: JobReference
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: attempt
+    uid: azure-devops-extension-api.JobReference.attempt
+    package: azure-devops-extension-api
+    summary: Attempt number of the job
+    fullName: attempt
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'attempt: number'
+      return:
+        type: number
+        description: ''
+  - name: jobName
+    uid: azure-devops-extension-api.JobReference.jobName
+    package: azure-devops-extension-api
+    summary: >-
+      Matrixing in YAML generates copies of a job with different inputs in
+      matrix. JobName is the name of those input. Maximum supported length for
+      name is 256 character.
+    fullName: jobName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jobName: string'
+      return:
+        type: string
+        description: ''

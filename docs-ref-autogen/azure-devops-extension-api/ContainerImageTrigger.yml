@@ -1,58 +1,47 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ContainerImageTrigger
-    name: ContainerImageTrigger
-    fullName: ContainerImageTrigger
-    children:
-      - azure-devops-extension-api.ContainerImageTrigger.alias
-      - azure-devops-extension-api.ContainerImageTrigger.tagFilters
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.ReleaseTriggerBase
+### YamlMime:TSType
+name: ContainerImageTrigger
+uid: azure-devops-extension-api.ContainerImageTrigger
+package: azure-devops-extension-api
+summary: ''
+fullName: ContainerImageTrigger
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: alias
+    uid: azure-devops-extension-api.ContainerImageTrigger.alias
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ContainerImageTrigger.alias
-    name: alias
-    fullName: alias
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Alias of the trigger.
+    fullName: alias
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'alias: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: tagFilters
+    uid: azure-devops-extension-api.ContainerImageTrigger.tagFilters
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ContainerImageTrigger.tagFilters
-    name: tagFilters
-    fullName: tagFilters
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: List tag filters applied while trigger.
+    fullName: tagFilters
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tagFilters: TagFilter[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TagFilter[]'
+        type: '<xref uid="azure-devops-extension-api.TagFilter" />[]'
+        description: ''
+  - name: triggerType
+    uid: azure-devops-extension-api.ContainerImageTrigger.triggerType
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ReleaseTriggerBase
-    name: ReleaseTriggerBase
-    spec.typeScript:
-      - name: ReleaseTriggerBase
-        fullName: ReleaseTriggerBase
-        uid: azure-devops-extension-api.ReleaseTriggerBase
-  - uid: 'azure-devops-extension-api.TagFilter[]'
-    name: 'TagFilter[]'
-    spec.typeScript:
-      - name: TagFilter
-        fullName: TagFilter
-        uid: azure-devops-extension-api.TagFilter
-      - name: '[]'
-        fullName: '[]'
+    summary: Type of release trigger.
+    fullName: triggerType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'triggerType: ReleaseTriggerType'
+      return:
+        type: <xref uid="azure-devops-extension-api.ReleaseTriggerType" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.ReleaseTriggerBase" />

@@ -1,0 +1,66 @@
+### YamlMime:TSType
+name: ResultsSummaryByOutcome
+uid: azure-devops-extension-api.ResultsSummaryByOutcome
+package: azure-devops-extension-api
+summary: Result summary by the outcome of test results.
+fullName: ResultsSummaryByOutcome
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: aggregatedResultDetailsByOutcome
+    uid: >-
+      azure-devops-extension-api.ResultsSummaryByOutcome.aggregatedResultDetailsByOutcome
+    package: azure-devops-extension-api
+    summary: Aggregated result details for each test result outcome.
+    fullName: aggregatedResultDetailsByOutcome
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        aggregatedResultDetailsByOutcome: [key: number]:
+        AggregatedResultDetailsByOutcome
+      return:
+        type: >-
+          [key: number]\: <xref
+          uid="azure-devops-extension-api.AggregatedResultDetailsByOutcome" />
+        description: ''
+  - name: duration
+    uid: azure-devops-extension-api.ResultsSummaryByOutcome.duration
+    package: azure-devops-extension-api
+    summary: Time taken by results.
+    fullName: duration
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'duration: any'
+      return:
+        type: any
+        description: ''
+  - name: notReportedTestCount
+    uid: azure-devops-extension-api.ResultsSummaryByOutcome.notReportedTestCount
+    package: azure-devops-extension-api
+    summary: Total number of not reported test results.
+    fullName: notReportedTestCount
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'notReportedTestCount: number'
+      return:
+        type: number
+        description: ''
+  - name: totalTestCount
+    uid: azure-devops-extension-api.ResultsSummaryByOutcome.totalTestCount
+    package: azure-devops-extension-api
+    summary: >-
+      Total number of test results. (It includes NotImpacted test results as
+      well which need to exclude while calculating pass/fail test result
+      percentage).
+    fullName: totalTestCount
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'totalTestCount: number'
+      return:
+        type: number
+        description: ''

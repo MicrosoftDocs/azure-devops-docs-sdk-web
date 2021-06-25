@@ -1,131 +1,95 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BuildCompletedEvent
-    name: BuildCompletedEvent
-    fullName: BuildCompletedEvent
-    children:
-      - azure-devops-extension-api.BuildCompletedEvent.changes
-      - azure-devops-extension-api.BuildCompletedEvent.pullRequest
-      - azure-devops-extension-api.BuildCompletedEvent.testResults
-      - azure-devops-extension-api.BuildCompletedEvent.timelineRecords
-      - azure-devops-extension-api.BuildCompletedEvent.workItems
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.BuildUpdatedEvent
+### YamlMime:TSType
+name: BuildCompletedEvent
+uid: azure-devops-extension-api.BuildCompletedEvent
+package: azure-devops-extension-api
+summary: ''
+fullName: BuildCompletedEvent
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: build
+    uid: azure-devops-extension-api.BuildCompletedEvent.build
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildCompletedEvent.changes
-    name: changes
-    fullName: changes
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ''
+    fullName: build
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'build: Build'
+      return:
+        type: <xref uid="azure-devops-extension-api.Build" />
+        description: ''
+  - name: buildId
+    uid: azure-devops-extension-api.BuildCompletedEvent.buildId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: buildId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'buildId: number'
+      return:
+        type: number
+        description: ''
+  - name: changes
+    uid: azure-devops-extension-api.BuildCompletedEvent.changes
+    package: azure-devops-extension-api
     summary: Changes associated with a build used for build notifications
+    fullName: changes
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'changes: Change[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Change[]'
+        type: '<xref uid="azure-devops-extension-api.Change" />[]'
+        description: ''
+  - name: pullRequest
+    uid: azure-devops-extension-api.BuildCompletedEvent.pullRequest
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildCompletedEvent.pullRequest
-    name: pullRequest
-    fullName: pullRequest
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Pull request for the build used for build notifications
+    fullName: pullRequest
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pullRequest: PullRequest'
       return:
-        type:
-          - azure-devops-extension-api.PullRequest
+        type: <xref uid="azure-devops-extension-api.PullRequest" />
+        description: ''
+  - name: testResults
+    uid: azure-devops-extension-api.BuildCompletedEvent.testResults
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildCompletedEvent.testResults
-    name: testResults
-    fullName: testResults
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Test results associated with a build used for build notifications
+    fullName: testResults
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'testResults: AggregatedResultsAnalysis'
       return:
-        type:
-          - azure-devops-extension-api.AggregatedResultsAnalysis
+        type: <xref uid="azure-devops-extension-api.AggregatedResultsAnalysis" />
+        description: ''
+  - name: timelineRecords
+    uid: azure-devops-extension-api.BuildCompletedEvent.timelineRecords
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildCompletedEvent.timelineRecords
-    name: timelineRecords
-    fullName: timelineRecords
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Timeline records associated with a build used for build notifications
+    fullName: timelineRecords
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'timelineRecords: TimelineRecord[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TimelineRecord[]'
+        type: '<xref uid="azure-devops-extension-api.TimelineRecord" />[]'
+        description: ''
+  - name: workItems
+    uid: azure-devops-extension-api.BuildCompletedEvent.workItems
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildCompletedEvent.workItems
-    name: workItems
-    fullName: workItems
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Work items associated with a build used for build notifications
+    fullName: workItems
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workItems: AssociatedWorkItem[]'
       return:
-        type:
-          - 'azure-devops-extension-api.AssociatedWorkItem[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.BuildUpdatedEvent
-    name: BuildUpdatedEvent
-    spec.typeScript:
-      - name: BuildUpdatedEvent
-        fullName: BuildUpdatedEvent
-        uid: azure-devops-extension-api.BuildUpdatedEvent
-  - uid: 'azure-devops-extension-api.Change[]'
-    name: 'Change[]'
-    spec.typeScript:
-      - name: Change
-        fullName: Change
-        uid: azure-devops-extension-api.Change
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.PullRequest
-    name: PullRequest
-    spec.typeScript:
-      - name: PullRequest
-        fullName: PullRequest
-        uid: azure-devops-extension-api.PullRequest
-  - uid: azure-devops-extension-api.AggregatedResultsAnalysis
-    name: AggregatedResultsAnalysis
-    spec.typeScript:
-      - name: AggregatedResultsAnalysis
-        fullName: AggregatedResultsAnalysis
-        uid: azure-devops-extension-api.AggregatedResultsAnalysis
-  - uid: 'azure-devops-extension-api.TimelineRecord[]'
-    name: 'TimelineRecord[]'
-    spec.typeScript:
-      - name: TimelineRecord
-        fullName: TimelineRecord
-        uid: azure-devops-extension-api.TimelineRecord
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-devops-extension-api.AssociatedWorkItem[]'
-    name: 'AssociatedWorkItem[]'
-    spec.typeScript:
-      - name: AssociatedWorkItem
-        fullName: AssociatedWorkItem
-        uid: azure-devops-extension-api.AssociatedWorkItem
-      - name: '[]'
-        fullName: '[]'
+        type: '<xref uid="azure-devops-extension-api.AssociatedWorkItem" />[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.BuildUpdatedEvent" />

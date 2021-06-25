@@ -1,0 +1,60 @@
+### YamlMime:TSType
+name: UpdateTaskboardColumn
+uid: azure-devops-extension-api.UpdateTaskboardColumn
+package: azure-devops-extension-api
+summary: ''
+fullName: UpdateTaskboardColumn
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.UpdateTaskboardColumn.id
+    package: azure-devops-extension-api
+    summary: 'Column ID, keep it null for new column'
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        type: string
+        description: ''
+  - name: mappings
+    uid: azure-devops-extension-api.UpdateTaskboardColumn.mappings
+    package: azure-devops-extension-api
+    summary: >-
+      Work item type states mapped to this column to support auto state update
+      when column is updated.
+    fullName: mappings
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'mappings: TaskboardColumnMapping[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.TaskboardColumnMapping" />[]'
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.UpdateTaskboardColumn.name
+    package: azure-devops-extension-api
+    summary: Column name is required
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: order
+    uid: azure-devops-extension-api.UpdateTaskboardColumn.order
+    package: azure-devops-extension-api
+    summary: Column position relative to other columns in the same board
+    fullName: order
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'order: number'
+      return:
+        type: number
+        description: ''

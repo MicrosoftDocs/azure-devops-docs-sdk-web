@@ -1,79 +1,51 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ReleaseDefinitionSummary
-    name: ReleaseDefinitionSummary
-    fullName: ReleaseDefinitionSummary
-    children:
-      - azure-devops-extension-api.ReleaseDefinitionSummary.environments
-      - azure-devops-extension-api.ReleaseDefinitionSummary.releaseDefinition
-      - azure-devops-extension-api.ReleaseDefinitionSummary.releases
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ReleaseDefinitionSummary
+uid: azure-devops-extension-api.ReleaseDefinitionSummary
+package: azure-devops-extension-api
+summary: ''
+fullName: ReleaseDefinitionSummary
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: environments
+    uid: azure-devops-extension-api.ReleaseDefinitionSummary.environments
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ReleaseDefinitionSummary.environments
-    name: environments
-    fullName: environments
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: List of Release Definition environment summary.
+    fullName: environments
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'environments: ReleaseDefinitionEnvironmentSummary[]'
       return:
-        type:
-          - 'azure-devops-extension-api.ReleaseDefinitionEnvironmentSummary[]'
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ReleaseDefinitionEnvironmentSummary"
+          />[]
+        description: ''
+  - name: releaseDefinition
+    uid: azure-devops-extension-api.ReleaseDefinitionSummary.releaseDefinition
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ReleaseDefinitionSummary.releaseDefinition
-    name: releaseDefinition
-    fullName: releaseDefinition
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Release Definition reference.
+    fullName: releaseDefinition
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'releaseDefinition: ReleaseDefinitionShallowReference'
       return:
-        type:
-          - azure-devops-extension-api.ReleaseDefinitionShallowReference
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ReleaseDefinitionShallowReference" />
+        description: ''
+  - name: releases
+    uid: azure-devops-extension-api.ReleaseDefinitionSummary.releases
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ReleaseDefinitionSummary.releases
-    name: releases
+    summary: List of releases deployed using this Release Definition.
     fullName: releases
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: List of releases deployed using this Release Defintion.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'releases: Release[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Release[]'
-    package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.ReleaseDefinitionEnvironmentSummary[]'
-    name: 'ReleaseDefinitionEnvironmentSummary[]'
-    spec.typeScript:
-      - name: ReleaseDefinitionEnvironmentSummary
-        fullName: ReleaseDefinitionEnvironmentSummary
-        uid: azure-devops-extension-api.ReleaseDefinitionEnvironmentSummary
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.ReleaseDefinitionShallowReference
-    name: ReleaseDefinitionShallowReference
-    spec.typeScript:
-      - name: ReleaseDefinitionShallowReference
-        fullName: ReleaseDefinitionShallowReference
-        uid: azure-devops-extension-api.ReleaseDefinitionShallowReference
-  - uid: 'azure-devops-extension-api.Release[]'
-    name: 'Release[]'
-    spec.typeScript:
-      - name: Release
-        fullName: Release
-        uid: azure-devops-extension-api.Release
-      - name: '[]'
-        fullName: '[]'
+        type: '<xref uid="azure-devops-extension-api.Release" />[]'
+        description: ''

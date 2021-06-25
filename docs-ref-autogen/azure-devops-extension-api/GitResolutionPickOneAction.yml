@@ -1,41 +1,35 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitResolutionPickOneAction
-    name: GitResolutionPickOneAction
-    fullName: GitResolutionPickOneAction
-    children:
-      - azure-devops-extension-api.GitResolutionPickOneAction.action
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.GitResolution
+### YamlMime:TSType
+name: GitResolutionPickOneAction
+uid: azure-devops-extension-api.GitResolutionPickOneAction
+package: azure-devops-extension-api
+summary: ''
+fullName: GitResolutionPickOneAction
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: action
+    uid: azure-devops-extension-api.GitResolutionPickOneAction.action
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitResolutionPickOneAction.action
-    name: action
-    fullName: action
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: action
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'action: GitResolutionWhichAction'
       return:
-        type:
-          - azure-devops-extension-api.GitResolutionWhichAction
+        type: <xref uid="azure-devops-extension-api.GitResolutionWhichAction" />
+        description: ''
+  - name: author
+    uid: azure-devops-extension-api.GitResolutionPickOneAction.author
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitResolution
-    name: GitResolution
-    spec.typeScript:
-      - name: GitResolution
-        fullName: GitResolution
-        uid: azure-devops-extension-api.GitResolution
-  - uid: azure-devops-extension-api.GitResolutionWhichAction
-    name: GitResolutionWhichAction
-    spec.typeScript:
-      - name: GitResolutionWhichAction
-        fullName: GitResolutionWhichAction
-        uid: azure-devops-extension-api.GitResolutionWhichAction
+    summary: User who created the resolution.
+    fullName: author
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'author: IdentityRef'
+      return:
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.GitResolution" />

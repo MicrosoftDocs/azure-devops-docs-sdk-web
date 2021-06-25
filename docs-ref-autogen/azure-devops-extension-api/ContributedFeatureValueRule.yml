@@ -1,20 +1,35 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ContributedFeatureValueRule
-    name: ContributedFeatureValueRule
-    fullName: ContributedFeatureValueRule
-    children: []
-    langs:
-      - typeScript
-    type: interface
-    summary: A rule for dynamically getting the enabled/disabled state of a feature
-    extends:
-      name: azure-devops-extension-api.ContributedFeatureHandlerSettings
+### YamlMime:TSType
+name: ContributedFeatureValueRule
+uid: azure-devops-extension-api.ContributedFeatureValueRule
+package: azure-devops-extension-api
+summary: A rule for dynamically getting the enabled/disabled state of a feature
+fullName: ContributedFeatureValueRule
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: name
+    uid: azure-devops-extension-api.ContributedFeatureValueRule.name
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ContributedFeatureHandlerSettings
-    name: ContributedFeatureHandlerSettings
-    spec.typeScript:
-      - name: ContributedFeatureHandlerSettings
-        fullName: ContributedFeatureHandlerSettings
-        uid: azure-devops-extension-api.ContributedFeatureHandlerSettings
+    summary: Name of the handler to run
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: properties
+    uid: azure-devops-extension-api.ContributedFeatureValueRule.properties
+    package: azure-devops-extension-api
+    summary: Properties to feed to the handler
+    fullName: properties
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'properties: [key: string]: any'
+      return:
+        type: '[key: string]\: any'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.ContributedFeatureHandlerSettings" />

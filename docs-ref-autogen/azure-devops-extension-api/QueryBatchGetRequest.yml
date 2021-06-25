@@ -1,73 +1,50 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.QueryBatchGetRequest
-    name: QueryBatchGetRequest
-    fullName: QueryBatchGetRequest
-    children:
-      - azure-devops-extension-api.QueryBatchGetRequest.$expand
-      - azure-devops-extension-api.QueryBatchGetRequest.errorPolicy
-      - azure-devops-extension-api.QueryBatchGetRequest.ids
-    langs:
-      - typeScript
-    type: interface
-    summary: Describes a request to get a list of queries
+### YamlMime:TSType
+name: QueryBatchGetRequest
+uid: azure-devops-extension-api.QueryBatchGetRequest
+package: azure-devops-extension-api
+summary: Describes a request to get a list of queries
+fullName: QueryBatchGetRequest
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: $expand
+    uid: azure-devops-extension-api.QueryBatchGetRequest.$expand
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.QueryBatchGetRequest.$expand
-    name: $expand
-    fullName: $expand
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The expand parameters for queries. Possible options are \{ None, Wiql,
       Clauses, All, Minimal \}
+    fullName: $expand
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: '$expand: QueryExpand'
       return:
-        type:
-          - azure-devops-extension-api.QueryExpand
+        type: <xref uid="azure-devops-extension-api.QueryExpand" />
+        description: ''
+  - name: errorPolicy
+    uid: azure-devops-extension-api.QueryBatchGetRequest.errorPolicy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.QueryBatchGetRequest.errorPolicy
-    name: errorPolicy
-    fullName: errorPolicy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The flag to control error policy in a query batch request. Possible
       options are \{ Fail, Omit \}.
+    fullName: errorPolicy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'errorPolicy: QueryErrorPolicy'
       return:
-        type:
-          - azure-devops-extension-api.QueryErrorPolicy
+        type: <xref uid="azure-devops-extension-api.QueryErrorPolicy" />
+        description: ''
+  - name: ids
+    uid: azure-devops-extension-api.QueryBatchGetRequest.ids
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.QueryBatchGetRequest.ids
-    name: ids
-    fullName: ids
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The requested query ids
+    fullName: ids
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'ids: string[]'
       return:
-        type:
-          - 'string[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.QueryExpand
-    name: QueryExpand
-    spec.typeScript:
-      - name: QueryExpand
-        fullName: QueryExpand
-        uid: azure-devops-extension-api.QueryExpand
-  - uid: azure-devops-extension-api.QueryErrorPolicy
-    name: QueryErrorPolicy
-    spec.typeScript:
-      - name: QueryErrorPolicy
-        fullName: QueryErrorPolicy
-        uid: azure-devops-extension-api.QueryErrorPolicy
+        type: 'string[]'
+        description: ''

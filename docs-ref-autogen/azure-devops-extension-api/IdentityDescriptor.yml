@@ -1,45 +1,38 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IdentityDescriptor
-    name: IdentityDescriptor
-    fullName: IdentityDescriptor
-    children:
-      - azure-devops-extension-api.IdentityDescriptor.identifier
-      - azure-devops-extension-api.IdentityDescriptor.identityType
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      An Identity descriptor is a wrapper for the identity type (Windows SID,
-      Passport) along with a unique identifier such as the SID or PUID.
+### YamlMime:TSType
+name: IdentityDescriptor
+uid: azure-devops-extension-api.IdentityDescriptor
+package: azure-devops-extension-api
+summary: >-
+  An Identity descriptor is a wrapper for the identity type (Windows SID,
+  Passport) along with a unique identifier such as the SID or PUID.
+fullName: IdentityDescriptor
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: identifier
+    uid: azure-devops-extension-api.IdentityDescriptor.identifier
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityDescriptor.identifier
-    name: identifier
-    fullName: identifier
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The unique identifier for this identity, not exceeding 256 chars, which
       will be persisted.
+    fullName: identifier
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'identifier: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: identityType
+    uid: azure-devops-extension-api.IdentityDescriptor.identityType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityDescriptor.identityType
-    name: identityType
-    fullName: identityType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'Type of descriptor (for example, Windows, Passport, etc.).'
+    fullName: identityType
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'identityType: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
+        type: string
+        description: ''

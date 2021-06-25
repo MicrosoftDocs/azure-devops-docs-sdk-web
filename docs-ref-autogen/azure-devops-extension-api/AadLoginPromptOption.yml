@@ -1,70 +1,43 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.AadLoginPromptOption
-    name: AadLoginPromptOption
-    fullName: AadLoginPromptOption
-    children:
-      - azure-devops-extension-api.AadLoginPromptOption.NoOption
-      - azure-devops-extension-api.AadLoginPromptOption.Login
-      - azure-devops-extension-api.AadLoginPromptOption.SelectAccount
-      - azure-devops-extension-api.AadLoginPromptOption.FreshLogin
-      - azure-devops-extension-api.AadLoginPromptOption.FreshLoginWithMfa
-    langs:
-      - typeScript
-    type: enum
-    summary: ''
+### YamlMime:TSEnum
+name: AadLoginPromptOption
+uid: azure-devops-extension-api.AadLoginPromptOption
+package: azure-devops-extension-api
+summary: ''
+fullName: AadLoginPromptOption
+isPreview: false
+isDeprecated: false
+fields:
+  - name: NoOption
+    uid: azure-devops-extension-api.AadLoginPromptOption.NoOption
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AadLoginPromptOption.NoOption
-    name: NoOption
-    children: []
-    langs:
-      - typeScript
     summary: Do not provide a prompt option
-    type: field
     numericValue: 0
+  - name: Login
+    uid: azure-devops-extension-api.AadLoginPromptOption.Login
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AadLoginPromptOption.Login
-    name: Login
-    children: []
-    langs:
-      - typeScript
     summary: Force the user to login again.
-    type: field
     numericValue: 1
+  - name: SelectAccount
+    uid: azure-devops-extension-api.AadLoginPromptOption.SelectAccount
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AadLoginPromptOption.SelectAccount
-    name: SelectAccount
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Force the user to select which account they are logging in with instead of
       automatically picking the user up from the session state. NOTE: This does
-      not work for switching bewtween the variants of a dual-homed user.
-    type: field
+      not work for switching between the variants of a dual-homed user.
     numericValue: 2
+  - name: FreshLogin
+    uid: azure-devops-extension-api.AadLoginPromptOption.FreshLogin
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AadLoginPromptOption.FreshLogin
-    name: FreshLogin
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Force the user to login again. \<remarks\> Ignore current authentication
       state and force the user to authenticate again. This option should be used
       instead of Login. \</remarks\>
-    type: field
     numericValue: 3
+  - name: FreshLoginWithMfa
+    uid: azure-devops-extension-api.AadLoginPromptOption.FreshLoginWithMfa
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AadLoginPromptOption.FreshLoginWithMfa
-    name: FreshLoginWithMfa
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Force the user to login again with mfa. \<remarks\> Ignore current
       authentication state and force the user to authenticate again. This option
       should be used instead of Login, if MFA is required. \</remarks\>
-    type: field
     numericValue: 4
-    package: azure-devops-extension-api

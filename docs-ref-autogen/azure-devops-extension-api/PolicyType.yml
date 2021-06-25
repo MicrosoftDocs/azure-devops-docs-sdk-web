@@ -1,37 +1,59 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.PolicyType
-    name: PolicyType
-    fullName: PolicyType
-    children:
-      - azure-devops-extension-api.PolicyType.description
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      User-friendly policy type with description (used for querying policy
-      types).
-    extends:
-      name: azure-devops-extension-api.PolicyTypeRef
+### YamlMime:TSType
+name: PolicyType
+uid: azure-devops-extension-api.PolicyType
+package: azure-devops-extension-api
+summary: User-friendly policy type with description (used for querying policy types).
+fullName: PolicyType
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.PolicyType.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PolicyType.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Detailed description of the policy type.
+    fullName: description
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: displayName
+    uid: azure-devops-extension-api.PolicyType.displayName
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.PolicyTypeRef
-    name: PolicyTypeRef
-    spec.typeScript:
-      - name: PolicyTypeRef
-        fullName: PolicyTypeRef
-        uid: azure-devops-extension-api.PolicyTypeRef
+    summary: Display name of the policy type.
+    fullName: displayName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        type: string
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.PolicyType.id
+    package: azure-devops-extension-api
+    summary: The policy type ID.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.PolicyType.url
+    package: azure-devops-extension-api
+    summary: The URL where the policy type can be retrieved.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.PolicyTypeRef" />

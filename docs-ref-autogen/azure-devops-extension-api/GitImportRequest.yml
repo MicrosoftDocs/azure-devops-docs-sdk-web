@@ -1,128 +1,84 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitImportRequest
-    name: GitImportRequest
-    fullName: GitImportRequest
-    children:
-      - azure-devops-extension-api.GitImportRequest.detailedStatus
-      - azure-devops-extension-api.GitImportRequest.importRequestId
-      - azure-devops-extension-api.GitImportRequest.parameters
-      - azure-devops-extension-api.GitImportRequest.repository
-      - azure-devops-extension-api.GitImportRequest.status
-      - azure-devops-extension-api.GitImportRequest.url
-    langs:
-      - typeScript
-    type: interface
-    summary: A request to import data from a remote source control system.
+### YamlMime:TSType
+name: GitImportRequest
+uid: azure-devops-extension-api.GitImportRequest
+package: azure-devops-extension-api
+summary: A request to import data from a remote source control system.
+fullName: GitImportRequest
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: detailedStatus
+    uid: azure-devops-extension-api.GitImportRequest.detailedStatus
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitImportRequest.detailedStatus
-    name: detailedStatus
-    fullName: detailedStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Detailed status of the import, including the current step and an error
       message, if applicable.
+    fullName: detailedStatus
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'detailedStatus: GitImportStatusDetail'
       return:
-        type:
-          - azure-devops-extension-api.GitImportStatusDetail
+        type: <xref uid="azure-devops-extension-api.GitImportStatusDetail" />
+        description: ''
+  - name: importRequestId
+    uid: azure-devops-extension-api.GitImportRequest.importRequestId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitImportRequest.importRequestId
-    name: importRequestId
-    fullName: importRequestId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The unique identifier for this import request.
+    fullName: importRequestId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'importRequestId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: parameters
+    uid: azure-devops-extension-api.GitImportRequest.parameters
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitImportRequest.parameters
-    name: parameters
-    fullName: parameters
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Parameters for creating the import request.
+    fullName: parameters
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'parameters: GitImportRequestParameters'
       return:
-        type:
-          - azure-devops-extension-api.GitImportRequestParameters
+        type: <xref uid="azure-devops-extension-api.GitImportRequestParameters" />
+        description: ''
+  - name: repository
+    uid: azure-devops-extension-api.GitImportRequest.repository
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitImportRequest.repository
-    name: repository
-    fullName: repository
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The target repository for this import.
+    fullName: repository
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'repository: GitRepository'
       return:
-        type:
-          - azure-devops-extension-api.GitRepository
+        type: <xref uid="azure-devops-extension-api.GitRepository" />
+        description: ''
+  - name: status
+    uid: azure-devops-extension-api.GitImportRequest.status
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitImportRequest.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Current status of the import.
+    fullName: status
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'status: GitAsyncOperationStatus'
       return:
-        type:
-          - azure-devops-extension-api.GitAsyncOperationStatus
+        type: <xref uid="azure-devops-extension-api.GitAsyncOperationStatus" />
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.GitImportRequest.url
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitImportRequest.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: A link back to this import request resource.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'url: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitImportStatusDetail
-    name: GitImportStatusDetail
-    spec.typeScript:
-      - name: GitImportStatusDetail
-        fullName: GitImportStatusDetail
-        uid: azure-devops-extension-api.GitImportStatusDetail
-  - uid: azure-devops-extension-api.GitImportRequestParameters
-    name: GitImportRequestParameters
-    spec.typeScript:
-      - name: GitImportRequestParameters
-        fullName: GitImportRequestParameters
-        uid: azure-devops-extension-api.GitImportRequestParameters
-  - uid: azure-devops-extension-api.GitRepository
-    name: GitRepository
-    spec.typeScript:
-      - name: GitRepository
-        fullName: GitRepository
-        uid: azure-devops-extension-api.GitRepository
-  - uid: azure-devops-extension-api.GitAsyncOperationStatus
-    name: GitAsyncOperationStatus
-    spec.typeScript:
-      - name: GitAsyncOperationStatus
-        fullName: GitAsyncOperationStatus
-        uid: azure-devops-extension-api.GitAsyncOperationStatus
+        type: string
+        description: ''

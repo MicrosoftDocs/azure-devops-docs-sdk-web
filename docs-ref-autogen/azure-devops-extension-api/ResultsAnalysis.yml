@@ -1,0 +1,48 @@
+### YamlMime:TSType
+name: ResultsAnalysis
+uid: azure-devops-extension-api.ResultsAnalysis
+package: azure-devops-extension-api
+summary: Results insights for runs with state completed and NeedInvestigation.
+fullName: ResultsAnalysis
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: previousContext
+    uid: azure-devops-extension-api.ResultsAnalysis.previousContext
+    package: azure-devops-extension-api
+    summary: Reference of pipeline instance from which to compare the results.
+    fullName: previousContext
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'previousContext: PipelineReference'
+      return:
+        type: <xref uid="azure-devops-extension-api.PipelineReference" />
+        description: ''
+  - name: resultsDifference
+    uid: azure-devops-extension-api.ResultsAnalysis.resultsDifference
+    package: azure-devops-extension-api
+    summary: >-
+      Increase/Decrease in counts of results for a different outcome with
+      respect to PreviousContext.
+    fullName: resultsDifference
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'resultsDifference: AggregatedResultsDifference'
+      return:
+        type: <xref uid="azure-devops-extension-api.AggregatedResultsDifference" />
+        description: ''
+  - name: testFailuresAnalysis
+    uid: azure-devops-extension-api.ResultsAnalysis.testFailuresAnalysis
+    package: azure-devops-extension-api
+    summary: Failure analysis of results with respect to PreviousContext
+    fullName: testFailuresAnalysis
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'testFailuresAnalysis: TestResultFailuresAnalysis'
+      return:
+        type: <xref uid="azure-devops-extension-api.TestResultFailuresAnalysis" />
+        description: ''

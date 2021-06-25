@@ -1,0 +1,85 @@
+### YamlMime:TSType
+name: CommentList
+uid: azure-devops-extension-api.CommentList
+package: azure-devops-extension-api
+summary: Represents a list of work item comments.
+fullName: CommentList
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: comments
+    uid: azure-devops-extension-api.CommentList.comments
+    package: azure-devops-extension-api
+    summary: List of comments in the current batch.
+    fullName: comments
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'comments: Comment[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.Comment" />[]'
+        description: ''
+  - name: continuationToken
+    uid: azure-devops-extension-api.CommentList.continuationToken
+    package: azure-devops-extension-api
+    summary: >-
+      A string token that can be used to retrieving next page of comments if
+      available. Otherwise null.
+    fullName: continuationToken
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'continuationToken: string'
+      return:
+        type: string
+        description: ''
+  - name: count
+    uid: azure-devops-extension-api.CommentList.count
+    package: azure-devops-extension-api
+    summary: The count of comments in the current batch.
+    fullName: count
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'count: number'
+      return:
+        type: number
+        description: ''
+  - name: nextPage
+    uid: azure-devops-extension-api.CommentList.nextPage
+    package: azure-devops-extension-api
+    summary: Uri to the next page of comments if it is available. Otherwise null.
+    fullName: nextPage
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nextPage: string'
+      return:
+        type: string
+        description: ''
+  - name: totalCount
+    uid: azure-devops-extension-api.CommentList.totalCount
+    package: azure-devops-extension-api
+    summary: Total count of comments on a work item.
+    fullName: totalCount
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'totalCount: number'
+      return:
+        type: number
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.CommentList.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

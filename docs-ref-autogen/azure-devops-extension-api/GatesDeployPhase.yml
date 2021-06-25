@@ -1,41 +1,83 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GatesDeployPhase
-    name: GatesDeployPhase
-    fullName: GatesDeployPhase
-    children:
-      - azure-devops-extension-api.GatesDeployPhase.deploymentInput
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.DeployPhase
+### YamlMime:TSType
+name: GatesDeployPhase
+uid: azure-devops-extension-api.GatesDeployPhase
+package: azure-devops-extension-api
+summary: ''
+fullName: GatesDeployPhase
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: deploymentInput
+    uid: azure-devops-extension-api.GatesDeployPhase.deploymentInput
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GatesDeployPhase.deploymentInput
-    name: deploymentInput
-    fullName: deploymentInput
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets and sets the gate job input.
+    fullName: deploymentInput
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deploymentInput: GatesDeploymentInput'
       return:
-        type:
-          - azure-devops-extension-api.GatesDeploymentInput
+        type: <xref uid="azure-devops-extension-api.GatesDeploymentInput" />
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.GatesDeployPhase.name
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.DeployPhase
-    name: DeployPhase
-    spec.typeScript:
-      - name: DeployPhase
-        fullName: DeployPhase
-        uid: azure-devops-extension-api.DeployPhase
-  - uid: azure-devops-extension-api.GatesDeploymentInput
-    name: GatesDeploymentInput
-    spec.typeScript:
-      - name: GatesDeploymentInput
-        fullName: GatesDeploymentInput
-        uid: azure-devops-extension-api.GatesDeploymentInput
+    summary: Gets and sets the name of deploy phase.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: phaseType
+    uid: azure-devops-extension-api.GatesDeployPhase.phaseType
+    package: azure-devops-extension-api
+    summary: Indicates the deploy phase type.
+    fullName: phaseType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'phaseType: DeployPhaseTypes'
+      return:
+        type: <xref uid="azure-devops-extension-api.DeployPhaseTypes" />
+        description: ''
+  - name: rank
+    uid: azure-devops-extension-api.GatesDeployPhase.rank
+    package: azure-devops-extension-api
+    summary: Gets and sets the rank of deploy phase.
+    fullName: rank
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rank: number'
+      return:
+        type: number
+        description: ''
+  - name: refName
+    uid: azure-devops-extension-api.GatesDeployPhase.refName
+    package: azure-devops-extension-api
+    summary: Gets and sets the reference name of deploy phase.
+    fullName: refName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'refName: string'
+      return:
+        type: string
+        description: ''
+  - name: workflowTasks
+    uid: azure-devops-extension-api.GatesDeployPhase.workflowTasks
+    package: azure-devops-extension-api
+    summary: Gets and sets the workflow tasks for the deploy phase.
+    fullName: workflowTasks
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'workflowTasks: WorkflowTask[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.WorkflowTask" />[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.DeployPhase" />

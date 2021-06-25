@@ -1,61 +1,39 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.NotificationSubscriberDeliveryPreference
-    name: NotificationSubscriberDeliveryPreference
-    fullName: NotificationSubscriberDeliveryPreference
-    children:
-      - >-
-        azure-devops-extension-api.NotificationSubscriberDeliveryPreference.NoDelivery
-      - >-
-        azure-devops-extension-api.NotificationSubscriberDeliveryPreference.PreferredEmailAddress
-      - >-
-        azure-devops-extension-api.NotificationSubscriberDeliveryPreference.EachMember
-      - >-
-        azure-devops-extension-api.NotificationSubscriberDeliveryPreference.UseDefault
-    langs:
-      - typeScript
-    type: enum
-    summary: >-
-      Delivery preference for a subscriber. Indicates how the subscriber should
-      be notified.
-    package: azure-devops-extension-api
-  - uid: >-
+### YamlMime:TSEnum
+name: NotificationSubscriberDeliveryPreference
+uid: azure-devops-extension-api.NotificationSubscriberDeliveryPreference
+package: azure-devops-extension-api
+summary: >-
+  Delivery preference for a subscriber. Indicates how the subscriber should be
+  notified.
+fullName: NotificationSubscriberDeliveryPreference
+isPreview: false
+isDeprecated: false
+fields:
+  - name: NoDelivery
+    uid: >-
       azure-devops-extension-api.NotificationSubscriberDeliveryPreference.NoDelivery
-    name: NoDelivery
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
+    package: azure-devops-extension-api
+    summary: >-
+      Do not send notifications by default. Note: notifications can still be
+      delivered to this subscriber, for example via a custom subscription.
     numericValue: -1
-    package: azure-devops-extension-api
-  - uid: >-
+  - name: PreferredEmailAddress
+    uid: >-
       azure-devops-extension-api.NotificationSubscriberDeliveryPreference.PreferredEmailAddress
-    name: PreferredEmailAddress
-    children: []
-    langs:
-      - typeScript
+    package: azure-devops-extension-api
     summary: Deliver notifications to the subscriber's preferred email address.
-    type: field
     numericValue: 1
-    package: azure-devops-extension-api
-  - uid: >-
+  - name: EachMember
+    uid: >-
       azure-devops-extension-api.NotificationSubscriberDeliveryPreference.EachMember
-    name: EachMember
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
+    package: azure-devops-extension-api
+    summary: >-
+      Deliver notifications to each member of the group representing the
+      subscriber. Only applicable when the subscriber is a group.
     numericValue: 2
-    package: azure-devops-extension-api
-  - uid: >-
+  - name: UseDefault
+    uid: >-
       azure-devops-extension-api.NotificationSubscriberDeliveryPreference.UseDefault
-    name: UseDefault
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 3
     package: azure-devops-extension-api
+    summary: Use default
+    numericValue: 3

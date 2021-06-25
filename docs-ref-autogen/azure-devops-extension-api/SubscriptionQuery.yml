@@ -1,61 +1,39 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.SubscriptionQuery
-    name: SubscriptionQuery
-    fullName: SubscriptionQuery
-    children:
-      - azure-devops-extension-api.SubscriptionQuery.conditions
-      - azure-devops-extension-api.SubscriptionQuery.queryFlags
-    langs:
-      - typeScript
-    type: interface
-    summary: Notification subscriptions query input.
+### YamlMime:TSType
+name: SubscriptionQuery
+uid: azure-devops-extension-api.SubscriptionQuery
+package: azure-devops-extension-api
+summary: Notification subscriptions query input.
+fullName: SubscriptionQuery
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: conditions
+    uid: azure-devops-extension-api.SubscriptionQuery.conditions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.SubscriptionQuery.conditions
-    name: conditions
-    fullName: conditions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       One or more conditions to query on. If more than 2 conditions are
       specified, the combined results of each condition is returned (i.e.
       conditions are logically OR'ed).
+    fullName: conditions
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'conditions: SubscriptionQueryCondition[]'
       return:
-        type:
-          - 'azure-devops-extension-api.SubscriptionQueryCondition[]'
+        type: '<xref uid="azure-devops-extension-api.SubscriptionQueryCondition" />[]'
+        description: ''
+  - name: queryFlags
+    uid: azure-devops-extension-api.SubscriptionQuery.queryFlags
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.SubscriptionQuery.queryFlags
-    name: queryFlags
-    fullName: queryFlags
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Flags the refine the types of subscriptions that will be returned from the
       query.
+    fullName: queryFlags
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queryFlags: SubscriptionQueryFlags'
       return:
-        type:
-          - azure-devops-extension-api.SubscriptionQueryFlags
-    package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.SubscriptionQueryCondition[]'
-    name: 'SubscriptionQueryCondition[]'
-    spec.typeScript:
-      - name: SubscriptionQueryCondition
-        fullName: SubscriptionQueryCondition
-        uid: azure-devops-extension-api.SubscriptionQueryCondition
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.SubscriptionQueryFlags
-    name: SubscriptionQueryFlags
-    spec.typeScript:
-      - name: SubscriptionQueryFlags
-        fullName: SubscriptionQueryFlags
-        uid: azure-devops-extension-api.SubscriptionQueryFlags
+        type: <xref uid="azure-devops-extension-api.SubscriptionQueryFlags" />
+        description: ''

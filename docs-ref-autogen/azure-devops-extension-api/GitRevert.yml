@@ -1,35 +1,75 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitRevert
-    name: GitRevert
-    fullName: GitRevert
-    children:
-      - azure-devops-extension-api.GitRevert.revertId
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.GitAsyncRefOperation
+### YamlMime:TSType
+name: GitRevert
+uid: azure-devops-extension-api.GitRevert
+package: azure-devops-extension-api
+summary: ''
+fullName: GitRevert
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: detailedStatus
+    uid: azure-devops-extension-api.GitRevert.detailedStatus
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitRevert.revertId
-    name: revertId
-    fullName: revertId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: detailedStatus
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'detailedStatus: GitAsyncRefOperationDetail'
+      return:
+        type: <xref uid="azure-devops-extension-api.GitAsyncRefOperationDetail" />
+        description: ''
+  - name: parameters
+    uid: azure-devops-extension-api.GitRevert.parameters
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: parameters
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'parameters: GitAsyncRefOperationParameters'
+      return:
+        type: >-
+          <xref uid="azure-devops-extension-api.GitAsyncRefOperationParameters"
+          />
+        description: ''
+  - name: revertId
+    uid: azure-devops-extension-api.GitRevert.revertId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: revertId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'revertId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: status
+    uid: azure-devops-extension-api.GitRevert.status
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitAsyncRefOperation
-    name: GitAsyncRefOperation
-    spec.typeScript:
-      - name: GitAsyncRefOperation
-        fullName: GitAsyncRefOperation
-        uid: azure-devops-extension-api.GitAsyncRefOperation
+    summary: ''
+    fullName: status
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'status: GitAsyncOperationStatus'
+      return:
+        type: <xref uid="azure-devops-extension-api.GitAsyncOperationStatus" />
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.GitRevert.url
+    package: azure-devops-extension-api
+    summary: >-
+      A URL that can be used to make further requests for status about the
+      operation
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.GitAsyncRefOperation" />

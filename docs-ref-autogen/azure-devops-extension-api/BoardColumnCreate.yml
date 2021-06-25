@@ -1,35 +1,47 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BoardColumnCreate
-    name: BoardColumnCreate
-    fullName: BoardColumnCreate
-    children:
-      - azure-devops-extension-api.BoardColumnCreate.nextColumnId
-    langs:
-      - typeScript
-    type: interface
-    summary: Describes a column to create on a board.
-    extends:
-      name: azure-devops-extension-api.BoardColumnBase
+### YamlMime:TSType
+name: BoardColumnCreate
+uid: azure-devops-extension-api.BoardColumnCreate
+package: azure-devops-extension-api
+summary: Describes a column to create on a board.
+fullName: BoardColumnCreate
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.BoardColumnCreate.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardColumnCreate.nextColumnId
-    name: nextColumnId
-    fullName: nextColumnId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Board column description.
+    fullName: description
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        type: string
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.BoardColumnCreate.name
+    package: azure-devops-extension-api
+    summary: Name of the column.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: nextColumnId
+    uid: azure-devops-extension-api.BoardColumnCreate.nextColumnId
+    package: azure-devops-extension-api
     summary: 'Next column identifier or supported directive: $first or $last.'
+    fullName: nextColumnId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'nextColumnId: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.BoardColumnBase
-    name: BoardColumnBase
-    spec.typeScript:
-      - name: BoardColumnBase
-        fullName: BoardColumnBase
-        uid: azure-devops-extension-api.BoardColumnBase
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.BoardColumnBase" />

@@ -1,182 +1,137 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.VssNotificationEvent
-    name: VssNotificationEvent
-    fullName: VssNotificationEvent
-    children:
-      - azure-devops-extension-api.VssNotificationEvent.actors
-      - azure-devops-extension-api.VssNotificationEvent.artifactUris
-      - azure-devops-extension-api.VssNotificationEvent.data
-      - azure-devops-extension-api.VssNotificationEvent.eventType
-      - azure-devops-extension-api.VssNotificationEvent.expiresIn
-      - azure-devops-extension-api.VssNotificationEvent.itemId
-      - azure-devops-extension-api.VssNotificationEvent.processDelay
-      - azure-devops-extension-api.VssNotificationEvent.scopes
-      - azure-devops-extension-api.VssNotificationEvent.sourceEventCreatedTime
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      This is the type used for firing notifications intended for the subsystem
-      in the Notifications SDK. For components that can't take a dependency on
-      the Notifications SDK directly, they can use
-      ITeamFoundationEventService.PublishNotification and the Notifications SDK
-      ISubscriber implementation will get it.
+### YamlMime:TSType
+name: VssNotificationEvent
+uid: azure-devops-extension-api.VssNotificationEvent
+package: azure-devops-extension-api
+summary: >-
+  This is the type used for firing notifications intended for the subsystem in
+  the Notifications SDK. For components that can't take a dependency on the
+  Notifications SDK directly, they can use
+  ITeamFoundationEventService.PublishNotification and the Notifications SDK
+  ISubscriber implementation will get it.
+fullName: VssNotificationEvent
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: actors
+    uid: azure-devops-extension-api.VssNotificationEvent.actors
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssNotificationEvent.actors
-    name: actors
-    fullName: actors
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Optional: A list of actors which are additional identities with
       corresponding roles that are relevant to the event.
+    fullName: actors
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'actors: EventActor[]'
       return:
-        type:
-          - 'azure-devops-extension-api.EventActor[]'
+        type: '<xref uid="azure-devops-extension-api.EventActor" />[]'
+        description: ''
+  - name: artifactUris
+    uid: azure-devops-extension-api.VssNotificationEvent.artifactUris
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssNotificationEvent.artifactUris
-    name: artifactUris
-    fullName: artifactUris
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'Optional: A list of artifacts referenced or impacted by this event.'
+    fullName: artifactUris
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'artifactUris: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: data
+    uid: azure-devops-extension-api.VssNotificationEvent.data
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssNotificationEvent.data
-    name: data
-    fullName: data
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Required: The event payload.  If Data is a string, it must be in Json or
       XML format.  Otherwise it must have a serialization format attribute.
+    fullName: data
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'data: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: eventType
+    uid: azure-devops-extension-api.VssNotificationEvent.eventType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssNotificationEvent.eventType
-    name: eventType
-    fullName: eventType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Required: The name of the event.  This event must be registered in the
       context it is being fired.
+    fullName: eventType
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'eventType: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: expiresIn
+    uid: azure-devops-extension-api.VssNotificationEvent.expiresIn
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssNotificationEvent.expiresIn
-    name: expiresIn
-    fullName: expiresIn
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       How long before the event expires and will be cleaned up.  The default is
       to use the system default.
+    fullName: expiresIn
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'expiresIn: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: itemId
+    uid: azure-devops-extension-api.VssNotificationEvent.itemId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssNotificationEvent.itemId
-    name: itemId
-    fullName: itemId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'The id of the item, artifact, extension, project, etc.'
+    fullName: itemId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'itemId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: processDelay
+    uid: azure-devops-extension-api.VssNotificationEvent.processDelay
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssNotificationEvent.processDelay
-    name: processDelay
-    fullName: processDelay
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       How long to wait before processing this event.  The default is to process
       immediately.
+    fullName: processDelay
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'processDelay: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: scopes
+    uid: azure-devops-extension-api.VssNotificationEvent.scopes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssNotificationEvent.scopes
-    name: scopes
-    fullName: scopes
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'Optional: A list of scopes which are are relevant to the event.'
+    fullName: scopes
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scopes: EventScope[]'
       return:
-        type:
-          - 'azure-devops-extension-api.EventScope[]'
+        type: '<xref uid="azure-devops-extension-api.EventScope" />[]'
+        description: ''
+  - name: sourceEventCreatedTime
+    uid: azure-devops-extension-api.VssNotificationEvent.sourceEventCreatedTime
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssNotificationEvent.sourceEventCreatedTime
-    name: sourceEventCreatedTime
-    fullName: sourceEventCreatedTime
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       This is the time the original source event for this VssNotificationEvent
       was created.  For example, for something like a build completion
       notification SourceEventCreatedTime should be the time the build finished
       not the time this event was raised.
+    fullName: sourceEventCreatedTime
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceEventCreatedTime: Date'
       return:
-        type:
-          - Date
-    package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.EventActor[]'
-    name: 'EventActor[]'
-    spec.typeScript:
-      - name: EventActor
-        fullName: EventActor
-        uid: azure-devops-extension-api.EventActor
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-devops-extension-api.EventScope[]'
-    name: 'EventScope[]'
-    spec.typeScript:
-      - name: EventScope
-        fullName: EventScope
-        uid: azure-devops-extension-api.EventScope
-      - name: '[]'
-        fullName: '[]'
+        type: Date
+        description: ''

@@ -1,109 +1,123 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.DeploymentInput
-    name: DeploymentInput
-    fullName: DeploymentInput
-    children:
-      - azure-devops-extension-api.DeploymentInput.artifactsDownloadInput
-      - azure-devops-extension-api.DeploymentInput.demands
-      - azure-devops-extension-api.DeploymentInput.enableAccessToken
-      - azure-devops-extension-api.DeploymentInput.queueId
-      - azure-devops-extension-api.DeploymentInput.skipArtifactsDownload
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.BaseDeploymentInput
+### YamlMime:TSType
+name: DeploymentInput
+uid: azure-devops-extension-api.DeploymentInput
+package: azure-devops-extension-api
+summary: ''
+fullName: DeploymentInput
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: artifactsDownloadInput
+    uid: azure-devops-extension-api.DeploymentInput.artifactsDownloadInput
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentInput.artifactsDownloadInput
-    name: artifactsDownloadInput
-    fullName: artifactsDownloadInput
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Artifacts that downloaded during job execution.
+    fullName: artifactsDownloadInput
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'artifactsDownloadInput: ArtifactsDownloadInput'
       return:
-        type:
-          - azure-devops-extension-api.ArtifactsDownloadInput
+        type: <xref uid="azure-devops-extension-api.ArtifactsDownloadInput" />
+        description: ''
+  - name: condition
+    uid: azure-devops-extension-api.DeploymentInput.condition
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentInput.demands
-    name: demands
-    fullName: demands
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Gets or sets the job condition.
+    fullName: condition
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'condition: string'
+      return:
+        type: string
+        description: ''
+  - name: demands
+    uid: azure-devops-extension-api.DeploymentInput.demands
+    package: azure-devops-extension-api
     summary: List demands that needs to meet to execute the job.
+    fullName: demands
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'demands: Demand[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Demand[]'
+        type: '<xref uid="azure-devops-extension-api.Demand" />[]'
+        description: ''
+  - name: enableAccessToken
+    uid: azure-devops-extension-api.DeploymentInput.enableAccessToken
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentInput.enableAccessToken
-    name: enableAccessToken
-    fullName: enableAccessToken
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Indicates whether to include access token in deployment job or not.
+    fullName: enableAccessToken
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'enableAccessToken: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: jobCancelTimeoutInMinutes
+    uid: azure-devops-extension-api.DeploymentInput.jobCancelTimeoutInMinutes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentInput.queueId
-    name: queueId
-    fullName: queueId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Gets or sets the job cancel timeout in minutes for deployment which are
+      cancelled by user for this release environment.
+    fullName: jobCancelTimeoutInMinutes
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jobCancelTimeoutInMinutes: number'
+      return:
+        type: number
+        description: ''
+  - name: overrideInputs
+    uid: azure-devops-extension-api.DeploymentInput.overrideInputs
+    package: azure-devops-extension-api
+    summary: Gets or sets the override inputs.
+    fullName: overrideInputs
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'overrideInputs: [key: string]: string'
+      return:
+        type: '[key: string]\: string'
+        description: ''
+  - name: queueId
+    uid: azure-devops-extension-api.DeploymentInput.queueId
+    package: azure-devops-extension-api
     summary: Id of the pool on which job get executed.
+    fullName: queueId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queueId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: skipArtifactsDownload
+    uid: azure-devops-extension-api.DeploymentInput.skipArtifactsDownload
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentInput.skipArtifactsDownload
-    name: skipArtifactsDownload
-    fullName: skipArtifactsDownload
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Indicates whether artifacts downloaded while job execution or not.
+    fullName: skipArtifactsDownload
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'skipArtifactsDownload: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: timeoutInMinutes
+    uid: azure-devops-extension-api.DeploymentInput.timeoutInMinutes
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.BaseDeploymentInput
-    name: BaseDeploymentInput
-    spec.typeScript:
-      - name: BaseDeploymentInput
-        fullName: BaseDeploymentInput
-        uid: azure-devops-extension-api.BaseDeploymentInput
-  - uid: azure-devops-extension-api.ArtifactsDownloadInput
-    name: ArtifactsDownloadInput
-    spec.typeScript:
-      - name: ArtifactsDownloadInput
-        fullName: ArtifactsDownloadInput
-        uid: azure-devops-extension-api.ArtifactsDownloadInput
-  - uid: 'azure-devops-extension-api.Demand[]'
-    name: 'Demand[]'
-    spec.typeScript:
-      - name: Demand
-        fullName: Demand
-        uid: azure-devops-extension-api.Demand
-      - name: '[]'
-        fullName: '[]'
+    summary: >-
+      Gets or sets the job execution timeout in minutes for deployment which are
+      queued against this release environment.
+    fullName: timeoutInMinutes
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeoutInMinutes: number'
+      return:
+        type: number
+        description: ''
+extends: <xref uid="azure-devops-extension-api.BaseDeploymentInput" />

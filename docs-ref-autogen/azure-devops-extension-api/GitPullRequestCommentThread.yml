@@ -1,46 +1,141 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitPullRequestCommentThread
-    name: GitPullRequestCommentThread
-    fullName: GitPullRequestCommentThread
-    children:
-      - >-
-        azure-devops-extension-api.GitPullRequestCommentThread.pullRequestThreadContext
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Represents a comment thread of a pull request. A thread contains meta data
-      about the file it was left on (if any) along with one or more comments (an
-      initial comment and the subsequent replies).
-    extends:
-      name: azure-devops-extension-api.CommentThread
+### YamlMime:TSType
+name: GitPullRequestCommentThread
+uid: azure-devops-extension-api.GitPullRequestCommentThread
+package: azure-devops-extension-api
+summary: >-
+  Represents a comment thread of a pull request. A thread contains meta data
+  about the file it was left on (if any) along with one or more comments (an
+  initial comment and the subsequent replies).
+fullName: GitPullRequestCommentThread
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: comments
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.comments
     package: azure-devops-extension-api
-  - uid: >-
+    summary: A list of the comments.
+    fullName: comments
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'comments: Comment[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.Comment" />[]'
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.id
+    package: azure-devops-extension-api
+    summary: The comment thread id.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+  - name: identities
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.identities
+    package: azure-devops-extension-api
+    summary: Set of identities related to this thread
+    fullName: identities
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'identities: [key: string]: IdentityRef'
+      return:
+        type: '[key: string]\: <xref uid="azure-devops-extension-api.IdentityRef" />'
+        description: ''
+  - name: isDeleted
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.isDeleted
+    package: azure-devops-extension-api
+    summary: >-
+      Specify if the thread is deleted which happens when all comments are
+      deleted.
+    fullName: isDeleted
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isDeleted: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: lastUpdatedDate
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.lastUpdatedDate
+    package: azure-devops-extension-api
+    summary: The time this thread was last updated.
+    fullName: lastUpdatedDate
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lastUpdatedDate: Date'
+      return:
+        type: Date
+        description: ''
+  - name: properties
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.properties
+    package: azure-devops-extension-api
+    summary: >-
+      Optional properties associated with the thread as a collection of
+      key-value pairs.
+    fullName: properties
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'properties: any'
+      return:
+        type: any
+        description: ''
+  - name: publishedDate
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.publishedDate
+    package: azure-devops-extension-api
+    summary: The time this thread was published.
+    fullName: publishedDate
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'publishedDate: Date'
+      return:
+        type: Date
+        description: ''
+  - name: pullRequestThreadContext
+    uid: >-
       azure-devops-extension-api.GitPullRequestCommentThread.pullRequestThreadContext
-    name: pullRequestThreadContext
-    fullName: pullRequestThreadContext
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: Extended context information unique to pull requests
+    fullName: pullRequestThreadContext
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pullRequestThreadContext: GitPullRequestCommentThreadContext'
       return:
-        type:
-          - azure-devops-extension-api.GitPullRequestCommentThreadContext
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.GitPullRequestCommentThreadContext" />
+        description: ''
+  - name: status
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.status
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.CommentThread
-    name: CommentThread
-    spec.typeScript:
-      - name: CommentThread
-        fullName: CommentThread
-        uid: azure-devops-extension-api.CommentThread
-  - uid: azure-devops-extension-api.GitPullRequestCommentThreadContext
-    name: GitPullRequestCommentThreadContext
-    spec.typeScript:
-      - name: GitPullRequestCommentThreadContext
-        fullName: GitPullRequestCommentThreadContext
-        uid: azure-devops-extension-api.GitPullRequestCommentThreadContext
+    summary: The status of the comment thread.
+    fullName: status
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'status: CommentThreadStatus'
+      return:
+        type: <xref uid="azure-devops-extension-api.CommentThreadStatus" />
+        description: ''
+  - name: threadContext
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.threadContext
+    package: azure-devops-extension-api
+    summary: Specify thread context such as position in left/right file.
+    fullName: threadContext
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'threadContext: CommentThreadContext'
+      return:
+        type: <xref uid="azure-devops-extension-api.CommentThreadContext" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.CommentThread" />

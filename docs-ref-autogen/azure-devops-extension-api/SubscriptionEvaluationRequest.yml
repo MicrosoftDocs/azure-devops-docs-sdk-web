@@ -1,60 +1,46 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.SubscriptionEvaluationRequest
-    name: SubscriptionEvaluationRequest
-    fullName: SubscriptionEvaluationRequest
-    children:
-      - >-
-        azure-devops-extension-api.SubscriptionEvaluationRequest.minEventsCreatedDate
-      - >-
-        azure-devops-extension-api.SubscriptionEvaluationRequest.subscriptionCreateParameters
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Encapsulates the properties of a SubscriptionEvaluationRequest. It defines
-      the subscription to be evaluated and time interval for events used in
-      evaluation.
-    package: azure-devops-extension-api
-  - uid: >-
+### YamlMime:TSType
+name: SubscriptionEvaluationRequest
+uid: azure-devops-extension-api.SubscriptionEvaluationRequest
+package: azure-devops-extension-api
+summary: >-
+  Encapsulates the properties of a SubscriptionEvaluationRequest. It defines the
+  subscription to be evaluated and time interval for events used in evaluation.
+fullName: SubscriptionEvaluationRequest
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: minEventsCreatedDate
+    uid: >-
       azure-devops-extension-api.SubscriptionEvaluationRequest.minEventsCreatedDate
-    name: minEventsCreatedDate
-    fullName: minEventsCreatedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       The min created date for the events used for matching in UTC. Use all
       events created since this date
+    fullName: minEventsCreatedDate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'minEventsCreatedDate: Date'
       return:
-        type:
-          - Date
-    package: azure-devops-extension-api
-  - uid: >-
+        type: Date
+        description: ''
+  - name: subscriptionCreateParameters
+    uid: >-
       azure-devops-extension-api.SubscriptionEvaluationRequest.subscriptionCreateParameters
-    name: subscriptionCreateParameters
-    fullName: subscriptionCreateParameters
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       User or group that will receive notifications for events matching the
       subscription's filter criteria. If not specified, defaults to the calling
       user.
+    fullName: subscriptionCreateParameters
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'subscriptionCreateParameters: NotificationSubscriptionCreateParameters'
       return:
-        type:
-          - azure-devops-extension-api.NotificationSubscriptionCreateParameters
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters
-    name: NotificationSubscriptionCreateParameters
-    spec.typeScript:
-      - name: NotificationSubscriptionCreateParameters
-        fullName: NotificationSubscriptionCreateParameters
-        uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.NotificationSubscriptionCreateParameters"
+          />
+        description: ''

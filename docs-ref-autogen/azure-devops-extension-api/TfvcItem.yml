@@ -1,140 +1,179 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TfvcItem
-    name: TfvcItem
-    fullName: TfvcItem
-    children:
-      - azure-devops-extension-api.TfvcItem.changeDate
-      - azure-devops-extension-api.TfvcItem.deletionId
-      - azure-devops-extension-api.TfvcItem.encoding
-      - azure-devops-extension-api.TfvcItem.hashValue
-      - azure-devops-extension-api.TfvcItem.isBranch
-      - azure-devops-extension-api.TfvcItem.isPendingChange
-      - azure-devops-extension-api.TfvcItem.size
-      - azure-devops-extension-api.TfvcItem.version
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.ItemModel
+### YamlMime:TSType
+name: TfvcItem
+uid: azure-devops-extension-api.TfvcItem
+package: azure-devops-extension-api
+summary: Metadata for an item.
+fullName: TfvcItem
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: changeDate
+    uid: azure-devops-extension-api.TfvcItem.changeDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcItem.changeDate
-    name: changeDate
+    summary: Item changed datetime.
     fullName: changeDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'changeDate: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: content
+    uid: azure-devops-extension-api.TfvcItem.content
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcItem.deletionId
-    name: deletionId
-    fullName: deletionId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: content
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'content: string'
+      return:
+        type: string
+        description: ''
+  - name: contentMetadata
+    uid: azure-devops-extension-api.TfvcItem.contentMetadata
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: contentMetadata
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'contentMetadata: FileContentMetadata'
+      return:
+        type: <xref uid="azure-devops-extension-api.FileContentMetadata" />
+        description: ''
+  - name: deletionId
+    uid: azure-devops-extension-api.TfvcItem.deletionId
+    package: azure-devops-extension-api
+    summary: Greater than 0 if item is deleted.
+    fullName: deletionId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deletionId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: encoding
+    uid: azure-devops-extension-api.TfvcItem.encoding
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcItem.encoding
-    name: encoding
-    fullName: encoding
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'File encoding from database, -1 represents binary.'
+    fullName: encoding
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'encoding: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: hashValue
+    uid: azure-devops-extension-api.TfvcItem.hashValue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcItem.hashValue
-    name: hashValue
-    fullName: hashValue
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'MD5 hash as a base 64 string, applies to files only.'
+    fullName: hashValue
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'hashValue: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: isBranch
+    uid: azure-devops-extension-api.TfvcItem.isBranch
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcItem.isBranch
-    name: isBranch
+    summary: True if item is a branch.
     fullName: isBranch
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isBranch: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: isFolder
+    uid: azure-devops-extension-api.TfvcItem.isFolder
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcItem.isPendingChange
-    name: isPendingChange
-    fullName: isPendingChange
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: isFolder
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isFolder: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: isPendingChange
+    uid: azure-devops-extension-api.TfvcItem.isPendingChange
+    package: azure-devops-extension-api
+    summary: True if there is a change pending.
+    fullName: isPendingChange
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isPendingChange: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: isSymLink
+    uid: azure-devops-extension-api.TfvcItem.isSymLink
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcItem.size
-    name: size
-    fullName: size
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ''
+    fullName: isSymLink
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isSymLink: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: path
+    uid: azure-devops-extension-api.TfvcItem.path
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: path
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'path: string'
+      return:
+        type: string
+        description: ''
+  - name: size
+    uid: azure-devops-extension-api.TfvcItem.size
+    package: azure-devops-extension-api
     summary: 'The size of the file, if applicable.'
+    fullName: size
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'size: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.TfvcItem.url
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcItem.version
-    name: version
-    fullName: version
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+  - name: version
+    uid: azure-devops-extension-api.TfvcItem.version
+    package: azure-devops-extension-api
+    summary: Changeset version Id.
+    fullName: version
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'version: number'
       return:
-        type:
-          - number
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ItemModel
-    name: ItemModel
-    spec.typeScript:
-      - name: ItemModel
-        fullName: ItemModel
-        uid: azure-devops-extension-api.ItemModel
+        type: number
+        description: ''
+extends: <xref uid="azure-devops-extension-api.ItemModel" />

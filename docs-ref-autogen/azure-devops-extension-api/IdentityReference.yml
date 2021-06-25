@@ -1,53 +1,188 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IdentityReference
-    name: IdentityReference
-    fullName: IdentityReference
-    children:
-      - azure-devops-extension-api.IdentityReference.id
-      - azure-devops-extension-api.IdentityReference.name
-    langs:
-      - typeScript
-    type: interface
-    summary: Describes a reference to an identity.
-    extends:
-      name: azure-devops-extension-api.IdentityRef
+### YamlMime:TSType
+name: IdentityReference
+uid: azure-devops-extension-api.IdentityReference
+package: azure-devops-extension-api
+summary: Describes a reference to an identity.
+fullName: IdentityReference
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: descriptor
+    uid: azure-devops-extension-api.IdentityReference.descriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityReference.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      The descriptor is the primary way to reference the graph subject while the
+      system is running. This field will uniquely identify the same graph
+      subject across both Accounts and Organizations.
+    fullName: descriptor
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'descriptor: string'
+      return:
+        type: string
+        description: ''
+  - name: directoryAlias
+    uid: azure-devops-extension-api.IdentityReference.directoryAlias
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated - Can be retrieved by querying the Graph user referenced in the
+      "self" entry of the IdentityRef "_links" dictionary
+    fullName: directoryAlias
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'directoryAlias: string'
+      return:
+        type: string
+        description: ''
+  - name: displayName
+    uid: azure-devops-extension-api.IdentityReference.displayName
+    package: azure-devops-extension-api
+    summary: >-
+      This is the non-unique display name of the graph subject. To change this
+      field, you must alter its value in the source provider.
+    fullName: displayName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        type: string
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.IdentityReference.id
+    package: azure-devops-extension-api
     summary: ''
+    fullName: id
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: imageUrl
+    uid: azure-devops-extension-api.IdentityReference.imageUrl
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityReference.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Deprecated - Available in the "avatar" entry of the IdentityRef "_links"
+      dictionary
+    fullName: imageUrl
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'imageUrl: string'
+      return:
+        type: string
+        description: ''
+  - name: inactive
+    uid: azure-devops-extension-api.IdentityReference.inactive
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated - Can be retrieved by querying the Graph membership state
+      referenced in the "membershipState" entry of the GraphUser "_links"
+      dictionary
+    fullName: inactive
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'inactive: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: isAadIdentity
+    uid: azure-devops-extension-api.IdentityReference.isAadIdentity
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated - Can be inferred from the subject type of the descriptor
+      (Descriptor.IsAadUserType/Descriptor.IsAadGroupType)
+    fullName: isAadIdentity
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isAadIdentity: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: isContainer
+    uid: azure-devops-extension-api.IdentityReference.isContainer
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated - Can be inferred from the subject type of the descriptor
+      (Descriptor.IsGroupType)
+    fullName: isContainer
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isContainer: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: isDeletedInOrigin
+    uid: azure-devops-extension-api.IdentityReference.isDeletedInOrigin
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: isDeletedInOrigin
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isDeletedInOrigin: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.IdentityReference.name
+    package: azure-devops-extension-api
     summary: >-
       Legacy back-compat property. This has been the WIT specific value from
       Constants. Will be hidden (but exists) on the client unless they are
       targeting the newest version
+    fullName: name
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: profileUrl
+    uid: azure-devops-extension-api.IdentityReference.profileUrl
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
+    summary: >-
+      Deprecated - not in use in most preexisting implementations of
+      ToIdentityRef
+    fullName: profileUrl
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'profileUrl: string'
+      return:
+        type: string
+        description: ''
+  - name: uniqueName
+    uid: azure-devops-extension-api.IdentityReference.uniqueName
+    package: azure-devops-extension-api
+    summary: Deprecated - use Domain+PrincipalName instead
+    fullName: uniqueName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'uniqueName: string'
+      return:
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.IdentityReference.url
+    package: azure-devops-extension-api
+    summary: This url is the full route to the source resource of this graph subject.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.IdentityRef" />

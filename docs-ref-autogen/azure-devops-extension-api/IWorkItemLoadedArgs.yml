@@ -1,0 +1,51 @@
+### YamlMime:TSType
+name: IWorkItemLoadedArgs
+uid: azure-devops-extension-api.IWorkItemLoadedArgs
+package: azure-devops-extension-api
+summary: >-
+  Interface defining the arguments for the 'onLoaded' notification sent by the
+  ActiveWorkItemService
+fullName: IWorkItemLoadedArgs
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.IWorkItemLoadedArgs.id
+    package: azure-devops-extension-api
+    summary: Id of the work item.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        type: number
+        description: ''
+  - name: isNew
+    uid: azure-devops-extension-api.IWorkItemLoadedArgs.isNew
+    package: azure-devops-extension-api
+    summary: '''true'' if the work item is a ''new'', unsaved work item, ''false'' otherwise.'
+    fullName: isNew
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isNew: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: isReadOnly
+    uid: azure-devops-extension-api.IWorkItemLoadedArgs.isReadOnly
+    package: azure-devops-extension-api
+    summary: >-
+      'true' write rest apis are disabled. All controls should be rendered as
+      readonly
+    fullName: isReadOnly
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isReadOnly: boolean'
+      return:
+        type: boolean
+        description: ''
+extends: <xref uid="azure-devops-extension-api.IWorkItemChangedArgs" />

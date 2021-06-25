@@ -1,69 +1,50 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitPullRequestIterationChanges
-    name: GitPullRequestIterationChanges
-    fullName: GitPullRequestIterationChanges
-    children:
-      - azure-devops-extension-api.GitPullRequestIterationChanges.changeEntries
-      - azure-devops-extension-api.GitPullRequestIterationChanges.nextSkip
-      - azure-devops-extension-api.GitPullRequestIterationChanges.nextTop
-    langs:
-      - typeScript
-    type: interface
-    summary: Collection of changes made in a pull request.
+### YamlMime:TSType
+name: GitPullRequestIterationChanges
+uid: azure-devops-extension-api.GitPullRequestIterationChanges
+package: azure-devops-extension-api
+summary: Collection of changes made in a pull request.
+fullName: GitPullRequestIterationChanges
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: changeEntries
+    uid: azure-devops-extension-api.GitPullRequestIterationChanges.changeEntries
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestIterationChanges.changeEntries
-    name: changeEntries
-    fullName: changeEntries
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Changes made in the iteration.
+    fullName: changeEntries
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'changeEntries: GitPullRequestChange[]'
       return:
-        type:
-          - 'azure-devops-extension-api.GitPullRequestChange[]'
+        type: '<xref uid="azure-devops-extension-api.GitPullRequestChange" />[]'
+        description: ''
+  - name: nextSkip
+    uid: azure-devops-extension-api.GitPullRequestIterationChanges.nextSkip
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestIterationChanges.nextSkip
-    name: nextSkip
-    fullName: nextSkip
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Value to specify as skip to get the next page of changes.  This will be
       zero if there are no more changes.
+    fullName: nextSkip
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'nextSkip: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: nextTop
+    uid: azure-devops-extension-api.GitPullRequestIterationChanges.nextTop
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestIterationChanges.nextTop
-    name: nextTop
-    fullName: nextTop
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Value to specify as top to get the next page of changes.  This will be
       zero if there are no more changes.
+    fullName: nextTop
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'nextTop: number'
       return:
-        type:
-          - number
-    package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.GitPullRequestChange[]'
-    name: 'GitPullRequestChange[]'
-    spec.typeScript:
-      - name: GitPullRequestChange
-        fullName: GitPullRequestChange
-        uid: azure-devops-extension-api.GitPullRequestChange
-      - name: '[]'
-        fullName: '[]'
+        type: number
+        description: ''

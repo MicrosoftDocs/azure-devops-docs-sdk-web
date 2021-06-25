@@ -1,41 +1,73 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitResolutionRename1to2
-    name: GitResolutionRename1to2
-    fullName: GitResolutionRename1to2
-    children:
-      - azure-devops-extension-api.GitResolutionRename1to2.action
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.GitResolutionMergeContent
+### YamlMime:TSType
+name: GitResolutionRename1to2
+uid: azure-devops-extension-api.GitResolutionRename1to2
+package: azure-devops-extension-api
+summary: ''
+fullName: GitResolutionRename1to2
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: action
+    uid: azure-devops-extension-api.GitResolutionRename1to2.action
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitResolutionRename1to2.action
-    name: action
-    fullName: action
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: action
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'action: GitResolutionRename1to2Action'
       return:
-        type:
-          - azure-devops-extension-api.GitResolutionRename1to2Action
+        type: >-
+          <xref uid="azure-devops-extension-api.GitResolutionRename1to2Action"
+          />
+        description: ''
+  - name: author
+    uid: azure-devops-extension-api.GitResolutionRename1to2.author
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitResolutionMergeContent
-    name: GitResolutionMergeContent
-    spec.typeScript:
-      - name: GitResolutionMergeContent
-        fullName: GitResolutionMergeContent
-        uid: azure-devops-extension-api.GitResolutionMergeContent
-  - uid: azure-devops-extension-api.GitResolutionRename1to2Action
-    name: GitResolutionRename1to2Action
-    spec.typeScript:
-      - name: GitResolutionRename1to2Action
-        fullName: GitResolutionRename1to2Action
-        uid: azure-devops-extension-api.GitResolutionRename1to2Action
+    summary: User who created the resolution.
+    fullName: author
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'author: IdentityRef'
+      return:
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: mergeType
+    uid: azure-devops-extension-api.GitResolutionRename1to2.mergeType
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: mergeType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'mergeType: GitResolutionMergeType'
+      return:
+        type: <xref uid="azure-devops-extension-api.GitResolutionMergeType" />
+        description: ''
+  - name: userMergedBlob
+    uid: azure-devops-extension-api.GitResolutionRename1to2.userMergedBlob
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: userMergedBlob
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'userMergedBlob: GitBlobRef'
+      return:
+        type: <xref uid="azure-devops-extension-api.GitBlobRef" />
+        description: ''
+  - name: userMergedContent
+    uid: azure-devops-extension-api.GitResolutionRename1to2.userMergedContent
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: userMergedContent
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'userMergedContent: number[]'
+      return:
+        type: 'number[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.GitResolutionMergeContent" />

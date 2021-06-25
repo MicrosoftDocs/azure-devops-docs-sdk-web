@@ -1,94 +1,71 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.PullRequestTrigger
-    name: PullRequestTrigger
-    fullName: PullRequestTrigger
-    children:
-      - azure-devops-extension-api.PullRequestTrigger.artifactAlias
-      - azure-devops-extension-api.PullRequestTrigger.pullRequestConfiguration
-      - azure-devops-extension-api.PullRequestTrigger.statusPolicyName
-      - azure-devops-extension-api.PullRequestTrigger.triggerConditions
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.ReleaseTriggerBase
+### YamlMime:TSType
+name: PullRequestTrigger
+uid: azure-devops-extension-api.PullRequestTrigger
+package: azure-devops-extension-api
+summary: ''
+fullName: PullRequestTrigger
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: artifactAlias
+    uid: azure-devops-extension-api.PullRequestTrigger.artifactAlias
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PullRequestTrigger.artifactAlias
-    name: artifactAlias
-    fullName: artifactAlias
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Artifact alias trigger is linked to.
+    fullName: artifactAlias
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'artifactAlias: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: pullRequestConfiguration
+    uid: azure-devops-extension-api.PullRequestTrigger.pullRequestConfiguration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PullRequestTrigger.pullRequestConfiguration
-    name: pullRequestConfiguration
-    fullName: pullRequestConfiguration
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Code reference details of pull request.
+    fullName: pullRequestConfiguration
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pullRequestConfiguration: PullRequestConfiguration'
       return:
-        type:
-          - azure-devops-extension-api.PullRequestConfiguration
+        type: <xref uid="azure-devops-extension-api.PullRequestConfiguration" />
+        description: ''
+  - name: statusPolicyName
+    uid: azure-devops-extension-api.PullRequestTrigger.statusPolicyName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PullRequestTrigger.statusPolicyName
-    name: statusPolicyName
-    fullName: statusPolicyName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Policy name using which status will be published to pull request.
+    fullName: statusPolicyName
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'statusPolicyName: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: triggerConditions
+    uid: azure-devops-extension-api.PullRequestTrigger.triggerConditions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PullRequestTrigger.triggerConditions
-    name: triggerConditions
-    fullName: triggerConditions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: List of filters applied while trigger.
+    fullName: triggerConditions
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'triggerConditions: PullRequestFilter[]'
       return:
-        type:
-          - 'azure-devops-extension-api.PullRequestFilter[]'
+        type: '<xref uid="azure-devops-extension-api.PullRequestFilter" />[]'
+        description: ''
+  - name: triggerType
+    uid: azure-devops-extension-api.PullRequestTrigger.triggerType
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ReleaseTriggerBase
-    name: ReleaseTriggerBase
-    spec.typeScript:
-      - name: ReleaseTriggerBase
-        fullName: ReleaseTriggerBase
-        uid: azure-devops-extension-api.ReleaseTriggerBase
-  - uid: azure-devops-extension-api.PullRequestConfiguration
-    name: PullRequestConfiguration
-    spec.typeScript:
-      - name: PullRequestConfiguration
-        fullName: PullRequestConfiguration
-        uid: azure-devops-extension-api.PullRequestConfiguration
-  - uid: 'azure-devops-extension-api.PullRequestFilter[]'
-    name: 'PullRequestFilter[]'
-    spec.typeScript:
-      - name: PullRequestFilter
-        fullName: PullRequestFilter
-        uid: azure-devops-extension-api.PullRequestFilter
-      - name: '[]'
-        fullName: '[]'
+    summary: Type of release trigger.
+    fullName: triggerType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'triggerType: ReleaseTriggerType'
+      return:
+        type: <xref uid="azure-devops-extension-api.ReleaseTriggerType" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.ReleaseTriggerBase" />

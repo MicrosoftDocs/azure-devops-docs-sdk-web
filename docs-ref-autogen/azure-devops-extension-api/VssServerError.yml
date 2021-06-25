@@ -1,65 +1,68 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.VssServerError
-    name: VssServerError
-    fullName: VssServerError
-    children:
-      - azure-devops-extension-api.VssServerError.Error
-      - azure-devops-extension-api.VssServerError.responseText
-      - azure-devops-extension-api.VssServerError.serverError
-      - azure-devops-extension-api.VssServerError.status
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      When a fetch request fails, it will throw a VssServerError. Failure is
-      defined
-
-      as a request that made it to the server, and the server successfully
-      responded
-
-      with a failure. This will be any status return that is not a status code
-      in
-
-      the success range (200-299).
-    extends:
-      name: Error
+### YamlMime:TSType
+name: VssServerError
+uid: azure-devops-extension-api.VssServerError
+package: azure-devops-extension-api
+summary: |-
+  When a fetch request fails, it will throw a VssServerError. Failure is defined
+  as a request that made it to the server, and the server successfully responded
+  with a failure. This will be any status return that is not a status code in
+  the success range (200-299).
+fullName: VssServerError
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: Error
+    uid: azure-devops-extension-api.VssServerError.Error
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssServerError.Error
-    name: Error
-    fullName: Error
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: Error
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'Error: ErrorConstructor'
       return:
-        type:
-          - ErrorConstructor
+        type: ErrorConstructor
+        description: ''
+  - name: message
+    uid: azure-devops-extension-api.VssServerError.message
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssServerError.responseText
-    name: responseText
-    fullName: responseText
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ''
+    fullName: message
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        type: string
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.VssServerError.name
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: responseText
+    uid: azure-devops-extension-api.VssServerError.responseText
+    package: azure-devops-extension-api
     summary: The raw text that was returned from the server. If any is available.
+    fullName: responseText
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'responseText: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: serverError
+    uid: azure-devops-extension-api.VssServerError.serverError
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssServerError.serverError
-    name: serverError
-    fullName: serverError
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >
       If the response text was sent and it was in the form of a JSON response
 
@@ -69,24 +72,36 @@ items:
 
       Things like the message, exception type, and stack trace will be
       available.
-    optional: true
+    fullName: serverError
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'serverError?: any'
       return:
-        type:
-          - any
+        type: any
+        description: ''
+  - name: stack
+    uid: azure-devops-extension-api.VssServerError.stack
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.VssServerError.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ''
+    fullName: stack
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stack?: string'
+      return:
+        type: string
+        description: ''
+  - name: status
+    uid: azure-devops-extension-api.VssServerError.status
+    package: azure-devops-extension-api
     summary: The status code returned from the server.
+    fullName: status
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'status: number'
       return:
-        type:
-          - number
-    package: azure-devops-extension-api
+        type: number
+        description: ''
+extends: Error

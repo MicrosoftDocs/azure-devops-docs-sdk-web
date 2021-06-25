@@ -1,112 +1,133 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BoardItem
-    name: BoardItem
-    fullName: BoardItem
-    children:
-      - azure-devops-extension-api.BoardItem.boardId
-      - azure-devops-extension-api.BoardItem.columnId
-      - azure-devops-extension-api.BoardItem.nextId
-      - azure-devops-extension-api.BoardItem.rowId
-      - azure-devops-extension-api.BoardItem.sourceErrorMessages
-      - azure-devops-extension-api.BoardItem.sourceRefreshRequired
-    langs:
-      - typeScript
-    type: interface
-    summary: Provides properties that describe an item in a board.
-    extends:
-      name: azure-devops-extension-api.BoardItemReference
+### YamlMime:TSType
+name: BoardItem
+uid: azure-devops-extension-api.BoardItem
+package: azure-devops-extension-api
+summary: Provides properties that describe an item in a board.
+fullName: BoardItem
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: boardId
+    uid: azure-devops-extension-api.BoardItem.boardId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItem.boardId
-    name: boardId
-    fullName: boardId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Board id for this item.
+    fullName: boardId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'boardId: number'
       return:
-        type:
-          - number
+        type: number
+        description: ''
+  - name: columnId
+    uid: azure-devops-extension-api.BoardItem.columnId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItem.columnId
-    name: columnId
-    fullName: columnId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Board column id for this item.
+    fullName: columnId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'columnId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.BoardItem.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItem.nextId
-    name: nextId
-    fullName: nextId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Board item identifier. Unique for each item in the board.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        type: string
+        description: ''
+  - name: itemSourceId
+    uid: azure-devops-extension-api.BoardItem.itemSourceId
+    package: azure-devops-extension-api
+    summary: Item id.
+    fullName: itemSourceId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'itemSourceId: string'
+      return:
+        type: string
+        description: ''
+  - name: itemType
+    uid: azure-devops-extension-api.BoardItem.itemType
+    package: azure-devops-extension-api
+    summary: Item type.
+    fullName: itemType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'itemType: string'
+      return:
+        type: string
+        description: ''
+  - name: nextId
+    uid: azure-devops-extension-api.BoardItem.nextId
+    package: azure-devops-extension-api
     summary: Next board item id.
+    fullName: nextId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'nextId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: rowId
+    uid: azure-devops-extension-api.BoardItem.rowId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItem.rowId
-    name: rowId
-    fullName: rowId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Board row id for this item.
+    fullName: rowId
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'rowId: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: sourceErrorMessages
+    uid: azure-devops-extension-api.BoardItem.sourceErrorMessages
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItem.sourceErrorMessages
-    name: sourceErrorMessages
-    fullName: sourceErrorMessages
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Error that occurred related to the source data for this item.
+    fullName: sourceErrorMessages
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceErrorMessages: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: sourceRefreshRequired
+    uid: azure-devops-extension-api.BoardItem.sourceRefreshRequired
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItem.sourceRefreshRequired
-    name: sourceRefreshRequired
-    fullName: sourceRefreshRequired
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Indicates whether a change has occurred requiring a refresh of the source
       data for this item.
+    fullName: sourceRefreshRequired
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceRefreshRequired: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.BoardItem.url
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.BoardItemReference
-    name: BoardItemReference
-    spec.typeScript:
-      - name: BoardItemReference
-        fullName: BoardItemReference
-        uid: azure-devops-extension-api.BoardItemReference
+    summary: Full http link to the resource.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.BoardItemReference" />

@@ -1,41 +1,83 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.MachineGroupBasedDeployPhase
-    name: MachineGroupBasedDeployPhase
-    fullName: MachineGroupBasedDeployPhase
-    children:
-      - azure-devops-extension-api.MachineGroupBasedDeployPhase.deploymentInput
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.DeployPhase
+### YamlMime:TSType
+name: MachineGroupBasedDeployPhase
+uid: azure-devops-extension-api.MachineGroupBasedDeployPhase
+package: azure-devops-extension-api
+summary: ''
+fullName: MachineGroupBasedDeployPhase
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: deploymentInput
+    uid: azure-devops-extension-api.MachineGroupBasedDeployPhase.deploymentInput
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.MachineGroupBasedDeployPhase.deploymentInput
-    name: deploymentInput
-    fullName: deploymentInput
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets and sets the deployment group job input
+    fullName: deploymentInput
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deploymentInput: MachineGroupDeploymentInput'
       return:
-        type:
-          - azure-devops-extension-api.MachineGroupDeploymentInput
+        type: <xref uid="azure-devops-extension-api.MachineGroupDeploymentInput" />
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.MachineGroupBasedDeployPhase.name
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.DeployPhase
-    name: DeployPhase
-    spec.typeScript:
-      - name: DeployPhase
-        fullName: DeployPhase
-        uid: azure-devops-extension-api.DeployPhase
-  - uid: azure-devops-extension-api.MachineGroupDeploymentInput
-    name: MachineGroupDeploymentInput
-    spec.typeScript:
-      - name: MachineGroupDeploymentInput
-        fullName: MachineGroupDeploymentInput
-        uid: azure-devops-extension-api.MachineGroupDeploymentInput
+    summary: Gets and sets the name of deploy phase.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: phaseType
+    uid: azure-devops-extension-api.MachineGroupBasedDeployPhase.phaseType
+    package: azure-devops-extension-api
+    summary: Indicates the deploy phase type.
+    fullName: phaseType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'phaseType: DeployPhaseTypes'
+      return:
+        type: <xref uid="azure-devops-extension-api.DeployPhaseTypes" />
+        description: ''
+  - name: rank
+    uid: azure-devops-extension-api.MachineGroupBasedDeployPhase.rank
+    package: azure-devops-extension-api
+    summary: Gets and sets the rank of deploy phase.
+    fullName: rank
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rank: number'
+      return:
+        type: number
+        description: ''
+  - name: refName
+    uid: azure-devops-extension-api.MachineGroupBasedDeployPhase.refName
+    package: azure-devops-extension-api
+    summary: Gets and sets the reference name of deploy phase.
+    fullName: refName
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'refName: string'
+      return:
+        type: string
+        description: ''
+  - name: workflowTasks
+    uid: azure-devops-extension-api.MachineGroupBasedDeployPhase.workflowTasks
+    package: azure-devops-extension-api
+    summary: Gets and sets the workflow tasks for the deploy phase.
+    fullName: workflowTasks
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'workflowTasks: WorkflowTask[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.WorkflowTask" />[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.DeployPhase" />

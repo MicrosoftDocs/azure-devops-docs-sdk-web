@@ -1,145 +1,163 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IHostNavigationService
-    name: IHostNavigationService
-    fullName: IHostNavigationService
-    children:
-      - azure-devops-extension-api.IHostNavigationService.getHash
-      - azure-devops-extension-api.IHostNavigationService.navigate
-      - azure-devops-extension-api.IHostNavigationService.onHashChanged
-      - azure-devops-extension-api.IHostNavigationService.openNewWindow
-      - azure-devops-extension-api.IHostNavigationService.reload
-      - azure-devops-extension-api.IHostNavigationService.replaceHash
-      - azure-devops-extension-api.IHostNavigationService.setDocumentTitle
-      - azure-devops-extension-api.IHostNavigationService.setHash
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Service for interacting with the host window's navigation (URLs, new
-      windows, etc.)
+### YamlMime:TSType
+name: IHostNavigationService
+uid: azure-devops-extension-api.IHostNavigationService
+package: azure-devops-extension-api
+summary: >-
+  Service for interacting with the host window's navigation (URLs, new windows,
+  etc.)
+fullName: IHostNavigationService
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: getHash()
+    uid: azure-devops-extension-api.IHostNavigationService.getHash
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostNavigationService.getHash
-    name: getHash()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets the current hash.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getHash()
-      parameters: []
       return:
-        type:
-          - Promise<string>
+        type: Promise&lt;string&gt;
+        description: ''
+  - name: getPageNavigationElements()
+    uid: >-
+      azure-devops-extension-api.IHostNavigationService.getPageNavigationElements
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostNavigationService.navigate
-    name: navigate(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: >-
+      Gets the set of navigation elements (like hubs and hub groups) selected on
+      the current page.
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getPageNavigationElements()
+      return:
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.INavigationElement"
+          />[]&gt;
+        description: ''
+  - name: getPageRoute()
+    uid: azure-devops-extension-api.IHostNavigationService.getPageRoute
+    package: azure-devops-extension-api
+    summary: Gets information about the route that was matched for the current page
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getPageRoute()
+      return:
+        type: Promise&lt;<xref uid="azure-devops-extension-api.IPageRoute" />&gt;
+        description: ''
+  - name: getQueryParams()
+    uid: azure-devops-extension-api.IHostNavigationService.getQueryParams
+    package: azure-devops-extension-api
+    summary: Gets the current set of query parameters in the host page's URL.
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getQueryParams()
+      return:
+        type: 'Promise&lt;[key: string]: string&gt;'
+        description: ''
+  - name: navigate(string)
+    uid: azure-devops-extension-api.IHostNavigationService.navigate
+    package: azure-devops-extension-api
     summary: Navigate the parent page to the specified url
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function navigate(url: string)'
       parameters:
         - id: url
-          type:
-            - string
+          type: string
           description: |
             Url to navigate to
+  - name: 'onHashChanged((hash: string) => void)'
+    uid: azure-devops-extension-api.IHostNavigationService.onHashChanged
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostNavigationService.onHashChanged
-    name: 'onHashChanged((hash: string) => void)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Add a callback to be invoked each time the hash navigation has changed
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function onHashChanged(callback: (hash: string) => void)'
       parameters:
         - id: callback
-          type:
-            - '(hash: string) => void'
+          type: '(hash: string) =&gt; void'
           description: |
             Method invoked on each navigation hash change
+  - name: 'openNewWindow(string, string)'
+    uid: azure-devops-extension-api.IHostNavigationService.openNewWindow
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostNavigationService.openNewWindow
-    name: 'openNewWindow(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Open a new window to the specified url
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function openNewWindow(url: string, features: string)'
       parameters:
         - id: url
-          type:
-            - string
+          type: string
           description: Url of the new window
         - id: features
-          type:
-            - string
+          type: string
           description: >
             Comma-separated list of features/specs sent as the 3rd parameter to
             window.open. For example: "height=400,width=400".
+  - name: reload()
+    uid: azure-devops-extension-api.IHostNavigationService.reload
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostNavigationService.reload
-    name: reload()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Reloads the parent frame
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function reload()
-      parameters: []
+  - name: replaceHash(string)
+    uid: azure-devops-extension-api.IHostNavigationService.replaceHash
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostNavigationService.replaceHash
-    name: replaceHash(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Replace existing hash with the provided hash from the hosted content.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function replaceHash(hash: string)'
       parameters:
         - id: hash
-          type:
-            - string
+          type: string
           description: ''
+  - name: setDocumentTitle(string)
+    uid: azure-devops-extension-api.IHostNavigationService.setDocumentTitle
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostNavigationService.setDocumentTitle
-    name: setDocumentTitle(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Update the host document's title (appears as the browser tab title).
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function setDocumentTitle(title: string)'
       parameters:
         - id: title
-          type:
-            - string
+          type: string
           description: |
             The new title of the window
+  - name: setHash(string)
+    uid: azure-devops-extension-api.IHostNavigationService.setHash
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IHostNavigationService.setHash
-    name: setHash(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Sets the provided hash from the hosted content.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function setHash(hash: string)'
       parameters:
         - id: hash
-          type:
-            - string
+          type: string
           description: ''
+  - name: 'setQueryParams([key: string]: string)'
+    uid: azure-devops-extension-api.IHostNavigationService.setQueryParams
     package: azure-devops-extension-api
+    summary: Sets one or more query parameters on the host page
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setQueryParams(parameters: [key: string]: string)'
+      parameters:
+        - id: parameters
+          type: '[key: string]\: string'
+          description: >
+            Dictionary of query string parameters to add, update, or remove
+            (pass an empty value to remove)

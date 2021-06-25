@@ -1,136 +1,119 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TfvcRestClient
-    name: TfvcRestClient
-    fullName: TfvcRestClient
-    children:
-      - azure-devops-extension-api.TfvcRestClient.createChangeset
-      - azure-devops-extension-api.TfvcRestClient.getBatchedChangesets
-      - azure-devops-extension-api.TfvcRestClient.getBranch
-      - azure-devops-extension-api.TfvcRestClient.getBranches
-      - azure-devops-extension-api.TfvcRestClient.getBranchRefs
-      - azure-devops-extension-api.TfvcRestClient.getChangeset
-      - azure-devops-extension-api.TfvcRestClient.getChangesetChanges
-      - azure-devops-extension-api.TfvcRestClient.getChangesets
-      - azure-devops-extension-api.TfvcRestClient.getChangesetWorkItems
-      - azure-devops-extension-api.TfvcRestClient.getItem
-      - azure-devops-extension-api.TfvcRestClient.getItemContent
-      - azure-devops-extension-api.TfvcRestClient.getItems
-      - azure-devops-extension-api.TfvcRestClient.getItemsBatch
-      - azure-devops-extension-api.TfvcRestClient.getItemsBatchZip
-      - azure-devops-extension-api.TfvcRestClient.getItemText
-      - azure-devops-extension-api.TfvcRestClient.getItemZip
-      - azure-devops-extension-api.TfvcRestClient.getLabel
-      - azure-devops-extension-api.TfvcRestClient.getLabelItems
-      - azure-devops-extension-api.TfvcRestClient.getLabels
-      - azure-devops-extension-api.TfvcRestClient.getShelveset
-      - azure-devops-extension-api.TfvcRestClient.getShelvesetChanges
-      - azure-devops-extension-api.TfvcRestClient.getShelvesets
-      - azure-devops-extension-api.TfvcRestClient.getShelvesetWorkItems
-      - azure-devops-extension-api.TfvcRestClient.getTfvcStatistics
-      - azure-devops-extension-api.TfvcRestClient.RESOURCE_AREA_ID
-      - azure-devops-extension-api.TfvcRestClient.constructor
-    langs:
-      - typeScript
-    type: class
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.RestClientBase
+### YamlMime:TSType
+name: TfvcRestClient
+uid: azure-devops-extension-api.TfvcRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: TfvcRestClient
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: TfvcRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.TfvcRestClient.constructor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.createChangeset
-    name: 'createChangeset(TfvcChangeset, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new TfvcRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+properties:
+  - name: RESOURCE_AREA_ID
+    uid: azure-devops-extension-api.TfvcRestClient.RESOURCE_AREA_ID
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: RESOURCE_AREA_ID
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static RESOURCE_AREA_ID: string'
+      return:
+        type: string
+        description: ''
+methods:
+  - name: 'createChangeset(TfvcChangeset, string)'
+    uid: azure-devops-extension-api.TfvcRestClient.createChangeset
+    package: azure-devops-extension-api
     summary: Create a new changeset.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function createChangeset(changeset: TfvcChangeset, project?: string)'
       parameters:
         - id: changeset
-          type:
-            - azure-devops-extension-api.TfvcChangeset
+          type: <xref uid="azure-devops-extension-api.TfvcChangeset" />
           description: '-'
         - id: project
-          type:
-            - string
+          type: string
           description: |
             Project ID or project name
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.TfvcChangesetRef>
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TfvcChangesetRef"
+          />&gt;
+        description: ''
+  - name: getBatchedChangesets(TfvcChangesetsRequestData)
+    uid: azure-devops-extension-api.TfvcRestClient.getBatchedChangesets
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getBatchedChangesets
-    name: getBatchedChangesets(TfvcChangesetsRequestData)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Returns changesets for a given list of changeset Ids.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getBatchedChangesets(changesetsRequestData:
         TfvcChangesetsRequestData)
       parameters:
         - id: changesetsRequestData
-          type:
-            - azure-devops-extension-api.TfvcChangesetsRequestData
+          type: <xref uid="azure-devops-extension-api.TfvcChangesetsRequestData" />
           description: |
             List of changeset IDs.
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcChangesetRef[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TfvcChangesetRef"
+          />[]&gt;
+        description: ''
+  - name: 'getBranch(string, string, boolean, boolean)'
+    uid: azure-devops-extension-api.TfvcRestClient.getBranch
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getBranch
-    name: 'getBranch(string, string, boolean, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Get a single branch hierarchy at the given path with parents or children
       as specified.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getBranch(path: string, project?: string, includeParent?:
         boolean, includeChildren?: boolean)
       parameters:
         - id: path
-          type:
-            - string
+          type: string
           description: >-
             Full path to the branch.  Default: $/ Examples: $/, $/MyProject,
             $/MyProject/SomeFolder.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: includeParent
-          type:
-            - boolean
+          type: boolean
           description: 'Return the parent branch, if there is one. Default: False'
-          optional: true
         - id: includeChildren
-          type:
-            - boolean
+          type: boolean
           description: |
             Return child branches, if there are any. Default: False
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.TfvcBranch>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcBranch" />&gt;
+        description: ''
+  - name: 'getBranches(string, boolean, boolean, boolean, boolean)'
+    uid: azure-devops-extension-api.TfvcRestClient.getBranches
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getBranches
-    name: 'getBranches(string, boolean, boolean, boolean, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Get a collection of branch roots -- first-level children, branches with no
       parents.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getBranches(project?: string, includeParent?: boolean,
@@ -138,82 +121,63 @@ items:
         boolean)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: includeParent
-          type:
-            - boolean
+          type: boolean
           description: 'Return the parent branch, if there is one. Default: False'
-          optional: true
         - id: includeChildren
-          type:
-            - boolean
+          type: boolean
           description: 'Return the child branches for each root branch. Default: False'
-          optional: true
         - id: includeDeleted
-          type:
-            - boolean
+          type: boolean
           description: 'Return deleted branches. Default: False'
-          optional: true
         - id: includeLinks
-          type:
-            - boolean
+          type: boolean
           description: |
             Return links. Default: False
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcBranch[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcBranch" />[]&gt;'
+        description: ''
+  - name: 'getBranchRefs(string, string, boolean, boolean)'
+    uid: azure-devops-extension-api.TfvcRestClient.getBranchRefs
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getBranchRefs
-    name: 'getBranchRefs(string, string, boolean, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get branch hierarchies below the specified scopePath
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getBranchRefs(scopePath: string, project?: string,
         includeDeleted?: boolean, includeLinks?: boolean)
       parameters:
         - id: scopePath
-          type:
-            - string
+          type: string
           description: >-
             Full path to the branch.  Default: $/ Examples: $/, $/MyProject,
             $/MyProject/SomeFolder.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: includeDeleted
-          type:
-            - boolean
+          type: boolean
           description: 'Return deleted branches. Default: False'
-          optional: true
         - id: includeLinks
-          type:
-            - boolean
+          type: boolean
           description: |
             Return links. Default: False
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcBranchRef[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getChangeset
-    name: >-
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TfvcBranchRef"
+          />[]&gt;
+        description: ''
+  - name: >-
       getChangeset(number, string, number, boolean, boolean, number, boolean,
       number, number, string, TfvcChangesetSearchCriteria)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TfvcRestClient.getChangeset
+    package: azure-devops-extension-api
     summary: Retrieve a Tfvc Changeset
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getChangeset(id: number, project?: string, maxChangeCount?:
@@ -223,111 +187,82 @@ items:
         TfvcChangesetSearchCriteria)
       parameters:
         - id: id
-          type:
-            - number
+          type: number
           description: Changeset Id to retrieve.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: maxChangeCount
-          type:
-            - number
+          type: number
           description: 'Number of changes to return (maximum 100 changes) Default: 0'
-          optional: true
         - id: includeDetails
-          type:
-            - boolean
+          type: boolean
           description: >-
             Include policy details and check-in notes in the response. Default:
             false
-          optional: true
         - id: includeWorkItems
-          type:
-            - boolean
+          type: boolean
           description: 'Include workitems. Default: false'
-          optional: true
         - id: maxCommentLength
-          type:
-            - number
+          type: number
           description: >-
             Include details about associated work items in the response.
             Default: null
-          optional: true
         - id: includeSourceRename
-          type:
-            - boolean
+          type: boolean
           description: 'Include renames.  Default: false'
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: 'Number of results to skip. Default: null'
-          optional: true
         - id: top
-          type:
-            - number
+          type: number
           description: 'The maximum number of results to return. Default: null'
-          optional: true
         - id: orderby
-          type:
-            - string
+          type: string
           description: >-
             Results are sorted by ID in descending order by default. Use id asc
             to sort by ID in ascending order.
-          optional: true
         - id: searchCriteria
-          type:
-            - azure-devops-extension-api.TfvcChangesetSearchCriteria
+          type: >-
+            <xref uid="azure-devops-extension-api.TfvcChangesetSearchCriteria"
+            />
           description: >
             Following criteria available (.itemPath, .version, .versionType,
             .versionOption, .author, .fromId, .toId, .fromDate, .toDate)
             Default: null
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.TfvcChangeset>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcChangeset" />&gt;
+        description: ''
+  - name: 'getChangesetChanges(number, number, number)'
+    uid: azure-devops-extension-api.TfvcRestClient.getChangesetChanges
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getChangesetChanges
-    name: 'getChangesetChanges(number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Retrieve Tfvc changes for a given changeset.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getChangesetChanges(id?: number, skip?: number, top?: number)'
       parameters:
         - id: id
-          type:
-            - number
+          type: number
           description: 'ID of the changeset. Default: null'
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: 'Number of results to skip. Default: null'
-          optional: true
         - id: top
-          type:
-            - number
+          type: number
           description: |
             The maximum number of results to return. Default: null
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcChange[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getChangesets
-    name: >-
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcChange" />[]&gt;'
+        description: ''
+  - name: >-
       getChangesets(string, number, number, number, string,
       TfvcChangesetSearchCriteria)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TfvcRestClient.getChangesets
+    package: azure-devops-extension-api
     summary: Retrieve Tfvc Changesets
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getChangesets(project?: string, maxCommentLength?: number,
@@ -335,79 +270,67 @@ items:
         TfvcChangesetSearchCriteria)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: maxCommentLength
-          type:
-            - number
+          type: number
           description: >-
             Include details about associated work items in the response.
             Default: null
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: 'Number of results to skip. Default: null'
-          optional: true
         - id: top
-          type:
-            - number
+          type: number
           description: 'The maximum number of results to return. Default: null'
-          optional: true
         - id: orderby
-          type:
-            - string
+          type: string
           description: >-
             Results are sorted by ID in descending order by default. Use id asc
             to sort by ID in ascending order.
-          optional: true
         - id: searchCriteria
-          type:
-            - azure-devops-extension-api.TfvcChangesetSearchCriteria
+          type: >-
+            <xref uid="azure-devops-extension-api.TfvcChangesetSearchCriteria"
+            />
           description: >
             Following criteria available (.itemPath, .version, .versionType,
             .versionOption, .author, .fromId, .toId, .fromDate, .toDate)
             Default: null
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcChangesetRef[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TfvcChangesetRef"
+          />[]&gt;
+        description: ''
+  - name: getChangesetWorkItems(number)
+    uid: azure-devops-extension-api.TfvcRestClient.getChangesetWorkItems
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getChangesetWorkItems
-    name: getChangesetWorkItems(number)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Retrieves the work items associated with a particular changeset.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getChangesetWorkItems(id?: number)'
       parameters:
         - id: id
-          type:
-            - number
+          type: number
           description: |
-            ID of the changeset. Default: null
-          optional: true
+            ID of the changeset.
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.AssociatedWorkItem[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getItem
-    name: >-
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AssociatedWorkItem"
+          />[]&gt;
+        description: ''
+  - name: >-
       getItem(string, string, string, boolean, string,
       VersionControlRecursionType, TfvcVersionDescriptor, boolean)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TfvcRestClient.getItem
+    package: azure-devops-extension-api
     summary: >-
       Get Item Metadata and/or Content for a single item. The download parameter
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content
       which is always returned as a download.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getItem(path: string, project?: string, fileName?: string,
@@ -416,63 +339,48 @@ items:
         includeContent?: boolean)
       parameters:
         - id: path
-          type:
-            - string
+          type: string
           description: Version control path of an individual item to return.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: fileName
-          type:
-            - string
+          type: string
           description: file name of item returned.
-          optional: true
         - id: download
-          type:
-            - boolean
+          type: boolean
           description: 'If true, create a downloadable attachment.'
-          optional: true
         - id: scopePath
-          type:
-            - string
+          type: string
           description: Version control path of a folder to return multiple items.
-          optional: true
         - id: recursionLevel
-          type:
-            - azure-devops-extension-api.VersionControlRecursionType
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
           description: 'None (just the item), or OneLevel (contents of a folder).'
-          optional: true
         - id: versionDescriptor
-          type:
-            - azure-devops-extension-api.TfvcVersionDescriptor
+          type: <xref uid="azure-devops-extension-api.TfvcVersionDescriptor" />
           description: Version descriptor.  Default is null.
-          optional: true
         - id: includeContent
-          type:
-            - boolean
+          type: boolean
           description: >
             Set to true to include item content when requesting json.  Default
             is false.
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.TfvcItem>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getItemContent
-    name: >-
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />&gt;
+        description: ''
+  - name: >-
       getItemContent(string, string, string, boolean, string,
       VersionControlRecursionType, TfvcVersionDescriptor, boolean)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TfvcRestClient.getItemContent
+    package: azure-devops-extension-api
     summary: >-
       Get Item Metadata and/or Content for a single item. The download parameter
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content
       which is always returned as a download.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getItemContent(path: string, project?: string, fileName?:
@@ -481,59 +389,44 @@ items:
         includeContent?: boolean)
       parameters:
         - id: path
-          type:
-            - string
+          type: string
           description: Version control path of an individual item to return.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: fileName
-          type:
-            - string
+          type: string
           description: file name of item returned.
-          optional: true
         - id: download
-          type:
-            - boolean
+          type: boolean
           description: 'If true, create a downloadable attachment.'
-          optional: true
         - id: scopePath
-          type:
-            - string
+          type: string
           description: Version control path of a folder to return multiple items.
-          optional: true
         - id: recursionLevel
-          type:
-            - azure-devops-extension-api.VersionControlRecursionType
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
           description: 'None (just the item), or OneLevel (contents of a folder).'
-          optional: true
         - id: versionDescriptor
-          type:
-            - azure-devops-extension-api.TfvcVersionDescriptor
+          type: <xref uid="azure-devops-extension-api.TfvcVersionDescriptor" />
           description: Version descriptor.  Default is null.
-          optional: true
         - id: includeContent
-          type:
-            - boolean
+          type: boolean
           description: >
             Set to true to include item content when requesting json.  Default
             is false.
-          optional: true
       return:
-        type:
-          - Promise<ArrayBuffer>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getItems
-    name: >-
+        type: Promise&lt;ArrayBuffer&gt;
+        description: ''
+  - name: >-
       getItems(string, string, VersionControlRecursionType, boolean,
       TfvcVersionDescriptor)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TfvcRestClient.getItems
+    package: azure-devops-extension-api
     summary: Get a list of Tfvc items
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getItems(project?: string, scopePath?: string, recursionLevel?:
@@ -541,106 +434,86 @@ items:
         TfvcVersionDescriptor)
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: scopePath
-          type:
-            - string
+          type: string
           description: Version control path of a folder to return multiple items.
-          optional: true
         - id: recursionLevel
-          type:
-            - azure-devops-extension-api.VersionControlRecursionType
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
           description: 'None (just the item), or OneLevel (contents of a folder).'
-          optional: true
         - id: includeLinks
-          type:
-            - boolean
+          type: boolean
           description: True to include links.
-          optional: true
         - id: versionDescriptor
-          type:
-            - azure-devops-extension-api.TfvcVersionDescriptor
+          type: <xref uid="azure-devops-extension-api.TfvcVersionDescriptor" />
           description: |
             -
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcItem[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />[]&gt;'
+        description: ''
+  - name: 'getItemsBatch(TfvcItemRequestData, string)'
+    uid: azure-devops-extension-api.TfvcRestClient.getItemsBatch
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getItemsBatch
-    name: 'getItemsBatch(TfvcItemRequestData, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Post for retrieving a set of items given a list of paths or a long path.
       Allows for specifying the recursionLevel and version descriptors for each
       path.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getItemsBatch(itemRequestData: TfvcItemRequestData, project?:
         string)
       parameters:
         - id: itemRequestData
-          type:
-            - azure-devops-extension-api.TfvcItemRequestData
+          type: <xref uid="azure-devops-extension-api.TfvcItemRequestData" />
           description: '-'
         - id: project
-          type:
-            - string
+          type: string
           description: |
             Project ID or project name
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcItem[][]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />[][]&gt;'
+        description: ''
+  - name: 'getItemsBatchZip(TfvcItemRequestData, string)'
+    uid: azure-devops-extension-api.TfvcRestClient.getItemsBatchZip
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getItemsBatchZip
-    name: 'getItemsBatchZip(TfvcItemRequestData, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Post for retrieving a set of items given a list of paths or a long path.
       Allows for specifying the recursionLevel and version descriptors for each
       path.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getItemsBatchZip(itemRequestData: TfvcItemRequestData,
         project?: string)
       parameters:
         - id: itemRequestData
-          type:
-            - azure-devops-extension-api.TfvcItemRequestData
+          type: <xref uid="azure-devops-extension-api.TfvcItemRequestData" />
           description: '-'
         - id: project
-          type:
-            - string
+          type: string
           description: |
             Project ID or project name
-          optional: true
       return:
-        type:
-          - Promise<ArrayBuffer>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getItemText
-    name: >-
+        type: Promise&lt;ArrayBuffer&gt;
+        description: ''
+  - name: >-
       getItemText(string, string, string, boolean, string,
       VersionControlRecursionType, TfvcVersionDescriptor, boolean)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TfvcRestClient.getItemText
+    package: azure-devops-extension-api
     summary: >-
       Get Item Metadata and/or Content for a single item. The download parameter
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content
       which is always returned as a download.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getItemText(path: string, project?: string, fileName?: string,
@@ -649,63 +522,48 @@ items:
         includeContent?: boolean)
       parameters:
         - id: path
-          type:
-            - string
+          type: string
           description: Version control path of an individual item to return.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: fileName
-          type:
-            - string
+          type: string
           description: file name of item returned.
-          optional: true
         - id: download
-          type:
-            - boolean
+          type: boolean
           description: 'If true, create a downloadable attachment.'
-          optional: true
         - id: scopePath
-          type:
-            - string
+          type: string
           description: Version control path of a folder to return multiple items.
-          optional: true
         - id: recursionLevel
-          type:
-            - azure-devops-extension-api.VersionControlRecursionType
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
           description: 'None (just the item), or OneLevel (contents of a folder).'
-          optional: true
         - id: versionDescriptor
-          type:
-            - azure-devops-extension-api.TfvcVersionDescriptor
+          type: <xref uid="azure-devops-extension-api.TfvcVersionDescriptor" />
           description: Version descriptor.  Default is null.
-          optional: true
         - id: includeContent
-          type:
-            - boolean
+          type: boolean
           description: >
             Set to true to include item content when requesting json.  Default
             is false.
-          optional: true
       return:
-        type:
-          - Promise<string>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getItemZip
-    name: >-
+        type: Promise&lt;string&gt;
+        description: ''
+  - name: >-
       getItemZip(string, string, string, boolean, string,
       VersionControlRecursionType, TfvcVersionDescriptor, boolean)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.TfvcRestClient.getItemZip
+    package: azure-devops-extension-api
     summary: >-
       Get Item Metadata and/or Content for a single item. The download parameter
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content
       which is always returned as a download.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getItemZip(path: string, project?: string, fileName?: string,
@@ -714,528 +572,222 @@ items:
         includeContent?: boolean)
       parameters:
         - id: path
-          type:
-            - string
+          type: string
           description: Version control path of an individual item to return.
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: fileName
-          type:
-            - string
+          type: string
           description: file name of item returned.
-          optional: true
         - id: download
-          type:
-            - boolean
+          type: boolean
           description: 'If true, create a downloadable attachment.'
-          optional: true
         - id: scopePath
-          type:
-            - string
+          type: string
           description: Version control path of a folder to return multiple items.
-          optional: true
         - id: recursionLevel
-          type:
-            - azure-devops-extension-api.VersionControlRecursionType
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
           description: 'None (just the item), or OneLevel (contents of a folder).'
-          optional: true
         - id: versionDescriptor
-          type:
-            - azure-devops-extension-api.TfvcVersionDescriptor
+          type: <xref uid="azure-devops-extension-api.TfvcVersionDescriptor" />
           description: Version descriptor.  Default is null.
-          optional: true
         - id: includeContent
-          type:
-            - boolean
+          type: boolean
           description: >
             Set to true to include item content when requesting json.  Default
             is false.
-          optional: true
       return:
-        type:
-          - Promise<ArrayBuffer>
+        type: Promise&lt;ArrayBuffer&gt;
+        description: ''
+  - name: 'getLabel(string, TfvcLabelRequestData, string)'
+    uid: azure-devops-extension-api.TfvcRestClient.getLabel
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getLabel
-    name: 'getLabel(string, TfvcLabelRequestData, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a single deep label.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getLabel(labelId: string, requestData: TfvcLabelRequestData,
         project?: string)
       parameters:
         - id: labelId
-          type:
-            - string
+          type: string
           description: Unique identifier of label
         - id: requestData
-          type:
-            - azure-devops-extension-api.TfvcLabelRequestData
+          type: <xref uid="azure-devops-extension-api.TfvcLabelRequestData" />
           description: maxItemCount
         - id: project
-          type:
-            - string
+          type: string
           description: |
             Project ID or project name
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.TfvcLabel>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcLabel" />&gt;
+        description: ''
+  - name: 'getLabelItems(string, number, number)'
+    uid: azure-devops-extension-api.TfvcRestClient.getLabelItems
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getLabelItems
-    name: 'getLabelItems(string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get items under a label.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getLabelItems(labelId: string, top?: number, skip?: number)'
       parameters:
         - id: labelId
-          type:
-            - string
+          type: string
           description: Unique identifier of label
         - id: top
-          type:
-            - number
+          type: number
           description: Max number of items to return
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: |
             Number of items to skip
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcItem[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />[]&gt;'
+        description: ''
+  - name: 'getLabels(TfvcLabelRequestData, string, number, number)'
+    uid: azure-devops-extension-api.TfvcRestClient.getLabels
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getLabels
-    name: 'getLabels(TfvcLabelRequestData, string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a collection of shallow label references.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getLabels(requestData: TfvcLabelRequestData, project?: string,
         top?: number, skip?: number)
       parameters:
         - id: requestData
-          type:
-            - azure-devops-extension-api.TfvcLabelRequestData
+          type: <xref uid="azure-devops-extension-api.TfvcLabelRequestData" />
           description: 'labelScope, name, owner, and itemLabelFilter'
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: top
-          type:
-            - number
+          type: number
           description: Max number of labels to return
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: |
             Number of labels to skip
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcLabelRef[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TfvcLabelRef"
+          />[]&gt;
+        description: ''
+  - name: 'getShelveset(string, TfvcShelvesetRequestData)'
+    uid: azure-devops-extension-api.TfvcRestClient.getShelveset
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getShelveset
-    name: 'getShelveset(string, TfvcShelvesetRequestData)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get a single deep shelveset.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getShelveset(shelvesetId: string, requestData?:
         TfvcShelvesetRequestData)
       parameters:
         - id: shelvesetId
-          type:
-            - string
+          type: string
           description: Shelveset's unique ID
         - id: requestData
-          type:
-            - azure-devops-extension-api.TfvcShelvesetRequestData
+          type: <xref uid="azure-devops-extension-api.TfvcShelvesetRequestData" />
           description: >
             includeDetails, includeWorkItems, maxChangeCount, and
             maxCommentLength
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.TfvcShelveset>
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcShelveset" />&gt;
+        description: ''
+  - name: 'getShelvesetChanges(string, number, number)'
+    uid: azure-devops-extension-api.TfvcRestClient.getShelvesetChanges
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getShelvesetChanges
-    name: 'getShelvesetChanges(string, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get changes included in a shelveset.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getShelvesetChanges(shelvesetId: string, top?: number, skip?:
         number)
       parameters:
         - id: shelvesetId
-          type:
-            - string
+          type: string
           description: Shelveset's unique ID
         - id: top
-          type:
-            - number
+          type: number
           description: Max number of changes to return
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: |
             Number of changes to skip
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcChange[]>'
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcChange" />[]&gt;'
+        description: ''
+  - name: 'getShelvesets(TfvcShelvesetRequestData, number, number)'
+    uid: azure-devops-extension-api.TfvcRestClient.getShelvesets
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getShelvesets
-    name: 'getShelvesets(TfvcShelvesetRequestData, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Return a collection of shallow shelveset references.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getShelvesets(requestData?: TfvcShelvesetRequestData, top?:
         number, skip?: number)
       parameters:
         - id: requestData
-          type:
-            - azure-devops-extension-api.TfvcShelvesetRequestData
+          type: <xref uid="azure-devops-extension-api.TfvcShelvesetRequestData" />
           description: 'name, owner, and maxCommentLength'
-          optional: true
         - id: top
-          type:
-            - number
+          type: number
           description: Max number of shelvesets to return
-          optional: true
         - id: skip
-          type:
-            - number
+          type: number
           description: |
             Number of shelvesets to skip
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.TfvcShelvesetRef[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TfvcShelvesetRef"
+          />[]&gt;
+        description: ''
+  - name: getShelvesetWorkItems(string)
+    uid: azure-devops-extension-api.TfvcRestClient.getShelvesetWorkItems
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getShelvesetWorkItems
-    name: getShelvesetWorkItems(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Get work items associated with a shelveset.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getShelvesetWorkItems(shelvesetId: string)'
       parameters:
         - id: shelvesetId
-          type:
-            - string
+          type: string
           description: |
             Shelveset's unique ID
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.AssociatedWorkItem[]>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AssociatedWorkItem"
+          />[]&gt;
+        description: ''
+  - name: 'getTfvcStatistics(string, string)'
+    uid: azure-devops-extension-api.TfvcRestClient.getTfvcStatistics
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.getTfvcStatistics
-    name: 'getTfvcStatistics(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Provides File Count and Uncompressed Bytes for a Collection/Project at a
       particular scope for TFVC.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getTfvcStatistics(project?: string, scopePath?: string)'
       parameters:
         - id: project
-          type:
-            - string
+          type: string
           description: Project ID or project name
-          optional: true
         - id: scopePath
-          type:
-            - string
+          type: string
           description: |
             '$/' for collection, '$/project' for specific project
-          optional: true
       return:
-        type:
-          - Promise<azure-devops-extension-api.TfvcStatistics>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.RESOURCE_AREA_ID
-    name: RESOURCE_AREA_ID
-    fullName: RESOURCE_AREA_ID
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'static RESOURCE_AREA_ID: string'
-      return:
-        type:
-          - string
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcRestClient.constructor
-    name: TfvcRestClient(IVssRestClientOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new TfvcRestClient(options: IVssRestClientOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-devops-extension-api.IVssRestClientOptions
-          description: ''
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RestClientBase
-    name: RestClientBase
-    spec.typeScript:
-      - name: RestClientBase
-        fullName: RestClientBase
-        uid: azure-devops-extension-api.RestClientBase
-  - uid: azure-devops-extension-api.IVssRestClientOptions
-    name: IVssRestClientOptions
-    spec.typeScript:
-      - name: IVssRestClientOptions
-        fullName: IVssRestClientOptions
-        uid: azure-devops-extension-api.IVssRestClientOptions
-  - uid: azure-devops-extension-api.TfvcChangeset
-    name: TfvcChangeset
-    spec.typeScript:
-      - name: TfvcChangeset
-        fullName: TfvcChangeset
-        uid: azure-devops-extension-api.TfvcChangeset
-  - uid: Promise<azure-devops-extension-api.TfvcChangesetRef>
-    name: TfvcChangesetRef>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcChangesetRef
-        fullName: TfvcChangesetRef
-        uid: azure-devops-extension-api.TfvcChangesetRef
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.TfvcChangesetsRequestData
-    name: TfvcChangesetsRequestData
-    spec.typeScript:
-      - name: TfvcChangesetsRequestData
-        fullName: TfvcChangesetsRequestData
-        uid: azure-devops-extension-api.TfvcChangesetsRequestData
-  - uid: 'Promise<azure-devops-extension-api.TfvcChangesetRef[]>'
-    name: 'TfvcChangesetRef[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcChangesetRef
-        fullName: TfvcChangesetRef
-        uid: azure-devops-extension-api.TfvcChangesetRef
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: Promise<azure-devops-extension-api.TfvcBranch>
-    name: TfvcBranch>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcBranch
-        fullName: TfvcBranch
-        uid: azure-devops-extension-api.TfvcBranch
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.TfvcBranchRef[]>'
-    name: 'TfvcBranchRef[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcBranchRef
-        fullName: TfvcBranchRef
-        uid: azure-devops-extension-api.TfvcBranchRef
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.TfvcBranch[]>'
-    name: 'TfvcBranch[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcBranch
-        fullName: TfvcBranch
-        uid: azure-devops-extension-api.TfvcBranch
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.TfvcChangesetSearchCriteria
-    name: TfvcChangesetSearchCriteria
-    spec.typeScript:
-      - name: TfvcChangesetSearchCriteria
-        fullName: TfvcChangesetSearchCriteria
-        uid: azure-devops-extension-api.TfvcChangesetSearchCriteria
-  - uid: Promise<azure-devops-extension-api.TfvcChangeset>
-    name: TfvcChangeset>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcChangeset
-        fullName: TfvcChangeset
-        uid: azure-devops-extension-api.TfvcChangeset
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.TfvcChange[]>'
-    name: 'TfvcChange[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcChange
-        fullName: TfvcChange
-        uid: azure-devops-extension-api.TfvcChange
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.AssociatedWorkItem[]>'
-    name: 'AssociatedWorkItem[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: AssociatedWorkItem
-        fullName: AssociatedWorkItem
-        uid: azure-devops-extension-api.AssociatedWorkItem
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.VersionControlRecursionType
-    name: VersionControlRecursionType
-    spec.typeScript:
-      - name: VersionControlRecursionType
-        fullName: VersionControlRecursionType
-        uid: azure-devops-extension-api.VersionControlRecursionType
-  - uid: azure-devops-extension-api.TfvcVersionDescriptor
-    name: TfvcVersionDescriptor
-    spec.typeScript:
-      - name: TfvcVersionDescriptor
-        fullName: TfvcVersionDescriptor
-        uid: azure-devops-extension-api.TfvcVersionDescriptor
-  - uid: Promise<azure-devops-extension-api.TfvcItem>
-    name: TfvcItem>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcItem
-        fullName: TfvcItem
-        uid: azure-devops-extension-api.TfvcItem
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.TfvcItem[]>'
-    name: 'TfvcItem[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcItem
-        fullName: TfvcItem
-        uid: azure-devops-extension-api.TfvcItem
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.TfvcItemRequestData
-    name: TfvcItemRequestData
-    spec.typeScript:
-      - name: TfvcItemRequestData
-        fullName: TfvcItemRequestData
-        uid: azure-devops-extension-api.TfvcItemRequestData
-  - uid: 'Promise<azure-devops-extension-api.TfvcItem[][]>'
-    name: 'TfvcItem[][]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcItem
-        fullName: TfvcItem
-        uid: azure-devops-extension-api.TfvcItem
-      - name: '[][]>'
-        fullName: '[][]>'
-  - uid: azure-devops-extension-api.TfvcLabelRequestData
-    name: TfvcLabelRequestData
-    spec.typeScript:
-      - name: TfvcLabelRequestData
-        fullName: TfvcLabelRequestData
-        uid: azure-devops-extension-api.TfvcLabelRequestData
-  - uid: Promise<azure-devops-extension-api.TfvcLabel>
-    name: TfvcLabel>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcLabel
-        fullName: TfvcLabel
-        uid: azure-devops-extension-api.TfvcLabel
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.TfvcLabelRef[]>'
-    name: 'TfvcLabelRef[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcLabelRef
-        fullName: TfvcLabelRef
-        uid: azure-devops-extension-api.TfvcLabelRef
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: azure-devops-extension-api.TfvcShelvesetRequestData
-    name: TfvcShelvesetRequestData
-    spec.typeScript:
-      - name: TfvcShelvesetRequestData
-        fullName: TfvcShelvesetRequestData
-        uid: azure-devops-extension-api.TfvcShelvesetRequestData
-  - uid: Promise<azure-devops-extension-api.TfvcShelveset>
-    name: TfvcShelveset>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcShelveset
-        fullName: TfvcShelveset
-        uid: azure-devops-extension-api.TfvcShelveset
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.TfvcShelvesetRef[]>'
-    name: 'TfvcShelvesetRef[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcShelvesetRef
-        fullName: TfvcShelvesetRef
-        uid: azure-devops-extension-api.TfvcShelvesetRef
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: Promise<azure-devops-extension-api.TfvcStatistics>
-    name: TfvcStatistics>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: TfvcStatistics
-        fullName: TfvcStatistics
-        uid: azure-devops-extension-api.TfvcStatistics
-      - name: '>'
-        fullName: '>'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TfvcStatistics"
+          />&gt;
+        description: ''
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

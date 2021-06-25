@@ -1,41 +1,59 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ReleaseUpdatedEvent
-    name: ReleaseUpdatedEvent
-    fullName: ReleaseUpdatedEvent
-    children:
-      - azure-devops-extension-api.ReleaseUpdatedEvent.release
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.RealtimeReleaseEvent
+### YamlMime:TSType
+name: ReleaseUpdatedEvent
+uid: azure-devops-extension-api.ReleaseUpdatedEvent
+package: azure-devops-extension-api
+summary: ''
+fullName: ReleaseUpdatedEvent
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: environmentId
+    uid: azure-devops-extension-api.ReleaseUpdatedEvent.environmentId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ReleaseUpdatedEvent.release
-    name: release
-    fullName: release
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: environmentId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'environmentId: number'
+      return:
+        type: number
+        description: ''
+  - name: projectId
+    uid: azure-devops-extension-api.ReleaseUpdatedEvent.projectId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: projectId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        type: string
+        description: ''
+  - name: release
+    uid: azure-devops-extension-api.ReleaseUpdatedEvent.release
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: release
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'release: Release'
       return:
-        type:
-          - azure-devops-extension-api.Release
+        type: <xref uid="azure-devops-extension-api.Release" />
+        description: ''
+  - name: releaseId
+    uid: azure-devops-extension-api.ReleaseUpdatedEvent.releaseId
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RealtimeReleaseEvent
-    name: RealtimeReleaseEvent
-    spec.typeScript:
-      - name: RealtimeReleaseEvent
-        fullName: RealtimeReleaseEvent
-        uid: azure-devops-extension-api.RealtimeReleaseEvent
-  - uid: azure-devops-extension-api.Release
-    name: Release
-    spec.typeScript:
-      - name: Release
-        fullName: Release
-        uid: azure-devops-extension-api.Release
+    summary: ''
+    fullName: releaseId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'releaseId: number'
+      return:
+        type: number
+        description: ''
+extends: <xref uid="azure-devops-extension-api.RealtimeReleaseEvent" />

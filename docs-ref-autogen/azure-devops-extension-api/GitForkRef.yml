@@ -1,41 +1,119 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitForkRef
-    name: GitForkRef
-    fullName: GitForkRef
-    children:
-      - azure-devops-extension-api.GitForkRef.repository
-    langs:
-      - typeScript
-    type: interface
-    summary: Information about a fork ref.
-    extends:
-      name: azure-devops-extension-api.GitRef
+### YamlMime:TSType
+name: GitForkRef
+uid: azure-devops-extension-api.GitForkRef
+package: azure-devops-extension-api
+summary: Information about a fork ref.
+fullName: GitForkRef
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: creator
+    uid: azure-devops-extension-api.GitForkRef.creator
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitForkRef.repository
-    name: repository
-    fullName: repository
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ''
+    fullName: creator
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'creator: IdentityRef'
+      return:
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: isLocked
+    uid: azure-devops-extension-api.GitForkRef.isLocked
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: isLocked
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isLocked: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: isLockedBy
+    uid: azure-devops-extension-api.GitForkRef.isLockedBy
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: isLockedBy
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isLockedBy: IdentityRef'
+      return:
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.GitForkRef.name
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: objectId
+    uid: azure-devops-extension-api.GitForkRef.objectId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: objectId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'objectId: string'
+      return:
+        type: string
+        description: ''
+  - name: peeledObjectId
+    uid: azure-devops-extension-api.GitForkRef.peeledObjectId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: peeledObjectId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'peeledObjectId: string'
+      return:
+        type: string
+        description: ''
+  - name: repository
+    uid: azure-devops-extension-api.GitForkRef.repository
+    package: azure-devops-extension-api
     summary: The repository ID of the fork.
+    fullName: repository
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'repository: GitRepository'
       return:
-        type:
-          - azure-devops-extension-api.GitRepository
+        type: <xref uid="azure-devops-extension-api.GitRepository" />
+        description: ''
+  - name: statuses
+    uid: azure-devops-extension-api.GitForkRef.statuses
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitRef
-    name: GitRef
-    spec.typeScript:
-      - name: GitRef
-        fullName: GitRef
-        uid: azure-devops-extension-api.GitRef
-  - uid: azure-devops-extension-api.GitRepository
-    name: GitRepository
-    spec.typeScript:
-      - name: GitRepository
-        fullName: GitRepository
-        uid: azure-devops-extension-api.GitRepository
+    summary: ''
+    fullName: statuses
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'statuses: GitStatus[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.GitStatus" />[]'
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.GitForkRef.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.GitRef" />

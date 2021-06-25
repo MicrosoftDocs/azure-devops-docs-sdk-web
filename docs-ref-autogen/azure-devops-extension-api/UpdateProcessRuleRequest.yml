@@ -1,35 +1,71 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.UpdateProcessRuleRequest
-    name: UpdateProcessRuleRequest
-    fullName: UpdateProcessRuleRequest
-    children:
-      - azure-devops-extension-api.UpdateProcessRuleRequest.id
-    langs:
-      - typeScript
-    type: interface
-    summary: Request class/object to update the rule.
-    extends:
-      name: azure-devops-extension-api.CreateProcessRuleRequest
+### YamlMime:TSType
+name: UpdateProcessRuleRequest
+uid: azure-devops-extension-api.UpdateProcessRuleRequest
+package: azure-devops-extension-api
+summary: Request class/object to update the rule.
+fullName: UpdateProcessRuleRequest
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: actions
+    uid: azure-devops-extension-api.UpdateProcessRuleRequest.actions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.UpdateProcessRuleRequest.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: List of actions to take when the rule is triggered.
+    fullName: actions
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'actions: RuleAction[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.RuleAction" />[]'
+        description: ''
+  - name: conditions
+    uid: azure-devops-extension-api.UpdateProcessRuleRequest.conditions
+    package: azure-devops-extension-api
+    summary: List of conditions when the rule should be triggered.
+    fullName: conditions
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'conditions: RuleCondition[]'
+      return:
+        type: '<xref uid="azure-devops-extension-api.RuleCondition" />[]'
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.UpdateProcessRuleRequest.id
+    package: azure-devops-extension-api
     summary: Id to uniquely identify the rule.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: isDisabled
+    uid: azure-devops-extension-api.UpdateProcessRuleRequest.isDisabled
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.CreateProcessRuleRequest
-    name: CreateProcessRuleRequest
-    spec.typeScript:
-      - name: CreateProcessRuleRequest
-        fullName: CreateProcessRuleRequest
-        uid: azure-devops-extension-api.CreateProcessRuleRequest
+    summary: Indicates if the rule is disabled.
+    fullName: isDisabled
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isDisabled: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.UpdateProcessRuleRequest.name
+    package: azure-devops-extension-api
+    summary: Name for the rule.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.CreateProcessRuleRequest" />

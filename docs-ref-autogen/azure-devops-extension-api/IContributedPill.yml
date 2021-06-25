@@ -1,0 +1,113 @@
+### YamlMime:TSType
+name: IContributedPill
+uid: azure-devops-extension-api.IContributedPill
+package: azure-devops-extension-api
+summary: Defines a pill from a contribution
+fullName: IContributedPill
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: color
+    uid: azure-devops-extension-api.IContributedPill.color
+    package: azure-devops-extension-api
+    summary: >-
+      Background color for the pill
+
+      Ignored unless variant is set to Colored
+
+      If variant is set to Colored and this is not provided, we'll render as
+      Standard and emit a warning to the console
+    fullName: color
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'color?: IColor'
+      return:
+        type: <xref uid="azure-devops-extension-api.IColor" />
+        description: ''
+  - name: contributionId
+    uid: azure-devops-extension-api.IContributedPill.contributionId
+    package: azure-devops-extension-api
+    summary: >-
+      Id of the contribution that the button was defined in (optional, used to
+      resolve relative icon URLs)
+    fullName: contributionId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'contributionId?: string'
+      return:
+        type: string
+        description: ''
+  - name: icon
+    uid: azure-devops-extension-api.IContributedPill.icon
+    package: azure-devops-extension-api
+    summary: >-
+      Either a url (relative or fully qualified) or an
+      IContributedIconDefinition with
+
+      urls for light and dark themes. This allows the caller to use different
+      styles of
+
+      icons based on the theme type.
+    fullName: icon
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'icon?: string | IContributedIconDefinition'
+      return:
+        type: >-
+          string | <xref
+          uid="azure-devops-extension-api.IContributedIconDefinition" />
+        description: ''
+  - name: onClick
+    uid: azure-devops-extension-api.IContributedPill.onClick
+    package: azure-devops-extension-api
+    summary: onClick handler for the pill itself
+    fullName: onClick
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onClick?: () => void'
+      return:
+        type: () =&gt; void
+        description: ''
+  - name: onRemoveClick
+    uid: azure-devops-extension-api.IContributedPill.onRemoveClick
+    package: azure-devops-extension-api
+    summary: |-
+      Renders the remove button if provided
+      Handler to remove the pill
+    fullName: onRemoveClick
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onRemoveClick?: () => void'
+      return:
+        type: () =&gt; void
+        description: ''
+  - name: text
+    uid: azure-devops-extension-api.IContributedPill.text
+    package: azure-devops-extension-api
+    summary: The text to render inside the pill.
+    fullName: text
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'text: string'
+      return:
+        type: string
+        description: ''
+  - name: tooltip
+    uid: azure-devops-extension-api.IContributedPill.tooltip
+    package: azure-devops-extension-api
+    summary: Optional value to use as an aria-label and tooltip for the pill.
+    fullName: tooltip
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tooltip?: string'
+      return:
+        type: string
+        description: ''

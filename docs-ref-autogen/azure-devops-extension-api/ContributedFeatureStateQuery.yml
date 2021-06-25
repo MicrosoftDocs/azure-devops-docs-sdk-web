@@ -1,71 +1,52 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ContributedFeatureStateQuery
-    name: ContributedFeatureStateQuery
-    fullName: ContributedFeatureStateQuery
-    children:
-      - azure-devops-extension-api.ContributedFeatureStateQuery.featureIds
-      - azure-devops-extension-api.ContributedFeatureStateQuery.featureStates
-      - azure-devops-extension-api.ContributedFeatureStateQuery.scopeValues
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      A query for the effective contributed feature states for a list of feature
-      ids
+### YamlMime:TSType
+name: ContributedFeatureStateQuery
+uid: azure-devops-extension-api.ContributedFeatureStateQuery
+package: azure-devops-extension-api
+summary: A query for the effective contributed feature states for a list of feature ids
+fullName: ContributedFeatureStateQuery
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: featureIds
+    uid: azure-devops-extension-api.ContributedFeatureStateQuery.featureIds
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ContributedFeatureStateQuery.featureIds
-    name: featureIds
-    fullName: featureIds
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The list of feature ids to query
+    fullName: featureIds
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'featureIds: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: featureStates
+    uid: azure-devops-extension-api.ContributedFeatureStateQuery.featureStates
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ContributedFeatureStateQuery.featureStates
-    name: featureStates
-    fullName: featureStates
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The query result containing the current feature states for each of the
       queried feature ids
+    fullName: featureStates
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'featureStates: [key: string]: ContributedFeatureState'
       return:
-        type:
-          - '[key: string]: azure-devops-extension-api.ContributedFeatureState'
+        type: >-
+          [key: string]\: <xref
+          uid="azure-devops-extension-api.ContributedFeatureState" />
+        description: ''
+  - name: scopeValues
+    uid: azure-devops-extension-api.ContributedFeatureStateQuery.scopeValues
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ContributedFeatureStateQuery.scopeValues
-    name: scopeValues
-    fullName: scopeValues
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       A dictionary of scope values (project name, etc.) to use in the query (if
       querying across scopes)
+    fullName: scopeValues
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scopeValues: [key: string]: string'
       return:
-        type:
-          - '[key: string]: string'
-    package: azure-devops-extension-api
-references:
-  - uid: '[key: string]: azure-devops-extension-api.ContributedFeatureState'
-    name: ContributedFeatureState
-    spec.typeScript:
-      - name: '[key: string]: '
-        fullName: '[key: string]: '
-      - name: ContributedFeatureState
-        fullName: ContributedFeatureState
-        uid: azure-devops-extension-api.ContributedFeatureState
+        type: '[key: string]\: string'
+        description: ''

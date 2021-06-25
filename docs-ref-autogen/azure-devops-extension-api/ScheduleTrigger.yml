@@ -1,43 +1,35 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ScheduleTrigger
-    name: ScheduleTrigger
-    fullName: ScheduleTrigger
-    children:
-      - azure-devops-extension-api.ScheduleTrigger.schedules
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents a schedule trigger.
-    extends:
-      name: azure-devops-extension-api.BuildTrigger
+### YamlMime:TSType
+name: ScheduleTrigger
+uid: azure-devops-extension-api.ScheduleTrigger
+package: azure-devops-extension-api
+summary: Represents a schedule trigger.
+fullName: ScheduleTrigger
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: schedules
+    uid: azure-devops-extension-api.ScheduleTrigger.schedules
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ScheduleTrigger.schedules
-    name: schedules
-    fullName: schedules
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: schedules
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'schedules: Schedule[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Schedule[]'
+        type: '<xref uid="azure-devops-extension-api.Schedule" />[]'
+        description: ''
+  - name: triggerType
+    uid: azure-devops-extension-api.ScheduleTrigger.triggerType
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.BuildTrigger
-    name: BuildTrigger
-    spec.typeScript:
-      - name: BuildTrigger
-        fullName: BuildTrigger
-        uid: azure-devops-extension-api.BuildTrigger
-  - uid: 'azure-devops-extension-api.Schedule[]'
-    name: 'Schedule[]'
-    spec.typeScript:
-      - name: Schedule
-        fullName: Schedule
-        uid: azure-devops-extension-api.Schedule
-      - name: '[]'
-        fullName: '[]'
+    summary: The type of the trigger.
+    fullName: triggerType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'triggerType: DefinitionTriggerType'
+      return:
+        type: <xref uid="azure-devops-extension-api.DefinitionTriggerType" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.BuildTrigger" />

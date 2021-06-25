@@ -1,132 +1,97 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TeamSetting
-    name: TeamSetting
-    fullName: TeamSetting
-    children:
-      - azure-devops-extension-api.TeamSetting.backlogIteration
-      - azure-devops-extension-api.TeamSetting.backlogVisibilities
-      - azure-devops-extension-api.TeamSetting.bugsBehavior
-      - azure-devops-extension-api.TeamSetting.defaultIteration
-      - azure-devops-extension-api.TeamSetting.defaultIterationMacro
-      - azure-devops-extension-api.TeamSetting.workingDays
-    langs:
-      - typeScript
-    type: interface
-    summary: Data contract for TeamSettings
-    extends:
-      name: azure-devops-extension-api.TeamSettingsDataContractBase
+### YamlMime:TSType
+name: TeamSetting
+uid: azure-devops-extension-api.TeamSetting
+package: azure-devops-extension-api
+summary: Data contract for TeamSettings
+fullName: TeamSetting
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: backlogIteration
+    uid: azure-devops-extension-api.TeamSetting.backlogIteration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamSetting.backlogIteration
-    name: backlogIteration
-    fullName: backlogIteration
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Backlog Iteration
+    fullName: backlogIteration
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backlogIteration: TeamSettingsIteration'
       return:
-        type:
-          - azure-devops-extension-api.TeamSettingsIteration
+        type: <xref uid="azure-devops-extension-api.TeamSettingsIteration" />
+        description: ''
+  - name: backlogVisibilities
+    uid: azure-devops-extension-api.TeamSetting.backlogVisibilities
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamSetting.backlogVisibilities
-    name: backlogVisibilities
-    fullName: backlogVisibilities
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Information about categories that are visible on the backlog.
+    fullName: backlogVisibilities
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'backlogVisibilities: [key: string]: boolean'
       return:
-        type:
-          - '[key: string]: boolean'
+        type: '[key: string]\: boolean'
+        description: ''
+  - name: bugsBehavior
+    uid: azure-devops-extension-api.TeamSetting.bugsBehavior
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamSetting.bugsBehavior
-    name: bugsBehavior
-    fullName: bugsBehavior
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'BugsBehavior (Off, AsTasks, AsRequirements, ...)'
+    fullName: bugsBehavior
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'bugsBehavior: BugsBehavior'
       return:
-        type:
-          - azure-devops-extension-api.BugsBehavior
+        type: <xref uid="azure-devops-extension-api.BugsBehavior" />
+        description: ''
+  - name: defaultIteration
+    uid: azure-devops-extension-api.TeamSetting.defaultIteration
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamSetting.defaultIteration
-    name: defaultIteration
-    fullName: defaultIteration
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Default Iteration, the iteration used when creating a new work item on the
       queries page.
+    fullName: defaultIteration
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'defaultIteration: TeamSettingsIteration'
       return:
-        type:
-          - azure-devops-extension-api.TeamSettingsIteration
+        type: <xref uid="azure-devops-extension-api.TeamSettingsIteration" />
+        description: ''
+  - name: defaultIterationMacro
+    uid: azure-devops-extension-api.TeamSetting.defaultIterationMacro
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamSetting.defaultIterationMacro
-    name: defaultIterationMacro
-    fullName: defaultIterationMacro
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Default Iteration macro (if any)
+    fullName: defaultIterationMacro
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'defaultIterationMacro: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.TeamSetting.url
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamSetting.workingDays
-    name: workingDays
-    fullName: workingDays
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Full http link to the resource
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+  - name: workingDays
+    uid: azure-devops-extension-api.TeamSetting.workingDays
+    package: azure-devops-extension-api
     summary: Days that the team is working
+    fullName: workingDays
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workingDays: DayOfWeek[]'
       return:
-        type:
-          - 'azure-devops-extension-api.DayOfWeek[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TeamSettingsDataContractBase
-    name: TeamSettingsDataContractBase
-    spec.typeScript:
-      - name: TeamSettingsDataContractBase
-        fullName: TeamSettingsDataContractBase
-        uid: azure-devops-extension-api.TeamSettingsDataContractBase
-  - uid: azure-devops-extension-api.TeamSettingsIteration
-    name: TeamSettingsIteration
-    spec.typeScript:
-      - name: TeamSettingsIteration
-        fullName: TeamSettingsIteration
-        uid: azure-devops-extension-api.TeamSettingsIteration
-  - uid: azure-devops-extension-api.BugsBehavior
-    name: BugsBehavior
-    spec.typeScript:
-      - name: BugsBehavior
-        fullName: BugsBehavior
-        uid: azure-devops-extension-api.BugsBehavior
-  - uid: 'azure-devops-extension-api.DayOfWeek[]'
-    name: 'DayOfWeek[]'
-    spec.typeScript:
-      - name: DayOfWeek
-        fullName: DayOfWeek
-        uid: azure-devops-extension-api.DayOfWeek
-      - name: '[]'
-        fullName: '[]'
+        type: '<xref uid="azure-devops-extension-api.DayOfWeek" />[]'
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TeamSettingsDataContractBase" />

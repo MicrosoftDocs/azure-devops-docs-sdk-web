@@ -1,41 +1,59 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TaskCompletedEvent
-    name: TaskCompletedEvent
-    fullName: TaskCompletedEvent
-    children:
-      - azure-devops-extension-api.TaskCompletedEvent.result
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.TaskEvent
+### YamlMime:TSType
+name: TaskCompletedEvent
+uid: azure-devops-extension-api.TaskCompletedEvent
+package: azure-devops-extension-api
+summary: ''
+fullName: TaskCompletedEvent
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: jobId
+    uid: azure-devops-extension-api.TaskCompletedEvent.jobId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskCompletedEvent.result
-    name: result
-    fullName: result
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: jobId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jobId: string'
+      return:
+        type: string
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TaskCompletedEvent.name
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: result
+    uid: azure-devops-extension-api.TaskCompletedEvent.result
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: result
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'result: TaskResult'
       return:
-        type:
-          - azure-devops-extension-api.TaskResult
+        type: <xref uid="azure-devops-extension-api.TaskResult" />
+        description: ''
+  - name: taskId
+    uid: azure-devops-extension-api.TaskCompletedEvent.taskId
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TaskEvent
-    name: TaskEvent
-    spec.typeScript:
-      - name: TaskEvent
-        fullName: TaskEvent
-        uid: azure-devops-extension-api.TaskEvent
-  - uid: azure-devops-extension-api.TaskResult
-    name: TaskResult
-    spec.typeScript:
-      - name: TaskResult
-        fullName: TaskResult
-        uid: azure-devops-extension-api.TaskResult
+    summary: ''
+    fullName: taskId
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'taskId: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TaskEvent" />

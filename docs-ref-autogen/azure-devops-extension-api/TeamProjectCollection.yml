@@ -1,72 +1,83 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TeamProjectCollection
-    name: TeamProjectCollection
-    fullName: TeamProjectCollection
-    children:
-      - azure-devops-extension-api.TeamProjectCollection.description
-      - >-
-        azure-devops-extension-api.TeamProjectCollection.processCustomizationType
-      - azure-devops-extension-api.TeamProjectCollection.state
-    langs:
-      - typeScript
-    type: interface
-    summary: Data contract for a TeamProjectCollection.
-    extends:
-      name: azure-devops-extension-api.TeamProjectCollectionReference
+### YamlMime:TSType
+name: TeamProjectCollection
+uid: azure-devops-extension-api.TeamProjectCollection
+package: azure-devops-extension-api
+summary: Data contract for a TeamProjectCollection.
+fullName: TeamProjectCollection
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.TeamProjectCollection.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamProjectCollection.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Project collection description.
+    fullName: description
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: id
+    uid: azure-devops-extension-api.TeamProjectCollection.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamProjectCollection.processCustomizationType
-    name: processCustomizationType
+    summary: Collection Id.
+    fullName: id
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        type: string
+        description: ''
+  - name: name
+    uid: azure-devops-extension-api.TeamProjectCollection.name
+    package: azure-devops-extension-api
+    summary: Collection Name.
+    fullName: name
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: processCustomizationType
+    uid: azure-devops-extension-api.TeamProjectCollection.processCustomizationType
+    package: azure-devops-extension-api
+    summary: Process customization type on this collection. It can be Xml or Inherited.
     fullName: processCustomizationType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Process customzation type on this collection. It can be Xml or Inherited.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'processCustomizationType: ProcessCustomizationType'
       return:
-        type:
-          - azure-devops-extension-api.ProcessCustomizationType
+        type: <xref uid="azure-devops-extension-api.ProcessCustomizationType" />
+        description: ''
+  - name: state
+    uid: azure-devops-extension-api.TeamProjectCollection.state
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamProjectCollection.state
-    name: state
-    fullName: state
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Project collection state.
+    fullName: state
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'state: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: url
+    uid: azure-devops-extension-api.TeamProjectCollection.url
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TeamProjectCollectionReference
-    name: TeamProjectCollectionReference
-    spec.typeScript:
-      - name: TeamProjectCollectionReference
-        fullName: TeamProjectCollectionReference
-        uid: azure-devops-extension-api.TeamProjectCollectionReference
-  - uid: azure-devops-extension-api.ProcessCustomizationType
-    name: ProcessCustomizationType
-    spec.typeScript:
-      - name: ProcessCustomizationType
-        fullName: ProcessCustomizationType
-        uid: azure-devops-extension-api.ProcessCustomizationType
+    summary: Collection REST Url.
+    fullName: url
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.TeamProjectCollectionReference" />

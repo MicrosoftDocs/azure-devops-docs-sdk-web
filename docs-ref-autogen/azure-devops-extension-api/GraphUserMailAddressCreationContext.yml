@@ -1,41 +1,41 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GraphUserMailAddressCreationContext
-    name: GraphUserMailAddressCreationContext
-    fullName: GraphUserMailAddressCreationContext
-    children:
-      - >-
-        azure-devops-extension-api.GraphUserMailAddressCreationContext.mailAddress
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Use this type to create a new user using the mail address as a reference
-      to an existing user from an external AD or AAD backed provider. This is
-      the subset of GraphUser fields required for creation of a GraphUser for
-      the AD and AAD use case when looking up the user by its mail address in
-      the backing provider.
-    extends:
-      name: azure-devops-extension-api.GraphUserCreationContext
+### YamlMime:TSType
+name: GraphUserMailAddressCreationContext
+uid: azure-devops-extension-api.GraphUserMailAddressCreationContext
+package: azure-devops-extension-api
+summary: >-
+  Use this type to create a new user using the mail address as a reference to an
+  existing user from an external AD or AAD backed provider. This is the subset
+  of GraphUser fields required for creation of a GraphUser for the AD and AAD
+  use case when looking up the user by its mail address in the backing provider.
+fullName: GraphUserMailAddressCreationContext
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: mailAddress
+    uid: azure-devops-extension-api.GraphUserMailAddressCreationContext.mailAddress
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphUserMailAddressCreationContext.mailAddress
-    name: mailAddress
-    fullName: mailAddress
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: mailAddress
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mailAddress: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: storageKey
+    uid: azure-devops-extension-api.GraphUserMailAddressCreationContext.storageKey
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GraphUserCreationContext
-    name: GraphUserCreationContext
-    spec.typeScript:
-      - name: GraphUserCreationContext
-        fullName: GraphUserCreationContext
-        uid: azure-devops-extension-api.GraphUserCreationContext
+    summary: >-
+      Optional: If provided, we will use this identifier for the storage key of
+      the created user
+    fullName: storageKey
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'storageKey: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-devops-extension-api.GraphUserCreationContext" />

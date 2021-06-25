@@ -1,103 +1,74 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.WorkItemBatchGetRequest
-    name: WorkItemBatchGetRequest
-    fullName: WorkItemBatchGetRequest
-    children:
-      - azure-devops-extension-api.WorkItemBatchGetRequest.$expand
-      - azure-devops-extension-api.WorkItemBatchGetRequest.asOf
-      - azure-devops-extension-api.WorkItemBatchGetRequest.errorPolicy
-      - azure-devops-extension-api.WorkItemBatchGetRequest.fields
-      - azure-devops-extension-api.WorkItemBatchGetRequest.ids
-    langs:
-      - typeScript
-    type: interface
-    summary: Describes a request to get a set of work items
+### YamlMime:TSType
+name: WorkItemBatchGetRequest
+uid: azure-devops-extension-api.WorkItemBatchGetRequest
+package: azure-devops-extension-api
+summary: Describes a request to get a set of work items
+fullName: WorkItemBatchGetRequest
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: $expand
+    uid: azure-devops-extension-api.WorkItemBatchGetRequest.$expand
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemBatchGetRequest.$expand
-    name: $expand
-    fullName: $expand
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The expand parameters for work item attributes. Possible options are \{
       None, Relations, Fields, Links, All \}
+    fullName: $expand
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: '$expand: WorkItemExpand'
       return:
-        type:
-          - azure-devops-extension-api.WorkItemExpand
+        type: <xref uid="azure-devops-extension-api.WorkItemExpand" />
+        description: ''
+  - name: asOf
+    uid: azure-devops-extension-api.WorkItemBatchGetRequest.asOf
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemBatchGetRequest.asOf
-    name: asOf
-    fullName: asOf
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: AsOf UTC date time string
+    fullName: asOf
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'asOf: Date'
       return:
-        type:
-          - Date
+        type: Date
+        description: ''
+  - name: errorPolicy
+    uid: azure-devops-extension-api.WorkItemBatchGetRequest.errorPolicy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemBatchGetRequest.errorPolicy
-    name: errorPolicy
-    fullName: errorPolicy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The flag to control error policy in a bulk get work items request.
       Possible options are \{Fail, Omit\}.
+    fullName: errorPolicy
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'errorPolicy: WorkItemErrorPolicy'
       return:
-        type:
-          - azure-devops-extension-api.WorkItemErrorPolicy
+        type: <xref uid="azure-devops-extension-api.WorkItemErrorPolicy" />
+        description: ''
+  - name: fields
+    uid: azure-devops-extension-api.WorkItemBatchGetRequest.fields
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemBatchGetRequest.fields
-    name: fields
-    fullName: fields
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The requested fields
+    fullName: fields
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'fields: string[]'
       return:
-        type:
-          - 'string[]'
+        type: 'string[]'
+        description: ''
+  - name: ids
+    uid: azure-devops-extension-api.WorkItemBatchGetRequest.ids
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemBatchGetRequest.ids
-    name: ids
-    fullName: ids
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The requested work item ids
+    fullName: ids
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'ids: number[]'
       return:
-        type:
-          - 'number[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.WorkItemExpand
-    name: WorkItemExpand
-    spec.typeScript:
-      - name: WorkItemExpand
-        fullName: WorkItemExpand
-        uid: azure-devops-extension-api.WorkItemExpand
-  - uid: azure-devops-extension-api.WorkItemErrorPolicy
-    name: WorkItemErrorPolicy
-    spec.typeScript:
-      - name: WorkItemErrorPolicy
-        fullName: WorkItemErrorPolicy
-        uid: azure-devops-extension-api.WorkItemErrorPolicy
+        type: 'number[]'
+        description: ''

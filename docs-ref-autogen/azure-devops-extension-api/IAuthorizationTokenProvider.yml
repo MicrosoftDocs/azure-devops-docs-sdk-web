@@ -1,37 +1,30 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IAuthorizationTokenProvider
-    name: IAuthorizationTokenProvider
-    fullName: IAuthorizationTokenProvider
-    children:
-      - >-
-        azure-devops-extension-api.IAuthorizationTokenProvider.getAuthorizationHeader
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Interface for a class that can retrieve authorization tokens to be used in
-      fetch requests.
-    package: azure-devops-extension-api
-  - uid: >-
+### YamlMime:TSType
+name: IAuthorizationTokenProvider
+uid: azure-devops-extension-api.IAuthorizationTokenProvider
+package: azure-devops-extension-api
+summary: >-
+  Interface for a class that can retrieve authorization tokens to be used in
+  fetch requests.
+fullName: IAuthorizationTokenProvider
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: getAuthorizationHeader(boolean)
+    uid: >-
       azure-devops-extension-api.IAuthorizationTokenProvider.getAuthorizationHeader
-    name: getAuthorizationHeader(boolean)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    package: azure-devops-extension-api
     summary: Gets the authorization header to use in a fetch request
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function getAuthorizationHeader(forceRefresh?: boolean)'
       parameters:
         - id: forceRefresh
-          type:
-            - boolean
+          type: boolean
           description: >-
             If true, indicates that we should get a new token, if applicable for
             current provider.
-          optional: true
       return:
-        type:
-          - Promise<string>
-    package: azure-devops-extension-api
+        type: Promise&lt;string&gt;
+        description: the value to use for the Authorization header in a request.

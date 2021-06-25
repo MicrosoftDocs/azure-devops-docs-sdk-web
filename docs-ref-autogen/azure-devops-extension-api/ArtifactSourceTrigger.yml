@@ -1,58 +1,47 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ArtifactSourceTrigger
-    name: ArtifactSourceTrigger
-    fullName: ArtifactSourceTrigger
-    children:
-      - azure-devops-extension-api.ArtifactSourceTrigger.artifactAlias
-      - azure-devops-extension-api.ArtifactSourceTrigger.triggerConditions
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.ReleaseTriggerBase
+### YamlMime:TSType
+name: ArtifactSourceTrigger
+uid: azure-devops-extension-api.ArtifactSourceTrigger
+package: azure-devops-extension-api
+summary: ''
+fullName: ArtifactSourceTrigger
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: artifactAlias
+    uid: azure-devops-extension-api.ArtifactSourceTrigger.artifactAlias
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ArtifactSourceTrigger.artifactAlias
-    name: artifactAlias
-    fullName: artifactAlias
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Artifact source alias for Artifact Source trigger type
+    fullName: artifactAlias
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'artifactAlias: string'
       return:
-        type:
-          - string
+        type: string
+        description: ''
+  - name: triggerConditions
+    uid: azure-devops-extension-api.ArtifactSourceTrigger.triggerConditions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ArtifactSourceTrigger.triggerConditions
-    name: triggerConditions
-    fullName: triggerConditions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: triggerConditions
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'triggerConditions: ArtifactFilter[]'
       return:
-        type:
-          - 'azure-devops-extension-api.ArtifactFilter[]'
+        type: '<xref uid="azure-devops-extension-api.ArtifactFilter" />[]'
+        description: ''
+  - name: triggerType
+    uid: azure-devops-extension-api.ArtifactSourceTrigger.triggerType
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ReleaseTriggerBase
-    name: ReleaseTriggerBase
-    spec.typeScript:
-      - name: ReleaseTriggerBase
-        fullName: ReleaseTriggerBase
-        uid: azure-devops-extension-api.ReleaseTriggerBase
-  - uid: 'azure-devops-extension-api.ArtifactFilter[]'
-    name: 'ArtifactFilter[]'
-    spec.typeScript:
-      - name: ArtifactFilter
-        fullName: ArtifactFilter
-        uid: azure-devops-extension-api.ArtifactFilter
-      - name: '[]'
-        fullName: '[]'
+    summary: Type of release trigger.
+    fullName: triggerType
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'triggerType: ReleaseTriggerType'
+      return:
+        type: <xref uid="azure-devops-extension-api.ReleaseTriggerType" />
+        description: ''
+extends: <xref uid="azure-devops-extension-api.ReleaseTriggerBase" />
