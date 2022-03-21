@@ -6,6 +6,7 @@ summary: >-
   These functions will be made available to extensions to interact with the code
   editor.
 fullName: ICodeEditorContributionEndpoints
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -14,49 +15,54 @@ methods:
     uid: azure-devops-extension-api.ICodeEditorContributionEndpoints.getJsonSchemas
     package: azure-devops-extension-api
     summary: Get the list of currently registered JSON schemas.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getJsonSchemas()
+      content: 'function getJsonSchemas(): Promise<IJsonSchemaRegistration[]>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.IJsonSchemaRegistration" />[]&gt;
-        description: ''
   - name: getResourceUriFromResourceVersion(IResourceVersion)
     uid: >-
       azure-devops-extension-api.ICodeEditorContributionEndpoints.getResourceUriFromResourceVersion
     package: azure-devops-extension-api
     summary: Get a resource URI for the specified resource.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getResourceUriFromResourceVersion(version: IResourceVersion)'
+      content: >-
+        function getResourceUriFromResourceVersion(version: IResourceVersion):
+        Promise<string>
       parameters:
         - id: version
           type: <xref uid="azure-devops-extension-api.IResourceVersion" />
           description: ''
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: getResourceVersion(string)
     uid: >-
       azure-devops-extension-api.ICodeEditorContributionEndpoints.getResourceVersion
     package: azure-devops-extension-api
     summary: Get resource version from specified resource URI.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getResourceVersion(uri: string)'
+      content: 'function getResourceVersion(uri: string): Promise<IResourceVersion>'
       parameters:
         - id: uri
           type: string
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.IResourceVersion"
           />&gt;
-        description: ''
   - name: onResourceChanged(ResourceChangedCallback)
     uid: >-
       azure-devops-extension-api.ICodeEditorContributionEndpoints.onResourceChanged
@@ -67,6 +73,7 @@ methods:
        - a new file is loaded
        - the user edits the file in the web UI
        - the detected language changes (ie after an extension registered a new language, and the file was detected to have that language)
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -80,6 +87,7 @@ methods:
       azure-devops-extension-api.ICodeEditorContributionEndpoints.registerJsonSchemas
     package: azure-devops-extension-api
     summary: Register schemas with the code editor's built-in JSON language
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -93,6 +101,7 @@ methods:
       azure-devops-extension-api.ICodeEditorContributionEndpoints.registerLanguage
     package: azure-devops-extension-api
     summary: Register a language with the code editor.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

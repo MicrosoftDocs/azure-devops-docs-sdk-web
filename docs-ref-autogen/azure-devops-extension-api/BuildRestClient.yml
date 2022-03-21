@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.BuildRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: BuildRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.BuildRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,22 +28,26 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'addBuildTag(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.addBuildTag
     package: azure-devops-extension-api
     summary: Adds a tag to a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function addBuildTag(project: string, buildId: number, tag: string)'
+      content: >-
+        function addBuildTag(project: string, buildId: number, tag: string):
+        Promise<string[]>
       parameters:
         - id: project
           type: string
@@ -54,16 +60,19 @@ methods:
           description: |
             The tag to add.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'addBuildTags(string[], string, number)'
     uid: azure-devops-extension-api.BuildRestClient.addBuildTags
     package: azure-devops-extension-api
     summary: Adds tags to a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function addBuildTags(tags: string[], project: string, buildId: number)'
+      content: >-
+        function addBuildTags(tags: string[], project: string, buildId: number):
+        Promise<string[]>
       parameters:
         - id: tags
           type: 'string[]'
@@ -76,18 +85,19 @@ methods:
           description: |
             The ID of the build.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'addDefinitionTag(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.addDefinitionTag
     package: azure-devops-extension-api
     summary: Adds a tag to a definition
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addDefinitionTag(project: string, definitionId: number, tag:
-        string)
+        string): Promise<string[]>
       parameters:
         - id: project
           type: string
@@ -100,18 +110,19 @@ methods:
           description: |
             The tag to add.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'addDefinitionTags(string[], string, number)'
     uid: azure-devops-extension-api.BuildRestClient.addDefinitionTags
     package: azure-devops-extension-api
     summary: Adds multiple tags to a definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addDefinitionTags(tags: string[], project: string,
-        definitionId: number)
+        definitionId: number): Promise<string[]>
       parameters:
         - id: tags
           type: 'string[]'
@@ -124,20 +135,22 @@ methods:
           description: |
             The ID of the definition.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: >-
       authorizeDefinitionResources(DefinitionResourceReference[], string,
       number)
     uid: azure-devops-extension-api.BuildRestClient.authorizeDefinitionResources
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function authorizeDefinitionResources(resources:
-        DefinitionResourceReference[], project: string, definitionId: number)
+        DefinitionResourceReference[], project: string, definitionId: number):
+        Promise<DefinitionResourceReference[]>
       parameters:
         - id: resources
           type: >-
@@ -152,20 +165,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DefinitionResourceReference" />[]&gt;
-        description: ''
   - name: 'authorizeProjectResources(DefinitionResourceReference[], string)'
     uid: azure-devops-extension-api.BuildRestClient.authorizeProjectResources
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function authorizeProjectResources(resources:
-        DefinitionResourceReference[], project: string)
+        DefinitionResourceReference[], project: string):
+        Promise<DefinitionResourceReference[]>
       parameters:
         - id: resources
           type: >-
@@ -177,20 +192,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DefinitionResourceReference" />[]&gt;
-        description: ''
   - name: 'createArtifact(BuildArtifact, string, number)'
     uid: azure-devops-extension-api.BuildRestClient.createArtifact
     package: azure-devops-extension-api
     summary: Associates an artifact with a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createArtifact(artifact: BuildArtifact, project: string,
-        buildId: number)
+        buildId: number): Promise<BuildArtifact>
       parameters:
         - id: artifact
           type: <xref uid="azure-devops-extension-api.BuildArtifact" />
@@ -203,18 +219,20 @@ methods:
           description: |
             The ID of the build.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildArtifact" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildArtifact" />&gt;
   - name: 'createDefinition(BuildDefinition, string, number, number)'
     uid: azure-devops-extension-api.BuildRestClient.createDefinition
     package: azure-devops-extension-api
     summary: Creates a new definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createDefinition(definition: BuildDefinition, project: string,
-        definitionToCloneId?: number, definitionToCloneRevision?: number)
+        definitionToCloneId?: number, definitionToCloneRevision?: number):
+        Promise<BuildDefinition>
       parameters:
         - id: definition
           type: <xref uid="azure-devops-extension-api.BuildDefinition" />
@@ -230,18 +248,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildDefinition"
           />&gt;
-        description: ''
   - name: 'createFolder(Folder, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.createFolder
     package: azure-devops-extension-api
     summary: Creates a new folder.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createFolder(folder: Folder, project: string, path: string)'
+      content: >-
+        function createFolder(folder: Folder, project: string, path: string):
+        Promise<Folder>
       parameters:
         - id: folder
           type: <xref uid="azure-devops-extension-api.Folder" />
@@ -254,16 +275,17 @@ methods:
           description: |
             The full path of the folder.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Folder" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Folder" />&gt;
   - name: 'deleteBuild(string, number)'
     uid: azure-devops-extension-api.BuildRestClient.deleteBuild
     package: azure-devops-extension-api
     summary: Deletes a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteBuild(project: string, buildId: number)'
+      content: 'function deleteBuild(project: string, buildId: number): Promise<void>'
       parameters:
         - id: project
           type: string
@@ -273,16 +295,19 @@ methods:
           description: |
             The ID of the build.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteBuildTag(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.deleteBuildTag
     package: azure-devops-extension-api
     summary: Removes a tag from a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteBuildTag(project: string, buildId: number, tag: string)'
+      content: >-
+        function deleteBuildTag(project: string, buildId: number, tag: string):
+        Promise<string[]>
       parameters:
         - id: project
           type: string
@@ -295,16 +320,19 @@ methods:
           description: |
             The tag to remove.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'deleteDefinition(string, number)'
     uid: azure-devops-extension-api.BuildRestClient.deleteDefinition
     package: azure-devops-extension-api
     summary: Deletes a definition and all associated builds.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteDefinition(project: string, definitionId: number)'
+      content: >-
+        function deleteDefinition(project: string, definitionId: number):
+        Promise<void>
       parameters:
         - id: project
           type: string
@@ -314,18 +342,19 @@ methods:
           description: |
             The ID of the definition.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteDefinitionTag(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.deleteDefinitionTag
     package: azure-devops-extension-api
     summary: Removes a tag from a definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteDefinitionTag(project: string, definitionId: number, tag:
-        string)
+        string): Promise<string[]>
       parameters:
         - id: project
           type: string
@@ -338,18 +367,19 @@ methods:
           description: |
             The tag to remove.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'deleteFolder(string, string)'
     uid: azure-devops-extension-api.BuildRestClient.deleteFolder
     package: azure-devops-extension-api
     summary: >-
       Deletes a definition folder. Definitions and their corresponding builds
       will also be deleted.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteFolder(project: string, path: string)'
+      content: 'function deleteFolder(project: string, path: string): Promise<void>'
       parameters:
         - id: project
           type: string
@@ -359,16 +389,17 @@ methods:
           description: |
             The full path to the folder.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteTag(string, string)'
     uid: azure-devops-extension-api.BuildRestClient.deleteTag
     package: azure-devops-extension-api
     summary: 'Removes a tag from builds, definitions, and from the tag store'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteTag(project: string, tag: string)'
+      content: 'function deleteTag(project: string, tag: string): Promise<string[]>'
       parameters:
         - id: project
           type: string
@@ -378,16 +409,19 @@ methods:
           description: |
             The tag to remove.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'deleteTemplate(string, string)'
     uid: azure-devops-extension-api.BuildRestClient.deleteTemplate
     package: azure-devops-extension-api
     summary: Deletes a build definition template.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteTemplate(project: string, templateId: string)'
+      content: >-
+        function deleteTemplate(project: string, templateId: string):
+        Promise<void>
       parameters:
         - id: project
           type: string
@@ -397,18 +431,19 @@ methods:
           description: |
             The ID of the template.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'getArtifact(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.getArtifact
     package: azure-devops-extension-api
     summary: Gets a specific artifact for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getArtifact(project: string, buildId: number, artifactName:
-        string)
+        string): Promise<BuildArtifact>
       parameters:
         - id: project
           type: string
@@ -421,18 +456,19 @@ methods:
           description: |
             The name of the artifact.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildArtifact" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildArtifact" />&gt;
   - name: 'getArtifactContentZip(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.getArtifactContentZip
     package: azure-devops-extension-api
     summary: Gets a specific artifact for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getArtifactContentZip(project: string, buildId: number,
-        artifactName: string)
+        artifactName: string): Promise<ArrayBuffer>
       parameters:
         - id: project
           type: string
@@ -445,16 +481,19 @@ methods:
           description: |
             The name of the artifact.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getArtifacts(string, number)'
     uid: azure-devops-extension-api.BuildRestClient.getArtifacts
     package: azure-devops-extension-api
     summary: Gets all artifacts for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getArtifacts(project: string, buildId: number)'
+      content: >-
+        function getArtifacts(project: string, buildId: number):
+        Promise<BuildArtifact[]>
       parameters:
         - id: project
           type: string
@@ -464,20 +503,22 @@ methods:
           description: |
             The ID of the build.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildArtifact"
           />[]&gt;
-        description: ''
   - name: 'getAttachment(string, number, string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getAttachment
     package: azure-devops-extension-api
     summary: Gets a specific attachment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAttachment(project: string, buildId: number, timelineId:
-        string, recordId: string, type: string, name: string)
+        string, recordId: string, type: string, name: string):
+        Promise<ArrayBuffer>
       parameters:
         - id: project
           type: string
@@ -499,18 +540,21 @@ methods:
           description: |
             The name of the attachment.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getAttachments(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.getAttachments
     package: azure-devops-extension-api
     summary: >-
       Gets the list of attachments of a specific type that are associated with a
       build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAttachments(project: string, buildId: number, type: string)'
+      content: >-
+        function getAttachments(project: string, buildId: number, type: string):
+        Promise<Attachment[]>
       parameters:
         - id: project
           type: string
@@ -523,8 +567,8 @@ methods:
           description: |
             The type of attachment.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Attachment" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Attachment" />[]&gt;'
   - name: 'getBadge(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.getBadge
     package: azure-devops-extension-api
@@ -532,12 +576,13 @@ methods:
       Gets a badge that indicates the status of the most recent build for a
       definition. Note that this API is deprecated. Prefer
       StatusBadgeController.GetStatusBadge.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBadge(project: string, definitionId: number, branchName?:
-        string)
+        string): Promise<string>
       parameters:
         - id: project
           type: string
@@ -550,18 +595,19 @@ methods:
           description: |
             The name of the branch.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: 'getBuild(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.getBuild
     package: azure-devops-extension-api
     summary: Gets a build
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuild(project: string, buildId: number, propertyFilters?:
-        string)
+        string): Promise<Build>
       parameters:
         - id: project
           type: string
@@ -574,20 +620,21 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Build" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Build" />&gt;
   - name: 'getBuildBadge(string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildBadge
     package: azure-devops-extension-api
     summary: >-
       Gets a badge that indicates the status of the most recent build for the
       specified branch.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildBadge(project: string, repoType: string, repoId?:
-        string, branchName?: string)
+        string, branchName?: string): Promise<BuildBadge>
       parameters:
         - id: project
           type: string
@@ -603,20 +650,21 @@ methods:
           description: |
             The branch name.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildBadge" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildBadge" />&gt;
   - name: 'getBuildBadgeData(string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildBadgeData
     package: azure-devops-extension-api
     summary: >-
       Gets a badge that indicates the status of the most recent build for the
       specified branch.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildBadgeData(project: string, repoType: string, repoId?:
-        string, branchName?: string)
+        string, branchName?: string): Promise<string>
       parameters:
         - id: project
           type: string
@@ -632,18 +680,20 @@ methods:
           description: |
             The branch name.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: 'getBuildChanges(string, number, string, number, boolean)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildChanges
     package: azure-devops-extension-api
     summary: Gets the changes associated with a build
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildChanges(project: string, buildId: number,
-        continuationToken?: string, top?: number, includeSourceChange?: boolean)
+        continuationToken?: string, top?: number, includeSourceChange?:
+        boolean): Promise<Change[]>
       parameters:
         - id: project
           type: string
@@ -662,54 +712,59 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Change" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Change" />[]&gt;'
   - name: getBuildController(number)
     uid: azure-devops-extension-api.BuildRestClient.getBuildController
     package: azure-devops-extension-api
     summary: Gets a controller
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBuildController(controllerId: number)'
+      content: >-
+        function getBuildController(controllerId: number):
+        Promise<BuildController>
       parameters:
         - id: controllerId
           type: number
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildController"
           />&gt;
-        description: ''
   - name: getBuildControllers(string)
     uid: azure-devops-extension-api.BuildRestClient.getBuildControllers
     package: azure-devops-extension-api
     summary: 'Gets controller, optionally filtered by name'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBuildControllers(name?: string)'
+      content: 'function getBuildControllers(name?: string): Promise<BuildController[]>'
       parameters:
         - id: name
           type: string
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildController"
           />[]&gt;
-        description: ''
   - name: 'getBuildLog(string, number, number, number, number)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildLog
     package: azure-devops-extension-api
     summary: Gets an individual log file for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildLog(project: string, buildId: number, logId: number,
-        startLine?: number, endLine?: number)
+        startLine?: number, endLine?: number): Promise<string>
       parameters:
         - id: project
           type: string
@@ -728,18 +783,19 @@ methods:
           description: |
             The end line.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: 'getBuildLogLines(string, number, number, number, number)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildLogLines
     package: azure-devops-extension-api
     summary: Gets an individual log file for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildLogLines(project: string, buildId: number, logId:
-        number, startLine?: number, endLine?: number)
+        number, startLine?: number, endLine?: number): Promise<string[]>
       parameters:
         - id: project
           type: string
@@ -758,16 +814,19 @@ methods:
           description: |
             The end line.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'getBuildLogs(string, number)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildLogs
     package: azure-devops-extension-api
     summary: Gets the logs for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBuildLogs(project: string, buildId: number)'
+      content: >-
+        function getBuildLogs(project: string, buildId: number):
+        Promise<BuildLog[]>
       parameters:
         - id: project
           type: string
@@ -777,16 +836,19 @@ methods:
           description: |
             The ID of the build.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BuildLog" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BuildLog" />[]&gt;'
   - name: 'getBuildLogsZip(string, number)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildLogsZip
     package: azure-devops-extension-api
     summary: Gets the logs for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBuildLogsZip(project: string, buildId: number)'
+      content: >-
+        function getBuildLogsZip(project: string, buildId: number):
+        Promise<ArrayBuffer>
       parameters:
         - id: project
           type: string
@@ -796,18 +858,19 @@ methods:
           description: |
             The ID of the build.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getBuildLogZip(string, number, number, number, number)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildLogZip
     package: azure-devops-extension-api
     summary: Gets an individual log file for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildLogZip(project: string, buildId: number, logId: number,
-        startLine?: number, endLine?: number)
+        startLine?: number, endLine?: number): Promise<ArrayBuffer>
       parameters:
         - id: project
           type: string
@@ -826,36 +889,40 @@ methods:
           description: |
             The end line.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: getBuildOptionDefinitions(string)
     uid: azure-devops-extension-api.BuildRestClient.getBuildOptionDefinitions
     package: azure-devops-extension-api
     summary: Gets all build definition options supported by the system.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBuildOptionDefinitions(project?: string)'
+      content: >-
+        function getBuildOptionDefinitions(project?: string):
+        Promise<BuildOptionDefinition[]>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BuildOptionDefinition" />[]&gt;
-        description: ''
   - name: 'getBuildProperties(string, number, string[])'
     uid: azure-devops-extension-api.BuildRestClient.getBuildProperties
     package: azure-devops-extension-api
     summary: Gets properties for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildProperties(project: string, buildId: number, filter?:
-        string[])
+        string[]): Promise<any>
       parameters:
         - id: project
           type: string
@@ -869,16 +936,19 @@ methods:
             A comma-delimited list of properties. If specified, filters to these
             specific properties.
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'getBuildReport(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildReport
     package: azure-devops-extension-api
     summary: Gets a build report.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBuildReport(project: string, buildId: number, type?: string)'
+      content: >-
+        function getBuildReport(project: string, buildId: number, type?:
+        string): Promise<BuildReportMetadata>
       parameters:
         - id: project
           type: string
@@ -891,20 +961,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildReportMetadata"
           />&gt;
-        description: ''
   - name: 'getBuildReportHtmlContent(string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildReportHtmlContent
     package: azure-devops-extension-api
     summary: Gets a build report.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildReportHtmlContent(project: string, buildId: number,
-        type?: string)
+        type?: string): Promise<any>
       parameters:
         - id: project
           type: string
@@ -917,8 +988,8 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: >-
       getBuilds(string, number[], number[], string, Date, Date, string,
       BuildReason, BuildStatus, BuildResult, string[], string[], number, string,
@@ -927,6 +998,7 @@ methods:
     uid: azure-devops-extension-api.BuildRestClient.getBuilds
     package: azure-devops-extension-api
     summary: Gets a list of builds.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -938,7 +1010,7 @@ methods:
         properties?: string[], top?: number, continuationToken?: string,
         maxBuildsPerDefinition?: number, deletedFilter?: QueryDeletedOption,
         queryOrder?: BuildQueryOrder, branchName?: string, buildIds?: number[],
-        repositoryId?: string, repositoryType?: string)
+        repositoryId?: string, repositoryType?: string): Promise<Build[]>
       parameters:
         - id: project
           type: string
@@ -1024,32 +1096,36 @@ methods:
             If specified, filters to builds that built from repositories of this
             type.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Build" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Build" />[]&gt;'
   - name: getBuildSettings(string)
     uid: azure-devops-extension-api.BuildRestClient.getBuildSettings
     package: azure-devops-extension-api
     summary: Gets the build settings.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBuildSettings(project?: string)'
+      content: 'function getBuildSettings(project?: string): Promise<BuildSettings>'
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildSettings" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildSettings" />&gt;
   - name: 'getBuildTags(string, number)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildTags
     package: azure-devops-extension-api
     summary: Gets the tags for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBuildTags(project: string, buildId: number)'
+      content: >-
+        function getBuildTags(project: string, buildId: number):
+        Promise<string[]>
       parameters:
         - id: project
           type: string
@@ -1059,18 +1135,19 @@ methods:
           description: |
             The ID of the build.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'getBuildTimeline(string, number, string, number, string)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildTimeline
     package: azure-devops-extension-api
     summary: Gets details for a build
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildTimeline(project: string, buildId: number, timelineId?:
-        string, changeId?: number, planId?: string)
+        string, changeId?: number, planId?: string): Promise<Timeline>
       parameters:
         - id: project
           type: string
@@ -1089,18 +1166,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Timeline" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Timeline" />&gt;
   - name: 'getBuildWorkItemsRefs(string, number, number)'
     uid: azure-devops-extension-api.BuildRestClient.getBuildWorkItemsRefs
     package: azure-devops-extension-api
     summary: Gets the work items associated with a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildWorkItemsRefs(project: string, buildId: number, top?:
-        number)
+        number): Promise<ResourceRef[]>
       parameters:
         - id: project
           type: string
@@ -1113,19 +1191,20 @@ methods:
           description: |
             The maximum number of work items to return.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ResourceRef" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ResourceRef" />[]&gt;'
   - name: 'getBuildWorkItemsRefsFromCommits(string[], string, number, number)'
     uid: >-
       azure-devops-extension-api.BuildRestClient.getBuildWorkItemsRefsFromCommits
     package: azure-devops-extension-api
     summary: 'Gets the work items associated with a build, filtered to specific commits.'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBuildWorkItemsRefsFromCommits(commitIds: string[], project:
-        string, buildId: number, top?: number)
+        string, buildId: number, top?: number): Promise<ResourceRef[]>
       parameters:
         - id: commitIds
           type: 'string[]'
@@ -1142,18 +1221,19 @@ methods:
             The maximum number of work items to return, or the number of commits
             to consider if no commit IDs are specified.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ResourceRef" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ResourceRef" />[]&gt;'
   - name: 'getChangesBetweenBuilds(string, number, number, number)'
     uid: azure-devops-extension-api.BuildRestClient.getChangesBetweenBuilds
     package: azure-devops-extension-api
     summary: Gets the changes made to the repository between two given builds.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getChangesBetweenBuilds(project: string, fromBuildId?: number,
-        toBuildId?: number, top?: number)
+        toBuildId?: number, top?: number): Promise<Change[]>
       parameters:
         - id: project
           type: string
@@ -1169,19 +1249,20 @@ methods:
           description: |
             The maximum number of changes to return.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Change" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Change" />[]&gt;'
   - name: 'getDefinition(string, number, number, Date, string[], boolean)'
     uid: azure-devops-extension-api.BuildRestClient.getDefinition
     package: azure-devops-extension-api
     summary: 'Gets a definition, optionally at a specific revision.'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDefinition(project: string, definitionId: number, revision?:
         number, minMetricsTime?: Date, propertyFilters?: string[],
-        includeLatestBuilds?: boolean)
+        includeLatestBuilds?: boolean): Promise<BuildDefinition>
       parameters:
         - id: project
           type: string
@@ -1207,20 +1288,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildDefinition"
           />&gt;
-        description: ''
   - name: 'getDefinitionMetrics(string, number, Date)'
     uid: azure-devops-extension-api.BuildRestClient.getDefinitionMetrics
     package: azure-devops-extension-api
     summary: Gets build metrics for a definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDefinitionMetrics(project: string, definitionId: number,
-        minMetricsTime?: Date)
+        minMetricsTime?: Date): Promise<BuildMetric[]>
       parameters:
         - id: project
           type: string
@@ -1233,18 +1315,19 @@ methods:
           description: |
             The date from which to calculate metrics.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BuildMetric" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BuildMetric" />[]&gt;'
   - name: 'getDefinitionProperties(string, number, string[])'
     uid: azure-devops-extension-api.BuildRestClient.getDefinitionProperties
     package: azure-devops-extension-api
     summary: Gets properties for a definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDefinitionProperties(project: string, definitionId: number,
-        filter?: string[])
+        filter?: string[]): Promise<any>
       parameters:
         - id: project
           type: string
@@ -1258,16 +1341,19 @@ methods:
             A comma-delimited list of properties. If specified, filters to these
             specific properties.
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'getDefinitionResources(string, number)'
     uid: azure-devops-extension-api.BuildRestClient.getDefinitionResources
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getDefinitionResources(project: string, definitionId: number)'
+      content: >-
+        function getDefinitionResources(project: string, definitionId: number):
+        Promise<DefinitionResourceReference[]>
       parameters:
         - id: project
           type: string
@@ -1277,18 +1363,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DefinitionResourceReference" />[]&gt;
-        description: ''
   - name: 'getDefinitionRevisions(string, number)'
     uid: azure-devops-extension-api.BuildRestClient.getDefinitionRevisions
     package: azure-devops-extension-api
     summary: Gets all revisions of a definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getDefinitionRevisions(project: string, definitionId: number)'
+      content: >-
+        function getDefinitionRevisions(project: string, definitionId: number):
+        Promise<BuildDefinitionRevision[]>
       parameters:
         - id: project
           type: string
@@ -1298,10 +1387,10 @@ methods:
           description: |
             The ID of the definition.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BuildDefinitionRevision" />[]&gt;
-        description: ''
   - name: >-
       getDefinitions(string, string, string, string, DefinitionQueryOrder,
       number, string, Date, number[], string, Date, Date, boolean, boolean,
@@ -1309,6 +1398,7 @@ methods:
     uid: azure-devops-extension-api.BuildRestClient.getDefinitions
     package: azure-devops-extension-api
     summary: Gets a list of definitions.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1319,7 +1409,7 @@ methods:
         definitionIds?: number[], path?: string, builtAfter?: Date,
         notBuiltAfter?: Date, includeAllProperties?: boolean,
         includeLatestBuilds?: boolean, taskIdFilter?: string, processType?:
-        number, yamlFilename?: string)
+        number, yamlFilename?: string): Promise<BuildDefinitionReference[]>
       parameters:
         - id: project
           type: string
@@ -1393,20 +1483,21 @@ methods:
             If specified, filters to YAML definitions that match the given
             filename.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BuildDefinitionReference" />[]&gt;
-        description: ''
   - name: 'getDefinitionTags(string, number, number)'
     uid: azure-devops-extension-api.BuildRestClient.getDefinitionTags
     package: azure-devops-extension-api
     summary: Gets the tags for a definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDefinitionTags(project: string, definitionId: number,
-        revision?: number)
+        revision?: number): Promise<string[]>
       parameters:
         - id: project
           type: string
@@ -1420,18 +1511,19 @@ methods:
             The definition revision number. If not specified, uses the latest
             revision of the definition.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'getFile(string, number, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getFile
     package: azure-devops-extension-api
     summary: Gets a file from the build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getFile(project: string, buildId: number, artifactName: string,
-        fileId: string, fileName: string)
+        fileId: string, fileName: string): Promise<ArrayBuffer>
       parameters:
         - id: project
           type: string
@@ -1450,19 +1542,20 @@ methods:
           description: |
             The name that the file will be set to.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getFileContents(string, string, string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getFileContents
     package: azure-devops-extension-api
     summary: Gets the contents of a file in the given source code repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getFileContents(project: string, providerName: string,
         serviceEndpointId?: string, repository?: string, commitOrBranch?:
-        string, path?: string)
+        string, path?: string): Promise<string>
       parameters:
         - id: project
           type: string
@@ -1493,18 +1586,19 @@ methods:
             The path to the file to retrieve, relative to the root of the
             repository.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: 'getFolders(string, string, FolderQueryOrder)'
     uid: azure-devops-extension-api.BuildRestClient.getFolders
     package: azure-devops-extension-api
     summary: Gets a list of build definition folders.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getFolders(project: string, path?: string, queryOrder?:
-        FolderQueryOrder)
+        FolderQueryOrder): Promise<Folder[]>
       parameters:
         - id: project
           type: string
@@ -1517,20 +1611,21 @@ methods:
           description: |
             The order in which folders should be returned.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Folder" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Folder" />[]&gt;'
   - name: 'getLatestBuild(string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getLatestBuild
     package: azure-devops-extension-api
     summary: >-
       Gets the latest build for a definition, optionally scoped to a specific
       branch.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getLatestBuild(project: string, definition: string,
-        branchName?: string)
+        branchName?: string): Promise<Build>
       parameters:
         - id: project
           type: string
@@ -1545,19 +1640,20 @@ methods:
           description: |
             optional parameter that indicates the specific branch to use
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Build" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Build" />&gt;
   - name: 'getPathContents(string, string, string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getPathContents
     package: azure-devops-extension-api
     summary: Gets the contents of a directory in the given source code repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPathContents(project: string, providerName: string,
         serviceEndpointId?: string, repository?: string, commitOrBranch?:
-        string, path?: string)
+        string, path?: string): Promise<SourceRepositoryItem[]>
       parameters:
         - id: project
           type: string
@@ -1587,20 +1683,21 @@ methods:
           description: |
             The path contents to list, relative to the root of the repository.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.SourceRepositoryItem"
           />[]&gt;
-        description: ''
   - name: 'getProjectMetrics(string, string, Date)'
     uid: azure-devops-extension-api.BuildRestClient.getProjectMetrics
     package: azure-devops-extension-api
     summary: Gets build metrics for a project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getProjectMetrics(project: string, metricAggregationType?:
-        string, minMetricsTime?: Date)
+        string, minMetricsTime?: Date): Promise<BuildMetric[]>
       parameters:
         - id: project
           type: string
@@ -1613,18 +1710,19 @@ methods:
           description: |
             The date from which to calculate metrics.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BuildMetric" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BuildMetric" />[]&gt;'
   - name: 'getProjectResources(string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getProjectResources
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getProjectResources(project: string, type?: string, id?:
-        string)
+        string): Promise<DefinitionResourceReference[]>
       parameters:
         - id: project
           type: string
@@ -1637,21 +1735,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DefinitionResourceReference" />[]&gt;
-        description: ''
   - name: 'getPullRequest(string, string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getPullRequest
     package: azure-devops-extension-api
     summary: Gets a pull request object from source provider.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequest(project: string, providerName: string,
         pullRequestId: string, repositoryId?: string, serviceEndpointId?:
-        string)
+        string): Promise<PullRequest>
       parameters:
         - id: project
           type: string
@@ -1674,39 +1773,43 @@ methods:
             omitted for providers that do not use service endpoints, e.g. TFVC
             or TFGit.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.PullRequest" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.PullRequest" />&gt;
   - name: getResourceUsage()
     uid: azure-devops-extension-api.BuildRestClient.getResourceUsage
     package: azure-devops-extension-api
     summary: Gets information about build resources in the system.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getResourceUsage()
+      content: 'function getResourceUsage(): Promise<BuildResourceUsage>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildResourceUsage"
           />&gt;
-        description: ''
   - name: getRetentionSettings(string)
     uid: azure-devops-extension-api.BuildRestClient.getRetentionSettings
     package: azure-devops-extension-api
     summary: Gets the project's retention settings.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getRetentionSettings(project: string)'
+      content: >-
+        function getRetentionSettings(project: string):
+        Promise<ProjectRetentionSetting>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ProjectRetentionSetting" />&gt;
-        description: ''
   - name: 'getStatusBadge(string, string, string, string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getStatusBadge
     package: azure-devops-extension-api
@@ -1716,13 +1819,14 @@ methods:
       more than one, then it is required to pass in a stageName value when
       specifying a jobName, and the same rule then applies for both if passing a
       configuration parameter.\</p\>
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getStatusBadge(project: string, definition: string,
         branchName?: string, stageName?: string, jobName?: string,
-        configuration?: string, label?: string)
+        configuration?: string, label?: string): Promise<string>
       parameters:
         - id: project
           type: string
@@ -1749,32 +1853,36 @@ methods:
           description: |
             Replaces the default text on the left side of the badge.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: getTags(string)
     uid: azure-devops-extension-api.BuildRestClient.getTags
     package: azure-devops-extension-api
     summary: Gets a list of all build tags in the project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTags(project: string)'
+      content: 'function getTags(project: string): Promise<string[]>'
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'getTemplate(string, string)'
     uid: azure-devops-extension-api.BuildRestClient.getTemplate
     package: azure-devops-extension-api
     summary: Gets a specific build definition template.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTemplate(project: string, templateId: string)'
+      content: >-
+        function getTemplate(project: string, templateId: string):
+        Promise<BuildDefinitionTemplate>
       parameters:
         - id: project
           type: string
@@ -1784,38 +1892,42 @@ methods:
           description: |
             The ID of the requested template.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BuildDefinitionTemplate" />&gt;
-        description: ''
   - name: getTemplates(string)
     uid: azure-devops-extension-api.BuildRestClient.getTemplates
     package: azure-devops-extension-api
     summary: Gets all definition templates.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTemplates(project: string)'
+      content: >-
+        function getTemplates(project: string):
+        Promise<BuildDefinitionTemplate[]>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BuildDefinitionTemplate" />[]&gt;
-        description: ''
   - name: 'getWorkItemsBetweenBuilds(string, number, number, number)'
     uid: azure-devops-extension-api.BuildRestClient.getWorkItemsBetweenBuilds
     package: azure-devops-extension-api
     summary: Gets all the work items between two builds.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWorkItemsBetweenBuilds(project: string, fromBuildId: number,
-        toBuildId: number, top?: number)
+        toBuildId: number, top?: number): Promise<ResourceRef[]>
       parameters:
         - id: project
           type: string
@@ -1831,18 +1943,20 @@ methods:
           description: |
             The maximum number of work items to return.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ResourceRef" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ResourceRef" />[]&gt;'
   - name: 'listBranches(string, string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.listBranches
     package: azure-devops-extension-api
     summary: Gets a list of branches for the given source code repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function listBranches(project: string, providerName: string,
-        serviceEndpointId?: string, repository?: string, branchName?: string)
+        serviceEndpointId?: string, repository?: string, branchName?: string):
+        Promise<string[]>
       parameters:
         - id: project
           type: string
@@ -1867,21 +1981,23 @@ methods:
           description: |
             If supplied, the name of the branch to check for specifically.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: >-
       listRepositories(string, string, string, string, ResultSet, boolean,
       string)
     uid: azure-devops-extension-api.BuildRestClient.listRepositories
     package: azure-devops-extension-api
     summary: Gets a list of source code repositories.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function listRepositories(project: string, providerName: string,
         serviceEndpointId?: string, repository?: string, resultSet?: ResultSet,
-        pageResults?: boolean, continuationToken?: string)
+        pageResults?: boolean, continuationToken?: string):
+        Promise<SourceRepositories>
       parameters:
         - id: project
           type: string
@@ -1917,38 +2033,43 @@ methods:
             previous call to this method, that can be used to return the next
             set of repositories.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.SourceRepositories"
           />&gt;
-        description: ''
   - name: listSourceProviders(string)
     uid: azure-devops-extension-api.BuildRestClient.listSourceProviders
     package: azure-devops-extension-api
     summary: Get a list of source providers and their capabilities.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function listSourceProviders(project: string)'
+      content: >-
+        function listSourceProviders(project: string):
+        Promise<SourceProviderAttributes[]>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.SourceProviderAttributes" />[]&gt;
-        description: ''
   - name: 'listWebhooks(string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.listWebhooks
     package: azure-devops-extension-api
     summary: Gets a list of webhooks installed in the given source code repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function listWebhooks(project: string, providerName: string,
-        serviceEndpointId?: string, repository?: string)
+        serviceEndpointId?: string, repository?: string):
+        Promise<RepositoryWebhook[]>
       parameters:
         - id: project
           type: string
@@ -1969,20 +2090,21 @@ methods:
             repository to get webhooks. Can only be omitted for providers that
             do not support multiple repositories.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.RepositoryWebhook"
           />[]&gt;
-        description: ''
   - name: 'queueBuild(Build, string, boolean, string, number)'
     uid: azure-devops-extension-api.BuildRestClient.queueBuild
     package: azure-devops-extension-api
     summary: Queues a build
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queueBuild(build: Build, project: string, ignoreWarnings?:
-        boolean, checkInTicket?: string, sourceBuildId?: number)
+        boolean, checkInTicket?: string, sourceBuildId?: number): Promise<Build>
       parameters:
         - id: build
           type: <xref uid="azure-devops-extension-api.Build" />
@@ -2001,18 +2123,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Build" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Build" />&gt;
   - name: 'restoreDefinition(string, number, boolean)'
     uid: azure-devops-extension-api.BuildRestClient.restoreDefinition
     package: azure-devops-extension-api
     summary: Restores a deleted definition
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function restoreDefinition(project: string, definitionId: number,
-        deleted: boolean)
+        deleted: boolean): Promise<BuildDefinition>
       parameters:
         - id: project
           type: string
@@ -2025,23 +2148,24 @@ methods:
           description: |
             When false, restores a deleted definition.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildDefinition"
           />&gt;
-        description: ''
   - name: 'restoreWebhooks(DefinitionTriggerType[], string, string, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.restoreWebhooks
     package: azure-devops-extension-api
     summary: >-
       Recreates the webhooks for the specified triggers in the given source code
       repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function restoreWebhooks(triggerTypes: DefinitionTriggerType[], project:
         string, providerName: string, serviceEndpointId?: string, repository?:
-        string)
+        string): Promise<void>
       parameters:
         - id: triggerTypes
           type: '<xref uid="azure-devops-extension-api.DefinitionTriggerType" />[]'
@@ -2065,18 +2189,19 @@ methods:
             repository to get webhooks. Can only be omitted for providers that
             do not support multiple repositories.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'saveTemplate(BuildDefinitionTemplate, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.saveTemplate
     package: azure-devops-extension-api
     summary: Updates an existing build definition template.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function saveTemplate(template: BuildDefinitionTemplate, project:
-        string, templateId: string)
+        string, templateId: string): Promise<BuildDefinitionTemplate>
       parameters:
         - id: template
           type: <xref uid="azure-devops-extension-api.BuildDefinitionTemplate" />
@@ -2089,20 +2214,21 @@ methods:
           description: |
             The ID of the template.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BuildDefinitionTemplate" />&gt;
-        description: ''
   - name: 'updateBuild(Build, string, number, boolean)'
     uid: azure-devops-extension-api.BuildRestClient.updateBuild
     package: azure-devops-extension-api
     summary: Updates a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateBuild(build: Build, project: string, buildId: number,
-        retry?: boolean)
+        retry?: boolean): Promise<Build>
       parameters:
         - id: build
           type: <xref uid="azure-devops-extension-api.Build" />
@@ -2118,18 +2244,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Build" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Build" />&gt;
   - name: 'updateBuildProperties(JsonPatchDocument, string, number)'
     uid: azure-devops-extension-api.BuildRestClient.updateBuildProperties
     package: azure-devops-extension-api
     summary: Updates properties for a build.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateBuildProperties(document: JsonPatchDocument, project:
-        string, buildId: number)
+        string, buildId: number): Promise<any>
       parameters:
         - id: document
           type: <xref uid="azure-devops-extension-api.JsonPatchDocument" />
@@ -2142,16 +2269,19 @@ methods:
           description: |
             The ID of the build.
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'updateBuilds(Build[], string)'
     uid: azure-devops-extension-api.BuildRestClient.updateBuilds
     package: azure-devops-extension-api
     summary: Updates multiple builds.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function updateBuilds(builds: Build[], project: string)'
+      content: >-
+        function updateBuilds(builds: Build[], project: string):
+        Promise<Build[]>
       parameters:
         - id: builds
           type: '<xref uid="azure-devops-extension-api.Build" />[]'
@@ -2161,16 +2291,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Build" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Build" />[]&gt;'
   - name: 'updateBuildSettings(BuildSettings, string)'
     uid: azure-devops-extension-api.BuildRestClient.updateBuildSettings
     package: azure-devops-extension-api
     summary: Updates the build settings.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function updateBuildSettings(settings: BuildSettings, project?: string)'
+      content: >-
+        function updateBuildSettings(settings: BuildSettings, project?: string):
+        Promise<BuildSettings>
       parameters:
         - id: settings
           type: <xref uid="azure-devops-extension-api.BuildSettings" />
@@ -2180,19 +2313,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildSettings" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BuildSettings" />&gt;
   - name: 'updateDefinition(BuildDefinition, string, number, number, number)'
     uid: azure-devops-extension-api.BuildRestClient.updateDefinition
     package: azure-devops-extension-api
     summary: Updates an existing definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDefinition(definition: BuildDefinition, project: string,
         definitionId: number, secretsSourceDefinitionId?: number,
-        secretsSourceDefinitionRevision?: number)
+        secretsSourceDefinitionRevision?: number): Promise<BuildDefinition>
       parameters:
         - id: definition
           type: <xref uid="azure-devops-extension-api.BuildDefinition" />
@@ -2211,20 +2345,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildDefinition"
           />&gt;
-        description: ''
   - name: 'updateDefinitionProperties(JsonPatchDocument, string, number)'
     uid: azure-devops-extension-api.BuildRestClient.updateDefinitionProperties
     package: azure-devops-extension-api
     summary: Updates properties for a definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDefinitionProperties(document: JsonPatchDocument,
-        project: string, definitionId: number)
+        project: string, definitionId: number): Promise<any>
       parameters:
         - id: document
           type: <xref uid="azure-devops-extension-api.JsonPatchDocument" />
@@ -2237,16 +2372,19 @@ methods:
           description: |
             The ID of the definition.
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'updateFolder(Folder, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.updateFolder
     package: azure-devops-extension-api
     summary: Updates an existing folder at given  existing path
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function updateFolder(folder: Folder, project: string, path: string)'
+      content: >-
+        function updateFolder(folder: Folder, project: string, path: string):
+        Promise<Folder>
       parameters:
         - id: folder
           type: <xref uid="azure-devops-extension-api.Folder" />
@@ -2259,18 +2397,20 @@ methods:
           description: |
             The full path to the folder.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Folder" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Folder" />&gt;
   - name: 'updateRetentionSettings(UpdateProjectRetentionSettingModel, string)'
     uid: azure-devops-extension-api.BuildRestClient.updateRetentionSettings
     package: azure-devops-extension-api
     summary: Updates the project's retention settings.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateRetentionSettings(updateModel:
-        UpdateProjectRetentionSettingModel, project: string)
+        UpdateProjectRetentionSettingModel, project: string):
+        Promise<ProjectRetentionSetting>
       parameters:
         - id: updateModel
           type: >-
@@ -2283,20 +2423,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ProjectRetentionSetting" />&gt;
-        description: ''
   - name: 'updateStage(UpdateStageParameters, number, string, string)'
     uid: azure-devops-extension-api.BuildRestClient.updateStage
     package: azure-devops-extension-api
     summary: Update a build stage
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateStage(updateParameters: UpdateStageParameters, buildId:
-        number, stageRefName: string, project?: string)
+        number, stageRefName: string, project?: string): Promise<void>
       parameters:
         - id: updateParameters
           type: <xref uid="azure-devops-extension-api.UpdateStageParameters" />
@@ -2312,6 +2453,6 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

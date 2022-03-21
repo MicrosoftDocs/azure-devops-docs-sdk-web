@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.FileContainerRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: FileContainerRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.FileContainerRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -27,13 +29,14 @@ methods:
     uid: azure-devops-extension-api.FileContainerRestClient.createItems
     package: azure-devops-extension-api
     summary: Creates the specified items in in the referenced container.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createItems(items:
         VssJsonCollectionWrapperV<FileContainerItem[]>, containerId: number,
-        scope?: string)
+        scope?: string): Promise<FileContainerItem[]>
       parameters:
         - id: items
           type: >-
@@ -50,20 +53,21 @@ methods:
             A guid representing the scope of the container. This is often the
             project id.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.FileContainerItem"
           />[]&gt;
-        description: ''
   - name: 'deleteItem(number, string, string)'
     uid: azure-devops-extension-api.FileContainerRestClient.deleteItem
     package: azure-devops-extension-api
     summary: Deletes the specified items in a container.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteItem(containerId: number, itemPath: string, scope?:
-        string)
+        string): Promise<void>
       parameters:
         - id: containerId
           type: number
@@ -77,18 +81,21 @@ methods:
             A guid representing the scope of the container. This is often the
             project id.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'getContainers(string, string)'
     uid: azure-devops-extension-api.FileContainerRestClient.getContainers
     package: azure-devops-extension-api
     summary: >-
       Gets containers filtered by a comma separated list of artifact uris within
       the same scope, if not specified returns all containers
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getContainers(scope?: string, artifactUris?: string)'
+      content: >-
+        function getContainers(scope?: string, artifactUris?: string):
+        Promise<FileContainer[]>
       parameters:
         - id: scope
           type: string
@@ -100,23 +107,25 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.FileContainer"
           />[]&gt;
-        description: ''
   - name: >-
       getItems(number, string, string, boolean, string, string, boolean,
       boolean)
     uid: azure-devops-extension-api.FileContainerRestClient.getItems
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getItems(containerId: number, scope?: string, itemPath?:
         string, metadata?: boolean, format?: string, downloadFileName?: string,
-        includeDownloadTickets?: boolean, isShallow?: boolean)
+        includeDownloadTickets?: boolean, isShallow?: boolean):
+        Promise<FileContainerItem[]>
       parameters:
         - id: containerId
           type: number
@@ -144,8 +153,8 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.FileContainerItem"
           />[]&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

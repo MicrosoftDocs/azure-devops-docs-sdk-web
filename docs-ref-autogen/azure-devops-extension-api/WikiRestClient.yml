@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.WikiRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: WikiRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.WikiRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,24 +28,26 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'addComment(CommentCreateParameters, string, string, number)'
     uid: azure-devops-extension-api.WikiRestClient.addComment
     package: azure-devops-extension-api
     summary: Add a comment on a wiki page.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addComment(request: CommentCreateParameters, project: string,
-        wikiIdentifier: string, pageId: number)
+        wikiIdentifier: string, pageId: number): Promise<Comment>
       parameters:
         - id: request
           type: <xref uid="azure-devops-extension-api.CommentCreateParameters" />
@@ -59,18 +63,20 @@ methods:
           description: |
             Wiki page ID.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
   - name: 'addCommentReaction(string, string, number, number, CommentReactionType)'
     uid: azure-devops-extension-api.WikiRestClient.addCommentReaction
     package: azure-devops-extension-api
     summary: Add a reaction on a wiki page comment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addCommentReaction(project: string, wikiIdentifier: string,
-        pageId: number, commentId: number, type: CommentReactionType)
+        pageId: number, commentId: number, type: CommentReactionType):
+        Promise<CommentReaction>
       parameters:
         - id: project
           type: string
@@ -89,20 +95,21 @@ methods:
           description: |
             Type of the reaction being added
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.CommentReaction"
           />&gt;
-        description: ''
   - name: 'createCommentAttachment(any, string, string, number)'
     uid: azure-devops-extension-api.WikiRestClient.createCommentAttachment
     package: azure-devops-extension-api
     summary: Uploads an attachment on a comment on a wiki page.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createCommentAttachment(content: any, project: string,
-        wikiIdentifier: string, pageId: number)
+        wikiIdentifier: string, pageId: number): Promise<CommentAttachment>
       parameters:
         - id: content
           type: any
@@ -118,10 +125,10 @@ methods:
           description: |
             Wiki page ID.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.CommentAttachment"
           />&gt;
-        description: ''
   - name: >-
       createOrUpdatePageViewStats(string, string, GitVersionDescriptor, string,
       string)
@@ -130,13 +137,14 @@ methods:
     summary: >-
       Creates a new page view stats resource or updates an existing page view
       stats resource.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createOrUpdatePageViewStats(project: string, wikiIdentifier:
         string, wikiVersion: GitVersionDescriptor, path: string, oldPath?:
-        string)
+        string): Promise<WikiPageViewStats>
       parameters:
         - id: project
           type: string
@@ -156,20 +164,21 @@ methods:
             Old page path. This is optional and required to rename path in
             existing page view stats.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WikiPageViewStats"
           />&gt;
-        description: ''
   - name: 'createWiki(WikiCreateParametersV2, string)'
     uid: azure-devops-extension-api.WikiRestClient.createWiki
     package: azure-devops-extension-api
     summary: Creates the wiki resource.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createWiki(wikiCreateParams: WikiCreateParametersV2, project?:
-        string)
+        string): Promise<WikiV2>
       parameters:
         - id: wikiCreateParams
           type: <xref uid="azure-devops-extension-api.WikiCreateParametersV2" />
@@ -179,18 +188,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />&gt;
   - name: 'deleteComment(string, string, number, number)'
     uid: azure-devops-extension-api.WikiRestClient.deleteComment
     package: azure-devops-extension-api
     summary: Delete a comment on a wiki page.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteComment(project: string, wikiIdentifier: string, pageId:
-        number, id: number)
+        number, id: number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -206,18 +216,20 @@ methods:
           description: |
             Comment ID.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteCommentReaction(string, string, number, number, CommentReactionType)'
     uid: azure-devops-extension-api.WikiRestClient.deleteCommentReaction
     package: azure-devops-extension-api
     summary: Delete a reaction on a wiki page comment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteCommentReaction(project: string, wikiIdentifier: string,
-        pageId: number, commentId: number, type: CommentReactionType)
+        pageId: number, commentId: number, type: CommentReactionType):
+        Promise<CommentReaction>
       parameters:
         - id: project
           type: string
@@ -236,18 +248,21 @@ methods:
           description: |
             Type of the reaction being deleted
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.CommentReaction"
           />&gt;
-        description: ''
   - name: 'deleteWiki(string, string)'
     uid: azure-devops-extension-api.WikiRestClient.deleteWiki
     package: azure-devops-extension-api
     summary: Deletes the wiki corresponding to the wiki ID or wiki name provided.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteWiki(wikiIdentifier: string, project?: string)'
+      content: >-
+        function deleteWiki(wikiIdentifier: string, project?: string):
+        Promise<WikiV2>
       parameters:
         - id: wikiIdentifier
           type: string
@@ -257,34 +272,36 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />&gt;
   - name: getAllWikis(string)
     uid: azure-devops-extension-api.WikiRestClient.getAllWikis
     package: azure-devops-extension-api
     summary: Gets all wikis in a project or collection.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAllWikis(project?: string)'
+      content: 'function getAllWikis(project?: string): Promise<WikiV2[]>'
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />[]&gt;'
   - name: 'getAttachmentContent(string, string, number, string)'
     uid: azure-devops-extension-api.WikiRestClient.getAttachmentContent
     package: azure-devops-extension-api
     summary: Downloads an attachment on a comment on a wiki page.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAttachmentContent(project: string, wikiIdentifier: string,
-        pageId: number, attachmentId: string)
+        pageId: number, attachmentId: string): Promise<ArrayBuffer>
       parameters:
         - id: project
           type: string
@@ -300,19 +317,20 @@ methods:
           description: |
             Attachment ID.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getComment(string, string, number, number, boolean, CommentExpandOptions)'
     uid: azure-devops-extension-api.WikiRestClient.getComment
     package: azure-devops-extension-api
     summary: Returns a comment associated with the Wiki Page.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getComment(project: string, wikiIdentifier: string, pageId:
         number, id: number, excludeDeleted?: boolean, expand?:
-        CommentExpandOptions)
+        CommentExpandOptions): Promise<Comment>
       parameters:
         - id: project
           type: string
@@ -334,8 +352,8 @@ methods:
           description: |
             Specifies the additional data retrieval options for comments.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
   - name: >-
       getEngagedUsers(string, string, number, number, CommentReactionType,
       number, number)
@@ -345,13 +363,14 @@ methods:
       Gets a list of users who have reacted for the given wiki comment with a
       given reaction type. Supports paging, with a default page size of 100
       users at a time.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getEngagedUsers(project: string, wikiIdentifier: string,
         pageId: number, commentId: number, type: CommentReactionType, top?:
-        number, skip?: number)
+        number, skip?: number): Promise<IdentityRef[]>
       parameters:
         - id: project
           type: string
@@ -379,8 +398,8 @@ methods:
             Number of engaged users to be skipped to page the next set of
             engaged users, defaults to 0
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IdentityRef" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IdentityRef" />[]&gt;'
   - name: >-
       getPageByIdText(string, string, number, VersionControlRecursionType,
       boolean)
@@ -390,13 +409,14 @@ methods:
       Gets metadata or content of the wiki page for the provided page id.
       Content negotiation is done based on the \`Accept\` header sent in the
       request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPageByIdText(project: string, wikiIdentifier: string, id:
         number, recursionLevel?: VersionControlRecursionType, includeContent?:
-        boolean)
+        boolean): Promise<string>
       parameters:
         - id: project
           type: string
@@ -420,8 +440,8 @@ methods:
             True to include the content of the page in the response for Json
             content type. Defaults to false (Optional)
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: >-
       getPageByIdZip(string, string, number, VersionControlRecursionType,
       boolean)
@@ -431,13 +451,14 @@ methods:
       Gets metadata or content of the wiki page for the provided page id.
       Content negotiation is done based on the \`Accept\` header sent in the
       request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPageByIdZip(project: string, wikiIdentifier: string, id:
         number, recursionLevel?: VersionControlRecursionType, includeContent?:
-        boolean)
+        boolean): Promise<ArrayBuffer>
       parameters:
         - id: project
           type: string
@@ -461,8 +482,8 @@ methods:
             True to include the content of the page in the response for Json
             content type. Defaults to false (Optional)
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: >-
       getPageText(string, string, string, VersionControlRecursionType,
       GitVersionDescriptor, boolean)
@@ -471,13 +492,15 @@ methods:
     summary: >-
       Gets metadata or content of the wiki page for the provided path. Content
       negotiation is done based on the \`Accept\` header sent in the request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPageText(project: string, wikiIdentifier: string, path?:
         string, recursionLevel?: VersionControlRecursionType,
-        versionDescriptor?: GitVersionDescriptor, includeContent?: boolean)
+        versionDescriptor?: GitVersionDescriptor, includeContent?: boolean):
+        Promise<string>
       parameters:
         - id: project
           type: string
@@ -506,8 +529,8 @@ methods:
             True to include the content of the page in the response for Json
             content type. Defaults to false (Optional)
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: >-
       getPageZip(string, string, string, VersionControlRecursionType,
       GitVersionDescriptor, boolean)
@@ -516,13 +539,15 @@ methods:
     summary: >-
       Gets metadata or content of the wiki page for the provided path. Content
       negotiation is done based on the \`Accept\` header sent in the request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPageZip(project: string, wikiIdentifier: string, path?:
         string, recursionLevel?: VersionControlRecursionType,
-        versionDescriptor?: GitVersionDescriptor, includeContent?: boolean)
+        versionDescriptor?: GitVersionDescriptor, includeContent?: boolean):
+        Promise<ArrayBuffer>
       parameters:
         - id: project
           type: string
@@ -551,16 +576,19 @@ methods:
             True to include the content of the page in the response for Json
             content type. Defaults to false (Optional)
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getWiki(string, string)'
     uid: azure-devops-extension-api.WikiRestClient.getWiki
     package: azure-devops-extension-api
     summary: Gets the wiki corresponding to the wiki ID or wiki name provided.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWiki(wikiIdentifier: string, project?: string)'
+      content: >-
+        function getWiki(wikiIdentifier: string, project?: string):
+        Promise<WikiV2>
       parameters:
         - id: wikiIdentifier
           type: string
@@ -570,14 +598,15 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />&gt;
   - name: >-
       listComments(string, string, number, number, string, boolean,
       CommentExpandOptions, CommentSortOrder, number)
     uid: azure-devops-extension-api.WikiRestClient.listComments
     package: azure-devops-extension-api
     summary: Returns a pageable list of comments.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -585,7 +614,7 @@ methods:
         function listComments(project: string, wikiIdentifier: string, pageId:
         number, top?: number, continuationToken?: string, excludeDeleted?:
         boolean, expand?: CommentExpandOptions, order?: CommentSortOrder,
-        parentId?: number)
+        parentId?: number): Promise<CommentList>
       parameters:
         - id: project
           type: string
@@ -616,18 +645,20 @@ methods:
           description: |
             CommentId of the parent comment.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.CommentList" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.CommentList" />&gt;
   - name: 'updateComment(CommentUpdateParameters, string, string, number, number)'
     uid: azure-devops-extension-api.WikiRestClient.updateComment
     package: azure-devops-extension-api
     summary: Update a comment on a wiki page.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateComment(comment: CommentUpdateParameters, project:
-        string, wikiIdentifier: string, pageId: number, id: number)
+        string, wikiIdentifier: string, pageId: number, id: number):
+        Promise<Comment>
       parameters:
         - id: comment
           type: <xref uid="azure-devops-extension-api.CommentUpdateParameters" />
@@ -646,20 +677,21 @@ methods:
           description: |
             Comment ID.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
   - name: 'updateWiki(WikiUpdateParameters, string, string)'
     uid: azure-devops-extension-api.WikiRestClient.updateWiki
     package: azure-devops-extension-api
     summary: >-
       Updates the wiki corresponding to the wiki ID or wiki name provided using
       the update parameters.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateWiki(updateParameters: WikiUpdateParameters,
-        wikiIdentifier: string, project?: string)
+        wikiIdentifier: string, project?: string): Promise<WikiV2>
       parameters:
         - id: updateParameters
           type: <xref uid="azure-devops-extension-api.WikiUpdateParameters" />
@@ -672,6 +704,6 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WikiV2" />&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

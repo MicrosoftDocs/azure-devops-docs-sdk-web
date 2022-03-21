@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.FeatureAvailabilityRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: FeatureAvailabilityRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.FeatureAvailabilityRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -28,29 +30,31 @@ methods:
     summary: >-
       Retrieve a listing of all feature flags and their current states for a
       user
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAllFeatureFlags(userEmail?: string)'
+      content: 'function getAllFeatureFlags(userEmail?: string): Promise<FeatureFlag[]>'
       parameters:
         - id: userEmail
           type: string
           description: |
             The email of the user to check
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />[]&gt;'
   - name: 'getFeatureFlagByName(string, boolean)'
     uid: >-
       azure-devops-extension-api.FeatureAvailabilityRestClient.getFeatureFlagByName
     package: azure-devops-extension-api
     summary: Retrieve information on a single feature flag and its current states
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getFeatureFlagByName(name: string, checkFeatureExists?:
-        boolean)
+        boolean): Promise<FeatureFlag>
       parameters:
         - id: name
           type: string
@@ -60,8 +64,8 @@ methods:
           description: |
             Check if feature exists
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />&gt;
   - name: 'getFeatureFlagByNameAndUserEmail(string, string, boolean)'
     uid: >-
       azure-devops-extension-api.FeatureAvailabilityRestClient.getFeatureFlagByNameAndUserEmail
@@ -69,12 +73,13 @@ methods:
     summary: >-
       Retrieve information on a single feature flag and its current states for a
       user
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getFeatureFlagByNameAndUserEmail(name: string, userEmail:
-        string, checkFeatureExists?: boolean)
+        string, checkFeatureExists?: boolean): Promise<FeatureFlag>
       parameters:
         - id: name
           type: string
@@ -87,8 +92,8 @@ methods:
           description: |
             Check if feature exists
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />&gt;
   - name: 'getFeatureFlagByNameAndUserId(string, string, boolean)'
     uid: >-
       azure-devops-extension-api.FeatureAvailabilityRestClient.getFeatureFlagByNameAndUserId
@@ -96,12 +101,13 @@ methods:
     summary: >-
       Retrieve information on a single feature flag and its current states for a
       user
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getFeatureFlagByNameAndUserId(name: string, userId: string,
-        checkFeatureExists?: boolean)
+        checkFeatureExists?: boolean): Promise<FeatureFlag>
       parameters:
         - id: name
           type: string
@@ -114,19 +120,20 @@ methods:
           description: |
             Check if feature exists
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />&gt;
   - name: 'updateFeatureFlag(FeatureFlagPatch, string, string, boolean, boolean)'
     uid: azure-devops-extension-api.FeatureAvailabilityRestClient.updateFeatureFlag
     package: azure-devops-extension-api
     summary: Change the state of an individual feature flag for a name
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateFeatureFlag(state: FeatureFlagPatch, name: string,
         userEmail?: string, checkFeatureExists?: boolean,
-        setAtApplicationLevelAlso?: boolean)
+        setAtApplicationLevelAlso?: boolean): Promise<FeatureFlag>
       parameters:
         - id: state
           type: <xref uid="azure-devops-extension-api.FeatureFlagPatch" />
@@ -145,6 +152,6 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.FeatureFlag" />&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

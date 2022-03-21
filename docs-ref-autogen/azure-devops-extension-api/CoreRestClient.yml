@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.CoreRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: CoreRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.CoreRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,24 +28,27 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'createConnectedService(WebApiConnectedServiceDetails, string)'
     uid: azure-devops-extension-api.CoreRestClient.createConnectedService
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createConnectedService(connectedServiceCreationData:
-        WebApiConnectedServiceDetails, projectId: string)
+        WebApiConnectedServiceDetails, projectId: string):
+        Promise<WebApiConnectedService>
       parameters:
         - id: connectedServiceCreationData
           type: >-
@@ -55,18 +60,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WebApiConnectedService" />&gt;
-        description: ''
   - name: 'createIdentityMru(IdentityData, string)'
     uid: azure-devops-extension-api.CoreRestClient.createIdentityMru
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createIdentityMru(mruData: IdentityData, mruName: string)'
+      content: >-
+        function createIdentityMru(mruData: IdentityData, mruName: string):
+        Promise<void>
       parameters:
         - id: mruData
           type: <xref uid="azure-devops-extension-api.IdentityData" />
@@ -76,32 +84,36 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: createOrUpdateProxy(Proxy)
     uid: azure-devops-extension-api.CoreRestClient.createOrUpdateProxy
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createOrUpdateProxy(proxy: Proxy)'
+      content: 'function createOrUpdateProxy(proxy: Proxy): Promise<Proxy>'
       parameters:
         - id: proxy
           type: <xref uid="azure-devops-extension-api.Proxy" />
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Proxy" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Proxy" />&gt;
   - name: 'createTeam(WebApiTeam, string)'
     uid: azure-devops-extension-api.CoreRestClient.createTeam
     package: azure-devops-extension-api
     summary: Create a team in a team project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createTeam(team: WebApiTeam, projectId: string)'
+      content: >-
+        function createTeam(team: WebApiTeam, projectId: string):
+        Promise<WebApiTeam>
       parameters:
         - id: team
           type: <xref uid="azure-devops-extension-api.WebApiTeam" />
@@ -112,16 +124,19 @@ methods:
             The name or ID (GUID) of the team project in which to create the
             team.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />&gt;
   - name: 'deleteIdentityMru(IdentityData, string)'
     uid: azure-devops-extension-api.CoreRestClient.deleteIdentityMru
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteIdentityMru(mruData: IdentityData, mruName: string)'
+      content: >-
+        function deleteIdentityMru(mruData: IdentityData, mruName: string):
+        Promise<void>
       parameters:
         - id: mruData
           type: <xref uid="azure-devops-extension-api.IdentityData" />
@@ -131,16 +146,17 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteProxy(string, string)'
     uid: azure-devops-extension-api.CoreRestClient.deleteProxy
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteProxy(proxyUrl: string, site?: string)'
+      content: 'function deleteProxy(proxyUrl: string, site?: string): Promise<void>'
       parameters:
         - id: proxyUrl
           type: string
@@ -150,16 +166,17 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteTeam(string, string)'
     uid: azure-devops-extension-api.CoreRestClient.deleteTeam
     package: azure-devops-extension-api
     summary: Delete a team.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteTeam(projectId: string, teamId: string)'
+      content: 'function deleteTeam(projectId: string, teamId: string): Promise<void>'
       parameters:
         - id: projectId
           type: string
@@ -171,18 +188,19 @@ methods:
           description: |
             The name or ID of the team to delete.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'getAllTeams(boolean, number, number, boolean)'
     uid: azure-devops-extension-api.CoreRestClient.getAllTeams
     package: azure-devops-extension-api
     summary: Get a list of all teams.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAllTeams(mine?: boolean, top?: number, skip?: number,
-        expandIdentity?: boolean)
+        expandIdentity?: boolean): Promise<WebApiTeam[]>
       parameters:
         - id: mine
           type: boolean
@@ -201,16 +219,19 @@ methods:
             A value indicating whether or not to expand Identity information in
             the result WebApiTeam object.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />[]&gt;'
   - name: 'getConnectedServiceDetails(string, string)'
     uid: azure-devops-extension-api.CoreRestClient.getConnectedServiceDetails
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getConnectedServiceDetails(projectId: string, name: string)'
+      content: >-
+        function getConnectedServiceDetails(projectId: string, name: string):
+        Promise<WebApiConnectedServiceDetails>
       parameters:
         - id: projectId
           type: string
@@ -220,20 +241,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WebApiConnectedServiceDetails" />&gt;
-        description: ''
   - name: 'getConnectedServices(string, ConnectedServiceKind)'
     uid: azure-devops-extension-api.CoreRestClient.getConnectedServices
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getConnectedServices(projectId: string, kind?:
-        ConnectedServiceKind)
+        ConnectedServiceKind): Promise<WebApiConnectedService[]>
       parameters:
         - id: projectId
           type: string
@@ -243,65 +265,69 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WebApiConnectedService" />[]&gt;
-        description: ''
   - name: getIdentityMru(string)
     uid: azure-devops-extension-api.CoreRestClient.getIdentityMru
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getIdentityMru(mruName: string)'
+      content: 'function getIdentityMru(mruName: string): Promise<IdentityRef[]>'
       parameters:
         - id: mruName
           type: string
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IdentityRef" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IdentityRef" />[]&gt;'
   - name: getProcessById(string)
     uid: azure-devops-extension-api.CoreRestClient.getProcessById
     package: azure-devops-extension-api
     summary: Get a process by ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getProcessById(processId: string)'
+      content: 'function getProcessById(processId: string): Promise<Process>'
       parameters:
         - id: processId
           type: string
           description: |
             ID for a process.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Process" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Process" />&gt;
   - name: getProcesses()
     uid: azure-devops-extension-api.CoreRestClient.getProcesses
     package: azure-devops-extension-api
     summary: Get a list of processes.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getProcesses()
+      content: 'function getProcesses(): Promise<Process[]>'
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Process" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Process" />[]&gt;'
   - name: 'getProject(string, boolean, boolean)'
     uid: azure-devops-extension-api.CoreRestClient.getProject
     package: azure-devops-extension-api
     summary: >-
       Get project with the specified id or name, optionally including
       capabilities.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getProject(projectId: string, includeCapabilities?: boolean,
-        includeHistory?: boolean)
+        includeHistory?: boolean): Promise<TeamProject>
       parameters:
         - id: projectId
           type: string
@@ -316,34 +342,40 @@ methods:
           description: |
             Search within renamed projects (that had such name in the past).
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TeamProject" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TeamProject" />&gt;
   - name: getProjectCollection(string)
     uid: azure-devops-extension-api.CoreRestClient.getProjectCollection
     package: azure-devops-extension-api
     summary: Get project collection with the specified id or name.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getProjectCollection(collectionId: string)'
+      content: >-
+        function getProjectCollection(collectionId: string):
+        Promise<TeamProjectCollection>
       parameters:
         - id: collectionId
           type: string
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TeamProjectCollection" />&gt;
-        description: ''
   - name: 'getProjectCollections(number, number)'
     uid: azure-devops-extension-api.CoreRestClient.getProjectCollections
     package: azure-devops-extension-api
     summary: Get project collection references for this application.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getProjectCollections(top?: number, skip?: number)'
+      content: >-
+        function getProjectCollections(top?: number, skip?: number):
+        Promise<TeamProjectCollectionReference[]>
       parameters:
         - id: top
           type: number
@@ -353,35 +385,41 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TeamProjectCollectionReference"
           />[]&gt;
-        description: ''
   - name: getProjectHistoryEntries(number)
     uid: azure-devops-extension-api.CoreRestClient.getProjectHistoryEntries
     package: azure-devops-extension-api
     summary: Gets the history of changes to the project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getProjectHistoryEntries(minRevision?: number)'
+      content: >-
+        function getProjectHistoryEntries(minRevision?: number):
+        Promise<ProjectInfo[]>
       parameters:
         - id: minRevision
           type: number
           description: |
             The minimum revision number to return in the history.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ProjectInfo" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ProjectInfo" />[]&gt;'
   - name: 'getProjectProperties(string, string[])'
     uid: azure-devops-extension-api.CoreRestClient.getProjectProperties
     package: azure-devops-extension-api
     summary: Get a collection of team project properties.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getProjectProperties(projectId: string, keys?: string[])'
+      content: >-
+        function getProjectProperties(projectId: string, keys?: string[]):
+        Promise<ProjectProperty[]>
       parameters:
         - id: projectId
           type: string
@@ -393,22 +431,24 @@ methods:
             characters ("?" and "*") are supported. If no key is specified, all
             properties will be returned.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ProjectProperty"
           />[]&gt;
-        description: ''
   - name: 'getProjects(any, number, number, string, boolean)'
     uid: azure-devops-extension-api.CoreRestClient.getProjects
     package: azure-devops-extension-api
     summary: >-
       Get all projects in the organization that the authenticated user has
       access to.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getProjects(stateFilter?: any, top?: number, skip?: number,
-        continuationToken?: string, getDefaultTeamImageUrl?: boolean)
+        continuationToken?: string, getDefaultTeamImageUrl?: boolean):
+        Promise<TeamProjectReference[]>
       parameters:
         - id: stateFilter
           type: any
@@ -429,20 +469,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TeamProjectReference"
           />[]&gt;
-        description: ''
   - name: 'getProjectsProperties(string[], string[])'
     uid: azure-devops-extension-api.CoreRestClient.getProjectsProperties
     package: azure-devops-extension-api
     summary: Get a collection of team project properties for multiple projects.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getProjectsProperties(projectIds: string[], properties?:
-        string[])
+        string[]): Promise<ProjectProperties[]>
       parameters:
         - id: projectIds
           type: 'string[]'
@@ -452,36 +493,38 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ProjectProperties"
           />[]&gt;
-        description: ''
   - name: getProxies(string)
     uid: azure-devops-extension-api.CoreRestClient.getProxies
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getProxies(proxyUrl?: string)'
+      content: 'function getProxies(proxyUrl?: string): Promise<Proxy[]>'
       parameters:
         - id: proxyUrl
           type: string
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Proxy" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Proxy" />[]&gt;'
   - name: 'getTeam(string, string, boolean)'
     uid: azure-devops-extension-api.CoreRestClient.getTeam
     package: azure-devops-extension-api
     summary: Get a specific team.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTeam(projectId: string, teamId: string, expandIdentity?:
-        boolean)
+        boolean): Promise<WebApiTeam>
       parameters:
         - id: projectId
           type: string
@@ -495,19 +538,20 @@ methods:
             A value indicating whether or not to expand Identity information in
             the result WebApiTeam object.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />&gt;
   - name: 'getTeamMembersWithExtendedProperties(string, string, number, number)'
     uid: >-
       azure-devops-extension-api.CoreRestClient.getTeamMembersWithExtendedProperties
     package: azure-devops-extension-api
     summary: Get a list of members for a specific team.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTeamMembersWithExtendedProperties(projectId: string, teamId:
-        string, top?: number, skip?: number)
+        string, top?: number, skip?: number): Promise<TeamMember[]>
       parameters:
         - id: projectId
           type: string
@@ -523,18 +567,19 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TeamMember" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TeamMember" />[]&gt;'
   - name: 'getTeams(string, boolean, number, number, boolean)'
     uid: azure-devops-extension-api.CoreRestClient.getTeams
     package: azure-devops-extension-api
     summary: Get a list of teams.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTeams(projectId: string, mine?: boolean, top?: number,
-        skip?: number, expandIdentity?: boolean)
+        skip?: number, expandIdentity?: boolean): Promise<WebApiTeam[]>
       parameters:
         - id: projectId
           type: string
@@ -556,8 +601,8 @@ methods:
             A value indicating whether or not to expand Identity information in
             the result WebApiTeam object.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />[]&gt;'
   - name: queueCreateProject(TeamProject)
     uid: azure-devops-extension-api.CoreRestClient.queueCreateProject
     package: azure-devops-extension-api
@@ -565,20 +610,23 @@ methods:
       Queues a project to be created. Use the
       [GetOperation](../../operations/operations/get) to periodically check for
       create project status.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function queueCreateProject(projectToCreate: TeamProject)'
+      content: >-
+        function queueCreateProject(projectToCreate: TeamProject):
+        Promise<OperationReference>
       parameters:
         - id: projectToCreate
           type: <xref uid="azure-devops-extension-api.TeamProject" />
           description: |
             The project to create.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OperationReference"
           />&gt;
-        description: ''
   - name: queueDeleteProject(string)
     uid: azure-devops-extension-api.CoreRestClient.queueDeleteProject
     package: azure-devops-extension-api
@@ -586,44 +634,51 @@ methods:
       Queues a project to be deleted. Use the
       [GetOperation](../../operations/operations/get) to periodically check for
       delete project status.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function queueDeleteProject(projectId: string)'
+      content: >-
+        function queueDeleteProject(projectId: string):
+        Promise<OperationReference>
       parameters:
         - id: projectId
           type: string
           description: |
             The project id of the project to delete.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OperationReference"
           />&gt;
-        description: ''
   - name: removeProjectAvatar(string)
     uid: azure-devops-extension-api.CoreRestClient.removeProjectAvatar
     package: azure-devops-extension-api
     summary: Removes the avatar for the project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function removeProjectAvatar(projectId: string)'
+      content: 'function removeProjectAvatar(projectId: string): Promise<void>'
       parameters:
         - id: projectId
           type: string
           description: |
             The ID or name of the project.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'setProjectAvatar(ProjectAvatar, string)'
     uid: azure-devops-extension-api.CoreRestClient.setProjectAvatar
     package: azure-devops-extension-api
     summary: Sets the avatar for the project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function setProjectAvatar(avatarBlob: ProjectAvatar, projectId: string)'
+      content: >-
+        function setProjectAvatar(avatarBlob: ProjectAvatar, projectId: string):
+        Promise<void>
       parameters:
         - id: avatarBlob
           type: <xref uid="azure-devops-extension-api.ProjectAvatar" />
@@ -633,18 +688,19 @@ methods:
           description: |
             The ID or name of the project.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'setProjectProperties(string, JsonPatchDocument)'
     uid: azure-devops-extension-api.CoreRestClient.setProjectProperties
     package: azure-devops-extension-api
     summary: 'Create, update, and delete team project properties.'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function setProjectProperties(projectId: string, patchDocument:
-        JsonPatchDocument)
+        JsonPatchDocument): Promise<void>
       parameters:
         - id: projectId
           type: string
@@ -658,16 +714,19 @@ methods:
             both creating and updating properties. The path consists of a
             forward slash and a property name.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updateIdentityMru(IdentityData, string)'
     uid: azure-devops-extension-api.CoreRestClient.updateIdentityMru
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function updateIdentityMru(mruData: IdentityData, mruName: string)'
+      content: >-
+        function updateIdentityMru(mruData: IdentityData, mruName: string):
+        Promise<void>
       parameters:
         - id: mruData
           type: <xref uid="azure-devops-extension-api.IdentityData" />
@@ -677,18 +736,21 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updateProject(TeamProject, string)'
     uid: azure-devops-extension-api.CoreRestClient.updateProject
     package: azure-devops-extension-api
     summary: >-
       Update an existing project's name, abbreviation, description, or restore a
       project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function updateProject(projectUpdate: TeamProject, projectId: string)'
+      content: >-
+        function updateProject(projectUpdate: TeamProject, projectId: string):
+        Promise<OperationReference>
       parameters:
         - id: projectUpdate
           type: <xref uid="azure-devops-extension-api.TeamProject" />
@@ -700,20 +762,21 @@ methods:
           description: |
             The project id of the project to update.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OperationReference"
           />&gt;
-        description: ''
   - name: 'updateTeam(WebApiTeam, string, string)'
     uid: azure-devops-extension-api.CoreRestClient.updateTeam
     package: azure-devops-extension-api
     summary: Update a team's name and/or description.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateTeam(teamData: WebApiTeam, projectId: string, teamId:
-        string)
+        string): Promise<WebApiTeam>
       parameters:
         - id: teamData
           type: <xref uid="azure-devops-extension-api.WebApiTeam" />
@@ -728,6 +791,6 @@ methods:
           description: |
             The name of ID of the team to update.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WebApiTeam" />&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.IJsonSchemaRegistration
 package: azure-devops-extension-api
 summary: Describes a JSON schema
 fullName: IJsonSchemaRegistration
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -11,15 +12,28 @@ properties:
   - name: fileMatch
     uid: azure-devops-extension-api.IJsonSchemaRegistration.fileMatch
     package: azure-devops-extension-api
-    summary: File patterns the schema applies to.
+    summary: |+
+      File patterns the schema applies to.
+
+      **Example**
+
+      ["tsconfig.json"]
+
+
+
+      **Example**
+
+      ["*.myschema.json"]
+
     fullName: fileMatch
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'fileMatch?: string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: schema
     uid: azure-devops-extension-api.IJsonSchemaRegistration.schema
     package: azure-devops-extension-api
@@ -29,22 +43,24 @@ properties:
       See
       https://github.com/Microsoft/vscode-json-languageservice/blob/master/src/jsonSchema.ts
     fullName: schema
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'schema?: any'
       return:
-        type: any
         description: ''
+        type: any
   - name: uri
     uid: azure-devops-extension-api.IJsonSchemaRegistration.uri
     package: azure-devops-extension-api
     summary: URI of the schema
     fullName: uri
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'uri: string'
       return:
-        type: string
         description: ''
+        type: string

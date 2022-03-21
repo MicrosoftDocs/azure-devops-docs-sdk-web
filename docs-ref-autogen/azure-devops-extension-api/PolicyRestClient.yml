@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.PolicyRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: PolicyRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.PolicyRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,24 +28,26 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'createPolicyConfiguration(PolicyConfiguration, string, number)'
     uid: azure-devops-extension-api.PolicyRestClient.createPolicyConfiguration
     package: azure-devops-extension-api
     summary: Create a policy configuration of a given policy type.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createPolicyConfiguration(configuration: PolicyConfiguration,
-        project: string, configurationId?: number)
+        project: string, configurationId?: number): Promise<PolicyConfiguration>
       parameters:
         - id: configuration
           type: <xref uid="azure-devops-extension-api.PolicyConfiguration" />
@@ -56,20 +60,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
           />&gt;
-        description: ''
   - name: 'deletePolicyConfiguration(string, number)'
     uid: azure-devops-extension-api.PolicyRestClient.deletePolicyConfiguration
     package: azure-devops-extension-api
     summary: Delete a policy configuration by its ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deletePolicyConfiguration(project: string, configurationId:
-        number)
+        number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -79,18 +84,19 @@ methods:
           description: |
             ID of the policy configuration to delete.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'getPolicyConfiguration(string, number)'
     uid: azure-devops-extension-api.PolicyRestClient.getPolicyConfiguration
     package: azure-devops-extension-api
     summary: Get a policy configuration by its ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPolicyConfiguration(project: string, configurationId:
-        number)
+        number): Promise<PolicyConfiguration>
       parameters:
         - id: project
           type: string
@@ -100,20 +106,22 @@ methods:
           description: |
             ID of the policy configuration
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
           />&gt;
-        description: ''
   - name: 'getPolicyConfigurationRevision(string, number, number)'
     uid: azure-devops-extension-api.PolicyRestClient.getPolicyConfigurationRevision
     package: azure-devops-extension-api
     summary: Retrieve a specific revision of a given policy by ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPolicyConfigurationRevision(project: string,
-        configurationId: number, revisionId: number)
+        configurationId: number, revisionId: number):
+        Promise<PolicyConfiguration>
       parameters:
         - id: project
           type: string
@@ -126,21 +134,23 @@ methods:
           description: |
             The revision ID.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
           />&gt;
-        description: ''
   - name: 'getPolicyConfigurationRevisions(string, number, number, number)'
     uid: >-
       azure-devops-extension-api.PolicyRestClient.getPolicyConfigurationRevisions
     package: azure-devops-extension-api
     summary: Retrieve all revisions for a given policy.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPolicyConfigurationRevisions(project: string,
-        configurationId: number, top?: number, skip?: number)
+        configurationId: number, top?: number, skip?: number):
+        Promise<PolicyConfiguration[]>
       parameters:
         - id: project
           type: string
@@ -157,20 +167,21 @@ methods:
             The number of revisions to ignore. For example, to retrieve results
             101-150, set top to 50 and skip to 100.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
           />[]&gt;
-        description: ''
   - name: 'getPolicyConfigurations(string, string, string)'
     uid: azure-devops-extension-api.PolicyRestClient.getPolicyConfigurations
     package: azure-devops-extension-api
     summary: Get a list of policy configurations in a project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPolicyConfigurations(project: string, scope?: string,
-        policyType?: string)
+        policyType?: string): Promise<PolicyConfiguration[]>
       parameters:
         - id: project
           type: string
@@ -185,18 +196,21 @@ methods:
           description: |
             Filter returned policies to only this type
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
           />[]&gt;
-        description: ''
   - name: 'getPolicyEvaluation(string, string)'
     uid: azure-devops-extension-api.PolicyRestClient.getPolicyEvaluation
     package: azure-devops-extension-api
     summary: Gets the present evaluation state of a policy.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getPolicyEvaluation(project: string, evaluationId: string)'
+      content: >-
+        function getPolicyEvaluation(project: string, evaluationId: string):
+        Promise<PolicyEvaluationRecord>
       parameters:
         - id: project
           type: string
@@ -206,22 +220,24 @@ methods:
           description: |
             ID of the policy evaluation to be retrieved.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.PolicyEvaluationRecord" />&gt;
-        description: ''
   - name: 'getPolicyEvaluations(string, string, boolean, number, number)'
     uid: azure-devops-extension-api.PolicyRestClient.getPolicyEvaluations
     package: azure-devops-extension-api
     summary: >-
       Retrieves a list of all the policy evaluation statuses for a specific pull
       request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPolicyEvaluations(project: string, artifactId: string,
-        includeNotApplicable?: boolean, top?: number, skip?: number)
+        includeNotApplicable?: boolean, top?: number, skip?: number):
+        Promise<PolicyEvaluationRecord[]>
       parameters:
         - id: project
           type: string
@@ -246,18 +262,21 @@ methods:
             The number of policy evaluation records to ignore. For example, to
             retrieve results 101-150, set top to 50 and skip to 100.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.PolicyEvaluationRecord" />[]&gt;
-        description: ''
   - name: 'getPolicyType(string, string)'
     uid: azure-devops-extension-api.PolicyRestClient.getPolicyType
     package: azure-devops-extension-api
     summary: Retrieve a specific policy type by ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getPolicyType(project: string, typeId: string)'
+      content: >-
+        function getPolicyType(project: string, typeId: string):
+        Promise<PolicyType>
       parameters:
         - id: project
           type: string
@@ -267,32 +286,36 @@ methods:
           description: |
             The policy ID.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.PolicyType" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.PolicyType" />&gt;
   - name: getPolicyTypes(string)
     uid: azure-devops-extension-api.PolicyRestClient.getPolicyTypes
     package: azure-devops-extension-api
     summary: Retrieve all available policy types.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getPolicyTypes(project: string)'
+      content: 'function getPolicyTypes(project: string): Promise<PolicyType[]>'
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.PolicyType" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.PolicyType" />[]&gt;'
   - name: 'requeuePolicyEvaluation(string, string)'
     uid: azure-devops-extension-api.PolicyRestClient.requeuePolicyEvaluation
     package: azure-devops-extension-api
     summary: Requeue the policy evaluation.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function requeuePolicyEvaluation(project: string, evaluationId: string)'
+      content: >-
+        function requeuePolicyEvaluation(project: string, evaluationId: string):
+        Promise<PolicyEvaluationRecord>
       parameters:
         - id: project
           type: string
@@ -302,20 +325,21 @@ methods:
           description: |
             ID of the policy evaluation to be retrieved.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.PolicyEvaluationRecord" />&gt;
-        description: ''
   - name: 'updatePolicyConfiguration(PolicyConfiguration, string, number)'
     uid: azure-devops-extension-api.PolicyRestClient.updatePolicyConfiguration
     package: azure-devops-extension-api
     summary: Update a policy configuration by its ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePolicyConfiguration(configuration: PolicyConfiguration,
-        project: string, configurationId: number)
+        project: string, configurationId: number): Promise<PolicyConfiguration>
       parameters:
         - id: configuration
           type: <xref uid="azure-devops-extension-api.PolicyConfiguration" />
@@ -328,8 +352,8 @@ methods:
           description: |
             ID of the existing policy configuration to be updated.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PolicyConfiguration"
           />&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

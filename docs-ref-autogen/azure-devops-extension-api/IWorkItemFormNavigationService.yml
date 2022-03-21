@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.IWorkItemFormNavigationService
 package: azure-devops-extension-api
 summary: Host service for opening the work item form
 fullName: IWorkItemFormNavigationService
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -16,12 +17,13 @@ methods:
       the new work item in a dialog,
 
       or it may update the current page view, depending on the current page.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function openNewWorkItem(workItemTypeName: string, initialValues?: [key:
-        string]: Object)
+        string]: Object): Promise<WorkItem>
       parameters:
         - id: workItemTypeName
           type: string
@@ -32,11 +34,11 @@ methods:
             (Optional) A dictionary of any initial field values to set after
             opening the new work item.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
         description: >-
           A promise that returns a work item when the work item dialog is
           closed. If the workitem was not saved before closing the dialog, the
           promise will return null
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
   - name: 'openWorkItem(number, boolean)'
     uid: azure-devops-extension-api.IWorkItemFormNavigationService.openWorkItem
     package: azure-devops-extension-api
@@ -45,10 +47,13 @@ methods:
       a dialog,
 
       or it may update the current page view, depending on the current page.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function openWorkItem(workItemId: number, openInNewTab?: boolean)'
+      content: >-
+        function openWorkItem(workItemId: number, openInNewTab?: boolean):
+        Promise<WorkItem>
       parameters:
         - id: workItemId
           type: number
@@ -59,7 +64,7 @@ methods:
             (Optional) If true, opens the work item in a new tab. Default is
             false
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
         description: >-
           A promise that returns a work item when the work item dialog is
           closed. If openInNewTab is true, the promise will return null
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;

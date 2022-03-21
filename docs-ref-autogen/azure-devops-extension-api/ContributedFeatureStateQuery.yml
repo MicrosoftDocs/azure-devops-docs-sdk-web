@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.ContributedFeatureStateQuery
 package: azure-devops-extension-api
 summary: A query for the effective contributed feature states for a list of feature ids
 fullName: ContributedFeatureStateQuery
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -13,13 +14,14 @@ properties:
     package: azure-devops-extension-api
     summary: The list of feature ids to query
     fullName: featureIds
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'featureIds: string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: featureStates
     uid: azure-devops-extension-api.ContributedFeatureStateQuery.featureStates
     package: azure-devops-extension-api
@@ -27,15 +29,16 @@ properties:
       The query result containing the current feature states for each of the
       queried feature ids
     fullName: featureStates
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'featureStates: [key: string]: ContributedFeatureState'
       return:
+        description: ''
         type: >-
           [key: string]\: <xref
           uid="azure-devops-extension-api.ContributedFeatureState" />
-        description: ''
   - name: scopeValues
     uid: azure-devops-extension-api.ContributedFeatureStateQuery.scopeValues
     package: azure-devops-extension-api
@@ -43,10 +46,11 @@ properties:
       A dictionary of scope values (project name, etc.) to use in the query (if
       querying across scopes)
     fullName: scopeValues
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'scopeValues: [key: string]: string'
       return:
-        type: '[key: string]\: string'
         description: ''
+        type: '[key: string]\: string'

@@ -7,6 +7,7 @@ summary: >-
   for matching events and how the subscription's subscriber should be notified
   about those events.
 fullName: NotificationSubscriptionCreateParameters
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,13 +18,14 @@ properties:
     package: azure-devops-extension-api
     summary: Channel for delivering notifications triggered by the new subscription.
     fullName: channel
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'channel: ISubscriptionChannel'
       return:
-        type: <xref uid="azure-devops-extension-api.ISubscriptionChannel" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.ISubscriptionChannel" />
   - name: description
     uid: >-
       azure-devops-extension-api.NotificationSubscriptionCreateParameters.description
@@ -32,25 +34,27 @@ properties:
       Brief description for the new subscription. Typically describes filter
       criteria which helps identity the subscription.
     fullName: description
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: filter
     uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters.filter
     package: azure-devops-extension-api
     summary: Matching criteria for the new subscription. ExpressionFilter
     fullName: filter
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'filter: ISubscriptionFilter'
       return:
-        type: <xref uid="azure-devops-extension-api.ISubscriptionFilter" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.ISubscriptionFilter" />
   - name: scope
     uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters.scope
     package: azure-devops-extension-api
@@ -61,13 +65,14 @@ properties:
       subscription scoped to project A will not produce notifications for events
       published from project B.
     fullName: scope
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'scope: SubscriptionScope'
       return:
-        type: <xref uid="azure-devops-extension-api.SubscriptionScope" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.SubscriptionScope" />
   - name: subscriber
     uid: >-
       azure-devops-extension-api.NotificationSubscriptionCreateParameters.subscriber
@@ -77,10 +82,11 @@ properties:
       subscription's filter criteria. If not specified, defaults to the calling
       user.
     fullName: subscriber
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'subscriber: IdentityRef'
       return:
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />

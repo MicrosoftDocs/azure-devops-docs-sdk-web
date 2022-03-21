@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.ExtensionManagementRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: ExtensionManagementRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.ExtensionManagementRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,26 +28,28 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'createDocumentByName(any, string, string, string, string, string)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.createDocumentByName
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createDocumentByName(doc: any, publisherName: string,
         extensionName: string, scopeType: string, scopeValue: string,
-        collectionName: string)
+        collectionName: string): Promise<any>
       parameters:
         - id: doc
           type: any
@@ -67,20 +71,21 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'deleteDocumentByName(string, string, string, string, string, string)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.deleteDocumentByName
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteDocumentByName(publisherName: string, extensionName:
         string, scopeType: string, scopeValue: string, collectionName: string,
-        documentId: string)
+        documentId: string): Promise<void>
       parameters:
         - id: publisherName
           type: string
@@ -102,16 +107,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteRequest(string, string)'
     uid: azure-devops-extension-api.ExtensionManagementRestClient.deleteRequest
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteRequest(publisherName: string, extensionName: string)'
+      content: >-
+        function deleteRequest(publisherName: string, extensionName: string):
+        Promise<void>
       parameters:
         - id: publisherName
           type: string
@@ -121,8 +129,8 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: >-
       getAcquisitionOptions(string, boolean, boolean, boolean, boolean, boolean,
       boolean)
@@ -130,13 +138,15 @@ methods:
       azure-devops-extension-api.ExtensionManagementRestClient.getAcquisitionOptions
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAcquisitionOptions(itemId: string, testCommerce?: boolean,
         isFreeOrTrialInstall?: boolean, isAccountOwner?: boolean, isLinked?:
-        boolean, isConnectedServer?: boolean, isBuyOperationValid?: boolean)
+        boolean, isConnectedServer?: boolean, isBuyOperationValid?: boolean):
+        Promise<AcquisitionOptions>
       parameters:
         - id: itemId
           type: string
@@ -161,18 +171,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AcquisitionOptions"
           />&gt;
-        description: ''
   - name: 'getAuditLog(string, string)'
     uid: azure-devops-extension-api.ExtensionManagementRestClient.getAuditLog
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAuditLog(publisherName: string, extensionName: string)'
+      content: >-
+        function getAuditLog(publisherName: string, extensionName: string):
+        Promise<ExtensionAuditLog>
       parameters:
         - id: publisherName
           type: string
@@ -182,21 +195,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionAuditLog"
           />&gt;
-        description: ''
   - name: 'getDocumentByName(string, string, string, string, string, string)'
     uid: azure-devops-extension-api.ExtensionManagementRestClient.getDocumentByName
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDocumentByName(publisherName: string, extensionName: string,
         scopeType: string, scopeValue: string, collectionName: string,
-        documentId: string)
+        documentId: string): Promise<any>
       parameters:
         - id: publisherName
           type: string
@@ -218,19 +232,21 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'getDocumentsByName(string, string, string, string, string)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.getDocumentsByName
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDocumentsByName(publisherName: string, extensionName:
-        string, scopeType: string, scopeValue: string, collectionName: string)
+        string, scopeType: string, scopeValue: string, collectionName: string):
+        Promise<any[]>
       parameters:
         - id: publisherName
           type: string
@@ -249,19 +265,21 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;any[]&gt;'
         description: ''
+        type: 'Promise&lt;any[]&gt;'
   - name: 'getInstalledExtensionByName(string, string, string[])'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.getInstalledExtensionByName
     package: azure-devops-extension-api
     summary: Get an installed extension by its publisher and extension name.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getInstalledExtensionByName(publisherName: string,
-        extensionName: string, assetTypes?: string[])
+        extensionName: string, assetTypes?: string[]):
+        Promise<InstalledExtension>
       parameters:
         - id: publisherName
           type: string
@@ -274,22 +292,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />&gt;
-        description: ''
   - name: 'getInstalledExtensions(boolean, boolean, string[], boolean)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.getInstalledExtensions
     package: azure-devops-extension-api
     summary: List the installed extensions in the account / project collection.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getInstalledExtensions(includeDisabledExtensions?: boolean,
         includeErrors?: boolean, assetTypes?: string[],
-        includeInstallationIssues?: boolean)
+        includeInstallationIssues?: boolean): Promise<InstalledExtension[]>
       parameters:
         - id: includeDisabledExtensions
           type: boolean
@@ -305,51 +324,55 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />[]&gt;
-        description: ''
   - name: getPolicies(string)
     uid: azure-devops-extension-api.ExtensionManagementRestClient.getPolicies
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getPolicies(userId: string)'
+      content: 'function getPolicies(userId: string): Promise<UserExtensionPolicy>'
       parameters:
         - id: userId
           type: string
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.UserExtensionPolicy"
           />&gt;
-        description: ''
   - name: getRequests()
     uid: azure-devops-extension-api.ExtensionManagementRestClient.getRequests
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getRequests()
+      content: 'function getRequests(): Promise<RequestedExtension[]>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.RequestedExtension"
           />[]&gt;
-        description: ''
   - name: 'getStates(boolean, boolean, boolean, boolean)'
     uid: azure-devops-extension-api.ExtensionManagementRestClient.getStates
     package: azure-devops-extension-api
     summary: List state and version information for all installed extensions.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getStates(includeDisabled?: boolean, includeErrors?: boolean,
-        includeInstallationIssues?: boolean, forceRefresh?: boolean)
+        includeInstallationIssues?: boolean, forceRefresh?: boolean):
+        Promise<ExtensionState[]>
       parameters:
         - id: includeDisabled
           type: boolean
@@ -367,32 +390,34 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionState"
           />[]&gt;
-        description: ''
   - name: getToken()
     uid: azure-devops-extension-api.ExtensionManagementRestClient.getToken
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getToken()
+      content: 'function getToken(): Promise<string>'
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: 'installExtensionByName(string, string, string)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.installExtensionByName
     package: azure-devops-extension-api
     summary: Install the specified extension into the account / project collection.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function installExtensionByName(publisherName: string, extensionName:
-        string, version?: string)
+        string, version?: string): Promise<InstalledExtension>
       parameters:
         - id: publisherName
           type: string
@@ -405,10 +430,10 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />&gt;
-        description: ''
   - name: 'queryCollectionsByName(ExtensionDataCollectionQuery, string, string)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.queryCollectionsByName
@@ -417,13 +442,14 @@ methods:
       Query for one or more data collections for the specified extension.  Note:
       the token used for authorization must have been issued on behalf of the
       specified extension.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queryCollectionsByName(collectionQuery:
         ExtensionDataCollectionQuery, publisherName: string, extensionName:
-        string)
+        string): Promise<ExtensionDataCollection[]>
       parameters:
         - id: collectionQuery
           type: >-
@@ -438,39 +464,43 @@ methods:
           description: |
             Name of the extension. Example: "ops-tools".
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ExtensionDataCollection" />[]&gt;
-        description: ''
   - name: queryExtensions(InstalledExtensionQuery)
     uid: azure-devops-extension-api.ExtensionManagementRestClient.queryExtensions
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function queryExtensions(query: InstalledExtensionQuery)'
+      content: >-
+        function queryExtensions(query: InstalledExtensionQuery):
+        Promise<InstalledExtension[]>
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.InstalledExtensionQuery" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />[]&gt;
-        description: ''
   - name: 'registerAuthorization(string, string, string)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.registerAuthorization
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function registerAuthorization(publisherName: string, extensionName:
-        string, registrationId: string)
+        string, registrationId: string): Promise<ExtensionAuthorization>
       parameters:
         - id: publisherName
           type: string
@@ -483,21 +513,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ExtensionAuthorization" />&gt;
-        description: ''
   - name: requestAcquisition(ExtensionAcquisitionRequest)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.requestAcquisition
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function requestAcquisition(acquisitionRequest:
-        ExtensionAcquisitionRequest)
+        ExtensionAcquisitionRequest): Promise<ExtensionAcquisitionRequest>
       parameters:
         - id: acquisitionRequest
           type: >-
@@ -506,20 +537,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ExtensionAcquisitionRequest" />&gt;
-        description: ''
   - name: 'requestExtension(string, string, string)'
     uid: azure-devops-extension-api.ExtensionManagementRestClient.requestExtension
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function requestExtension(publisherName: string, extensionName: string,
-        requestMessage: string)
+        requestMessage: string): Promise<RequestedExtension>
       parameters:
         - id: publisherName
           type: string
@@ -532,21 +564,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.RequestedExtension"
           />&gt;
-        description: ''
   - name: 'resolveAllRequests(string, string, string, ExtensionRequestState)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.resolveAllRequests
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function resolveAllRequests(rejectMessage: string, publisherName:
-        string, extensionName: string, state: ExtensionRequestState)
+        string, extensionName: string, state: ExtensionRequestState):
+        Promise<number>
       parameters:
         - id: rejectMessage
           type: string
@@ -562,19 +596,20 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;number&gt;
         description: ''
+        type: Promise&lt;number&gt;
   - name: 'resolveRequest(string, string, string, string, ExtensionRequestState)'
     uid: azure-devops-extension-api.ExtensionManagementRestClient.resolveRequest
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function resolveRequest(rejectMessage: string, publisherName: string,
         extensionName: string, requesterId: string, state:
-        ExtensionRequestState)
+        ExtensionRequestState): Promise<number>
       parameters:
         - id: rejectMessage
           type: string
@@ -593,19 +628,20 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;number&gt;
         description: ''
+        type: Promise&lt;number&gt;
   - name: 'setDocumentByName(any, string, string, string, string, string)'
     uid: azure-devops-extension-api.ExtensionManagementRestClient.setDocumentByName
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function setDocumentByName(doc: any, publisherName: string,
         extensionName: string, scopeType: string, scopeValue: string,
-        collectionName: string)
+        collectionName: string): Promise<any>
       parameters:
         - id: doc
           type: any
@@ -627,19 +663,20 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'uninstallExtensionByName(string, string, string, string)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.uninstallExtensionByName
     package: azure-devops-extension-api
     summary: Uninstall the specified extension from the account / project collection.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function uninstallExtensionByName(publisherName: string, extensionName:
-        string, reason?: string, reasonCode?: string)
+        string, reason?: string, reasonCode?: string): Promise<void>
       parameters:
         - id: publisherName
           type: string
@@ -655,20 +692,21 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updateDocumentByName(any, string, string, string, string, string)'
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.updateDocumentByName
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDocumentByName(doc: any, publisherName: string,
         extensionName: string, scopeType: string, scopeValue: string,
-        collectionName: string)
+        collectionName: string): Promise<any>
       parameters:
         - id: doc
           type: any
@@ -690,8 +728,8 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: updateInstalledExtension(InstalledExtension)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.updateInstalledExtension
@@ -699,18 +737,21 @@ methods:
     summary: >-
       Update an installed extension. Typically this API is used to enable or
       disable an extension.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function updateInstalledExtension(extension: InstalledExtension)'
+      content: >-
+        function updateInstalledExtension(extension: InstalledExtension):
+        Promise<InstalledExtension>
       parameters:
         - id: extension
           type: <xref uid="azure-devops-extension-api.InstalledExtension" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

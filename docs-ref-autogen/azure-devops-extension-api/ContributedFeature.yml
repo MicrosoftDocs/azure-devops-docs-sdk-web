@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.ContributedFeature
 package: azure-devops-extension-api
 summary: A feature that can be enabled or disabled
 fullName: ContributedFeature
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -13,13 +14,14 @@ properties:
     package: azure-devops-extension-api
     summary: 'If true, the feature is enabled unless overridden at some scope'
     fullName: defaultState
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultState: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: defaultValueRules
     uid: azure-devops-extension-api.ContributedFeature.defaultValueRules
     package: azure-devops-extension-api
@@ -28,39 +30,42 @@ properties:
       Evaluated in order until a rule returns an Enabled or Disabled state (not
       Undefined)
     fullName: defaultValueRules
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultValueRules: ContributedFeatureValueRule[]'
       return:
+        description: ''
         type: >-
           <xref uid="azure-devops-extension-api.ContributedFeatureValueRule"
           />[]
-        description: ''
   - name: description
     uid: azure-devops-extension-api.ContributedFeature.description
     package: azure-devops-extension-api
     summary: The description of the feature
     fullName: description
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: featureProperties
     uid: azure-devops-extension-api.ContributedFeature.featureProperties
     package: azure-devops-extension-api
     summary: Extra properties for the feature
     fullName: featureProperties
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'featureProperties: [key: string]: any'
       return:
-        type: '[key: string]\: any'
         description: ''
+        type: '[key: string]\: any'
   - name: featureStateChangedListeners
     uid: azure-devops-extension-api.ContributedFeature.featureStateChangedListeners
     package: azure-devops-extension-api
@@ -68,25 +73,27 @@ properties:
       Handler for listening to setter calls on feature value. These listeners
       are only invoked after a successful set has occurred
     fullName: featureStateChangedListeners
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'featureStateChangedListeners: ContributedFeatureListener[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.ContributedFeatureListener" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.ContributedFeatureListener" />[]'
   - name: id
     uid: azure-devops-extension-api.ContributedFeature.id
     package: azure-devops-extension-api
     summary: The full contribution id of the feature
     fullName: id
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: includeAsClaim
     uid: azure-devops-extension-api.ContributedFeature.includeAsClaim
     package: azure-devops-extension-api
@@ -94,37 +101,40 @@ properties:
       If this is set to true, then the id for this feature will be added to the
       list of claims for the request.
     fullName: includeAsClaim
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'includeAsClaim: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: name
     uid: azure-devops-extension-api.ContributedFeature.name
     package: azure-devops-extension-api
     summary: The friendly name of the feature
     fullName: name
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: order
     uid: azure-devops-extension-api.ContributedFeature.order
     package: azure-devops-extension-api
     summary: Suggested order to display feature in.
     fullName: order
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'order: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: overrideRules
     uid: azure-devops-extension-api.ContributedFeature.overrideRules
     package: azure-devops-extension-api
@@ -133,15 +143,16 @@ properties:
       user/host state values are checked. They are evaluated in order until a
       rule returns an Enabled or Disabled state (not Undefined)
     fullName: overrideRules
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'overrideRules: ContributedFeatureValueRule[]'
       return:
+        description: ''
         type: >-
           <xref uid="azure-devops-extension-api.ContributedFeatureValueRule"
           />[]
-        description: ''
   - name: scopes
     uid: azure-devops-extension-api.ContributedFeature.scopes
     package: azure-devops-extension-api
@@ -149,36 +160,39 @@ properties:
       The scopes/levels at which settings can set the enabled/disabled state of
       this feature
     fullName: scopes
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'scopes: ContributedFeatureSettingScope[]'
       return:
+        description: ''
         type: >-
           <xref uid="azure-devops-extension-api.ContributedFeatureSettingScope"
           />[]
-        description: ''
   - name: serviceInstanceType
     uid: azure-devops-extension-api.ContributedFeature.serviceInstanceType
     package: azure-devops-extension-api
     summary: The service instance id of the service that owns this feature
     fullName: serviceInstanceType
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'serviceInstanceType: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: tags
     uid: azure-devops-extension-api.ContributedFeature.tags
     package: azure-devops-extension-api
     summary: Tags associated with the feature.
     fullName: tags
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'tags: string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'

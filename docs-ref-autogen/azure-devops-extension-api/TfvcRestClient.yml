@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.TfvcRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: TfvcRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.TfvcRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,22 +28,26 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'createChangeset(TfvcChangeset, string)'
     uid: azure-devops-extension-api.TfvcRestClient.createChangeset
     package: azure-devops-extension-api
     summary: Create a new changeset.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createChangeset(changeset: TfvcChangeset, project?: string)'
+      content: >-
+        function createChangeset(changeset: TfvcChangeset, project?: string):
+        Promise<TfvcChangesetRef>
       parameters:
         - id: changeset
           type: <xref uid="azure-devops-extension-api.TfvcChangeset" />
@@ -51,42 +57,44 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TfvcChangesetRef"
           />&gt;
-        description: ''
   - name: getBatchedChangesets(TfvcChangesetsRequestData)
     uid: azure-devops-extension-api.TfvcRestClient.getBatchedChangesets
     package: azure-devops-extension-api
     summary: Returns changesets for a given list of changeset Ids.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBatchedChangesets(changesetsRequestData:
-        TfvcChangesetsRequestData)
+        TfvcChangesetsRequestData): Promise<TfvcChangesetRef[]>
       parameters:
         - id: changesetsRequestData
           type: <xref uid="azure-devops-extension-api.TfvcChangesetsRequestData" />
           description: |
             List of changeset IDs.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TfvcChangesetRef"
           />[]&gt;
-        description: ''
   - name: 'getBranch(string, string, boolean, boolean)'
     uid: azure-devops-extension-api.TfvcRestClient.getBranch
     package: azure-devops-extension-api
     summary: >-
       Get a single branch hierarchy at the given path with parents or children
       as specified.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBranch(path: string, project?: string, includeParent?:
-        boolean, includeChildren?: boolean)
+        boolean, includeChildren?: boolean): Promise<TfvcBranch>
       parameters:
         - id: path
           type: string
@@ -104,21 +112,22 @@ methods:
           description: |
             Return child branches, if there are any. Default: False
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcBranch" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcBranch" />&gt;
   - name: 'getBranches(string, boolean, boolean, boolean, boolean)'
     uid: azure-devops-extension-api.TfvcRestClient.getBranches
     package: azure-devops-extension-api
     summary: >-
       Get a collection of branch roots -- first-level children, branches with no
       parents.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBranches(project?: string, includeParent?: boolean,
         includeChildren?: boolean, includeDeleted?: boolean, includeLinks?:
-        boolean)
+        boolean): Promise<TfvcBranch[]>
       parameters:
         - id: project
           type: string
@@ -137,18 +146,20 @@ methods:
           description: |
             Return links. Default: False
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcBranch" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcBranch" />[]&gt;'
   - name: 'getBranchRefs(string, string, boolean, boolean)'
     uid: azure-devops-extension-api.TfvcRestClient.getBranchRefs
     package: azure-devops-extension-api
     summary: Get branch hierarchies below the specified scopePath
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBranchRefs(scopePath: string, project?: string,
-        includeDeleted?: boolean, includeLinks?: boolean)
+        includeDeleted?: boolean, includeLinks?: boolean):
+        Promise<TfvcBranchRef[]>
       parameters:
         - id: scopePath
           type: string
@@ -166,16 +177,17 @@ methods:
           description: |
             Return links. Default: False
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TfvcBranchRef"
           />[]&gt;
-        description: ''
   - name: >-
       getChangeset(number, string, number, boolean, boolean, number, boolean,
       number, number, string, TfvcChangesetSearchCriteria)
     uid: azure-devops-extension-api.TfvcRestClient.getChangeset
     package: azure-devops-extension-api
     summary: Retrieve a Tfvc Changeset
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -184,7 +196,7 @@ methods:
         number, includeDetails?: boolean, includeWorkItems?: boolean,
         maxCommentLength?: number, includeSourceRename?: boolean, skip?: number,
         top?: number, orderby?: string, searchCriteria?:
-        TfvcChangesetSearchCriteria)
+        TfvcChangesetSearchCriteria): Promise<TfvcChangeset>
       parameters:
         - id: id
           type: number
@@ -231,16 +243,19 @@ methods:
             .versionOption, .author, .fromId, .toId, .fromDate, .toDate)
             Default: null
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcChangeset" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcChangeset" />&gt;
   - name: 'getChangesetChanges(number, number, number)'
     uid: azure-devops-extension-api.TfvcRestClient.getChangesetChanges
     package: azure-devops-extension-api
     summary: Retrieve Tfvc changes for a given changeset.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getChangesetChanges(id?: number, skip?: number, top?: number)'
+      content: >-
+        function getChangesetChanges(id?: number, skip?: number, top?: number):
+        Promise<TfvcChange[]>
       parameters:
         - id: id
           type: number
@@ -253,21 +268,22 @@ methods:
           description: |
             The maximum number of results to return. Default: null
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcChange" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcChange" />[]&gt;'
   - name: >-
       getChangesets(string, number, number, number, string,
       TfvcChangesetSearchCriteria)
     uid: azure-devops-extension-api.TfvcRestClient.getChangesets
     package: azure-devops-extension-api
     summary: Retrieve Tfvc Changesets
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getChangesets(project?: string, maxCommentLength?: number,
         skip?: number, top?: number, orderby?: string, searchCriteria?:
-        TfvcChangesetSearchCriteria)
+        TfvcChangesetSearchCriteria): Promise<TfvcChangesetRef[]>
       parameters:
         - id: project
           type: string
@@ -297,28 +313,31 @@ methods:
             .versionOption, .author, .fromId, .toId, .fromDate, .toDate)
             Default: null
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TfvcChangesetRef"
           />[]&gt;
-        description: ''
   - name: getChangesetWorkItems(number)
     uid: azure-devops-extension-api.TfvcRestClient.getChangesetWorkItems
     package: azure-devops-extension-api
     summary: Retrieves the work items associated with a particular changeset.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getChangesetWorkItems(id?: number)'
+      content: >-
+        function getChangesetWorkItems(id?: number):
+        Promise<AssociatedWorkItem[]>
       parameters:
         - id: id
           type: number
           description: |
             ID of the changeset.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AssociatedWorkItem"
           />[]&gt;
-        description: ''
   - name: >-
       getItem(string, string, string, boolean, string,
       VersionControlRecursionType, TfvcVersionDescriptor, boolean)
@@ -329,6 +348,7 @@ methods:
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content
       which is always returned as a download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -336,7 +356,7 @@ methods:
         function getItem(path: string, project?: string, fileName?: string,
         download?: boolean, scopePath?: string, recursionLevel?:
         VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor,
-        includeContent?: boolean)
+        includeContent?: boolean): Promise<TfvcItem>
       parameters:
         - id: path
           type: string
@@ -367,8 +387,8 @@ methods:
             Set to true to include item content when requesting json.  Default
             is false.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />&gt;
   - name: >-
       getItemContent(string, string, string, boolean, string,
       VersionControlRecursionType, TfvcVersionDescriptor, boolean)
@@ -379,6 +399,7 @@ methods:
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content
       which is always returned as a download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -386,7 +407,7 @@ methods:
         function getItemContent(path: string, project?: string, fileName?:
         string, download?: boolean, scopePath?: string, recursionLevel?:
         VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor,
-        includeContent?: boolean)
+        includeContent?: boolean): Promise<ArrayBuffer>
       parameters:
         - id: path
           type: string
@@ -417,21 +438,22 @@ methods:
             Set to true to include item content when requesting json.  Default
             is false.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: >-
       getItems(string, string, VersionControlRecursionType, boolean,
       TfvcVersionDescriptor)
     uid: azure-devops-extension-api.TfvcRestClient.getItems
     package: azure-devops-extension-api
     summary: Get a list of Tfvc items
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getItems(project?: string, scopePath?: string, recursionLevel?:
         VersionControlRecursionType, includeLinks?: boolean, versionDescriptor?:
-        TfvcVersionDescriptor)
+        TfvcVersionDescriptor): Promise<TfvcItem[]>
       parameters:
         - id: project
           type: string
@@ -452,8 +474,8 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />[]&gt;'
   - name: 'getItemsBatch(TfvcItemRequestData, string)'
     uid: azure-devops-extension-api.TfvcRestClient.getItemsBatch
     package: azure-devops-extension-api
@@ -461,12 +483,13 @@ methods:
       Post for retrieving a set of items given a list of paths or a long path.
       Allows for specifying the recursionLevel and version descriptors for each
       path.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getItemsBatch(itemRequestData: TfvcItemRequestData, project?:
-        string)
+        string): Promise<TfvcItem[][]>
       parameters:
         - id: itemRequestData
           type: <xref uid="azure-devops-extension-api.TfvcItemRequestData" />
@@ -476,8 +499,8 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />[][]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />[][]&gt;'
   - name: 'getItemsBatchZip(TfvcItemRequestData, string)'
     uid: azure-devops-extension-api.TfvcRestClient.getItemsBatchZip
     package: azure-devops-extension-api
@@ -485,12 +508,13 @@ methods:
       Post for retrieving a set of items given a list of paths or a long path.
       Allows for specifying the recursionLevel and version descriptors for each
       path.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getItemsBatchZip(itemRequestData: TfvcItemRequestData,
-        project?: string)
+        project?: string): Promise<ArrayBuffer>
       parameters:
         - id: itemRequestData
           type: <xref uid="azure-devops-extension-api.TfvcItemRequestData" />
@@ -500,8 +524,8 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: >-
       getItemText(string, string, string, boolean, string,
       VersionControlRecursionType, TfvcVersionDescriptor, boolean)
@@ -512,6 +536,7 @@ methods:
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content
       which is always returned as a download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -519,7 +544,7 @@ methods:
         function getItemText(path: string, project?: string, fileName?: string,
         download?: boolean, scopePath?: string, recursionLevel?:
         VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor,
-        includeContent?: boolean)
+        includeContent?: boolean): Promise<string>
       parameters:
         - id: path
           type: string
@@ -550,8 +575,8 @@ methods:
             Set to true to include item content when requesting json.  Default
             is false.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: >-
       getItemZip(string, string, string, boolean, string,
       VersionControlRecursionType, TfvcVersionDescriptor, boolean)
@@ -562,6 +587,7 @@ methods:
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content
       which is always returned as a download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -569,7 +595,7 @@ methods:
         function getItemZip(path: string, project?: string, fileName?: string,
         download?: boolean, scopePath?: string, recursionLevel?:
         VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor,
-        includeContent?: boolean)
+        includeContent?: boolean): Promise<ArrayBuffer>
       parameters:
         - id: path
           type: string
@@ -600,18 +626,19 @@ methods:
             Set to true to include item content when requesting json.  Default
             is false.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getLabel(string, TfvcLabelRequestData, string)'
     uid: azure-devops-extension-api.TfvcRestClient.getLabel
     package: azure-devops-extension-api
     summary: Get a single deep label.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getLabel(labelId: string, requestData: TfvcLabelRequestData,
-        project?: string)
+        project?: string): Promise<TfvcLabel>
       parameters:
         - id: labelId
           type: string
@@ -624,16 +651,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcLabel" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcLabel" />&gt;
   - name: 'getLabelItems(string, number, number)'
     uid: azure-devops-extension-api.TfvcRestClient.getLabelItems
     package: azure-devops-extension-api
     summary: Get items under a label.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getLabelItems(labelId: string, top?: number, skip?: number)'
+      content: >-
+        function getLabelItems(labelId: string, top?: number, skip?: number):
+        Promise<TfvcItem[]>
       parameters:
         - id: labelId
           type: string
@@ -646,18 +676,19 @@ methods:
           description: |
             Number of items to skip
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcItem" />[]&gt;'
   - name: 'getLabels(TfvcLabelRequestData, string, number, number)'
     uid: azure-devops-extension-api.TfvcRestClient.getLabels
     package: azure-devops-extension-api
     summary: Get a collection of shallow label references.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getLabels(requestData: TfvcLabelRequestData, project?: string,
-        top?: number, skip?: number)
+        top?: number, skip?: number): Promise<TfvcLabelRef[]>
       parameters:
         - id: requestData
           type: <xref uid="azure-devops-extension-api.TfvcLabelRequestData" />
@@ -673,20 +704,21 @@ methods:
           description: |
             Number of labels to skip
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TfvcLabelRef"
           />[]&gt;
-        description: ''
   - name: 'getShelveset(string, TfvcShelvesetRequestData)'
     uid: azure-devops-extension-api.TfvcRestClient.getShelveset
     package: azure-devops-extension-api
     summary: Get a single deep shelveset.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getShelveset(shelvesetId: string, requestData?:
-        TfvcShelvesetRequestData)
+        TfvcShelvesetRequestData): Promise<TfvcShelveset>
       parameters:
         - id: shelvesetId
           type: string
@@ -697,18 +729,19 @@ methods:
             includeDetails, includeWorkItems, maxChangeCount, and
             maxCommentLength
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcShelveset" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TfvcShelveset" />&gt;
   - name: 'getShelvesetChanges(string, number, number)'
     uid: azure-devops-extension-api.TfvcRestClient.getShelvesetChanges
     package: azure-devops-extension-api
     summary: Get changes included in a shelveset.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getShelvesetChanges(shelvesetId: string, top?: number, skip?:
-        number)
+        number): Promise<TfvcChange[]>
       parameters:
         - id: shelvesetId
           type: string
@@ -721,18 +754,19 @@ methods:
           description: |
             Number of changes to skip
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcChange" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TfvcChange" />[]&gt;'
   - name: 'getShelvesets(TfvcShelvesetRequestData, number, number)'
     uid: azure-devops-extension-api.TfvcRestClient.getShelvesets
     package: azure-devops-extension-api
     summary: Return a collection of shallow shelveset references.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getShelvesets(requestData?: TfvcShelvesetRequestData, top?:
-        number, skip?: number)
+        number, skip?: number): Promise<TfvcShelvesetRef[]>
       parameters:
         - id: requestData
           type: <xref uid="azure-devops-extension-api.TfvcShelvesetRequestData" />
@@ -745,38 +779,44 @@ methods:
           description: |
             Number of shelvesets to skip
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TfvcShelvesetRef"
           />[]&gt;
-        description: ''
   - name: getShelvesetWorkItems(string)
     uid: azure-devops-extension-api.TfvcRestClient.getShelvesetWorkItems
     package: azure-devops-extension-api
     summary: Get work items associated with a shelveset.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getShelvesetWorkItems(shelvesetId: string)'
+      content: >-
+        function getShelvesetWorkItems(shelvesetId: string):
+        Promise<AssociatedWorkItem[]>
       parameters:
         - id: shelvesetId
           type: string
           description: |
             Shelveset's unique ID
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AssociatedWorkItem"
           />[]&gt;
-        description: ''
   - name: 'getTfvcStatistics(string, string)'
     uid: azure-devops-extension-api.TfvcRestClient.getTfvcStatistics
     package: azure-devops-extension-api
     summary: >-
       Provides File Count and Uncompressed Bytes for a Collection/Project at a
       particular scope for TFVC.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTfvcStatistics(project?: string, scopePath?: string)'
+      content: >-
+        function getTfvcStatistics(project?: string, scopePath?: string):
+        Promise<TfvcStatistics>
       parameters:
         - id: project
           type: string
@@ -786,8 +826,8 @@ methods:
           description: |
             '$/' for collection, '$/project' for specific project
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TfvcStatistics"
           />&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

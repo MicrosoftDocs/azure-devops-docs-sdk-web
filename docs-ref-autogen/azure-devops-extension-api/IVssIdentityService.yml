@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.IVssIdentityService
 package: azure-devops-extension-api
 summary: ''
 fullName: IVssIdentityService
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -12,25 +13,31 @@ methods:
     uid: azure-devops-extension-api.IVssIdentityService.addMruIdentitiesAsync
     package: azure-devops-extension-api
     summary: Add a list of identities to the MRU
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function addMruIdentitiesAsync(identities: IIdentity[])'
+      content: >-
+        function addMruIdentitiesAsync(identities: IIdentity[]):
+        Promise<boolean>
       parameters:
         - id: identities
           type: '<xref uid="azure-devops-extension-api.IIdentity" />[]'
           description: list of IdentityRefs to add to the MRU
       return:
-        type: Promise&lt;boolean&gt;
         description: 'True if the item was added, false otherwise'
+        type: Promise&lt;boolean&gt;
   - name: 'getConnections(IIdentity, boolean)'
     uid: azure-devops-extension-api.IVssIdentityService.getConnections
     package: azure-devops-extension-api
     summary: Gets a list of connections for a given identity
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getConnections(identity: IIdentity, getDirectReports?: boolean)'
+      content: >-
+        function getConnections(identity: IIdentity, getDirectReports?:
+        boolean): Promise<IdentitiesGetConnectionsResponseModel>
       parameters:
         - id: identity
           type: <xref uid="azure-devops-extension-api.IIdentity" />
@@ -39,37 +46,41 @@ methods:
           type: boolean
           description: ''
       return:
+        description: Connections for the given identity
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.IdentitiesGetConnectionsResponseModel"
           />&gt;
-        description: Connections for the given identity
   - name: getIdentityMruAsync()
     uid: azure-devops-extension-api.IVssIdentityService.getIdentityMruAsync
     package: azure-devops-extension-api
     summary: Get a list of the Most Recently Used (MRU) identities
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getIdentityMruAsync()
+      content: 'function getIdentityMruAsync(): Promise<IIdentity[]>'
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IIdentity" />[]&gt;'
         description: list of the Most Recently Used (MRU) identities
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IIdentity" />[]&gt;'
   - name: 'removeMruIdentitiesAsync(IIdentity[])'
     uid: azure-devops-extension-api.IVssIdentityService.removeMruIdentitiesAsync
     package: azure-devops-extension-api
     summary: Remove a list of identities from the MRU
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function removeMruIdentitiesAsync(identity: IIdentity[])'
+      content: >-
+        function removeMruIdentitiesAsync(identity: IIdentity[]):
+        Promise<boolean>
       parameters:
         - id: identity
           type: '<xref uid="azure-devops-extension-api.IIdentity" />[]'
           description: ''
       return:
-        type: Promise&lt;boolean&gt;
         description: 'True if the item was removed, false otherwise'
+        type: Promise&lt;boolean&gt;
   - name: >-
       searchIdentitiesAsync(string, string[], string[], string, any,
       (returnedEntities: IIdentity[]) => IIdentity[])
@@ -79,13 +90,15 @@ methods:
       Given a search request model, return a list of Entities. If the
       filterIdentity callback is added, additionally filter the values before
       returning
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function searchIdentitiesAsync(query: string, identityTypes?: string[],
         operationScopes?: string[], queryTypeHint?: string, options?: any,
-        filterIdentity?: (returnedEntities: IIdentity[]) => IIdentity[])
+        filterIdentity?: (returnedEntities: IIdentity[]) => IIdentity[]):
+        Promise<IIdentity[]>
       parameters:
         - id: query
           type: string
@@ -106,5 +119,5 @@ methods:
           type: '(returnedEntities: IIdentity[]) =&gt; IIdentity[]'
           description: A filter passed in to alter the results of the identities found
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IIdentity" />[]&gt;'
         description: The list of filtered identities from the search.
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IIdentity" />[]&gt;'

@@ -9,6 +9,7 @@ summary: >-
   ITeamFoundationEventService.PublishNotification and the Notifications SDK
   ISubscriber implementation will get it.
 fullName: VssNotificationEvent
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -20,25 +21,27 @@ properties:
       Optional: A list of actors which are additional identities with
       corresponding roles that are relevant to the event.
     fullName: actors
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'actors: EventActor[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.EventActor" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.EventActor" />[]'
   - name: artifactUris
     uid: azure-devops-extension-api.VssNotificationEvent.artifactUris
     package: azure-devops-extension-api
     summary: 'Optional: A list of artifacts referenced or impacted by this event.'
     fullName: artifactUris
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'artifactUris: string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: data
     uid: azure-devops-extension-api.VssNotificationEvent.data
     package: azure-devops-extension-api
@@ -46,13 +49,14 @@ properties:
       Required: The event payload.  If Data is a string, it must be in Json or
       XML format.  Otherwise it must have a serialization format attribute.
     fullName: data
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'data: any'
       return:
-        type: any
         description: ''
+        type: any
   - name: eventType
     uid: azure-devops-extension-api.VssNotificationEvent.eventType
     package: azure-devops-extension-api
@@ -60,13 +64,14 @@ properties:
       Required: The name of the event.  This event must be registered in the
       context it is being fired.
     fullName: eventType
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventType: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: expiresIn
     uid: azure-devops-extension-api.VssNotificationEvent.expiresIn
     package: azure-devops-extension-api
@@ -74,25 +79,27 @@ properties:
       How long before the event expires and will be cleaned up.  The default is
       to use the system default.
     fullName: expiresIn
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'expiresIn: any'
       return:
-        type: any
         description: ''
+        type: any
   - name: itemId
     uid: azure-devops-extension-api.VssNotificationEvent.itemId
     package: azure-devops-extension-api
     summary: 'The id of the item, artifact, extension, project, etc.'
     fullName: itemId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'itemId: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: processDelay
     uid: azure-devops-extension-api.VssNotificationEvent.processDelay
     package: azure-devops-extension-api
@@ -100,25 +107,27 @@ properties:
       How long to wait before processing this event.  The default is to process
       immediately.
     fullName: processDelay
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'processDelay: any'
       return:
-        type: any
         description: ''
+        type: any
   - name: scopes
     uid: azure-devops-extension-api.VssNotificationEvent.scopes
     package: azure-devops-extension-api
     summary: 'Optional: A list of scopes which are are relevant to the event.'
     fullName: scopes
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'scopes: EventScope[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.EventScope" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.EventScope" />[]'
   - name: sourceEventCreatedTime
     uid: azure-devops-extension-api.VssNotificationEvent.sourceEventCreatedTime
     package: azure-devops-extension-api
@@ -128,10 +137,11 @@ properties:
       notification SourceEventCreatedTime should be the time the build finished
       not the time this event was raised.
     fullName: sourceEventCreatedTime
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceEventCreatedTime: Date'
       return:
-        type: Date
         description: ''
+        type: Date

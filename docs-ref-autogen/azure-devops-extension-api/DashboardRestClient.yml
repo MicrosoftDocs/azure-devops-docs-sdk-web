@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.DashboardRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: DashboardRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.DashboardRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,22 +28,26 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'createDashboard(Dashboard, TeamContext)'
     uid: azure-devops-extension-api.DashboardRestClient.createDashboard
     package: azure-devops-extension-api
     summary: Create the supplied dashboard.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createDashboard(dashboard: Dashboard, teamContext: TeamContext)'
+      content: >-
+        function createDashboard(dashboard: Dashboard, teamContext:
+        TeamContext): Promise<Dashboard>
       parameters:
         - id: dashboard
           type: <xref uid="azure-devops-extension-api.Dashboard" />
@@ -51,18 +57,19 @@ methods:
           description: |
             The team context for the operation
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Dashboard" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Dashboard" />&gt;
   - name: 'createWidget(Widget, TeamContext, string)'
     uid: azure-devops-extension-api.DashboardRestClient.createWidget
     package: azure-devops-extension-api
     summary: Create a widget on the specified dashboard.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createWidget(widget: Widget, teamContext: TeamContext,
-        dashboardId: string)
+        dashboardId: string): Promise<Widget>
       parameters:
         - id: widget
           type: <xref uid="azure-devops-extension-api.Widget" />
@@ -75,18 +82,21 @@ methods:
           description: |
             ID of dashboard the widget will be added to.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Widget" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Widget" />&gt;
   - name: 'deleteDashboard(TeamContext, string)'
     uid: azure-devops-extension-api.DashboardRestClient.deleteDashboard
     package: azure-devops-extension-api
     summary: >-
       Delete a dashboard given its ID. This also deletes the widgets associated
       with this dashboard.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteDashboard(teamContext: TeamContext, dashboardId: string)'
+      content: >-
+        function deleteDashboard(teamContext: TeamContext, dashboardId: string):
+        Promise<void>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -96,18 +106,19 @@ methods:
           description: |
             ID of the dashboard to delete.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteWidget(TeamContext, string, string)'
     uid: azure-devops-extension-api.DashboardRestClient.deleteWidget
     package: azure-devops-extension-api
     summary: Delete the specified widget.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteWidget(teamContext: TeamContext, dashboardId: string,
-        widgetId: string)
+        widgetId: string): Promise<Dashboard>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -120,16 +131,19 @@ methods:
           description: |
             ID of the widget to update.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Dashboard" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Dashboard" />&gt;
   - name: 'getDashboard(TeamContext, string)'
     uid: azure-devops-extension-api.DashboardRestClient.getDashboard
     package: azure-devops-extension-api
     summary: Get a dashboard by its ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getDashboard(teamContext: TeamContext, dashboardId: string)'
+      content: >-
+        function getDashboard(teamContext: TeamContext, dashboardId: string):
+        Promise<Dashboard>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -139,36 +153,40 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Dashboard" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Dashboard" />&gt;
   - name: getDashboards(TeamContext)
     uid: azure-devops-extension-api.DashboardRestClient.getDashboards
     package: azure-devops-extension-api
     summary: Get a list of dashboards.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getDashboards(teamContext: TeamContext)'
+      content: >-
+        function getDashboards(teamContext: TeamContext):
+        Promise<DashboardGroup>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DashboardGroup"
           />&gt;
-        description: ''
   - name: 'getWidget(TeamContext, string, string)'
     uid: azure-devops-extension-api.DashboardRestClient.getWidget
     package: azure-devops-extension-api
     summary: Get the current state of the specified widget.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWidget(teamContext: TeamContext, dashboardId: string,
-        widgetId: string)
+        widgetId: string): Promise<Widget>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -181,16 +199,19 @@ methods:
           description: |
             ID of the widget to read.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Widget" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Widget" />&gt;
   - name: 'getWidgetMetadata(string, string)'
     uid: azure-devops-extension-api.DashboardRestClient.getWidgetMetadata
     package: azure-devops-extension-api
     summary: Get the widget metadata satisfying the specified contribution ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWidgetMetadata(contributionId: string, project?: string)'
+      content: >-
+        function getWidgetMetadata(contributionId: string, project?: string):
+        Promise<WidgetMetadataResponse>
       parameters:
         - id: contributionId
           type: string
@@ -200,20 +221,23 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WidgetMetadataResponse" />&gt;
-        description: ''
   - name: 'getWidgetTypes(WidgetScope, string)'
     uid: azure-devops-extension-api.DashboardRestClient.getWidgetTypes
     package: azure-devops-extension-api
     summary: >-
       Get all available widget metadata in alphabetical order, including widgets
       marked with isVisibleFromCatalog == false.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWidgetTypes(scope: WidgetScope, project?: string)'
+      content: >-
+        function getWidgetTypes(scope: WidgetScope, project?: string):
+        Promise<WidgetTypesResponse>
       parameters:
         - id: scope
           type: <xref uid="azure-devops-extension-api.WidgetScope" />
@@ -223,22 +247,23 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WidgetTypesResponse"
           />&gt;
-        description: ''
   - name: 'replaceDashboard(Dashboard, TeamContext, string)'
     uid: azure-devops-extension-api.DashboardRestClient.replaceDashboard
     package: azure-devops-extension-api
     summary: >-
       Replace configuration for the specified dashboard. Replaces Widget list on
       Dashboard, only if property is supplied.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function replaceDashboard(dashboard: Dashboard, teamContext:
-        TeamContext, dashboardId: string)
+        TeamContext, dashboardId: string): Promise<Dashboard>
       parameters:
         - id: dashboard
           type: <xref uid="azure-devops-extension-api.Dashboard" />
@@ -251,20 +276,21 @@ methods:
           description: |
             ID of the dashboard to replace.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Dashboard" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Dashboard" />&gt;
   - name: 'replaceDashboards(DashboardGroup, TeamContext)'
     uid: azure-devops-extension-api.DashboardRestClient.replaceDashboards
     package: azure-devops-extension-api
     summary: >-
       Update the name and position of dashboards in the supplied group, and
       remove omitted dashboards. Does not modify dashboard content.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function replaceDashboards(group: DashboardGroup, teamContext:
-        TeamContext)
+        TeamContext): Promise<DashboardGroup>
       parameters:
         - id: group
           type: <xref uid="azure-devops-extension-api.DashboardGroup" />
@@ -274,20 +300,21 @@ methods:
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DashboardGroup"
           />&gt;
-        description: ''
   - name: 'replaceWidget(Widget, TeamContext, string, string)'
     uid: azure-devops-extension-api.DashboardRestClient.replaceWidget
     package: azure-devops-extension-api
     summary: Override the  state of the specified widget.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function replaceWidget(widget: Widget, teamContext: TeamContext,
-        dashboardId: string, widgetId: string)
+        dashboardId: string, widgetId: string): Promise<Widget>
       parameters:
         - id: widget
           type: <xref uid="azure-devops-extension-api.Widget" />
@@ -303,18 +330,19 @@ methods:
           description: |
             ID of the widget to update.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Widget" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Widget" />&gt;
   - name: 'updateWidget(Widget, TeamContext, string, string)'
     uid: azure-devops-extension-api.DashboardRestClient.updateWidget
     package: azure-devops-extension-api
     summary: Perform a partial update of the specified widget.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateWidget(widget: Widget, teamContext: TeamContext,
-        dashboardId: string, widgetId: string)
+        dashboardId: string, widgetId: string): Promise<Widget>
       parameters:
         - id: widget
           type: <xref uid="azure-devops-extension-api.Widget" />
@@ -332,6 +360,6 @@ methods:
           description: |
             ID of the widget to update.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Widget" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Widget" />&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.ServiceEndpointRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: ServiceEndpointRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.ServiceEndpointRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,32 +28,36 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: acquireAccessToken(AadOauthTokenRequest)
     uid: azure-devops-extension-api.ServiceEndpointRestClient.acquireAccessToken
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function acquireAccessToken(authenticationRequest: AadOauthTokenRequest)'
+      content: >-
+        function acquireAccessToken(authenticationRequest:
+        AadOauthTokenRequest): Promise<AadOauthTokenResult>
       parameters:
         - id: authenticationRequest
           type: <xref uid="azure-devops-extension-api.AadOauthTokenRequest" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AadOauthTokenResult"
           />&gt;
-        description: ''
   - name: >-
       addServiceEndpointExecutionRecords(ServiceEndpointExecutionRecordsInput,
       string)
@@ -59,12 +65,14 @@ methods:
       azure-devops-extension-api.ServiceEndpointRestClient.addServiceEndpointExecutionRecords
     package: azure-devops-extension-api
     summary: Add service endpoint execution records.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addServiceEndpointExecutionRecords(input:
-        ServiceEndpointExecutionRecordsInput, project: string)
+        ServiceEndpointExecutionRecordsInput, project: string):
+        Promise<ServiceEndpointExecutionRecord[]>
       parameters:
         - id: input
           type: >-
@@ -77,24 +85,25 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ServiceEndpointExecutionRecord"
           />[]&gt;
-        description: ''
   - name: >-
       createAadOAuthRequest(string, string, AadLoginPromptOption, string,
       boolean)
     uid: azure-devops-extension-api.ServiceEndpointRestClient.createAadOAuthRequest
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createAadOAuthRequest(tenantId: string, redirectUri: string,
         promptOption?: AadLoginPromptOption, completeCallbackPayload?: string,
-        completeCallbackByAuthCode?: boolean)
+        completeCallbackByAuthCode?: boolean): Promise<string>
       parameters:
         - id: tenantId
           type: string
@@ -113,39 +122,41 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: createOAuthConfiguration(OAuthConfigurationParams)
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.createOAuthConfiguration
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createOAuthConfiguration(configurationParams:
-        OAuthConfigurationParams)
+        OAuthConfigurationParams): Promise<OAuthConfiguration>
       parameters:
         - id: configurationParams
           type: <xref uid="azure-devops-extension-api.OAuthConfigurationParams" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OAuthConfiguration"
           />&gt;
-        description: ''
   - name: 'createServiceEndpoint(ServiceEndpoint, string)'
     uid: azure-devops-extension-api.ServiceEndpointRestClient.createServiceEndpoint
     package: azure-devops-extension-api
     summary: Create a service endpoint.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createServiceEndpoint(endpoint: ServiceEndpoint, project:
-        string)
+        string): Promise<ServiceEndpoint>
       parameters:
         - id: endpoint
           type: <xref uid="azure-devops-extension-api.ServiceEndpoint" />
@@ -155,39 +166,43 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpoint"
           />&gt;
-        description: ''
   - name: deleteOAuthConfiguration(string)
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.deleteOAuthConfiguration
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteOAuthConfiguration(configurationId: string)'
+      content: >-
+        function deleteOAuthConfiguration(configurationId: string):
+        Promise<OAuthConfiguration>
       parameters:
         - id: configurationId
           type: string
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OAuthConfiguration"
           />&gt;
-        description: ''
   - name: 'deleteServiceEndpoint(string, string, boolean)'
     uid: azure-devops-extension-api.ServiceEndpointRestClient.deleteServiceEndpoint
     package: azure-devops-extension-api
     summary: Delete a service endpoint.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteServiceEndpoint(project: string, endpointId: string,
-        deep?: boolean)
+        deep?: boolean): Promise<void>
       parameters:
         - id: project
           type: string
@@ -202,19 +217,21 @@ methods:
             true, this will also delete corresponding AAD application in Azure.
             Default value is true.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'executeServiceEndpointRequest(ServiceEndpointRequest, string, string)'
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.executeServiceEndpointRequest
     package: azure-devops-extension-api
     summary: Proxy for a GET request defined by a service endpoint.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function executeServiceEndpointRequest(serviceEndpointRequest:
-        ServiceEndpointRequest, project: string, endpointId: string)
+        ServiceEndpointRequest, project: string, endpointId: string):
+        Promise<ServiceEndpointRequestResult>
       parameters:
         - id: serviceEndpointRequest
           type: <xref uid="azure-devops-extension-api.ServiceEndpointRequest" />
@@ -227,67 +244,75 @@ methods:
           description: |
             Id of the service endpoint.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ServiceEndpointRequestResult" />&gt;
-        description: ''
   - name: getAzureManagementGroups()
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.getAzureManagementGroups
     package: azure-devops-extension-api
     summary: Returns list of azure subscriptions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getAzureManagementGroups()
+      content: >-
+        function getAzureManagementGroups():
+        Promise<AzureManagementGroupQueryResult>
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AzureManagementGroupQueryResult"
           />&gt;
-        description: ''
   - name: getAzureSubscriptions()
     uid: azure-devops-extension-api.ServiceEndpointRestClient.getAzureSubscriptions
     package: azure-devops-extension-api
     summary: Returns list of azure subscriptions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getAzureSubscriptions()
+      content: 'function getAzureSubscriptions(): Promise<AzureSubscriptionQueryResult>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AzureSubscriptionQueryResult" />&gt;
-        description: ''
   - name: getOAuthConfiguration(string)
     uid: azure-devops-extension-api.ServiceEndpointRestClient.getOAuthConfiguration
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getOAuthConfiguration(configurationId: string)'
+      content: >-
+        function getOAuthConfiguration(configurationId: string):
+        Promise<OAuthConfiguration>
       parameters:
         - id: configurationId
           type: string
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OAuthConfiguration"
           />&gt;
-        description: ''
   - name: 'getOAuthConfigurations(string, OAuthConfigurationActionFilter)'
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.getOAuthConfigurations
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getOAuthConfigurations(endpointType?: string, actionFilter?:
-        OAuthConfigurationActionFilter)
+        OAuthConfigurationActionFilter): Promise<OAuthConfiguration[]>
       parameters:
         - id: endpointType
           type: string
@@ -299,19 +324,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OAuthConfiguration"
           />[]&gt;
-        description: ''
   - name: 'getServiceEndpointDetails(string, string)'
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpointDetails
     package: azure-devops-extension-api
     summary: Get the service endpoint details.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getServiceEndpointDetails(project: string, endpointId: string)'
+      content: >-
+        function getServiceEndpointDetails(project: string, endpointId: string):
+        Promise<ServiceEndpoint>
       parameters:
         - id: project
           type: string
@@ -321,21 +349,23 @@ methods:
           description: |
             Id of the service endpoint.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpoint"
           />&gt;
-        description: ''
   - name: 'getServiceEndpointExecutionRecords(string, string, number, number)'
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpointExecutionRecords
     package: azure-devops-extension-api
     summary: Get service endpoint execution records.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getServiceEndpointExecutionRecords(project: string, endpointId:
-        string, top?: number, continuationToken?: number)
+        string, top?: number, continuationToken?: number):
+        Promise<ServiceEndpointExecutionRecord[]>
       parameters:
         - id: project
           type: string
@@ -352,24 +382,26 @@ methods:
             A continuation token, returned by a previous call to this method,
             that can be used to return the next set of records
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ServiceEndpointExecutionRecord"
           />[]&gt;
-        description: ''
   - name: >-
       getServiceEndpoints(string, string, string[], string[], string, boolean,
       boolean)
     uid: azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpoints
     package: azure-devops-extension-api
     summary: Get the service endpoints.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getServiceEndpoints(project: string, type?: string,
         authSchemes?: string[], endpointIds?: string[], owner?: string,
-        includeFailed?: boolean, includeDetails?: boolean)
+        includeFailed?: boolean, includeDetails?: boolean):
+        Promise<ServiceEndpoint[]>
       parameters:
         - id: project
           type: string
@@ -396,10 +428,10 @@ methods:
             internal use only and the flag will be treated as false for all
             other requests
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpoint"
           />[]&gt;
-        description: ''
   - name: >-
       getServiceEndpointsByNames(string, string[], string, string[], string,
       boolean, boolean)
@@ -407,13 +439,15 @@ methods:
       azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpointsByNames
     package: azure-devops-extension-api
     summary: Get the service endpoints by name.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getServiceEndpointsByNames(project: string, endpointNames:
         string[], type?: string, authSchemes?: string[], owner?: string,
-        includeFailed?: boolean, includeDetails?: boolean)
+        includeFailed?: boolean, includeDetails?: boolean):
+        Promise<ServiceEndpoint[]>
       parameters:
         - id: project
           type: string
@@ -440,10 +474,10 @@ methods:
             internal use only and the flag will be treated as false for all
             other requests
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpoint"
           />[]&gt;
-        description: ''
   - name: >-
       getServiceEndpointsWithRefreshedAuthentication(RefreshAuthenticationParameters[],
       string, string[])
@@ -451,6 +485,7 @@ methods:
       azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpointsWithRefreshedAuthentication
     package: azure-devops-extension-api
     summary: Gets the service endpoints and patch new authorization parameters
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -458,7 +493,7 @@ methods:
         function
         getServiceEndpointsWithRefreshedAuthentication(refreshAuthenticationParameters:
         RefreshAuthenticationParameters[], project: string, endpointIds:
-        string[])
+        string[]): Promise<ServiceEndpoint[]>
       parameters:
         - id: refreshAuthenticationParameters
           type: >-
@@ -474,19 +509,22 @@ methods:
           description: |
             Ids of the service endpoints.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpoint"
           />[]&gt;
-        description: ''
   - name: 'getServiceEndpointTypes(string, string)'
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpointTypes
     package: azure-devops-extension-api
     summary: Get service endpoint types.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getServiceEndpointTypes(type?: string, scheme?: string)'
+      content: >-
+        function getServiceEndpointTypes(type?: string, scheme?: string):
+        Promise<ServiceEndpointType[]>
       parameters:
         - id: type
           type: string
@@ -496,21 +534,22 @@ methods:
           description: |
             Scheme of service endpoint.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpointType"
           />[]&gt;
-        description: ''
   - name: getVstsAadTenantId()
     uid: azure-devops-extension-api.ServiceEndpointRestClient.getVstsAadTenantId
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getVstsAadTenantId()
+      content: 'function getVstsAadTenantId(): Promise<string>'
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: 'queryServiceEndpoint(DataSourceBinding, string)'
     uid: azure-devops-extension-api.ServiceEndpointRestClient.queryServiceEndpoint
     package: azure-devops-extension-api
@@ -518,12 +557,13 @@ methods:
       Proxy for a GET request defined by a service endpoint. The request is
       authorized using a data source in service endpoint. The response is
       filtered using an XPath/Json based selector.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queryServiceEndpoint(binding: DataSourceBinding, project:
-        string)
+        string): Promise<string[]>
       parameters:
         - id: binding
           type: <xref uid="azure-devops-extension-api.DataSourceBinding" />
@@ -533,16 +573,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'querySharedProjects(string, string)'
     uid: azure-devops-extension-api.ServiceEndpointRestClient.querySharedProjects
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function querySharedProjects(endpointId: string, project: string)'
+      content: >-
+        function querySharedProjects(endpointId: string, project: string):
+        Promise<ProjectReference[]>
       parameters:
         - id: endpointId
           type: string
@@ -552,21 +595,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ProjectReference"
           />[]&gt;
-        description: ''
   - name: 'shareEndpointWithProject(string, string, string)'
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.shareEndpointWithProject
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function shareEndpointWithProject(endpointId: string, fromProject:
-        string, withProject: string)
+        string, withProject: string): Promise<void>
       parameters:
         - id: endpointId
           type: string
@@ -579,19 +623,21 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updateOAuthConfiguration(OAuthConfigurationParams, string)'
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.updateOAuthConfiguration
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateOAuthConfiguration(configurationParams:
-        OAuthConfigurationParams, configurationId: string)
+        OAuthConfigurationParams, configurationId: string):
+        Promise<OAuthConfiguration>
       parameters:
         - id: configurationParams
           type: <xref uid="azure-devops-extension-api.OAuthConfigurationParams" />
@@ -601,20 +647,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OAuthConfiguration"
           />&gt;
-        description: ''
   - name: 'updateServiceEndpoint(ServiceEndpoint, string, string, string)'
     uid: azure-devops-extension-api.ServiceEndpointRestClient.updateServiceEndpoint
     package: azure-devops-extension-api
     summary: Update a service endpoint.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateServiceEndpoint(endpoint: ServiceEndpoint, project:
-        string, endpointId: string, operation?: string)
+        string, endpointId: string, operation?: string):
+        Promise<ServiceEndpoint>
       parameters:
         - id: endpoint
           type: <xref uid="azure-devops-extension-api.ServiceEndpoint" />
@@ -630,21 +678,22 @@ methods:
           description: |
             Operation for the service endpoint.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpoint"
           />&gt;
-        description: ''
   - name: 'updateServiceEndpoints(ServiceEndpoint[], string)'
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.updateServiceEndpoints
     package: azure-devops-extension-api
     summary: Update the service endpoints.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateServiceEndpoints(endpoints: ServiceEndpoint[], project:
-        string)
+        string): Promise<ServiceEndpoint[]>
       parameters:
         - id: endpoints
           type: '<xref uid="azure-devops-extension-api.ServiceEndpoint" />[]'
@@ -654,8 +703,8 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpoint"
           />[]&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

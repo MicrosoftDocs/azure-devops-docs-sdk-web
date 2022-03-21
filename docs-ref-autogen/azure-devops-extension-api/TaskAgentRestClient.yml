@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.TaskAgentRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: TaskAgentRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.TaskAgentRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,32 +28,36 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: acquireAccessToken(AadOauthTokenRequest)
     uid: azure-devops-extension-api.TaskAgentRestClient.acquireAccessToken
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function acquireAccessToken(authenticationRequest: AadOauthTokenRequest)'
+      content: >-
+        function acquireAccessToken(authenticationRequest:
+        AadOauthTokenRequest): Promise<AadOauthTokenResult>
       parameters:
         - id: authenticationRequest
           type: <xref uid="azure-devops-extension-api.AadOauthTokenRequest" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AadOauthTokenResult"
           />&gt;
-        description: ''
   - name: 'addAgent(TaskAgent, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.addAgent
     package: azure-devops-extension-api
@@ -60,10 +66,11 @@ methods:
       directly. Instead, [configure an
       agent](https://docs.microsoft.com/azure/devops/pipelines/agents/agents)
       using the agent download package.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function addAgent(agent: TaskAgent, poolId: number)'
+      content: 'function addAgent(agent: TaskAgent, poolId: number): Promise<TaskAgent>'
       parameters:
         - id: agent
           type: <xref uid="azure-devops-extension-api.TaskAgent" />
@@ -73,52 +80,57 @@ methods:
           description: |
             The agent pool in which to add the agent
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
   - name: addAgentCloud(TaskAgentCloud)
     uid: azure-devops-extension-api.TaskAgentRestClient.addAgentCloud
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function addAgentCloud(agentCloud: TaskAgentCloud)'
+      content: >-
+        function addAgentCloud(agentCloud: TaskAgentCloud):
+        Promise<TaskAgentCloud>
       parameters:
         - id: agentCloud
           type: <xref uid="azure-devops-extension-api.TaskAgentCloud" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentCloud"
           />&gt;
-        description: ''
   - name: addAgentPool(TaskAgentPool)
     uid: azure-devops-extension-api.TaskAgentRestClient.addAgentPool
     package: azure-devops-extension-api
     summary: Create an agent pool.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function addAgentPool(pool: TaskAgentPool)'
+      content: 'function addAgentPool(pool: TaskAgentPool): Promise<TaskAgentPool>'
       parameters:
         - id: pool
           type: <xref uid="azure-devops-extension-api.TaskAgentPool" />
           description: |
             Details about the new agent pool
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentPool" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentPool" />&gt;
   - name: 'addAgentQueue(TaskAgentQueue, string, boolean)'
     uid: azure-devops-extension-api.TaskAgentRestClient.addAgentQueue
     package: azure-devops-extension-api
     summary: Create a new agent queue to connect a project to an agent pool.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addAgentQueue(queue: TaskAgentQueue, project?: string,
-        authorizePipelines?: boolean)
+        authorizePipelines?: boolean): Promise<TaskAgentQueue>
       parameters:
         - id: queue
           type: <xref uid="azure-devops-extension-api.TaskAgentQueue" />
@@ -131,20 +143,22 @@ methods:
           description: |
             Automatically authorize this queue when using YAML
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentQueue"
           />&gt;
-        description: ''
   - name: 'addDeploymentGroup(DeploymentGroupCreateParameter, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.addDeploymentGroup
     package: azure-devops-extension-api
     summary: Create a deployment group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addDeploymentGroup(deploymentGroup:
-        DeploymentGroupCreateParameter, project: string)
+        DeploymentGroupCreateParameter, project: string):
+        Promise<DeploymentGroup>
       parameters:
         - id: deploymentGroup
           type: >-
@@ -156,20 +170,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentGroup"
           />&gt;
-        description: ''
   - name: 'addDeploymentMachine(DeploymentMachine, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.addDeploymentMachine
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addDeploymentMachine(machine: DeploymentMachine, project:
-        string, deploymentGroupId: number)
+        string, deploymentGroupId: number): Promise<DeploymentMachine>
       parameters:
         - id: machine
           type: <xref uid="azure-devops-extension-api.DeploymentMachine" />
@@ -182,20 +197,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />&gt;
-        description: ''
   - name: 'addDeploymentMachineGroup(DeploymentMachineGroup, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.addDeploymentMachineGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addDeploymentMachineGroup(machineGroup: DeploymentMachineGroup,
-        project: string)
+        project: string): Promise<DeploymentMachineGroup>
       parameters:
         - id: machineGroup
           type: <xref uid="azure-devops-extension-api.DeploymentMachineGroup" />
@@ -205,22 +221,23 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DeploymentMachineGroup" />&gt;
-        description: ''
   - name: 'addDeploymentTarget(DeploymentMachine, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.addDeploymentTarget
     package: azure-devops-extension-api
     summary: >-
       Register a deployment target to a deployment group. Generally this is
       called by agent configuration tool.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addDeploymentTarget(machine: DeploymentMachine, project:
-        string, deploymentGroupId: number)
+        string, deploymentGroupId: number): Promise<DeploymentMachine>
       parameters:
         - id: machine
           type: <xref uid="azure-devops-extension-api.DeploymentMachine" />
@@ -234,20 +251,22 @@ methods:
             ID of the deployment group to which the deployment target is
             registered.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />&gt;
-        description: ''
   - name: 'addEnvironment(EnvironmentCreateParameter, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.addEnvironment
     package: azure-devops-extension-api
     summary: Create an environment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addEnvironment(environmentCreateParameter:
-        EnvironmentCreateParameter, project: string)
+        EnvironmentCreateParameter, project: string):
+        Promise<EnvironmentInstance>
       parameters:
         - id: environmentCreateParameter
           type: <xref uid="azure-devops-extension-api.EnvironmentCreateParameter" />
@@ -257,21 +276,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.EnvironmentInstance"
           />&gt;
-        description: ''
   - name: 'addKubernetesResource(KubernetesResourceCreateParameters, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.addKubernetesResource
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addKubernetesResource(createParameters:
         KubernetesResourceCreateParameters, project: string, environmentId:
-        number)
+        number): Promise<KubernetesResource>
       parameters:
         - id: createParameters
           type: >-
@@ -287,20 +307,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.KubernetesResource"
           />&gt;
-        description: ''
   - name: 'addTaskGroup(TaskGroupCreateParameter, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.addTaskGroup
     package: azure-devops-extension-api
     summary: Create a task group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addTaskGroup(taskGroup: TaskGroupCreateParameter, project:
-        string)
+        string): Promise<TaskGroup>
       parameters:
         - id: taskGroup
           type: <xref uid="azure-devops-extension-api.TaskGroupCreateParameter" />
@@ -310,39 +331,41 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />&gt;
   - name: addVariableGroup(VariableGroupParameters)
     uid: azure-devops-extension-api.TaskAgentRestClient.addVariableGroup
     package: azure-devops-extension-api
     summary: Add a variable group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addVariableGroup(variableGroupParameters:
-        VariableGroupParameters)
+        VariableGroupParameters): Promise<VariableGroup>
       parameters:
         - id: variableGroupParameters
           type: <xref uid="azure-devops-extension-api.VariableGroupParameters" />
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.VariableGroup" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.VariableGroup" />&gt;
   - name: >-
       addVirtualMachineGroup(VirtualMachineGroupCreateParameters, string,
       number)
     uid: azure-devops-extension-api.TaskAgentRestClient.addVirtualMachineGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function addVirtualMachineGroup(createParameters:
         VirtualMachineGroupCreateParameters, project: string, environmentId:
-        number)
+        number): Promise<VirtualMachineGroup>
       parameters:
         - id: createParameters
           type: >-
@@ -358,23 +381,24 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.VirtualMachineGroup"
           />&gt;
-        description: ''
   - name: >-
       createAadOAuthRequest(string, string, AadLoginPromptOption, string,
       boolean)
     uid: azure-devops-extension-api.TaskAgentRestClient.createAadOAuthRequest
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createAadOAuthRequest(tenantId: string, redirectUri: string,
         promptOption?: AadLoginPromptOption, completeCallbackPayload?: string,
-        completeCallbackByAuthCode?: boolean)
+        completeCallbackByAuthCode?: boolean): Promise<string>
       parameters:
         - id: tenantId
           type: string
@@ -393,8 +417,8 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: >-
       createAgentPoolMaintenanceDefinition(TaskAgentPoolMaintenanceDefinition,
       number)
@@ -402,12 +426,14 @@ methods:
       azure-devops-extension-api.TaskAgentRestClient.createAgentPoolMaintenanceDefinition
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createAgentPoolMaintenanceDefinition(definition:
-        TaskAgentPoolMaintenanceDefinition, poolId: number)
+        TaskAgentPoolMaintenanceDefinition, poolId: number):
+        Promise<TaskAgentPoolMaintenanceDefinition>
       parameters:
         - id: definition
           type: >-
@@ -420,19 +446,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskAgentPoolMaintenanceDefinition"
           />&gt;
-        description: ''
   - name: 'createAgentSession(TaskAgentSession, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.createAgentSession
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createAgentSession(session: TaskAgentSession, poolId: number)'
+      content: >-
+        function createAgentSession(session: TaskAgentSession, poolId: number):
+        Promise<TaskAgentSession>
       parameters:
         - id: session
           type: <xref uid="azure-devops-extension-api.TaskAgentSession" />
@@ -442,26 +471,27 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentSession"
           />&gt;
-        description: ''
   - name: createTeamProject(string)
     uid: azure-devops-extension-api.TaskAgentRestClient.createTeamProject
     package: azure-devops-extension-api
     summary: Create a new team project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createTeamProject(project?: string)'
+      content: 'function createTeamProject(project?: string): Promise<void>'
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteAgent(number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteAgent
     package: azure-devops-extension-api
@@ -470,10 +500,11 @@ methods:
       Instead, [use the agent configuration
       script](https://docs.microsoft.com/azure/devops/pipelines/agents/agents)
       to remove an agent from your organization.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteAgent(poolId: number, agentId: number)'
+      content: 'function deleteAgent(poolId: number, agentId: number): Promise<void>'
       parameters:
         - id: poolId
           type: number
@@ -483,53 +514,56 @@ methods:
           description: |
             The agent ID to remove
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: deleteAgentCloud(number)
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteAgentCloud
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteAgentCloud(agentCloudId: number)'
+      content: 'function deleteAgentCloud(agentCloudId: number): Promise<TaskAgentCloud>'
       parameters:
         - id: agentCloudId
           type: number
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentCloud"
           />&gt;
-        description: ''
   - name: deleteAgentPool(number)
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteAgentPool
     package: azure-devops-extension-api
     summary: Delete an agent pool.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteAgentPool(poolId: number)'
+      content: 'function deleteAgentPool(poolId: number): Promise<void>'
       parameters:
         - id: poolId
           type: number
           description: |
             ID of the agent pool to delete
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteAgentPoolMaintenanceDefinition(number, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.deleteAgentPoolMaintenanceDefinition
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteAgentPoolMaintenanceDefinition(poolId: number,
-        definitionId: number)
+        definitionId: number): Promise<void>
       parameters:
         - id: poolId
           type: number
@@ -539,17 +573,20 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteAgentPoolMaintenanceJob(number, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.deleteAgentPoolMaintenanceJob
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteAgentPoolMaintenanceJob(poolId: number, jobId: number)'
+      content: >-
+        function deleteAgentPoolMaintenanceJob(poolId: number, jobId: number):
+        Promise<void>
       parameters:
         - id: poolId
           type: number
@@ -559,16 +596,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteAgentQueue(number, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteAgentQueue
     package: azure-devops-extension-api
     summary: Removes an agent queue from a project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteAgentQueue(queueId: number, project?: string)'
+      content: >-
+        function deleteAgentQueue(queueId: number, project?: string):
+        Promise<void>
       parameters:
         - id: queueId
           type: number
@@ -578,18 +618,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteAgentRequest(number, number, string, TaskResult)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteAgentRequest
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteAgentRequest(poolId: number, requestId: number,
-        lockToken: string, result?: TaskResult)
+        lockToken: string, result?: TaskResult): Promise<void>
       parameters:
         - id: poolId
           type: number
@@ -605,16 +646,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteAgentSession(number, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteAgentSession
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteAgentSession(poolId: number, sessionId: string)'
+      content: >-
+        function deleteAgentSession(poolId: number, sessionId: string):
+        Promise<void>
       parameters:
         - id: poolId
           type: number
@@ -624,18 +668,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteDeploymentGroup(string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteDeploymentGroup
     package: azure-devops-extension-api
     summary: Delete a deployment group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteDeploymentGroup(project: string, deploymentGroupId:
-        number)
+        number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -645,18 +690,19 @@ methods:
           description: |
             ID of the deployment group to be deleted.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteDeploymentMachine(string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteDeploymentMachine
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteDeploymentMachine(project: string, deploymentGroupId:
-        number, machineId: number)
+        number, machineId: number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -669,19 +715,20 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteDeploymentMachineGroup(string, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.deleteDeploymentMachineGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteDeploymentMachineGroup(project: string, machineGroupId:
-        number)
+        number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -691,20 +738,21 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteDeploymentTarget(string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteDeploymentTarget
     package: azure-devops-extension-api
     summary: >-
       Delete a deployment target in a deployment group. This deletes the agent
       from associated deployment pool too.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteDeploymentTarget(project: string, deploymentGroupId:
-        number, targetId: number)
+        number, targetId: number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -717,16 +765,19 @@ methods:
           description: |
             ID of the deployment target to delete.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteEnvironment(string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteEnvironment
     package: azure-devops-extension-api
     summary: Delete the specified environment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteEnvironment(project: string, environmentId: number)'
+      content: >-
+        function deleteEnvironment(project: string, environmentId: number):
+        Promise<void>
       parameters:
         - id: project
           type: string
@@ -736,18 +787,19 @@ methods:
           description: |
             ID of the environment.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteKubernetesResource(string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteKubernetesResource
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteKubernetesResource(project: string, environmentId:
-        number, resourceId: number)
+        number, resourceId: number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -760,18 +812,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteMessage(number, number, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteMessage
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteMessage(poolId: number, messageId: number, sessionId:
-        string)
+        string): Promise<void>
       parameters:
         - id: poolId
           type: number
@@ -784,16 +837,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteSecureFile(string, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteSecureFile
     package: azure-devops-extension-api
     summary: Delete a secure file
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteSecureFile(project: string, secureFileId: string)'
+      content: >-
+        function deleteSecureFile(project: string, secureFileId: string):
+        Promise<void>
       parameters:
         - id: project
           type: string
@@ -803,34 +859,36 @@ methods:
           description: |
             The unique secure file Id
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: deleteTaskDefinition(string)
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteTaskDefinition
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteTaskDefinition(taskId: string)'
+      content: 'function deleteTaskDefinition(taskId: string): Promise<void>'
       parameters:
         - id: taskId
           type: string
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteTaskGroup(string, string, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteTaskGroup
     package: azure-devops-extension-api
     summary: Delete a task group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteTaskGroup(project: string, taskGroupId: string, comment?:
-        string)
+        string): Promise<void>
       parameters:
         - id: project
           type: string
@@ -843,16 +901,19 @@ methods:
           description: |
             Comments to delete.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteVariableGroup(number, string[])'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteVariableGroup
     package: azure-devops-extension-api
     summary: Delete a variable group
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteVariableGroup(groupId: number, projectIds: string[])'
+      content: >-
+        function deleteVariableGroup(groupId: number, projectIds: string[]):
+        Promise<void>
       parameters:
         - id: groupId
           type: number
@@ -862,18 +923,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteVirtualMachineGroup(string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.deleteVirtualMachineGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteVirtualMachineGroup(project: string, environmentId:
-        number, resourceId: number)
+        number, resourceId: number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -886,18 +948,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'downloadSecureFile(string, string, string, boolean)'
     uid: azure-devops-extension-api.TaskAgentRestClient.downloadSecureFile
     package: azure-devops-extension-api
     summary: Download a secure file by Id
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function downloadSecureFile(project: string, secureFileId: string,
-        ticket: string, download?: boolean)
+        ticket: string, download?: boolean): Promise<ArrayBuffer>
       parameters:
         - id: project
           type: string
@@ -915,8 +978,8 @@ methods:
             body. If download is false, the response body contains the file
             stream.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'generateDeploymentGroupAccessToken(string, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.generateDeploymentGroupAccessToken
@@ -924,12 +987,13 @@ methods:
     summary: >-
       GET a PAT token for managing (configuring, removing, tagging) deployment
       targets in a deployment group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function generateDeploymentGroupAccessToken(project: string,
-        deploymentGroupId: number)
+        deploymentGroupId: number): Promise<string>
       parameters:
         - id: project
           type: string
@@ -939,19 +1003,20 @@ methods:
           description: |
             ID of the deployment group in which deployment targets are managed.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: 'generateDeploymentMachineGroupAccessToken(string, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.generateDeploymentMachineGroupAccessToken
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function generateDeploymentMachineGroupAccessToken(project: string,
-        machineGroupId: number)
+        machineGroupId: number): Promise<string>
       parameters:
         - id: project
           type: string
@@ -961,8 +1026,8 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: generateDeploymentPoolAccessToken(number)
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.generateDeploymentPoolAccessToken
@@ -970,29 +1035,33 @@ methods:
     summary: >-
       GET a PAT token for managing (configuring, removing, tagging) deployment
       agents in a deployment pool.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function generateDeploymentPoolAccessToken(poolId: number)'
+      content: >-
+        function generateDeploymentPoolAccessToken(poolId: number):
+        Promise<string>
       parameters:
         - id: poolId
           type: number
           description: |
             ID of the deployment pool in which deployment agents are managed.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: 'getAgent(number, number, boolean, boolean, boolean, string[])'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgent
     package: azure-devops-extension-api
     summary: Get information about an agent.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgent(poolId: number, agentId: number, includeCapabilities?:
         boolean, includeAssignedRequest?: boolean, includeLastCompletedRequest?:
-        boolean, propertyFilters?: string[])
+        boolean, propertyFilters?: string[]): Promise<TaskAgent>
       parameters:
         - id: poolId
           type: number
@@ -1016,80 +1085,87 @@ methods:
           description: |
             Filter which custom properties will be returned
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
   - name: getAgentCloud(number)
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentCloud
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAgentCloud(agentCloudId: number)'
+      content: 'function getAgentCloud(agentCloudId: number): Promise<TaskAgentCloud>'
       parameters:
         - id: agentCloudId
           type: number
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentCloud"
           />&gt;
-        description: ''
   - name: getAgentCloudRequests(number)
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentCloudRequests
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAgentCloudRequests(agentCloudId: number)'
+      content: >-
+        function getAgentCloudRequests(agentCloudId: number):
+        Promise<TaskAgentCloudRequest[]>
       parameters:
         - id: agentCloudId
           type: number
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskAgentCloudRequest" />[]&gt;
-        description: ''
   - name: getAgentClouds()
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentClouds
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getAgentClouds()
+      content: 'function getAgentClouds(): Promise<TaskAgentCloud[]>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentCloud"
           />[]&gt;
-        description: ''
   - name: getAgentCloudTypes()
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentCloudTypes
     package: azure-devops-extension-api
     summary: Get agent cloud types.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getAgentCloudTypes()
+      content: 'function getAgentCloudTypes(): Promise<TaskAgentCloudType[]>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentCloudType"
           />[]&gt;
-        description: ''
   - name: 'getAgentPool(number, string[], TaskAgentPoolActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentPool
     package: azure-devops-extension-api
     summary: Get information about an agent pool.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentPool(poolId: number, properties?: string[],
-        actionFilter?: TaskAgentPoolActionFilter)
+        actionFilter?: TaskAgentPoolActionFilter): Promise<TaskAgentPool>
       parameters:
         - id: poolId
           type: number
@@ -1102,19 +1178,20 @@ methods:
           description: |
             Filter by whether the calling user has use or manage permissions
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentPool" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentPool" />&gt;
   - name: 'getAgentPoolMaintenanceDefinition(number, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.getAgentPoolMaintenanceDefinition
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentPoolMaintenanceDefinition(poolId: number, definitionId:
-        number)
+        number): Promise<TaskAgentPoolMaintenanceDefinition>
       parameters:
         - id: poolId
           type: number
@@ -1124,39 +1201,45 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskAgentPoolMaintenanceDefinition"
           />&gt;
-        description: ''
   - name: getAgentPoolMaintenanceDefinitions(number)
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.getAgentPoolMaintenanceDefinitions
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAgentPoolMaintenanceDefinitions(poolId: number)'
+      content: >-
+        function getAgentPoolMaintenanceDefinitions(poolId: number):
+        Promise<TaskAgentPoolMaintenanceDefinition[]>
       parameters:
         - id: poolId
           type: number
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskAgentPoolMaintenanceDefinition"
           />[]&gt;
-        description: ''
   - name: 'getAgentPoolMaintenanceJob(number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentPoolMaintenanceJob
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAgentPoolMaintenanceJob(poolId: number, jobId: number)'
+      content: >-
+        function getAgentPoolMaintenanceJob(poolId: number, jobId: number):
+        Promise<TaskAgentPoolMaintenanceJob>
       parameters:
         - id: poolId
           type: number
@@ -1166,19 +1249,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskAgentPoolMaintenanceJob" />&gt;
-        description: ''
   - name: 'getAgentPoolMaintenanceJobLogs(number, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.getAgentPoolMaintenanceJobLogs
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAgentPoolMaintenanceJobLogs(poolId: number, jobId: number)'
+      content: >-
+        function getAgentPoolMaintenanceJobLogs(poolId: number, jobId: number):
+        Promise<ArrayBuffer>
       parameters:
         - id: poolId
           type: number
@@ -1188,18 +1274,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getAgentPoolMaintenanceJobs(number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentPoolMaintenanceJobs
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentPoolMaintenanceJobs(poolId: number, definitionId?:
-        number)
+        number): Promise<TaskAgentPoolMaintenanceJob[]>
       parameters:
         - id: poolId
           type: number
@@ -1209,38 +1296,41 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskAgentPoolMaintenanceJob" />[]&gt;
-        description: ''
   - name: getAgentPoolMetadata(number)
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentPoolMetadata
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAgentPoolMetadata(poolId: number)'
+      content: 'function getAgentPoolMetadata(poolId: number): Promise<string>'
       parameters:
         - id: poolId
           type: number
           description: |
             -
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: >-
       getAgentPools(string, string[], TaskAgentPoolType,
       TaskAgentPoolActionFilter)
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentPools
     package: azure-devops-extension-api
     summary: Get a list of agent pools.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentPools(poolName?: string, properties?: string[],
-        poolType?: TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter)
+        poolType?: TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter):
+        Promise<TaskAgentPool[]>
       parameters:
         - id: poolName
           type: string
@@ -1256,20 +1346,21 @@ methods:
           description: |
             Filter by whether the calling user has use or manage permissions
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentPool"
           />[]&gt;
-        description: ''
   - name: 'getAgentPoolsByIds(number[], TaskAgentPoolActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentPoolsByIds
     package: azure-devops-extension-api
     summary: Get a list of agent pools.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentPoolsByIds(poolIds: number[], actionFilter?:
-        TaskAgentPoolActionFilter)
+        TaskAgentPoolActionFilter): Promise<TaskAgentPool[]>
       parameters:
         - id: poolIds
           type: 'number[]'
@@ -1279,20 +1370,21 @@ methods:
           description: |
             Filter by whether the calling user has use or manage permissions
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentPool"
           />[]&gt;
-        description: ''
   - name: 'getAgentQueue(number, string, TaskAgentQueueActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentQueue
     package: azure-devops-extension-api
     summary: Get information about an agent queue.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentQueue(queueId: number, project?: string, actionFilter?:
-        TaskAgentQueueActionFilter)
+        TaskAgentQueueActionFilter): Promise<TaskAgentQueue>
       parameters:
         - id: queueId
           type: number
@@ -1305,20 +1397,21 @@ methods:
           description: |
             Filter by whether the calling user has use or manage permissions
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentQueue"
           />&gt;
-        description: ''
   - name: 'getAgentQueues(string, string, TaskAgentQueueActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentQueues
     package: azure-devops-extension-api
     summary: Get a list of agent queues.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentQueues(project?: string, queueName?: string,
-        actionFilter?: TaskAgentQueueActionFilter)
+        actionFilter?: TaskAgentQueueActionFilter): Promise<TaskAgentQueue[]>
       parameters:
         - id: project
           type: string
@@ -1331,20 +1424,21 @@ methods:
           description: |
             Filter by whether the calling user has use or manage permissions
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentQueue"
           />[]&gt;
-        description: ''
   - name: 'getAgentQueuesByIds(number[], string, TaskAgentQueueActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentQueuesByIds
     package: azure-devops-extension-api
     summary: Get a list of agent queues by their IDs
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentQueuesByIds(queueIds: number[], project?: string,
-        actionFilter?: TaskAgentQueueActionFilter)
+        actionFilter?: TaskAgentQueueActionFilter): Promise<TaskAgentQueue[]>
       parameters:
         - id: queueIds
           type: 'number[]'
@@ -1357,20 +1451,21 @@ methods:
           description: |
             Filter by whether the calling user has use or manage permissions
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentQueue"
           />[]&gt;
-        description: ''
   - name: 'getAgentQueuesByNames(string[], string, TaskAgentQueueActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentQueuesByNames
     package: azure-devops-extension-api
     summary: Get a list of agent queues by their names
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentQueuesByNames(queueNames: string[], project?: string,
-        actionFilter?: TaskAgentQueueActionFilter)
+        actionFilter?: TaskAgentQueueActionFilter): Promise<TaskAgentQueue[]>
       parameters:
         - id: queueNames
           type: 'string[]'
@@ -1383,20 +1478,21 @@ methods:
           description: |
             Filter by whether the calling user has use or manage permissions
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentQueue"
           />[]&gt;
-        description: ''
   - name: 'getAgentQueuesForPools(number[], string, TaskAgentQueueActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentQueuesForPools
     package: azure-devops-extension-api
     summary: Get a list of agent queues by pool ids
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentQueuesForPools(poolIds: number[], project?: string,
-        actionFilter?: TaskAgentQueueActionFilter)
+        actionFilter?: TaskAgentQueueActionFilter): Promise<TaskAgentQueue[]>
       parameters:
         - id: poolIds
           type: 'number[]'
@@ -1411,20 +1507,21 @@ methods:
           description: |
             Filter by whether the calling user has use or manage permissions
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentQueue"
           />[]&gt;
-        description: ''
   - name: 'getAgentRequest(number, number, boolean)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentRequest
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequest(poolId: number, requestId: number,
-        includeStatus?: boolean)
+        includeStatus?: boolean): Promise<TaskAgentJobRequest>
       parameters:
         - id: poolId
           type: number
@@ -1437,20 +1534,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />&gt;
-        description: ''
   - name: 'getAgentRequests(number, number, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentRequests
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequests(poolId: number, top: number,
-        continuationToken?: string)
+        continuationToken?: string): Promise<TaskAgentJobRequest[]>
       parameters:
         - id: poolId
           type: number
@@ -1463,20 +1561,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />[]&gt;
-        description: ''
   - name: 'getAgentRequestsForAgent(number, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForAgent
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequestsForAgent(poolId: number, agentId: number,
-        completedRequestCount?: number)
+        completedRequestCount?: number): Promise<TaskAgentJobRequest[]>
       parameters:
         - id: poolId
           type: number
@@ -1489,20 +1588,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />[]&gt;
-        description: ''
   - name: 'getAgentRequestsForAgents(number, number[], number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForAgents
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequestsForAgents(poolId: number, agentIds?: number[],
-        completedRequestCount?: number)
+        completedRequestCount?: number): Promise<TaskAgentJobRequest[]>
       parameters:
         - id: poolId
           type: number
@@ -1515,22 +1615,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />[]&gt;
-        description: ''
   - name: 'getAgentRequestsForDeploymentMachine(string, number, number, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForDeploymentMachine
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequestsForDeploymentMachine(project: string,
         deploymentGroupId: number, machineId: number, completedRequestCount?:
-        number)
+        number): Promise<TaskAgentJobRequest[]>
       parameters:
         - id: project
           type: string
@@ -1546,22 +1647,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />[]&gt;
-        description: ''
   - name: 'getAgentRequestsForDeploymentMachines(string, number, number[], number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForDeploymentMachines
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequestsForDeploymentMachines(project: string,
         deploymentGroupId: number, machineIds?: number[],
-        completedRequestCount?: number)
+        completedRequestCount?: number): Promise<TaskAgentJobRequest[]>
       parameters:
         - id: project
           type: string
@@ -1577,22 +1679,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />[]&gt;
-        description: ''
   - name: 'getAgentRequestsForDeploymentTarget(string, number, number, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForDeploymentTarget
     package: azure-devops-extension-api
     summary: Get agent requests for a deployment target.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequestsForDeploymentTarget(project: string,
         deploymentGroupId: number, targetId: number, completedRequestCount?:
-        number)
+        number): Promise<TaskAgentJobRequest[]>
       parameters:
         - id: project
           type: string
@@ -1608,10 +1711,10 @@ methods:
           description: |
             Maximum number of completed requests to return. Default is **50**
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />[]&gt;
-        description: ''
   - name: >-
       getAgentRequestsForDeploymentTargets(string, number, number[], number,
       Date, number)
@@ -1619,13 +1722,15 @@ methods:
       azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForDeploymentTargets
     package: azure-devops-extension-api
     summary: Get agent requests for a list deployment targets.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequestsForDeploymentTargets(project: string,
         deploymentGroupId: number, targetIds?: number[], ownerId?: number,
-        completedOn?: Date, completedRequestCount?: number)
+        completedOn?: Date, completedRequestCount?: number):
+        Promise<TaskAgentJobRequest[]>
       parameters:
         - id: project
           type: string
@@ -1648,20 +1753,21 @@ methods:
             Maximum number of completed requests to return for each target.
             Default is **50**
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />[]&gt;
-        description: ''
   - name: 'getAgentRequestsForPlan(number, string, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForPlan
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequestsForPlan(poolId: number, planId: string, jobId?:
-        string)
+        string): Promise<TaskAgentJobRequest[]>
       parameters:
         - id: poolId
           type: number
@@ -1674,20 +1780,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />[]&gt;
-        description: ''
   - name: 'getAgentRequestsForQueue(number, number, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgentRequestsForQueue
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAgentRequestsForQueue(queueId: number, top: number,
-        continuationToken?: string)
+        continuationToken?: string): Promise<TaskAgentJobRequest[]>
       parameters:
         - id: queueId
           type: number
@@ -1700,14 +1807,15 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />[]&gt;
-        description: ''
   - name: 'getAgents(number, string, boolean, boolean, boolean, string[], string[])'
     uid: azure-devops-extension-api.TaskAgentRestClient.getAgents
     package: azure-devops-extension-api
     summary: Get a list of agents.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1715,7 +1823,7 @@ methods:
         function getAgents(poolId: number, agentName?: string,
         includeCapabilities?: boolean, includeAssignedRequest?: boolean,
         includeLastCompletedRequest?: boolean, propertyFilters?: string[],
-        demands?: string[])
+        demands?: string[]): Promise<TaskAgent[]>
       parameters:
         - id: poolId
           type: number
@@ -1742,48 +1850,53 @@ methods:
           description: |
             Filter by demands the agents can satisfy
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />[]&gt;'
   - name: getAzureManagementGroups()
     uid: azure-devops-extension-api.TaskAgentRestClient.getAzureManagementGroups
     package: azure-devops-extension-api
     summary: Returns list of azure subscriptions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getAzureManagementGroups()
+      content: >-
+        function getAzureManagementGroups():
+        Promise<AzureManagementGroupQueryResult>
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AzureManagementGroupQueryResult"
           />&gt;
-        description: ''
   - name: getAzureSubscriptions()
     uid: azure-devops-extension-api.TaskAgentRestClient.getAzureSubscriptions
     package: azure-devops-extension-api
     summary: Returns list of azure subscriptions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getAzureSubscriptions()
+      content: 'function getAzureSubscriptions(): Promise<AzureSubscriptionQueryResult>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AzureSubscriptionQueryResult" />&gt;
-        description: ''
   - name: >-
       getDeploymentGroup(string, number, DeploymentGroupActionFilter,
       DeploymentGroupExpands)
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentGroup
     package: azure-devops-extension-api
     summary: Get a deployment group by its ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeploymentGroup(project: string, deploymentGroupId: number,
         actionFilter?: DeploymentGroupActionFilter, expand?:
-        DeploymentGroupExpands)
+        DeploymentGroupExpands): Promise<DeploymentGroup>
       parameters:
         - id: project
           type: string
@@ -1801,16 +1914,17 @@ methods:
           description: |
             Include these additional details in the returned object.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentGroup"
           />&gt;
-        description: ''
   - name: >-
       getDeploymentGroups(string, string, DeploymentGroupActionFilter,
       DeploymentGroupExpands, string, number, number[])
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentGroups
     package: azure-devops-extension-api
     summary: Get a list of deployment groups by name or IDs.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1818,7 +1932,7 @@ methods:
         function getDeploymentGroups(project: string, name?: string,
         actionFilter?: DeploymentGroupActionFilter, expand?:
         DeploymentGroupExpands, continuationToken?: string, top?: number, ids?:
-        number[])
+        number[]): Promise<DeploymentGroup[]>
       parameters:
         - id: project
           type: string
@@ -1847,20 +1961,22 @@ methods:
           description: |
             Comma separated list of IDs of the deployment groups.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentGroup"
           />[]&gt;
-        description: ''
   - name: 'getDeploymentGroupsMetrics(string, string, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentGroupsMetrics
     package: azure-devops-extension-api
     summary: Get a list of deployment group metrics.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeploymentGroupsMetrics(project: string,
-        deploymentGroupName?: string, continuationToken?: string, top?: number)
+        deploymentGroupName?: string, continuationToken?: string, top?: number):
+        Promise<DeploymentGroupMetrics[]>
       parameters:
         - id: project
           type: string
@@ -1879,20 +1995,22 @@ methods:
             Maximum number of deployment group metrics to return. Default is
             **50**.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DeploymentGroupMetrics" />[]&gt;
-        description: ''
   - name: 'getDeploymentMachine(string, number, number, DeploymentMachineExpands)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentMachine
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeploymentMachine(project: string, deploymentGroupId:
-        number, machineId: number, expand?: DeploymentMachineExpands)
+        number, machineId: number, expand?: DeploymentMachineExpands):
+        Promise<DeploymentMachine>
       parameters:
         - id: project
           type: string
@@ -1908,20 +2026,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />&gt;
-        description: ''
   - name: 'getDeploymentMachineGroup(string, number, MachineGroupActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentMachineGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeploymentMachineGroup(project: string, machineGroupId:
-        number, actionFilter?: MachineGroupActionFilter)
+        number, actionFilter?: MachineGroupActionFilter):
+        Promise<DeploymentMachineGroup>
       parameters:
         - id: project
           type: string
@@ -1934,21 +2054,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DeploymentMachineGroup" />&gt;
-        description: ''
   - name: 'getDeploymentMachineGroupMachines(string, number, string[])'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.getDeploymentMachineGroupMachines
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeploymentMachineGroupMachines(project: string,
-        machineGroupId: number, tagFilters?: string[])
+        machineGroupId: number, tagFilters?: string[]):
+        Promise<DeploymentMachine[]>
       parameters:
         - id: project
           type: string
@@ -1961,20 +2083,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />[]&gt;
-        description: ''
   - name: 'getDeploymentMachineGroups(string, string, MachineGroupActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentMachineGroups
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeploymentMachineGroups(project: string, machineGroupName?:
-        string, actionFilter?: MachineGroupActionFilter)
+        string, actionFilter?: MachineGroupActionFilter):
+        Promise<DeploymentMachineGroup[]>
       parameters:
         - id: project
           type: string
@@ -1987,23 +2111,24 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DeploymentMachineGroup" />[]&gt;
-        description: ''
   - name: >-
       getDeploymentMachines(string, number, string[], string,
       DeploymentMachineExpands)
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentMachines
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeploymentMachines(project: string, deploymentGroupId:
         number, tags?: string[], name?: string, expand?:
-        DeploymentMachineExpands)
+        DeploymentMachineExpands): Promise<DeploymentMachine[]>
       parameters:
         - id: project
           type: string
@@ -2022,20 +2147,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />[]&gt;
-        description: ''
   - name: 'getDeploymentPoolsSummary(string, DeploymentPoolSummaryExpands, number[])'
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentPoolsSummary
     package: azure-devops-extension-api
     summary: Get a list of deployment pool summaries.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeploymentPoolsSummary(poolName?: string, expands?:
-        DeploymentPoolSummaryExpands, poolIds?: number[])
+        DeploymentPoolSummaryExpands, poolIds?: number[]):
+        Promise<DeploymentPoolSummary[]>
       parameters:
         - id: poolName
           type: string
@@ -2050,20 +2177,22 @@ methods:
           description: |
             List of deployment pool ids.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DeploymentPoolSummary" />[]&gt;
-        description: ''
   - name: 'getDeploymentTarget(string, number, number, DeploymentTargetExpands)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentTarget
     package: azure-devops-extension-api
     summary: Get a deployment target by its ID in a deployment group
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeploymentTarget(project: string, deploymentGroupId: number,
-        targetId: number, expand?: DeploymentTargetExpands)
+        targetId: number, expand?: DeploymentTargetExpands):
+        Promise<DeploymentMachine>
       parameters:
         - id: project
           type: string
@@ -2079,10 +2208,10 @@ methods:
           description: |
             Include these additional details in the returned objects.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />&gt;
-        description: ''
   - name: >-
       getDeploymentTargets(string, number, string[], string, boolean,
       DeploymentTargetExpands, TaskAgentStatusFilter, TaskAgentJobResultFilter,
@@ -2090,6 +2219,7 @@ methods:
     uid: azure-devops-extension-api.TaskAgentRestClient.getDeploymentTargets
     package: azure-devops-extension-api
     summary: Get a list of deployment targets in a deployment group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2098,7 +2228,8 @@ methods:
         number, tags?: string[], name?: string, partialNameMatch?: boolean,
         expand?: DeploymentTargetExpands, agentStatus?: TaskAgentStatusFilter,
         agentJobResult?: TaskAgentJobResultFilter, continuationToken?: string,
-        top?: number, enabled?: boolean, propertyFilters?: string[])
+        top?: number, enabled?: boolean, propertyFilters?: string[]):
+        Promise<DeploymentMachine[]>
       parameters:
         - id: project
           type: string
@@ -2146,20 +2277,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />[]&gt;
-        description: ''
   - name: 'getEnvironmentById(string, number, EnvironmentExpands)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getEnvironmentById
     package: azure-devops-extension-api
     summary: Get an environment by its ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getEnvironmentById(project: string, environmentId: number,
-        expands?: EnvironmentExpands)
+        expands?: EnvironmentExpands): Promise<EnvironmentInstance>
       parameters:
         - id: project
           type: string
@@ -2172,21 +2304,23 @@ methods:
           description: |
             Include these additional details in the returned objects.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.EnvironmentInstance"
           />&gt;
-        description: ''
   - name: 'getEnvironmentDeploymentExecutionRecords(string, number, string, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.getEnvironmentDeploymentExecutionRecords
     package: azure-devops-extension-api
     summary: Get environment deployment execution history
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getEnvironmentDeploymentExecutionRecords(project: string,
-        environmentId: number, continuationToken?: string, top?: number)
+        environmentId: number, continuationToken?: string, top?: number):
+        Promise<EnvironmentDeploymentExecutionRecord[]>
       parameters:
         - id: project
           type: string
@@ -2202,21 +2336,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.EnvironmentDeploymentExecutionRecord"
           />[]&gt;
-        description: ''
   - name: 'getEnvironments(string, string, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getEnvironments
     package: azure-devops-extension-api
     summary: Get all environments.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getEnvironments(project: string, name?: string,
-        continuationToken?: string, top?: number)
+        continuationToken?: string, top?: number):
+        Promise<EnvironmentInstance[]>
       parameters:
         - id: project
           type: string
@@ -2232,20 +2368,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.EnvironmentInstance"
           />[]&gt;
-        description: ''
   - name: 'getKubernetesResource(string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getKubernetesResource
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getKubernetesResource(project: string, environmentId: number,
-        resourceId: number)
+        resourceId: number): Promise<KubernetesResource>
       parameters:
         - id: project
           type: string
@@ -2258,20 +2395,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.KubernetesResource"
           />&gt;
-        description: ''
   - name: 'getMessage(number, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getMessage
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getMessage(poolId: number, sessionId: string, lastMessageId?:
-        number)
+        number): Promise<TaskAgentMessage>
       parameters:
         - id: poolId
           type: number
@@ -2284,20 +2422,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentMessage"
           />&gt;
-        description: ''
   - name: 'getPackage(string, string, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getPackage
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPackage(packageType: string, platform: string, version:
-        string)
+        string): Promise<PackageMetadata>
       parameters:
         - id: packageType
           type: string
@@ -2310,20 +2449,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PackageMetadata"
           />&gt;
-        description: ''
   - name: 'getPackages(string, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getPackages
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPackages(packageType: string, platform?: string, top?:
-        number)
+        number): Promise<PackageMetadata[]>
       parameters:
         - id: packageType
           type: string
@@ -2336,33 +2476,35 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PackageMetadata"
           />[]&gt;
-        description: ''
   - name: getResourceLimits()
     uid: azure-devops-extension-api.TaskAgentRestClient.getResourceLimits
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getResourceLimits()
+      content: 'function getResourceLimits(): Promise<ResourceLimit[]>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ResourceLimit"
           />[]&gt;
-        description: ''
   - name: 'getResourceUsage(string, boolean, boolean)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getResourceUsage
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getResourceUsage(parallelismTag?: string, poolIsHosted?:
-        boolean, includeRunningRequests?: boolean)
+        boolean, includeRunningRequests?: boolean): Promise<ResourceUsage>
       parameters:
         - id: parallelismTag
           type: string
@@ -2375,18 +2517,20 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.ResourceUsage" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.ResourceUsage" />&gt;
   - name: 'getSecureFile(string, string, boolean, SecureFileActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getSecureFile
     package: azure-devops-extension-api
     summary: Get a secure file
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getSecureFile(project: string, secureFileId: string,
-        includeDownloadTicket?: boolean, actionFilter?: SecureFileActionFilter)
+        includeDownloadTicket?: boolean, actionFilter?: SecureFileActionFilter):
+        Promise<SecureFile>
       parameters:
         - id: project
           type: string
@@ -2404,18 +2548,20 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />&gt;
   - name: 'getSecureFiles(string, string, boolean, SecureFileActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getSecureFiles
     package: azure-devops-extension-api
     summary: Get secure files
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getSecureFiles(project: string, namePattern?: string,
-        includeDownloadTickets?: boolean, actionFilter?: SecureFileActionFilter)
+        includeDownloadTickets?: boolean, actionFilter?:
+        SecureFileActionFilter): Promise<SecureFile[]>
       parameters:
         - id: project
           type: string
@@ -2436,18 +2582,20 @@ methods:
             Filter by secure file permissions for View, Manage or Use action.
             Defaults to View.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
   - name: 'getSecureFilesByIds(string, string[], boolean, SecureFileActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getSecureFilesByIds
     package: azure-devops-extension-api
     summary: Get secure files
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getSecureFilesByIds(project: string, secureFileIds: string[],
-        includeDownloadTickets?: boolean, actionFilter?: SecureFileActionFilter)
+        includeDownloadTickets?: boolean, actionFilter?:
+        SecureFileActionFilter): Promise<SecureFile[]>
       parameters:
         - id: project
           type: string
@@ -2465,19 +2613,20 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
   - name: 'getSecureFilesByNames(string, string[], boolean, SecureFileActionFilter)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getSecureFilesByNames
     package: azure-devops-extension-api
     summary: Get secure files
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getSecureFilesByNames(project: string, secureFileNames:
         string[], includeDownloadTickets?: boolean, actionFilter?:
-        SecureFileActionFilter)
+        SecureFileActionFilter): Promise<SecureFile[]>
       parameters:
         - id: project
           type: string
@@ -2495,18 +2644,19 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
   - name: 'getTaskContentZip(string, string, string[], boolean)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getTaskContentZip
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTaskContentZip(taskId: string, versionString: string,
-        visibility?: string[], scopeLocal?: boolean)
+        visibility?: string[], scopeLocal?: boolean): Promise<ArrayBuffer>
       parameters:
         - id: taskId
           type: string
@@ -2522,18 +2672,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getTaskDefinition(string, string, string[], boolean)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getTaskDefinition
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTaskDefinition(taskId: string, versionString: string,
-        visibility?: string[], scopeLocal?: boolean)
+        visibility?: string[], scopeLocal?: boolean): Promise<TaskDefinition>
       parameters:
         - id: taskId
           type: string
@@ -2549,20 +2700,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskDefinition"
           />&gt;
-        description: ''
   - name: 'getTaskDefinitions(string, string[], boolean)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getTaskDefinitions
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTaskDefinitions(taskId?: string, visibility?: string[],
-        scopeLocal?: boolean)
+        scopeLocal?: boolean): Promise<TaskDefinition[]>
       parameters:
         - id: taskId
           type: string
@@ -2575,20 +2727,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskDefinition"
           />[]&gt;
-        description: ''
   - name: 'getTaskGroup(string, string, string, TaskGroupExpands)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getTaskGroup
     package: azure-devops-extension-api
     summary: Get task group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTaskGroup(project: string, taskGroupId: string, versionSpec:
-        string, expand?: TaskGroupExpands)
+        string, expand?: TaskGroupExpands): Promise<TaskGroup>
       parameters:
         - id: project
           type: string
@@ -2605,16 +2758,19 @@ methods:
             The properties that should be expanded. example $expand=Tasks will
             expand nested task groups.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />&gt;
   - name: 'getTaskGroupHistory(string, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getTaskGroupHistory
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTaskGroupHistory(project: string, taskGroupId: string)'
+      content: >-
+        function getTaskGroupHistory(project: string, taskGroupId: string):
+        Promise<TaskGroupRevision[]>
       parameters:
         - id: project
           type: string
@@ -2624,20 +2780,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskGroupRevision"
           />[]&gt;
-        description: ''
   - name: 'getTaskGroupRevision(string, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getTaskGroupRevision
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTaskGroupRevision(project: string, taskGroupId: string,
-        revision: number)
+        revision: number): Promise<string>
       parameters:
         - id: project
           type: string
@@ -2650,21 +2807,23 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: >-
       getTaskGroups(string, string, boolean, string, boolean, number, Date,
       TaskGroupQueryOrder)
     uid: azure-devops-extension-api.TaskAgentRestClient.getTaskGroups
     package: azure-devops-extension-api
     summary: List task groups.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTaskGroups(project: string, taskGroupId?: string, expanded?:
         boolean, taskIdFilter?: string, deleted?: boolean, top?: number,
-        continuationToken?: Date, queryOrder?: TaskGroupQueryOrder)
+        continuationToken?: Date, queryOrder?: TaskGroupQueryOrder):
+        Promise<TaskGroup[]>
       parameters:
         - id: project
           type: string
@@ -2693,19 +2852,20 @@ methods:
             Gets the results in the defined order. Default is
             'CreatedOnDescending'.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />[]&gt;'
   - name: 'getTaskHubLicenseDetails(string, boolean, boolean)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getTaskHubLicenseDetails
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTaskHubLicenseDetails(hubName: string,
         includeEnterpriseUsersCount?: boolean, includeHostedAgentMinutesCount?:
-        boolean)
+        boolean): Promise<TaskHubLicenseDetails>
       parameters:
         - id: hubName
           type: string
@@ -2718,18 +2878,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskHubLicenseDetails" />&gt;
-        description: ''
   - name: 'getVariableGroup(string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getVariableGroup
     package: azure-devops-extension-api
     summary: Get a variable group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getVariableGroup(project: string, groupId: number)'
+      content: >-
+        function getVariableGroup(project: string, groupId: number):
+        Promise<VariableGroup>
       parameters:
         - id: project
           type: string
@@ -2739,21 +2902,23 @@ methods:
           description: |
             Id of the variable group.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.VariableGroup" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.VariableGroup" />&gt;
   - name: >-
       getVariableGroups(string, string, VariableGroupActionFilter, number,
       number, VariableGroupQueryOrder)
     uid: azure-devops-extension-api.TaskAgentRestClient.getVariableGroups
     package: azure-devops-extension-api
     summary: Get variable groups.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getVariableGroups(project: string, groupName?: string,
         actionFilter?: VariableGroupActionFilter, top?: number,
-        continuationToken?: number, queryOrder?: VariableGroupQueryOrder)
+        continuationToken?: number, queryOrder?: VariableGroupQueryOrder):
+        Promise<VariableGroup[]>
       parameters:
         - id: project
           type: string
@@ -2777,18 +2942,21 @@ methods:
           description: |
             Gets the results in the defined order. Default is 'IdDescending'.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.VariableGroup"
           />[]&gt;
-        description: ''
   - name: 'getVariableGroupsById(string, number[])'
     uid: azure-devops-extension-api.TaskAgentRestClient.getVariableGroupsById
     package: azure-devops-extension-api
     summary: Get variable groups by ids.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getVariableGroupsById(project: string, groupIds: number[])'
+      content: >-
+        function getVariableGroupsById(project: string, groupIds: number[]):
+        Promise<VariableGroup[]>
       parameters:
         - id: project
           type: string
@@ -2798,20 +2966,21 @@ methods:
           description: |
             Comma separated list of Ids of variable groups.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.VariableGroup"
           />[]&gt;
-        description: ''
   - name: 'getVirtualMachineGroup(string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.getVirtualMachineGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getVirtualMachineGroup(project: string, environmentId: number,
-        resourceId: number)
+        resourceId: number): Promise<VirtualMachineGroup>
       parameters:
         - id: project
           type: string
@@ -2824,23 +2993,25 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.VirtualMachineGroup"
           />&gt;
-        description: ''
   - name: >-
       getVirtualMachines(string, number, number, string, string, boolean,
       string[], number)
     uid: azure-devops-extension-api.TaskAgentRestClient.getVirtualMachines
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getVirtualMachines(project: string, environmentId: number,
         resourceId: number, continuationToken?: string, name?: string,
-        partialNameMatch?: boolean, tags?: string[], top?: number)
+        partialNameMatch?: boolean, tags?: string[], top?: number):
+        Promise<VirtualMachine[]>
       parameters:
         - id: project
           type: string
@@ -2868,29 +3039,31 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.VirtualMachine"
           />[]&gt;
-        description: ''
   - name: getVstsAadTenantId()
     uid: azure-devops-extension-api.TaskAgentRestClient.getVstsAadTenantId
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getVstsAadTenantId()
+      content: 'function getVstsAadTenantId(): Promise<string>'
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: getYamlSchema(boolean)
     uid: azure-devops-extension-api.TaskAgentRestClient.getYamlSchema
     package: azure-devops-extension-api
     summary: GET the Yaml schema used for Yaml file validation.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getYamlSchema(validateTaskNames?: boolean)'
+      content: 'function getYamlSchema(validateTaskNames?: boolean): Promise<any>'
       parameters:
         - id: validateTaskNames
           type: boolean
@@ -2898,18 +3071,19 @@ methods:
             Whether the schema should validate that tasks are actually installed
             (useful for offline tools where you don't want validation).
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'publishTaskGroup(PublishTaskGroupMetadata, string, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.publishTaskGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function publishTaskGroup(taskGroupMetadata: PublishTaskGroupMetadata,
-        project: string, parentTaskGroupId: string)
+        project: string, parentTaskGroupId: string): Promise<TaskGroup[]>
       parameters:
         - id: taskGroupMetadata
           type: <xref uid="azure-devops-extension-api.PublishTaskGroupMetadata" />
@@ -2922,8 +3096,8 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />[]&gt;'
   - name: queryEndpoint(TaskDefinitionEndpoint)
     uid: azure-devops-extension-api.TaskAgentRestClient.queryEndpoint
     package: azure-devops-extension-api
@@ -2931,18 +3105,21 @@ methods:
       Proxy for a GET request defined by an 'endpoint'. The request is
       authorized using a service connection. The response is filtered using an
       XPath/Json based selector.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function queryEndpoint(endpoint: TaskDefinitionEndpoint)'
+      content: >-
+        function queryEndpoint(endpoint: TaskDefinitionEndpoint):
+        Promise<string[]>
       parameters:
         - id: endpoint
           type: <xref uid="azure-devops-extension-api.TaskDefinitionEndpoint" />
           description: |
             Describes the URL to fetch.
       return:
-        type: 'Promise&lt;string[]&gt;'
         description: ''
+        type: 'Promise&lt;string[]&gt;'
   - name: 'querySecureFilesByProperties(string, string, string)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.querySecureFilesByProperties
@@ -2950,12 +3127,13 @@ methods:
     summary: >-
       Query secure files using a name pattern and a condition on file
       properties.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function querySecureFilesByProperties(condition: string, project:
-        string, namePattern?: string)
+        string, namePattern?: string): Promise<SecureFile[]>
       parameters:
         - id: condition
           type: string
@@ -2976,19 +3154,20 @@ methods:
             Name of the secure file to match. Can include wildcards to match
             multiple files.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
   - name: 'queueAgentPoolMaintenanceJob(TaskAgentPoolMaintenanceJob, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.queueAgentPoolMaintenanceJob
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queueAgentPoolMaintenanceJob(job: TaskAgentPoolMaintenanceJob,
-        poolId: number)
+        poolId: number): Promise<TaskAgentPoolMaintenanceJob>
       parameters:
         - id: job
           type: >-
@@ -3000,20 +3179,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskAgentPoolMaintenanceJob" />&gt;
-        description: ''
   - name: 'queueAgentRequest(TaskAgentJobRequest, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.queueAgentRequest
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queueAgentRequest(request: TaskAgentJobRequest, queueId:
-        number)
+        number): Promise<TaskAgentJobRequest>
       parameters:
         - id: request
           type: <xref uid="azure-devops-extension-api.TaskAgentJobRequest" />
@@ -3023,20 +3203,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />&gt;
-        description: ''
   - name: 'queueAgentRequestByPool(TaskAgentJobRequest, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.queueAgentRequestByPool
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queueAgentRequestByPool(request: TaskAgentJobRequest, poolId:
-        number)
+        number): Promise<TaskAgentJobRequest>
       parameters:
         - id: request
           type: <xref uid="azure-devops-extension-api.TaskAgentJobRequest" />
@@ -3046,18 +3227,19 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />&gt;
-        description: ''
   - name: 'refreshAgent(number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.refreshAgent
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function refreshAgent(poolId: number, agentId: number)'
+      content: 'function refreshAgent(poolId: number, agentId: number): Promise<void>'
       parameters:
         - id: poolId
           type: number
@@ -3067,34 +3249,36 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: refreshAgents(number)
     uid: azure-devops-extension-api.TaskAgentRestClient.refreshAgents
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function refreshAgents(poolId: number)'
+      content: 'function refreshAgents(poolId: number): Promise<void>'
       parameters:
         - id: poolId
           type: number
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'refreshDeploymentMachines(string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.refreshDeploymentMachines
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function refreshDeploymentMachines(project: string, deploymentGroupId:
-        number)
+        number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -3104,18 +3288,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'refreshDeploymentTargets(string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.refreshDeploymentTargets
     package: azure-devops-extension-api
     summary: Upgrade the deployment targets in a deployment group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function refreshDeploymentTargets(project: string, deploymentGroupId:
-        number)
+        number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -3125,8 +3310,8 @@ methods:
           description: |
             ID of the deployment group.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'replaceAgent(TaskAgent, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.replaceAgent
     package: azure-devops-extension-api
@@ -3135,10 +3320,13 @@ methods:
       Instead, [use the agent configuration
       script](https://docs.microsoft.com/azure/devops/pipelines/agents/agents)
       to remove and reconfigure an agent from your organization.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function replaceAgent(agent: TaskAgent, poolId: number, agentId: number)'
+      content: >-
+        function replaceAgent(agent: TaskAgent, poolId: number, agentId:
+        number): Promise<TaskAgent>
       parameters:
         - id: agent
           type: <xref uid="azure-devops-extension-api.TaskAgent" />
@@ -3151,18 +3339,20 @@ methods:
           description: |
             The agent to replace
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
   - name: 'replaceDeploymentMachine(DeploymentMachine, string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.replaceDeploymentMachine
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function replaceDeploymentMachine(machine: DeploymentMachine, project:
-        string, deploymentGroupId: number, machineId: number)
+        string, deploymentGroupId: number, machineId: number):
+        Promise<DeploymentMachine>
       parameters:
         - id: machine
           type: <xref uid="azure-devops-extension-api.DeploymentMachine" />
@@ -3178,22 +3368,24 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />&gt;
-        description: ''
   - name: 'replaceDeploymentTarget(DeploymentMachine, string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.replaceDeploymentTarget
     package: azure-devops-extension-api
     summary: >-
       Replace a deployment target in a deployment group. Generally this is
       called by agent configuration tool.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function replaceDeploymentTarget(machine: DeploymentMachine, project:
-        string, deploymentGroupId: number, targetId: number)
+        string, deploymentGroupId: number, targetId: number):
+        Promise<DeploymentMachine>
       parameters:
         - id: machine
           type: <xref uid="azure-devops-extension-api.DeploymentMachine" />
@@ -3209,20 +3401,21 @@ methods:
           description: |
             ID of the deployment target to replace.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />&gt;
-        description: ''
   - name: 'sendMessage(TaskAgentMessage, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.sendMessage
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function sendMessage(message: TaskAgentMessage, poolId: number,
-        requestId: number)
+        requestId: number): Promise<void>
       parameters:
         - id: message
           type: <xref uid="azure-devops-extension-api.TaskAgentMessage" />
@@ -3235,18 +3428,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'shareVariableGroup(VariableGroupProjectReference[], number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.shareVariableGroup
     package: azure-devops-extension-api
     summary: Add a variable group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function shareVariableGroup(variableGroupProjectReferences:
-        VariableGroupProjectReference[], variableGroupId: number)
+        VariableGroupProjectReference[], variableGroupId: number): Promise<void>
       parameters:
         - id: variableGroupProjectReferences
           type: >-
@@ -3258,16 +3452,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'undeleteTaskGroup(TaskGroup, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.undeleteTaskGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function undeleteTaskGroup(taskGroup: TaskGroup, project: string)'
+      content: >-
+        function undeleteTaskGroup(taskGroup: TaskGroup, project: string):
+        Promise<TaskGroup[]>
       parameters:
         - id: taskGroup
           type: <xref uid="azure-devops-extension-api.TaskGroup" />
@@ -3277,16 +3474,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />[]&gt;'
   - name: 'updateAgent(TaskAgent, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateAgent
     package: azure-devops-extension-api
     summary: Update agent details.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function updateAgent(agent: TaskAgent, poolId: number, agentId: number)'
+      content: >-
+        function updateAgent(agent: TaskAgent, poolId: number, agentId: number):
+        Promise<TaskAgent>
       parameters:
         - id: agent
           type: <xref uid="azure-devops-extension-api.TaskAgent" />
@@ -3299,16 +3499,19 @@ methods:
           description: |
             The agent to update
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
   - name: 'updateAgentPool(TaskAgentPool, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateAgentPool
     package: azure-devops-extension-api
     summary: Update properties on an agent pool
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function updateAgentPool(pool: TaskAgentPool, poolId: number)'
+      content: >-
+        function updateAgentPool(pool: TaskAgentPool, poolId: number):
+        Promise<TaskAgentPool>
       parameters:
         - id: pool
           type: <xref uid="azure-devops-extension-api.TaskAgentPool" />
@@ -3318,8 +3521,8 @@ methods:
           description: |
             The agent pool to update
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentPool" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentPool" />&gt;
   - name: >-
       updateAgentPoolMaintenanceDefinition(TaskAgentPoolMaintenanceDefinition,
       number, number)
@@ -3327,13 +3530,14 @@ methods:
       azure-devops-extension-api.TaskAgentRestClient.updateAgentPoolMaintenanceDefinition
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateAgentPoolMaintenanceDefinition(definition:
         TaskAgentPoolMaintenanceDefinition, poolId: number, definitionId:
-        number)
+        number): Promise<TaskAgentPoolMaintenanceDefinition>
       parameters:
         - id: definition
           type: >-
@@ -3349,22 +3553,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskAgentPoolMaintenanceDefinition"
           />&gt;
-        description: ''
   - name: 'updateAgentPoolMaintenanceJob(TaskAgentPoolMaintenanceJob, number, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.updateAgentPoolMaintenanceJob
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateAgentPoolMaintenanceJob(job: TaskAgentPoolMaintenanceJob,
-        poolId: number, jobId: number)
+        poolId: number, jobId: number): Promise<TaskAgentPoolMaintenanceJob>
       parameters:
         - id: job
           type: >-
@@ -3379,20 +3584,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskAgentPoolMaintenanceJob" />&gt;
-        description: ''
   - name: 'updateAgentRequest(TaskAgentJobRequest, number, number, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateAgentRequest
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateAgentRequest(request: TaskAgentJobRequest, poolId:
-        number, requestId: number, lockToken: string)
+        number, requestId: number, lockToken: string):
+        Promise<TaskAgentJobRequest>
       parameters:
         - id: request
           type: <xref uid="azure-devops-extension-api.TaskAgentJobRequest" />
@@ -3408,20 +3615,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskAgentJobRequest"
           />&gt;
-        description: ''
   - name: 'updateAgentUpdateState(number, number, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateAgentUpdateState
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateAgentUpdateState(poolId: number, agentId: number,
-        currentState: string)
+        currentState: string): Promise<TaskAgent>
       parameters:
         - id: poolId
           type: number
@@ -3434,18 +3642,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
   - name: 'updateAgentUserCapabilities([key: string]: string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateAgentUserCapabilities
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateAgentUserCapabilities(userCapabilities: [key: string]:
-        string, poolId: number, agentId: number)
+        string, poolId: number, agentId: number): Promise<TaskAgent>
       parameters:
         - id: userCapabilities
           type: '[key: string]\: string'
@@ -3458,19 +3667,20 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskAgent" />&gt;
   - name: 'updateDeploymentGroup(DeploymentGroupUpdateParameter, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateDeploymentGroup
     package: azure-devops-extension-api
     summary: Update a deployment group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDeploymentGroup(deploymentGroup:
         DeploymentGroupUpdateParameter, project: string, deploymentGroupId:
-        number)
+        number): Promise<DeploymentGroup>
       parameters:
         - id: deploymentGroup
           type: >-
@@ -3485,20 +3695,22 @@ methods:
           description: |
             ID of the deployment group.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentGroup"
           />&gt;
-        description: ''
   - name: 'updateDeploymentMachine(DeploymentMachine, string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateDeploymentMachine
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDeploymentMachine(machine: DeploymentMachine, project:
-        string, deploymentGroupId: number, machineId: number)
+        string, deploymentGroupId: number, machineId: number):
+        Promise<DeploymentMachine>
       parameters:
         - id: machine
           type: <xref uid="azure-devops-extension-api.DeploymentMachine" />
@@ -3514,21 +3726,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />&gt;
-        description: ''
   - name: 'updateDeploymentMachineGroup(DeploymentMachineGroup, string, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.updateDeploymentMachineGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDeploymentMachineGroup(machineGroup:
-        DeploymentMachineGroup, project: string, machineGroupId: number)
+        DeploymentMachineGroup, project: string, machineGroupId: number):
+        Promise<DeploymentMachineGroup>
       parameters:
         - id: machineGroup
           type: <xref uid="azure-devops-extension-api.DeploymentMachineGroup" />
@@ -3541,21 +3755,23 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DeploymentMachineGroup" />&gt;
-        description: ''
   - name: 'updateDeploymentMachineGroupMachines(DeploymentMachine[], string, number)'
     uid: >-
       azure-devops-extension-api.TaskAgentRestClient.updateDeploymentMachineGroupMachines
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDeploymentMachineGroupMachines(deploymentMachines:
-        DeploymentMachine[], project: string, machineGroupId: number)
+        DeploymentMachine[], project: string, machineGroupId: number):
+        Promise<DeploymentMachine[]>
       parameters:
         - id: deploymentMachines
           type: '<xref uid="azure-devops-extension-api.DeploymentMachine" />[]'
@@ -3568,20 +3784,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />[]&gt;
-        description: ''
   - name: 'updateDeploymentMachines(DeploymentMachine[], string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateDeploymentMachines
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDeploymentMachines(machines: DeploymentMachine[],
-        project: string, deploymentGroupId: number)
+        project: string, deploymentGroupId: number):
+        Promise<DeploymentMachine[]>
       parameters:
         - id: machines
           type: '<xref uid="azure-devops-extension-api.DeploymentMachine" />[]'
@@ -3594,22 +3812,24 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />[]&gt;
-        description: ''
   - name: 'updateDeploymentTarget(DeploymentMachine, string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateDeploymentTarget
     package: azure-devops-extension-api
     summary: >-
       Update a deployment target and its agent properties in a deployment group.
       Generally this is called by agent configuration tool.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDeploymentTarget(machine: DeploymentMachine, project:
-        string, deploymentGroupId: number, targetId: number)
+        string, deploymentGroupId: number, targetId: number):
+        Promise<DeploymentMachine>
       parameters:
         - id: machine
           type: <xref uid="azure-devops-extension-api.DeploymentMachine" />
@@ -3625,21 +3845,22 @@ methods:
           description: |
             ID of the deployment target to update.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />&gt;
-        description: ''
   - name: 'updateDeploymentTargets(DeploymentTargetUpdateParameter[], string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateDeploymentTargets
     package: azure-devops-extension-api
     summary: Update tags of a list of deployment targets in a deployment group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateDeploymentTargets(machines:
         DeploymentTargetUpdateParameter[], project: string, deploymentGroupId:
-        number)
+        number): Promise<DeploymentMachine[]>
       parameters:
         - id: machines
           type: >-
@@ -3655,20 +3876,22 @@ methods:
           description: |
             ID of the deployment group in which deployment targets are updated.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeploymentMachine"
           />[]&gt;
-        description: ''
   - name: 'updateEnvironment(EnvironmentUpdateParameter, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateEnvironment
     package: azure-devops-extension-api
     summary: Update the specified environment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateEnvironment(environmentUpdateParameter:
-        EnvironmentUpdateParameter, project: string, environmentId: number)
+        EnvironmentUpdateParameter, project: string, environmentId: number):
+        Promise<EnvironmentInstance>
       parameters:
         - id: environmentUpdateParameter
           type: <xref uid="azure-devops-extension-api.EnvironmentUpdateParameter" />
@@ -3681,20 +3904,21 @@ methods:
           description: |
             ID of the environment.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.EnvironmentInstance"
           />&gt;
-        description: ''
   - name: 'updateSecureFile(SecureFile, string, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateSecureFile
     package: azure-devops-extension-api
     summary: Update the name or properties of an existing secure file
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateSecureFile(secureFile: SecureFile, project: string,
-        secureFileId: string)
+        secureFileId: string): Promise<SecureFile>
       parameters:
         - id: secureFile
           type: <xref uid="azure-devops-extension-api.SecureFile" />
@@ -3707,8 +3931,8 @@ methods:
           description: |
             The unique secure file Id
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />&gt;
   - name: 'updateSecureFiles(SecureFile[], string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateSecureFiles
     package: azure-devops-extension-api
@@ -3716,10 +3940,13 @@ methods:
       Update properties and/or names of a set of secure files. Files are
       identified by their IDs. Properties provided override the existing one
       entirely, i.e. do not merge.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function updateSecureFiles(secureFiles: SecureFile[], project: string)'
+      content: >-
+        function updateSecureFiles(secureFiles: SecureFile[], project: string):
+        Promise<SecureFile[]>
       parameters:
         - id: secureFiles
           type: '<xref uid="azure-devops-extension-api.SecureFile" />[]'
@@ -3732,18 +3959,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />[]&gt;'
   - name: 'updateTaskGroup(TaskGroupUpdateParameter, string, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateTaskGroup
     package: azure-devops-extension-api
     summary: Update a task group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateTaskGroup(taskGroup: TaskGroupUpdateParameter, project:
-        string, taskGroupId?: string)
+        string, taskGroupId?: string): Promise<TaskGroup>
       parameters:
         - id: taskGroup
           type: <xref uid="azure-devops-extension-api.TaskGroupUpdateParameter" />
@@ -3756,21 +3984,22 @@ methods:
           description: |
             Id of the task group to update.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />&gt;
   - name: >-
       updateTaskGroupProperties(TaskGroupUpdatePropertiesBase, string, string,
       boolean)
     uid: azure-devops-extension-api.TaskAgentRestClient.updateTaskGroupProperties
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateTaskGroupProperties(taskGroupUpdateProperties:
         TaskGroupUpdatePropertiesBase, project: string, taskGroupId: string,
-        disablePriorVersions?: boolean)
+        disablePriorVersions?: boolean): Promise<TaskGroup[]>
       parameters:
         - id: taskGroupUpdateProperties
           type: >-
@@ -3788,18 +4017,19 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />[]&gt;'
   - name: 'updateTaskHubLicenseDetails(TaskHubLicenseDetails, string)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateTaskHubLicenseDetails
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateTaskHubLicenseDetails(taskHubLicenseDetails:
-        TaskHubLicenseDetails, hubName: string)
+        TaskHubLicenseDetails, hubName: string): Promise<TaskHubLicenseDetails>
       parameters:
         - id: taskHubLicenseDetails
           type: <xref uid="azure-devops-extension-api.TaskHubLicenseDetails" />
@@ -3809,20 +4039,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskHubLicenseDetails" />&gt;
-        description: ''
   - name: 'updateVariableGroup(VariableGroupParameters, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateVariableGroup
     package: azure-devops-extension-api
     summary: Update a variable group.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateVariableGroup(variableGroupParameters:
-        VariableGroupParameters, groupId: number)
+        VariableGroupParameters, groupId: number): Promise<VariableGroup>
       parameters:
         - id: variableGroupParameters
           type: <xref uid="azure-devops-extension-api.VariableGroupParameters" />
@@ -3832,18 +4063,19 @@ methods:
           description: |
             Id of the variable group to update.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.VariableGroup" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.VariableGroup" />&gt;
   - name: 'updateVirtualMachineGroup(VirtualMachineGroup, string, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateVirtualMachineGroup
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateVirtualMachineGroup(resource: VirtualMachineGroup,
-        project: string, environmentId: number)
+        project: string, environmentId: number): Promise<VirtualMachineGroup>
       parameters:
         - id: resource
           type: <xref uid="azure-devops-extension-api.VirtualMachineGroup" />
@@ -3856,20 +4088,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.VirtualMachineGroup"
           />&gt;
-        description: ''
   - name: 'updateVirtualMachines(VirtualMachine[], string, number, number)'
     uid: azure-devops-extension-api.TaskAgentRestClient.updateVirtualMachines
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateVirtualMachines(machines: VirtualMachine[], project:
-        string, environmentId: number, resourceId: number)
+        string, environmentId: number, resourceId: number):
+        Promise<VirtualMachine[]>
       parameters:
         - id: machines
           type: '<xref uid="azure-devops-extension-api.VirtualMachine" />[]'
@@ -3885,20 +4119,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.VirtualMachine"
           />[]&gt;
-        description: ''
   - name: 'uploadSecureFile(any, string, string, boolean)'
     uid: azure-devops-extension-api.TaskAgentRestClient.uploadSecureFile
     package: azure-devops-extension-api
     summary: 'Upload a secure file, include the file stream in the request body'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function uploadSecureFile(content: any, project: string, name: string,
-        authorizePipelines?: boolean)
+        authorizePipelines?: boolean): Promise<SecureFile>
       parameters:
         - id: content
           type: any
@@ -3915,24 +4150,27 @@ methods:
             If authorizePipelines is true, then the secure file is authorized
             for use by all pipelines in the project.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.SecureFile" />&gt;
   - name: validateInputs(InputValidationRequest)
     uid: azure-devops-extension-api.TaskAgentRestClient.validateInputs
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function validateInputs(inputValidationRequest: InputValidationRequest)'
+      content: >-
+        function validateInputs(inputValidationRequest: InputValidationRequest):
+        Promise<InputValidationRequest>
       parameters:
         - id: inputValidationRequest
           type: <xref uid="azure-devops-extension-api.InputValidationRequest" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.InputValidationRequest" />&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.WorkRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: WorkRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.WorkRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,22 +28,26 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'createPlan(CreatePlan, string)'
     uid: azure-devops-extension-api.WorkRestClient.createPlan
     package: azure-devops-extension-api
     summary: Add a new plan for the team
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createPlan(postedPlan: CreatePlan, project: string)'
+      content: >-
+        function createPlan(postedPlan: CreatePlan, project: string):
+        Promise<Plan>
       parameters:
         - id: postedPlan
           type: <xref uid="azure-devops-extension-api.CreatePlan" />
@@ -51,16 +57,17 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Plan" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Plan" />&gt;
   - name: 'deletePlan(string, string)'
     uid: azure-devops-extension-api.WorkRestClient.deletePlan
     package: azure-devops-extension-api
     summary: Delete the specified plan
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deletePlan(project: string, id: string)'
+      content: 'function deletePlan(project: string, id: string): Promise<void>'
       parameters:
         - id: project
           type: string
@@ -70,16 +77,19 @@ methods:
           description: |
             Identifier of the plan
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteTeamIteration(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.deleteTeamIteration
     package: azure-devops-extension-api
     summary: Delete a team's iteration by iterationId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteTeamIteration(teamContext: TeamContext, id: string)'
+      content: >-
+        function deleteTeamIteration(teamContext: TeamContext, id: string):
+        Promise<void>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -89,16 +99,19 @@ methods:
           description: |
             ID of the iteration
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'getBacklog(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBacklog
     package: azure-devops-extension-api
     summary: Get a backlog level
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBacklog(teamContext: TeamContext, id: string)'
+      content: >-
+        function getBacklog(teamContext: TeamContext, id: string):
+        Promise<BacklogLevelConfiguration>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -108,38 +121,42 @@ methods:
           description: |
             The id of the backlog level
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BacklogLevelConfiguration" />&gt;
-        description: ''
   - name: getBacklogConfigurations(TeamContext)
     uid: azure-devops-extension-api.WorkRestClient.getBacklogConfigurations
     package: azure-devops-extension-api
     summary: Gets backlog configuration for a team
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBacklogConfigurations(teamContext: TeamContext)'
+      content: >-
+        function getBacklogConfigurations(teamContext: TeamContext):
+        Promise<BacklogConfiguration>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BacklogConfiguration"
           />&gt;
-        description: ''
   - name: 'getBacklogLevelWorkItems(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBacklogLevelWorkItems
     package: azure-devops-extension-api
     summary: Get a list of work items within a backlog level
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBacklogLevelWorkItems(teamContext: TeamContext, backlogId:
-        string)
+        string): Promise<BacklogLevelWorkItems>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -149,36 +166,40 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BacklogLevelWorkItems" />&gt;
-        description: ''
   - name: getBacklogs(TeamContext)
     uid: azure-devops-extension-api.WorkRestClient.getBacklogs
     package: azure-devops-extension-api
     summary: List all backlog levels
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBacklogs(teamContext: TeamContext)'
+      content: >-
+        function getBacklogs(teamContext: TeamContext):
+        Promise<BacklogLevelConfiguration[]>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BacklogLevelConfiguration" />[]&gt;
-        description: ''
   - name: 'getBoard(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBoard
     package: azure-devops-extension-api
     summary: Get board
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBoard(teamContext: TeamContext, id: string)'
+      content: 'function getBoard(teamContext: TeamContext, id: string): Promise<Board>'
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -189,18 +210,20 @@ methods:
             identifier for board, either board's backlog level name
             (Eg:"Stories") or Id
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Board" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Board" />&gt;
   - name: 'getBoardBadge(TeamContext, string, BoardBadgeColumnOptions, string[])'
     uid: azure-devops-extension-api.WorkRestClient.getBoardBadge
     package: azure-devops-extension-api
     summary: Gets a badge that displays the status of columns on the board.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBoardBadge(teamContext: TeamContext, id: string,
-        columnOptions?: BoardBadgeColumnOptions, columns?: string[])
+        columnOptions?: BoardBadgeColumnOptions, columns?: string[]):
+        Promise<BoardBadge>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -216,18 +239,20 @@ methods:
           description: |
             If columnOptions is set to custom, specify the list of column names.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.BoardBadge" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BoardBadge" />&gt;
   - name: 'getBoardBadgeData(TeamContext, string, BoardBadgeColumnOptions, string[])'
     uid: azure-devops-extension-api.WorkRestClient.getBoardBadgeData
     package: azure-devops-extension-api
     summary: Gets a badge that displays the status of columns on the board.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBoardBadgeData(teamContext: TeamContext, id: string,
-        columnOptions?: BoardBadgeColumnOptions, columns?: string[])
+        columnOptions?: BoardBadgeColumnOptions, columns?: string[]):
+        Promise<string>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -243,18 +268,19 @@ methods:
           description: |
             If columnOptions is set to custom, specify the list of column names.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: 'getBoardCardRuleSettings(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBoardCardRuleSettings
     package: azure-devops-extension-api
     summary: Get board card Rule settings for the board id or board by name
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBoardCardRuleSettings(teamContext: TeamContext, board:
-        string)
+        string): Promise<BoardCardRuleSettings>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -264,18 +290,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BoardCardRuleSettings" />&gt;
-        description: ''
   - name: 'getBoardCardSettings(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBoardCardSettings
     package: azure-devops-extension-api
     summary: Get board card settings for the board id or board by name
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBoardCardSettings(teamContext: TeamContext, board: string)'
+      content: >-
+        function getBoardCardSettings(teamContext: TeamContext, board: string):
+        Promise<BoardCardSettings>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -285,20 +314,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BoardCardSettings"
           />&gt;
-        description: ''
   - name: 'getBoardChart(TeamContext, string, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBoardChart
     package: azure-devops-extension-api
     summary: Get a board chart
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBoardChart(teamContext: TeamContext, board: string, name:
-        string)
+        string): Promise<BoardChart>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -313,16 +343,19 @@ methods:
           description: |
             The chart name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.BoardChart" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BoardChart" />&gt;
   - name: 'getBoardCharts(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBoardCharts
     package: azure-devops-extension-api
     summary: Get board charts
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBoardCharts(teamContext: TeamContext, board: string)'
+      content: >-
+        function getBoardCharts(teamContext: TeamContext, board: string):
+        Promise<BoardChartReference[]>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -333,18 +366,21 @@ methods:
             Identifier for board, either board's backlog level name
             (Eg:"Stories") or Id
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BoardChartReference"
           />[]&gt;
-        description: ''
   - name: 'getBoardColumns(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBoardColumns
     package: azure-devops-extension-api
     summary: Get columns on a board
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBoardColumns(teamContext: TeamContext, board: string)'
+      content: >-
+        function getBoardColumns(teamContext: TeamContext, board: string):
+        Promise<BoardColumn[]>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -354,20 +390,22 @@ methods:
           description: |
             Name or ID of the specific board
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BoardColumn" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BoardColumn" />[]&gt;'
   - name: 'getBoardMappingParentItems(TeamContext, string, number[])'
     uid: azure-devops-extension-api.WorkRestClient.getBoardMappingParentItems
     package: azure-devops-extension-api
     summary: >-
       Returns the list of parent field filter model for the given list of
       workitem ids
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBoardMappingParentItems(teamContext: TeamContext,
-        childBacklogContextCategoryRefName: string, workitemIds: number[])
+        childBacklogContextCategoryRefName: string, workitemIds: number[]):
+        Promise<ParentChildWIMap[]>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -380,18 +418,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ParentChildWIMap"
           />[]&gt;
-        description: ''
   - name: 'getBoardRows(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBoardRows
     package: azure-devops-extension-api
     summary: Get rows on a board
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBoardRows(teamContext: TeamContext, board: string)'
+      content: >-
+        function getBoardRows(teamContext: TeamContext, board: string):
+        Promise<BoardRow[]>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -401,34 +442,38 @@ methods:
           description: |
             Name or ID of the specific board
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BoardRow" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BoardRow" />[]&gt;'
   - name: getBoards(TeamContext)
     uid: azure-devops-extension-api.WorkRestClient.getBoards
     package: azure-devops-extension-api
     summary: Get boards
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBoards(teamContext: TeamContext)'
+      content: 'function getBoards(teamContext: TeamContext): Promise<BoardReference[]>'
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BoardReference"
           />[]&gt;
-        description: ''
   - name: 'getBoardUserSettings(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getBoardUserSettings
     package: azure-devops-extension-api
     summary: Get board user settings for a board id
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBoardUserSettings(teamContext: TeamContext, board: string)'
+      content: >-
+        function getBoardUserSettings(teamContext: TeamContext, board: string):
+        Promise<BoardUserSettings>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -438,20 +483,21 @@ methods:
           description: |
             Board ID or Name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BoardUserSettings"
           />&gt;
-        description: ''
   - name: 'getCapacitiesWithIdentityRef(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getCapacitiesWithIdentityRef
     package: azure-devops-extension-api
     summary: Get a team's capacity
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getCapacitiesWithIdentityRef(teamContext: TeamContext,
-        iterationId: string)
+        iterationId: string): Promise<TeamMemberCapacityIdentityRef[]>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -461,21 +507,23 @@ methods:
           description: |
             ID of the iteration
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TeamMemberCapacityIdentityRef"
           />[]&gt;
-        description: ''
   - name: 'getCapacityWithIdentityRef(TeamContext, string, string)'
     uid: azure-devops-extension-api.WorkRestClient.getCapacityWithIdentityRef
     package: azure-devops-extension-api
     summary: Get a team member's capacity
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getCapacityWithIdentityRef(teamContext: TeamContext,
-        iterationId: string, teamMemberId: string)
+        iterationId: string, teamMemberId: string):
+        Promise<TeamMemberCapacityIdentityRef>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -488,56 +536,61 @@ methods:
           description: |
             ID of the team member
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TeamMemberCapacityIdentityRef" />&gt;
-        description: ''
   - name: getColumns(TeamContext)
     uid: azure-devops-extension-api.WorkRestClient.getColumns
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getColumns(teamContext: TeamContext)'
+      content: 'function getColumns(teamContext: TeamContext): Promise<TaskboardColumns>'
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskboardColumns"
           />&gt;
-        description: ''
   - name: getColumnSuggestedValues(string)
     uid: azure-devops-extension-api.WorkRestClient.getColumnSuggestedValues
     package: azure-devops-extension-api
     summary: Get available board columns in a project
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getColumnSuggestedValues(project?: string)'
+      content: >-
+        function getColumnSuggestedValues(project?: string):
+        Promise<BoardSuggestedValue[]>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BoardSuggestedValue"
           />[]&gt;
-        description: ''
   - name: 'getDeliveryTimelineData(string, string, number, Date, Date)'
     uid: azure-devops-extension-api.WorkRestClient.getDeliveryTimelineData
     package: azure-devops-extension-api
     summary: Get Delivery View Data
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getDeliveryTimelineData(project: string, id: string, revision?:
-        number, startDate?: Date, endDate?: Date)
+        number, startDate?: Date, endDate?: Date): Promise<DeliveryViewData>
       parameters:
         - id: project
           type: string
@@ -560,20 +613,21 @@ methods:
           description: |
             The end date of timeline
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DeliveryViewData"
           />&gt;
-        description: ''
   - name: 'getIterationWorkItems(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getIterationWorkItems
     package: azure-devops-extension-api
     summary: Get work items for iteration
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getIterationWorkItems(teamContext: TeamContext, iterationId:
-        string)
+        string): Promise<IterationWorkItems>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -583,18 +637,19 @@ methods:
           description: |
             ID of the iteration
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.IterationWorkItems"
           />&gt;
-        description: ''
   - name: 'getPlan(string, string)'
     uid: azure-devops-extension-api.WorkRestClient.getPlan
     package: azure-devops-extension-api
     summary: Get the information for the specified plan
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getPlan(project: string, id: string)'
+      content: 'function getPlan(project: string, id: string): Promise<Plan>'
       parameters:
         - id: project
           type: string
@@ -604,68 +659,78 @@ methods:
           description: |
             Identifier of the plan
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Plan" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Plan" />&gt;
   - name: getPlans(string)
     uid: azure-devops-extension-api.WorkRestClient.getPlans
     package: azure-devops-extension-api
     summary: Get the information for all the plans configured for the given team
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getPlans(project: string)'
+      content: 'function getPlans(project: string): Promise<Plan[]>'
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Plan" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Plan" />[]&gt;'
   - name: getProcessConfiguration(string)
     uid: azure-devops-extension-api.WorkRestClient.getProcessConfiguration
     package: azure-devops-extension-api
     summary: Get process configuration
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getProcessConfiguration(project: string)'
+      content: >-
+        function getProcessConfiguration(project: string):
+        Promise<ProcessConfiguration>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ProcessConfiguration"
           />&gt;
-        description: ''
   - name: getRowSuggestedValues(string)
     uid: azure-devops-extension-api.WorkRestClient.getRowSuggestedValues
     package: azure-devops-extension-api
     summary: Get available board rows in a project
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getRowSuggestedValues(project?: string)'
+      content: >-
+        function getRowSuggestedValues(project?: string):
+        Promise<BoardSuggestedValue[]>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BoardSuggestedValue"
           />[]&gt;
-        description: ''
   - name: 'getTeamDaysOff(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getTeamDaysOff
     package: azure-devops-extension-api
     summary: Get team's days off for an iteration
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTeamDaysOff(teamContext: TeamContext, iterationId: string)'
+      content: >-
+        function getTeamDaysOff(teamContext: TeamContext, iterationId: string):
+        Promise<TeamSettingsDaysOff>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -675,36 +740,42 @@ methods:
           description: |
             ID of the iteration
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TeamSettingsDaysOff"
           />&gt;
-        description: ''
   - name: getTeamFieldValues(TeamContext)
     uid: azure-devops-extension-api.WorkRestClient.getTeamFieldValues
     package: azure-devops-extension-api
     summary: Get a collection of team field values
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTeamFieldValues(teamContext: TeamContext)'
+      content: >-
+        function getTeamFieldValues(teamContext: TeamContext):
+        Promise<TeamFieldValues>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TeamFieldValues"
           />&gt;
-        description: ''
   - name: 'getTeamIteration(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getTeamIteration
     package: azure-devops-extension-api
     summary: Get team's iteration by iterationId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTeamIteration(teamContext: TeamContext, id: string)'
+      content: >-
+        function getTeamIteration(teamContext: TeamContext, id: string):
+        Promise<TeamSettingsIteration>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -714,18 +785,21 @@ methods:
           description: |
             ID of the iteration
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TeamSettingsIteration" />&gt;
-        description: ''
   - name: 'getTeamIterations(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getTeamIterations
     package: azure-devops-extension-api
     summary: Get a team's iterations using timeframe filter
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTeamIterations(teamContext: TeamContext, timeframe?: string)'
+      content: >-
+        function getTeamIterations(teamContext: TeamContext, timeframe?:
+        string): Promise<TeamSettingsIteration[]>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -736,36 +810,38 @@ methods:
             A filter for which iterations are returned based on relative time.
             Only Current is supported currently.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TeamSettingsIteration" />[]&gt;
-        description: ''
   - name: getTeamSettings(TeamContext)
     uid: azure-devops-extension-api.WorkRestClient.getTeamSettings
     package: azure-devops-extension-api
     summary: Get a team's settings
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTeamSettings(teamContext: TeamContext)'
+      content: 'function getTeamSettings(teamContext: TeamContext): Promise<TeamSetting>'
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
           description: |
             The team context for the operation
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TeamSetting" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TeamSetting" />&gt;
   - name: 'getWorkItemColumns(TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.getWorkItemColumns
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWorkItemColumns(teamContext: TeamContext, iterationId:
-        string)
+        string): Promise<TaskboardWorkItemColumn[]>
       parameters:
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
@@ -775,20 +851,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TaskboardWorkItemColumn" />[]&gt;
-        description: ''
   - name: 'postTeamIteration(TeamSettingsIteration, TeamContext)'
     uid: azure-devops-extension-api.WorkRestClient.postTeamIteration
     package: azure-devops-extension-api
     summary: Add an iteration to the team
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function postTeamIteration(iteration: TeamSettingsIteration,
-        teamContext: TeamContext)
+        teamContext: TeamContext): Promise<TeamSettingsIteration>
       parameters:
         - id: iteration
           type: <xref uid="azure-devops-extension-api.TeamSettingsIteration" />
@@ -798,20 +875,21 @@ methods:
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TeamSettingsIteration" />&gt;
-        description: ''
   - name: 'reorderBacklogWorkItems(ReorderOperation, TeamContext)'
     uid: azure-devops-extension-api.WorkRestClient.reorderBacklogWorkItems
     package: azure-devops-extension-api
     summary: Reorder Product Backlog/Boards Work Items
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function reorderBacklogWorkItems(operation: ReorderOperation,
-        teamContext: TeamContext)
+        teamContext: TeamContext): Promise<ReorderResult[]>
       parameters:
         - id: operation
           type: <xref uid="azure-devops-extension-api.ReorderOperation" />
@@ -821,20 +899,21 @@ methods:
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReorderResult"
           />[]&gt;
-        description: ''
   - name: 'reorderIterationWorkItems(ReorderOperation, TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.reorderIterationWorkItems
     package: azure-devops-extension-api
     summary: Reorder Sprint Backlog/Taskboard Work Items
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function reorderIterationWorkItems(operation: ReorderOperation,
-        teamContext: TeamContext, iterationId: string)
+        teamContext: TeamContext, iterationId: string): Promise<ReorderResult[]>
       parameters:
         - id: operation
           type: <xref uid="azure-devops-extension-api.ReorderOperation" />
@@ -847,23 +926,24 @@ methods:
           description: |
             The id of the iteration
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReorderResult"
           />[]&gt;
-        description: ''
   - name: >-
       replaceCapacitiesWithIdentityRef(TeamMemberCapacityIdentityRef[],
       TeamContext, string)
     uid: azure-devops-extension-api.WorkRestClient.replaceCapacitiesWithIdentityRef
     package: azure-devops-extension-api
     summary: Replace a team's capacity
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function replaceCapacitiesWithIdentityRef(capacities:
         TeamMemberCapacityIdentityRef[], teamContext: TeamContext, iterationId:
-        string)
+        string): Promise<TeamMemberCapacityIdentityRef[]>
       parameters:
         - id: capacities
           type: >-
@@ -878,21 +958,22 @@ methods:
           description: |
             ID of the iteration
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TeamMemberCapacityIdentityRef"
           />[]&gt;
-        description: ''
   - name: 'setBoardOptions([key: string]: string, TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.setBoardOptions
     package: azure-devops-extension-api
     summary: Update board options
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function setBoardOptions(options: [key: string]: string, teamContext:
-        TeamContext, id: string)
+        TeamContext, id: string): Promise<[key: string]: string>
       parameters:
         - id: options
           type: '[key: string]\: string'
@@ -906,18 +987,20 @@ methods:
             identifier for board, either category plural name (Eg:"Stories") or
             guid
       return:
-        type: 'Promise&lt;[key: string]: string&gt;'
         description: ''
+        type: 'Promise&lt;[key: string]: string&gt;'
   - name: 'updateBoardCardRuleSettings(BoardCardRuleSettings, TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.updateBoardCardRuleSettings
     package: azure-devops-extension-api
     summary: Update board card Rule settings for the board id or board by name
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateBoardCardRuleSettings(boardCardRuleSettings:
-        BoardCardRuleSettings, teamContext: TeamContext, board: string)
+        BoardCardRuleSettings, teamContext: TeamContext, board: string):
+        Promise<BoardCardRuleSettings>
       parameters:
         - id: boardCardRuleSettings
           type: <xref uid="azure-devops-extension-api.BoardCardRuleSettings" />
@@ -930,20 +1013,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BoardCardRuleSettings" />&gt;
-        description: ''
   - name: 'updateBoardCardSettings(BoardCardSettings, TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.updateBoardCardSettings
     package: azure-devops-extension-api
     summary: Update board card settings for the board id or board by name
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateBoardCardSettings(boardCardSettingsToSave:
-        BoardCardSettings, teamContext: TeamContext, board: string)
+        BoardCardSettings, teamContext: TeamContext, board: string):
+        Promise<BoardCardSettings>
       parameters:
         - id: boardCardSettingsToSave
           type: <xref uid="azure-devops-extension-api.BoardCardSettings" />
@@ -956,20 +1041,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BoardCardSettings"
           />&gt;
-        description: ''
   - name: 'updateBoardChart(BoardChart, TeamContext, string, string)'
     uid: azure-devops-extension-api.WorkRestClient.updateBoardChart
     package: azure-devops-extension-api
     summary: Update a board chart
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateBoardChart(chart: BoardChart, teamContext: TeamContext,
-        board: string, name: string)
+        board: string, name: string): Promise<BoardChart>
       parameters:
         - id: chart
           type: <xref uid="azure-devops-extension-api.BoardChart" />
@@ -987,18 +1073,19 @@ methods:
           description: |
             The chart name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.BoardChart" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BoardChart" />&gt;
   - name: 'updateBoardColumns(BoardColumn[], TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.updateBoardColumns
     package: azure-devops-extension-api
     summary: Update columns on a board
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateBoardColumns(boardColumns: BoardColumn[], teamContext:
-        TeamContext, board: string)
+        TeamContext, board: string): Promise<BoardColumn[]>
       parameters:
         - id: boardColumns
           type: '<xref uid="azure-devops-extension-api.BoardColumn" />[]'
@@ -1011,18 +1098,19 @@ methods:
           description: |
             Name or ID of the specific board
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BoardColumn" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BoardColumn" />[]&gt;'
   - name: 'updateBoardRows(BoardRow[], TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.updateBoardRows
     package: azure-devops-extension-api
     summary: Update rows on a board
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateBoardRows(boardRows: BoardRow[], teamContext:
-        TeamContext, board: string)
+        TeamContext, board: string): Promise<BoardRow[]>
       parameters:
         - id: boardRows
           type: '<xref uid="azure-devops-extension-api.BoardRow" />[]'
@@ -1035,18 +1123,20 @@ methods:
           description: |
             Name or ID of the specific board
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BoardRow" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.BoardRow" />[]&gt;'
   - name: 'updateBoardUserSettings([key: string]: string, TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.updateBoardUserSettings
     package: azure-devops-extension-api
     summary: Update board user settings for the board id
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateBoardUserSettings(boardUserSettings: [key: string]:
-        string, teamContext: TeamContext, board: string)
+        string, teamContext: TeamContext, board: string):
+        Promise<BoardUserSettings>
       parameters:
         - id: boardUserSettings
           type: '[key: string]\: string'
@@ -1059,20 +1149,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BoardUserSettings"
           />&gt;
-        description: ''
   - name: 'updateCapacityWithIdentityRef(CapacityPatch, TeamContext, string, string)'
     uid: azure-devops-extension-api.WorkRestClient.updateCapacityWithIdentityRef
     package: azure-devops-extension-api
     summary: Update a team member's capacity
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateCapacityWithIdentityRef(patch: CapacityPatch,
-        teamContext: TeamContext, iterationId: string, teamMemberId: string)
+        teamContext: TeamContext, iterationId: string, teamMemberId: string):
+        Promise<TeamMemberCapacityIdentityRef>
       parameters:
         - id: patch
           type: <xref uid="azure-devops-extension-api.CapacityPatch" />
@@ -1088,20 +1180,21 @@ methods:
           description: |
             ID of the team member
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TeamMemberCapacityIdentityRef" />&gt;
-        description: ''
   - name: 'updateColumns(UpdateTaskboardColumn[], TeamContext)'
     uid: azure-devops-extension-api.WorkRestClient.updateColumns
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateColumns(updateColumns: UpdateTaskboardColumn[],
-        teamContext: TeamContext)
+        teamContext: TeamContext): Promise<TaskboardColumns>
       parameters:
         - id: updateColumns
           type: '<xref uid="azure-devops-extension-api.UpdateTaskboardColumn" />[]'
@@ -1111,20 +1204,21 @@ methods:
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TaskboardColumns"
           />&gt;
-        description: ''
   - name: 'updatePlan(UpdatePlan, string, string)'
     uid: azure-devops-extension-api.WorkRestClient.updatePlan
     package: azure-devops-extension-api
     summary: Update the information for the specified plan
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePlan(updatedPlan: UpdatePlan, project: string, id:
-        string)
+        string): Promise<Plan>
       parameters:
         - id: updatedPlan
           type: <xref uid="azure-devops-extension-api.UpdatePlan" />
@@ -1137,18 +1231,19 @@ methods:
           description: |
             Identifier of the plan
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Plan" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Plan" />&gt;
   - name: 'updateTaskboardCardRuleSettings(BoardCardRuleSettings, TeamContext)'
     uid: azure-devops-extension-api.WorkRestClient.updateTaskboardCardRuleSettings
     package: azure-devops-extension-api
     summary: Update taskboard card Rule settings
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateTaskboardCardRuleSettings(boardCardRuleSettings:
-        BoardCardRuleSettings, teamContext: TeamContext)
+        BoardCardRuleSettings, teamContext: TeamContext): Promise<void>
       parameters:
         - id: boardCardRuleSettings
           type: <xref uid="azure-devops-extension-api.BoardCardRuleSettings" />
@@ -1158,18 +1253,19 @@ methods:
           description: |
             The team context for the operation
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updateTaskboardCardSettings(BoardCardSettings, TeamContext)'
     uid: azure-devops-extension-api.WorkRestClient.updateTaskboardCardSettings
     package: azure-devops-extension-api
     summary: Update taskboard card settings
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateTaskboardCardSettings(boardCardSettingsToSave:
-        BoardCardSettings, teamContext: TeamContext)
+        BoardCardSettings, teamContext: TeamContext): Promise<void>
       parameters:
         - id: boardCardSettingsToSave
           type: <xref uid="azure-devops-extension-api.BoardCardSettings" />
@@ -1179,18 +1275,20 @@ methods:
           description: |
             The team context for the operation
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updateTeamDaysOff(TeamSettingsDaysOffPatch, TeamContext, string)'
     uid: azure-devops-extension-api.WorkRestClient.updateTeamDaysOff
     package: azure-devops-extension-api
     summary: Set a team's days off for an iteration
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateTeamDaysOff(daysOffPatch: TeamSettingsDaysOffPatch,
-        teamContext: TeamContext, iterationId: string)
+        teamContext: TeamContext, iterationId: string):
+        Promise<TeamSettingsDaysOff>
       parameters:
         - id: daysOffPatch
           type: <xref uid="azure-devops-extension-api.TeamSettingsDaysOffPatch" />
@@ -1203,20 +1301,21 @@ methods:
           description: |
             ID of the iteration
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TeamSettingsDaysOff"
           />&gt;
-        description: ''
   - name: 'updateTeamFieldValues(TeamFieldValuesPatch, TeamContext)'
     uid: azure-devops-extension-api.WorkRestClient.updateTeamFieldValues
     package: azure-devops-extension-api
     summary: Update team field values
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateTeamFieldValues(patch: TeamFieldValuesPatch, teamContext:
-        TeamContext)
+        TeamContext): Promise<TeamFieldValues>
       parameters:
         - id: patch
           type: <xref uid="azure-devops-extension-api.TeamFieldValuesPatch" />
@@ -1226,20 +1325,21 @@ methods:
           description: |
             The team context for the operation
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TeamFieldValues"
           />&gt;
-        description: ''
   - name: 'updateTeamSettings(TeamSettingsPatch, TeamContext)'
     uid: azure-devops-extension-api.WorkRestClient.updateTeamSettings
     package: azure-devops-extension-api
     summary: Update a team's settings
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateTeamSettings(teamSettingsPatch: TeamSettingsPatch,
-        teamContext: TeamContext)
+        teamContext: TeamContext): Promise<TeamSetting>
       parameters:
         - id: teamSettingsPatch
           type: <xref uid="azure-devops-extension-api.TeamSettingsPatch" />
@@ -1249,21 +1349,22 @@ methods:
           description: |
             The team context for the operation
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.TeamSetting" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TeamSetting" />&gt;
   - name: >-
       updateWorkItemColumn(UpdateTaskboardWorkItemColumn, TeamContext, string,
       number)
     uid: azure-devops-extension-api.WorkRestClient.updateWorkItemColumn
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateWorkItemColumn(updateColumn:
         UpdateTaskboardWorkItemColumn, teamContext: TeamContext, iterationId:
-        string, workItemId: number)
+        string, workItemId: number): Promise<void>
       parameters:
         - id: updateColumn
           type: >-
@@ -1281,6 +1382,6 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.ContributionType
 package: azure-devops-extension-api
 summary: 'A contribution type, given by a json schema'
 fullName: ContributionType
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -13,25 +14,27 @@ properties:
     package: azure-devops-extension-api
     summary: Description of the contribution/type
     fullName: description
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: id
     uid: azure-devops-extension-api.ContributionType.id
     package: azure-devops-extension-api
     summary: Fully qualified identifier of the contribution/type
     fullName: id
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: indexed
     uid: azure-devops-extension-api.ContributionType.indexed
     package: azure-devops-extension-api
@@ -41,39 +44,42 @@ properties:
       contribution of this type.  NOTE: Only TrustedPartners are allowed to
       specify indexed contribution types.
     fullName: indexed
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'indexed: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: name
     uid: azure-devops-extension-api.ContributionType.name
     package: azure-devops-extension-api
     summary: Friendly name of the contribution/type
     fullName: name
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: properties
     uid: azure-devops-extension-api.ContributionType.properties
     package: azure-devops-extension-api
     summary: Describes the allowed properties for this contribution type
     fullName: properties
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: [key: string]: ContributionPropertyDescription'
       return:
+        description: ''
         type: >-
           [key: string]\: <xref
           uid="azure-devops-extension-api.ContributionPropertyDescription" />
-        description: ''
   - name: visibleTo
     uid: azure-devops-extension-api.ContributionType.visibleTo
     package: azure-devops-extension-api
@@ -84,11 +90,12 @@ properties:
       can reference this. "ms.vss-web" - Means only the "vss-web" extension from
       the "ms" publisher can reference this.
     fullName: visibleTo
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'visibleTo: string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
 extends: <xref uid="azure-devops-extension-api.ContributionBase" />

@@ -6,6 +6,7 @@ summary: >-
   A subscription defines criteria for matching events and how the subscription's
   subscriber should be notified about those events.
 fullName: NotificationSubscription
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,25 +18,27 @@ properties:
       Admin-managed settings for the subscription. Only applies when the
       subscriber is a group.
     fullName: adminSettings
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'adminSettings: SubscriptionAdminSettings'
       return:
-        type: <xref uid="azure-devops-extension-api.SubscriptionAdminSettings" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.SubscriptionAdminSettings" />
   - name: channel
     uid: azure-devops-extension-api.NotificationSubscription.channel
     package: azure-devops-extension-api
     summary: Channel for delivering notifications triggered by the subscription.
     fullName: channel
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'channel: ISubscriptionChannel'
       return:
-        type: <xref uid="azure-devops-extension-api.ISubscriptionChannel" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.ISubscriptionChannel" />
   - name: description
     uid: azure-devops-extension-api.NotificationSubscription.description
     package: azure-devops-extension-api
@@ -43,25 +46,27 @@ properties:
       Description of the subscription. Typically describes filter criteria which
       helps identity the subscription.
     fullName: description
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: diagnostics
     uid: azure-devops-extension-api.NotificationSubscription.diagnostics
     package: azure-devops-extension-api
     summary: Diagnostics for this subscription.
     fullName: diagnostics
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'diagnostics: SubscriptionDiagnostics'
       return:
-        type: <xref uid="azure-devops-extension-api.SubscriptionDiagnostics" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.SubscriptionDiagnostics" />
   - name: extendedProperties
     uid: azure-devops-extension-api.NotificationSubscription.extendedProperties
     package: azure-devops-extension-api
@@ -69,61 +74,66 @@ properties:
       Any extra properties like detailed description for different contexts,
       user/group contexts
     fullName: extendedProperties
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'extendedProperties: [key: string]: string'
       return:
-        type: '[key: string]\: string'
         description: ''
+        type: '[key: string]\: string'
   - name: filter
     uid: azure-devops-extension-api.NotificationSubscription.filter
     package: azure-devops-extension-api
     summary: Matching criteria for the subscription. ExpressionFilter
     fullName: filter
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'filter: ISubscriptionFilter'
       return:
-        type: <xref uid="azure-devops-extension-api.ISubscriptionFilter" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.ISubscriptionFilter" />
   - name: flags
     uid: azure-devops-extension-api.NotificationSubscription.flags
     package: azure-devops-extension-api
     summary: Read-only indicators that further describe the subscription.
     fullName: flags
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'flags: SubscriptionFlags'
       return:
-        type: <xref uid="azure-devops-extension-api.SubscriptionFlags" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.SubscriptionFlags" />
   - name: id
     uid: azure-devops-extension-api.NotificationSubscription.id
     package: azure-devops-extension-api
     summary: Subscription identifier.
     fullName: id
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: lastModifiedBy
     uid: azure-devops-extension-api.NotificationSubscription.lastModifiedBy
     package: azure-devops-extension-api
     summary: User that last modified (or created) the subscription.
     fullName: lastModifiedBy
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastModifiedBy: IdentityRef'
       return:
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
   - name: modifiedDate
     uid: azure-devops-extension-api.NotificationSubscription.modifiedDate
     package: azure-devops-extension-api
@@ -132,25 +142,27 @@ properties:
       been updated since it was created, this value will indicate when the
       subscription was created.
     fullName: modifiedDate
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'modifiedDate: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: permissions
     uid: azure-devops-extension-api.NotificationSubscription.permissions
     package: azure-devops-extension-api
     summary: The permissions the user have for this subscriptions.
     fullName: permissions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'permissions: SubscriptionPermissions'
       return:
-        type: <xref uid="azure-devops-extension-api.SubscriptionPermissions" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.SubscriptionPermissions" />
   - name: scope
     uid: azure-devops-extension-api.NotificationSubscription.scope
     package: azure-devops-extension-api
@@ -161,13 +173,14 @@ properties:
       scoped to project A will not produce notifications for events published
       from project B.
     fullName: scope
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'scope: SubscriptionScope'
       return:
-        type: <xref uid="azure-devops-extension-api.SubscriptionScope" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.SubscriptionScope" />
   - name: status
     uid: azure-devops-extension-api.NotificationSubscription.status
     package: azure-devops-extension-api
@@ -175,25 +188,27 @@ properties:
       Status of the subscription. Typically indicates whether the subscription
       is enabled or not.
     fullName: status
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: SubscriptionStatus'
       return:
-        type: <xref uid="azure-devops-extension-api.SubscriptionStatus" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.SubscriptionStatus" />
   - name: statusMessage
     uid: azure-devops-extension-api.NotificationSubscription.statusMessage
     package: azure-devops-extension-api
     summary: Message that provides more details about the status of the subscription.
     fullName: statusMessage
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'statusMessage: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: subscriber
     uid: azure-devops-extension-api.NotificationSubscription.subscriber
     package: azure-devops-extension-api
@@ -201,25 +216,27 @@ properties:
       User or group that will receive notifications for events matching the
       subscription's filter criteria.
     fullName: subscriber
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'subscriber: IdentityRef'
       return:
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
   - name: url
     uid: azure-devops-extension-api.NotificationSubscription.url
     package: azure-devops-extension-api
     summary: REST API URL of the subscriotion.
     fullName: url
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: userSettings
     uid: azure-devops-extension-api.NotificationSubscription.userSettings
     package: azure-devops-extension-api
@@ -228,10 +245,11 @@ properties:
       subscriber is a group. Typically used to indicate whether the calling user
       is opted in or out of a group subscription.
     fullName: userSettings
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'userSettings: SubscriptionUserSettings'
       return:
-        type: <xref uid="azure-devops-extension-api.SubscriptionUserSettings" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.SubscriptionUserSettings" />

@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.LocationsRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: LocationsRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.LocationsRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -25,12 +27,13 @@ methods:
     uid: azure-devops-extension-api.LocationsRestClient.deleteServiceDefinition
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteServiceDefinition(serviceType: string, identifier:
-        string)
+        string): Promise<void>
       parameters:
         - id: serviceType
           type: string
@@ -40,18 +43,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'getConnectionData(ConnectOptions, number, number)'
     uid: azure-devops-extension-api.LocationsRestClient.getConnectionData
     package: azure-devops-extension-api
     summary: This was copied and adapted from TeamFoundationConnectionService.Connect()
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getConnectionData(connectOptions?: ConnectOptions,
-        lastChangeId?: number, lastChangeId64?: number)
+        lastChangeId?: number, lastChangeId64?: number): Promise<ConnectionData>
       parameters:
         - id: connectOptions
           type: <xref uid="azure-devops-extension-api.ConnectOptions" />
@@ -64,20 +68,21 @@ methods:
           description: |
             Non-truncated 64-bit LastChangeId
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ConnectionData"
           />&gt;
-        description: ''
   - name: 'getResourceArea(string, string, string)'
     uid: azure-devops-extension-api.LocationsRestClient.getResourceArea
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getResourceArea(areaId: string, enterpriseName?: string,
-        organizationName?: string)
+        organizationName?: string): Promise<ResourceAreaInfo>
       parameters:
         - id: areaId
           type: string
@@ -90,18 +95,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ResourceAreaInfo"
           />&gt;
-        description: ''
   - name: 'getResourceAreaByHost(string, string)'
     uid: azure-devops-extension-api.LocationsRestClient.getResourceAreaByHost
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getResourceAreaByHost(areaId: string, hostId: string)'
+      content: >-
+        function getResourceAreaByHost(areaId: string, hostId: string):
+        Promise<ResourceAreaInfo>
       parameters:
         - id: areaId
           type: string
@@ -111,20 +119,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ResourceAreaInfo"
           />&gt;
-        description: ''
   - name: 'getResourceAreas(string, string)'
     uid: azure-devops-extension-api.LocationsRestClient.getResourceAreas
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getResourceAreas(enterpriseName?: string, organizationName?:
-        string)
+        string): Promise<ResourceAreaInfo[]>
       parameters:
         - id: enterpriseName
           type: string
@@ -134,38 +143,43 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ResourceAreaInfo"
           />[]&gt;
-        description: ''
   - name: getResourceAreasByHost(string)
     uid: azure-devops-extension-api.LocationsRestClient.getResourceAreasByHost
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getResourceAreasByHost(hostId: string)'
+      content: >-
+        function getResourceAreasByHost(hostId: string):
+        Promise<ResourceAreaInfo[]>
       parameters:
         - id: hostId
           type: string
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ResourceAreaInfo"
           />[]&gt;
-        description: ''
   - name: 'getServiceDefinition(string, string, boolean, boolean)'
     uid: azure-devops-extension-api.LocationsRestClient.getServiceDefinition
     package: azure-devops-extension-api
     summary: Finds a given service definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getServiceDefinition(serviceType: string, identifier: string,
-        allowFaultIn?: boolean, previewFaultIn?: boolean)
+        allowFaultIn?: boolean, previewFaultIn?: boolean):
+        Promise<ServiceDefinition>
       parameters:
         - id: serviceType
           type: string
@@ -184,38 +198,42 @@ methods:
             If true, we will calculate and return a host instance mapping, but
             not persist it.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceDefinition"
           />&gt;
-        description: ''
   - name: getServiceDefinitions(string)
     uid: azure-devops-extension-api.LocationsRestClient.getServiceDefinitions
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getServiceDefinitions(serviceType?: string)'
+      content: >-
+        function getServiceDefinitions(serviceType?: string):
+        Promise<ServiceDefinition[]>
       parameters:
         - id: serviceType
           type: string
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceDefinition"
           />[]&gt;
-        description: ''
   - name: 'updateServiceDefinitions(VssJsonCollectionWrapperV<ServiceDefinition[]>)'
     uid: azure-devops-extension-api.LocationsRestClient.updateServiceDefinitions
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateServiceDefinitions(serviceDefinitions:
-        VssJsonCollectionWrapperV<ServiceDefinition[]>)
+        VssJsonCollectionWrapperV<ServiceDefinition[]>): Promise<void>
       parameters:
         - id: serviceDefinitions
           type: >-
@@ -225,6 +243,6 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.IExtensionDataService
 package: azure-devops-extension-api
 summary: ''
 fullName: IExtensionDataService
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -12,12 +13,13 @@ methods:
     uid: azure-devops-extension-api.IExtensionDataService.getExtensionDataManager
     package: azure-devops-extension-api
     summary: Gets a class that can be used to manage extension data.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getExtensionDataManager(extensionId: string, accessToken:
-        string)
+        string): Promise<IExtensionDataManager>
       parameters:
         - id: extensionId
           type: string
@@ -27,7 +29,7 @@ methods:
           description: |
             Access token to use for the extension
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.IExtensionDataManager" />&gt;
-        description: ''

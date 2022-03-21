@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.IdentitySelf
 package: azure-devops-extension-api
 summary: Identity information.
 fullName: IdentitySelf
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,13 +16,14 @@ properties:
       The UserPrincipalName (UPN) of the account. This value comes from the
       source provider.
     fullName: accountName
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'accountName: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: displayName
     uid: azure-devops-extension-api.IdentitySelf.displayName
     package: azure-devops-extension-api
@@ -29,13 +31,14 @@ properties:
       The display name. For AAD accounts with multiple tenants this is the
       display name of the profile in the home tenant.
     fullName: displayName
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'displayName: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: domain
     uid: azure-devops-extension-api.IdentitySelf.domain
     package: azure-devops-extension-api
@@ -44,13 +47,14 @@ properties:
       is the tenantID of the home tenant. For MSA accounts this is the string
       "Windows Live ID".
     fullName: domain
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'domain: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: id
     uid: azure-devops-extension-api.IdentitySelf.id
     package: azure-devops-extension-api
@@ -61,13 +65,14 @@ properties:
       is recommended that you use the combined values of Origin, OriginId and
       Domain to uniquely identify a user rather than this Id.
     fullName: id
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: origin
     uid: azure-devops-extension-api.IdentitySelf.origin
     package: azure-devops-extension-api
@@ -75,13 +80,14 @@ properties:
       The type of source provider for the origin identifier. For MSA accounts
       this is "msa". For AAD accounts this is "aad".
     fullName: origin
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'origin: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: originId
     uid: azure-devops-extension-api.IdentitySelf.originId
     package: azure-devops-extension-api
@@ -90,13 +96,14 @@ properties:
       tenants this is the unique identifier of the account in the home tenant.
       (For MSA this is the PUID in hex notation, for AAD this is the object id.)
     fullName: originId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'originId: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: tenants
     uid: azure-devops-extension-api.IdentitySelf.tenants
     package: azure-devops-extension-api
@@ -104,10 +111,11 @@ properties:
       For AAD accounts this is all of the tenants that this account is a member
       of.
     fullName: tenants
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'tenants: TenantInfo[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.TenantInfo" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.TenantInfo" />[]'

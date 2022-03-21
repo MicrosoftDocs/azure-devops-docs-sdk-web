@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.QueryFilter
 package: azure-devops-extension-api
 summary: A filter used to define a set of extensions to return during a query.
 fullName: QueryFilter
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,13 +16,14 @@ properties:
       The filter values define the set of values in this query. They are applied
       based on the QueryFilterType.
     fullName: criteria
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'criteria: FilterCriteria[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.FilterCriteria" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.FilterCriteria" />[]'
   - name: direction
     uid: azure-devops-extension-api.QueryFilter.direction
     package: azure-devops-extension-api
@@ -31,13 +33,14 @@ properties:
       Direction should be left out of the request unless a paging token is used
       to help prevent future issues.
     fullName: direction
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'direction: PagingDirection'
       return:
-        type: <xref uid="azure-devops-extension-api.PagingDirection" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.PagingDirection" />
   - name: pageNumber
     uid: azure-devops-extension-api.QueryFilter.pageNumber
     package: azure-devops-extension-api
@@ -45,13 +48,14 @@ properties:
       The page number requested by the user. If not provided 1 is assumed by
       default.
     fullName: pageNumber
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'pageNumber: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: pageSize
     uid: azure-devops-extension-api.QueryFilter.pageSize
     package: azure-devops-extension-api
@@ -59,13 +63,14 @@ properties:
       The page size defines the number of results the caller wants for this
       filter. The count can't exceed the overall query size limits.
     fullName: pageSize
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'pageSize: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: pagingToken
     uid: azure-devops-extension-api.QueryFilter.pagingToken
     package: azure-devops-extension-api
@@ -75,13 +80,14 @@ properties:
       executed query. The information about where in the result and what fields
       are being filtered are embeded in the token.
     fullName: pagingToken
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'pagingToken: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: sortBy
     uid: azure-devops-extension-api.QueryFilter.sortBy
     package: azure-devops-extension-api
@@ -89,13 +95,14 @@ properties:
       Defines the type of sorting to be applied on the results. The page slice
       is cut of the sorted results only.
     fullName: sortBy
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'sortBy: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: sortOrder
     uid: azure-devops-extension-api.QueryFilter.sortOrder
     package: azure-devops-extension-api
@@ -103,10 +110,11 @@ properties:
       Defines the order of sorting, 1 for Ascending, 2 for Descending, else
       default ordering based on the SortBy value
     fullName: sortOrder
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'sortOrder: number'
       return:
-        type: number
         description: ''
+        type: number

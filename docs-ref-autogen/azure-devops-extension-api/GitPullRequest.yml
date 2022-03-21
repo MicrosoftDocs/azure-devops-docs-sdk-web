@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.GitPullRequest
 package: azure-devops-extension-api
 summary: Represents all the data associated with a pull request.
 fullName: GitPullRequest
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -16,13 +17,14 @@ properties:
       artifact ID for a pull request, use this template:
       \`\`\`vstfs:///Git/PullRequestId/\{projectId\}/\{repositoryId\}/\{pullRequestId\}\`\`\`
     fullName: artifactId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'artifactId: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: autoCompleteSetBy
     uid: azure-devops-extension-api.GitPullRequest.autoCompleteSetBy
     package: azure-devops-extension-api
@@ -30,25 +32,27 @@ properties:
       If set, auto-complete is enabled for this pull request and this is the
       identity that enabled it.
     fullName: autoCompleteSetBy
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'autoCompleteSetBy: IdentityRef'
       return:
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
   - name: closedBy
     uid: azure-devops-extension-api.GitPullRequest.closedBy
     package: azure-devops-extension-api
     summary: The user who closed the pull request.
     fullName: closedBy
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'closedBy: IdentityRef'
       return:
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
   - name: closedDate
     uid: azure-devops-extension-api.GitPullRequest.closedDate
     package: azure-devops-extension-api
@@ -56,37 +60,40 @@ properties:
       The date when the pull request was closed (completed, abandoned, or merged
       externally).
     fullName: closedDate
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'closedDate: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: codeReviewId
     uid: azure-devops-extension-api.GitPullRequest.codeReviewId
     package: azure-devops-extension-api
     summary: The code review ID of the pull request. Used internally.
     fullName: codeReviewId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'codeReviewId: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: commits
     uid: azure-devops-extension-api.GitPullRequest.commits
     package: azure-devops-extension-api
     summary: The commits contained in the pull request.
     fullName: commits
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'commits: GitCommitRef[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.GitCommitRef" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.GitCommitRef" />[]'
   - name: completionOptions
     uid: azure-devops-extension-api.GitPullRequest.completionOptions
     package: azure-devops-extension-api
@@ -94,15 +101,16 @@ properties:
       Options which affect how the pull request will be merged when it is
       completed.
     fullName: completionOptions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'completionOptions: GitPullRequestCompletionOptions'
       return:
+        description: ''
         type: >-
           <xref uid="azure-devops-extension-api.GitPullRequestCompletionOptions"
           />
-        description: ''
   - name: completionQueueTime
     uid: azure-devops-extension-api.GitPullRequest.completionQueueTime
     package: azure-devops-extension-api
@@ -110,49 +118,53 @@ properties:
       The most recent date at which the pull request entered the queue to be
       completed. Used internally.
     fullName: completionQueueTime
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'completionQueueTime: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: createdBy
     uid: azure-devops-extension-api.GitPullRequest.createdBy
     package: azure-devops-extension-api
     summary: The identity of the user who created the pull request.
     fullName: createdBy
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdBy: IdentityRef'
       return:
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
   - name: creationDate
     uid: azure-devops-extension-api.GitPullRequest.creationDate
     package: azure-devops-extension-api
     summary: The date when the pull request was created.
     fullName: creationDate
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'creationDate: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: description
     uid: azure-devops-extension-api.GitPullRequest.description
     package: azure-devops-extension-api
     summary: The description of the pull request.
     fullName: description
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: forkSource
     uid: azure-devops-extension-api.GitPullRequest.forkSource
     package: azure-devops-extension-api
@@ -160,37 +172,40 @@ properties:
       If this is a PR from a fork this will contain information about its
       source.
     fullName: forkSource
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'forkSource: GitForkRef'
       return:
-        type: <xref uid="azure-devops-extension-api.GitForkRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.GitForkRef" />
   - name: isDraft
     uid: azure-devops-extension-api.GitPullRequest.isDraft
     package: azure-devops-extension-api
     summary: Draft / WIP pull request.
     fullName: isDraft
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'isDraft: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: labels
     uid: azure-devops-extension-api.GitPullRequest.labels
     package: azure-devops-extension-api
     summary: The labels associated with the pull request.
     fullName: labels
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'labels: WebApiTagDefinition[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.WebApiTagDefinition" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.WebApiTagDefinition" />[]'
   - name: lastMergeCommit
     uid: azure-devops-extension-api.GitPullRequest.lastMergeCommit
     package: azure-devops-extension-api
@@ -198,13 +213,14 @@ properties:
       The commit of the most recent pull request merge. If empty, the most
       recent merge is in progress or was unsuccessful.
     fullName: lastMergeCommit
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastMergeCommit: GitCommitRef'
       return:
-        type: <xref uid="azure-devops-extension-api.GitCommitRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.GitCommitRef" />
   - name: lastMergeSourceCommit
     uid: azure-devops-extension-api.GitPullRequest.lastMergeSourceCommit
     package: azure-devops-extension-api
@@ -212,13 +228,14 @@ properties:
       The commit at the head of the source branch at the time of the last pull
       request merge.
     fullName: lastMergeSourceCommit
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastMergeSourceCommit: GitCommitRef'
       return:
-        type: <xref uid="azure-devops-extension-api.GitCommitRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.GitCommitRef" />
   - name: lastMergeTargetCommit
     uid: azure-devops-extension-api.GitPullRequest.lastMergeTargetCommit
     package: azure-devops-extension-api
@@ -226,49 +243,53 @@ properties:
       The commit at the head of the target branch at the time of the last pull
       request merge.
     fullName: lastMergeTargetCommit
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastMergeTargetCommit: GitCommitRef'
       return:
-        type: <xref uid="azure-devops-extension-api.GitCommitRef" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.GitCommitRef" />
   - name: mergeFailureMessage
     uid: azure-devops-extension-api.GitPullRequest.mergeFailureMessage
     package: azure-devops-extension-api
     summary: 'If set, pull request merge failed for this reason.'
     fullName: mergeFailureMessage
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeFailureMessage: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: mergeFailureType
     uid: azure-devops-extension-api.GitPullRequest.mergeFailureType
     package: azure-devops-extension-api
     summary: The type of failure (if any) of the pull request merge.
     fullName: mergeFailureType
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeFailureType: PullRequestMergeFailureType'
       return:
-        type: <xref uid="azure-devops-extension-api.PullRequestMergeFailureType" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.PullRequestMergeFailureType" />
   - name: mergeId
     uid: azure-devops-extension-api.GitPullRequest.mergeId
     package: azure-devops-extension-api
     summary: The ID of the job used to run the pull request merge. Used internally.
     fullName: mergeId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeId: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: mergeOptions
     uid: azure-devops-extension-api.GitPullRequest.mergeOptions
     package: azure-devops-extension-api
@@ -277,61 +298,66 @@ properties:
       completion options since completion happens only once and a new merge will
       run every time the source branch of the pull request changes.
     fullName: mergeOptions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeOptions: GitPullRequestMergeOptions'
       return:
-        type: <xref uid="azure-devops-extension-api.GitPullRequestMergeOptions" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.GitPullRequestMergeOptions" />
   - name: mergeStatus
     uid: azure-devops-extension-api.GitPullRequest.mergeStatus
     package: azure-devops-extension-api
     summary: The current status of the pull request merge.
     fullName: mergeStatus
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeStatus: PullRequestAsyncStatus'
       return:
-        type: <xref uid="azure-devops-extension-api.PullRequestAsyncStatus" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.PullRequestAsyncStatus" />
   - name: pullRequestId
     uid: azure-devops-extension-api.GitPullRequest.pullRequestId
     package: azure-devops-extension-api
     summary: The ID of the pull request.
     fullName: pullRequestId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'pullRequestId: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: remoteUrl
     uid: azure-devops-extension-api.GitPullRequest.remoteUrl
     package: azure-devops-extension-api
     summary: Used internally.
     fullName: remoteUrl
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'remoteUrl: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: repository
     uid: azure-devops-extension-api.GitPullRequest.repository
     package: azure-devops-extension-api
     summary: The repository containing the target branch of the pull request.
     fullName: repository
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'repository: GitRepository'
       return:
-        type: <xref uid="azure-devops-extension-api.GitRepository" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.GitRepository" />
   - name: reviewers
     uid: azure-devops-extension-api.GitPullRequest.reviewers
     package: azure-devops-extension-api
@@ -339,37 +365,40 @@ properties:
       A list of reviewers on the pull request along with the state of their
       votes.
     fullName: reviewers
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'reviewers: IdentityRefWithVote[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.IdentityRefWithVote" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.IdentityRefWithVote" />[]'
   - name: sourceRefName
     uid: azure-devops-extension-api.GitPullRequest.sourceRefName
     package: azure-devops-extension-api
     summary: The name of the source branch of the pull request.
     fullName: sourceRefName
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceRefName: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: status
     uid: azure-devops-extension-api.GitPullRequest.status
     package: azure-devops-extension-api
     summary: The status of the pull request.
     fullName: status
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: PullRequestStatus'
       return:
-        type: <xref uid="azure-devops-extension-api.PullRequestStatus" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.PullRequestStatus" />
   - name: supportsIterations
     uid: azure-devops-extension-api.GitPullRequest.supportsIterations
     package: azure-devops-extension-api
@@ -379,58 +408,63 @@ properties:
       reviewed and comments left in one iteration will be tracked across future
       iterations.
     fullName: supportsIterations
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'supportsIterations: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: targetRefName
     uid: azure-devops-extension-api.GitPullRequest.targetRefName
     package: azure-devops-extension-api
     summary: The name of the target branch of the pull request.
     fullName: targetRefName
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'targetRefName: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: title
     uid: azure-devops-extension-api.GitPullRequest.title
     package: azure-devops-extension-api
     summary: The title of the pull request.
     fullName: title
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'title: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: url
     uid: azure-devops-extension-api.GitPullRequest.url
     package: azure-devops-extension-api
     summary: Used internally.
     fullName: url
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: workItemRefs
     uid: azure-devops-extension-api.GitPullRequest.workItemRefs
     package: azure-devops-extension-api
     summary: Any work item references associated with this pull request.
     fullName: workItemRefs
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'workItemRefs: ResourceRef[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.ResourceRef" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.ResourceRef" />[]'

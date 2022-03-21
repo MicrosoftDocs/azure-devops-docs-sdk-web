@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.WorkItemTrackingRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: WorkItemTrackingRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,24 +28,27 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'createAttachment(any, string, string, string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.createAttachment
     package: azure-devops-extension-api
     summary: Uploads an attachment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createAttachment(content: any, project?: string, fileName?:
-        string, uploadType?: string, areaPath?: string)
+        string, uploadType?: string, areaPath?: string):
+        Promise<AttachmentReference>
       parameters:
         - id: content
           type: any
@@ -62,18 +67,21 @@ methods:
           description: |
             Target project Area Path
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AttachmentReference"
           />&gt;
-        description: ''
   - name: 'createField(WorkItemField, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.createField
     package: azure-devops-extension-api
     summary: Create a new field.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createField(workItemField: WorkItemField, project?: string)'
+      content: >-
+        function createField(workItemField: WorkItemField, project?: string):
+        Promise<WorkItemField>
       parameters:
         - id: workItemField
           type: <xref uid="azure-devops-extension-api.WorkItemField" />
@@ -83,8 +91,8 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItemField" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItemField" />&gt;
   - name: >-
       createOrUpdateClassificationNode(WorkItemClassificationNode, string,
       TreeStructureGroup, string)
@@ -92,13 +100,14 @@ methods:
       azure-devops-extension-api.WorkItemTrackingRestClient.createOrUpdateClassificationNode
     package: azure-devops-extension-api
     summary: Create new or update an existing classification node.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createOrUpdateClassificationNode(postedNode:
         WorkItemClassificationNode, project: string, structureGroup:
-        TreeStructureGroup, path?: string)
+        TreeStructureGroup, path?: string): Promise<WorkItemClassificationNode>
       parameters:
         - id: postedNode
           type: <xref uid="azure-devops-extension-api.WorkItemClassificationNode" />
@@ -114,20 +123,21 @@ methods:
           description: |
             Path of the classification node.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemClassificationNode" />&gt;
-        description: ''
   - name: 'createQuery(QueryHierarchyItem, string, string, boolean)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.createQuery
     package: azure-devops-extension-api
     summary: 'Creates a query, or moves a query.'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createQuery(postedQuery: QueryHierarchyItem, project: string,
-        query: string, validateWiqlOnly?: boolean)
+        query: string, validateWiqlOnly?: boolean): Promise<QueryHierarchyItem>
       parameters:
         - id: postedQuery
           type: <xref uid="azure-devops-extension-api.QueryHierarchyItem" />
@@ -144,20 +154,21 @@ methods:
             If you only want to validate your WIQL query without actually
             creating one, set it to true. Default is false.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.QueryHierarchyItem"
           />&gt;
-        description: ''
   - name: 'createTemplate(WorkItemTemplate, string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.createTemplate
     package: azure-devops-extension-api
     summary: Creates a template
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createTemplate(template: WorkItemTemplate, project: string,
-        team: string)
+        team: string): Promise<WorkItemTemplate>
       parameters:
         - id: template
           type: <xref uid="azure-devops-extension-api.WorkItemTemplate" />
@@ -170,23 +181,25 @@ methods:
           description: |
             Team ID or team name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemTemplate"
           />&gt;
-        description: ''
   - name: >-
       createWorkItem(JsonPatchDocument, string, string, boolean, boolean,
       boolean, WorkItemExpand)
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.createWorkItem
     package: azure-devops-extension-api
     summary: Creates a single work item.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createWorkItem(document: JsonPatchDocument, project: string,
         type: string, validateOnly?: boolean, bypassRules?: boolean,
-        suppressNotifications?: boolean, expand?: WorkItemExpand)
+        suppressNotifications?: boolean, expand?: WorkItemExpand):
+        Promise<WorkItem>
       parameters:
         - id: document
           type: <xref uid="azure-devops-extension-api.JsonPatchDocument" />
@@ -214,19 +227,20 @@ methods:
             The expand parameters for work item attributes. Possible options are
             \{ None, Relations, Fields, Links, All \}.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
   - name: 'deleteClassificationNode(string, TreeStructureGroup, string, number)'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.deleteClassificationNode
     package: azure-devops-extension-api
     summary: Delete an existing classification node.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteClassificationNode(project: string, structureGroup:
-        TreeStructureGroup, path?: string, reclassifyId?: number)
+        TreeStructureGroup, path?: string, reclassifyId?: number): Promise<void>
       parameters:
         - id: project
           type: string
@@ -242,16 +256,19 @@ methods:
           description: |
             Id of the target classification node for reclassification.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteField(string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.deleteField
     package: azure-devops-extension-api
     summary: Deletes the field.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteField(fieldNameOrRefName: string, project?: string)'
+      content: >-
+        function deleteField(fieldNameOrRefName: string, project?: string):
+        Promise<void>
       parameters:
         - id: fieldNameOrRefName
           type: string
@@ -261,8 +278,8 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteQuery(string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.deleteQuery
     package: azure-devops-extension-api
@@ -271,10 +288,11 @@ methods:
       deleted query or folder and any of its descendants if it is a folder. It
       is important to note that the deleted permission changes cannot be
       recovered upon undeleting the query or folder.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteQuery(project: string, query: string)'
+      content: 'function deleteQuery(project: string, query: string): Promise<void>'
       parameters:
         - id: project
           type: string
@@ -284,18 +302,19 @@ methods:
           description: |
             ID or path of the query or folder to delete.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteTemplate(string, string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.deleteTemplate
     package: azure-devops-extension-api
     summary: Deletes the template with given id
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteTemplate(project: string, team: string, templateId:
-        string)
+        string): Promise<void>
       parameters:
         - id: project
           type: string
@@ -308,8 +327,8 @@ methods:
           description: |
             Template id
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteWorkItem(number, string, boolean)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.deleteWorkItem
     package: azure-devops-extension-api
@@ -321,10 +340,13 @@ methods:
       will NOT go to recycle-bin and there is no way to restore/recover them
       after deletion. It is recommended NOT to use this parameter. If you do,
       please use this parameter with extreme caution.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteWorkItem(id: number, project?: string, destroy?: boolean)'
+      content: >-
+        function deleteWorkItem(id: number, project?: string, destroy?:
+        boolean): Promise<WorkItemDelete>
       parameters:
         - id: id
           type: number
@@ -339,20 +361,21 @@ methods:
             permanently. Please note: the destroy action is PERMANENT and cannot
             be undone.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemDelete"
           />&gt;
-        description: ''
   - name: 'destroyWorkItem(number, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.destroyWorkItem
     package: azure-devops-extension-api
     summary: >-
       Destroys the specified work item permanently from the Recycle Bin. This
       action can not be undone.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function destroyWorkItem(id: number, project?: string)'
+      content: 'function destroyWorkItem(id: number, project?: string): Promise<void>'
       parameters:
         - id: id
           type: number
@@ -362,19 +385,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'exportWorkItemTypeDefinition(string, string, boolean)'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.exportWorkItemTypeDefinition
     package: azure-devops-extension-api
     summary: Export work item type
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function exportWorkItemTypeDefinition(project?: string, type?: string,
-        exportGlobalLists?: boolean)
+        exportGlobalLists?: boolean): Promise<WorkItemTypeTemplate>
       parameters:
         - id: project
           type: string
@@ -387,40 +411,44 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemTypeTemplate"
           />&gt;
-        description: ''
   - name: getAccountMyWorkData(QueryOption)
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getAccountMyWorkData
     package: azure-devops-extension-api
     summary: >-
       INTERNAL ONLY: USED BY ACCOUNT MY WORK PAGE. This returns Doing, Done,
       Follows and activity work items details.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAccountMyWorkData(queryOption?: QueryOption)'
+      content: >-
+        function getAccountMyWorkData(queryOption?: QueryOption):
+        Promise<AccountMyWorkResult>
       parameters:
         - id: queryOption
           type: <xref uid="azure-devops-extension-api.QueryOption" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AccountMyWorkResult"
           />&gt;
-        description: ''
   - name: 'getAttachmentContent(string, string, string, boolean)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getAttachmentContent
     package: azure-devops-extension-api
     summary: Downloads an attachment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAttachmentContent(id: string, project?: string, fileName?:
-        string, download?: boolean)
+        string, download?: boolean): Promise<ArrayBuffer>
       parameters:
         - id: id
           type: string
@@ -436,18 +464,19 @@ methods:
           description: |
             If set to \<c\>true\</c\> always download attachment
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getAttachmentZip(string, string, string, boolean)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getAttachmentZip
     package: azure-devops-extension-api
     summary: Downloads an attachment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAttachmentZip(id: string, project?: string, fileName?:
-        string, download?: boolean)
+        string, download?: boolean): Promise<ArrayBuffer>
       parameters:
         - id: id
           type: string
@@ -463,19 +492,21 @@ methods:
           description: |
             If set to \<c\>true\</c\> always download attachment
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getClassificationNode(string, TreeStructureGroup, string, number)'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getClassificationNode
     package: azure-devops-extension-api
     summary: Gets the classification node for a given node path.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getClassificationNode(project: string, structureGroup:
-        TreeStructureGroup, path?: string, depth?: number)
+        TreeStructureGroup, path?: string, depth?: number):
+        Promise<WorkItemClassificationNode>
       parameters:
         - id: project
           type: string
@@ -491,10 +522,10 @@ methods:
           description: |
             Depth of children to fetch.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemClassificationNode" />&gt;
-        description: ''
   - name: >-
       getClassificationNodes(string, number[], number,
       ClassificationNodesErrorPolicy)
@@ -506,12 +537,14 @@ methods:
       list of nodes ids, for a given project. In case ids parameter is supplied
       you will  get list of classification nodes for those ids. Otherwise you
       will get root classification nodes for this project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getClassificationNodes(project: string, ids: number[], depth?:
-        number, errorPolicy?: ClassificationNodesErrorPolicy)
+        number, errorPolicy?: ClassificationNodesErrorPolicy):
+        Promise<WorkItemClassificationNode[]>
       parameters:
         - id: project
           type: string
@@ -532,18 +565,21 @@ methods:
             Flag to handle errors in getting some nodes. Possible options are
             Fail and Omit.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemClassificationNode" />[]&gt;
-        description: ''
   - name: 'getComment(number, number, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getComment
     package: azure-devops-extension-api
     summary: Gets a comment for a work item at the specified revision.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getComment(id: number, revision: number, project?: string)'
+      content: >-
+        function getComment(id: number, revision: number, project?: string):
+        Promise<WorkItemComment>
       parameters:
         - id: id
           type: number
@@ -556,22 +592,24 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemComment"
           />&gt;
-        description: ''
   - name: 'getComments(number, string, number, number, CommentSortOrder)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getComments
     package: azure-devops-extension-api
     summary: >-
       Gets the specified number of comments for a work item from the specified
       revision.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getComments(id: number, project?: string, fromRevision?:
-        number, top?: number, order?: CommentSortOrder)
+        number, top?: number, order?: CommentSortOrder):
+        Promise<WorkItemComments>
       parameters:
         - id: id
           type: number
@@ -590,18 +628,21 @@ methods:
           description: |
             Ascending or descending by revision id (default is ascending)
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemComments"
           />&gt;
-        description: ''
   - name: 'getDeletedWorkItem(number, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getDeletedWorkItem
     package: azure-devops-extension-api
     summary: Gets a deleted work item from Recycle Bin.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getDeletedWorkItem(id: number, project?: string)'
+      content: >-
+        function getDeletedWorkItem(id: number, project?: string):
+        Promise<WorkItemDelete>
       parameters:
         - id: id
           type: number
@@ -611,20 +652,23 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemDelete"
           />&gt;
-        description: ''
   - name: 'getDeletedWorkItems(number[], string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getDeletedWorkItems
     package: azure-devops-extension-api
     summary: >-
       Gets the work items from the recycle bin, whose IDs have been specified in
       the parameters
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getDeletedWorkItems(ids: number[], project?: string)'
+      content: >-
+        function getDeletedWorkItems(ids: number[], project?: string):
+        Promise<WorkItemDeleteReference[]>
       parameters:
         - id: ids
           type: 'number[]'
@@ -634,10 +678,10 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemDeleteReference" />[]&gt;
-        description: ''
   - name: getDeletedWorkItemShallowReferences(string)
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getDeletedWorkItemShallowReferences
@@ -645,29 +689,35 @@ methods:
     summary: >-
       Gets a list of the IDs and the URLs of the deleted the work items in the
       Recycle Bin.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getDeletedWorkItemShallowReferences(project?: string)'
+      content: >-
+        function getDeletedWorkItemShallowReferences(project?: string):
+        Promise<WorkItemDeleteShallowReference[]>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemDeleteShallowReference"
           />[]&gt;
-        description: ''
   - name: 'getField(string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getField
     package: azure-devops-extension-api
     summary: Gets information on a specific field.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getField(fieldNameOrRefName: string, project?: string)'
+      content: >-
+        function getField(fieldNameOrRefName: string, project?: string):
+        Promise<WorkItemField>
       parameters:
         - id: fieldNameOrRefName
           type: string
@@ -677,18 +727,21 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItemField" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItemField" />&gt;
   - name: 'getFields(string, GetFieldsExpand)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getFields
     package: azure-devops-extension-api
     summary: >-
       Returns information for all fields. The project ID/name parameter is
       optional.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getFields(project?: string, expand?: GetFieldsExpand)'
+      content: >-
+        function getFields(project?: string, expand?: GetFieldsExpand):
+        Promise<WorkItemField[]>
       parameters:
         - id: project
           type: string
@@ -700,20 +753,21 @@ methods:
             them. Unless the feature flag for this parameter is enabled,
             extension fields are always included.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemField"
           />[]&gt;
-        description: ''
   - name: 'getQueries(string, QueryExpand, number, boolean)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getQueries
     package: azure-devops-extension-api
     summary: Gets the root queries and their children
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getQueries(project: string, expand?: QueryExpand, depth?:
-        number, includeDeleted?: boolean)
+        number, includeDeleted?: boolean): Promise<QueryHierarchyItem[]>
       parameters:
         - id: project
           type: string
@@ -733,20 +787,21 @@ methods:
           description: |
             Include deleted queries and folders
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.QueryHierarchyItem"
           />[]&gt;
-        description: ''
   - name: 'getQueriesBatch(QueryBatchGetRequest, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getQueriesBatch
     package: azure-devops-extension-api
     summary: Gets a list of queries by ids (Maximum 1000)
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getQueriesBatch(queryGetRequest: QueryBatchGetRequest, project:
-        string)
+        string): Promise<QueryHierarchyItem[]>
       parameters:
         - id: queryGetRequest
           type: <xref uid="azure-devops-extension-api.QueryBatchGetRequest" />
@@ -756,20 +811,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.QueryHierarchyItem"
           />[]&gt;
-        description: ''
   - name: 'getQuery(string, string, QueryExpand, number, boolean)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getQuery
     package: azure-devops-extension-api
     summary: Retrieves an individual query and its children
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getQuery(project: string, query: string, expand?: QueryExpand,
-        depth?: number, includeDeleted?: boolean)
+        depth?: number, includeDeleted?: boolean): Promise<QueryHierarchyItem>
       parameters:
         - id: project
           type: string
@@ -792,20 +848,21 @@ methods:
           description: |
             Include deleted queries and folders
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.QueryHierarchyItem"
           />&gt;
-        description: ''
   - name: 'getQueryResultCount(string, string, string, boolean, number)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getQueryResultCount
     package: azure-devops-extension-api
     summary: Gets the results of the query given the query ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getQueryResultCount(id: string, project?: string, team?:
-        string, timePrecision?: boolean, top?: number)
+        string, timePrecision?: boolean, top?: number): Promise<number>
       parameters:
         - id: id
           type: string
@@ -824,80 +881,91 @@ methods:
           description: |
             The max number of results to return.
       return:
-        type: Promise&lt;number&gt;
         description: ''
+        type: Promise&lt;number&gt;
   - name: getRecentActivityData()
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getRecentActivityData
     package: azure-devops-extension-api
     summary: Gets recent work item activities
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getRecentActivityData()
+      content: >-
+        function getRecentActivityData():
+        Promise<AccountRecentActivityWorkItemModel2[]>
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AccountRecentActivityWorkItemModel2"
           />[]&gt;
-        description: ''
   - name: getRecentMentions()
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getRecentMentions
     package: azure-devops-extension-api
     summary: 'INTERNAL ONLY: USED BY ACCOUNT MY WORK PAGE.'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getRecentMentions()
+      content: >-
+        function getRecentMentions():
+        Promise<AccountRecentMentionWorkItemModel[]>
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AccountRecentMentionWorkItemModel"
           />[]&gt;
-        description: ''
   - name: getRelationType(string)
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getRelationType
     package: azure-devops-extension-api
     summary: Gets the work item relation type definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getRelationType(relation: string)'
+      content: >-
+        function getRelationType(relation: string):
+        Promise<WorkItemRelationType>
       parameters:
         - id: relation
           type: string
           description: |
             The relation name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemRelationType"
           />&gt;
-        description: ''
   - name: getRelationTypes()
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getRelationTypes
     package: azure-devops-extension-api
     summary: Gets the work item relation types.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getRelationTypes()
+      content: 'function getRelationTypes(): Promise<WorkItemRelationType[]>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemRelationType"
           />[]&gt;
-        description: ''
   - name: 'getReportingLinksByLinkType(string, string[], string[], string, Date)'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getReportingLinksByLinkType
     package: azure-devops-extension-api
     summary: Get a batch of work item links
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getReportingLinksByLinkType(project?: string, linkTypes?:
         string[], types?: string[], continuationToken?: string, startDateTime?:
-        Date)
+        Date): Promise<ReportingWorkItemLinksBatch>
       parameters:
         - id: project
           type: string
@@ -924,20 +992,21 @@ methods:
             changes that occurred after that date/time will be returned. Cannot
             be used in conjunction with 'watermark' parameter.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReportingWorkItemLinksBatch" />&gt;
-        description: ''
   - name: 'getRevision(number, number, string, WorkItemExpand)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getRevision
     package: azure-devops-extension-api
     summary: Returns a fully hydrated work item for the requested revision
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getRevision(id: number, revisionNumber: number, project?:
-        string, expand?: WorkItemExpand)
+        string, expand?: WorkItemExpand): Promise<WorkItem>
       parameters:
         - id: id
           type: number
@@ -953,18 +1022,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
   - name: 'getRevisions(number, string, number, number, WorkItemExpand)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getRevisions
     package: azure-devops-extension-api
     summary: 'Returns the list of fully hydrated work item revisions, paged.'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getRevisions(id: number, project?: string, top?: number, skip?:
-        number, expand?: WorkItemExpand)
+        number, expand?: WorkItemExpand): Promise<WorkItem[]>
       parameters:
         - id: id
           type: number
@@ -983,16 +1053,19 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />[]&gt;'
   - name: 'getRootNodes(string, number)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getRootNodes
     package: azure-devops-extension-api
     summary: Gets root classification nodes under the project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getRootNodes(project: string, depth?: number)'
+      content: >-
+        function getRootNodes(project: string, depth?: number):
+        Promise<WorkItemClassificationNode[]>
       parameters:
         - id: project
           type: string
@@ -1002,18 +1075,21 @@ methods:
           description: |
             Depth of children to fetch.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemClassificationNode" />[]&gt;
-        description: ''
   - name: 'getTemplate(string, string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getTemplate
     package: azure-devops-extension-api
     summary: Gets the template with specified id
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTemplate(project: string, team: string, templateId: string)'
+      content: >-
+        function getTemplate(project: string, team: string, templateId: string):
+        Promise<WorkItemTemplate>
       parameters:
         - id: project
           type: string
@@ -1026,20 +1102,21 @@ methods:
           description: |
             Template Id
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemTemplate"
           />&gt;
-        description: ''
   - name: 'getTemplates(string, string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getTemplates
     package: azure-devops-extension-api
     summary: Gets template
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTemplates(project: string, team: string, workitemtypename?:
-        string)
+        string): Promise<WorkItemTemplateReference[]>
       parameters:
         - id: project
           type: string
@@ -1052,18 +1129,21 @@ methods:
           description: |
             Optional, When specified returns templates for given Work item type.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemTemplateReference" />[]&gt;
-        description: ''
   - name: 'getUpdate(number, number, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getUpdate
     package: azure-devops-extension-api
     summary: Returns a single update for a work item
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getUpdate(id: number, updateNumber: number, project?: string)'
+      content: >-
+        function getUpdate(id: number, updateNumber: number, project?: string):
+        Promise<WorkItemUpdate>
       parameters:
         - id: id
           type: number
@@ -1076,20 +1156,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemUpdate"
           />&gt;
-        description: ''
   - name: 'getUpdates(number, string, number, number)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getUpdates
     package: azure-devops-extension-api
     summary: Returns a the deltas between work item revisions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getUpdates(id: number, project?: string, top?: number, skip?:
-        number)
+        number): Promise<WorkItemUpdate[]>
       parameters:
         - id: id
           type: number
@@ -1105,34 +1186,36 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemUpdate"
           />[]&gt;
-        description: ''
   - name: getWorkArtifactLinkTypes()
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkArtifactLinkTypes
     package: azure-devops-extension-api
     summary: Get the list of work item tracking outbound artifact link types.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getWorkArtifactLinkTypes()
+      content: 'function getWorkArtifactLinkTypes(): Promise<WorkArtifactLink[]>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkArtifactLink"
           />[]&gt;
-        description: ''
   - name: 'getWorkItem(number, string, string[], Date, WorkItemExpand)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItem
     package: azure-devops-extension-api
     summary: Returns a single work item.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWorkItem(id: number, project?: string, fields?: string[],
-        asOf?: Date, expand?: WorkItemExpand)
+        asOf?: Date, expand?: WorkItemExpand): Promise<WorkItem>
       parameters:
         - id: id
           type: number
@@ -1152,16 +1235,19 @@ methods:
             The expand parameters for work item attributes. Possible options are
             \{ None, Relations, Fields, Links, All \}.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
   - name: 'getWorkItemIconJson(string, string, number)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemIconJson
     package: azure-devops-extension-api
     summary: Get a work item icon given the friendly name and icon color.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemIconJson(icon: string, color?: string, v?: number)'
+      content: >-
+        function getWorkItemIconJson(icon: string, color?: string, v?: number):
+        Promise<WorkItemIcon>
       parameters:
         - id: icon
           type: string
@@ -1174,29 +1260,33 @@ methods:
           description: |
             The version of the icon (used only for cache invalidation)
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItemIcon" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItemIcon" />&gt;
   - name: getWorkItemIcons()
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemIcons
     package: azure-devops-extension-api
     summary: Get a list of all work item icons.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getWorkItemIcons()
+      content: 'function getWorkItemIcons(): Promise<WorkItemIcon[]>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemIcon"
           />[]&gt;
-        description: ''
   - name: 'getWorkItemIconSvg(string, string, number)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemIconSvg
     package: azure-devops-extension-api
     summary: Get a work item icon given the friendly name and icon color.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemIconSvg(icon: string, color?: string, v?: number)'
+      content: >-
+        function getWorkItemIconSvg(icon: string, color?: string, v?: number):
+        Promise<any>
       parameters:
         - id: icon
           type: string
@@ -1209,16 +1299,19 @@ methods:
           description: |
             The version of the icon (used only for cache invalidation)
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'getWorkItemIconXaml(string, string, number)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemIconXaml
     package: azure-devops-extension-api
     summary: Get a work item icon given the friendly name and icon color.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemIconXaml(icon: string, color?: string, v?: number)'
+      content: >-
+        function getWorkItemIconXaml(icon: string, color?: string, v?: number):
+        Promise<any>
       parameters:
         - id: icon
           type: string
@@ -1231,19 +1324,20 @@ methods:
           description: |
             The version of the icon (used only for cache invalidation)
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'getWorkItemNextStatesOnCheckinAction(number[], string)'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemNextStatesOnCheckinAction
     package: azure-devops-extension-api
     summary: Returns the next state on the given work item IDs.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWorkItemNextStatesOnCheckinAction(ids: number[], action?:
-        string)
+        string): Promise<WorkItemNextStateOnTransition[]>
       parameters:
         - id: ids
           type: 'number[]'
@@ -1253,24 +1347,25 @@ methods:
           description: |
             possible actions. Currently only supports checkin
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemNextStateOnTransition"
           />[]&gt;
-        description: ''
   - name: >-
       getWorkItems(number[], string, string[], Date, WorkItemExpand,
       WorkItemErrorPolicy)
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItems
     package: azure-devops-extension-api
     summary: Returns a list of work items (Maximum 200)
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWorkItems(ids: number[], project?: string, fields?:
         string[], asOf?: Date, expand?: WorkItemExpand, errorPolicy?:
-        WorkItemErrorPolicy)
+        WorkItemErrorPolicy): Promise<WorkItem[]>
       parameters:
         - id: ids
           type: 'number[]'
@@ -1297,18 +1392,19 @@ methods:
             The flag to control error policy in a bulk get work items request.
             Possible options are \{Fail, Omit\}.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />[]&gt;'
   - name: 'getWorkItemsBatch(WorkItemBatchGetRequest, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemsBatch
     package: azure-devops-extension-api
     summary: Gets work items for a list of work item ids (Maximum 200)
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWorkItemsBatch(workItemGetRequest: WorkItemBatchGetRequest,
-        project?: string)
+        project?: string): Promise<WorkItem[]>
       parameters:
         - id: workItemGetRequest
           type: <xref uid="azure-devops-extension-api.WorkItemBatchGetRequest" />
@@ -1318,8 +1414,8 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />[]&gt;'
   - name: 'getWorkItemStateColors(string[])'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemStateColors
@@ -1327,30 +1423,34 @@ methods:
     summary: >-
       INTERNAL ONLY: It will be used for My account work experience. Get the
       work item type state color for multiple projects
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemStateColors(projectNames: string[])'
+      content: >-
+        function getWorkItemStateColors(projectNames: string[]):
+        Promise<ProjectWorkItemStateColors[]>
       parameters:
         - id: projectNames
           type: 'string[]'
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ProjectWorkItemStateColors" />[]&gt;
-        description: ''
   - name: 'getWorkItemTemplate(string, string, string, Date, WorkItemExpand)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemTemplate
     package: azure-devops-extension-api
     summary: Returns a single work item from a template.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWorkItemTemplate(project: string, type: string, fields?:
-        string, asOf?: Date, expand?: WorkItemExpand)
+        string, asOf?: Date, expand?: WorkItemExpand): Promise<WorkItem>
       parameters:
         - id: project
           type: string
@@ -1370,16 +1470,19 @@ methods:
             The expand parameters for work item attributes. Possible options are
             \{ None, Relations, Fields, Links, All \}.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
   - name: 'getWorkItemType(string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemType
     package: azure-devops-extension-api
     summary: Returns a work item type definition.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemType(project: string, type: string)'
+      content: >-
+        function getWorkItemType(project: string, type: string):
+        Promise<WorkItemType>
       parameters:
         - id: project
           type: string
@@ -1389,36 +1492,42 @@ methods:
           description: |
             Work item type name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItemType" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItemType" />&gt;
   - name: getWorkItemTypeCategories(string)
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemTypeCategories
     package: azure-devops-extension-api
     summary: Get all work item type categories.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemTypeCategories(project: string)'
+      content: >-
+        function getWorkItemTypeCategories(project: string):
+        Promise<WorkItemTypeCategory[]>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemTypeCategory"
           />[]&gt;
-        description: ''
   - name: 'getWorkItemTypeCategory(string, string)'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemTypeCategory
     package: azure-devops-extension-api
     summary: Get specific work item type category by name.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemTypeCategory(project: string, category: string)'
+      content: >-
+        function getWorkItemTypeCategory(project: string, category: string):
+        Promise<WorkItemTypeCategory>
       parameters:
         - id: project
           type: string
@@ -1428,10 +1537,10 @@ methods:
           description: |
             The category name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemTypeCategory"
           />&gt;
-        description: ''
   - name: 'getWorkItemTypeColorAndIcons(string[])'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemTypeColorAndIcons
@@ -1439,18 +1548,21 @@ methods:
     summary: >-
       INTERNAL ONLY: It is used for color and icon providers. Get the wit type
       color for multiple projects
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemTypeColorAndIcons(projectNames: string[])'
+      content: >-
+        function getWorkItemTypeColorAndIcons(projectNames: string[]): Promise<{
+        key: string, value: WorkItemTypeColorAndIcon[] }[]>
       parameters:
         - id: projectNames
           type: 'string[]'
           description: |
             -
       return:
-        type: 'Promise&lt;Object[]&gt;'
         description: ''
+        type: 'Promise&lt;{ key: string, value: WorkItemTypeColorAndIcon[] }[]&gt;'
   - name: 'getWorkItemTypeColors(string[])'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemTypeColors
@@ -1458,18 +1570,21 @@ methods:
     summary: >-
       INTERNAL ONLY: It will be used for My account work experience. Get the wit
       type color for multiple projects
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemTypeColors(projectNames: string[])'
+      content: >-
+        function getWorkItemTypeColors(projectNames: string[]): Promise<{ key:
+        string, value: WorkItemTypeColor[] }[]>
       parameters:
         - id: projectNames
           type: 'string[]'
           description: |
             -
       return:
-        type: 'Promise&lt;Object[]&gt;'
         description: ''
+        type: 'Promise&lt;{ key: string, value: WorkItemTypeColor[] }[]&gt;'
   - name: >-
       getWorkItemTypeFieldsWithReferences(string, string,
       WorkItemTypeFieldsExpandLevel)
@@ -1477,12 +1592,14 @@ methods:
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemTypeFieldsWithReferences
     package: azure-devops-extension-api
     summary: Get a list of fields for a work item type with detailed references.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWorkItemTypeFieldsWithReferences(project: string, type:
-        string, expand?: WorkItemTypeFieldsExpandLevel)
+        string, expand?: WorkItemTypeFieldsExpandLevel):
+        Promise<WorkItemTypeFieldWithReferences[]>
       parameters:
         - id: project
           type: string
@@ -1499,11 +1616,11 @@ methods:
             allowedvalues, default value, isRequired etc. as a part of response;
             None: to skip these properties.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemTypeFieldWithReferences"
           />[]&gt;
-        description: ''
   - name: >-
       getWorkItemTypeFieldWithReferences(string, string, string,
       WorkItemTypeFieldsExpandLevel)
@@ -1511,12 +1628,14 @@ methods:
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemTypeFieldWithReferences
     package: azure-devops-extension-api
     summary: Get a field for a work item type with detailed references.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getWorkItemTypeFieldWithReferences(project: string, type:
-        string, field: string, expand?: WorkItemTypeFieldsExpandLevel)
+        string, field: string, expand?: WorkItemTypeFieldsExpandLevel):
+        Promise<WorkItemTypeFieldWithReferences>
       parameters:
         - id: project
           type: string
@@ -1536,38 +1655,42 @@ methods:
             allowedvalues, default value, isRequired etc. as a part of response;
             None: to skip these properties.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemTypeFieldWithReferences"
           />&gt;
-        description: ''
   - name: getWorkItemTypes(string)
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemTypes
     package: azure-devops-extension-api
     summary: Returns the list of work item types
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemTypes(project: string)'
+      content: 'function getWorkItemTypes(project: string): Promise<WorkItemType[]>'
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemType"
           />[]&gt;
-        description: ''
   - name: 'getWorkItemTypeStates(string, string)'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.getWorkItemTypeStates
     package: azure-devops-extension-api
     summary: Returns the state names and colors for a work item type.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getWorkItemTypeStates(project: string, type: string)'
+      content: >-
+        function getWorkItemTypeStates(project: string, type: string):
+        Promise<WorkItemStateColor[]>
       parameters:
         - id: project
           type: string
@@ -1577,20 +1700,21 @@ methods:
           description: |
             The state name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemStateColor"
           />[]&gt;
-        description: ''
   - name: 'queryById(string, string, string, boolean, number)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.queryById
     package: azure-devops-extension-api
     summary: Gets the results of the query given the query ID.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queryById(id: string, project?: string, team?: string,
-        timePrecision?: boolean, top?: number)
+        timePrecision?: boolean, top?: number): Promise<WorkItemQueryResult>
       parameters:
         - id: id
           type: string
@@ -1609,20 +1733,21 @@ methods:
           description: |
             The max number of results to return.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemQueryResult"
           />&gt;
-        description: ''
   - name: 'queryByWiql(Wiql, string, string, boolean, number)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.queryByWiql
     package: azure-devops-extension-api
     summary: Gets the results of the query given its WIQL.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queryByWiql(wiql: Wiql, project?: string, team?: string,
-        timePrecision?: boolean, top?: number)
+        timePrecision?: boolean, top?: number): Promise<WorkItemQueryResult>
       parameters:
         - id: wiql
           type: <xref uid="azure-devops-extension-api.Wiql" />
@@ -1641,21 +1766,22 @@ methods:
           description: |
             The max number of results to return.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemQueryResult"
           />&gt;
-        description: ''
   - name: 'queryWorkItemsForArtifactUris(ArtifactUriQuery, string)'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.queryWorkItemsForArtifactUris
     package: azure-devops-extension-api
     summary: Queries work items linked to a given list of artifact URI.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queryWorkItemsForArtifactUris(artifactUriQuery:
-        ArtifactUriQuery, project?: string)
+        ArtifactUriQuery, project?: string): Promise<ArtifactUriQueryResult>
       parameters:
         - id: artifactUriQuery
           type: <xref uid="azure-devops-extension-api.ArtifactUriQuery" />
@@ -1665,10 +1791,10 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ArtifactUriQueryResult" />&gt;
-        description: ''
   - name: >-
       readReportingRevisionsGet(string, string[], string[], string, Date,
       boolean, boolean, boolean, boolean, ReportingRevisionsExpand, boolean,
@@ -1679,6 +1805,7 @@ methods:
     summary: >-
       Get a batch of work item revisions with the option of including deleted
       items
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1687,7 +1814,8 @@ methods:
         types?: string[], continuationToken?: string, startDateTime?: Date,
         includeIdentityRef?: boolean, includeDeleted?: boolean, includeTagRef?:
         boolean, includeLatestOnly?: boolean, expand?: ReportingRevisionsExpand,
-        includeDiscussionChangesOnly?: boolean, maxPageSize?: number)
+        includeDiscussionChangesOnly?: boolean, maxPageSize?: number):
+        Promise<ReportingWorkItemRevisionsBatch>
       parameters:
         - id: project
           type: string
@@ -1745,11 +1873,11 @@ methods:
           description: |
             The maximum number of results to return in this batch
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReportingWorkItemRevisionsBatch"
           />&gt;
-        description: ''
   - name: >-
       readReportingRevisionsPost(ReportingWorkItemRevisionsFilter, string,
       string, Date, ReportingRevisionsExpand)
@@ -1759,13 +1887,15 @@ methods:
     summary: >-
       Get a batch of work item revisions. This request may be used if your list
       of fields is large enough that it may run the URL over the length limit.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function readReportingRevisionsPost(filter:
         ReportingWorkItemRevisionsFilter, project?: string, continuationToken?:
-        string, startDateTime?: Date, expand?: ReportingRevisionsExpand)
+        string, startDateTime?: Date, expand?: ReportingRevisionsExpand):
+        Promise<ReportingWorkItemRevisionsBatch>
       parameters:
         - id: filter
           type: >-
@@ -1793,21 +1923,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReportingWorkItemRevisionsBatch"
           />&gt;
-        description: ''
   - name: 'replaceTemplate(WorkItemTemplate, string, string, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.replaceTemplate
     package: azure-devops-extension-api
     summary: Replace template contents
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function replaceTemplate(templateContent: WorkItemTemplate, project:
-        string, team: string, templateId: string)
+        string, team: string, templateId: string): Promise<WorkItemTemplate>
       parameters:
         - id: templateContent
           type: <xref uid="azure-devops-extension-api.WorkItemTemplate" />
@@ -1823,20 +1954,21 @@ methods:
           description: |
             Template id
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemTemplate"
           />&gt;
-        description: ''
   - name: 'restoreWorkItem(WorkItemDeleteUpdate, number, string)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.restoreWorkItem
     package: azure-devops-extension-api
     summary: Restores the deleted work item from Recycle Bin.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function restoreWorkItem(payload: WorkItemDeleteUpdate, id: number,
-        project?: string)
+        project?: string): Promise<WorkItemDelete>
       parameters:
         - id: payload
           type: <xref uid="azure-devops-extension-api.WorkItemDeleteUpdate" />
@@ -1849,20 +1981,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemDelete"
           />&gt;
-        description: ''
   - name: 'searchQueries(string, string, number, QueryExpand, boolean)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.searchQueries
     package: azure-devops-extension-api
     summary: Searches all queries the user has access to in the current project
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function searchQueries(project: string, filter: string, top?: number,
-        expand?: QueryExpand, includeDeleted?: boolean)
+        expand?: QueryExpand, includeDeleted?: boolean):
+        Promise<QueryHierarchyItemsResult>
       parameters:
         - id: project
           type: string
@@ -1881,10 +2015,10 @@ methods:
           description: |
             Include deleted queries and folders
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.QueryHierarchyItemsResult" />&gt;
-        description: ''
   - name: >-
       updateClassificationNode(WorkItemClassificationNode, string,
       TreeStructureGroup, string)
@@ -1892,13 +2026,14 @@ methods:
       azure-devops-extension-api.WorkItemTrackingRestClient.updateClassificationNode
     package: azure-devops-extension-api
     summary: Update an existing classification node.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateClassificationNode(postedNode:
         WorkItemClassificationNode, project: string, structureGroup:
-        TreeStructureGroup, path?: string)
+        TreeStructureGroup, path?: string): Promise<WorkItemClassificationNode>
       parameters:
         - id: postedNode
           type: <xref uid="azure-devops-extension-api.WorkItemClassificationNode" />
@@ -1914,22 +2049,24 @@ methods:
           description: |
             Path of the classification node.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.WorkItemClassificationNode" />&gt;
-        description: ''
   - name: 'updateQuery(QueryHierarchyItem, string, string, boolean)'
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.updateQuery
     package: azure-devops-extension-api
     summary: >-
       Update a query or a folder. This allows you to update, rename and move
       queries and folders.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateQuery(queryUpdate: QueryHierarchyItem, project: string,
-        query: string, undeleteDescendants?: boolean)
+        query: string, undeleteDescendants?: boolean):
+        Promise<QueryHierarchyItem>
       parameters:
         - id: queryUpdate
           type: <xref uid="azure-devops-extension-api.QueryHierarchyItem" />
@@ -1947,23 +2084,25 @@ methods:
             this will not bring back the permission changes that were previously
             applied to the descendants.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.QueryHierarchyItem"
           />&gt;
-        description: ''
   - name: >-
       updateWorkItem(JsonPatchDocument, number, string, boolean, boolean,
       boolean, WorkItemExpand)
     uid: azure-devops-extension-api.WorkItemTrackingRestClient.updateWorkItem
     package: azure-devops-extension-api
     summary: Updates a single work item.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateWorkItem(document: JsonPatchDocument, id: number,
         project?: string, validateOnly?: boolean, bypassRules?: boolean,
-        suppressNotifications?: boolean, expand?: WorkItemExpand)
+        suppressNotifications?: boolean, expand?: WorkItemExpand):
+        Promise<WorkItem>
       parameters:
         - id: document
           type: <xref uid="azure-devops-extension-api.JsonPatchDocument" />
@@ -1991,19 +2130,21 @@ methods:
             The expand parameters for work item attributes. Possible options are
             \{ None, Relations, Fields, Links, All \}.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
   - name: 'updateWorkItemTypeDefinition(WorkItemTypeTemplateUpdateModel, string)'
     uid: >-
       azure-devops-extension-api.WorkItemTrackingRestClient.updateWorkItemTypeDefinition
     package: azure-devops-extension-api
     summary: Add/updates a work item type
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateWorkItemTypeDefinition(updateModel:
-        WorkItemTypeTemplateUpdateModel, project?: string)
+        WorkItemTypeTemplateUpdateModel, project?: string):
+        Promise<ProvisioningResult>
       parameters:
         - id: updateModel
           type: >-
@@ -2015,8 +2156,8 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ProvisioningResult"
           />&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

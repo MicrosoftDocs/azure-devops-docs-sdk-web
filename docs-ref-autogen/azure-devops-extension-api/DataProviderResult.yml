@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.DataProviderResult
 package: azure-devops-extension-api
 summary: Result structure from calls to GetDataProviderData
 fullName: DataProviderResult
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -16,77 +17,83 @@ properties:
       were defined as client providers, or as remote providers that failed and
       may be retried by the client.
     fullName: clientProviders
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'clientProviders: [key: string]: ClientDataProviderQuery'
       return:
+        description: ''
         type: >-
           [key: string]\: <xref
           uid="azure-devops-extension-api.ClientDataProviderQuery" />
-        description: ''
   - name: data
     uid: azure-devops-extension-api.DataProviderResult.data
     package: azure-devops-extension-api
     summary: Property bag of data keyed off of the data provider contribution id
     fullName: data
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'data: [key: string]: any'
       return:
-        type: '[key: string]\: any'
         description: ''
+        type: '[key: string]\: any'
   - name: exceptions
     uid: azure-devops-extension-api.DataProviderResult.exceptions
     package: azure-devops-extension-api
     summary: Set of exceptions that occurred resolving the data providers.
     fullName: exceptions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'exceptions: [key: string]: DataProviderExceptionDetails'
       return:
+        description: ''
         type: >-
           [key: string]\: <xref
           uid="azure-devops-extension-api.DataProviderExceptionDetails" />
-        description: ''
   - name: resolvedProviders
     uid: azure-devops-extension-api.DataProviderResult.resolvedProviders
     package: azure-devops-extension-api
     summary: List of data providers resolved in the data-provider query
     fullName: resolvedProviders
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'resolvedProviders: ResolvedDataProvider[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.ResolvedDataProvider" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.ResolvedDataProvider" />[]'
   - name: scopeName
     uid: azure-devops-extension-api.DataProviderResult.scopeName
     package: azure-devops-extension-api
     summary: Scope name applied to this data provider result.
     fullName: scopeName
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'scopeName: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: scopeValue
     uid: azure-devops-extension-api.DataProviderResult.scopeValue
     package: azure-devops-extension-api
     summary: Scope value applied to this data provider result.
     fullName: scopeValue
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'scopeValue: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: sharedData
     uid: azure-devops-extension-api.DataProviderResult.sharedData
     package: azure-devops-extension-api
@@ -94,10 +101,11 @@ properties:
       Property bag of shared data that was contributed to by any of the
       individual data providers
     fullName: sharedData
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'sharedData: [key: string]: any'
       return:
-        type: '[key: string]\: any'
         description: ''
+        type: '[key: string]\: any'

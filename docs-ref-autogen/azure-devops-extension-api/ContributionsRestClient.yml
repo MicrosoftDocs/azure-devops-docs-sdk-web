@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.ContributionsRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: ContributionsRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.ContributionsRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,25 +28,28 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'getInstalledExtensionByName(string, string, string[])'
     uid: >-
       azure-devops-extension-api.ContributionsRestClient.getInstalledExtensionByName
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getInstalledExtensionByName(publisherName: string,
-        extensionName: string, assetTypes?: string[])
+        extensionName: string, assetTypes?: string[]):
+        Promise<InstalledExtension>
       parameters:
         - id: publisherName
           type: string
@@ -57,20 +62,22 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />&gt;
-        description: ''
   - name: 'getInstalledExtensions(string[], boolean, string[])'
     uid: azure-devops-extension-api.ContributionsRestClient.getInstalledExtensions
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getInstalledExtensions(contributionIds?: string[],
-        includeDisabledApps?: boolean, assetTypes?: string[])
+        includeDisabledApps?: boolean, assetTypes?: string[]):
+        Promise<InstalledExtension[]>
       parameters:
         - id: contributionIds
           type: 'string[]'
@@ -83,40 +90,44 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />[]&gt;
-        description: ''
   - name: queryContributionNodes(ContributionNodeQuery)
     uid: azure-devops-extension-api.ContributionsRestClient.queryContributionNodes
     package: azure-devops-extension-api
     summary: >-
       Query for contribution nodes and provider details according the parameters
       in the passed in query object.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function queryContributionNodes(query: ContributionNodeQuery)'
+      content: >-
+        function queryContributionNodes(query: ContributionNodeQuery):
+        Promise<ContributionNodeQueryResult>
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.ContributionNodeQuery" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ContributionNodeQueryResult" />&gt;
-        description: ''
   - name: 'queryDataProviders(DataProviderQuery, string, string)'
     uid: azure-devops-extension-api.ContributionsRestClient.queryDataProviders
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queryDataProviders(query: DataProviderQuery, scopeName?:
-        string, scopeValue?: string)
+        string, scopeValue?: string): Promise<DataProviderResult>
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.DataProviderQuery" />
@@ -129,8 +140,8 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.DataProviderResult"
           />&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

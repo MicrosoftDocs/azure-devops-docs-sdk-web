@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.GitRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: GitRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.GitRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,24 +28,26 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'createAnnotatedTag(GitAnnotatedTag, string, string)'
     uid: azure-devops-extension-api.GitRestClient.createAnnotatedTag
     package: azure-devops-extension-api
     summary: Create an annotated tag.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createAnnotatedTag(tagObject: GitAnnotatedTag, project: string,
-        repositoryId: string)
+        repositoryId: string): Promise<GitAnnotatedTag>
       parameters:
         - id: tagObject
           type: <xref uid="azure-devops-extension-api.GitAnnotatedTag" />
@@ -56,20 +60,21 @@ methods:
           description: |
             ID or name of the repository.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitAnnotatedTag"
           />&gt;
-        description: ''
   - name: 'createAttachment(any, string, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.createAttachment
     package: azure-devops-extension-api
     summary: Attach a new file to a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createAttachment(content: any, fileName: string, repositoryId:
-        string, pullRequestId: number, project?: string)
+        string, pullRequestId: number, project?: string): Promise<Attachment>
       parameters:
         - id: content
           type: any
@@ -88,20 +93,22 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Attachment" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Attachment" />&gt;
   - name: 'createCherryPick(GitAsyncRefOperationParameters, string, string)'
     uid: azure-devops-extension-api.GitRestClient.createCherryPick
     package: azure-devops-extension-api
     summary: >-
       Cherry pick a specific commit or commits that are associated to a pull
       request into a new branch.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createCherryPick(cherryPickToCreate:
-        GitAsyncRefOperationParameters, project: string, repositoryId: string)
+        GitAsyncRefOperationParameters, project: string, repositoryId: string):
+        Promise<GitCherryPick>
       parameters:
         - id: cherryPickToCreate
           type: >-
@@ -116,20 +123,22 @@ methods:
           description: |
             ID of the repository.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitCherryPick" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitCherryPick" />&gt;
   - name: 'createComment(Comment, string, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.createComment
     package: azure-devops-extension-api
     summary: >-
       Create a comment on a specific thread in a pull request (up to 500
       comments can be created per thread).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createComment(comment: Comment, repositoryId: string,
-        pullRequestId: number, threadId: number, project?: string)
+        pullRequestId: number, threadId: number, project?: string):
+        Promise<Comment>
       parameters:
         - id: comment
           type: <xref uid="azure-devops-extension-api.Comment" />
@@ -148,18 +157,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
   - name: 'createCommitStatus(GitStatus, string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.createCommitStatus
     package: azure-devops-extension-api
     summary: Create Git commit status.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createCommitStatus(gitCommitStatusToCreate: GitStatus,
-        commitId: string, repositoryId: string, project?: string)
+        commitId: string, repositoryId: string, project?: string):
+        Promise<GitStatus>
       parameters:
         - id: gitCommitStatusToCreate
           type: <xref uid="azure-devops-extension-api.GitStatus" />
@@ -175,16 +186,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitStatus" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitStatus" />&gt;
   - name: 'createFavorite(GitRefFavorite, string)'
     uid: azure-devops-extension-api.GitRestClient.createFavorite
     package: azure-devops-extension-api
     summary: Creates a ref favorite
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createFavorite(favorite: GitRefFavorite, project: string)'
+      content: >-
+        function createFavorite(favorite: GitRefFavorite, project: string):
+        Promise<GitRefFavorite>
       parameters:
         - id: favorite
           type: <xref uid="azure-devops-extension-api.GitRefFavorite" />
@@ -194,10 +208,10 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitRefFavorite"
           />&gt;
-        description: ''
   - name: >-
       createForkSyncRequest(GitForkSyncRequestParameters, string, string,
       boolean)
@@ -208,12 +222,14 @@ methods:
       two existing forks. To create a fork, please see the \<a
       href="https://docs.microsoft.com/en-us/rest/api/vsts/git/repositories/create?view=azure-devops-rest-5.1"\>
       repositories endpoint\</a\>
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createForkSyncRequest(syncParams: GitForkSyncRequestParameters,
-        repositoryNameOrId: string, project?: string, includeLinks?: boolean)
+        repositoryNameOrId: string, project?: string, includeLinks?: boolean):
+        Promise<GitForkSyncRequest>
       parameters:
         - id: syncParams
           type: >-
@@ -231,20 +247,21 @@ methods:
           description: |
             True to include links
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitForkSyncRequest"
           />&gt;
-        description: ''
   - name: 'createImportRequest(GitImportRequest, string, string)'
     uid: azure-devops-extension-api.GitRestClient.createImportRequest
     package: azure-devops-extension-api
     summary: Create an import request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createImportRequest(importRequest: GitImportRequest, project:
-        string, repositoryId: string)
+        string, repositoryId: string): Promise<GitImportRequest>
       parameters:
         - id: importRequest
           type: <xref uid="azure-devops-extension-api.GitImportRequest" />
@@ -257,20 +274,21 @@ methods:
           description: |
             The name or ID of the repository.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitImportRequest"
           />&gt;
-        description: ''
   - name: 'createLike(string, number, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.createLike
     package: azure-devops-extension-api
     summary: Add a like on a comment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createLike(repositoryId: string, pullRequestId: number,
-        threadId: number, commentId: number, project?: string)
+        threadId: number, commentId: number, project?: string): Promise<void>
       parameters:
         - id: repositoryId
           type: string
@@ -289,20 +307,22 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'createMergeRequest(GitMergeParameters, string, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.createMergeRequest
     package: azure-devops-extension-api
     summary: >-
       Request a git merge operation. Currently we support merging only 2
       commits.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createMergeRequest(mergeParameters: GitMergeParameters,
-        project: string, repositoryNameOrId: string, includeLinks?: boolean)
+        project: string, repositoryNameOrId: string, includeLinks?: boolean):
+        Promise<GitMerge>
       parameters:
         - id: mergeParameters
           type: <xref uid="azure-devops-extension-api.GitMergeParameters" />
@@ -318,18 +338,20 @@ methods:
           description: |
             True to include links
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitMerge" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitMerge" />&gt;
   - name: 'createPullRequest(GitPullRequest, string, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.createPullRequest
     package: azure-devops-extension-api
     summary: Create a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createPullRequest(gitPullRequestToCreate: GitPullRequest,
-        repositoryId: string, project?: string, supportsIterations?: boolean)
+        repositoryId: string, project?: string, supportsIterations?: boolean):
+        Promise<GitPullRequest>
       parameters:
         - id: gitPullRequestToCreate
           type: <xref uid="azure-devops-extension-api.GitPullRequest" />
@@ -347,10 +369,10 @@ methods:
             reviewable. Set this to false for large pull requests for
             performance reasons if this functionality is not needed.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequest"
           />&gt;
-        description: ''
   - name: >-
       createPullRequestIterationStatus(GitPullRequestStatus, string, number,
       number, string)
@@ -360,13 +382,14 @@ methods:
       Create a pull request status on the iteration. This operation will have
       the same result as Create status on pull request with specified iteration
       ID in the request body.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createPullRequestIterationStatus(status: GitPullRequestStatus,
         repositoryId: string, pullRequestId: number, iterationId: number,
-        project?: string)
+        project?: string): Promise<GitPullRequestStatus>
       parameters:
         - id: status
           type: <xref uid="azure-devops-extension-api.GitPullRequestStatus" />
@@ -385,10 +408,10 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequestStatus"
           />&gt;
-        description: ''
   - name: >-
       createPullRequestLabel(WebApiCreateTagRequestData, string, number, string,
       string)
@@ -397,13 +420,14 @@ methods:
     summary: >-
       Create a label for a specified pull request. The only required field is
       the name of the new label.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createPullRequestLabel(label: WebApiCreateTagRequestData,
         repositoryId: string, pullRequestId: number, project?: string,
-        projectId?: string)
+        projectId?: string): Promise<WebApiTagDefinition>
       parameters:
         - id: label
           type: <xref uid="azure-devops-extension-api.WebApiCreateTagRequestData" />
@@ -422,23 +446,24 @@ methods:
           description: |
             Project ID or project name.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WebApiTagDefinition"
           />&gt;
-        description: ''
   - name: >-
       createPullRequestReviewer(IdentityRefWithVote, string, number, string,
       string)
     uid: azure-devops-extension-api.GitRestClient.createPullRequestReviewer
     package: azure-devops-extension-api
     summary: Add a reviewer to a pull request or cast a vote.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createPullRequestReviewer(reviewer: IdentityRefWithVote,
         repositoryId: string, pullRequestId: number, reviewerId: string,
-        project?: string)
+        project?: string): Promise<IdentityRefWithVote>
       parameters:
         - id: reviewer
           type: <xref uid="azure-devops-extension-api.IdentityRefWithVote" />
@@ -461,20 +486,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.IdentityRefWithVote"
           />&gt;
-        description: ''
   - name: 'createPullRequestReviewers(IdentityRef[], string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.createPullRequestReviewers
     package: azure-devops-extension-api
     summary: Add reviewers to a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createPullRequestReviewers(reviewers: IdentityRef[],
-        repositoryId: string, pullRequestId: number, project?: string)
+        repositoryId: string, pullRequestId: number, project?: string):
+        Promise<IdentityRefWithVote[]>
       parameters:
         - id: reviewers
           type: '<xref uid="azure-devops-extension-api.IdentityRef" />[]'
@@ -490,20 +517,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.IdentityRefWithVote"
           />[]&gt;
-        description: ''
   - name: 'createPullRequestStatus(GitPullRequestStatus, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.createPullRequestStatus
     package: azure-devops-extension-api
     summary: Create a pull request status.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createPullRequestStatus(status: GitPullRequestStatus,
-        repositoryId: string, pullRequestId: number, project?: string)
+        repositoryId: string, pullRequestId: number, project?: string):
+        Promise<GitPullRequestStatus>
       parameters:
         - id: status
           type: <xref uid="azure-devops-extension-api.GitPullRequestStatus" />
@@ -519,20 +548,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequestStatus"
           />&gt;
-        description: ''
   - name: 'createPush(GitPush, string, string)'
     uid: azure-devops-extension-api.GitRestClient.createPush
     package: azure-devops-extension-api
     summary: Push changes to the repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createPush(push: GitPush, repositoryId: string, project?:
-        string)
+        string): Promise<GitPush>
       parameters:
         - id: push
           type: <xref uid="azure-devops-extension-api.GitPush" />
@@ -545,18 +575,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitPush" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitPush" />&gt;
   - name: 'createRepository(GitRepositoryCreateOptions, string, string)'
     uid: azure-devops-extension-api.GitRestClient.createRepository
     package: azure-devops-extension-api
     summary: Create a git repository in a team project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createRepository(gitRepositoryToCreate:
-        GitRepositoryCreateOptions, project?: string, sourceRef?: string)
+        GitRepositoryCreateOptions, project?: string, sourceRef?: string):
+        Promise<GitRepository>
       parameters:
         - id: gitRepositoryToCreate
           type: <xref uid="azure-devops-extension-api.GitRepositoryCreateOptions" />
@@ -572,8 +604,8 @@ methods:
           description: |
             [optional] Specify the source refs to use while creating a fork repo
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
   - name: 'createRevert(GitAsyncRefOperationParameters, string, string)'
     uid: azure-devops-extension-api.GitRestClient.createRevert
     package: azure-devops-extension-api
@@ -581,12 +613,13 @@ methods:
       Starts the operation to create a new branch which reverts changes
       introduced by either a specific commit or commits that are associated to a
       pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createRevert(revertToCreate: GitAsyncRefOperationParameters,
-        project: string, repositoryId: string)
+        project: string, repositoryId: string): Promise<GitRevert>
       parameters:
         - id: revertToCreate
           type: >-
@@ -601,18 +634,20 @@ methods:
           description: |
             ID of the repository.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRevert" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRevert" />&gt;
   - name: 'createThread(GitPullRequestCommentThread, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.createThread
     package: azure-devops-extension-api
     summary: Create a thread in a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createThread(commentThread: GitPullRequestCommentThread,
-        repositoryId: string, pullRequestId: number, project?: string)
+        repositoryId: string, pullRequestId: number, project?: string):
+        Promise<GitPullRequestCommentThread>
       parameters:
         - id: commentThread
           type: >-
@@ -630,20 +665,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.GitPullRequestCommentThread" />&gt;
-        description: ''
   - name: 'deleteAttachment(string, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.deleteAttachment
     package: azure-devops-extension-api
     summary: Delete a pull request attachment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteAttachment(fileName: string, repositoryId: string,
-        pullRequestId: number, project?: string)
+        pullRequestId: number, project?: string): Promise<void>
       parameters:
         - id: fileName
           type: string
@@ -659,18 +695,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteComment(string, number, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.deleteComment
     package: azure-devops-extension-api
     summary: Delete a comment associated with a specific thread in a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteComment(repositoryId: string, pullRequestId: number,
-        threadId: number, commentId: number, project?: string)
+        threadId: number, commentId: number, project?: string): Promise<void>
       parameters:
         - id: repositoryId
           type: string
@@ -689,18 +726,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteLike(string, number, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.deleteLike
     package: azure-devops-extension-api
     summary: Delete a like on a comment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteLike(repositoryId: string, pullRequestId: number,
-        threadId: number, commentId: number, project?: string)
+        threadId: number, commentId: number, project?: string): Promise<void>
       parameters:
         - id: repositoryId
           type: string
@@ -719,19 +757,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deletePullRequestIterationStatus(string, number, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.deletePullRequestIterationStatus
     package: azure-devops-extension-api
     summary: Delete pull request iteration status.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deletePullRequestIterationStatus(repositoryId: string,
         pullRequestId: number, iterationId: number, statusId: number, project?:
-        string)
+        string): Promise<void>
       parameters:
         - id: repositoryId
           type: string
@@ -750,18 +789,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deletePullRequestLabels(string, number, string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.deletePullRequestLabels
     package: azure-devops-extension-api
     summary: Removes a label from the set of those assigned to the pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deletePullRequestLabels(repositoryId: string, pullRequestId:
-        number, labelIdOrName: string, project?: string, projectId?: string)
+        number, labelIdOrName: string, project?: string, projectId?: string):
+        Promise<void>
       parameters:
         - id: repositoryId
           type: string
@@ -780,18 +821,19 @@ methods:
           description: |
             Project ID or project name.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deletePullRequestReviewer(string, number, string, string)'
     uid: azure-devops-extension-api.GitRestClient.deletePullRequestReviewer
     package: azure-devops-extension-api
     summary: Remove a reviewer from a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deletePullRequestReviewer(repositoryId: string, pullRequestId:
-        number, reviewerId: string, project?: string)
+        number, reviewerId: string, project?: string): Promise<void>
       parameters:
         - id: repositoryId
           type: string
@@ -807,18 +849,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deletePullRequestStatus(string, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.deletePullRequestStatus
     package: azure-devops-extension-api
     summary: Delete pull request status.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deletePullRequestStatus(repositoryId: string, pullRequestId:
-        number, statusId: number, project?: string)
+        number, statusId: number, project?: string): Promise<void>
       parameters:
         - id: repositoryId
           type: string
@@ -834,16 +877,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteRefFavorite(string, number)'
     uid: azure-devops-extension-api.GitRestClient.deleteRefFavorite
     package: azure-devops-extension-api
     summary: Deletes the refs favorite specified
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteRefFavorite(project: string, favoriteId: number)'
+      content: >-
+        function deleteRefFavorite(project: string, favoriteId: number):
+        Promise<void>
       parameters:
         - id: project
           type: string
@@ -853,16 +899,19 @@ methods:
           description: |
             The Id of the ref favorite to delete.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteRepository(string, string)'
     uid: azure-devops-extension-api.GitRestClient.deleteRepository
     package: azure-devops-extension-api
     summary: Delete a git repository
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteRepository(repositoryId: string, project?: string)'
+      content: >-
+        function deleteRepository(repositoryId: string, project?: string):
+        Promise<void>
       parameters:
         - id: repositoryId
           type: string
@@ -872,18 +921,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'deleteRepositoryFromRecycleBin(string, string)'
     uid: azure-devops-extension-api.GitRestClient.deleteRepositoryFromRecycleBin
     package: azure-devops-extension-api
     summary: Destroy (hard delete) a soft-deleted Git repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function deleteRepositoryFromRecycleBin(project: string, repositoryId:
-        string)
+        string): Promise<void>
       parameters:
         - id: project
           type: string
@@ -893,18 +943,19 @@ methods:
           description: |
             The ID of the repository.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'getAnnotatedTag(string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getAnnotatedTag
     package: azure-devops-extension-api
     summary: Get an annotated tag.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAnnotatedTag(project: string, repositoryId: string,
-        objectId: string)
+        objectId: string): Promise<GitAnnotatedTag>
       parameters:
         - id: project
           type: string
@@ -917,20 +968,21 @@ methods:
           description: |
             ObjectId (Sha1Id) of tag to get.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitAnnotatedTag"
           />&gt;
-        description: ''
   - name: 'getAttachmentContent(string, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getAttachmentContent
     package: azure-devops-extension-api
     summary: Get the file content of a pull request attachment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAttachmentContent(fileName: string, repositoryId: string,
-        pullRequestId: number, project?: string)
+        pullRequestId: number, project?: string): Promise<ArrayBuffer>
       parameters:
         - id: fileName
           type: string
@@ -946,18 +998,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getAttachments(string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getAttachments
     package: azure-devops-extension-api
     summary: Get a list of files attached to a given pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAttachments(repositoryId: string, pullRequestId: number,
-        project?: string)
+        project?: string): Promise<Attachment[]>
       parameters:
         - id: repositoryId
           type: string
@@ -970,18 +1023,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Attachment" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Attachment" />[]&gt;'
   - name: 'getAttachmentZip(string, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getAttachmentZip
     package: azure-devops-extension-api
     summary: Get the file content of a pull request attachment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getAttachmentZip(fileName: string, repositoryId: string,
-        pullRequestId: number, project?: string)
+        pullRequestId: number, project?: string): Promise<ArrayBuffer>
       parameters:
         - id: fileName
           type: string
@@ -997,18 +1051,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getBlob(string, string, string, boolean, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getBlob
     package: azure-devops-extension-api
     summary: Get a single blob.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBlob(repositoryId: string, sha1: string, project?: string,
-        download?: boolean, fileName?: string, resolveLfs?: boolean)
+        download?: boolean, fileName?: string, resolveLfs?: boolean):
+        Promise<GitBlobRef>
       parameters:
         - id: repositoryId
           type: string
@@ -1036,18 +1092,20 @@ methods:
             pointer file. Only compatible with octet-stream Accept headers or
             $format types
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitBlobRef" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitBlobRef" />&gt;
   - name: 'getBlobContent(string, string, string, boolean, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getBlobContent
     package: azure-devops-extension-api
     summary: Get a single blob.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBlobContent(repositoryId: string, sha1: string, project?:
-        string, download?: boolean, fileName?: string, resolveLfs?: boolean)
+        string, download?: boolean, fileName?: string, resolveLfs?: boolean):
+        Promise<ArrayBuffer>
       parameters:
         - id: repositoryId
           type: string
@@ -1075,18 +1133,19 @@ methods:
             pointer file. Only compatible with octet-stream Accept headers or
             $format types
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getBlobsZip(string[], string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getBlobsZip
     package: azure-devops-extension-api
     summary: Gets one or more blobs in a zip file download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBlobsZip(blobIds: string[], repositoryId: string, project?:
-        string, filename?: string)
+        string, filename?: string): Promise<ArrayBuffer>
       parameters:
         - id: blobIds
           type: 'string[]'
@@ -1102,18 +1161,20 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getBlobZip(string, string, string, boolean, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getBlobZip
     package: azure-devops-extension-api
     summary: Get a single blob.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBlobZip(repositoryId: string, sha1: string, project?:
-        string, download?: boolean, fileName?: string, resolveLfs?: boolean)
+        string, download?: boolean, fileName?: string, resolveLfs?: boolean):
+        Promise<ArrayBuffer>
       parameters:
         - id: repositoryId
           type: string
@@ -1141,18 +1202,19 @@ methods:
             pointer file. Only compatible with octet-stream Accept headers or
             $format types
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getBranch(string, string, string, GitVersionDescriptor)'
     uid: azure-devops-extension-api.GitRestClient.getBranch
     package: azure-devops-extension-api
     summary: Retrieve statistics about a single branch.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBranch(repositoryId: string, name: string, project?: string,
-        baseVersionDescriptor?: GitVersionDescriptor)
+        baseVersionDescriptor?: GitVersionDescriptor): Promise<GitBranchStats>
       parameters:
         - id: repositoryId
           type: string
@@ -1168,20 +1230,21 @@ methods:
           description: |
             Identifies the commit or branch to use as the base.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitBranchStats"
           />&gt;
-        description: ''
   - name: 'getBranches(string, string, GitVersionDescriptor)'
     uid: azure-devops-extension-api.GitRestClient.getBranches
     package: azure-devops-extension-api
     summary: Retrieve statistics about all branches within a repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBranches(repositoryId: string, project?: string,
-        baseVersionDescriptor?: GitVersionDescriptor)
+        baseVersionDescriptor?: GitVersionDescriptor): Promise<GitBranchStats[]>
       parameters:
         - id: repositoryId
           type: string
@@ -1194,20 +1257,22 @@ methods:
           description: |
             Identifies the commit or branch to use as the base.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitBranchStats"
           />[]&gt;
-        description: ''
   - name: 'getBranchStatsBatch(GitQueryBranchStatsCriteria, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getBranchStatsBatch
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBranchStatsBatch(searchCriteria:
-        GitQueryBranchStatsCriteria, repositoryId: string, project?: string)
+        GitQueryBranchStatsCriteria, repositoryId: string, project?: string):
+        Promise<GitBranchStats[]>
       parameters:
         - id: searchCriteria
           type: >-
@@ -1222,20 +1287,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitBranchStats"
           />[]&gt;
-        description: ''
   - name: 'getChanges(string, string, string, number, number)'
     uid: azure-devops-extension-api.GitRestClient.getChanges
     package: azure-devops-extension-api
     summary: Retrieve changes for a particular commit.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getChanges(commitId: string, repositoryId: string, project?:
-        string, top?: number, skip?: number)
+        string, top?: number, skip?: number): Promise<GitCommitChanges>
       parameters:
         - id: commitId
           type: string
@@ -1256,20 +1322,21 @@ methods:
           description: |
             The number of changes to skip.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitCommitChanges"
           />&gt;
-        description: ''
   - name: 'getCherryPick(string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getCherryPick
     package: azure-devops-extension-api
     summary: Retrieve information about a cherry pick by cherry pick Id.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getCherryPick(project: string, cherryPickId: number,
-        repositoryId: string)
+        repositoryId: string): Promise<GitCherryPick>
       parameters:
         - id: project
           type: string
@@ -1282,18 +1349,19 @@ methods:
           description: |
             ID of the repository.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitCherryPick" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitCherryPick" />&gt;
   - name: 'getCherryPickForRefName(string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getCherryPickForRefName
     package: azure-devops-extension-api
     summary: Retrieve information about a cherry pick for a specific branch.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getCherryPickForRefName(project: string, repositoryId: string,
-        refName: string)
+        refName: string): Promise<GitCherryPick>
       parameters:
         - id: project
           type: string
@@ -1307,20 +1375,22 @@ methods:
             The GitAsyncRefOperationParameters generatedRefName used for the
             cherry pick operation.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitCherryPick" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitCherryPick" />&gt;
   - name: 'getCherryPickRelationships(string, string, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getCherryPickRelationships
     package: azure-devops-extension-api
     summary: >-
       Given a commitId, returns a list of commits that are in the same
       cherry-pick family.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getCherryPickRelationships(repositoryNameOrId: string,
-        commitId: string, project?: string, includeLinks?: boolean)
+        commitId: string, project?: string, includeLinks?: boolean):
+        Promise<GitCommitRef[]>
       parameters:
         - id: repositoryNameOrId
           type: string
@@ -1336,20 +1406,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitCommitRef"
           />[]&gt;
-        description: ''
   - name: 'getComment(string, number, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getComment
     package: azure-devops-extension-api
     summary: Retrieve a comment associated with a specific thread in a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getComment(repositoryId: string, pullRequestId: number,
-        threadId: number, commentId: number, project?: string)
+        threadId: number, commentId: number, project?: string): Promise<Comment>
       parameters:
         - id: repositoryId
           type: string
@@ -1368,18 +1439,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
   - name: 'getComments(string, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getComments
     package: azure-devops-extension-api
     summary: Retrieve all comments associated with a specific thread in a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getComments(repositoryId: string, pullRequestId: number,
-        threadId: number, project?: string)
+        threadId: number, project?: string): Promise<Comment[]>
       parameters:
         - id: repositoryId
           type: string
@@ -1395,18 +1467,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Comment" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Comment" />[]&gt;'
   - name: 'getCommit(string, string, string, number)'
     uid: azure-devops-extension-api.GitRestClient.getCommit
     package: azure-devops-extension-api
     summary: Retrieve a particular commit.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getCommit(commitId: string, repositoryId: string, project?:
-        string, changeCount?: number)
+        string, changeCount?: number): Promise<GitCommit>
       parameters:
         - id: commitId
           type: string
@@ -1424,8 +1497,8 @@ methods:
           description: |
             The number of changes to include in the result.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitCommit" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitCommit" />&gt;
   - name: >-
       getCommitDiffs(string, string, boolean, number, number,
       GitBaseVersionDescriptor, GitTargetVersionDescriptor)
@@ -1435,6 +1508,7 @@ methods:
       Find the closest common commit (the merge base) between base and target
       commits, and get the diff between either the base and target commits or
       common and target commits.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1442,7 +1516,8 @@ methods:
         function getCommitDiffs(repositoryId: string, project?: string,
         diffCommonCommit?: boolean, top?: number, skip?: number,
         baseVersionDescriptor?: GitBaseVersionDescriptor,
-        targetVersionDescriptor?: GitTargetVersionDescriptor)
+        targetVersionDescriptor?: GitTargetVersionDescriptor):
+        Promise<GitCommitDiffs>
       parameters:
         - id: repositoryId
           type: string
@@ -1469,20 +1544,21 @@ methods:
           description: |
             Descriptor for target commit.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitCommitDiffs"
           />&gt;
-        description: ''
   - name: 'getCommits(string, GitQueryCommitsCriteria, string)'
     uid: azure-devops-extension-api.GitRestClient.getCommits
     package: azure-devops-extension-api
     summary: Retrieve git commits for a project
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getCommits(repositoryId: string, searchCriteria:
-        GitQueryCommitsCriteria, project?: string)
+        GitQueryCommitsCriteria, project?: string): Promise<GitCommitRef[]>
       parameters:
         - id: repositoryId
           type: string
@@ -1497,23 +1573,24 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitCommitRef"
           />[]&gt;
-        description: ''
   - name: >-
       getCommitsBatch(GitQueryCommitsCriteria, string, string, number, number,
       boolean)
     uid: azure-devops-extension-api.GitRestClient.getCommitsBatch
     package: azure-devops-extension-api
     summary: Retrieve git commits for a project matching the search criteria
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getCommitsBatch(searchCriteria: GitQueryCommitsCriteria,
         repositoryId: string, project?: string, skip?: number, top?: number,
-        includeStatuses?: boolean)
+        includeStatuses?: boolean): Promise<GitCommitRef[]>
       parameters:
         - id: searchCriteria
           type: <xref uid="azure-devops-extension-api.GitQueryCommitsCriteria" />
@@ -1535,38 +1612,42 @@ methods:
           description: |
             True to include additional commit status information.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitCommitRef"
           />[]&gt;
-        description: ''
   - name: getDeletedRepositories(string)
     uid: azure-devops-extension-api.GitRestClient.getDeletedRepositories
     package: azure-devops-extension-api
     summary: Retrieve deleted git repositories.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getDeletedRepositories(project: string)'
+      content: >-
+        function getDeletedRepositories(project: string):
+        Promise<GitDeletedRepository[]>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitDeletedRepository"
           />[]&gt;
-        description: ''
   - name: 'getFileDiffs(FileDiffsCriteria, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getFileDiffs
     package: azure-devops-extension-api
     summary: Get the file diffs for each of the specified files
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getFileDiffs(fileDiffsCriteria: FileDiffsCriteria, project:
-        string, repositoryId: string)
+        string, repositoryId: string): Promise<FileDiff[]>
       parameters:
         - id: fileDiffsCriteria
           type: <xref uid="azure-devops-extension-api.FileDiffsCriteria" />
@@ -1579,18 +1660,19 @@ methods:
           description: |
             The name or ID of the repository
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.FileDiff" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.FileDiff" />[]&gt;'
   - name: 'getForks(string, string, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getForks
     package: azure-devops-extension-api
     summary: Retrieve all forks of a repository in the collection.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getForks(repositoryNameOrId: string, collectionId: string,
-        project?: string, includeLinks?: boolean)
+        project?: string, includeLinks?: boolean): Promise<GitRepositoryRef[]>
       parameters:
         - id: repositoryNameOrId
           type: string
@@ -1606,20 +1688,22 @@ methods:
           description: |
             True to include links.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitRepositoryRef"
           />[]&gt;
-        description: ''
   - name: 'getForkSyncRequest(string, number, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getForkSyncRequest
     package: azure-devops-extension-api
     summary: Get a specific fork sync operation's details.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getForkSyncRequest(repositoryNameOrId: string,
-        forkSyncOperationId: number, project?: string, includeLinks?: boolean)
+        forkSyncOperationId: number, project?: string, includeLinks?: boolean):
+        Promise<GitForkSyncRequest>
       parameters:
         - id: repositoryNameOrId
           type: string
@@ -1635,20 +1719,22 @@ methods:
           description: |
             True to include links.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitForkSyncRequest"
           />&gt;
-        description: ''
   - name: 'getForkSyncRequests(string, string, boolean, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getForkSyncRequests
     package: azure-devops-extension-api
     summary: Retrieve all requested fork sync operations on this repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getForkSyncRequests(repositoryNameOrId: string, project?:
-        string, includeAbandoned?: boolean, includeLinks?: boolean)
+        string, includeAbandoned?: boolean, includeLinks?: boolean):
+        Promise<GitForkSyncRequest[]>
       parameters:
         - id: repositoryNameOrId
           type: string
@@ -1664,20 +1750,21 @@ methods:
           description: |
             True to include links.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitForkSyncRequest"
           />[]&gt;
-        description: ''
   - name: 'getImportRequest(string, string, number)'
     uid: azure-devops-extension-api.GitRestClient.getImportRequest
     package: azure-devops-extension-api
     summary: Retrieve a particular import request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getImportRequest(project: string, repositoryId: string,
-        importRequestId: number)
+        importRequestId: number): Promise<GitImportRequest>
       parameters:
         - id: project
           type: string
@@ -1690,10 +1777,10 @@ methods:
           description: |
             The unique identifier for the import request.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitImportRequest"
           />&gt;
-        description: ''
   - name: >-
       getItem(string, string, string, string, VersionControlRecursionType,
       boolean, boolean, boolean, GitVersionDescriptor, boolean, boolean)
@@ -1704,6 +1791,7 @@ methods:
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content,
       which is always returned as a download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1712,7 +1800,7 @@ methods:
         scopePath?: string, recursionLevel?: VersionControlRecursionType,
         includeContentMetadata?: boolean, latestProcessedChange?: boolean,
         download?: boolean, versionDescriptor?: GitVersionDescriptor,
-        includeContent?: boolean, resolveLfs?: boolean)
+        includeContent?: boolean, resolveLfs?: boolean): Promise<GitItem>
       parameters:
         - id: repositoryId
           type: string
@@ -1758,8 +1846,8 @@ methods:
             Set to true to resolve Git LFS pointer files to return actual
             content from Git LFS.  Default is false.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitItem" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitItem" />&gt;
   - name: >-
       getItemContent(string, string, string, string,
       VersionControlRecursionType, boolean, boolean, boolean,
@@ -1771,6 +1859,7 @@ methods:
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content,
       which is always returned as a download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1779,7 +1868,8 @@ methods:
         string, scopePath?: string, recursionLevel?:
         VersionControlRecursionType, includeContentMetadata?: boolean,
         latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
-        GitVersionDescriptor, includeContent?: boolean, resolveLfs?: boolean)
+        GitVersionDescriptor, includeContent?: boolean, resolveLfs?: boolean):
+        Promise<ArrayBuffer>
       parameters:
         - id: repositoryId
           type: string
@@ -1825,8 +1915,8 @@ methods:
             Set to true to resolve Git LFS pointer files to return actual
             content from Git LFS.  Default is false.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: >-
       getItems(string, string, string, VersionControlRecursionType, boolean,
       boolean, boolean, boolean, GitVersionDescriptor)
@@ -1837,6 +1927,7 @@ methods:
       parameter is to indicate whether the content should be available as a
       download or just sent as a stream in the response. Doesn't apply to zipped
       content which is always returned as a download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1845,7 +1936,7 @@ methods:
         string, recursionLevel?: VersionControlRecursionType,
         includeContentMetadata?: boolean, latestProcessedChange?: boolean,
         download?: boolean, includeLinks?: boolean, versionDescriptor?:
-        GitVersionDescriptor)
+        GitVersionDescriptor): Promise<GitItem[]>
       parameters:
         - id: repositoryId
           type: string
@@ -1881,20 +1972,21 @@ methods:
             Version descriptor.  Default is the default branch for the
             repository.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitItem" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitItem" />[]&gt;'
   - name: 'getItemsBatch(GitItemRequestData, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getItemsBatch
     package: azure-devops-extension-api
     summary: >-
       Post for retrieving a creating a batch out of a set of items in a repo /
       project given a list of paths or a long path
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getItemsBatch(requestData: GitItemRequestData, repositoryId:
-        string, project?: string)
+        string, project?: string): Promise<GitItem[][]>
       parameters:
         - id: requestData
           type: <xref uid="azure-devops-extension-api.GitItemRequestData" />
@@ -1914,8 +2006,8 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitItem" />[][]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitItem" />[][]&gt;'
   - name: >-
       getItemText(string, string, string, string, VersionControlRecursionType,
       boolean, boolean, boolean, GitVersionDescriptor, boolean, boolean)
@@ -1926,6 +2018,7 @@ methods:
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content,
       which is always returned as a download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1934,7 +2027,8 @@ methods:
         string, scopePath?: string, recursionLevel?:
         VersionControlRecursionType, includeContentMetadata?: boolean,
         latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
-        GitVersionDescriptor, includeContent?: boolean, resolveLfs?: boolean)
+        GitVersionDescriptor, includeContent?: boolean, resolveLfs?: boolean):
+        Promise<string>
       parameters:
         - id: repositoryId
           type: string
@@ -1980,8 +2074,8 @@ methods:
             Set to true to resolve Git LFS pointer files to return actual
             content from Git LFS.  Default is false.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: >-
       getItemZip(string, string, string, string, VersionControlRecursionType,
       boolean, boolean, boolean, GitVersionDescriptor, boolean, boolean)
@@ -1992,6 +2086,7 @@ methods:
       is to indicate whether the content should be available as a download or
       just sent as a stream in the response. Doesn't apply to zipped content,
       which is always returned as a download.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -2000,7 +2095,8 @@ methods:
         string, scopePath?: string, recursionLevel?:
         VersionControlRecursionType, includeContentMetadata?: boolean,
         latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
-        GitVersionDescriptor, includeContent?: boolean, resolveLfs?: boolean)
+        GitVersionDescriptor, includeContent?: boolean, resolveLfs?: boolean):
+        Promise<ArrayBuffer>
       parameters:
         - id: repositoryId
           type: string
@@ -2046,18 +2142,19 @@ methods:
             Set to true to resolve Git LFS pointer files to return actual
             content from Git LFS.  Default is false.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'getLikes(string, number, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getLikes
     package: azure-devops-extension-api
     summary: Get likes for a comment.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getLikes(repositoryId: string, pullRequestId: number, threadId:
-        number, commentId: number, project?: string)
+        number, commentId: number, project?: string): Promise<IdentityRef[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2076,8 +2173,8 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IdentityRef" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IdentityRef" />[]&gt;'
   - name: 'getMergeBases(string, string, string, string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getMergeBases
     package: azure-devops-extension-api
@@ -2085,13 +2182,14 @@ methods:
       Find the merge bases of two commits, optionally across forks. If
       otherRepositoryId is not specified, the merge bases will only be
       calculated within the context of the local repositoryNameOrId.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getMergeBases(repositoryNameOrId: string, commitId: string,
         otherCommitId: string, project?: string, otherCollectionId?: string,
-        otherRepositoryId?: string)
+        otherRepositoryId?: string): Promise<GitCommitRef[]>
       parameters:
         - id: repositoryNameOrId
           type: string
@@ -2117,20 +2215,21 @@ methods:
           description: |
             The repository ID where otherCommitId lives.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitCommitRef"
           />[]&gt;
-        description: ''
   - name: 'getMergeRequest(string, string, number, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getMergeRequest
     package: azure-devops-extension-api
     summary: Get a specific merge operation's details.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getMergeRequest(project: string, repositoryNameOrId: string,
-        mergeOperationId: number, includeLinks?: boolean)
+        mergeOperationId: number, includeLinks?: boolean): Promise<GitMerge>
       parameters:
         - id: project
           type: string
@@ -2146,21 +2245,23 @@ methods:
           description: |
             True to include links
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitMerge" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitMerge" />&gt;
   - name: >-
       getPullRequest(string, number, string, number, number, number, boolean,
       boolean)
     uid: azure-devops-extension-api.GitRestClient.getPullRequest
     package: azure-devops-extension-api
     summary: Retrieve a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequest(repositoryId: string, pullRequestId: number,
         project?: string, maxCommentLength?: number, skip?: number, top?:
-        number, includeCommits?: boolean, includeWorkItemRefs?: boolean)
+        number, includeCommits?: boolean, includeWorkItemRefs?: boolean):
+        Promise<GitPullRequest>
       parameters:
         - id: repositoryId
           type: string
@@ -2191,18 +2292,21 @@ methods:
             If true, the pull request will be returned with the associated work
             item references.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequest"
           />&gt;
-        description: ''
   - name: 'getPullRequestById(number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestById
     package: azure-devops-extension-api
     summary: Retrieve a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getPullRequestById(pullRequestId: number, project?: string)'
+      content: >-
+        function getPullRequestById(pullRequestId: number, project?: string):
+        Promise<GitPullRequest>
       parameters:
         - id: pullRequestId
           type: number
@@ -2212,20 +2316,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequest"
           />&gt;
-        description: ''
   - name: 'getPullRequestCommits(string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestCommits
     package: azure-devops-extension-api
     summary: Get the commits for the specified pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestCommits(repositoryId: string, pullRequestId:
-        number, project?: string)
+        number, project?: string): Promise<GitCommitRef[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2238,20 +2343,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitCommitRef"
           />[]&gt;
-        description: ''
   - name: 'getPullRequestConflict(string, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestConflict
     package: azure-devops-extension-api
     summary: Retrieve one conflict for a pull request by ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestConflict(repositoryId: string, pullRequestId:
-        number, conflictId: number, project?: string)
+        number, conflictId: number, project?: string): Promise<GitConflict>
       parameters:
         - id: repositoryId
           type: string
@@ -2267,21 +2373,23 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitConflict" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitConflict" />&gt;
   - name: >-
       getPullRequestConflicts(string, number, string, number, number, boolean,
       boolean, boolean)
     uid: azure-devops-extension-api.GitRestClient.getPullRequestConflicts
     package: azure-devops-extension-api
     summary: Retrieve all conflicts for a pull request
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestConflicts(repositoryId: string, pullRequestId:
         number, project?: string, skip?: number, top?: number, includeObsolete?:
-        boolean, excludeResolved?: boolean, onlyResolved?: boolean)
+        boolean, excludeResolved?: boolean, onlyResolved?: boolean):
+        Promise<GitConflict[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2309,18 +2417,20 @@ methods:
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitConflict" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitConflict" />[]&gt;'
   - name: 'getPullRequestIteration(string, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestIteration
     package: azure-devops-extension-api
     summary: Get the specified iteration for a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestIteration(repositoryId: string, pullRequestId:
-        number, iterationId: number, project?: string)
+        number, iterationId: number, project?: string):
+        Promise<GitPullRequestIteration>
       parameters:
         - id: repositoryId
           type: string
@@ -2336,23 +2446,25 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.GitPullRequestIteration" />&gt;
-        description: ''
   - name: >-
       getPullRequestIterationChanges(string, number, number, string, number,
       number, number)
     uid: azure-devops-extension-api.GitRestClient.getPullRequestIterationChanges
     package: azure-devops-extension-api
     summary: Retrieve the changes made in a pull request between two iterations.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestIterationChanges(repositoryId: string,
         pullRequestId: number, iterationId: number, project?: string, top?:
-        number, skip?: number, compareTo?: number)
+        number, skip?: number, compareTo?: number):
+        Promise<GitPullRequestIterationChanges>
       parameters:
         - id: repositoryId
           type: string
@@ -2388,23 +2500,24 @@ methods:
             value is zero which indicates the comparison is made against the
             common commit between the source and target branches
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.GitPullRequestIterationChanges" />&gt;
-        description: ''
   - name: >-
       getPullRequestIterationCommits(string, number, number, string, number,
       number)
     uid: azure-devops-extension-api.GitRestClient.getPullRequestIterationCommits
     package: azure-devops-extension-api
     summary: Get the commits for the specified iteration of a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestIterationCommits(repositoryId: string,
         pullRequestId: number, iterationId: number, project?: string, top?:
-        number, skip?: number)
+        number, skip?: number): Promise<GitCommitRef[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2428,20 +2541,22 @@ methods:
           description: |
             Number of commits to skip.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitCommitRef"
           />[]&gt;
-        description: ''
   - name: 'getPullRequestIterations(string, number, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestIterations
     package: azure-devops-extension-api
     summary: Get the list of iterations for the specified pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestIterations(repositoryId: string, pullRequestId:
-        number, project?: string, includeCommits?: boolean)
+        number, project?: string, includeCommits?: boolean):
+        Promise<GitPullRequestIteration[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2458,23 +2573,24 @@ methods:
             If true, include the commits associated with each iteration in the
             response.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.GitPullRequestIteration" />[]&gt;
-        description: ''
   - name: 'getPullRequestIterationStatus(string, number, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestIterationStatus
     package: azure-devops-extension-api
     summary: >-
       Get the specific pull request iteration status by ID. The status ID is
       unique within the pull request across all iterations.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestIterationStatus(repositoryId: string,
         pullRequestId: number, iterationId: number, statusId: number, project?:
-        string)
+        string): Promise<GitPullRequestStatus>
       parameters:
         - id: repositoryId
           type: string
@@ -2493,20 +2609,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequestStatus"
           />&gt;
-        description: ''
   - name: 'getPullRequestIterationStatuses(string, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestIterationStatuses
     package: azure-devops-extension-api
     summary: Get all the statuses associated with a pull request iteration.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestIterationStatuses(repositoryId: string,
-        pullRequestId: number, iterationId: number, project?: string)
+        pullRequestId: number, iterationId: number, project?: string):
+        Promise<GitPullRequestStatus[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2522,20 +2640,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequestStatus"
           />[]&gt;
-        description: ''
   - name: 'getPullRequestLabel(string, number, string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestLabel
     package: azure-devops-extension-api
     summary: Retrieves a single label that has been assigned to a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestLabel(repositoryId: string, pullRequestId:
-        number, labelIdOrName: string, project?: string, projectId?: string)
+        number, labelIdOrName: string, project?: string, projectId?: string):
+        Promise<WebApiTagDefinition>
       parameters:
         - id: repositoryId
           type: string
@@ -2554,20 +2674,22 @@ methods:
           description: |
             Project ID or project name.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WebApiTagDefinition"
           />&gt;
-        description: ''
   - name: 'getPullRequestLabels(string, number, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestLabels
     package: azure-devops-extension-api
     summary: Get all the labels assigned to a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestLabels(repositoryId: string, pullRequestId:
-        number, project?: string, projectId?: string)
+        number, project?: string, projectId?: string):
+        Promise<WebApiTagDefinition[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2583,20 +2705,21 @@ methods:
           description: |
             Project ID or project name.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WebApiTagDefinition"
           />[]&gt;
-        description: ''
   - name: 'getPullRequestProperties(string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestProperties
     package: azure-devops-extension-api
     summary: Get external properties of the pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestProperties(repositoryId: string, pullRequestId:
-        number, project?: string)
+        number, project?: string): Promise<any>
       parameters:
         - id: repositoryId
           type: string
@@ -2609,8 +2732,8 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: 'getPullRequestQuery(GitPullRequestQuery, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestQuery
     package: azure-devops-extension-api
@@ -2621,12 +2744,13 @@ methods:
       have ever merged a particular commit.  The input is a list of queries
       which each contain a list of commits. For each commit that you search
       against, you will get back a dictionary of commit -\> pull requests.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestQuery(queries: GitPullRequestQuery, repositoryId:
-        string, project?: string)
+        string, project?: string): Promise<GitPullRequestQuery>
       parameters:
         - id: queries
           type: <xref uid="azure-devops-extension-api.GitPullRequestQuery" />
@@ -2639,20 +2763,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequestQuery"
           />&gt;
-        description: ''
   - name: 'getPullRequestReviewer(string, number, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestReviewer
     package: azure-devops-extension-api
     summary: Retrieve information about a particular reviewer on a pull request
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestReviewer(repositoryId: string, pullRequestId:
-        number, reviewerId: string, project?: string)
+        number, reviewerId: string, project?: string):
+        Promise<IdentityRefWithVote>
       parameters:
         - id: repositoryId
           type: string
@@ -2668,20 +2794,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.IdentityRefWithVote"
           />&gt;
-        description: ''
   - name: 'getPullRequestReviewers(string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestReviewers
     package: azure-devops-extension-api
     summary: Retrieve the reviewers for a pull request
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestReviewers(repositoryId: string, pullRequestId:
-        number, project?: string)
+        number, project?: string): Promise<IdentityRefWithVote[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2694,23 +2821,24 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.IdentityRefWithVote"
           />[]&gt;
-        description: ''
   - name: >-
       getPullRequests(string, GitPullRequestSearchCriteria, string, number,
       number, number)
     uid: azure-devops-extension-api.GitRestClient.getPullRequests
     package: azure-devops-extension-api
     summary: Retrieve all pull requests matching a specified criteria.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequests(repositoryId: string, searchCriteria:
         GitPullRequestSearchCriteria, project?: string, maxCommentLength?:
-        number, skip?: number, top?: number)
+        number, skip?: number, top?: number): Promise<GitPullRequest[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2736,23 +2864,24 @@ methods:
           description: |
             The number of pull requests to retrieve.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequest"
           />[]&gt;
-        description: ''
   - name: >-
       getPullRequestsByProject(string, GitPullRequestSearchCriteria, number,
       number, number)
     uid: azure-devops-extension-api.GitRestClient.getPullRequestsByProject
     package: azure-devops-extension-api
     summary: Retrieve all pull requests matching a specified criteria.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestsByProject(project: string, searchCriteria:
         GitPullRequestSearchCriteria, maxCommentLength?: number, skip?: number,
-        top?: number)
+        top?: number): Promise<GitPullRequest[]>
       parameters:
         - id: project
           type: string
@@ -2775,22 +2904,24 @@ methods:
           description: |
             The number of pull requests to retrieve.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequest"
           />[]&gt;
-        description: ''
   - name: 'getPullRequestStatus(string, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestStatus
     package: azure-devops-extension-api
     summary: >-
       Get the specific pull request status by ID. The status ID is unique within
       the pull request across all iterations.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestStatus(repositoryId: string, pullRequestId:
-        number, statusId: number, project?: string)
+        number, statusId: number, project?: string):
+        Promise<GitPullRequestStatus>
       parameters:
         - id: repositoryId
           type: string
@@ -2806,20 +2937,21 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequestStatus"
           />&gt;
-        description: ''
   - name: 'getPullRequestStatuses(string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestStatuses
     package: azure-devops-extension-api
     summary: Get all the statuses associated with a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestStatuses(repositoryId: string, pullRequestId:
-        number, project?: string)
+        number, project?: string): Promise<GitPullRequestStatus[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2832,21 +2964,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequestStatus"
           />[]&gt;
-        description: ''
   - name: 'getPullRequestThread(string, number, number, string, number, number)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestThread
     package: azure-devops-extension-api
     summary: Retrieve a thread in a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestThread(repositoryId: string, pullRequestId:
         number, threadId: number, project?: string, iteration?: number,
-        baseIteration?: number)
+        baseIteration?: number): Promise<GitPullRequestCommentThread>
       parameters:
         - id: repositoryId
           type: string
@@ -2871,20 +3004,21 @@ methods:
             If specified, thread position will be tracked using this iteration
             as the left side of the diff.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.GitPullRequestCommentThread" />&gt;
-        description: ''
   - name: 'getPullRequestWorkItemRefs(string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getPullRequestWorkItemRefs
     package: azure-devops-extension-api
     summary: Retrieve a list of work items associated with a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPullRequestWorkItemRefs(repositoryId: string, pullRequestId:
-        number, project?: string)
+        number, project?: string): Promise<ResourceRef[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2897,18 +3031,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ResourceRef" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ResourceRef" />[]&gt;'
   - name: 'getPush(string, number, string, number, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getPush
     package: azure-devops-extension-api
     summary: Retrieves a particular push.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPush(repositoryId: string, pushId: number, project?: string,
-        includeCommits?: number, includeRefUpdates?: boolean)
+        includeCommits?: number, includeRefUpdates?: boolean): Promise<GitPush>
       parameters:
         - id: repositoryId
           type: string
@@ -2927,18 +3062,20 @@ methods:
           description: |
             If true, include the list of refs that were updated by the push.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitPush" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitPush" />&gt;
   - name: 'getPushCommits(string, number, string, number, number, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getPushCommits
     package: azure-devops-extension-api
     summary: Retrieve a list of commits associated with a particular push.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPushCommits(repositoryId: string, pushId: number, project?:
-        string, top?: number, skip?: number, includeLinks?: boolean)
+        string, top?: number, skip?: number, includeLinks?: boolean):
+        Promise<GitCommitRef[]>
       parameters:
         - id: repositoryId
           type: string
@@ -2963,20 +3100,22 @@ methods:
             Set to false to avoid including REST Url links for resources.
             Defaults to true.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitCommitRef"
           />[]&gt;
-        description: ''
   - name: 'getPushes(string, string, number, number, GitPushSearchCriteria)'
     uid: azure-devops-extension-api.GitRestClient.getPushes
     package: azure-devops-extension-api
     summary: Retrieves pushes associated with the specified repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getPushes(repositoryId: string, project?: string, skip?:
-        number, top?: number, searchCriteria?: GitPushSearchCriteria)
+        number, top?: number, searchCriteria?: GitPushSearchCriteria):
+        Promise<GitPush[]>
       parameters:
         - id: repositoryId
           type: string
@@ -3001,34 +3140,40 @@ methods:
             updated by the push. includeLinks: Whether to include the _links
             field on the shallow references.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitPush" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitPush" />[]&gt;'
   - name: getRecycleBinRepositories(string)
     uid: azure-devops-extension-api.GitRestClient.getRecycleBinRepositories
     package: azure-devops-extension-api
     summary: Retrieve soft-deleted git repositories from the recycle bin.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getRecycleBinRepositories(project: string)'
+      content: >-
+        function getRecycleBinRepositories(project: string):
+        Promise<GitDeletedRepository[]>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitDeletedRepository"
           />[]&gt;
-        description: ''
   - name: 'getRefFavorite(string, number)'
     uid: azure-devops-extension-api.GitRestClient.getRefFavorite
     package: azure-devops-extension-api
     summary: Gets the refs favorite for a favorite Id.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getRefFavorite(project: string, favoriteId: number)'
+      content: >-
+        function getRefFavorite(project: string, favoriteId: number):
+        Promise<GitRefFavorite>
       parameters:
         - id: project
           type: string
@@ -3038,20 +3183,21 @@ methods:
           description: |
             The Id of the requested ref favorite.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitRefFavorite"
           />&gt;
-        description: ''
   - name: 'getRefFavorites(string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getRefFavorites
     package: azure-devops-extension-api
     summary: Gets the refs favorites for a repo and an identity.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getRefFavorites(project: string, repositoryId?: string,
-        identityId?: string)
+        identityId?: string): Promise<GitRefFavorite[]>
       parameters:
         - id: project
           type: string
@@ -3065,16 +3211,17 @@ methods:
             The id of the identity whose favorites are to be retrieved. If null,
             the requesting identity is used.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitRefFavorite"
           />[]&gt;
-        description: ''
   - name: >-
       getRefs(string, string, string, boolean, boolean, boolean, boolean,
       boolean, string)
     uid: azure-devops-extension-api.GitRestClient.getRefs
     package: azure-devops-extension-api
     summary: Queries the provided repository for its refs and returns them.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -3082,7 +3229,7 @@ methods:
         function getRefs(repositoryId: string, project?: string, filter?:
         string, includeLinks?: boolean, includeStatuses?: boolean,
         includeMyBranches?: boolean, latestStatusesOnly?: boolean, peelTags?:
-        boolean, filterContains?: string)
+        boolean, filterContains?: string): Promise<GitRef[]>
       parameters:
         - id: repositoryId
           type: string
@@ -3125,18 +3272,20 @@ methods:
           description: |
             [optional] A filter to apply to the refs (contains).
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitRef" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitRef" />[]&gt;'
   - name: 'getRepositories(string, boolean, boolean, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getRepositories
     package: azure-devops-extension-api
     summary: Retrieve git repositories.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getRepositories(project?: string, includeLinks?: boolean,
-        includeAllUrls?: boolean, includeHidden?: boolean)
+        includeAllUrls?: boolean, includeHidden?: boolean):
+        Promise<GitRepository[]>
       parameters:
         - id: project
           type: string
@@ -3157,18 +3306,21 @@ methods:
             [optional] True to include hidden repositories. The default value is
             false.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitRepository"
           />[]&gt;
-        description: ''
   - name: 'getRepository(string, string)'
     uid: azure-devops-extension-api.GitRestClient.getRepository
     package: azure-devops-extension-api
     summary: Retrieve a git repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getRepository(repositoryId: string, project?: string)'
+      content: >-
+        function getRepository(repositoryId: string, project?: string):
+        Promise<GitRepository>
       parameters:
         - id: repositoryId
           type: string
@@ -3178,18 +3330,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
   - name: 'getRepositoryWithParent(string, boolean, string)'
     uid: azure-devops-extension-api.GitRestClient.getRepositoryWithParent
     package: azure-devops-extension-api
     summary: Retrieve a git repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getRepositoryWithParent(repositoryId: string, includeParent:
-        boolean, project?: string)
+        boolean, project?: string): Promise<GitRepository>
       parameters:
         - id: repositoryId
           type: string
@@ -3204,18 +3357,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
   - name: 'getRevert(string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.getRevert
     package: azure-devops-extension-api
     summary: Retrieve information about a revert operation by revert Id.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getRevert(project: string, revertId: number, repositoryId:
-        string)
+        string): Promise<GitRevert>
       parameters:
         - id: project
           type: string
@@ -3228,18 +3382,19 @@ methods:
           description: |
             ID of the repository.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRevert" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRevert" />&gt;
   - name: 'getRevertForRefName(string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.getRevertForRefName
     package: azure-devops-extension-api
     summary: Retrieve information about a revert operation for a specific branch.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getRevertForRefName(project: string, repositoryId: string,
-        refName: string)
+        refName: string): Promise<GitRevert>
       parameters:
         - id: project
           type: string
@@ -3253,18 +3408,20 @@ methods:
             The GitAsyncRefOperationParameters generatedRefName used for the
             revert operation.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRevert" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRevert" />&gt;
   - name: 'getStatuses(string, string, string, number, number, boolean)'
     uid: azure-devops-extension-api.GitRestClient.getStatuses
     package: azure-devops-extension-api
     summary: Get statuses associated with the Git commit.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getStatuses(commitId: string, repositoryId: string, project?:
-        string, top?: number, skip?: number, latestOnly?: boolean)
+        string, top?: number, skip?: number, latestOnly?: boolean):
+        Promise<GitStatus[]>
       parameters:
         - id: commitId
           type: string
@@ -3289,18 +3446,21 @@ methods:
             The flag indicates whether to get only latest statuses grouped by
             \`Context.Name\` and \`Context.Genre\`.
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitStatus" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.GitStatus" />[]&gt;'
   - name: 'getSuggestions(string, string)'
     uid: azure-devops-extension-api.GitRestClient.getSuggestions
     package: azure-devops-extension-api
     summary: >-
       Retrieve a pull request suggestion for a particular repository or team
       project.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getSuggestions(repositoryId: string, project?: string)'
+      content: >-
+        function getSuggestions(repositoryId: string, project?: string):
+        Promise<GitSuggestion[]>
       parameters:
         - id: repositoryId
           type: string
@@ -3310,20 +3470,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitSuggestion"
           />[]&gt;
-        description: ''
   - name: 'getThreads(string, number, string, number, number)'
     uid: azure-devops-extension-api.GitRestClient.getThreads
     package: azure-devops-extension-api
     summary: Retrieve all threads in a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getThreads(repositoryId: string, pullRequestId: number,
-        project?: string, iteration?: number, baseIteration?: number)
+        project?: string, iteration?: number, baseIteration?: number):
+        Promise<GitPullRequestCommentThread[]>
       parameters:
         - id: repositoryId
           type: string
@@ -3345,22 +3507,24 @@ methods:
             If specified, thread positions will be tracked using this iteration
             as the left side of the diff.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.GitPullRequestCommentThread" />[]&gt;
-        description: ''
   - name: 'getTree(string, string, string, string, boolean, string)'
     uid: azure-devops-extension-api.GitRestClient.getTree
     package: azure-devops-extension-api
     summary: >-
       The Tree endpoint returns the collection of objects underneath the
       specified tree. Trees are folders in a Git repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTree(repositoryId: string, sha1: string, project?: string,
-        projectId?: string, recursive?: boolean, fileName?: string)
+        projectId?: string, recursive?: boolean, fileName?: string):
+        Promise<GitTreeRef>
       parameters:
         - id: repositoryId
           type: string
@@ -3384,20 +3548,22 @@ methods:
           description: |
             Name to use if a .zip file is returned. Default is the object ID.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitTreeRef" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitTreeRef" />&gt;
   - name: 'getTreeZip(string, string, string, string, boolean, string)'
     uid: azure-devops-extension-api.GitRestClient.getTreeZip
     package: azure-devops-extension-api
     summary: >-
       The Tree endpoint returns the collection of objects underneath the
       specified tree. Trees are folders in a Git repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTreeZip(repositoryId: string, sha1: string, project?:
-        string, projectId?: string, recursive?: boolean, fileName?: string)
+        string, projectId?: string, recursive?: boolean, fileName?: string):
+        Promise<ArrayBuffer>
       parameters:
         - id: repositoryId
           type: string
@@ -3421,18 +3587,19 @@ methods:
           description: |
             Name to use if a .zip file is returned. Default is the object ID.
       return:
-        type: Promise&lt;ArrayBuffer&gt;
         description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: 'queryImportRequests(string, string, boolean)'
     uid: azure-devops-extension-api.GitRestClient.queryImportRequests
     package: azure-devops-extension-api
     summary: Retrieve import requests for a repository.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queryImportRequests(project: string, repositoryId: string,
-        includeAbandoned?: boolean)
+        includeAbandoned?: boolean): Promise<GitImportRequest[]>
       parameters:
         - id: project
           type: string
@@ -3445,10 +3612,10 @@ methods:
           description: |
             True to include abandoned import requests in the results.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitImportRequest"
           />[]&gt;
-        description: ''
   - name: >-
       restoreRepositoryFromRecycleBin(GitRecycleBinRepositoryDetails, string,
       string)
@@ -3458,12 +3625,14 @@ methods:
       Recover a soft-deleted Git repository. Recently deleted repositories go
       into a soft-delete state for a period of time before they are hard deleted
       and become unrecoverable.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function restoreRepositoryFromRecycleBin(repositoryDetails:
-        GitRecycleBinRepositoryDetails, project: string, repositoryId: string)
+        GitRecycleBinRepositoryDetails, project: string, repositoryId: string):
+        Promise<GitRepository>
       parameters:
         - id: repositoryDetails
           type: >-
@@ -3478,20 +3647,22 @@ methods:
           description: |
             The ID of the repository.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
   - name: 'sharePullRequest(ShareNotificationContext, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.sharePullRequest
     package: azure-devops-extension-api
     summary: >-
       Sends an e-mail notification about a specific pull request to a set of
       recipients
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function sharePullRequest(userMessage: ShareNotificationContext,
-        repositoryId: string, pullRequestId: number, project?: string)
+        repositoryId: string, pullRequestId: number, project?: string):
+        Promise<void>
       parameters:
         - id: userMessage
           type: <xref uid="azure-devops-extension-api.ShareNotificationContext" />
@@ -3507,19 +3678,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updateComment(Comment, string, number, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.updateComment
     package: azure-devops-extension-api
     summary: Update a comment associated with a specific thread in a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateComment(comment: Comment, repositoryId: string,
         pullRequestId: number, threadId: number, commentId: number, project?:
-        string)
+        string): Promise<Comment>
       parameters:
         - id: comment
           type: <xref uid="azure-devops-extension-api.Comment" />
@@ -3543,18 +3715,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Comment" />&gt;
   - name: 'updateImportRequest(GitImportRequest, string, string, number)'
     uid: azure-devops-extension-api.GitRestClient.updateImportRequest
     package: azure-devops-extension-api
     summary: Retry or abandon a failed import request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateImportRequest(importRequestToUpdate: GitImportRequest,
-        project: string, repositoryId: string, importRequestId: number)
+        project: string, repositoryId: string, importRequestId: number):
+        Promise<GitImportRequest>
       parameters:
         - id: importRequestToUpdate
           type: <xref uid="azure-devops-extension-api.GitImportRequest" />
@@ -3572,20 +3746,22 @@ methods:
           description: |
             The unique identifier for the import request to update.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitImportRequest"
           />&gt;
-        description: ''
   - name: 'updatePullRequest(GitPullRequest, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.updatePullRequest
     package: azure-devops-extension-api
     summary: Update a pull request
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePullRequest(gitPullRequestToUpdate: GitPullRequest,
-        repositoryId: string, pullRequestId: number, project?: string)
+        repositoryId: string, pullRequestId: number, project?: string):
+        Promise<GitPullRequest>
       parameters:
         - id: gitPullRequestToUpdate
           type: <xref uid="azure-devops-extension-api.GitPullRequest" />
@@ -3601,20 +3777,22 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitPullRequest"
           />&gt;
-        description: ''
   - name: 'updatePullRequestConflict(GitConflict, string, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.updatePullRequestConflict
     package: azure-devops-extension-api
     summary: Update merge conflict resolution
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePullRequestConflict(conflict: GitConflict, repositoryId:
-        string, pullRequestId: number, conflictId: number, project?: string)
+        string, pullRequestId: number, conflictId: number, project?: string):
+        Promise<GitConflict>
       parameters:
         - id: conflict
           type: <xref uid="azure-devops-extension-api.GitConflict" />
@@ -3633,18 +3811,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitConflict" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitConflict" />&gt;
   - name: 'updatePullRequestConflicts(GitConflict[], string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.updatePullRequestConflicts
     package: azure-devops-extension-api
     summary: Update multiple merge conflict resolutions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePullRequestConflicts(conflictUpdates: GitConflict[],
-        repositoryId: string, pullRequestId: number, project?: string)
+        repositoryId: string, pullRequestId: number, project?: string):
+        Promise<GitConflictUpdateResult[]>
       parameters:
         - id: conflictUpdates
           type: '<xref uid="azure-devops-extension-api.GitConflict" />[]'
@@ -3660,10 +3840,10 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.GitConflictUpdateResult" />[]&gt;
-        description: ''
   - name: >-
       updatePullRequestIterationStatuses(JsonPatchDocument, string, number,
       number, string)
@@ -3673,13 +3853,14 @@ methods:
     summary: >-
       Update pull request iteration statuses collection. The only supported
       operation type is \`remove\`.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePullRequestIterationStatuses(patchDocument:
         JsonPatchDocument, repositoryId: string, pullRequestId: number,
-        iterationId: number, project?: string)
+        iterationId: number, project?: string): Promise<void>
       parameters:
         - id: patchDocument
           type: <xref uid="azure-devops-extension-api.JsonPatchDocument" />
@@ -3700,8 +3881,8 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updatePullRequestProperties(JsonPatchDocument, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.updatePullRequestProperties
     package: azure-devops-extension-api
@@ -3713,12 +3894,14 @@ methods:
       does not exist, the property will be added to the collection. For
       \`remove\` operation, the path cannot be empty. If the path does not
       exist, no action will be performed.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePullRequestProperties(patchDocument: JsonPatchDocument,
-        repositoryId: string, pullRequestId: number, project?: string)
+        repositoryId: string, pullRequestId: number, project?: string):
+        Promise<any>
       parameters:
         - id: patchDocument
           type: <xref uid="azure-devops-extension-api.JsonPatchDocument" />
@@ -3734,21 +3917,22 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;any&gt;
         description: ''
+        type: Promise&lt;any&gt;
   - name: >-
       updatePullRequestReviewer(IdentityRefWithVote, string, number, string,
       string)
     uid: azure-devops-extension-api.GitRestClient.updatePullRequestReviewer
     package: azure-devops-extension-api
     summary: 'Edit a reviewer entry. These fields are patchable: isFlagged'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePullRequestReviewer(reviewer: IdentityRefWithVote,
         repositoryId: string, pullRequestId: number, reviewerId: string,
-        project?: string)
+        project?: string): Promise<IdentityRefWithVote>
       parameters:
         - id: reviewer
           type: <xref uid="azure-devops-extension-api.IdentityRefWithVote" />
@@ -3769,10 +3953,10 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.IdentityRefWithVote"
           />&gt;
-        description: ''
   - name: 'updatePullRequestReviewers(IdentityRefWithVote[], string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.updatePullRequestReviewers
     package: azure-devops-extension-api
@@ -3780,12 +3964,14 @@ methods:
       Reset the votes of multiple reviewers on a pull request.  NOTE: This
       endpoint only supports updating votes, but does not support updating
       required reviewers (use policy) or display names.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePullRequestReviewers(patchVotes: IdentityRefWithVote[],
-        repositoryId: string, pullRequestId: number, project?: string)
+        repositoryId: string, pullRequestId: number, project?: string):
+        Promise<void>
       parameters:
         - id: patchVotes
           type: '<xref uid="azure-devops-extension-api.IdentityRefWithVote" />[]'
@@ -3801,20 +3987,22 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updatePullRequestStatuses(JsonPatchDocument, string, number, string)'
     uid: azure-devops-extension-api.GitRestClient.updatePullRequestStatuses
     package: azure-devops-extension-api
     summary: >-
       Update pull request statuses collection. The only supported operation type
       is \`remove\`.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePullRequestStatuses(patchDocument: JsonPatchDocument,
-        repositoryId: string, pullRequestId: number, project?: string)
+        repositoryId: string, pullRequestId: number, project?: string):
+        Promise<void>
       parameters:
         - id: patchDocument
           type: <xref uid="azure-devops-extension-api.JsonPatchDocument" />
@@ -3832,18 +4020,19 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'updateRef(GitRefUpdate, string, string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.updateRef
     package: azure-devops-extension-api
     summary: Lock or Unlock a branch.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateRef(newRefInfo: GitRefUpdate, repositoryId: string,
-        filter: string, project?: string, projectId?: string)
+        filter: string, project?: string, projectId?: string): Promise<GitRef>
       parameters:
         - id: newRefInfo
           type: <xref uid="azure-devops-extension-api.GitRefUpdate" />
@@ -3863,18 +4052,19 @@ methods:
             ID or name of the team project. Optional if specifying an ID for
             repository.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRef" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRef" />&gt;
   - name: 'updateRefs(GitRefUpdate[], string, string, string)'
     uid: azure-devops-extension-api.GitRestClient.updateRefs
     package: azure-devops-extension-api
     summary: 'Creating, updating, or deleting refs(branches).'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateRefs(refUpdates: GitRefUpdate[], repositoryId: string,
-        project?: string, projectId?: string)
+        project?: string, projectId?: string): Promise<GitRefUpdateResult[]>
       parameters:
         - id: refUpdates
           type: '<xref uid="azure-devops-extension-api.GitRefUpdate" />[]'
@@ -3891,22 +4081,23 @@ methods:
             ID or name of the team project. Optional if specifying an ID for
             repository.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitRefUpdateResult"
           />[]&gt;
-        description: ''
   - name: 'updateRepository(GitRepository, string, string)'
     uid: azure-devops-extension-api.GitRestClient.updateRepository
     package: azure-devops-extension-api
     summary: >-
       Updates the Git repository with either a new repo name or a new default
       branch.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateRepository(newRepositoryInfo: GitRepository,
-        repositoryId: string, project?: string)
+        repositoryId: string, project?: string): Promise<GitRepository>
       parameters:
         - id: newRepositoryInfo
           type: <xref uid="azure-devops-extension-api.GitRepository" />
@@ -3919,19 +4110,20 @@ methods:
           description: |
             Project ID or project name
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
   - name: 'updateThread(GitPullRequestCommentThread, string, number, number, string)'
     uid: azure-devops-extension-api.GitRestClient.updateThread
     package: azure-devops-extension-api
     summary: Update a thread in a pull request.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateThread(commentThread: GitPullRequestCommentThread,
         repositoryId: string, pullRequestId: number, threadId: number, project?:
-        string)
+        string): Promise<GitPullRequestCommentThread>
       parameters:
         - id: commentThread
           type: >-
@@ -3952,8 +4144,8 @@ methods:
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.GitPullRequestCommentThread" />&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

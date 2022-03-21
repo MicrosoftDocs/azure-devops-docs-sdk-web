@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.TaskExecution
 package: azure-devops-extension-api
 summary: ''
 fullName: TaskExecution
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -16,13 +17,14 @@ properties:
       is simply a meta task to call another task. This is useful for tasks that
       call utility tasks like powershell and commandline
     fullName: execTask
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'execTask: TaskReference'
       return:
-        type: <xref uid="azure-devops-extension-api.TaskReference" />
         description: ''
+        type: <xref uid="azure-devops-extension-api.TaskReference" />
   - name: platformInstructions
     uid: azure-devops-extension-api.TaskExecution.platformInstructions
     package: azure-devops-extension-api
@@ -37,10 +39,11 @@ properties:
       jar: "powershelltask.tasks.automation.teamfoundation.microsoft.com", \}
       node: \{ script: "powershellhost.js", \}
     fullName: platformInstructions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'platformInstructions: [key: string]: function'
       return:
-        type: '[key: string]\: function'
         description: ''
+        type: '[key: string]\: function'

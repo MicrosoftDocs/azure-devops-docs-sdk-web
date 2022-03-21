@@ -6,6 +6,7 @@ summary: >-
   Class that represents a Uri and allows parsing/getting and setting of
   individual parts
 fullName: Uri
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -14,6 +15,7 @@ constructors:
     uid: azure-devops-extension-api.Uri.constructor
     package: azure-devops-extension-api
     summary: Create a new Uri.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -32,37 +34,40 @@ properties:
     package: azure-devops-extension-api
     summary: Set the absolute uri string for this Uri. Replaces all existing values
     fullName: absoluteUri
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'absoluteUri: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: hashString
     uid: azure-devops-extension-api.Uri.hashString
     package: azure-devops-extension-api
     summary: The hash string of the uri
     fullName: hashString
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'hashString: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: host
     uid: azure-devops-extension-api.Uri.host
     package: azure-devops-extension-api
     summary: The uri hostname (does not include port or scheme)
     fullName: host
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'host: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: noSchemeSeparator
     uid: azure-devops-extension-api.Uri.noSchemeSeparator
     package: azure-devops-extension-api
@@ -70,25 +75,27 @@ properties:
       If true, do not emit the "//" separator after the scheme:
       Set to true for schemes like mailto (e.g. mailto:foo@bar)
     fullName: noSchemeSeparator
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'noSchemeSeparator: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: path
     uid: azure-devops-extension-api.Uri.path
     package: azure-devops-extension-api
     summary: The relative path of the uri
     fullName: path
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'path: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: port
     uid: azure-devops-extension-api.Uri.port
     package: azure-devops-extension-api
@@ -96,54 +103,59 @@ properties:
       The port number of the uri as supplied in the url. 0 if left out in the
       url (e.g. the default port for the scheme).
     fullName: port
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'port: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: queryParameters
     uid: azure-devops-extension-api.Uri.queryParameters
     package: azure-devops-extension-api
     summary: The array of query parameters in the uri
     fullName: queryParameters
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'queryParameters: IQueryParameter[]'
       return:
-        type: '<xref uid="azure-devops-extension-api.IQueryParameter" />[]'
         description: ''
+        type: '<xref uid="azure-devops-extension-api.IQueryParameter" />[]'
   - name: queryString
     uid: azure-devops-extension-api.Uri.queryString
     package: azure-devops-extension-api
     summary: Set the query string for this Uri. Replaces existing value
     fullName: queryString
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'queryString: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: scheme
     uid: azure-devops-extension-api.Uri.scheme
     package: azure-devops-extension-api
     summary: The uri scheme such as http or https
     fullName: scheme
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'scheme: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'addQueryParam(string, string | null, boolean)'
     uid: azure-devops-extension-api.Uri.addQueryParam
     package: azure-devops-extension-api
     summary: Adds a query string parameter to the current uri
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -165,6 +177,7 @@ methods:
     uid: azure-devops-extension-api.Uri.addQueryParams
     package: azure-devops-extension-api
     summary: Adds query string parameters to the current uri
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -190,33 +203,36 @@ methods:
     summary: >-
       Gets the effective port number, returning the default port number if
       omitted for the given scheme.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getEffectivePort()
+      content: 'function getEffectivePort(): number'
       return:
-        type: number
         description: ''
+        type: number
   - name: getQueryParam(string)
     uid: azure-devops-extension-api.Uri.getQueryParam
     package: azure-devops-extension-api
     summary: Get the value of the query parameter with the given key
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getQueryParam(name: string)'
+      content: 'function getQueryParam(name: string): string | null | undefined'
       parameters:
         - id: name
           type: string
           description: |
             Query parameter name
       return:
-        type: string | null | undefined
         description: ''
+        type: string | null | undefined
   - name: removeQueryParam(string)
     uid: azure-devops-extension-api.Uri.removeQueryParam
     package: azure-devops-extension-api
     summary: Removes a query string parameter
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.OperationsRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: OperationsRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.OperationsRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -25,10 +27,13 @@ methods:
     uid: azure-devops-extension-api.OperationsRestClient.getOperation
     package: azure-devops-extension-api
     summary: Gets an operation from the the operationId using the given pluginId.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getOperation(operationId: string, pluginId?: string)'
+      content: >-
+        function getOperation(operationId: string, pluginId?: string):
+        Promise<Operation>
       parameters:
         - id: operationId
           type: string
@@ -38,6 +43,6 @@ methods:
           description: |
             The ID for the plugin.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Operation" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Operation" />&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

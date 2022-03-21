@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.ProjectAnalysisRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: ProjectAnalysisRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.ProjectAnalysisRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,13 +28,14 @@ properties:
     package: azure-devops-extension-api
     summary: ''
     fullName: RESOURCE_AREA_ID
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: >-
       getGitRepositoriesActivityMetrics(string, Date, AggregationType, number,
@@ -43,12 +46,14 @@ methods:
     summary: >-
       Retrieves git activity metrics for repositories matching a specified
       criteria.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getGitRepositoriesActivityMetrics(project: string, fromDate:
-        Date, aggregationType: AggregationType, skip: number, top: number)
+        Date, aggregationType: AggregationType, skip: number, top: number):
+        Promise<RepositoryActivityMetrics[]>
       parameters:
         - id: project
           type: string
@@ -68,21 +73,22 @@ methods:
             The number of repositories for which activity metrics are to be
             retrieved.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.RepositoryActivityMetrics" />[]&gt;
-        description: ''
   - name: 'getProjectActivityMetrics(string, Date, AggregationType)'
     uid: >-
       azure-devops-extension-api.ProjectAnalysisRestClient.getProjectActivityMetrics
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getProjectActivityMetrics(project: string, fromDate: Date,
-        aggregationType: AggregationType)
+        aggregationType: AggregationType): Promise<ProjectActivityMetrics>
       parameters:
         - id: project
           type: string
@@ -95,40 +101,45 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ProjectActivityMetrics" />&gt;
-        description: ''
   - name: getProjectLanguageAnalytics(string)
     uid: >-
       azure-devops-extension-api.ProjectAnalysisRestClient.getProjectLanguageAnalytics
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getProjectLanguageAnalytics(project: string)'
+      content: >-
+        function getProjectLanguageAnalytics(project: string):
+        Promise<ProjectLanguageAnalytics>
       parameters:
         - id: project
           type: string
           description: |
             Project ID or project name
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ProjectLanguageAnalytics" />&gt;
-        description: ''
   - name: 'getRepositoryActivityMetrics(string, string, Date, AggregationType)'
     uid: >-
       azure-devops-extension-api.ProjectAnalysisRestClient.getRepositoryActivityMetrics
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getRepositoryActivityMetrics(project: string, repositoryId:
-        string, fromDate: Date, aggregationType: AggregationType)
+        string, fromDate: Date, aggregationType: AggregationType):
+        Promise<RepositoryActivityMetrics>
       parameters:
         - id: project
           type: string
@@ -144,8 +155,8 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.RepositoryActivityMetrics" />&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

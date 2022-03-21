@@ -6,6 +6,7 @@ summary: >-
   Interface for a class that can retrieve authorization tokens to be used in
   fetch requests.
 fullName: IAuthorizationTokenProvider
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -15,10 +16,11 @@ methods:
       azure-devops-extension-api.IAuthorizationTokenProvider.getAuthorizationHeader
     package: azure-devops-extension-api
     summary: Gets the authorization header to use in a fetch request
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAuthorizationHeader(forceRefresh?: boolean)'
+      content: 'function getAuthorizationHeader(forceRefresh?: boolean): Promise<string>'
       parameters:
         - id: forceRefresh
           type: boolean
@@ -26,5 +28,5 @@ methods:
             If true, indicates that we should get a new token, if applicable for
             current provider.
       return:
-        type: Promise&lt;string&gt;
         description: the value to use for the Authorization header in a request.
+        type: Promise&lt;string&gt;

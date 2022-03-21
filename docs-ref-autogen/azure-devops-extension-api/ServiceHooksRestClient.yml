@@ -4,6 +4,7 @@ uid: azure-devops-extension-api.ServiceHooksRestClient
 package: azure-devops-extension-api
 summary: ''
 fullName: ServiceHooksRestClient
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-devops-extension-api.ServiceHooksRestClient.constructor
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -25,48 +27,55 @@ methods:
     uid: azure-devops-extension-api.ServiceHooksRestClient.createSubscription
     package: azure-devops-extension-api
     summary: Create a subscription.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createSubscription(subscription: Subscription)'
+      content: >-
+        function createSubscription(subscription: Subscription):
+        Promise<Subscription>
       parameters:
         - id: subscription
           type: <xref uid="azure-devops-extension-api.Subscription" />
           description: |
             Subscription to be created.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Subscription" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Subscription" />&gt;
   - name: createSubscriptionsQuery(SubscriptionsQuery)
     uid: azure-devops-extension-api.ServiceHooksRestClient.createSubscriptionsQuery
     package: azure-devops-extension-api
     summary: Query for service hook subscriptions.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createSubscriptionsQuery(query: SubscriptionsQuery)'
+      content: >-
+        function createSubscriptionsQuery(query: SubscriptionsQuery):
+        Promise<SubscriptionsQuery>
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.SubscriptionsQuery" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.SubscriptionsQuery"
           />&gt;
-        description: ''
   - name: 'createTestNotification(Notification, boolean)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.createTestNotification
     package: azure-devops-extension-api
     summary: >-
       Sends a test notification. This is useful for verifying the configuration
       of an updated or new service hooks subscription.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createTestNotification(testNotification: Notification,
-        useRealData?: boolean)
+        useRealData?: boolean): Promise<Notification>
       parameters:
         - id: testNotification
           type: <xref uid="azure-devops-extension-api.Notification" />
@@ -76,34 +85,38 @@ methods:
           description: |
             Only allow testing with real data in existing subscriptions.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Notification" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Notification" />&gt;
   - name: deleteSubscription(string)
     uid: azure-devops-extension-api.ServiceHooksRestClient.deleteSubscription
     package: azure-devops-extension-api
     summary: Delete a specific service hooks subscription.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deleteSubscription(subscriptionId: string)'
+      content: 'function deleteSubscription(subscriptionId: string): Promise<void>'
       parameters:
         - id: subscriptionId
           type: string
           description: |
             ID for a subscription.
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: 'getConsumer(string, string)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.getConsumer
     package: azure-devops-extension-api
     summary: >-
       Get a specific consumer service. Optionally filter out consumer actions
       that do not support any event types for the specified publisher.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getConsumer(consumerId: string, publisherId?: string)'
+      content: >-
+        function getConsumer(consumerId: string, publisherId?: string):
+        Promise<Consumer>
       parameters:
         - id: consumerId
           type: string
@@ -113,18 +126,19 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Consumer" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Consumer" />&gt;
   - name: 'getConsumerAction(string, string, string)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.getConsumerAction
     package: azure-devops-extension-api
     summary: Get details about a specific consumer action.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getConsumerAction(consumerId: string, consumerActionId: string,
-        publisherId?: string)
+        publisherId?: string): Promise<ConsumerAction>
       parameters:
         - id: consumerId
           type: string
@@ -137,18 +151,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ConsumerAction"
           />&gt;
-        description: ''
   - name: 'getEventType(string, string)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.getEventType
     package: azure-devops-extension-api
     summary: Get a specific event type.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getEventType(publisherId: string, eventTypeId: string)'
+      content: >-
+        function getEventType(publisherId: string, eventTypeId: string):
+        Promise<EventTypeDescriptor>
       parameters:
         - id: publisherId
           type: string
@@ -158,18 +175,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.EventTypeDescriptor"
           />&gt;
-        description: ''
   - name: 'getNotification(string, number)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.getNotification
     package: azure-devops-extension-api
     summary: Get a specific notification for a subscription.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getNotification(subscriptionId: string, notificationId: number)'
+      content: >-
+        function getNotification(subscriptionId: string, notificationId:
+        number): Promise<Notification>
       parameters:
         - id: subscriptionId
           type: string
@@ -179,8 +199,8 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Notification" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Notification" />&gt;
   - name: 'getNotifications(string, number, NotificationStatus, NotificationResult)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.getNotifications
     package: azure-devops-extension-api
@@ -188,12 +208,14 @@ methods:
       Get a list of notifications for a specific subscription. A notification
       includes details about the event, the request to and the response from the
       consumer service.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getNotifications(subscriptionId: string, maxResults?: number,
-        status?: NotificationStatus, result?: NotificationResult)
+        status?: NotificationStatus, result?: NotificationResult):
+        Promise<Notification[]>
       parameters:
         - id: subscriptionId
           type: string
@@ -209,69 +231,77 @@ methods:
           description: |
             Get only notifications with this result type.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.Notification"
           />[]&gt;
-        description: ''
   - name: getPublisher(string)
     uid: azure-devops-extension-api.ServiceHooksRestClient.getPublisher
     package: azure-devops-extension-api
     summary: Get a specific service hooks publisher.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getPublisher(publisherId: string)'
+      content: 'function getPublisher(publisherId: string): Promise<Publisher>'
       parameters:
         - id: publisherId
           type: string
           description: |
             ID for a publisher.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Publisher" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Publisher" />&gt;
   - name: getSubscription(string)
     uid: azure-devops-extension-api.ServiceHooksRestClient.getSubscription
     package: azure-devops-extension-api
     summary: Get a specific service hooks subscription.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getSubscription(subscriptionId: string)'
+      content: 'function getSubscription(subscriptionId: string): Promise<Subscription>'
       parameters:
         - id: subscriptionId
           type: string
           description: |
             ID for a subscription.
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Subscription" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Subscription" />&gt;
   - name: getSubscriptionDiagnostics(string)
     uid: >-
       azure-devops-extension-api.ServiceHooksRestClient.getSubscriptionDiagnostics
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getSubscriptionDiagnostics(subscriptionId: string)'
+      content: >-
+        function getSubscriptionDiagnostics(subscriptionId: string):
+        Promise<SubscriptionDiagnostics>
       parameters:
         - id: subscriptionId
           type: string
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.SubscriptionDiagnostics" />&gt;
-        description: ''
   - name: 'listConsumerActions(string, string)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.listConsumerActions
     package: azure-devops-extension-api
     summary: Get a list of consumer actions for a specific consumer.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function listConsumerActions(consumerId: string, publisherId?: string)'
+      content: >-
+        function listConsumerActions(consumerId: string, publisherId?: string):
+        Promise<ConsumerAction[]>
       parameters:
         - id: consumerId
           type: string
@@ -281,10 +311,10 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ConsumerAction"
           />[]&gt;
-        description: ''
   - name: listConsumers(string)
     uid: azure-devops-extension-api.ServiceHooksRestClient.listConsumers
     package: azure-devops-extension-api
@@ -292,57 +322,63 @@ methods:
       Get a list of available service hook consumer services. Optionally filter
       by consumers that support at least one event type from the specific
       publisher.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function listConsumers(publisherId?: string)'
+      content: 'function listConsumers(publisherId?: string): Promise<Consumer[]>'
       parameters:
         - id: publisherId
           type: string
           description: |
             -
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Consumer" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Consumer" />[]&gt;'
   - name: listEventTypes(string)
     uid: azure-devops-extension-api.ServiceHooksRestClient.listEventTypes
     package: azure-devops-extension-api
     summary: Get the event types for a specific publisher.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function listEventTypes(publisherId: string)'
+      content: >-
+        function listEventTypes(publisherId: string):
+        Promise<EventTypeDescriptor[]>
       parameters:
         - id: publisherId
           type: string
           description: |
             ID for a publisher.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.EventTypeDescriptor"
           />[]&gt;
-        description: ''
   - name: listPublishers()
     uid: azure-devops-extension-api.ServiceHooksRestClient.listPublishers
     package: azure-devops-extension-api
     summary: Get a list of publishers.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function listPublishers()
+      content: 'function listPublishers(): Promise<Publisher[]>'
       return:
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Publisher" />[]&gt;'
         description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Publisher" />[]&gt;'
   - name: 'listSubscriptions(string, string, string, string)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.listSubscriptions
     package: azure-devops-extension-api
     summary: Get a list of subscriptions.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function listSubscriptions(publisherId?: string, eventType?: string,
-        consumerId?: string, consumerActionId?: string)
+        consumerId?: string, consumerActionId?: string): Promise<Subscription[]>
       parameters:
         - id: publisherId
           type: string
@@ -358,18 +394,21 @@ methods:
           description: |
             ID for a consumerActionId.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.Subscription"
           />[]&gt;
-        description: ''
   - name: 'publishExternalEvent(string, string)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.publishExternalEvent
     package: azure-devops-extension-api
     summary: Publish an external event.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function publishExternalEvent(publisherId: string, channelId?: string)'
+      content: >-
+        function publishExternalEvent(publisherId: string, channelId?: string):
+        Promise<PublisherEvent[]>
       parameters:
         - id: publisherId
           type: string
@@ -379,20 +418,21 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PublisherEvent"
           />[]&gt;
-        description: ''
   - name: 'queryInputValues(InputValuesQuery, string)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.queryInputValues
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function queryInputValues(inputValuesQuery: InputValuesQuery,
-        publisherId: string)
+        publisherId: string): Promise<InputValuesQuery>
       parameters:
         - id: inputValuesQuery
           type: <xref uid="azure-devops-extension-api.InputValuesQuery" />
@@ -402,60 +442,67 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InputValuesQuery"
           />&gt;
-        description: ''
   - name: queryNotifications(NotificationsQuery)
     uid: azure-devops-extension-api.ServiceHooksRestClient.queryNotifications
     package: azure-devops-extension-api
     summary: >-
       Query for notifications. A notification includes details about the event,
       the request to and the response from the consumer service.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function queryNotifications(query: NotificationsQuery)'
+      content: >-
+        function queryNotifications(query: NotificationsQuery):
+        Promise<NotificationsQuery>
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.NotificationsQuery" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.NotificationsQuery"
           />&gt;
-        description: ''
   - name: queryPublishers(PublishersQuery)
     uid: azure-devops-extension-api.ServiceHooksRestClient.queryPublishers
     package: azure-devops-extension-api
     summary: Query for service hook publishers.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function queryPublishers(query: PublishersQuery)'
+      content: >-
+        function queryPublishers(query: PublishersQuery):
+        Promise<PublishersQuery>
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.PublishersQuery" />
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PublishersQuery"
           />&gt;
-        description: ''
   - name: 'replaceSubscription(Subscription, string)'
     uid: azure-devops-extension-api.ServiceHooksRestClient.replaceSubscription
     package: azure-devops-extension-api
     summary: >-
       Update a subscription. \<param name="subscriptionId"\>ID for a
       subscription that you wish to update.\</param\>
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function replaceSubscription(subscription: Subscription,
-        subscriptionId?: string)
+        subscriptionId?: string): Promise<Subscription>
       parameters:
         - id: subscription
           type: <xref uid="azure-devops-extension-api.Subscription" />
@@ -465,8 +512,8 @@ methods:
           description: |
             -
       return:
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Subscription" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Subscription" />&gt;
   - name: >-
       updateSubscriptionDiagnostics(UpdateSubscripitonDiagnosticsParameters,
       string)
@@ -474,12 +521,14 @@ methods:
       azure-devops-extension-api.ServiceHooksRestClient.updateSubscriptionDiagnostics
     package: azure-devops-extension-api
     summary: ''
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateSubscriptionDiagnostics(updateParameters:
-        UpdateSubscripitonDiagnosticsParameters, subscriptionId: string)
+        UpdateSubscripitonDiagnosticsParameters, subscriptionId: string):
+        Promise<SubscriptionDiagnostics>
       parameters:
         - id: updateParameters
           type: >-
@@ -492,8 +541,8 @@ methods:
           description: |
             -
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.SubscriptionDiagnostics" />&gt;
-        description: ''
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />
