@@ -1,95 +1,129 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent
-    name: BoardItemMovedRealtimeEvent
-    fullName: BoardItemMovedRealtimeEvent
-    children:
-      - azure-devops-extension-api.BoardItemMovedRealtimeEvent.columnId
-      - azure-devops-extension-api.BoardItemMovedRealtimeEvent.eTag
-      - azure-devops-extension-api.BoardItemMovedRealtimeEvent.ids
-      - azure-devops-extension-api.BoardItemMovedRealtimeEvent.nextId
-      - azure-devops-extension-api.BoardItemMovedRealtimeEvent.rowId
-    langs:
-      - typeScript
-    type: interface
-    summary: INTERNAL. Event that is fired when a board item moves.
-    extends:
-      name: azure-devops-extension-api.RealtimeBoardEvent
+### YamlMime:TSType
+name: BoardItemMovedRealtimeEvent
+uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent
+package: azure-devops-extension-api
+summary: INTERNAL. Event that is fired when a board item moves.
+fullName: BoardItemMovedRealtimeEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: boardId
+    uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.boardId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.columnId
-    name: columnId
-    fullName: columnId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: The Board ID of the event
+    fullName: boardId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'boardId: number'
+      return:
+        description: ''
+        type: number
+  - name: columnId
+    uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.columnId
+    package: azure-devops-extension-api
     summary: The column id where the item was moved.
+    fullName: columnId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'columnId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: eTag
+    uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.eTag
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.eTag
-    name: eTag
-    fullName: eTag
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The latest eTag for the items.
+    fullName: eTag
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'eTag: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: eventId
+    uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.eventId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.ids
-    name: ids
-    fullName: ids
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: 'A unique ID for events, used for logging and tracing.'
+    fullName: eventId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventId: string'
+      return:
+        description: ''
+        type: string
+  - name: ids
+    uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.ids
+    package: azure-devops-extension-api
     summary: The ids of the moved item.
+    fullName: ids
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'ids: string[]'
       return:
-        type:
-          - 'string[]'
+        description: ''
+        type: 'string[]'
+  - name: nextId
+    uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.nextId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.nextId
-    name: nextId
-    fullName: nextId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The id of the next item in the list.
+    fullName: nextId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'nextId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: projectId
+    uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.projectId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.rowId
-    name: rowId
-    fullName: rowId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: The Project ID of the board.
+    fullName: projectId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+  - name: rowId
+    uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.rowId
+    package: azure-devops-extension-api
     summary: The row id where the item was moved.
+    fullName: rowId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'rowId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: type
+    uid: azure-devops-extension-api.BoardItemMovedRealtimeEvent.type
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RealtimeBoardEvent
-    name: RealtimeBoardEvent
-    spec.typeScript:
-      - name: RealtimeBoardEvent
-        fullName: RealtimeBoardEvent
-        uid: azure-devops-extension-api.RealtimeBoardEvent
+    summary: 'The type of this event, so the client can disambiguate'
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.RealtimeBoardEvent" />

@@ -1,77 +1,69 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TaskAgentMessage
-    name: TaskAgentMessage
-    fullName: TaskAgentMessage
-    children:
-      - azure-devops-extension-api.TaskAgentMessage.body
-      - azure-devops-extension-api.TaskAgentMessage.iv
-      - azure-devops-extension-api.TaskAgentMessage.messageId
-      - azure-devops-extension-api.TaskAgentMessage.messageType
-    langs:
-      - typeScript
-    type: interface
-    summary: Provides a contract for receiving messages from the task orchestrator.
+### YamlMime:TSType
+name: TaskAgentMessage
+uid: azure-devops-extension-api.TaskAgentMessage
+package: azure-devops-extension-api
+summary: Provides a contract for receiving messages from the task orchestrator.
+fullName: TaskAgentMessage
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: body
+    uid: azure-devops-extension-api.TaskAgentMessage.body
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentMessage.body
-    name: body
-    fullName: body
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Gets or sets the body of the message. If the \<c\>IV\</c\> property is
       provided the body will need to be decrypted using the
       \<c\>TaskAgentSession.EncryptionKey\</c\> value in addition to the
       \<c\>IV\</c\>.
+    fullName: body
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'body: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: iv
+    uid: azure-devops-extension-api.TaskAgentMessage.iv
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentMessage.iv
-    name: iv
+    summary: Gets or sets the initialization vector used to encrypt this message.
     fullName: iv
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the intialization vector used to encrypt this message.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'iv: number[]'
       return:
-        type:
-          - 'number[]'
+        description: ''
+        type: 'number[]'
+  - name: messageId
+    uid: azure-devops-extension-api.TaskAgentMessage.messageId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentMessage.messageId
-    name: messageId
-    fullName: messageId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets or sets the message identifier.
+    fullName: messageId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'messageId: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: messageType
+    uid: azure-devops-extension-api.TaskAgentMessage.messageType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentMessage.messageType
-    name: messageType
-    fullName: messageType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Gets or sets the message type, describing the data contract found in
       \<c\>TaskAgentMessage.Body\</c\>.
+    fullName: messageType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'messageType: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
+        description: ''
+        type: string

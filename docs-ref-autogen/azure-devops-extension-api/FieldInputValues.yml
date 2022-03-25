@@ -1,35 +1,118 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.FieldInputValues
-    name: FieldInputValues
-    fullName: FieldInputValues
-    children:
-      - azure-devops-extension-api.FieldInputValues.operators
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.InputValues
+### YamlMime:TSType
+name: FieldInputValues
+uid: azure-devops-extension-api.FieldInputValues
+package: azure-devops-extension-api
+summary: ''
+fullName: FieldInputValues
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: defaultValue
+    uid: azure-devops-extension-api.FieldInputValues.defaultValue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.FieldInputValues.operators
-    name: operators
-    fullName: operators
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: The default value to use for this input
+    fullName: defaultValue
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'defaultValue: string'
+      return:
+        description: ''
+        type: string
+  - name: error
+    uid: azure-devops-extension-api.FieldInputValues.error
+    package: azure-devops-extension-api
+    summary: Errors encountered while computing dynamic values.
+    fullName: error
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'error: InputValuesError'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.InputValuesError" />
+  - name: inputId
+    uid: azure-devops-extension-api.FieldInputValues.inputId
+    package: azure-devops-extension-api
+    summary: The id of the input
+    fullName: inputId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'inputId: string'
+      return:
+        description: ''
+        type: string
+  - name: isDisabled
+    uid: azure-devops-extension-api.FieldInputValues.isDisabled
+    package: azure-devops-extension-api
+    summary: Should this input be disabled
+    fullName: isDisabled
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isDisabled: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isLimitedToPossibleValues
+    uid: azure-devops-extension-api.FieldInputValues.isLimitedToPossibleValues
+    package: azure-devops-extension-api
+    summary: >-
+      Should the value be restricted to one of the values in the PossibleValues
+      (True) or are the values in PossibleValues just a suggestion (False)
+    fullName: isLimitedToPossibleValues
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isLimitedToPossibleValues: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isReadOnly
+    uid: azure-devops-extension-api.FieldInputValues.isReadOnly
+    package: azure-devops-extension-api
+    summary: Should this input be made read-only
+    fullName: isReadOnly
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isReadOnly: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: operators
+    uid: azure-devops-extension-api.FieldInputValues.operators
+    package: azure-devops-extension-api
     summary: ''
+    fullName: operators
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'operators: number[]'
       return:
-        type:
-          - 'number[]'
+        description: ''
+        type: 'number[]'
+  - name: possibleValues
+    uid: azure-devops-extension-api.FieldInputValues.possibleValues
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.InputValues
-    name: InputValues
-    spec.typeScript:
-      - name: InputValues
-        fullName: InputValues
-        uid: azure-devops-extension-api.InputValues
+    summary: Possible values that this input can take
+    fullName: possibleValues
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'possibleValues: InputValue[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.InputValue" />[]'
+extends: <xref uid="azure-devops-extension-api.InputValues" />

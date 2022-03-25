@@ -1,35 +1,199 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IdentityRefWithEmail
-    name: IdentityRefWithEmail
-    fullName: IdentityRefWithEmail
-    children:
-      - azure-devops-extension-api.IdentityRefWithEmail.preferredEmailAddress
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.IdentityRef
+### YamlMime:TSType
+name: IdentityRefWithEmail
+uid: azure-devops-extension-api.IdentityRefWithEmail
+package: azure-devops-extension-api
+summary: ''
+fullName: IdentityRefWithEmail
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: descriptor
+    uid: azure-devops-extension-api.IdentityRefWithEmail.descriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityRefWithEmail.preferredEmailAddress
-    name: preferredEmailAddress
-    fullName: preferredEmailAddress
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      The descriptor is the primary way to reference the graph subject while the
+      system is running. This field will uniquely identify the same graph
+      subject across both Accounts and Organizations.
+    fullName: descriptor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'descriptor: string'
+      return:
+        description: ''
+        type: string
+  - name: directoryAlias
+    uid: azure-devops-extension-api.IdentityRefWithEmail.directoryAlias
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated - Can be retrieved by querying the Graph user referenced in the
+      "self" entry of the IdentityRef "_links" dictionary
+    fullName: directoryAlias
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'directoryAlias: string'
+      return:
+        description: ''
+        type: string
+  - name: displayName
+    uid: azure-devops-extension-api.IdentityRefWithEmail.displayName
+    package: azure-devops-extension-api
+    summary: >-
+      This is the non-unique display name of the graph subject. To change this
+      field, you must alter its value in the source provider.
+    fullName: displayName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        description: ''
+        type: string
+  - name: id
+    uid: azure-devops-extension-api.IdentityRefWithEmail.id
+    package: azure-devops-extension-api
     summary: ''
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: imageUrl
+    uid: azure-devops-extension-api.IdentityRefWithEmail.imageUrl
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated - Available in the "avatar" entry of the IdentityRef "_links"
+      dictionary
+    fullName: imageUrl
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'imageUrl: string'
+      return:
+        description: ''
+        type: string
+  - name: inactive
+    uid: azure-devops-extension-api.IdentityRefWithEmail.inactive
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated - Can be retrieved by querying the Graph membership state
+      referenced in the "membershipState" entry of the GraphUser "_links"
+      dictionary
+    fullName: inactive
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'inactive: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isAadIdentity
+    uid: azure-devops-extension-api.IdentityRefWithEmail.isAadIdentity
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated - Can be inferred from the subject type of the descriptor
+      (Descriptor.IsAadUserType/Descriptor.IsAadGroupType)
+    fullName: isAadIdentity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isAadIdentity: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isContainer
+    uid: azure-devops-extension-api.IdentityRefWithEmail.isContainer
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated - Can be inferred from the subject type of the descriptor
+      (Descriptor.IsGroupType)
+    fullName: isContainer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isContainer: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isDeletedInOrigin
+    uid: azure-devops-extension-api.IdentityRefWithEmail.isDeletedInOrigin
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: isDeletedInOrigin
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isDeletedInOrigin: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: preferredEmailAddress
+    uid: azure-devops-extension-api.IdentityRefWithEmail.preferredEmailAddress
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: preferredEmailAddress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'preferredEmailAddress: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: profileUrl
+    uid: azure-devops-extension-api.IdentityRefWithEmail.profileUrl
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
+    summary: >-
+      Deprecated - not in use in most preexisting implementations of
+      ToIdentityRef
+    fullName: profileUrl
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'profileUrl: string'
+      return:
+        description: ''
+        type: string
+  - name: uniqueName
+    uid: azure-devops-extension-api.IdentityRefWithEmail.uniqueName
+    package: azure-devops-extension-api
+    summary: Deprecated - use Domain+PrincipalName instead
+    fullName: uniqueName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'uniqueName: string'
+      return:
+        description: ''
+        type: string
+  - name: url
+    uid: azure-devops-extension-api.IdentityRefWithEmail.url
+    package: azure-devops-extension-api
+    summary: This url is the full route to the source resource of this graph subject.
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.IdentityRef" />

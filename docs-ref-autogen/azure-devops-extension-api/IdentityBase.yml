@@ -1,262 +1,230 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IdentityBase
-    name: IdentityBase
-    fullName: IdentityBase
-    children:
-      - azure-devops-extension-api.IdentityBase.customDisplayName
-      - azure-devops-extension-api.IdentityBase.descriptor
-      - azure-devops-extension-api.IdentityBase.id
-      - azure-devops-extension-api.IdentityBase.isActive
-      - azure-devops-extension-api.IdentityBase.isContainer
-      - azure-devops-extension-api.IdentityBase.masterId
-      - azure-devops-extension-api.IdentityBase.memberIds
-      - azure-devops-extension-api.IdentityBase.memberOf
-      - azure-devops-extension-api.IdentityBase.members
-      - azure-devops-extension-api.IdentityBase.metaTypeId
-      - azure-devops-extension-api.IdentityBase.properties
-      - azure-devops-extension-api.IdentityBase.providerDisplayName
-      - azure-devops-extension-api.IdentityBase.resourceVersion
-      - azure-devops-extension-api.IdentityBase.subjectDescriptor
-      - azure-devops-extension-api.IdentityBase.uniqueUserId
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Base Identity class to allow "trimmed" identity class in the
-      GetConnectionData API Makes sure that on-the-wire representations of the
-      derived classes are compatible with each other (e.g. Server responds with
-      PublicIdentity object while client deserializes it as Identity object)
-      Derived classes should not have additional [DataMember] properties
+### YamlMime:TSType
+name: IdentityBase
+uid: azure-devops-extension-api.IdentityBase
+package: azure-devops-extension-api
+summary: >-
+  Base Identity class to allow "trimmed" identity class in the GetConnectionData
+  API Makes sure that on-the-wire representations of the derived classes are
+  compatible with each other (e.g. Server responds with PublicIdentity object
+  while client deserializes it as Identity object) Derived classes should not
+  have additional [DataMember] properties
+fullName: IdentityBase
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: customDisplayName
+    uid: azure-devops-extension-api.IdentityBase.customDisplayName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.customDisplayName
-    name: customDisplayName
-    fullName: customDisplayName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The custom display name for the identity (if any). Setting this property
       to an empty string will clear the existing custom display name. Setting
       this property to null will not affect the existing persisted value (since
       null values do not get sent over the wire or to the database)
+    fullName: customDisplayName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'customDisplayName: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: descriptor
+    uid: azure-devops-extension-api.IdentityBase.descriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.descriptor
-    name: descriptor
-    fullName: descriptor
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: descriptor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'descriptor: IdentityDescriptor'
       return:
-        type:
-          - azure-devops-extension-api.IdentityDescriptor
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityDescriptor" />
+  - name: id
+    uid: azure-devops-extension-api.IdentityBase.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: isActive
+    uid: azure-devops-extension-api.IdentityBase.isActive
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.isActive
-    name: isActive
-    fullName: isActive
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: isActive
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isActive: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: isContainer
+    uid: azure-devops-extension-api.IdentityBase.isContainer
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.isContainer
-    name: isContainer
-    fullName: isContainer
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: isContainer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isContainer: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: masterId
+    uid: azure-devops-extension-api.IdentityBase.masterId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.masterId
-    name: masterId
-    fullName: masterId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: masterId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'masterId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: memberIds
+    uid: azure-devops-extension-api.IdentityBase.memberIds
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.memberIds
-    name: memberIds
-    fullName: memberIds
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: memberIds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'memberIds: string[]'
       return:
-        type:
-          - 'string[]'
+        description: ''
+        type: 'string[]'
+  - name: memberOf
+    uid: azure-devops-extension-api.IdentityBase.memberOf
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.memberOf
-    name: memberOf
-    fullName: memberOf
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: memberOf
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'memberOf: IdentityDescriptor[]'
       return:
-        type:
-          - 'azure-devops-extension-api.IdentityDescriptor[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.IdentityDescriptor" />[]'
+  - name: members
+    uid: azure-devops-extension-api.IdentityBase.members
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.members
-    name: members
-    fullName: members
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: members
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'members: IdentityDescriptor[]'
       return:
-        type:
-          - 'azure-devops-extension-api.IdentityDescriptor[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.IdentityDescriptor" />[]'
+  - name: metaTypeId
+    uid: azure-devops-extension-api.IdentityBase.metaTypeId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.metaTypeId
-    name: metaTypeId
-    fullName: metaTypeId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: metaTypeId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'metaTypeId: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: properties
+    uid: azure-devops-extension-api.IdentityBase.properties
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: properties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
-        type:
-          - any
+        description: ''
+        type: any
+  - name: providerDisplayName
+    uid: azure-devops-extension-api.IdentityBase.providerDisplayName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.providerDisplayName
-    name: providerDisplayName
-    fullName: providerDisplayName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The display name for the identity as specified by the source identity
       provider.
+    fullName: providerDisplayName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'providerDisplayName: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: resourceVersion
+    uid: azure-devops-extension-api.IdentityBase.resourceVersion
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.resourceVersion
-    name: resourceVersion
-    fullName: resourceVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: resourceVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'resourceVersion: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: socialDescriptor
+    uid: azure-devops-extension-api.IdentityBase.socialDescriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.subjectDescriptor
-    name: subjectDescriptor
-    fullName: subjectDescriptor
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: socialDescriptor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'socialDescriptor: string'
+      return:
+        description: ''
+        type: string
+  - name: subjectDescriptor
+    uid: azure-devops-extension-api.IdentityBase.subjectDescriptor
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: subjectDescriptor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'subjectDescriptor: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: uniqueUserId
+    uid: azure-devops-extension-api.IdentityBase.uniqueUserId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IdentityBase.uniqueUserId
-    name: uniqueUserId
-    fullName: uniqueUserId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: uniqueUserId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'uniqueUserId: number'
       return:
-        type:
-          - number
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.IdentityDescriptor
-    name: IdentityDescriptor
-    spec.typeScript:
-      - name: IdentityDescriptor
-        fullName: IdentityDescriptor
-        uid: azure-devops-extension-api.IdentityDescriptor
-  - uid: 'azure-devops-extension-api.IdentityDescriptor[]'
-    name: 'IdentityDescriptor[]'
-    spec.typeScript:
-      - name: IdentityDescriptor
-        fullName: IdentityDescriptor
-        uid: azure-devops-extension-api.IdentityDescriptor
-      - name: '[]'
-        fullName: '[]'
+        description: ''
+        type: number

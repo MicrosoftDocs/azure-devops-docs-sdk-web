@@ -1,71 +1,66 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.SuiteEntry
-    name: SuiteEntry
-    fullName: SuiteEntry
-    children:
-      - azure-devops-extension-api.SuiteEntry.childSuiteId
-      - azure-devops-extension-api.SuiteEntry.sequenceNumber
-      - azure-devops-extension-api.SuiteEntry.suiteId
-      - azure-devops-extension-api.SuiteEntry.testCaseId
-    langs:
-      - typeScript
-    type: interface
-    summary: A suite entry defines properties for a test suite.
+### YamlMime:TSType
+name: SuiteEntry
+uid: azure-devops-extension-api.SuiteEntry
+package: azure-devops-extension-api
+summary: A suite entry defines properties for a test suite.
+fullName: SuiteEntry
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.SuiteEntry.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.SuiteEntry.childSuiteId
-    name: childSuiteId
-    fullName: childSuiteId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id of child suite in the test suite.
+    summary: >-
+      Id of the suite entry in the test suite: either a test case id or child
+      suite id.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'childSuiteId: number'
+      content: 'id: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: sequenceNumber
+    uid: azure-devops-extension-api.SuiteEntry.sequenceNumber
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.SuiteEntry.sequenceNumber
-    name: sequenceNumber
+    summary: Sequence number for the suite entry object in the test suite.
     fullName: sequenceNumber
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Sequence number for the test case or child test suite in the test suite.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sequenceNumber: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: suiteEntryType
+    uid: azure-devops-extension-api.SuiteEntry.suiteEntryType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.SuiteEntry.suiteId
-    name: suiteId
-    fullName: suiteId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Defines whether the entry is of type test case or suite.
+    fullName: suiteEntryType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'suiteEntryType: SuiteEntryTypes'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.SuiteEntryTypes" />
+  - name: suiteId
+    uid: azure-devops-extension-api.SuiteEntry.suiteId
+    package: azure-devops-extension-api
     summary: Id for the test suite.
+    fullName: suiteId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'suiteId: number'
       return:
-        type:
-          - number
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.SuiteEntry.testCaseId
-    name: testCaseId
-    fullName: testCaseId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id of a test case in the test suite.
-    syntax:
-      content: 'testCaseId: number'
-      return:
-        type:
-          - number
-    package: azure-devops-extension-api
+        description: ''
+        type: number
+extends: <xref uid="azure-devops-extension-api.SuiteEntryUpdateParams" />

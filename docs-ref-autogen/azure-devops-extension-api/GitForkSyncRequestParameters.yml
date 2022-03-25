@@ -1,59 +1,39 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitForkSyncRequestParameters
-    name: GitForkSyncRequestParameters
-    fullName: GitForkSyncRequestParameters
-    children:
-      - azure-devops-extension-api.GitForkSyncRequestParameters.source
-      - >-
-        azure-devops-extension-api.GitForkSyncRequestParameters.sourceToTargetRefs
-    langs:
-      - typeScript
-    type: interface
-    summary: Parameters for creating a fork request
+### YamlMime:TSType
+name: GitForkSyncRequestParameters
+uid: azure-devops-extension-api.GitForkSyncRequestParameters
+package: azure-devops-extension-api
+summary: Parameters for creating a fork request
+fullName: GitForkSyncRequestParameters
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: source
+    uid: azure-devops-extension-api.GitForkSyncRequestParameters.source
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitForkSyncRequestParameters.source
-    name: source
-    fullName: source
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Fully-qualified identifier for the source repository.
+    fullName: source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'source: GlobalGitRepositoryKey'
       return:
-        type:
-          - azure-devops-extension-api.GlobalGitRepositoryKey
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GlobalGitRepositoryKey" />
+  - name: sourceToTargetRefs
+    uid: azure-devops-extension-api.GitForkSyncRequestParameters.sourceToTargetRefs
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitForkSyncRequestParameters.sourceToTargetRefs
-    name: sourceToTargetRefs
-    fullName: sourceToTargetRefs
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       If supplied, the set of ref mappings to use when performing a "sync" or
       create. If missing, all refs will be synchronized.
+    fullName: sourceToTargetRefs
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sourceToTargetRefs: SourceToTargetRef[]'
       return:
-        type:
-          - 'azure-devops-extension-api.SourceToTargetRef[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GlobalGitRepositoryKey
-    name: GlobalGitRepositoryKey
-    spec.typeScript:
-      - name: GlobalGitRepositoryKey
-        fullName: GlobalGitRepositoryKey
-        uid: azure-devops-extension-api.GlobalGitRepositoryKey
-  - uid: 'azure-devops-extension-api.SourceToTargetRef[]'
-    name: 'SourceToTargetRef[]'
-    spec.typeScript:
-      - name: SourceToTargetRef
-        fullName: SourceToTargetRef
-        uid: azure-devops-extension-api.SourceToTargetRef
-      - name: '[]'
-        fullName: '[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.SourceToTargetRef" />[]'

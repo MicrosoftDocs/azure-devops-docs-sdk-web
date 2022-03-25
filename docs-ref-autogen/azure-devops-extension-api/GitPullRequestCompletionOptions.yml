@@ -1,134 +1,138 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitPullRequestCompletionOptions
-    name: GitPullRequestCompletionOptions
-    fullName: GitPullRequestCompletionOptions
-    children:
-      - azure-devops-extension-api.GitPullRequestCompletionOptions.bypassPolicy
-      - azure-devops-extension-api.GitPullRequestCompletionOptions.bypassReason
-      - >-
-        azure-devops-extension-api.GitPullRequestCompletionOptions.deleteSourceBranch
-      - >-
-        azure-devops-extension-api.GitPullRequestCompletionOptions.mergeCommitMessage
-      - azure-devops-extension-api.GitPullRequestCompletionOptions.squashMerge
-      - >-
-        azure-devops-extension-api.GitPullRequestCompletionOptions.transitionWorkItems
-      - >-
-        azure-devops-extension-api.GitPullRequestCompletionOptions.triggeredByAutoComplete
-    langs:
-      - typeScript
-    type: interface
-    summary: Preferences about how the pull request should be completed.
+### YamlMime:TSType
+name: GitPullRequestCompletionOptions
+uid: azure-devops-extension-api.GitPullRequestCompletionOptions
+package: azure-devops-extension-api
+summary: Preferences about how the pull request should be completed.
+fullName: GitPullRequestCompletionOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: bypassPolicy
+    uid: azure-devops-extension-api.GitPullRequestCompletionOptions.bypassPolicy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestCompletionOptions.bypassPolicy
-    name: bypassPolicy
-    fullName: bypassPolicy
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       If true, policies will be explicitly bypassed while the pull request is
       completed.
+    fullName: bypassPolicy
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'bypassPolicy: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: bypassReason
+    uid: azure-devops-extension-api.GitPullRequestCompletionOptions.bypassReason
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestCompletionOptions.bypassReason
-    name: bypassReason
-    fullName: bypassReason
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'If policies are bypassed, this reason is stored as to why bypass was used.'
+    fullName: bypassReason
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'bypassReason: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-  - uid: >-
+        description: ''
+        type: string
+  - name: deleteSourceBranch
+    uid: >-
       azure-devops-extension-api.GitPullRequestCompletionOptions.deleteSourceBranch
-    name: deleteSourceBranch
-    fullName: deleteSourceBranch
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       If true, the source branch of the pull request will be deleted after
       completion.
+    fullName: deleteSourceBranch
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deleteSourceBranch: boolean'
       return:
-        type:
-          - boolean
-    package: azure-devops-extension-api
-  - uid: >-
+        description: ''
+        type: boolean
+  - name: mergeCommitMessage
+    uid: >-
       azure-devops-extension-api.GitPullRequestCompletionOptions.mergeCommitMessage
-    name: mergeCommitMessage
-    fullName: mergeCommitMessage
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: 'If set, this will be used as the commit message of the merge commit.'
+    fullName: mergeCommitMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mergeCommitMessage: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: mergeStrategy
+    uid: azure-devops-extension-api.GitPullRequestCompletionOptions.mergeStrategy
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestCompletionOptions.squashMerge
-    name: squashMerge
-    fullName: squashMerge
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      If true, the commits in the pull request will be squash-merged into the
-      specified target branch on completion.
+      Specify the strategy used to merge the pull request during completion. If
+      MergeStrategy is not set to any value, a no-FF merge will be created if
+      SquashMerge == false. If MergeStrategy is not set to any value, the pull
+      request commits will be squash if SquashMerge == true. The SquashMerge
+      member is deprecated. It is recommended that you explicitly set
+      MergeStrategy in all cases. If an explicit value is provided for
+      MergeStrategy, the SquashMerge member will be ignored.
+    fullName: mergeStrategy
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'mergeStrategy: GitPullRequestMergeStrategy'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitPullRequestMergeStrategy" />
+  - name: squashMerge
+    uid: azure-devops-extension-api.GitPullRequestCompletionOptions.squashMerge
+    package: azure-devops-extension-api
+    summary: >-
+      SquashMerge is deprecated. You should explicity set the value of
+      MergeStrategy. If MergeStrategy is set to any value, the SquashMerge value
+      will be ignored. If MergeStrategy is not set, the merge strategy will be
+      no-fast-forward if this flag is false, or squash if true.
+    fullName: squashMerge
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'squashMerge: boolean'
       return:
-        type:
-          - boolean
-    package: azure-devops-extension-api
-  - uid: >-
+        description: ''
+        type: boolean
+  - name: transitionWorkItems
+    uid: >-
       azure-devops-extension-api.GitPullRequestCompletionOptions.transitionWorkItems
-    name: transitionWorkItems
-    fullName: transitionWorkItems
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       If true, we will attempt to transition any work items linked to the pull
       request into the next logical state (i.e. Active -\> Resolved)
+    fullName: transitionWorkItems
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'transitionWorkItems: boolean'
       return:
-        type:
-          - boolean
-    package: azure-devops-extension-api
-  - uid: >-
+        description: ''
+        type: boolean
+  - name: triggeredByAutoComplete
+    uid: >-
       azure-devops-extension-api.GitPullRequestCompletionOptions.triggeredByAutoComplete
-    name: triggeredByAutoComplete
-    fullName: triggeredByAutoComplete
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       If true, the current completion attempt was triggered via auto-complete.
       Used internally.
+    fullName: triggeredByAutoComplete
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'triggeredByAutoComplete: boolean'
       return:
-        type:
-          - boolean
-    package: azure-devops-extension-api
+        description: ''
+        type: boolean

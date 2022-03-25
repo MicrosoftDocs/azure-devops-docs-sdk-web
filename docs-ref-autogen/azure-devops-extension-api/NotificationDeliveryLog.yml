@@ -1,43 +1,201 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.NotificationDeliveryLog
-    name: NotificationDeliveryLog
-    fullName: NotificationDeliveryLog
-    children:
-      - azure-devops-extension-api.NotificationDeliveryLog.batches
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.NotificationJobDiagnosticLog
+### YamlMime:TSType
+name: NotificationDeliveryLog
+uid: azure-devops-extension-api.NotificationDeliveryLog
+package: azure-devops-extension-api
+summary: ''
+fullName: NotificationDeliveryLog
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: activityId
+    uid: azure-devops-extension-api.NotificationDeliveryLog.activityId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationDeliveryLog.batches
-    name: batches
-    fullName: batches
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Identifier used for correlating to other diagnostics that may have been
+      recorded elsewhere.
+    fullName: activityId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'activityId: string'
+      return:
+        description: ''
+        type: string
+  - name: batches
+    uid: azure-devops-extension-api.NotificationDeliveryLog.batches
+    package: azure-devops-extension-api
     summary: ''
+    fullName: batches
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'batches: NotificationBatch[]'
       return:
-        type:
-          - 'azure-devops-extension-api.NotificationBatch[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.NotificationBatch" />[]'
+  - name: description
+    uid: azure-devops-extension-api.NotificationDeliveryLog.description
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.NotificationJobDiagnosticLog
-    name: NotificationJobDiagnosticLog
-    spec.typeScript:
-      - name: NotificationJobDiagnosticLog
-        fullName: NotificationJobDiagnosticLog
-        uid: azure-devops-extension-api.NotificationJobDiagnosticLog
-  - uid: 'azure-devops-extension-api.NotificationBatch[]'
-    name: 'NotificationBatch[]'
-    spec.typeScript:
-      - name: NotificationBatch
-        fullName: NotificationBatch
-        uid: azure-devops-extension-api.NotificationBatch
-      - name: '[]'
-        fullName: '[]'
+    summary: ''
+    fullName: description
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+  - name: endTime
+    uid: azure-devops-extension-api.NotificationDeliveryLog.endTime
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: endTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'endTime: Date'
+      return:
+        description: ''
+        type: Date
+  - name: errors
+    uid: azure-devops-extension-api.NotificationDeliveryLog.errors
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: errors
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errors: number'
+      return:
+        description: ''
+        type: number
+  - name: id
+    uid: azure-devops-extension-api.NotificationDeliveryLog.id
+    package: azure-devops-extension-api
+    summary: Unique instance identifier.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: logType
+    uid: azure-devops-extension-api.NotificationDeliveryLog.logType
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: logType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'logType: string'
+      return:
+        description: ''
+        type: string
+  - name: messages
+    uid: azure-devops-extension-api.NotificationDeliveryLog.messages
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: messages
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'messages: NotificationDiagnosticLogMessage[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.NotificationDiagnosticLogMessage" />[]
+  - name: properties
+    uid: azure-devops-extension-api.NotificationDeliveryLog.properties
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: properties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'properties: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+  - name: result
+    uid: azure-devops-extension-api.NotificationDeliveryLog.result
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: result
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'result: string'
+      return:
+        description: ''
+        type: string
+  - name: source
+    uid: azure-devops-extension-api.NotificationDeliveryLog.source
+    package: azure-devops-extension-api
+    summary: >-
+      This identifier depends on the logType.  For notification jobs, this will
+      be the job Id. For subscription tracing, this will be a special root Guid
+      with the subscription Id encoded.
+    fullName: source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'source: string'
+      return:
+        description: ''
+        type: string
+  - name: startTime
+    uid: azure-devops-extension-api.NotificationDeliveryLog.startTime
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: startTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'startTime: Date'
+      return:
+        description: ''
+        type: Date
+  - name: stats
+    uid: azure-devops-extension-api.NotificationDeliveryLog.stats
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: stats
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stats: [key: string]: function'
+      return:
+        description: ''
+        type: '[key: string]\: function'
+  - name: warnings
+    uid: azure-devops-extension-api.NotificationDeliveryLog.warnings
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: warnings
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'warnings: number'
+      return:
+        description: ''
+        type: number
+extends: <xref uid="azure-devops-extension-api.NotificationJobDiagnosticLog" />

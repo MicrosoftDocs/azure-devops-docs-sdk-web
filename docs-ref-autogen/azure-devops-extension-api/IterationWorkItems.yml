@@ -1,43 +1,38 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.IterationWorkItems
-    name: IterationWorkItems
-    fullName: IterationWorkItems
-    children:
-      - azure-devops-extension-api.IterationWorkItems.workItemRelations
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents work items in an iteration backlog
-    extends:
-      name: azure-devops-extension-api.TeamSettingsDataContractBase
+### YamlMime:TSType
+name: IterationWorkItems
+uid: azure-devops-extension-api.IterationWorkItems
+package: azure-devops-extension-api
+summary: Represents work items in an iteration backlog
+fullName: IterationWorkItems
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: url
+    uid: azure-devops-extension-api.IterationWorkItems.url
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.IterationWorkItems.workItemRelations
-    name: workItemRelations
-    fullName: workItemRelations
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Full http link to the resource
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+  - name: workItemRelations
+    uid: azure-devops-extension-api.IterationWorkItems.workItemRelations
+    package: azure-devops-extension-api
     summary: Work item relations
+    fullName: workItemRelations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workItemRelations: WorkItemLink[]'
       return:
-        type:
-          - 'azure-devops-extension-api.WorkItemLink[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TeamSettingsDataContractBase
-    name: TeamSettingsDataContractBase
-    spec.typeScript:
-      - name: TeamSettingsDataContractBase
-        fullName: TeamSettingsDataContractBase
-        uid: azure-devops-extension-api.TeamSettingsDataContractBase
-  - uid: 'azure-devops-extension-api.WorkItemLink[]'
-    name: 'WorkItemLink[]'
-    spec.typeScript:
-      - name: WorkItemLink
-        fullName: WorkItemLink
-        uid: azure-devops-extension-api.WorkItemLink
-      - name: '[]'
-        fullName: '[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.WorkItemLink" />[]'
+extends: <xref uid="azure-devops-extension-api.TeamSettingsDataContractBase" />

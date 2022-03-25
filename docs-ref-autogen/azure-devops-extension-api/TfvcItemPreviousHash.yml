@@ -1,35 +1,207 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TfvcItemPreviousHash
-    name: TfvcItemPreviousHash
-    fullName: TfvcItemPreviousHash
-    children:
-      - azure-devops-extension-api.TfvcItemPreviousHash.previousHashValue
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.TfvcItem
+### YamlMime:TSType
+name: TfvcItemPreviousHash
+uid: azure-devops-extension-api.TfvcItemPreviousHash
+package: azure-devops-extension-api
+summary: Metadata for an item including the previous hash value for files.
+fullName: TfvcItemPreviousHash
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: changeDate
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.changeDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcItemPreviousHash.previousHashValue
-    name: previousHashValue
-    fullName: previousHashValue
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Item changed datetime.
+    fullName: changeDate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'changeDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: content
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.content
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: content
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'content: string'
+      return:
+        description: ''
+        type: string
+  - name: contentMetadata
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.contentMetadata
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: contentMetadata
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'contentMetadata: FileContentMetadata'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.FileContentMetadata" />
+  - name: deletionId
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.deletionId
+    package: azure-devops-extension-api
+    summary: Greater than 0 if item is deleted.
+    fullName: deletionId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deletionId: number'
+      return:
+        description: ''
+        type: number
+  - name: encoding
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.encoding
+    package: azure-devops-extension-api
+    summary: 'File encoding from database, -1 represents binary.'
+    fullName: encoding
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'encoding: number'
+      return:
+        description: ''
+        type: number
+  - name: hashValue
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.hashValue
+    package: azure-devops-extension-api
     summary: 'MD5 hash as a base 64 string, applies to files only.'
+    fullName: hashValue
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'hashValue: string'
+      return:
+        description: ''
+        type: string
+  - name: isBranch
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.isBranch
+    package: azure-devops-extension-api
+    summary: True if item is a branch.
+    fullName: isBranch
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isBranch: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isFolder
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.isFolder
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: isFolder
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isFolder: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isPendingChange
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.isPendingChange
+    package: azure-devops-extension-api
+    summary: True if there is a change pending.
+    fullName: isPendingChange
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isPendingChange: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isSymLink
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.isSymLink
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: isSymLink
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isSymLink: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: path
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.path
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: path
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'path: string'
+      return:
+        description: ''
+        type: string
+  - name: previousHashValue
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.previousHashValue
+    package: azure-devops-extension-api
+    summary: 'MD5 hash as a base 64 string, applies to files only.'
+    fullName: previousHashValue
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'previousHashValue: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: size
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.size
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TfvcItem
-    name: TfvcItem
-    spec.typeScript:
-      - name: TfvcItem
-        fullName: TfvcItem
-        uid: azure-devops-extension-api.TfvcItem
+    summary: 'The size of the file, if applicable.'
+    fullName: size
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'size: number'
+      return:
+        description: ''
+        type: number
+  - name: url
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+  - name: version
+    uid: azure-devops-extension-api.TfvcItemPreviousHash.version
+    package: azure-devops-extension-api
+    summary: Changeset version Id.
+    fullName: version
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'version: number'
+      return:
+        description: ''
+        type: number
+extends: <xref uid="azure-devops-extension-api.TfvcItem" />

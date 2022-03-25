@@ -1,20 +1,51 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.MultiMachineInput
-    name: MultiMachineInput
-    fullName: MultiMachineInput
-    children: []
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.ParallelExecutionInputBase
+### YamlMime:TSType
+name: MultiMachineInput
+uid: azure-devops-extension-api.MultiMachineInput
+package: azure-devops-extension-api
+summary: ''
+fullName: MultiMachineInput
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: continueOnError
+    uid: azure-devops-extension-api.MultiMachineInput.continueOnError
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ParallelExecutionInputBase
-    name: ParallelExecutionInputBase
-    spec.typeScript:
-      - name: ParallelExecutionInputBase
-        fullName: ParallelExecutionInputBase
-        uid: azure-devops-extension-api.ParallelExecutionInputBase
+    summary: Indicate whether continue execution of deployment on error or not.
+    fullName: continueOnError
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'continueOnError: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: maxNumberOfAgents
+    uid: azure-devops-extension-api.MultiMachineInput.maxNumberOfAgents
+    package: azure-devops-extension-api
+    summary: Maximum number of agents used while parallel execution.
+    fullName: maxNumberOfAgents
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxNumberOfAgents: number'
+      return:
+        description: ''
+        type: number
+  - name: parallelExecutionType
+    uid: azure-devops-extension-api.MultiMachineInput.parallelExecutionType
+    package: azure-devops-extension-api
+    summary: 'Parallel execution type, for example MultiConfiguration or MultiMachine.'
+    fullName: parallelExecutionType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'parallelExecutionType: ParallelExecutionTypes'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ParallelExecutionTypes" />
+extends: <xref uid="azure-devops-extension-api.ParallelExecutionInputBase" />

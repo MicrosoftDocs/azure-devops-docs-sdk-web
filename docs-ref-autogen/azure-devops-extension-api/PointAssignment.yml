@@ -1,58 +1,64 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.PointAssignment
-    name: PointAssignment
-    fullName: PointAssignment
-    children:
-      - azure-devops-extension-api.PointAssignment.configuration
-      - azure-devops-extension-api.PointAssignment.tester
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Adding test cases to a suite creates one of more test points based on the
-      default configurations and testers assigned to the test suite.
-      PointAssignment is the list of test points that were created for each of
-      the test cases that were added to the test suite.
+### YamlMime:TSType
+name: PointAssignment
+uid: azure-devops-extension-api.PointAssignment
+package: azure-devops-extension-api
+summary: Assignments for the Test Point
+fullName: PointAssignment
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: configurationId
+    uid: azure-devops-extension-api.PointAssignment.configurationId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PointAssignment.configuration
-    name: configuration
-    fullName: configuration
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Configuration that was assigned to the test case.
+    summary: Id of the Configuration Assigned to the Test Point
+    fullName: configurationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'configuration: ShallowReference'
+      content: 'configurationId: number'
       return:
-        type:
-          - azure-devops-extension-api.ShallowReference
+        description: ''
+        type: number
+  - name: configurationName
+    uid: azure-devops-extension-api.PointAssignment.configurationName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PointAssignment.tester
-    name: tester
+    summary: Name of the Configuration Assigned to the Test Point
+    fullName: configurationName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'configurationName: string'
+      return:
+        description: ''
+        type: string
+  - name: id
+    uid: azure-devops-extension-api.PointAssignment.id
+    package: azure-devops-extension-api
+    summary: Id of the Test Point
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: tester
+    uid: azure-devops-extension-api.PointAssignment.tester
+    package: azure-devops-extension-api
+    summary: Tester Assigned to the Test Point
     fullName: tester
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Tester that was assigned to the test case
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tester: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ShallowReference
-    name: ShallowReference
-    spec.typeScript:
-      - name: ShallowReference
-        fullName: ShallowReference
-        uid: azure-devops-extension-api.ShallowReference
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+extends: <xref uid="azure-devops-extension-api.Configuration" />

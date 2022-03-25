@@ -1,89 +1,53 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.LinkQueryMode
-    name: LinkQueryMode
-    fullName: LinkQueryMode
-    children:
-      - azure-devops-extension-api.LinkQueryMode.WorkItems
-      - azure-devops-extension-api.LinkQueryMode.LinksOneHopMustContain
-      - azure-devops-extension-api.LinkQueryMode.LinksOneHopMayContain
-      - azure-devops-extension-api.LinkQueryMode.LinksOneHopDoesNotContain
-      - azure-devops-extension-api.LinkQueryMode.LinksRecursiveMustContain
-      - azure-devops-extension-api.LinkQueryMode.LinksRecursiveMayContain
-      - azure-devops-extension-api.LinkQueryMode.LinksRecursiveDoesNotContain
-    langs:
-      - typeScript
-    type: enum
-    summary: The link query mode which determines the behavior of the query.
+### YamlMime:TSEnum
+name: LinkQueryMode
+uid: azure-devops-extension-api.LinkQueryMode
+package: azure-devops-extension-api
+summary: The link query mode which determines the behavior of the query.
+fullName: LinkQueryMode
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: WorkItems
+    uid: azure-devops-extension-api.LinkQueryMode.WorkItems
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.LinkQueryMode.WorkItems
-    name: WorkItems
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
+    summary: Returns flat list of work items.
     numericValue: 0
+  - name: LinksOneHopMustContain
+    uid: azure-devops-extension-api.LinkQueryMode.LinksOneHopMustContain
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.LinkQueryMode.LinksOneHopMustContain
-    name: LinksOneHopMustContain
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Returns work items where the source, target, and link criteria are all
       satisfied.
-    type: field
     numericValue: 1
+  - name: LinksOneHopMayContain
+    uid: azure-devops-extension-api.LinkQueryMode.LinksOneHopMayContain
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.LinkQueryMode.LinksOneHopMayContain
-    name: LinksOneHopMayContain
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Returns work items that satisfy the source and link criteria, even if no
       linked work item satisfies the target criteria.
-    type: field
     numericValue: 2
+  - name: LinksOneHopDoesNotContain
+    uid: azure-devops-extension-api.LinkQueryMode.LinksOneHopDoesNotContain
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.LinkQueryMode.LinksOneHopDoesNotContain
-    name: LinksOneHopDoesNotContain
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Returns work items that satisfy the source, only if no linked work item
       satisfies the link and target criteria.
-    type: field
     numericValue: 3
+  - name: LinksRecursiveMustContain
+    uid: azure-devops-extension-api.LinkQueryMode.LinksRecursiveMustContain
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.LinkQueryMode.LinksRecursiveMustContain
-    name: LinksRecursiveMustContain
-    children: []
-    langs:
-      - typeScript
     summary: ''
-    type: field
     numericValue: 4
+  - name: LinksRecursiveMayContain
+    uid: azure-devops-extension-api.LinkQueryMode.LinksRecursiveMayContain
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.LinkQueryMode.LinksRecursiveMayContain
-    name: LinksRecursiveMayContain
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Returns work items a hierarchy of work items that by default satisfy the
       source
-    type: field
     numericValue: 5
+  - name: LinksRecursiveDoesNotContain
+    uid: azure-devops-extension-api.LinkQueryMode.LinksRecursiveDoesNotContain
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.LinkQueryMode.LinksRecursiveDoesNotContain
-    name: LinksRecursiveDoesNotContain
-    children: []
-    langs:
-      - typeScript
     summary: ''
-    type: field
     numericValue: 6
-    package: azure-devops-extension-api

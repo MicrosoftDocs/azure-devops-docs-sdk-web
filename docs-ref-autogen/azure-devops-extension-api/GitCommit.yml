@@ -1,35 +1,200 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitCommit
-    name: GitCommit
-    fullName: GitCommit
-    children:
-      - azure-devops-extension-api.GitCommit.treeId
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.GitCommitRef
+### YamlMime:TSType
+name: GitCommit
+uid: azure-devops-extension-api.GitCommit
+package: azure-devops-extension-api
+summary: ''
+fullName: GitCommit
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: author
+    uid: azure-devops-extension-api.GitCommit.author
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitCommit.treeId
-    name: treeId
-    fullName: treeId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Author of the commit.
+    fullName: author
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'author: GitUserDate'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitUserDate" />
+  - name: changeCounts
+    uid: azure-devops-extension-api.GitCommit.changeCounts
+    package: azure-devops-extension-api
+    summary: >-
+      Counts of the types of changes (edits, deletes, etc.) included with the
+      commit.
+    fullName: changeCounts
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'changeCounts: ChangeCountDictionary'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ChangeCountDictionary" />
+  - name: changes
+    uid: azure-devops-extension-api.GitCommit.changes
+    package: azure-devops-extension-api
+    summary: An enumeration of the changes included with the commit.
+    fullName: changes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'changes: GitChange[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.GitChange" />[]'
+  - name: comment
+    uid: azure-devops-extension-api.GitCommit.comment
+    package: azure-devops-extension-api
+    summary: Comment or message of the commit.
+    fullName: comment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        description: ''
+        type: string
+  - name: commentTruncated
+    uid: azure-devops-extension-api.GitCommit.commentTruncated
+    package: azure-devops-extension-api
+    summary: >-
+      Indicates if the comment is truncated from the full Git commit comment
+      message.
+    fullName: commentTruncated
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'commentTruncated: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: commitId
+    uid: azure-devops-extension-api.GitCommit.commitId
+    package: azure-devops-extension-api
+    summary: ID (SHA-1) of the commit.
+    fullName: commitId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'commitId: string'
+      return:
+        description: ''
+        type: string
+  - name: committer
+    uid: azure-devops-extension-api.GitCommit.committer
+    package: azure-devops-extension-api
+    summary: Committer of the commit.
+    fullName: committer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'committer: GitUserDate'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitUserDate" />
+  - name: parents
+    uid: azure-devops-extension-api.GitCommit.parents
+    package: azure-devops-extension-api
+    summary: An enumeration of the parent commit IDs for this commit.
+    fullName: parents
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'parents: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: push
+    uid: azure-devops-extension-api.GitCommit.push
+    package: azure-devops-extension-api
+    summary: The push associated with this commit.
+    fullName: push
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'push: GitPushRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitPushRef" />
+  - name: remoteUrl
+    uid: azure-devops-extension-api.GitCommit.remoteUrl
+    package: azure-devops-extension-api
+    summary: Remote URL path to the commit.
+    fullName: remoteUrl
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'remoteUrl: string'
+      return:
+        description: ''
+        type: string
+  - name: statuses
+    uid: azure-devops-extension-api.GitCommit.statuses
+    package: azure-devops-extension-api
+    summary: >-
+      A list of status metadata from services and extensions that may associate
+      additional information to the commit.
+    fullName: statuses
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'statuses: GitStatus[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.GitStatus" />[]'
+  - name: treeId
+    uid: azure-devops-extension-api.GitCommit.treeId
+    package: azure-devops-extension-api
     summary: ''
+    fullName: treeId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'treeId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: url
+    uid: azure-devops-extension-api.GitCommit.url
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitCommitRef
-    name: GitCommitRef
-    spec.typeScript:
-      - name: GitCommitRef
-        fullName: GitCommitRef
-        uid: azure-devops-extension-api.GitCommitRef
+    summary: REST URL for this resource.
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+  - name: workItems
+    uid: azure-devops-extension-api.GitCommit.workItems
+    package: azure-devops-extension-api
+    summary: A list of workitems associated with this commit.
+    fullName: workItems
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'workItems: ResourceRef[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.ResourceRef" />[]'
+extends: <xref uid="azure-devops-extension-api.GitCommitRef" />

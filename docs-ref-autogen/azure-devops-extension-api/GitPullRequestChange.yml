@@ -1,35 +1,129 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitPullRequestChange
-    name: GitPullRequestChange
-    fullName: GitPullRequestChange
-    children:
-      - azure-devops-extension-api.GitPullRequestChange.changeTrackingId
-    langs:
-      - typeScript
-    type: interface
-    summary: Change made in a pull request.
-    extends:
-      name: azure-devops-extension-api.GitChange
+### YamlMime:TSType
+name: GitPullRequestChange
+uid: azure-devops-extension-api.GitPullRequestChange
+package: azure-devops-extension-api
+summary: Change made in a pull request.
+fullName: GitPullRequestChange
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: changeId
+    uid: azure-devops-extension-api.GitPullRequestChange.changeId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitPullRequestChange.changeTrackingId
-    name: changeTrackingId
-    fullName: changeTrackingId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ID of the change within the group of changes.
+    fullName: changeId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'changeId: number'
+      return:
+        description: ''
+        type: number
+  - name: changeTrackingId
+    uid: azure-devops-extension-api.GitPullRequestChange.changeTrackingId
+    package: azure-devops-extension-api
     summary: ID used to track files through multiple changes.
+    fullName: changeTrackingId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'changeTrackingId: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: changeType
+    uid: azure-devops-extension-api.GitPullRequestChange.changeType
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitChange
-    name: GitChange
-    spec.typeScript:
-      - name: GitChange
-        fullName: GitChange
-        uid: azure-devops-extension-api.GitChange
+    summary: The type of change that was made to the item.
+    fullName: changeType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'changeType: VersionControlChangeType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.VersionControlChangeType" />
+  - name: item
+    uid: azure-devops-extension-api.GitPullRequestChange.item
+    package: azure-devops-extension-api
+    summary: Current version.
+    fullName: item
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'item: GitItem'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitItem" />
+  - name: newContent
+    uid: azure-devops-extension-api.GitPullRequestChange.newContent
+    package: azure-devops-extension-api
+    summary: Content of the item after the change.
+    fullName: newContent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'newContent: ItemContent'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ItemContent" />
+  - name: newContentTemplate
+    uid: azure-devops-extension-api.GitPullRequestChange.newContentTemplate
+    package: azure-devops-extension-api
+    summary: New Content template to be used when pushing new changes.
+    fullName: newContentTemplate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'newContentTemplate: GitTemplate'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitTemplate" />
+  - name: originalPath
+    uid: azure-devops-extension-api.GitPullRequestChange.originalPath
+    package: azure-devops-extension-api
+    summary: Original path of item if different from current path.
+    fullName: originalPath
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'originalPath: string'
+      return:
+        description: ''
+        type: string
+  - name: sourceServerItem
+    uid: azure-devops-extension-api.GitPullRequestChange.sourceServerItem
+    package: azure-devops-extension-api
+    summary: Path of the item on the server.
+    fullName: sourceServerItem
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sourceServerItem: string'
+      return:
+        description: ''
+        type: string
+  - name: url
+    uid: azure-devops-extension-api.GitPullRequestChange.url
+    package: azure-devops-extension-api
+    summary: URL to retrieve the item.
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.GitChange" />

@@ -1,35 +1,66 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BuildArtifactDownloadInput
-    name: BuildArtifactDownloadInput
-    fullName: BuildArtifactDownloadInput
-    children:
-      - azure-devops-extension-api.BuildArtifactDownloadInput.artifactItems
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.ArtifactDownloadInputBase
+### YamlMime:TSType
+name: BuildArtifactDownloadInput
+uid: azure-devops-extension-api.BuildArtifactDownloadInput
+package: azure-devops-extension-api
+summary: ''
+fullName: BuildArtifactDownloadInput
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: alias
+    uid: azure-devops-extension-api.BuildArtifactDownloadInput.alias
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildArtifactDownloadInput.artifactItems
-    name: artifactItems
+    summary: Gets or sets the alias of artifact.
+    fullName: alias
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'alias: string'
+      return:
+        description: ''
+        type: string
+  - name: artifactDownloadMode
+    uid: azure-devops-extension-api.BuildArtifactDownloadInput.artifactDownloadMode
+    package: azure-devops-extension-api
+    summary: >-
+      Gets or sets the name of artifact definition. Valid values are 'Skip',
+      'Selective', 'All'.
+    fullName: artifactDownloadMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'artifactDownloadMode: string'
+      return:
+        description: ''
+        type: string
+  - name: artifactItems
+    uid: azure-devops-extension-api.BuildArtifactDownloadInput.artifactItems
+    package: azure-devops-extension-api
+    summary: Gets or sets the artifact items of the input.
     fullName: artifactItems
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the list of files to be downloaded for build artifact.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'artifactItems: string[]'
       return:
-        type:
-          - 'string[]'
+        description: ''
+        type: 'string[]'
+  - name: artifactType
+    uid: azure-devops-extension-api.BuildArtifactDownloadInput.artifactType
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ArtifactDownloadInputBase
-    name: ArtifactDownloadInputBase
-    spec.typeScript:
-      - name: ArtifactDownloadInputBase
-        fullName: ArtifactDownloadInputBase
-        uid: azure-devops-extension-api.ArtifactDownloadInputBase
+    summary: Gets or sets the type of artifact.
+    fullName: artifactType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'artifactType: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.ArtifactDownloadInputBase" />

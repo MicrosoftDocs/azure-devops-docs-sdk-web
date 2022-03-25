@@ -1,65 +1,103 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent
-    name: BoardColumnCreatedRealtimeEvent
-    fullName: BoardColumnCreatedRealtimeEvent
-    children:
-      - azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.columnIds
-      - azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.eTag
-      - azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.nextColumnId
-    langs:
-      - typeScript
-    type: interface
-    summary: INTERNAL. Event that is fired when a column is added.
-    extends:
-      name: azure-devops-extension-api.RealtimeBoardEvent
+### YamlMime:TSType
+name: BoardColumnCreatedRealtimeEvent
+uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent
+package: azure-devops-extension-api
+summary: INTERNAL. Event that is fired when a column is added.
+fullName: BoardColumnCreatedRealtimeEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: boardId
+    uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.boardId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.columnIds
-    name: columnIds
-    fullName: columnIds
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: The Board ID of the event
+    fullName: boardId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'boardId: number'
+      return:
+        description: ''
+        type: number
+  - name: columnIds
+    uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.columnIds
+    package: azure-devops-extension-api
     summary: Ids of columns created.
+    fullName: columnIds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'columnIds: string[]'
       return:
-        type:
-          - 'string[]'
+        description: ''
+        type: 'string[]'
+  - name: eTag
+    uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.eTag
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.eTag
-    name: eTag
-    fullName: eTag
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The latest ETag for the column.
+    fullName: eTag
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'eTag: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: eventId
+    uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.eventId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.nextColumnId
-    name: nextColumnId
-    fullName: nextColumnId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: 'A unique ID for events, used for logging and tracing.'
+    fullName: eventId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventId: string'
+      return:
+        description: ''
+        type: string
+  - name: nextColumnId
+    uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.nextColumnId
+    package: azure-devops-extension-api
     summary: Gets the identifier of the next column.
+    fullName: nextColumnId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'nextColumnId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: projectId
+    uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.projectId
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RealtimeBoardEvent
-    name: RealtimeBoardEvent
-    spec.typeScript:
-      - name: RealtimeBoardEvent
-        fullName: RealtimeBoardEvent
-        uid: azure-devops-extension-api.RealtimeBoardEvent
+    summary: The Project ID of the board.
+    fullName: projectId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+  - name: type
+    uid: azure-devops-extension-api.BoardColumnCreatedRealtimeEvent.type
+    package: azure-devops-extension-api
+    summary: 'The type of this event, so the client can disambiguate'
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.RealtimeBoardEvent" />

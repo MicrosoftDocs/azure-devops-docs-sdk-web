@@ -1,41 +1,26 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.WorkItemTrackingServiceIds
-    name: WorkItemTrackingServiceIds
-    fullName: WorkItemTrackingServiceIds
-    children:
-      - >-
-        azure-devops-extension-api.WorkItemTrackingServiceIds.WorkItemFormNavigationService
-      - >-
-        azure-devops-extension-api.WorkItemTrackingServiceIds.WorkItemFormService
-    langs:
-      - typeScript
-    type: enum
-    summary: >-
-      Contribution ids of Azure Pipelines services which can be obtained from
-      DevOps.getService
-    package: azure-devops-extension-api
-  - uid: >-
+### YamlMime:TSEnum
+name: WorkItemTrackingServiceIds
+uid: azure-devops-extension-api.WorkItemTrackingServiceIds
+package: azure-devops-extension-api
+summary: >-
+  Contribution ids of Azure Boards services which can be obtained from
+  DevOps.getService
+fullName: WorkItemTrackingServiceIds
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: WorkItemFormNavigationService
+    uid: >-
       azure-devops-extension-api.WorkItemTrackingServiceIds.WorkItemFormNavigationService
-    name: WorkItemFormNavigationService
-    children: []
-    langs:
-      - typeScript
-    summary: Host service for opening the work item form
-    type: field
-    numericValue: null
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WorkItemTrackingServiceIds.WorkItemFormService
-    name: WorkItemFormService
-    children: []
-    langs:
-      - typeScript
+    summary: Host service for opening the work item form
+  - name: WorkItemFormService
+    uid: azure-devops-extension-api.WorkItemTrackingServiceIds.WorkItemFormService
+    package: azure-devops-extension-api
     summary: >-
       Host service for interacting with the currently active work item form
       (work item currently displayed in the UI).
 
       Form service depends on the current active work item context. Will throw
       an error when there is no open work item.
-    type: field
-    numericValue: null
-    package: azure-devops-extension-api

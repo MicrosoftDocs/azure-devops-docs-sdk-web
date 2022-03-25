@@ -1,35 +1,51 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BoardColumnUpdate
-    name: BoardColumnUpdate
-    fullName: BoardColumnUpdate
-    children:
-      - azure-devops-extension-api.BoardColumnUpdate.name
-    langs:
-      - typeScript
-    type: interface
-    summary: Describes a column to update on a board.
-    extends:
-      name: azure-devops-extension-api.BoardColumnCreate
+### YamlMime:TSType
+name: BoardColumnUpdate
+uid: azure-devops-extension-api.BoardColumnUpdate
+package: azure-devops-extension-api
+summary: Describes a column to update on a board.
+fullName: BoardColumnUpdate
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.BoardColumnUpdate.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardColumnUpdate.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Board column description.
+    fullName: description
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+  - name: name
+    uid: azure-devops-extension-api.BoardColumnUpdate.name
+    package: azure-devops-extension-api
     summary: Name of the column.
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: nextColumnId
+    uid: azure-devops-extension-api.BoardColumnUpdate.nextColumnId
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.BoardColumnCreate
-    name: BoardColumnCreate
-    spec.typeScript:
-      - name: BoardColumnCreate
-        fullName: BoardColumnCreate
-        uid: azure-devops-extension-api.BoardColumnCreate
+    summary: 'Next column identifier or supported directive: $first or $last.'
+    fullName: nextColumnId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nextColumnId: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.BoardColumnCreate" />

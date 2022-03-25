@@ -1,77 +1,79 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitMerge
-    name: GitMerge
-    fullName: GitMerge
-    children:
-      - azure-devops-extension-api.GitMerge.detailedStatus
-      - azure-devops-extension-api.GitMerge.mergeOperationId
-      - azure-devops-extension-api.GitMerge.status
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.GitMergeParameters
+### YamlMime:TSType
+name: GitMerge
+uid: azure-devops-extension-api.GitMerge
+package: azure-devops-extension-api
+summary: ''
+fullName: GitMerge
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: comment
+    uid: azure-devops-extension-api.GitMerge.comment
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitMerge.detailedStatus
-    name: detailedStatus
-    fullName: detailedStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Comment or message of the commit.
+    fullName: comment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        description: ''
+        type: string
+  - name: detailedStatus
+    uid: azure-devops-extension-api.GitMerge.detailedStatus
+    package: azure-devops-extension-api
     summary: Detailed status of the merge operation.
+    fullName: detailedStatus
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'detailedStatus: GitMergeOperationStatusDetail'
       return:
-        type:
-          - azure-devops-extension-api.GitMergeOperationStatusDetail
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.GitMergeOperationStatusDetail"
+          />
+  - name: mergeOperationId
+    uid: azure-devops-extension-api.GitMerge.mergeOperationId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitMerge.mergeOperationId
-    name: mergeOperationId
-    fullName: mergeOperationId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Unique identifier for the merge operation.
+    fullName: mergeOperationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mergeOperationId: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: parents
+    uid: azure-devops-extension-api.GitMerge.parents
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitMerge.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: An enumeration of the parent commit IDs for the merge  commit.
+    fullName: parents
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'parents: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: status
+    uid: azure-devops-extension-api.GitMerge.status
+    package: azure-devops-extension-api
     summary: Status of the merge operation.
+    fullName: status
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'status: GitAsyncOperationStatus'
       return:
-        type:
-          - azure-devops-extension-api.GitAsyncOperationStatus
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GitMergeParameters
-    name: GitMergeParameters
-    spec.typeScript:
-      - name: GitMergeParameters
-        fullName: GitMergeParameters
-        uid: azure-devops-extension-api.GitMergeParameters
-  - uid: azure-devops-extension-api.GitMergeOperationStatusDetail
-    name: GitMergeOperationStatusDetail
-    spec.typeScript:
-      - name: GitMergeOperationStatusDetail
-        fullName: GitMergeOperationStatusDetail
-        uid: azure-devops-extension-api.GitMergeOperationStatusDetail
-  - uid: azure-devops-extension-api.GitAsyncOperationStatus
-    name: GitAsyncOperationStatus
-    spec.typeScript:
-      - name: GitAsyncOperationStatus
-        fullName: GitAsyncOperationStatus
-        uid: azure-devops-extension-api.GitAsyncOperationStatus
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitAsyncOperationStatus" />
+extends: <xref uid="azure-devops-extension-api.GitMergeParameters" />

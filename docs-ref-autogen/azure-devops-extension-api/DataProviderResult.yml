@@ -1,148 +1,111 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.DataProviderResult
-    name: DataProviderResult
-    fullName: DataProviderResult
-    children:
-      - azure-devops-extension-api.DataProviderResult.clientProviders
-      - azure-devops-extension-api.DataProviderResult.data
-      - azure-devops-extension-api.DataProviderResult.exceptions
-      - azure-devops-extension-api.DataProviderResult.resolvedProviders
-      - azure-devops-extension-api.DataProviderResult.scopeName
-      - azure-devops-extension-api.DataProviderResult.scopeValue
-      - azure-devops-extension-api.DataProviderResult.sharedData
-    langs:
-      - typeScript
-    type: interface
-    summary: Result structure from calls to GetDataProviderData
+### YamlMime:TSType
+name: DataProviderResult
+uid: azure-devops-extension-api.DataProviderResult
+package: azure-devops-extension-api
+summary: Result structure from calls to GetDataProviderData
+fullName: DataProviderResult
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: clientProviders
+    uid: azure-devops-extension-api.DataProviderResult.clientProviders
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DataProviderResult.clientProviders
-    name: clientProviders
-    fullName: clientProviders
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       This is the set of data providers that were requested, but either they
       were defined as client providers, or as remote providers that failed and
       may be retried by the client.
+    fullName: clientProviders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'clientProviders: [key: string]: ClientDataProviderQuery'
       return:
-        type:
-          - '[key: string]: azure-devops-extension-api.ClientDataProviderQuery'
+        description: ''
+        type: >-
+          [key: string]\: <xref
+          uid="azure-devops-extension-api.ClientDataProviderQuery" />
+  - name: data
+    uid: azure-devops-extension-api.DataProviderResult.data
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DataProviderResult.data
-    name: data
-    fullName: data
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Property bag of data keyed off of the data provider contribution id
+    fullName: data
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'data: [key: string]: any'
       return:
-        type:
-          - '[key: string]: any'
+        description: ''
+        type: '[key: string]\: any'
+  - name: exceptions
+    uid: azure-devops-extension-api.DataProviderResult.exceptions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DataProviderResult.exceptions
-    name: exceptions
-    fullName: exceptions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Set of exceptions that occurred resolving the data providers.
+    fullName: exceptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'exceptions: [key: string]: DataProviderExceptionDetails'
       return:
-        type:
-          - >-
-            [key: string]:
-            azure-devops-extension-api.DataProviderExceptionDetails
+        description: ''
+        type: >-
+          [key: string]\: <xref
+          uid="azure-devops-extension-api.DataProviderExceptionDetails" />
+  - name: resolvedProviders
+    uid: azure-devops-extension-api.DataProviderResult.resolvedProviders
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DataProviderResult.resolvedProviders
-    name: resolvedProviders
-    fullName: resolvedProviders
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: List of data providers resolved in the data-provider query
+    fullName: resolvedProviders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'resolvedProviders: ResolvedDataProvider[]'
       return:
-        type:
-          - 'azure-devops-extension-api.ResolvedDataProvider[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.ResolvedDataProvider" />[]'
+  - name: scopeName
+    uid: azure-devops-extension-api.DataProviderResult.scopeName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DataProviderResult.scopeName
-    name: scopeName
-    fullName: scopeName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Scope name applied to this data provider result.
+    fullName: scopeName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scopeName: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: scopeValue
+    uid: azure-devops-extension-api.DataProviderResult.scopeValue
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DataProviderResult.scopeValue
-    name: scopeValue
-    fullName: scopeValue
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Scope value applied to this data provider result.
+    fullName: scopeValue
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scopeValue: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: sharedData
+    uid: azure-devops-extension-api.DataProviderResult.sharedData
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DataProviderResult.sharedData
-    name: sharedData
-    fullName: sharedData
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Property bag of shared data that was contributed to by any of the
       individual data providers
+    fullName: sharedData
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'sharedData: [key: string]: any'
       return:
-        type:
-          - '[key: string]: any'
-    package: azure-devops-extension-api
-references:
-  - uid: '[key: string]: azure-devops-extension-api.ClientDataProviderQuery'
-    name: ClientDataProviderQuery
-    spec.typeScript:
-      - name: '[key: string]: '
-        fullName: '[key: string]: '
-      - name: ClientDataProviderQuery
-        fullName: ClientDataProviderQuery
-        uid: azure-devops-extension-api.ClientDataProviderQuery
-  - uid: '[key: string]: azure-devops-extension-api.DataProviderExceptionDetails'
-    name: DataProviderExceptionDetails
-    spec.typeScript:
-      - name: '[key: string]: '
-        fullName: '[key: string]: '
-      - name: DataProviderExceptionDetails
-        fullName: DataProviderExceptionDetails
-        uid: azure-devops-extension-api.DataProviderExceptionDetails
-  - uid: 'azure-devops-extension-api.ResolvedDataProvider[]'
-    name: 'ResolvedDataProvider[]'
-    spec.typeScript:
-      - name: ResolvedDataProvider
-        fullName: ResolvedDataProvider
-        uid: azure-devops-extension-api.ResolvedDataProvider
-      - name: '[]'
-        fullName: '[]'
+        description: ''
+        type: '[key: string]\: any'

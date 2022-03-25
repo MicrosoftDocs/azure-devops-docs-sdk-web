@@ -1,42 +1,57 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ClientDataProviderQuery
-    name: ClientDataProviderQuery
-    fullName: ClientDataProviderQuery
-    children:
-      - >-
-        azure-devops-extension-api.ClientDataProviderQuery.queryServiceInstanceType
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      A client data provider are the details needed to make the data provider
-      request from the client.
-    extends:
-      name: azure-devops-extension-api.DataProviderQuery
+### YamlMime:TSType
+name: ClientDataProviderQuery
+uid: azure-devops-extension-api.ClientDataProviderQuery
+package: azure-devops-extension-api
+summary: >-
+  A client data provider are the details needed to make the data provider
+  request from the client.
+fullName: ClientDataProviderQuery
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: context
+    uid: azure-devops-extension-api.ClientDataProviderQuery.context
     package: azure-devops-extension-api
-  - uid: >-
+    summary: Contextual information to pass to the data providers
+    fullName: context
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'context: DataProviderContext'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DataProviderContext" />
+  - name: contributionIds
+    uid: azure-devops-extension-api.ClientDataProviderQuery.contributionIds
+    package: azure-devops-extension-api
+    summary: The contribution ids of the data providers to resolve
+    fullName: contributionIds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'contributionIds: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: queryServiceInstanceType
+    uid: >-
       azure-devops-extension-api.ClientDataProviderQuery.queryServiceInstanceType
-    name: queryServiceInstanceType
-    fullName: queryServiceInstanceType
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       The Id of the service instance type that should be communicated with in
       order to resolve the data providers from the client given the query
       values.
+    fullName: queryServiceInstanceType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'queryServiceInstanceType: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.DataProviderQuery
-    name: DataProviderQuery
-    spec.typeScript:
-      - name: DataProviderQuery
-        fullName: DataProviderQuery
-        uid: azure-devops-extension-api.DataProviderQuery
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.DataProviderQuery" />

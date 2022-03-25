@@ -1,234 +1,160 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.FileContainerRestClient
-    name: FileContainerRestClient
-    fullName: FileContainerRestClient
-    children:
-      - azure-devops-extension-api.FileContainerRestClient.createItems
-      - azure-devops-extension-api.FileContainerRestClient.deleteItem
-      - azure-devops-extension-api.FileContainerRestClient.constructor
-      - azure-devops-extension-api.FileContainerRestClient.getContainers
-      - azure-devops-extension-api.FileContainerRestClient.getItems
-    langs:
-      - typeScript
-    type: class
+### YamlMime:TSType
+name: FileContainerRestClient
+uid: azure-devops-extension-api.FileContainerRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: FileContainerRestClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: FileContainerRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.FileContainerRestClient.constructor
+    package: azure-devops-extension-api
     summary: ''
-    extends:
-      name: azure-devops-extension-api.RestClientBase
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.FileContainerRestClient.createItems
-    name: >-
-      createItems(VssJsonCollectionWrapperV<FileContainerItem[]>, number,
-      string)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Creates the specified items in in the referenced container.
-    syntax:
-      content: >-
-        function createItems(items:
-        VssJsonCollectionWrapperV<FileContainerItem[]>, containerId: number,
-        scope?: string)
-      parameters:
-        - id: items
-          type:
-            - >-
-              azure-devops-extension-api.VssJsonCollectionWrapperV<azure-devops-extension-api.FileContainerItem[]>
-          description: '-'
-        - id: containerId
-          type:
-            - number
-          description: '-'
-        - id: scope
-          type:
-            - string
-          description: >
-            A guid representing the scope of the container. This is often the
-            project id.
-          optional: true
-      return:
-        type:
-          - 'Promise<azure-devops-extension-api.FileContainerItem[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.FileContainerRestClient.deleteItem
-    name: 'deleteItem(number, string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Deletes the specified items in a container.
-    syntax:
-      content: >-
-        function deleteItem(containerId: number, itemPath: string, scope?:
-        string)
-      parameters:
-        - id: containerId
-          type:
-            - number
-          description: Container Id.
-        - id: itemPath
-          type:
-            - string
-          description: Path to delete.
-        - id: scope
-          type:
-            - string
-          description: >
-            A guid representing the scope of the container. This is often the
-            project id.
-          optional: true
-      return:
-        type:
-          - Promise<void>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.FileContainerRestClient.constructor
-    name: FileContainerRestClient(IVssRestClientOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'new FileContainerRestClient(options: IVssRestClientOptions)'
       parameters:
         - id: options
-          type:
-            - azure-devops-extension-api.IVssRestClientOptions
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
+methods:
+  - name: >-
+      createItems(VssJsonCollectionWrapperV<FileContainerItem[]>, number,
+      string)
+    uid: azure-devops-extension-api.FileContainerRestClient.createItems
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.FileContainerRestClient.getContainers
-    name: 'getContainers(string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: Creates the specified items in in the referenced container.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createItems(items:
+        VssJsonCollectionWrapperV<FileContainerItem[]>, containerId: number,
+        scope?: string): Promise<FileContainerItem[]>
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="azure-devops-extension-api.VssJsonCollectionWrapperV"
+            />&lt;<xref uid="azure-devops-extension-api.FileContainerItem"
+            />[]&gt;
+          description: '-'
+        - id: containerId
+          type: number
+          description: '-'
+        - id: scope
+          type: string
+          description: >
+            A guid representing the scope of the container. This is often the
+            project id.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.FileContainerItem"
+          />[]&gt;
+  - name: 'deleteItem(number, string, string)'
+    uid: azure-devops-extension-api.FileContainerRestClient.deleteItem
+    package: azure-devops-extension-api
+    summary: Deletes the specified items in a container.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteItem(containerId: number, itemPath: string, scope?:
+        string): Promise<void>
+      parameters:
+        - id: containerId
+          type: number
+          description: Container Id.
+        - id: itemPath
+          type: string
+          description: Path to delete.
+        - id: scope
+          type: string
+          description: >
+            A guid representing the scope of the container. This is often the
+            project id.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: 'getContainers(string, string)'
+    uid: azure-devops-extension-api.FileContainerRestClient.getContainers
+    package: azure-devops-extension-api
     summary: >-
       Gets containers filtered by a comma separated list of artifact uris within
       the same scope, if not specified returns all containers
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'function getContainers(scope?: string, artifactUris?: string)'
+      content: >-
+        function getContainers(scope?: string, artifactUris?: string):
+        Promise<FileContainer[]>
       parameters:
         - id: scope
-          type:
-            - string
+          type: string
           description: >-
             A guid representing the scope of the container. This is often the
             project id.
-          optional: true
         - id: artifactUris
-          type:
-            - string
+          type: string
           description: |
             -
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.FileContainer[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.FileContainerRestClient.getItems
-    name: >-
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.FileContainer"
+          />[]&gt;
+  - name: >-
       getItems(number, string, string, boolean, string, string, boolean,
       boolean)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-devops-extension-api.FileContainerRestClient.getItems
+    package: azure-devops-extension-api
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getItems(containerId: number, scope?: string, itemPath?:
         string, metadata?: boolean, format?: string, downloadFileName?: string,
-        includeDownloadTickets?: boolean, isShallow?: boolean)
+        includeDownloadTickets?: boolean, isShallow?: boolean):
+        Promise<FileContainerItem[]>
       parameters:
         - id: containerId
-          type:
-            - number
+          type: number
           description: '-'
         - id: scope
-          type:
-            - string
+          type: string
           description: '-'
-          optional: true
         - id: itemPath
-          type:
-            - string
+          type: string
           description: '-'
-          optional: true
         - id: metadata
-          type:
-            - boolean
+          type: boolean
           description: '-'
-          optional: true
         - id: format
-          type:
-            - string
+          type: string
           description: '-'
-          optional: true
         - id: downloadFileName
-          type:
-            - string
+          type: string
           description: '-'
-          optional: true
         - id: includeDownloadTickets
-          type:
-            - boolean
+          type: boolean
           description: '-'
-          optional: true
         - id: isShallow
-          type:
-            - boolean
+          type: boolean
           description: |
             -
-          optional: true
       return:
-        type:
-          - 'Promise<azure-devops-extension-api.FileContainerItem[]>'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RestClientBase
-    name: RestClientBase
-    spec.typeScript:
-      - name: RestClientBase
-        fullName: RestClientBase
-        uid: azure-devops-extension-api.RestClientBase
-  - uid: azure-devops-extension-api.IVssRestClientOptions
-    name: IVssRestClientOptions
-    spec.typeScript:
-      - name: IVssRestClientOptions
-        fullName: IVssRestClientOptions
-        uid: azure-devops-extension-api.IVssRestClientOptions
-  - uid: >-
-      azure-devops-extension-api.VssJsonCollectionWrapperV<azure-devops-extension-api.FileContainerItem[]>
-    name: 'FileContainerItem[]>'
-    spec.typeScript:
-      - name: VssJsonCollectionWrapperV
-        fullName: VssJsonCollectionWrapperV
-        uid: azure-devops-extension-api.VssJsonCollectionWrapperV
-      - name: <
-        fullName: <
-      - name: FileContainerItem
-        fullName: FileContainerItem
-        uid: azure-devops-extension-api.FileContainerItem
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.FileContainerItem[]>'
-    name: 'FileContainerItem[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: FileContainerItem
-        fullName: FileContainerItem
-        uid: azure-devops-extension-api.FileContainerItem
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: 'Promise<azure-devops-extension-api.FileContainer[]>'
-    name: 'FileContainer[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: FileContainer
-        fullName: FileContainer
-        uid: azure-devops-extension-api.FileContainer
-      - name: '[]>'
-        fullName: '[]>'
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.FileContainerItem"
+          />[]&gt;
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

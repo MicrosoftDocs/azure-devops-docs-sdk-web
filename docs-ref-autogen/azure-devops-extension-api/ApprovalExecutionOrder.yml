@@ -1,31 +1,25 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ApprovalExecutionOrder
-    name: ApprovalExecutionOrder
-    fullName: ApprovalExecutionOrder
-    children:
-      - azure-devops-extension-api.ApprovalExecutionOrder.AnyOrder
-      - azure-devops-extension-api.ApprovalExecutionOrder.InSequence
-    langs:
-      - typeScript
-    type: enum
-    summary: ''
+### YamlMime:TSEnum
+name: ApprovalExecutionOrder
+uid: azure-devops-extension-api.ApprovalExecutionOrder
+package: azure-devops-extension-api
+summary: ''
+fullName: ApprovalExecutionOrder
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: BeforeGates
+    uid: azure-devops-extension-api.ApprovalExecutionOrder.BeforeGates
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ApprovalExecutionOrder.AnyOrder
-    name: AnyOrder
-    children: []
-    langs:
-      - typeScript
-    summary: Indicates that the approvers can approve in any order.
-    type: field
-    numericValue: 0
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ApprovalExecutionOrder.InSequence
-    name: InSequence
-    children: []
-    langs:
-      - typeScript
-    summary: Indicates that the approvers can approve in sequential order.
-    type: field
+    summary: Approvals shown before gates.
     numericValue: 1
+  - name: AfterSuccessfulGates
+    uid: azure-devops-extension-api.ApprovalExecutionOrder.AfterSuccessfulGates
     package: azure-devops-extension-api
+    summary: Approvals shown after successful execution of gates.
+    numericValue: 2
+  - name: AfterGatesAlways
+    uid: azure-devops-extension-api.ApprovalExecutionOrder.AfterGatesAlways
+    package: azure-devops-extension-api
+    summary: Approvals shown always after execution of gates.
+    numericValue: 4

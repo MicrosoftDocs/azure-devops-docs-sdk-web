@@ -1,132 +1,92 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters
-    name: NotificationSubscriptionCreateParameters
-    fullName: NotificationSubscriptionCreateParameters
-    children:
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionCreateParameters.channel
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionCreateParameters.description
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionCreateParameters.filter
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionCreateParameters.scope
-      - >-
-        azure-devops-extension-api.NotificationSubscriptionCreateParameters.subscriber
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Parameters for creating a new subscription. A subscription defines
-      criteria for matching events and how the subscription's subscriber should
-      be notified about those events.
-    package: azure-devops-extension-api
-  - uid: >-
+### YamlMime:TSType
+name: NotificationSubscriptionCreateParameters
+uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters
+package: azure-devops-extension-api
+summary: >-
+  Parameters for creating a new subscription. A subscription defines criteria
+  for matching events and how the subscription's subscriber should be notified
+  about those events.
+fullName: NotificationSubscriptionCreateParameters
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: channel
+    uid: >-
       azure-devops-extension-api.NotificationSubscriptionCreateParameters.channel
-    name: channel
-    fullName: channel
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: Channel for delivering notifications triggered by the new subscription.
+    fullName: channel
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'channel: ISubscriptionChannel'
       return:
-        type:
-          - azure-devops-extension-api.ISubscriptionChannel
-    package: azure-devops-extension-api
-  - uid: >-
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ISubscriptionChannel" />
+  - name: description
+    uid: >-
       azure-devops-extension-api.NotificationSubscriptionCreateParameters.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       Brief description for the new subscription. Typically describes filter
       criteria which helps identity the subscription.
+    fullName: description
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: filter
+    uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters.filter
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters.filter
-    name: filter
-    fullName: filter
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Matching criteria for the new subscription. ExpressionFilter
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'filter: ISubscriptionFilter'
       return:
-        type:
-          - azure-devops-extension-api.ISubscriptionFilter
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ISubscriptionFilter" />
+  - name: scope
+    uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters.scope
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.NotificationSubscriptionCreateParameters.scope
-    name: scope
-    fullName: scope
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The container in which events must be published from in order to be
       matched by the new subscription. If not specified, defaults to the current
       host (typically an account or project collection). For example, a
       subscription scoped to project A will not produce notifications for events
       published from project B.
+    fullName: scope
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scope: SubscriptionScope'
       return:
-        type:
-          - azure-devops-extension-api.SubscriptionScope
-    package: azure-devops-extension-api
-  - uid: >-
+        description: ''
+        type: <xref uid="azure-devops-extension-api.SubscriptionScope" />
+  - name: subscriber
+    uid: >-
       azure-devops-extension-api.NotificationSubscriptionCreateParameters.subscriber
-    name: subscriber
-    fullName: subscriber
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       User or group that will receive notifications for events matching the
       subscription's filter criteria. If not specified, defaults to the calling
       user.
+    fullName: subscriber
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'subscriber: IdentityRef'
       return:
-        type:
-          - azure-devops-extension-api.IdentityRef
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ISubscriptionChannel
-    name: ISubscriptionChannel
-    spec.typeScript:
-      - name: ISubscriptionChannel
-        fullName: ISubscriptionChannel
-        uid: azure-devops-extension-api.ISubscriptionChannel
-  - uid: azure-devops-extension-api.ISubscriptionFilter
-    name: ISubscriptionFilter
-    spec.typeScript:
-      - name: ISubscriptionFilter
-        fullName: ISubscriptionFilter
-        uid: azure-devops-extension-api.ISubscriptionFilter
-  - uid: azure-devops-extension-api.SubscriptionScope
-    name: SubscriptionScope
-    spec.typeScript:
-      - name: SubscriptionScope
-        fullName: SubscriptionScope
-        uid: azure-devops-extension-api.SubscriptionScope
-  - uid: azure-devops-extension-api.IdentityRef
-    name: IdentityRef
-    spec.typeScript:
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />

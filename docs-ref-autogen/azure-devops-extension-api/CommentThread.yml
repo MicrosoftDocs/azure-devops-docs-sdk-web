@@ -1,182 +1,135 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.CommentThread
-    name: CommentThread
-    fullName: CommentThread
-    children:
-      - azure-devops-extension-api.CommentThread.comments
-      - azure-devops-extension-api.CommentThread.id
-      - azure-devops-extension-api.CommentThread.identities
-      - azure-devops-extension-api.CommentThread.isDeleted
-      - azure-devops-extension-api.CommentThread.lastUpdatedDate
-      - azure-devops-extension-api.CommentThread.properties
-      - azure-devops-extension-api.CommentThread.publishedDate
-      - azure-devops-extension-api.CommentThread.status
-      - azure-devops-extension-api.CommentThread.threadContext
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Represents a comment thread of a pull request. A thread contains meta data
-      about the file it was left on along with one or more comments (an initial
-      comment and the subsequent replies).
+### YamlMime:TSType
+name: CommentThread
+uid: azure-devops-extension-api.CommentThread
+package: azure-devops-extension-api
+summary: >-
+  Represents a comment thread of a pull request. A thread contains meta data
+  about the file it was left on along with one or more comments (an initial
+  comment and the subsequent replies).
+fullName: CommentThread
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: comments
+    uid: azure-devops-extension-api.CommentThread.comments
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentThread.comments
-    name: comments
-    fullName: comments
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: A list of the comments.
+    fullName: comments
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'comments: Comment[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Comment[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.Comment" />[]'
+  - name: id
+    uid: azure-devops-extension-api.CommentThread.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentThread.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The comment thread id.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: identities
+    uid: azure-devops-extension-api.CommentThread.identities
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentThread.identities
-    name: identities
-    fullName: identities
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Set of identities related to this thread
+    fullName: identities
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'identities: [key: string]: IdentityRef'
       return:
-        type:
-          - '[key: string]: azure-devops-extension-api.IdentityRef'
+        description: ''
+        type: '[key: string]\: <xref uid="azure-devops-extension-api.IdentityRef" />'
+  - name: isDeleted
+    uid: azure-devops-extension-api.CommentThread.isDeleted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentThread.isDeleted
-    name: isDeleted
-    fullName: isDeleted
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Specify if the thread is deleted which happens when all comments are
       deleted.
+    fullName: isDeleted
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isDeleted: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: lastUpdatedDate
+    uid: azure-devops-extension-api.CommentThread.lastUpdatedDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentThread.lastUpdatedDate
-    name: lastUpdatedDate
-    fullName: lastUpdatedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The time this thread was last updated.
+    fullName: lastUpdatedDate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastUpdatedDate: Date'
       return:
-        type:
-          - Date
+        description: ''
+        type: Date
+  - name: properties
+    uid: azure-devops-extension-api.CommentThread.properties
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentThread.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Optional properties associated with the thread as a collection of
       key-value pairs.
+    fullName: properties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
-        type:
-          - any
+        description: ''
+        type: any
+  - name: publishedDate
+    uid: azure-devops-extension-api.CommentThread.publishedDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentThread.publishedDate
-    name: publishedDate
-    fullName: publishedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The time this thread was published.
+    fullName: publishedDate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'publishedDate: Date'
       return:
-        type:
-          - Date
+        description: ''
+        type: Date
+  - name: status
+    uid: azure-devops-extension-api.CommentThread.status
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentThread.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The status of the comment thread.
+    fullName: status
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'status: CommentThreadStatus'
       return:
-        type:
-          - azure-devops-extension-api.CommentThreadStatus
+        description: ''
+        type: <xref uid="azure-devops-extension-api.CommentThreadStatus" />
+  - name: threadContext
+    uid: azure-devops-extension-api.CommentThread.threadContext
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.CommentThread.threadContext
-    name: threadContext
-    fullName: threadContext
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Specify thread context such as position in left/right file.
+    fullName: threadContext
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'threadContext: CommentThreadContext'
       return:
-        type:
-          - azure-devops-extension-api.CommentThreadContext
-    package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.Comment[]'
-    name: 'Comment[]'
-    spec.typeScript:
-      - name: Comment
-        fullName: Comment
-        uid: azure-devops-extension-api.Comment
-      - name: '[]'
-        fullName: '[]'
-  - uid: '[key: string]: azure-devops-extension-api.IdentityRef'
-    name: IdentityRef
-    spec.typeScript:
-      - name: '[key: string]: '
-        fullName: '[key: string]: '
-      - name: IdentityRef
-        fullName: IdentityRef
-        uid: azure-devops-extension-api.IdentityRef
-  - uid: azure-devops-extension-api.CommentThreadStatus
-    name: CommentThreadStatus
-    spec.typeScript:
-      - name: CommentThreadStatus
-        fullName: CommentThreadStatus
-        uid: azure-devops-extension-api.CommentThreadStatus
-  - uid: azure-devops-extension-api.CommentThreadContext
-    name: CommentThreadContext
-    spec.typeScript:
-      - name: CommentThreadContext
-        fullName: CommentThreadContext
-        uid: azure-devops-extension-api.CommentThreadContext
+        description: ''
+        type: <xref uid="azure-devops-extension-api.CommentThreadContext" />

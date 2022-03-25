@@ -1,86 +1,76 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.DeploymentPoolSummary
-    name: DeploymentPoolSummary
-    fullName: DeploymentPoolSummary
-    children:
-      - azure-devops-extension-api.DeploymentPoolSummary.deploymentGroups
-      - azure-devops-extension-api.DeploymentPoolSummary.offlineAgentsCount
-      - azure-devops-extension-api.DeploymentPoolSummary.onlineAgentsCount
-      - azure-devops-extension-api.DeploymentPoolSummary.pool
-    langs:
-      - typeScript
-    type: interface
-    summary: Deployment pool summary.
+### YamlMime:TSType
+name: DeploymentPoolSummary
+uid: azure-devops-extension-api.DeploymentPoolSummary
+package: azure-devops-extension-api
+summary: Deployment pool summary.
+fullName: DeploymentPoolSummary
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: deploymentGroups
+    uid: azure-devops-extension-api.DeploymentPoolSummary.deploymentGroups
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentPoolSummary.deploymentGroups
-    name: deploymentGroups
-    fullName: deploymentGroups
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: List of deployment groups referring to the deployment pool.
+    fullName: deploymentGroups
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deploymentGroups: DeploymentGroupReference[]'
       return:
-        type:
-          - 'azure-devops-extension-api.DeploymentGroupReference[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.DeploymentGroupReference" />[]'
+  - name: offlineAgentsCount
+    uid: azure-devops-extension-api.DeploymentPoolSummary.offlineAgentsCount
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentPoolSummary.offlineAgentsCount
-    name: offlineAgentsCount
-    fullName: offlineAgentsCount
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Number of deployment agents that are offline.
+    fullName: offlineAgentsCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'offlineAgentsCount: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: onlineAgentsCount
+    uid: azure-devops-extension-api.DeploymentPoolSummary.onlineAgentsCount
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentPoolSummary.onlineAgentsCount
-    name: onlineAgentsCount
-    fullName: onlineAgentsCount
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Number of deployment agents that are online.
+    fullName: onlineAgentsCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'onlineAgentsCount: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: pool
+    uid: azure-devops-extension-api.DeploymentPoolSummary.pool
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentPoolSummary.pool
-    name: pool
-    fullName: pool
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Deployment pool.
+    fullName: pool
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pool: TaskAgentPoolReference'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentPoolReference
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentPoolReference" />
+  - name: resource
+    uid: azure-devops-extension-api.DeploymentPoolSummary.resource
     package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.DeploymentGroupReference[]'
-    name: 'DeploymentGroupReference[]'
-    spec.typeScript:
-      - name: DeploymentGroupReference
-        fullName: DeploymentGroupReference
-        uid: azure-devops-extension-api.DeploymentGroupReference
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.TaskAgentPoolReference
-    name: TaskAgentPoolReference
-    spec.typeScript:
-      - name: TaskAgentPoolReference
-        fullName: TaskAgentPoolReference
-        uid: azure-devops-extension-api.TaskAgentPoolReference
+    summary: Virtual machine Resource referring in pool.
+    fullName: resource
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'resource: EnvironmentResourceReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.EnvironmentResourceReference" />

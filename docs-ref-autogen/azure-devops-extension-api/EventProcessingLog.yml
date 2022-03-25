@@ -1,66 +1,214 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.EventProcessingLog
-    name: EventProcessingLog
-    fullName: EventProcessingLog
-    children:
-      - azure-devops-extension-api.EventProcessingLog.batches
-      - azure-devops-extension-api.EventProcessingLog.matcherResults
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.NotificationJobDiagnosticLog
+### YamlMime:TSType
+name: EventProcessingLog
+uid: azure-devops-extension-api.EventProcessingLog
+package: azure-devops-extension-api
+summary: ''
+fullName: EventProcessingLog
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: activityId
+    uid: azure-devops-extension-api.EventProcessingLog.activityId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.EventProcessingLog.batches
-    name: batches
-    fullName: batches
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      Identifier used for correlating to other diagnostics that may have been
+      recorded elsewhere.
+    fullName: activityId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'activityId: string'
+      return:
+        description: ''
+        type: string
+  - name: batches
+    uid: azure-devops-extension-api.EventProcessingLog.batches
+    package: azure-devops-extension-api
     summary: ''
+    fullName: batches
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'batches: EventBatch[]'
       return:
-        type:
-          - 'azure-devops-extension-api.EventBatch[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.EventBatch" />[]'
+  - name: description
+    uid: azure-devops-extension-api.EventProcessingLog.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.EventProcessingLog.matcherResults
-    name: matcherResults
-    fullName: matcherResults
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: description
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+  - name: endTime
+    uid: azure-devops-extension-api.EventProcessingLog.endTime
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: endTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'endTime: Date'
+      return:
+        description: ''
+        type: Date
+  - name: errors
+    uid: azure-devops-extension-api.EventProcessingLog.errors
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: errors
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errors: number'
+      return:
+        description: ''
+        type: number
+  - name: id
+    uid: azure-devops-extension-api.EventProcessingLog.id
+    package: azure-devops-extension-api
+    summary: Unique instance identifier.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: logType
+    uid: azure-devops-extension-api.EventProcessingLog.logType
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: logType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'logType: string'
+      return:
+        description: ''
+        type: string
+  - name: matcherResults
+    uid: azure-devops-extension-api.EventProcessingLog.matcherResults
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: matcherResults
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'matcherResults: MatcherResult[]'
       return:
-        type:
-          - 'azure-devops-extension-api.MatcherResult[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.MatcherResult" />[]'
+  - name: messages
+    uid: azure-devops-extension-api.EventProcessingLog.messages
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.NotificationJobDiagnosticLog
-    name: NotificationJobDiagnosticLog
-    spec.typeScript:
-      - name: NotificationJobDiagnosticLog
-        fullName: NotificationJobDiagnosticLog
-        uid: azure-devops-extension-api.NotificationJobDiagnosticLog
-  - uid: 'azure-devops-extension-api.EventBatch[]'
-    name: 'EventBatch[]'
-    spec.typeScript:
-      - name: EventBatch
-        fullName: EventBatch
-        uid: azure-devops-extension-api.EventBatch
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-devops-extension-api.MatcherResult[]'
-    name: 'MatcherResult[]'
-    spec.typeScript:
-      - name: MatcherResult
-        fullName: MatcherResult
-        uid: azure-devops-extension-api.MatcherResult
-      - name: '[]'
-        fullName: '[]'
+    summary: ''
+    fullName: messages
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'messages: NotificationDiagnosticLogMessage[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.NotificationDiagnosticLogMessage" />[]
+  - name: properties
+    uid: azure-devops-extension-api.EventProcessingLog.properties
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: properties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'properties: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+  - name: result
+    uid: azure-devops-extension-api.EventProcessingLog.result
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: result
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'result: string'
+      return:
+        description: ''
+        type: string
+  - name: source
+    uid: azure-devops-extension-api.EventProcessingLog.source
+    package: azure-devops-extension-api
+    summary: >-
+      This identifier depends on the logType.  For notification jobs, this will
+      be the job Id. For subscription tracing, this will be a special root Guid
+      with the subscription Id encoded.
+    fullName: source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'source: string'
+      return:
+        description: ''
+        type: string
+  - name: startTime
+    uid: azure-devops-extension-api.EventProcessingLog.startTime
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: startTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'startTime: Date'
+      return:
+        description: ''
+        type: Date
+  - name: stats
+    uid: azure-devops-extension-api.EventProcessingLog.stats
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: stats
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stats: [key: string]: function'
+      return:
+        description: ''
+        type: '[key: string]\: function'
+  - name: warnings
+    uid: azure-devops-extension-api.EventProcessingLog.warnings
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: warnings
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'warnings: number'
+      return:
+        description: ''
+        type: number
+extends: <xref uid="azure-devops-extension-api.NotificationJobDiagnosticLog" />

@@ -1,43 +1,38 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ReleaseDefinitionDeployStep
-    name: ReleaseDefinitionDeployStep
-    fullName: ReleaseDefinitionDeployStep
-    children:
-      - azure-devops-extension-api.ReleaseDefinitionDeployStep.tasks
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.ReleaseDefinitionEnvironmentStep
+### YamlMime:TSType
+name: ReleaseDefinitionDeployStep
+uid: azure-devops-extension-api.ReleaseDefinitionDeployStep
+package: azure-devops-extension-api
+summary: ''
+fullName: ReleaseDefinitionDeployStep
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.ReleaseDefinitionDeployStep.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ReleaseDefinitionDeployStep.tasks
-    name: tasks
-    fullName: tasks
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: ID of the approval or deploy step.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: tasks
+    uid: azure-devops-extension-api.ReleaseDefinitionDeployStep.tasks
+    package: azure-devops-extension-api
     summary: The list of steps for this definition.
+    fullName: tasks
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'tasks: WorkflowTask[]'
       return:
-        type:
-          - 'azure-devops-extension-api.WorkflowTask[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ReleaseDefinitionEnvironmentStep
-    name: ReleaseDefinitionEnvironmentStep
-    spec.typeScript:
-      - name: ReleaseDefinitionEnvironmentStep
-        fullName: ReleaseDefinitionEnvironmentStep
-        uid: azure-devops-extension-api.ReleaseDefinitionEnvironmentStep
-  - uid: 'azure-devops-extension-api.WorkflowTask[]'
-    name: 'WorkflowTask[]'
-    spec.typeScript:
-      - name: WorkflowTask
-        fullName: WorkflowTask
-        uid: azure-devops-extension-api.WorkflowTask
-      - name: '[]'
-        fullName: '[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.WorkflowTask" />[]'
+extends: <xref uid="azure-devops-extension-api.ReleaseDefinitionEnvironmentStep" />

@@ -1,35 +1,77 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BoardItemRemovedRealtimeEvent
-    name: BoardItemRemovedRealtimeEvent
-    fullName: BoardItemRemovedRealtimeEvent
-    children:
-      - azure-devops-extension-api.BoardItemRemovedRealtimeEvent.id
-    langs:
-      - typeScript
-    type: interface
-    summary: INTERNAL. Event that is fired when a board item is removed.
-    extends:
-      name: azure-devops-extension-api.RealtimeBoardEvent
+### YamlMime:TSType
+name: BoardItemRemovedRealtimeEvent
+uid: azure-devops-extension-api.BoardItemRemovedRealtimeEvent
+package: azure-devops-extension-api
+summary: INTERNAL. Event that is fired when a board item is removed.
+fullName: BoardItemRemovedRealtimeEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: boardId
+    uid: azure-devops-extension-api.BoardItemRemovedRealtimeEvent.boardId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItemRemovedRealtimeEvent.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: The Board ID of the event
+    fullName: boardId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'boardId: number'
+      return:
+        description: ''
+        type: number
+  - name: eventId
+    uid: azure-devops-extension-api.BoardItemRemovedRealtimeEvent.eventId
+    package: azure-devops-extension-api
+    summary: 'A unique ID for events, used for logging and tracing.'
+    fullName: eventId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventId: string'
+      return:
+        description: ''
+        type: string
+  - name: id
+    uid: azure-devops-extension-api.BoardItemRemovedRealtimeEvent.id
+    package: azure-devops-extension-api
     summary: The id of the removed item.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: projectId
+    uid: azure-devops-extension-api.BoardItemRemovedRealtimeEvent.projectId
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RealtimeBoardEvent
-    name: RealtimeBoardEvent
-    spec.typeScript:
-      - name: RealtimeBoardEvent
-        fullName: RealtimeBoardEvent
-        uid: azure-devops-extension-api.RealtimeBoardEvent
+    summary: The Project ID of the board.
+    fullName: projectId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+  - name: type
+    uid: azure-devops-extension-api.BoardItemRemovedRealtimeEvent.type
+    package: azure-devops-extension-api
+    summary: 'The type of this event, so the client can disambiguate'
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.RealtimeBoardEvent" />

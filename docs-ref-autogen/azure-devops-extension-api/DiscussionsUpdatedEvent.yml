@@ -1,20 +1,40 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.DiscussionsUpdatedEvent
-    name: DiscussionsUpdatedEvent
-    fullName: DiscussionsUpdatedEvent
-    children: []
-    langs:
-      - typeScript
-    type: interface
-    summary: Real time event (SignalR) for a discussions update on a pull request
-    extends:
-      name: azure-devops-extension-api.RealTimePullRequestEvent
+### YamlMime:TSType
+name: DiscussionsUpdatedEvent
+uid: azure-devops-extension-api.DiscussionsUpdatedEvent
+package: azure-devops-extension-api
+summary: Real time event (SignalR) for a discussions update on a pull request
+fullName: DiscussionsUpdatedEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: eventId
+    uid: azure-devops-extension-api.DiscussionsUpdatedEvent.eventId
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RealTimePullRequestEvent
-    name: RealTimePullRequestEvent
-    spec.typeScript:
-      - name: RealTimePullRequestEvent
-        fullName: RealTimePullRequestEvent
-        uid: azure-devops-extension-api.RealTimePullRequestEvent
+    summary: >-
+      The id of this event. Can be used to track send/receive state between
+      client and server.
+    fullName: eventId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventId: string'
+      return:
+        description: ''
+        type: string
+  - name: pullRequestId
+    uid: azure-devops-extension-api.DiscussionsUpdatedEvent.pullRequestId
+    package: azure-devops-extension-api
+    summary: The id of the pull request this event was generated for.
+    fullName: pullRequestId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'pullRequestId: number'
+      return:
+        description: ''
+        type: number
+extends: <xref uid="azure-devops-extension-api.RealTimePullRequestEvent" />

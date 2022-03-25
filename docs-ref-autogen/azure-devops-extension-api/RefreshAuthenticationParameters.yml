@@ -1,0 +1,58 @@
+### YamlMime:TSType
+name: RefreshAuthenticationParameters
+uid: azure-devops-extension-api.RefreshAuthenticationParameters
+package: azure-devops-extension-api
+summary: >-
+  Specify the properties for refreshing the endpoint authentication object being
+  queried
+fullName: RefreshAuthenticationParameters
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: endpointId
+    uid: azure-devops-extension-api.RefreshAuthenticationParameters.endpointId
+    package: azure-devops-extension-api
+    summary: EndpointId which needs new authentication params
+    fullName: endpointId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'endpointId: string'
+      return:
+        description: ''
+        type: string
+  - name: scope
+    uid: azure-devops-extension-api.RefreshAuthenticationParameters.scope
+    package: azure-devops-extension-api
+    summary: >-
+      Scope of the token requested. For GitHub marketplace apps, scope contains
+      repository Ids
+    fullName: scope
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'scope: number[]'
+      return:
+        description: ''
+        type: 'number[]'
+  - name: tokenValidityInMinutes
+    uid: >-
+      azure-devops-extension-api.RefreshAuthenticationParameters.tokenValidityInMinutes
+    package: azure-devops-extension-api
+    summary: >-
+      The requested endpoint authentication should be valid for _ minutes.
+      Authentication params will not be refreshed if the token contained in
+      endpoint already has active token.
+    fullName: tokenValidityInMinutes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tokenValidityInMinutes: number'
+      return:
+        description: ''
+        type: number

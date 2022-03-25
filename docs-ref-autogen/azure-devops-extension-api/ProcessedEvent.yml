@@ -1,181 +1,134 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ProcessedEvent
-    name: ProcessedEvent
-    fullName: ProcessedEvent
-    children:
-      - azure-devops-extension-api.ProcessedEvent.actors
-      - azure-devops-extension-api.ProcessedEvent.allowedChannels
-      - azure-devops-extension-api.ProcessedEvent.artifactUri
-      - azure-devops-extension-api.ProcessedEvent.deliveryIdentities
-      - azure-devops-extension-api.ProcessedEvent.evaluations
-      - azure-devops-extension-api.ProcessedEvent.eventId
-      - azure-devops-extension-api.ProcessedEvent.exclusions
-      - azure-devops-extension-api.ProcessedEvent.inclusions
-      - azure-devops-extension-api.ProcessedEvent.notifications
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: ProcessedEvent
+uid: azure-devops-extension-api.ProcessedEvent
+package: azure-devops-extension-api
+summary: ''
+fullName: ProcessedEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: actors
+    uid: azure-devops-extension-api.ProcessedEvent.actors
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ProcessedEvent.actors
-    name: actors
+    summary: All of the users that were associated with this event and their role.
     fullName: actors
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: All of the users that were associtated with this event and their role.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'actors: EventActor[]'
       return:
-        type:
-          - 'azure-devops-extension-api.EventActor[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.EventActor" />[]'
+  - name: allowedChannels
+    uid: azure-devops-extension-api.ProcessedEvent.allowedChannels
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ProcessedEvent.allowedChannels
-    name: allowedChannels
-    fullName: allowedChannels
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: allowedChannels
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'allowedChannels: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: artifactUri
+    uid: azure-devops-extension-api.ProcessedEvent.artifactUri
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ProcessedEvent.artifactUri
-    name: artifactUri
-    fullName: artifactUri
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: artifactUri
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'artifactUri: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: deliveryIdentities
+    uid: azure-devops-extension-api.ProcessedEvent.deliveryIdentities
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ProcessedEvent.deliveryIdentities
-    name: deliveryIdentities
-    fullName: deliveryIdentities
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: deliveryIdentities
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deliveryIdentities: ProcessingIdentities'
       return:
-        type:
-          - azure-devops-extension-api.ProcessingIdentities
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ProcessingIdentities" />
+  - name: evaluations
+    uid: azure-devops-extension-api.ProcessedEvent.evaluations
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ProcessedEvent.evaluations
-    name: evaluations
-    fullName: evaluations
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Evaluations for each user
+    fullName: evaluations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'evaluations: [key: string]: SubscriptionEvaluation'
       return:
-        type:
-          - '[key: string]: azure-devops-extension-api.SubscriptionEvaluation'
+        description: ''
+        type: >-
+          [key: string]\: <xref
+          uid="azure-devops-extension-api.SubscriptionEvaluation" />
+  - name: eventId
+    uid: azure-devops-extension-api.ProcessedEvent.eventId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ProcessedEvent.eventId
-    name: eventId
-    fullName: eventId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: eventId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'eventId: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: exclusions
+    uid: azure-devops-extension-api.ProcessedEvent.exclusions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ProcessedEvent.exclusions
-    name: exclusions
-    fullName: exclusions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Which members were excluded from evaluation (only applies to ActorMatcher
       subscriptions)
+    fullName: exclusions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'exclusions: EventActor[]'
       return:
-        type:
-          - 'azure-devops-extension-api.EventActor[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.EventActor" />[]'
+  - name: inclusions
+    uid: azure-devops-extension-api.ProcessedEvent.inclusions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ProcessedEvent.inclusions
-    name: inclusions
-    fullName: inclusions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Which members were included for evaluation (only applies to ActorMatcher
       subscriptions)
+    fullName: inclusions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'inclusions: EventActor[]'
       return:
-        type:
-          - 'azure-devops-extension-api.EventActor[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.EventActor" />[]'
+  - name: notifications
+    uid: azure-devops-extension-api.ProcessedEvent.notifications
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ProcessedEvent.notifications
-    name: notifications
-    fullName: notifications
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: notifications
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'notifications: GeneratedNotification[]'
       return:
-        type:
-          - 'azure-devops-extension-api.GeneratedNotification[]'
-    package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.EventActor[]'
-    name: 'EventActor[]'
-    spec.typeScript:
-      - name: EventActor
-        fullName: EventActor
-        uid: azure-devops-extension-api.EventActor
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.ProcessingIdentities
-    name: ProcessingIdentities
-    spec.typeScript:
-      - name: ProcessingIdentities
-        fullName: ProcessingIdentities
-        uid: azure-devops-extension-api.ProcessingIdentities
-  - uid: '[key: string]: azure-devops-extension-api.SubscriptionEvaluation'
-    name: SubscriptionEvaluation
-    spec.typeScript:
-      - name: '[key: string]: '
-        fullName: '[key: string]: '
-      - name: SubscriptionEvaluation
-        fullName: SubscriptionEvaluation
-        uid: azure-devops-extension-api.SubscriptionEvaluation
-  - uid: 'azure-devops-extension-api.GeneratedNotification[]'
-    name: 'GeneratedNotification[]'
-    spec.typeScript:
-      - name: GeneratedNotification
-        fullName: GeneratedNotification
-        uid: azure-devops-extension-api.GeneratedNotification
-      - name: '[]'
-        fullName: '[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.GeneratedNotification" />[]'

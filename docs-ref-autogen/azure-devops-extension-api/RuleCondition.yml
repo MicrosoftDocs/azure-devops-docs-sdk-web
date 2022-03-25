@@ -1,24 +1,17 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.RuleCondition
-    name: RuleCondition
-    fullName: RuleCondition
-    children:
-      - azure-devops-extension-api.RuleCondition.conditionType
-      - azure-devops-extension-api.RuleCondition.field
-      - azure-devops-extension-api.RuleCondition.value
-    langs:
-      - typeScript
-    type: interface
-    summary: Defines a condition on a field when the rule should be triggered.
+### YamlMime:TSType
+name: RuleCondition
+uid: azure-devops-extension-api.RuleCondition
+package: azure-devops-extension-api
+summary: Defines a condition on a field when the rule should be triggered.
+fullName: RuleCondition
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: conditionType
+    uid: azure-devops-extension-api.RuleCondition.conditionType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RuleCondition.conditionType
-    name: conditionType
-    fullName: conditionType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Type of condition. $When. This condition limits the execution of its
       children to cases when another field has a particular value, i.e. when the
@@ -32,44 +25,38 @@ items:
       condition limits the execution of its children to cases when another field
       has not changed, i.e.when the Is value of the referenced field is equal to
       the Was value of that field.
+    fullName: conditionType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'conditionType: RuleConditionType'
       return:
-        type:
-          - azure-devops-extension-api.RuleConditionType
+        description: ''
+        type: <xref uid="azure-devops-extension-api.RuleConditionType" />
+  - name: field
+    uid: azure-devops-extension-api.RuleCondition.field
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RuleCondition.field
-    name: field
-    fullName: field
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Field that defines condition.
+    fullName: field
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'field: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: value
+    uid: azure-devops-extension-api.RuleCondition.value
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RuleCondition.value
-    name: value
-    fullName: value
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Value of field to define the condition for rule.
+    fullName: value
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'value: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RuleConditionType
-    name: RuleConditionType
-    spec.typeScript:
-      - name: RuleConditionType
-        fullName: RuleConditionType
-        uid: azure-devops-extension-api.RuleConditionType
+        description: ''
+        type: string

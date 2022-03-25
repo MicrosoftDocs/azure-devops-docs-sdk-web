@@ -1,62 +1,131 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ServerTaskRequestMessage
-    name: ServerTaskRequestMessage
-    fullName: ServerTaskRequestMessage
-    children:
-      - azure-devops-extension-api.ServerTaskRequestMessage.taskDefinition
-      - azure-devops-extension-api.ServerTaskRequestMessage.taskInstance
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.JobRequestMessage
+### YamlMime:TSType
+name: ServerTaskRequestMessage
+uid: azure-devops-extension-api.ServerTaskRequestMessage
+package: azure-devops-extension-api
+summary: ''
+fullName: ServerTaskRequestMessage
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: environment
+    uid: azure-devops-extension-api.ServerTaskRequestMessage.environment
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ServerTaskRequestMessage.taskDefinition
-    name: taskDefinition
-    fullName: taskDefinition
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: environment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'environment: JobEnvironment'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.JobEnvironment" />
+  - name: jobId
+    uid: azure-devops-extension-api.ServerTaskRequestMessage.jobId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: jobId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jobId: string'
+      return:
+        description: ''
+        type: string
+  - name: jobName
+    uid: azure-devops-extension-api.ServerTaskRequestMessage.jobName
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: jobName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jobName: string'
+      return:
+        description: ''
+        type: string
+  - name: jobRefName
+    uid: azure-devops-extension-api.ServerTaskRequestMessage.jobRefName
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: jobRefName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jobRefName: string'
+      return:
+        description: ''
+        type: string
+  - name: messageType
+    uid: azure-devops-extension-api.ServerTaskRequestMessage.messageType
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: messageType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'messageType: string'
+      return:
+        description: ''
+        type: string
+  - name: plan
+    uid: azure-devops-extension-api.ServerTaskRequestMessage.plan
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: plan
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'plan: TaskOrchestrationPlanReference'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.TaskOrchestrationPlanReference"
+          />
+  - name: taskDefinition
+    uid: azure-devops-extension-api.ServerTaskRequestMessage.taskDefinition
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: taskDefinition
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'taskDefinition: TaskDefinition'
       return:
-        type:
-          - azure-devops-extension-api.TaskDefinition
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskDefinition" />
+  - name: taskInstance
+    uid: azure-devops-extension-api.ServerTaskRequestMessage.taskInstance
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ServerTaskRequestMessage.taskInstance
-    name: taskInstance
-    fullName: taskInstance
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: taskInstance
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'taskInstance: TaskInstance'
       return:
-        type:
-          - azure-devops-extension-api.TaskInstance
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskInstance" />
+  - name: timeline
+    uid: azure-devops-extension-api.ServerTaskRequestMessage.timeline
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.JobRequestMessage
-    name: JobRequestMessage
-    spec.typeScript:
-      - name: JobRequestMessage
-        fullName: JobRequestMessage
-        uid: azure-devops-extension-api.JobRequestMessage
-  - uid: azure-devops-extension-api.TaskDefinition
-    name: TaskDefinition
-    spec.typeScript:
-      - name: TaskDefinition
-        fullName: TaskDefinition
-        uid: azure-devops-extension-api.TaskDefinition
-  - uid: azure-devops-extension-api.TaskInstance
-    name: TaskInstance
-    spec.typeScript:
-      - name: TaskInstance
-        fullName: TaskInstance
-        uid: azure-devops-extension-api.TaskInstance
+    summary: ''
+    fullName: timeline
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeline: TimelineReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TimelineReference" />
+extends: <xref uid="azure-devops-extension-api.JobRequestMessage" />

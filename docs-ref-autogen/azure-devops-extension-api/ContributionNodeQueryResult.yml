@@ -1,64 +1,43 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ContributionNodeQueryResult
-    name: ContributionNodeQueryResult
-    fullName: ContributionNodeQueryResult
-    children:
-      - azure-devops-extension-api.ContributionNodeQueryResult.nodes
-      - azure-devops-extension-api.ContributionNodeQueryResult.providerDetails
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Result of a contribution node query.  Wraps the resulting contribution
-      nodes and provider details.
+### YamlMime:TSType
+name: ContributionNodeQueryResult
+uid: azure-devops-extension-api.ContributionNodeQueryResult
+package: azure-devops-extension-api
+summary: >-
+  Result of a contribution node query.  Wraps the resulting contribution nodes
+  and provider details.
+fullName: ContributionNodeQueryResult
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: nodes
+    uid: azure-devops-extension-api.ContributionNodeQueryResult.nodes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ContributionNodeQueryResult.nodes
-    name: nodes
-    fullName: nodes
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Map of contribution ids to corresponding node.
+    fullName: nodes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'nodes: [key: string]: ClientContributionNode'
       return:
-        type:
-          - '[key: string]: azure-devops-extension-api.ClientContributionNode'
+        description: ''
+        type: >-
+          [key: string]\: <xref
+          uid="azure-devops-extension-api.ClientContributionNode" />
+  - name: providerDetails
+    uid: azure-devops-extension-api.ContributionNodeQueryResult.providerDetails
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ContributionNodeQueryResult.providerDetails
-    name: providerDetails
+    summary: Map of provider ids to the corresponding provider details object.
     fullName: providerDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Map of provder ids to the corresponding provider details object.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'providerDetails: [key: string]: ClientContributionProviderDetails'
       return:
-        type:
-          - >-
-            [key: string]:
-            azure-devops-extension-api.ClientContributionProviderDetails
-    package: azure-devops-extension-api
-references:
-  - uid: '[key: string]: azure-devops-extension-api.ClientContributionNode'
-    name: ClientContributionNode
-    spec.typeScript:
-      - name: '[key: string]: '
-        fullName: '[key: string]: '
-      - name: ClientContributionNode
-        fullName: ClientContributionNode
-        uid: azure-devops-extension-api.ClientContributionNode
-  - uid: >-
-      [key: string]:
-      azure-devops-extension-api.ClientContributionProviderDetails
-    name: ClientContributionProviderDetails
-    spec.typeScript:
-      - name: '[key: string]: '
-        fullName: '[key: string]: '
-      - name: ClientContributionProviderDetails
-        fullName: ClientContributionProviderDetails
-        uid: azure-devops-extension-api.ClientContributionProviderDetails
+        description: ''
+        type: >-
+          [key: string]\: <xref
+          uid="azure-devops-extension-api.ClientContributionProviderDetails" />

@@ -1,0 +1,71 @@
+### YamlMime:TSType
+name: IndentationRule
+uid: azure-devops-extension-api.IndentationRule
+package: azure-devops-extension-api
+summary: Describes indentation rules for a language.
+fullName: IndentationRule
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: decreaseIndentPattern
+    uid: azure-devops-extension-api.IndentationRule.decreaseIndentPattern
+    package: azure-devops-extension-api
+    summary: >-
+      If a line matches this pattern, then all the lines after it should be
+      unindendented once (until another rule matches).
+    fullName: decreaseIndentPattern
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'decreaseIndentPattern: RegExp'
+      return:
+        description: ''
+        type: RegExp
+  - name: increaseIndentPattern
+    uid: azure-devops-extension-api.IndentationRule.increaseIndentPattern
+    package: azure-devops-extension-api
+    summary: >-
+      If a line matches this pattern, then all the lines after it should be
+      indented once (until another rule matches).
+    fullName: increaseIndentPattern
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'increaseIndentPattern: RegExp'
+      return:
+        description: ''
+        type: RegExp
+  - name: indentNextLinePattern
+    uid: azure-devops-extension-api.IndentationRule.indentNextLinePattern
+    package: azure-devops-extension-api
+    summary: >-
+      If a line matches this pattern, then **only the next line** after it
+      should be indented once.
+    fullName: indentNextLinePattern
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'indentNextLinePattern?: RegExp'
+      return:
+        description: ''
+        type: RegExp
+  - name: unIndentedLinePattern
+    uid: azure-devops-extension-api.IndentationRule.unIndentedLinePattern
+    package: azure-devops-extension-api
+    summary: >-
+      If a line matches this pattern, then its indentation should not be changed
+      and it should not be evaluated against the other rules.
+    fullName: unIndentedLinePattern
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'unIndentedLinePattern?: RegExp'
+      return:
+        description: ''
+        type: RegExp

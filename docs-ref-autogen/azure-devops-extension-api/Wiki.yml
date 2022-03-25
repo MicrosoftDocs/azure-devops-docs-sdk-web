@@ -1,75 +1,81 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.Wiki
-    name: Wiki
-    fullName: Wiki
-    children:
-      - azure-devops-extension-api.Wiki.headCommit
-      - azure-devops-extension-api.Wiki.id
-      - azure-devops-extension-api.Wiki.repository
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Defines a wiki repository which encapsulates the git repository backing
-      the wiki.
-    extends:
-      name: azure-devops-extension-api.WikiCreateParameters
+### YamlMime:TSType
+name: Wiki
+uid: azure-devops-extension-api.Wiki
+package: azure-devops-extension-api
+summary: >-
+  Defines a wiki repository which encapsulates the git repository backing the
+  wiki.
+fullName: Wiki
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: headCommit
+    uid: azure-devops-extension-api.Wiki.headCommit
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Wiki.headCommit
-    name: headCommit
-    fullName: headCommit
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The head commit associated with the git repository backing up the wiki.
+    fullName: headCommit
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'headCommit: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: id
+    uid: azure-devops-extension-api.Wiki.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Wiki.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The ID of the wiki which is same as the ID of the Git repository that it
       is backed by.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: name
+    uid: azure-devops-extension-api.Wiki.name
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Wiki.repository
-    name: repository
-    fullName: repository
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Wiki name.
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: projectId
+    uid: azure-devops-extension-api.Wiki.projectId
+    package: azure-devops-extension-api
+    summary: ID of the project in which the wiki is to be created.
+    fullName: projectId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+  - name: repository
+    uid: azure-devops-extension-api.Wiki.repository
+    package: azure-devops-extension-api
     summary: The git repository that backs up the wiki.
+    fullName: repository
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'repository: GitRepository'
       return:
-        type:
-          - azure-devops-extension-api.GitRepository
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.WikiCreateParameters
-    name: WikiCreateParameters
-    spec.typeScript:
-      - name: WikiCreateParameters
-        fullName: WikiCreateParameters
-        uid: azure-devops-extension-api.WikiCreateParameters
-  - uid: azure-devops-extension-api.GitRepository
-    name: GitRepository
-    spec.typeScript:
-      - name: GitRepository
-        fullName: GitRepository
-        uid: azure-devops-extension-api.GitRepository
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitRepository" />
+extends: <xref uid="azure-devops-extension-api.WikiCreateParameters" />

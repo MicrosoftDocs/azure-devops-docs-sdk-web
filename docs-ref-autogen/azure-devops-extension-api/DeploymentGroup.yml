@@ -1,88 +1,116 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.DeploymentGroup
-    name: DeploymentGroup
-    fullName: DeploymentGroup
-    children:
-      - azure-devops-extension-api.DeploymentGroup.description
-      - azure-devops-extension-api.DeploymentGroup.machineCount
-      - azure-devops-extension-api.DeploymentGroup.machines
-      - azure-devops-extension-api.DeploymentGroup.machineTags
-    langs:
-      - typeScript
-    type: interface
-    summary: Deployment group.
-    extends:
-      name: azure-devops-extension-api.DeploymentGroupReference
+### YamlMime:TSType
+name: DeploymentGroup
+uid: azure-devops-extension-api.DeploymentGroup
+package: azure-devops-extension-api
+summary: Deployment group.
+fullName: DeploymentGroup
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.DeploymentGroup.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentGroup.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Description of the deployment group.
+    fullName: description
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: id
+    uid: azure-devops-extension-api.DeploymentGroup.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentGroup.machineCount
-    name: machineCount
-    fullName: machineCount
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Deployment group identifier.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: machineCount
+    uid: azure-devops-extension-api.DeploymentGroup.machineCount
+    package: azure-devops-extension-api
     summary: Number of deployment targets in the deployment group.
+    fullName: machineCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'machineCount: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: machines
+    uid: azure-devops-extension-api.DeploymentGroup.machines
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentGroup.machines
-    name: machines
-    fullName: machines
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: List of deployment targets in the deployment group.
+    fullName: machines
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'machines: DeploymentMachine[]'
       return:
-        type:
-          - 'azure-devops-extension-api.DeploymentMachine[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.DeploymentMachine" />[]'
+  - name: machineTags
+    uid: azure-devops-extension-api.DeploymentGroup.machineTags
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.DeploymentGroup.machineTags
-    name: machineTags
-    fullName: machineTags
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: List of unique tags across all deployment targets in the deployment group.
+    fullName: machineTags
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'machineTags: string[]'
       return:
-        type:
-          - 'string[]'
+        description: ''
+        type: 'string[]'
+  - name: name
+    uid: azure-devops-extension-api.DeploymentGroup.name
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.DeploymentGroupReference
-    name: DeploymentGroupReference
-    spec.typeScript:
-      - name: DeploymentGroupReference
-        fullName: DeploymentGroupReference
-        uid: azure-devops-extension-api.DeploymentGroupReference
-  - uid: 'azure-devops-extension-api.DeploymentMachine[]'
-    name: 'DeploymentMachine[]'
-    spec.typeScript:
-      - name: DeploymentMachine
-        fullName: DeploymentMachine
-        uid: azure-devops-extension-api.DeploymentMachine
-      - name: '[]'
-        fullName: '[]'
+    summary: Name of the deployment group.
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: pool
+    uid: azure-devops-extension-api.DeploymentGroup.pool
+    package: azure-devops-extension-api
+    summary: Deployment pool in which deployment agents are registered.
+    fullName: pool
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'pool: TaskAgentPoolReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentPoolReference" />
+  - name: project
+    uid: azure-devops-extension-api.DeploymentGroup.project
+    package: azure-devops-extension-api
+    summary: Project to which the deployment group belongs.
+    fullName: project
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'project: ProjectReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ProjectReference" />
+extends: <xref uid="azure-devops-extension-api.DeploymentGroupReference" />

@@ -1,43 +1,103 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.Question
-    name: Question
-    fullName: Question
-    children:
-      - azure-devops-extension-api.Question.responses
-    langs:
-      - typeScript
-    type: interface
-    summary: The structure of the question / thread
-    extends:
-      name: azure-devops-extension-api.QnAItem
+### YamlMime:TSType
+name: Question
+uid: azure-devops-extension-api.Question
+package: azure-devops-extension-api
+summary: The structure of the question / thread
+fullName: Question
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: createdDate
+    uid: azure-devops-extension-api.Question.createdDate
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.Question.responses
-    name: responses
-    fullName: responses
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Time when the review was first created
+    fullName: createdDate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: id
+    uid: azure-devops-extension-api.Question.id
+    package: azure-devops-extension-api
+    summary: Unique identifier of a QnA item
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: responses
+    uid: azure-devops-extension-api.Question.responses
+    package: azure-devops-extension-api
     summary: List of answers in for the question / thread
+    fullName: responses
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'responses: Response[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Response[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.Response" />[]'
+  - name: status
+    uid: azure-devops-extension-api.Question.status
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.QnAItem
-    name: QnAItem
-    spec.typeScript:
-      - name: QnAItem
-        fullName: QnAItem
-        uid: azure-devops-extension-api.QnAItem
-  - uid: 'azure-devops-extension-api.Response[]'
-    name: 'Response[]'
-    spec.typeScript:
-      - name: Response
-        fullName: Response
-        uid: azure-devops-extension-api.Response
-      - name: '[]'
-        fullName: '[]'
+    summary: Get status of item
+    fullName: status
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'status: QnAItemStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.QnAItemStatus" />
+  - name: text
+    uid: azure-devops-extension-api.Question.text
+    package: azure-devops-extension-api
+    summary: Text description of the QnA item
+    fullName: text
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'text: string'
+      return:
+        description: ''
+        type: string
+  - name: updatedDate
+    uid: azure-devops-extension-api.Question.updatedDate
+    package: azure-devops-extension-api
+    summary: Time when the review was edited/updated
+    fullName: updatedDate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'updatedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: user
+    uid: azure-devops-extension-api.Question.user
+    package: azure-devops-extension-api
+    summary: User details for the item.
+    fullName: user
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'user: UserIdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.UserIdentityRef" />
+extends: <xref uid="azure-devops-extension-api.QnAItem" />

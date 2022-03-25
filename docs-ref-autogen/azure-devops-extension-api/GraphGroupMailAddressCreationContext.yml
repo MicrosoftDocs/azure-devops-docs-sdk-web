@@ -1,44 +1,48 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GraphGroupMailAddressCreationContext
-    name: GraphGroupMailAddressCreationContext
-    fullName: GraphGroupMailAddressCreationContext
-    children:
-      - >-
-        azure-devops-extension-api.GraphGroupMailAddressCreationContext.mailAddress
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      Use this type to create a new group using the mail address as a reference
-      to an existing group from an external AD or AAD backed provider. This is
-      the subset of GraphGroup fields required for creation of a group for the
-      AAD and AD use case.
-    extends:
-      name: azure-devops-extension-api.GraphGroupCreationContext
-    package: azure-devops-extension-api
-  - uid: >-
+### YamlMime:TSType
+name: GraphGroupMailAddressCreationContext
+uid: azure-devops-extension-api.GraphGroupMailAddressCreationContext
+package: azure-devops-extension-api
+summary: >-
+  Use this type to create a new group using the mail address as a reference to
+  an existing group from an external AD or AAD backed provider. This is the
+  subset of GraphGroup fields required for creation of a group for the AAD and
+  AD use case.
+fullName: GraphGroupMailAddressCreationContext
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: mailAddress
+    uid: >-
       azure-devops-extension-api.GraphGroupMailAddressCreationContext.mailAddress
-    name: mailAddress
-    fullName: mailAddress
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-devops-extension-api
     summary: >-
       This should be the mail address or the group in the source AD or AAD
       provider. Example: jamal\@contoso.com Team Services will communicate with
       the source provider to fill all other fields on creation.
+    fullName: mailAddress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'mailAddress: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: storageKey
+    uid: azure-devops-extension-api.GraphGroupMailAddressCreationContext.storageKey
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GraphGroupCreationContext
-    name: GraphGroupCreationContext
-    spec.typeScript:
-      - name: GraphGroupCreationContext
-        fullName: GraphGroupCreationContext
-        uid: azure-devops-extension-api.GraphGroupCreationContext
+    summary: >-
+      Optional: If provided, we will use this identifier for the storage key of
+      the created group
+    fullName: storageKey
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'storageKey: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.GraphGroupCreationContext" />

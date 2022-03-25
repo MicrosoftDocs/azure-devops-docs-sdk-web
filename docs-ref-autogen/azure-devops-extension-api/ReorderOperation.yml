@@ -1,0 +1,84 @@
+### YamlMime:TSType
+name: ReorderOperation
+uid: azure-devops-extension-api.ReorderOperation
+package: azure-devops-extension-api
+summary: Represents a reorder request for one or more work items.
+fullName: ReorderOperation
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: ids
+    uid: azure-devops-extension-api.ReorderOperation.ids
+    package: azure-devops-extension-api
+    summary: IDs of the work items to be reordered.  Must be valid WorkItem Ids.
+    fullName: ids
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'ids: number[]'
+      return:
+        description: ''
+        type: 'number[]'
+  - name: iterationPath
+    uid: azure-devops-extension-api.ReorderOperation.iterationPath
+    package: azure-devops-extension-api
+    summary: >-
+      IterationPath for reorder operation. This is only used when we reorder
+      from the Iteration Backlog
+    fullName: iterationPath
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'iterationPath: string'
+      return:
+        description: ''
+        type: string
+  - name: nextId
+    uid: azure-devops-extension-api.ReorderOperation.nextId
+    package: azure-devops-extension-api
+    summary: >-
+      ID of the work item that should be after the reordered items. Can use 0 to
+      specify the end of the list.
+    fullName: nextId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nextId: number'
+      return:
+        description: ''
+        type: number
+  - name: parentId
+    uid: azure-devops-extension-api.ReorderOperation.parentId
+    package: azure-devops-extension-api
+    summary: >-
+      Parent ID for all of the work items involved in this operation. Can use 0
+      to indicate the items don't have a parent.
+    fullName: parentId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'parentId: number'
+      return:
+        description: ''
+        type: number
+  - name: previousId
+    uid: azure-devops-extension-api.ReorderOperation.previousId
+    package: azure-devops-extension-api
+    summary: >-
+      ID of the work item that should be before the reordered items. Can use 0
+      to specify the beginning of the list.
+    fullName: previousId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'previousId: number'
+      return:
+        description: ''
+        type: number

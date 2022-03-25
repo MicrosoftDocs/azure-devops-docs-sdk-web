@@ -1,57 +1,36 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TaskAgentJobResultFilter
-    name: TaskAgentJobResultFilter
-    fullName: TaskAgentJobResultFilter
-    children:
-      - azure-devops-extension-api.TaskAgentJobResultFilter.Failed
-      - azure-devops-extension-api.TaskAgentJobResultFilter.Passed
-      - azure-devops-extension-api.TaskAgentJobResultFilter.NeverDeployed
-      - azure-devops-extension-api.TaskAgentJobResultFilter.All
-    langs:
-      - typeScript
-    type: enum
-    summary: >-
-      This is useful in getting a list of deployment targets, filtered by the
-      result of their last job.
+### YamlMime:TSEnum
+name: TaskAgentJobResultFilter
+uid: azure-devops-extension-api.TaskAgentJobResultFilter
+package: azure-devops-extension-api
+summary: >-
+  This is useful in getting a list of deployment targets, filtered by the result
+  of their last job.
+fullName: TaskAgentJobResultFilter
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: Failed
+    uid: azure-devops-extension-api.TaskAgentJobResultFilter.Failed
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobResultFilter.Failed
-    name: Failed
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Only those deployment targets on which last job failed (**Abandoned**,
       **Canceled**, **Failed**, **Skipped**).
-    type: field
     numericValue: 1
+  - name: Passed
+    uid: azure-devops-extension-api.TaskAgentJobResultFilter.Passed
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobResultFilter.Passed
-    name: Passed
-    children: []
-    langs:
-      - typeScript
     summary: >-
       Only those deployment targets on which last job Passed (**Succeeded**,
       **Succeeded with issues**).
-    type: field
     numericValue: 2
+  - name: NeverDeployed
+    uid: azure-devops-extension-api.TaskAgentJobResultFilter.NeverDeployed
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobResultFilter.NeverDeployed
-    name: NeverDeployed
-    children: []
-    langs:
-      - typeScript
     summary: Only those deployment targets that never executed a job.
-    type: field
     numericValue: 4
+  - name: All
+    uid: azure-devops-extension-api.TaskAgentJobResultFilter.All
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgentJobResultFilter.All
-    name: All
-    children: []
-    langs:
-      - typeScript
     summary: All deployment targets.
-    type: field
     numericValue: 7
-    package: azure-devops-extension-api

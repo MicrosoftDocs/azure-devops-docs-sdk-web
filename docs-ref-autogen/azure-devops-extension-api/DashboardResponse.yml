@@ -1,20 +1,135 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.DashboardResponse
-    name: DashboardResponse
-    fullName: DashboardResponse
-    children: []
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.DashboardGroupEntry
+### YamlMime:TSType
+name: DashboardResponse
+uid: azure-devops-extension-api.DashboardResponse
+package: azure-devops-extension-api
+summary: ''
+fullName: DashboardResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.DashboardResponse.description
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.DashboardGroupEntry
-    name: DashboardGroupEntry
-    spec.typeScript:
-      - name: DashboardGroupEntry
-        fullName: DashboardGroupEntry
-        uid: azure-devops-extension-api.DashboardGroupEntry
+    summary: Description of the dashboard.
+    fullName: description
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+  - name: eTag
+    uid: azure-devops-extension-api.DashboardResponse.eTag
+    package: azure-devops-extension-api
+    summary: 'Server defined version tracking value, used for edit collision detection.'
+    fullName: eTag
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eTag: string'
+      return:
+        description: ''
+        type: string
+  - name: id
+    uid: azure-devops-extension-api.DashboardResponse.id
+    package: azure-devops-extension-api
+    summary: ID of the Dashboard. Provided by service at creation time.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: name
+    uid: azure-devops-extension-api.DashboardResponse.name
+    package: azure-devops-extension-api
+    summary: Name of the Dashboard.
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: ownerId
+    uid: azure-devops-extension-api.DashboardResponse.ownerId
+    package: azure-devops-extension-api
+    summary: >-
+      ID of the Owner for a dashboard. For any legacy dashboards, this would be
+      the unique identifier for the team associated with the dashboard.
+    fullName: ownerId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'ownerId: string'
+      return:
+        description: ''
+        type: string
+  - name: position
+    uid: azure-devops-extension-api.DashboardResponse.position
+    package: azure-devops-extension-api
+    summary: >-
+      Position of the dashboard, within a dashboard group. If unset at creation
+      time, position is decided by the service.
+    fullName: position
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'position: number'
+      return:
+        description: ''
+        type: number
+  - name: refreshInterval
+    uid: azure-devops-extension-api.DashboardResponse.refreshInterval
+    package: azure-devops-extension-api
+    summary: >-
+      Interval for client to automatically refresh the dashboard. Expressed in
+      minutes.
+    fullName: refreshInterval
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'refreshInterval: number'
+      return:
+        description: ''
+        type: number
+  - name: url
+    uid: azure-devops-extension-api.DashboardResponse.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+  - name: widgets
+    uid: azure-devops-extension-api.DashboardResponse.widgets
+    package: azure-devops-extension-api
+    summary: The set of Widgets on the dashboard.
+    fullName: widgets
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'widgets: Widget[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.Widget" />[]'
+extends: <xref uid="azure-devops-extension-api.DashboardGroupEntry" />

@@ -1,209 +1,259 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TaskAgent
-    name: TaskAgent
-    fullName: TaskAgent
-    children:
-      - azure-devops-extension-api.TaskAgent.assignedAgentCloudRequest
-      - azure-devops-extension-api.TaskAgent.assignedRequest
-      - azure-devops-extension-api.TaskAgent.authorization
-      - azure-devops-extension-api.TaskAgent.createdOn
-      - azure-devops-extension-api.TaskAgent.lastCompletedRequest
-      - azure-devops-extension-api.TaskAgent.maxParallelism
-      - azure-devops-extension-api.TaskAgent.pendingUpdate
-      - azure-devops-extension-api.TaskAgent.properties
-      - azure-devops-extension-api.TaskAgent.statusChangedOn
-      - azure-devops-extension-api.TaskAgent.systemCapabilities
-      - azure-devops-extension-api.TaskAgent.userCapabilities
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.TaskAgentReference
+### YamlMime:TSType
+name: TaskAgent
+uid: azure-devops-extension-api.TaskAgent
+package: azure-devops-extension-api
+summary: A task agent.
+fullName: TaskAgent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: accessPoint
+    uid: azure-devops-extension-api.TaskAgent.accessPoint
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.assignedAgentCloudRequest
-    name: assignedAgentCloudRequest
+    summary: This agent's access point.
+    fullName: accessPoint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'accessPoint: string'
+      return:
+        description: ''
+        type: string
+  - name: assignedAgentCloudRequest
+    uid: azure-devops-extension-api.TaskAgent.assignedAgentCloudRequest
+    package: azure-devops-extension-api
+    summary: The agent cloud request that's currently associated with this agent.
     fullName: assignedAgentCloudRequest
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets the Agent Cloud Request that's currently associated with this agent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'assignedAgentCloudRequest: TaskAgentCloudRequest'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentCloudRequest
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentCloudRequest" />
+  - name: assignedRequest
+    uid: azure-devops-extension-api.TaskAgent.assignedRequest
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.assignedRequest
-    name: assignedRequest
+    summary: The request which is currently assigned to this agent.
     fullName: assignedRequest
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets the request which is currently assigned to this agent.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'assignedRequest: TaskAgentJobRequest'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentJobRequest
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentJobRequest" />
+  - name: authorization
+    uid: azure-devops-extension-api.TaskAgent.authorization
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.authorization
-    name: authorization
+    summary: Authorization information for this agent.
     fullName: authorization
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the authorization information for this agent.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'authorization: TaskAgentAuthorization'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentAuthorization
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentAuthorization" />
+  - name: createdOn
+    uid: azure-devops-extension-api.TaskAgent.createdOn
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.createdOn
-    name: createdOn
+    summary: Date on which this agent was created.
     fullName: createdOn
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets the date on which this agent was created.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'createdOn: Date'
       return:
-        type:
-          - Date
+        description: ''
+        type: Date
+  - name: enabled
+    uid: azure-devops-extension-api.TaskAgent.enabled
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.lastCompletedRequest
-    name: lastCompletedRequest
+    summary: Whether or not this agent should run jobs.
+    fullName: enabled
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'enabled: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: id
+    uid: azure-devops-extension-api.TaskAgent.id
+    package: azure-devops-extension-api
+    summary: Identifier of the agent.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: lastCompletedRequest
+    uid: azure-devops-extension-api.TaskAgent.lastCompletedRequest
+    package: azure-devops-extension-api
+    summary: The last request which was completed by this agent.
     fullName: lastCompletedRequest
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets the last request which was completed by this agent.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'lastCompletedRequest: TaskAgentJobRequest'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentJobRequest
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentJobRequest" />
+  - name: maxParallelism
+    uid: azure-devops-extension-api.TaskAgent.maxParallelism
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.maxParallelism
-    name: maxParallelism
+    summary: Maximum job parallelism allowed for this agent.
     fullName: maxParallelism
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the maximum job parallelism allowed on this host.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'maxParallelism: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: name
+    uid: azure-devops-extension-api.TaskAgent.name
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.pendingUpdate
-    name: pendingUpdate
+    summary: Name of the agent.
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: osDescription
+    uid: azure-devops-extension-api.TaskAgent.osDescription
+    package: azure-devops-extension-api
+    summary: Agent OS.
+    fullName: osDescription
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'osDescription: string'
+      return:
+        description: ''
+        type: string
+  - name: pendingUpdate
+    uid: azure-devops-extension-api.TaskAgent.pendingUpdate
+    package: azure-devops-extension-api
+    summary: Pending update for this agent.
     fullName: pendingUpdate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets the pending update for this agent.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'pendingUpdate: TaskAgentUpdate'
       return:
-        type:
-          - azure-devops-extension-api.TaskAgentUpdate
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentUpdate" />
+  - name: properties
+    uid: azure-devops-extension-api.TaskAgent.properties
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: properties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
-        type:
-          - any
+        description: ''
+        type: any
+  - name: provisioningState
+    uid: azure-devops-extension-api.TaskAgent.provisioningState
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.statusChangedOn
-    name: statusChangedOn
+    summary: Provisioning state of this agent.
+    fullName: provisioningState
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'provisioningState: string'
+      return:
+        description: ''
+        type: string
+  - name: status
+    uid: azure-devops-extension-api.TaskAgent.status
+    package: azure-devops-extension-api
+    summary: Whether or not the agent is online.
+    fullName: status
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'status: TaskAgentStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentStatus" />
+  - name: statusChangedOn
+    uid: azure-devops-extension-api.TaskAgent.statusChangedOn
+    package: azure-devops-extension-api
+    summary: Date on which the last connectivity status change occurred.
     fullName: statusChangedOn
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets the date on which the last connectivity status change occurred.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'statusChangedOn: Date'
       return:
-        type:
-          - Date
+        description: ''
+        type: Date
+  - name: systemCapabilities
+    uid: azure-devops-extension-api.TaskAgent.systemCapabilities
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.systemCapabilities
-    name: systemCapabilities
-    fullName: systemCapabilities
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: systemCapabilities
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'systemCapabilities: [key: string]: string'
       return:
-        type:
-          - '[key: string]: string'
+        description: ''
+        type: '[key: string]\: string'
+  - name: userCapabilities
+    uid: azure-devops-extension-api.TaskAgent.userCapabilities
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TaskAgent.userCapabilities
-    name: userCapabilities
-    fullName: userCapabilities
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: userCapabilities
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'userCapabilities: [key: string]: string'
       return:
-        type:
-          - '[key: string]: string'
+        description: ''
+        type: '[key: string]\: string'
+  - name: version
+    uid: azure-devops-extension-api.TaskAgent.version
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TaskAgentReference
-    name: TaskAgentReference
-    spec.typeScript:
-      - name: TaskAgentReference
-        fullName: TaskAgentReference
-        uid: azure-devops-extension-api.TaskAgentReference
-  - uid: azure-devops-extension-api.TaskAgentCloudRequest
-    name: TaskAgentCloudRequest
-    spec.typeScript:
-      - name: TaskAgentCloudRequest
-        fullName: TaskAgentCloudRequest
-        uid: azure-devops-extension-api.TaskAgentCloudRequest
-  - uid: azure-devops-extension-api.TaskAgentJobRequest
-    name: TaskAgentJobRequest
-    spec.typeScript:
-      - name: TaskAgentJobRequest
-        fullName: TaskAgentJobRequest
-        uid: azure-devops-extension-api.TaskAgentJobRequest
-  - uid: azure-devops-extension-api.TaskAgentAuthorization
-    name: TaskAgentAuthorization
-    spec.typeScript:
-      - name: TaskAgentAuthorization
-        fullName: TaskAgentAuthorization
-        uid: azure-devops-extension-api.TaskAgentAuthorization
-  - uid: azure-devops-extension-api.TaskAgentUpdate
-    name: TaskAgentUpdate
-    spec.typeScript:
-      - name: TaskAgentUpdate
-        fullName: TaskAgentUpdate
-        uid: azure-devops-extension-api.TaskAgentUpdate
+    summary: Agent version.
+    fullName: version
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'version: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.TaskAgentReference" />

@@ -1,170 +1,207 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TfvcChangeset
-    name: TfvcChangeset
-    fullName: TfvcChangeset
-    children:
-      - azure-devops-extension-api.TfvcChangeset.accountId
-      - azure-devops-extension-api.TfvcChangeset.changes
-      - azure-devops-extension-api.TfvcChangeset.checkinNotes
-      - azure-devops-extension-api.TfvcChangeset.collectionId
-      - azure-devops-extension-api.TfvcChangeset.hasMoreChanges
-      - azure-devops-extension-api.TfvcChangeset.policyOverride
-      - azure-devops-extension-api.TfvcChangeset.teamProjectIds
-      - azure-devops-extension-api.TfvcChangeset.workItems
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.TfvcChangesetRef
+### YamlMime:TSType
+name: TfvcChangeset
+uid: azure-devops-extension-api.TfvcChangeset
+package: azure-devops-extension-api
+summary: A collection of changes.
+fullName: TfvcChangeset
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: accountId
+    uid: azure-devops-extension-api.TfvcChangeset.accountId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcChangeset.accountId
-    name: accountId
+    summary: Changeset Account Id also known as Organization Id.
     fullName: accountId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Account Id of the changeset.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'accountId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: author
+    uid: azure-devops-extension-api.TfvcChangeset.author
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcChangeset.changes
-    name: changes
-    fullName: changes
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: Alias or display name of user.
+    fullName: author
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'author: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+  - name: changes
+    uid: azure-devops-extension-api.TfvcChangeset.changes
+    package: azure-devops-extension-api
     summary: List of associated changes.
+    fullName: changes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'changes: TfvcChange[]'
       return:
-        type:
-          - 'azure-devops-extension-api.TfvcChange[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.TfvcChange" />[]'
+  - name: changesetId
+    uid: azure-devops-extension-api.TfvcChangeset.changesetId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcChangeset.checkinNotes
-    name: checkinNotes
+    summary: Changeset Id.
+    fullName: changesetId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'changesetId: number'
+      return:
+        description: ''
+        type: number
+  - name: checkedInBy
+    uid: azure-devops-extension-api.TfvcChangeset.checkedInBy
+    package: azure-devops-extension-api
+    summary: Alias or display name of user.
+    fullName: checkedInBy
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'checkedInBy: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+  - name: checkinNotes
+    uid: azure-devops-extension-api.TfvcChangeset.checkinNotes
+    package: azure-devops-extension-api
+    summary: List of Checkin Notes for the changeset.
     fullName: checkinNotes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Checkin Notes for the changeset.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'checkinNotes: CheckinNote[]'
       return:
-        type:
-          - 'azure-devops-extension-api.CheckinNote[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.CheckinNote" />[]'
+  - name: collectionId
+    uid: azure-devops-extension-api.TfvcChangeset.collectionId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcChangeset.collectionId
-    name: collectionId
+    summary: Changeset collection Id.
     fullName: collectionId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Collection Id of the changeset.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'collectionId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: comment
+    uid: azure-devops-extension-api.TfvcChangeset.comment
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcChangeset.hasMoreChanges
-    name: hasMoreChanges
+    summary: Comment for the changeset.
+    fullName: comment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        description: ''
+        type: string
+  - name: commentTruncated
+    uid: azure-devops-extension-api.TfvcChangeset.commentTruncated
+    package: azure-devops-extension-api
+    summary: Was the Comment result truncated?
+    fullName: commentTruncated
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'commentTruncated: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: createdDate
+    uid: azure-devops-extension-api.TfvcChangeset.createdDate
+    package: azure-devops-extension-api
+    summary: Creation date of the changeset.
+    fullName: createdDate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: hasMoreChanges
+    uid: azure-devops-extension-api.TfvcChangeset.hasMoreChanges
+    package: azure-devops-extension-api
+    summary: True if more changes are available.
     fullName: hasMoreChanges
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Are more changes available.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'hasMoreChanges: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: policyOverride
+    uid: azure-devops-extension-api.TfvcChangeset.policyOverride
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcChangeset.policyOverride
-    name: policyOverride
-    fullName: policyOverride
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Policy Override for the changeset.
+    fullName: policyOverride
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'policyOverride: TfvcPolicyOverrideInfo'
       return:
-        type:
-          - azure-devops-extension-api.TfvcPolicyOverrideInfo
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TfvcPolicyOverrideInfo" />
+  - name: teamProjectIds
+    uid: azure-devops-extension-api.TfvcChangeset.teamProjectIds
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcChangeset.teamProjectIds
-    name: teamProjectIds
-    fullName: teamProjectIds
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Team Project Ids for the changeset.
+    fullName: teamProjectIds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'teamProjectIds: string[]'
       return:
-        type:
-          - 'string[]'
+        description: ''
+        type: 'string[]'
+  - name: url
+    uid: azure-devops-extension-api.TfvcChangeset.url
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TfvcChangeset.workItems
-    name: workItems
-    fullName: workItems
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: URL to retrieve the item.
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+  - name: workItems
+    uid: azure-devops-extension-api.TfvcChangeset.workItems
+    package: azure-devops-extension-api
     summary: List of work items associated with the changeset.
+    fullName: workItems
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'workItems: AssociatedWorkItem[]'
       return:
-        type:
-          - 'azure-devops-extension-api.AssociatedWorkItem[]'
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TfvcChangesetRef
-    name: TfvcChangesetRef
-    spec.typeScript:
-      - name: TfvcChangesetRef
-        fullName: TfvcChangesetRef
-        uid: azure-devops-extension-api.TfvcChangesetRef
-  - uid: 'azure-devops-extension-api.TfvcChange[]'
-    name: 'TfvcChange[]'
-    spec.typeScript:
-      - name: TfvcChange
-        fullName: TfvcChange
-        uid: azure-devops-extension-api.TfvcChange
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-devops-extension-api.CheckinNote[]'
-    name: 'CheckinNote[]'
-    spec.typeScript:
-      - name: CheckinNote
-        fullName: CheckinNote
-        uid: azure-devops-extension-api.CheckinNote
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.TfvcPolicyOverrideInfo
-    name: TfvcPolicyOverrideInfo
-    spec.typeScript:
-      - name: TfvcPolicyOverrideInfo
-        fullName: TfvcPolicyOverrideInfo
-        uid: azure-devops-extension-api.TfvcPolicyOverrideInfo
-  - uid: 'azure-devops-extension-api.AssociatedWorkItem[]'
-    name: 'AssociatedWorkItem[]'
-    spec.typeScript:
-      - name: AssociatedWorkItem
-        fullName: AssociatedWorkItem
-        uid: azure-devops-extension-api.AssociatedWorkItem
-      - name: '[]'
-        fullName: '[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.AssociatedWorkItem" />[]'
+extends: <xref uid="azure-devops-extension-api.TfvcChangesetRef" />

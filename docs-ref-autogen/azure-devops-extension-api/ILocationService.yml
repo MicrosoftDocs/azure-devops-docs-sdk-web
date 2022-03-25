@@ -1,70 +1,59 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ILocationService
-    name: ILocationService
-    fullName: ILocationService
-    children:
-      - azure-devops-extension-api.ILocationService.getResourceAreaLocation
-      - azure-devops-extension-api.ILocationService.getServiceLocation
-      - azure-devops-extension-api.ILocationService.routeUrl
-    langs:
-      - typeScript
-    type: interface
-    summary: Service for external content to get locations
+### YamlMime:TSType
+name: ILocationService
+uid: azure-devops-extension-api.ILocationService
+package: azure-devops-extension-api
+summary: Service for external content to get locations
+fullName: ILocationService
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: getResourceAreaLocation(string)
+    uid: azure-devops-extension-api.ILocationService.getResourceAreaLocation
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ILocationService.getResourceAreaLocation
-    name: getResourceAreaLocation(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets the URL for the given REST resource area
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
-      content: 'function getResourceAreaLocation(resourceAreaId: string)'
+      content: >-
+        function getResourceAreaLocation(resourceAreaId: string):
+        Promise<string>
       parameters:
         - id: resourceAreaId
-          type:
-            - string
+          type: string
           description: |
             Id of the resource area
       return:
-        type:
-          - Promise<string>
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: 'getServiceLocation(string, TeamFoundationHostType)'
+    uid: azure-devops-extension-api.ILocationService.getServiceLocation
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ILocationService.getServiceLocation
-    name: 'getServiceLocation(string, TeamFoundationHostType)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets the location of a remote service at a given host type.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function getServiceLocation(serviceInstanceType?: string, hostType?:
-        TeamFoundationHostType)
+        TeamFoundationHostType): Promise<string>
       parameters:
         - id: serviceInstanceType
-          type:
-            - string
+          type: string
           description: The GUID of the service instance type to lookup
-          optional: true
         - id: hostType
-          type:
-            - azure-devops-extension-api.TeamFoundationHostType
+          type: <xref uid="azure-devops-extension-api.TeamFoundationHostType" />
           description: >
             The host type to lookup (defaults to the host type of the current
             page data)
-          optional: true
       return:
-        type:
-          - Promise<string>
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: 'routeUrl(string, [key: string]: string, string)'
+    uid: azure-devops-extension-api.ILocationService.routeUrl
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ILocationService.routeUrl
-    name: 'routeUrl(string, [key: string]: string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >
       Attemps to create a url for the specified route template and paramaters. 
       The url will include host path.
@@ -76,35 +65,25 @@ items:
 
       This will asynchronously fetch a route contribution if it has not been
       included in page data.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function routeUrl(routeId: string, routeValues?: [key: string]: string,
-        hostPath?: string)
+        hostPath?: string): Promise<string>
       parameters:
         - id: routeId
-          type:
-            - string
+          type: string
           description: Id of the route contribution
         - id: routeValues
-          type:
-            - '[key: string]: string'
+          type: '[key: string]\: string'
           description: Route value replacements
-          optional: true
         - id: hostPath
-          type:
-            - string
+          type: string
           description: >
             Optional host path to use rather than the default host path for the
             page.
-          optional: true
       return:
-        type:
-          - Promise<string>
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TeamFoundationHostType
-    name: TeamFoundationHostType
-    spec.typeScript:
-      - name: TeamFoundationHostType
-        fullName: TeamFoundationHostType
-        uid: azure-devops-extension-api.TeamFoundationHostType
+        description: ''
+        type: Promise&lt;string&gt;

@@ -1,87 +1,64 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.TeamMemberCapacity
-    name: TeamMemberCapacity
-    fullName: TeamMemberCapacity
-    children:
-      - azure-devops-extension-api.TeamMemberCapacity.activities
-      - azure-devops-extension-api.TeamMemberCapacity.daysOff
-      - azure-devops-extension-api.TeamMemberCapacity.teamMember
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents capacity for a specific team member
-    extends:
-      name: azure-devops-extension-api.TeamSettingsDataContractBase
+### YamlMime:TSType
+name: TeamMemberCapacity
+uid: azure-devops-extension-api.TeamMemberCapacity
+package: azure-devops-extension-api
+summary: Represents capacity for a specific team member
+fullName: TeamMemberCapacity
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: activities
+    uid: azure-devops-extension-api.TeamMemberCapacity.activities
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamMemberCapacity.activities
-    name: activities
-    fullName: activities
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Collection of capacities associated with the team member
+    fullName: activities
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'activities: Activity[]'
       return:
-        type:
-          - 'azure-devops-extension-api.Activity[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.Activity" />[]'
+  - name: daysOff
+    uid: azure-devops-extension-api.TeamMemberCapacity.daysOff
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamMemberCapacity.daysOff
-    name: daysOff
-    fullName: daysOff
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The days off associated with the team member
+    fullName: daysOff
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'daysOff: DateRange[]'
       return:
-        type:
-          - 'azure-devops-extension-api.DateRange[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.DateRange" />[]'
+  - name: teamMember
+    uid: azure-devops-extension-api.TeamMemberCapacity.teamMember
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.TeamMemberCapacity.teamMember
-    name: teamMember
-    fullName: teamMember
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Shallow Ref to the associated team member
+    fullName: teamMember
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'teamMember: Member'
       return:
-        type:
-          - azure-devops-extension-api.Member
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Member" />
+  - name: url
+    uid: azure-devops-extension-api.TeamMemberCapacity.url
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.TeamSettingsDataContractBase
-    name: TeamSettingsDataContractBase
-    spec.typeScript:
-      - name: TeamSettingsDataContractBase
-        fullName: TeamSettingsDataContractBase
-        uid: azure-devops-extension-api.TeamSettingsDataContractBase
-  - uid: 'azure-devops-extension-api.Activity[]'
-    name: 'Activity[]'
-    spec.typeScript:
-      - name: Activity
-        fullName: Activity
-        uid: azure-devops-extension-api.Activity
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-devops-extension-api.DateRange[]'
-    name: 'DateRange[]'
-    spec.typeScript:
-      - name: DateRange
-        fullName: DateRange
-        uid: azure-devops-extension-api.DateRange
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.Member
-    name: Member
-    spec.typeScript:
-      - name: Member
-        fullName: Member
-        uid: azure-devops-extension-api.Member
+    summary: Full http link to the resource
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.CapacityContractBase" />

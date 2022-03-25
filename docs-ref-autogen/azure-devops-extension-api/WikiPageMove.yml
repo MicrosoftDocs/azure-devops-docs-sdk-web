@@ -1,41 +1,64 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.WikiPageMove
-    name: WikiPageMove
-    fullName: WikiPageMove
-    children:
-      - azure-devops-extension-api.WikiPageMove.page
-    langs:
-      - typeScript
-    type: interface
-    summary: Request contract for Wiki Page Move.
-    extends:
-      name: azure-devops-extension-api.WikiPageMoveParameters
+### YamlMime:TSType
+name: WikiPageMove
+uid: azure-devops-extension-api.WikiPageMove
+package: azure-devops-extension-api
+summary: Request contract for Wiki Page Move.
+fullName: WikiPageMove
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: newOrder
+    uid: azure-devops-extension-api.WikiPageMove.newOrder
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.WikiPageMove.page
-    name: page
-    fullName: page
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: New order of the wiki page.
+    fullName: newOrder
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'newOrder: number'
+      return:
+        description: ''
+        type: number
+  - name: newPath
+    uid: azure-devops-extension-api.WikiPageMove.newPath
+    package: azure-devops-extension-api
+    summary: New path of the wiki page.
+    fullName: newPath
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'newPath: string'
+      return:
+        description: ''
+        type: string
+  - name: page
+    uid: azure-devops-extension-api.WikiPageMove.page
+    package: azure-devops-extension-api
     summary: Resultant page of this page move operation.
+    fullName: page
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'page: WikiPage'
       return:
-        type:
-          - azure-devops-extension-api.WikiPage
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WikiPage" />
+  - name: path
+    uid: azure-devops-extension-api.WikiPageMove.path
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.WikiPageMoveParameters
-    name: WikiPageMoveParameters
-    spec.typeScript:
-      - name: WikiPageMoveParameters
-        fullName: WikiPageMoveParameters
-        uid: azure-devops-extension-api.WikiPageMoveParameters
-  - uid: azure-devops-extension-api.WikiPage
-    name: WikiPage
-    spec.typeScript:
-      - name: WikiPage
-        fullName: WikiPage
-        uid: azure-devops-extension-api.WikiPage
+    summary: Current path of the wiki page.
+    fullName: path
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'path: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.WikiPageMoveParameters" />

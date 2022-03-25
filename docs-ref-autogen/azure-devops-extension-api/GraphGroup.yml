@@ -1,187 +1,308 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GraphGroup
-    name: GraphGroup
-    fullName: GraphGroup
-    children:
-      - azure-devops-extension-api.GraphGroup.description
-      - azure-devops-extension-api.GraphGroup.isCrossProject
-      - azure-devops-extension-api.GraphGroup.isDeleted
-      - azure-devops-extension-api.GraphGroup.isGlobalScope
-      - azure-devops-extension-api.GraphGroup.isRestrictedVisible
-      - azure-devops-extension-api.GraphGroup.localScopeId
-      - azure-devops-extension-api.GraphGroup.scopeId
-      - azure-devops-extension-api.GraphGroup.scopeName
-      - azure-devops-extension-api.GraphGroup.scopeType
-      - azure-devops-extension-api.GraphGroup.securingHostId
-      - azure-devops-extension-api.GraphGroup.specialType
-    langs:
-      - typeScript
-    type: interface
-    summary: Graph group entity
-    extends:
-      name: azure-devops-extension-api.GraphMember
+### YamlMime:TSType
+name: GraphGroup
+uid: azure-devops-extension-api.GraphGroup
+package: azure-devops-extension-api
+summary: Graph group entity
+fullName: GraphGroup
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: description
+    uid: azure-devops-extension-api.GraphGroup.description
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       A short phrase to help human readers disambiguate groups with similar
       names
+    fullName: description
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: descriptor
+    uid: azure-devops-extension-api.GraphGroup.descriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.isCrossProject
-    name: isCrossProject
-    fullName: isCrossProject
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      The descriptor is the primary way to reference the graph subject while the
+      system is running. This field will uniquely identify the same graph
+      subject across both Accounts and Organizations.
+    fullName: descriptor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'descriptor: string'
+      return:
+        description: ''
+        type: string
+  - name: displayName
+    uid: azure-devops-extension-api.GraphGroup.displayName
+    package: azure-devops-extension-api
+    summary: >-
+      This is the non-unique display name of the graph subject. To change this
+      field, you must alter its value in the source provider.
+    fullName: displayName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        description: ''
+        type: string
+  - name: domain
+    uid: azure-devops-extension-api.GraphGroup.domain
+    package: azure-devops-extension-api
+    summary: >-
+      This represents the name of the container of origin for a graph member.
+      (For MSA this is "Windows Live ID", for AD the name of the domain, for AAD
+      the tenantID of the directory, for VSTS groups the ScopeId, etc)
+    fullName: domain
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'domain: string'
+      return:
+        description: ''
+        type: string
+  - name: isCrossProject
+    uid: azure-devops-extension-api.GraphGroup.isCrossProject
+    package: azure-devops-extension-api
     summary: ''
+    fullName: isCrossProject
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isCrossProject: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: isDeleted
+    uid: azure-devops-extension-api.GraphGroup.isDeleted
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.isDeleted
-    name: isDeleted
-    fullName: isDeleted
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: isDeleted
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isDeleted: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: isGlobalScope
+    uid: azure-devops-extension-api.GraphGroup.isGlobalScope
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.isGlobalScope
-    name: isGlobalScope
-    fullName: isGlobalScope
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: isGlobalScope
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isGlobalScope: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: isRestrictedVisible
+    uid: azure-devops-extension-api.GraphGroup.isRestrictedVisible
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.isRestrictedVisible
-    name: isRestrictedVisible
-    fullName: isRestrictedVisible
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: isRestrictedVisible
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isRestrictedVisible: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: legacyDescriptor
+    uid: azure-devops-extension-api.GraphGroup.legacyDescriptor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.localScopeId
-    name: localScopeId
-    fullName: localScopeId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      [Internal Use Only] The legacy descriptor is here in case you need to
+      access old version IMS using identity descriptor.
+    fullName: legacyDescriptor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'legacyDescriptor: string'
+      return:
+        description: ''
+        type: string
+  - name: localScopeId
+    uid: azure-devops-extension-api.GraphGroup.localScopeId
+    package: azure-devops-extension-api
     summary: ''
+    fullName: localScopeId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'localScopeId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: mailAddress
+    uid: azure-devops-extension-api.GraphGroup.mailAddress
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.scopeId
-    name: scopeId
-    fullName: scopeId
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: >-
+      The email address of record for a given graph member. This may be
+      different than the principal name.
+    fullName: mailAddress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'mailAddress: string'
+      return:
+        description: ''
+        type: string
+  - name: origin
+    uid: azure-devops-extension-api.GraphGroup.origin
+    package: azure-devops-extension-api
+    summary: 'The type of source provider for the origin identifier (ex:AD, AAD, MSA)'
+    fullName: origin
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'origin: string'
+      return:
+        description: ''
+        type: string
+  - name: originId
+    uid: azure-devops-extension-api.GraphGroup.originId
+    package: azure-devops-extension-api
+    summary: >-
+      The unique identifier from the system of origin. Typically a sid, object
+      id or Guid. Linking and unlinking operations can cause this value to
+      change for a user because the user is not backed by a different provider
+      and has a different unique id in the new provider.
+    fullName: originId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'originId: string'
+      return:
+        description: ''
+        type: string
+  - name: principalName
+    uid: azure-devops-extension-api.GraphGroup.principalName
+    package: azure-devops-extension-api
+    summary: >-
+      This is the PrincipalName of this graph member from the source provider.
+      The source provider may change this field over time and it is not
+      guaranteed to be immutable for the life of the graph member by VSTS.
+    fullName: principalName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'principalName: string'
+      return:
+        description: ''
+        type: string
+  - name: scopeId
+    uid: azure-devops-extension-api.GraphGroup.scopeId
+    package: azure-devops-extension-api
     summary: ''
+    fullName: scopeId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scopeId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: scopeName
+    uid: azure-devops-extension-api.GraphGroup.scopeName
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.scopeName
-    name: scopeName
-    fullName: scopeName
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: scopeName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scopeName: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: scopeType
+    uid: azure-devops-extension-api.GraphGroup.scopeType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.scopeType
-    name: scopeType
-    fullName: scopeType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: scopeType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'scopeType: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: securingHostId
+    uid: azure-devops-extension-api.GraphGroup.securingHostId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.securingHostId
-    name: securingHostId
-    fullName: securingHostId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: securingHostId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'securingHostId: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: specialType
+    uid: azure-devops-extension-api.GraphGroup.specialType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GraphGroup.specialType
-    name: specialType
-    fullName: specialType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: specialType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'specialType: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: subjectKind
+    uid: azure-devops-extension-api.GraphGroup.subjectKind
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.GraphMember
-    name: GraphMember
-    spec.typeScript:
-      - name: GraphMember
-        fullName: GraphMember
-        uid: azure-devops-extension-api.GraphMember
+    summary: >-
+      This field identifies the type of the graph subject (ex: Group, Scope,
+      User).
+    fullName: subjectKind
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subjectKind: string'
+      return:
+        description: ''
+        type: string
+  - name: url
+    uid: azure-devops-extension-api.GraphGroup.url
+    package: azure-devops-extension-api
+    summary: This url is the full route to the source resource of this graph subject.
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.GraphMember" />

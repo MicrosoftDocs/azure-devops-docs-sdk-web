@@ -1,75 +1,54 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.HistoryEntry
-    name: HistoryEntry
-    fullName: HistoryEntry<T>
-    children:
-      - azure-devops-extension-api.HistoryEntry.changeList
-      - azure-devops-extension-api.HistoryEntry.itemChangeType
-      - azure-devops-extension-api.HistoryEntry.serverItem
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
+### YamlMime:TSType
+name: HistoryEntry
+uid: azure-devops-extension-api.HistoryEntry
+package: azure-devops-extension-api
+summary: ''
+fullName: HistoryEntry<T>
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: changeList
+    uid: azure-devops-extension-api.HistoryEntry.changeList
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.HistoryEntry.changeList
-    name: changeList
-    fullName: changeList
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The Change list (changeset/commit/shelveset) for this point in history
+    fullName: changeList
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'changeList: ChangeList<T>'
       return:
-        type:
-          - azure-devops-extension-api.ChangeList<T>
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ChangeList" />&lt;T&gt;
+  - name: itemChangeType
+    uid: azure-devops-extension-api.HistoryEntry.itemChangeType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.HistoryEntry.itemChangeType
-    name: itemChangeType
-    fullName: itemChangeType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The change made to the item from this change list (only relevant for File
       history, not folders)
+    fullName: itemChangeType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'itemChangeType: VersionControlChangeType'
       return:
-        type:
-          - azure-devops-extension-api.VersionControlChangeType
+        description: ''
+        type: <xref uid="azure-devops-extension-api.VersionControlChangeType" />
+  - name: serverItem
+    uid: azure-devops-extension-api.HistoryEntry.serverItem
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.HistoryEntry.serverItem
-    name: serverItem
-    fullName: serverItem
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       The path of the item at this point in history (only relevant for File
       history, not folders)
+    fullName: serverItem
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'serverItem: string'
       return:
-        type:
-          - string
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ChangeList<T>
-    name: ChangeList<T>
-    spec.typeScript:
-      - name: ChangeList
-        fullName: ChangeList
-        uid: azure-devops-extension-api.ChangeList
-      - name: <T>
-        fullName: <T>
-  - uid: azure-devops-extension-api.VersionControlChangeType
-    name: VersionControlChangeType
-    spec.typeScript:
-      - name: VersionControlChangeType
-        fullName: VersionControlChangeType
-        uid: azure-devops-extension-api.VersionControlChangeType
+        description: ''
+        type: string

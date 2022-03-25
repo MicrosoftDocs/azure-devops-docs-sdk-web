@@ -1,0 +1,96 @@
+### YamlMime:TSType
+name: IWorkItemNotificationListener
+uid: azure-devops-extension-api.IWorkItemNotificationListener
+package: azure-devops-extension-api
+summary: Interface defining notifications provided by the ActiveWorkItemService
+fullName: IWorkItemNotificationListener
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: onFieldChanged(IWorkItemFieldChangedArgs)
+    uid: azure-devops-extension-api.IWorkItemNotificationListener.onFieldChanged
+    package: azure-devops-extension-api
+    summary: Called when a field is modified
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function onFieldChanged(fieldChangedArgs: IWorkItemFieldChangedArgs)'
+      parameters:
+        - id: fieldChangedArgs
+          type: <xref uid="azure-devops-extension-api.IWorkItemFieldChangedArgs" />
+          description: >
+            Information about the work item that was modified and the fields
+            that were changed.
+  - name: onLoaded(IWorkItemLoadedArgs)
+    uid: azure-devops-extension-api.IWorkItemNotificationListener.onLoaded
+    package: azure-devops-extension-api
+    summary: Called when an extension is loaded
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function onLoaded(workItemLoadedArgs: IWorkItemLoadedArgs)'
+      parameters:
+        - id: workItemLoadedArgs
+          type: <xref uid="azure-devops-extension-api.IWorkItemLoadedArgs" />
+          description: |
+            Information about the work item that was loaded.
+  - name: onRefreshed(IWorkItemChangedArgs)
+    uid: azure-devops-extension-api.IWorkItemNotificationListener.onRefreshed
+    package: azure-devops-extension-api
+    summary: Called when a work item is refreshed
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function onRefreshed(refreshEventArgs: IWorkItemChangedArgs)'
+      parameters:
+        - id: refreshEventArgs
+          type: <xref uid="azure-devops-extension-api.IWorkItemChangedArgs" />
+          description: |
+            Information about the work item that was refreshed.
+  - name: onReset(IWorkItemChangedArgs)
+    uid: azure-devops-extension-api.IWorkItemNotificationListener.onReset
+    package: azure-devops-extension-api
+    summary: Called when a work item is reset (undo back to unchanged state)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function onReset(undoEventArgs: IWorkItemChangedArgs)'
+      parameters:
+        - id: undoEventArgs
+          type: <xref uid="azure-devops-extension-api.IWorkItemChangedArgs" />
+          description: |
+            Information about the work item that was reset.
+  - name: onSaved(IWorkItemChangedArgs)
+    uid: azure-devops-extension-api.IWorkItemNotificationListener.onSaved
+    package: azure-devops-extension-api
+    summary: Called when a work item is saved
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function onSaved(savedEventArgs: IWorkItemChangedArgs)'
+      parameters:
+        - id: savedEventArgs
+          type: <xref uid="azure-devops-extension-api.IWorkItemChangedArgs" />
+          description: |
+            Information about the work item that was saved.
+  - name: onUnloaded(IWorkItemChangedArgs)
+    uid: azure-devops-extension-api.IWorkItemNotificationListener.onUnloaded
+    package: azure-devops-extension-api
+    summary: Called when a work item is unloaded
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function onUnloaded(unloadedEventArgs: IWorkItemChangedArgs)'
+      parameters:
+        - id: unloadedEventArgs
+          type: <xref uid="azure-devops-extension-api.IWorkItemChangedArgs" />
+          description: |
+            Information about the work item that was saved.

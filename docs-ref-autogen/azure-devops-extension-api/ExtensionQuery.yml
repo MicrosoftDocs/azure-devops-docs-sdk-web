@@ -1,82 +1,61 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.ExtensionQuery
-    name: ExtensionQuery
-    fullName: ExtensionQuery
-    children:
-      - azure-devops-extension-api.ExtensionQuery.assetTypes
-      - azure-devops-extension-api.ExtensionQuery.filters
-      - azure-devops-extension-api.ExtensionQuery.flags
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      An ExtensionQuery is used to search the gallery for a set of extensions
-      that match one of many filter values.
+### YamlMime:TSType
+name: ExtensionQuery
+uid: azure-devops-extension-api.ExtensionQuery
+package: azure-devops-extension-api
+summary: >-
+  An ExtensionQuery is used to search the gallery for a set of extensions that
+  match one of many filter values.
+fullName: ExtensionQuery
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: assetTypes
+    uid: azure-devops-extension-api.ExtensionQuery.assetTypes
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionQuery.assetTypes
-    name: assetTypes
-    fullName: assetTypes
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       When retrieving extensions with a query; frequently the caller only needs
       a small subset of the assets. The caller may specify a list of asset types
       that should be returned if the extension contains it. All other assets
       will not be returned.
+    fullName: assetTypes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'assetTypes: string[]'
       return:
-        type:
-          - 'string[]'
+        description: ''
+        type: 'string[]'
+  - name: filters
+    uid: azure-devops-extension-api.ExtensionQuery.filters
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionQuery.filters
-    name: filters
-    fullName: filters
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Each filter is a unique query and will have matching set of extensions
       returned from the request. Each result will have the same index in the
       resulting array that the filter had in the incoming query.
+    fullName: filters
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'filters: QueryFilter[]'
       return:
-        type:
-          - 'azure-devops-extension-api.QueryFilter[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.QueryFilter" />[]'
+  - name: flags
+    uid: azure-devops-extension-api.ExtensionQuery.flags
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.ExtensionQuery.flags
-    name: flags
-    fullName: flags
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      The Flags are used to deterine which set of information the caller would
+      The Flags are used to determine which set of information the caller would
       like returned for the matched extensions.
+    fullName: flags
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'flags: ExtensionQueryFlags'
       return:
-        type:
-          - azure-devops-extension-api.ExtensionQueryFlags
-    package: azure-devops-extension-api
-references:
-  - uid: 'azure-devops-extension-api.QueryFilter[]'
-    name: 'QueryFilter[]'
-    spec.typeScript:
-      - name: QueryFilter
-        fullName: QueryFilter
-        uid: azure-devops-extension-api.QueryFilter
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.ExtensionQueryFlags
-    name: ExtensionQueryFlags
-    spec.typeScript:
-      - name: ExtensionQueryFlags
-        fullName: ExtensionQueryFlags
-        uid: azure-devops-extension-api.ExtensionQueryFlags
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExtensionQueryFlags" />

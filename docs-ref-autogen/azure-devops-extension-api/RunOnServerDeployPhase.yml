@@ -1,41 +1,90 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.RunOnServerDeployPhase
-    name: RunOnServerDeployPhase
-    fullName: RunOnServerDeployPhase
-    children:
-      - azure-devops-extension-api.RunOnServerDeployPhase.deploymentInput
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.DeployPhase
+### YamlMime:TSType
+name: RunOnServerDeployPhase
+uid: azure-devops-extension-api.RunOnServerDeployPhase
+package: azure-devops-extension-api
+summary: ''
+fullName: RunOnServerDeployPhase
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: deploymentInput
+    uid: azure-devops-extension-api.RunOnServerDeployPhase.deploymentInput
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.RunOnServerDeployPhase.deploymentInput
-    name: deploymentInput
-    fullName: deploymentInput
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets and sets the agentless job input.
+    fullName: deploymentInput
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'deploymentInput: ServerDeploymentInput'
       return:
-        type:
-          - azure-devops-extension-api.ServerDeploymentInput
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ServerDeploymentInput" />
+  - name: name
+    uid: azure-devops-extension-api.RunOnServerDeployPhase.name
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.DeployPhase
-    name: DeployPhase
-    spec.typeScript:
-      - name: DeployPhase
-        fullName: DeployPhase
-        uid: azure-devops-extension-api.DeployPhase
-  - uid: azure-devops-extension-api.ServerDeploymentInput
-    name: ServerDeploymentInput
-    spec.typeScript:
-      - name: ServerDeploymentInput
-        fullName: ServerDeploymentInput
-        uid: azure-devops-extension-api.ServerDeploymentInput
+    summary: Gets and sets the name of deploy phase.
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: phaseType
+    uid: azure-devops-extension-api.RunOnServerDeployPhase.phaseType
+    package: azure-devops-extension-api
+    summary: Indicates the deploy phase type.
+    fullName: phaseType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'phaseType: DeployPhaseTypes'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DeployPhaseTypes" />
+  - name: rank
+    uid: azure-devops-extension-api.RunOnServerDeployPhase.rank
+    package: azure-devops-extension-api
+    summary: Gets and sets the rank of deploy phase.
+    fullName: rank
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rank: number'
+      return:
+        description: ''
+        type: number
+  - name: refName
+    uid: azure-devops-extension-api.RunOnServerDeployPhase.refName
+    package: azure-devops-extension-api
+    summary: Gets and sets the reference name of deploy phase.
+    fullName: refName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'refName: string'
+      return:
+        description: ''
+        type: string
+  - name: workflowTasks
+    uid: azure-devops-extension-api.RunOnServerDeployPhase.workflowTasks
+    package: azure-devops-extension-api
+    summary: Gets and sets the workflow tasks for the deploy phase.
+    fullName: workflowTasks
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'workflowTasks: WorkflowTask[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.WorkflowTask" />[]'
+extends: <xref uid="azure-devops-extension-api.DeployPhase" />

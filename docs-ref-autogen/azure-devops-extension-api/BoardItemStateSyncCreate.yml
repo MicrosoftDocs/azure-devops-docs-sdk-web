@@ -1,35 +1,53 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BoardItemStateSyncCreate
-    name: BoardItemStateSyncCreate
-    fullName: BoardItemStateSyncCreate
-    children:
-      - azure-devops-extension-api.BoardItemStateSyncCreate.itemType
-    langs:
-      - typeScript
-    type: interface
-    summary: Describes a board item state sync to create on a board.
-    extends:
-      name: azure-devops-extension-api.SubTypeAndStateValue
+### YamlMime:TSType
+name: BoardItemStateSyncCreate
+uid: azure-devops-extension-api.BoardItemStateSyncCreate
+package: azure-devops-extension-api
+summary: Describes a board item state sync to create on a board.
+fullName: BoardItemStateSyncCreate
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: itemType
+    uid: azure-devops-extension-api.BoardItemStateSyncCreate.itemType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BoardItemStateSyncCreate.itemType
-    name: itemType
-    fullName: itemType
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The Item type.
+    fullName: itemType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'itemType: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: stateValue
+    uid: azure-devops-extension-api.BoardItemStateSyncCreate.stateValue
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.SubTypeAndStateValue
-    name: SubTypeAndStateValue
-    spec.typeScript:
-      - name: SubTypeAndStateValue
-        fullName: SubTypeAndStateValue
-        uid: azure-devops-extension-api.SubTypeAndStateValue
+    summary: The state value that will be synced to.
+    fullName: stateValue
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stateValue: string'
+      return:
+        description: ''
+        type: string
+  - name: subType
+    uid: azure-devops-extension-api.BoardItemStateSyncCreate.subType
+    package: azure-devops-extension-api
+    summary: >-
+      The sub-type that will be set for sync, for example, 'User Story' for work
+      item.
+    fullName: subType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subType: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-devops-extension-api.SubTypeAndStateValue" />

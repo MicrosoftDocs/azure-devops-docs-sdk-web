@@ -1,78 +1,118 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.GitChange
-    name: GitChange
-    fullName: GitChange
-    children:
-      - azure-devops-extension-api.GitChange.changeId
-      - azure-devops-extension-api.GitChange.newContentTemplate
-      - azure-devops-extension-api.GitChange.originalPath
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.Change<azure-devops-extension-api.GitItem>
+### YamlMime:TSType
+name: GitChange
+uid: azure-devops-extension-api.GitChange
+package: azure-devops-extension-api
+summary: ''
+fullName: GitChange
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: changeId
+    uid: azure-devops-extension-api.GitChange.changeId
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitChange.changeId
-    name: changeId
-    fullName: changeId
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ID of the change within the group of changes.
+    fullName: changeId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'changeId: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: changeType
+    uid: azure-devops-extension-api.GitChange.changeType
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitChange.newContentTemplate
-    name: newContentTemplate
-    fullName: newContentTemplate
-    children: []
-    langs:
-      - typeScript
-    type: property
+    summary: The type of change that was made to the item.
+    fullName: changeType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'changeType: VersionControlChangeType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.VersionControlChangeType" />
+  - name: item
+    uid: azure-devops-extension-api.GitChange.item
+    package: azure-devops-extension-api
+    summary: Current version.
+    fullName: item
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'item: GitItem'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitItem" />
+  - name: newContent
+    uid: azure-devops-extension-api.GitChange.newContent
+    package: azure-devops-extension-api
+    summary: Content of the item after the change.
+    fullName: newContent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'newContent: ItemContent'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ItemContent" />
+  - name: newContentTemplate
+    uid: azure-devops-extension-api.GitChange.newContentTemplate
+    package: azure-devops-extension-api
     summary: New Content template to be used when pushing new changes.
+    fullName: newContentTemplate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'newContentTemplate: GitTemplate'
       return:
-        type:
-          - azure-devops-extension-api.GitTemplate
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitTemplate" />
+  - name: originalPath
+    uid: azure-devops-extension-api.GitChange.originalPath
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.GitChange.originalPath
-    name: originalPath
-    fullName: originalPath
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Original path of item if different from current path.
+    fullName: originalPath
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'originalPath: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: sourceServerItem
+    uid: azure-devops-extension-api.GitChange.sourceServerItem
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.Change<azure-devops-extension-api.GitItem>
-    name: GitItem>
-    spec.typeScript:
-      - name: Change
-        fullName: Change
-        uid: azure-devops-extension-api.Change
-      - name: <
-        fullName: <
-      - name: GitItem
-        fullName: GitItem
-        uid: azure-devops-extension-api.GitItem
-      - name: '>'
-        fullName: '>'
-  - uid: azure-devops-extension-api.GitTemplate
-    name: GitTemplate
-    spec.typeScript:
-      - name: GitTemplate
-        fullName: GitTemplate
-        uid: azure-devops-extension-api.GitTemplate
+    summary: Path of the item on the server.
+    fullName: sourceServerItem
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sourceServerItem: string'
+      return:
+        description: ''
+        type: string
+  - name: url
+    uid: azure-devops-extension-api.GitChange.url
+    package: azure-devops-extension-api
+    summary: URL to retrieve the item.
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+extends: >-
+  <xref uid="azure-devops-extension-api.Change" />&lt;<xref
+  uid="azure-devops-extension-api.GitItem" />&gt;

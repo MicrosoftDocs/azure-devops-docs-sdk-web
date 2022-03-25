@@ -1,63 +1,66 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.BuildArtifact
-    name: BuildArtifact
-    fullName: BuildArtifact
-    children:
-      - azure-devops-extension-api.BuildArtifact.id
-      - azure-devops-extension-api.BuildArtifact.name
-      - azure-devops-extension-api.BuildArtifact.resource
-    langs:
-      - typeScript
-    type: interface
-    summary: Represents an artifact produced by a build.
+### YamlMime:TSType
+name: BuildArtifact
+uid: azure-devops-extension-api.BuildArtifact
+package: azure-devops-extension-api
+summary: Represents an artifact produced by a build.
+fullName: BuildArtifact
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.BuildArtifact.id
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildArtifact.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The artifact ID.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'id: number'
       return:
-        type:
-          - number
+        description: ''
+        type: number
+  - name: name
+    uid: azure-devops-extension-api.BuildArtifact.name
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildArtifact.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The name of the artifact.
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'name: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+  - name: resource
+    uid: azure-devops-extension-api.BuildArtifact.resource
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.BuildArtifact.resource
-    name: resource
-    fullName: resource
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The actual resource.
+    fullName: resource
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'resource: ArtifactResource'
       return:
-        type:
-          - azure-devops-extension-api.ArtifactResource
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ArtifactResource" />
+  - name: source
+    uid: azure-devops-extension-api.BuildArtifact.source
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.ArtifactResource
-    name: ArtifactResource
-    spec.typeScript:
-      - name: ArtifactResource
-        fullName: ArtifactResource
-        uid: azure-devops-extension-api.ArtifactResource
+    summary: >-
+      The artifact source, which will be the ID of the job that produced this
+      artifact. If an artifact is associated with multiple sources, this points
+      to the first source.
+    fullName: source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'source: string'
+      return:
+        description: ''
+        type: string

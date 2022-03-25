@@ -1,152 +1,109 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.PublisherEvent
-    name: PublisherEvent
-    fullName: PublisherEvent
-    children:
-      - azure-devops-extension-api.PublisherEvent.diagnostics
-      - azure-devops-extension-api.PublisherEvent.event
-      - azure-devops-extension-api.PublisherEvent.isFilteredEvent
-      - azure-devops-extension-api.PublisherEvent.notificationData
-      - azure-devops-extension-api.PublisherEvent.otherResourceVersions
-      - azure-devops-extension-api.PublisherEvent.publisherInputFilters
-      - azure-devops-extension-api.PublisherEvent.subscription
-    langs:
-      - typeScript
-    type: interface
-    summary: Wrapper around an event which is being published
+### YamlMime:TSType
+name: PublisherEvent
+uid: azure-devops-extension-api.PublisherEvent
+package: azure-devops-extension-api
+summary: Wrapper around an event which is being published
+fullName: PublisherEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: diagnostics
+    uid: azure-devops-extension-api.PublisherEvent.diagnostics
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PublisherEvent.diagnostics
-    name: diagnostics
-    fullName: diagnostics
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Add key/value pairs which will be stored with a published notification in
       the SH service DB.  This key/value pairs are for diagnostic purposes only
       and will have not effect on the delivery of a notificaton.
+    fullName: diagnostics
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'diagnostics: [key: string]: string'
       return:
-        type:
-          - '[key: string]: string'
+        description: ''
+        type: '[key: string]\: string'
+  - name: event
+    uid: azure-devops-extension-api.PublisherEvent.event
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PublisherEvent.event
-    name: event
-    fullName: event
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: The event being published
+    fullName: event
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'event: Event'
       return:
-        type:
-          - azure-devops-extension-api.Event
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Event" />
+  - name: isFilteredEvent
+    uid: azure-devops-extension-api.PublisherEvent.isFilteredEvent
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PublisherEvent.isFilteredEvent
-    name: isFilteredEvent
-    fullName: isFilteredEvent
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets or sets flag for filtered events
+    fullName: isFilteredEvent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'isFilteredEvent: boolean'
       return:
-        type:
-          - boolean
+        description: ''
+        type: boolean
+  - name: notificationData
+    uid: azure-devops-extension-api.PublisherEvent.notificationData
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PublisherEvent.notificationData
-    name: notificationData
-    fullName: notificationData
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Additional data that needs to be sent as part of notification to
       complement the Resource data in the Event
+    fullName: notificationData
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'notificationData: [key: string]: string'
       return:
-        type:
-          - '[key: string]: string'
+        description: ''
+        type: '[key: string]\: string'
+  - name: otherResourceVersions
+    uid: azure-devops-extension-api.PublisherEvent.otherResourceVersions
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PublisherEvent.otherResourceVersions
-    name: otherResourceVersions
-    fullName: otherResourceVersions
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Gets or sets the array of older supported resource versions.
+    fullName: otherResourceVersions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'otherResourceVersions: VersionedResource[]'
       return:
-        type:
-          - 'azure-devops-extension-api.VersionedResource[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.VersionedResource" />[]'
+  - name: publisherInputFilters
+    uid: azure-devops-extension-api.PublisherEvent.publisherInputFilters
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PublisherEvent.publisherInputFilters
-    name: publisherInputFilters
-    fullName: publisherInputFilters
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       Optional publisher-input filters which restricts the set of subscriptions
       which are triggered by the event
+    fullName: publisherInputFilters
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'publisherInputFilters: InputFilter[]'
       return:
-        type:
-          - 'azure-devops-extension-api.InputFilter[]'
+        description: ''
+        type: '<xref uid="azure-devops-extension-api.InputFilter" />[]'
+  - name: subscription
+    uid: azure-devops-extension-api.PublisherEvent.subscription
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.PublisherEvent.subscription
-    name: subscription
+    summary: Gets or sets matched hooks subscription which caused this event.
     fullName: subscription
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets matchd hooks subscription which caused this event.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'subscription: Subscription'
       return:
-        type:
-          - azure-devops-extension-api.Subscription
-    package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.Event
-    name: Event
-    spec.typeScript:
-      - name: Event
-        fullName: Event
-        uid: azure-devops-extension-api.Event
-  - uid: 'azure-devops-extension-api.VersionedResource[]'
-    name: 'VersionedResource[]'
-    spec.typeScript:
-      - name: VersionedResource
-        fullName: VersionedResource
-        uid: azure-devops-extension-api.VersionedResource
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-devops-extension-api.InputFilter[]'
-    name: 'InputFilter[]'
-    spec.typeScript:
-      - name: InputFilter
-        fullName: InputFilter
-        uid: azure-devops-extension-api.InputFilter
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-devops-extension-api.Subscription
-    name: Subscription
-    spec.typeScript:
-      - name: Subscription
-        fullName: Subscription
-        uid: azure-devops-extension-api.Subscription
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Subscription" />

@@ -1,163 +1,104 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-devops-extension-api.AccountsRestClient
-    name: AccountsRestClient
-    fullName: AccountsRestClient
-    children:
-      - azure-devops-extension-api.AccountsRestClient.constructor
-      - azure-devops-extension-api.AccountsRestClient.createAccount
-      - azure-devops-extension-api.AccountsRestClient.getAccount
-      - azure-devops-extension-api.AccountsRestClient.getAccounts
-      - azure-devops-extension-api.AccountsRestClient.RESOURCE_AREA_ID
-    langs:
-      - typeScript
-    type: class
-    summary: ''
-    extends:
-      name: azure-devops-extension-api.RestClientBase
+### YamlMime:TSType
+name: AccountsRestClient
+uid: azure-devops-extension-api.AccountsRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: AccountsRestClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: AccountsRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.AccountsRestClient.constructor
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AccountsRestClient.constructor
-    name: AccountsRestClient(IVssRestClientOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
     summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'new AccountsRestClient(options: IVssRestClientOptions)'
       parameters:
         - id: options
-          type:
-            - azure-devops-extension-api.IVssRestClientOptions
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
+properties:
+  - name: RESOURCE_AREA_ID
+    uid: azure-devops-extension-api.AccountsRestClient.RESOURCE_AREA_ID
     package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AccountsRestClient.createAccount
-    name: 'createAccount(AccountCreateInfoInternal, boolean)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: ''
-    syntax:
-      content: >-
-        function createAccount(info: AccountCreateInfoInternal, usePrecreated?:
-        boolean)
-      parameters:
-        - id: info
-          type:
-            - azure-devops-extension-api.AccountCreateInfoInternal
-          description: '-'
-        - id: usePrecreated
-          type:
-            - boolean
-          description: |
-            -
-          optional: true
-      return:
-        type:
-          - Promise<azure-devops-extension-api.Account>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AccountsRestClient.getAccount
-    name: getAccount(string)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function getAccount(accountId: string)'
-      parameters:
-        - id: accountId
-          type:
-            - string
-          description: |
-            -
-      return:
-        type:
-          - Promise<azure-devops-extension-api.Account>
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AccountsRestClient.getAccounts
-    name: 'getAccounts(string, string, string)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Get a list of accounts for a specific owner or a specific member.
-    syntax:
-      content: >-
-        function getAccounts(ownerId?: string, memberId?: string, properties?:
-        string)
-      parameters:
-        - id: ownerId
-          type:
-            - string
-          description: ID for the owner of the accounts.
-          optional: true
-        - id: memberId
-          type:
-            - string
-          description: ID for a member of the accounts.
-          optional: true
-        - id: properties
-          type:
-            - string
-          description: |
-            -
-          optional: true
-      return:
-        type:
-          - 'Promise<azure-devops-extension-api.Account[]>'
-    package: azure-devops-extension-api
-  - uid: azure-devops-extension-api.AccountsRestClient.RESOURCE_AREA_ID
-    name: RESOURCE_AREA_ID
     fullName: RESOURCE_AREA_ID
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
       return:
-        type:
-          - string
+        description: ''
+        type: string
+methods:
+  - name: 'createAccount(AccountCreateInfoInternal, boolean)'
+    uid: azure-devops-extension-api.AccountsRestClient.createAccount
     package: azure-devops-extension-api
-references:
-  - uid: azure-devops-extension-api.RestClientBase
-    name: RestClientBase
-    spec.typeScript:
-      - name: RestClientBase
-        fullName: RestClientBase
-        uid: azure-devops-extension-api.RestClientBase
-  - uid: azure-devops-extension-api.IVssRestClientOptions
-    name: IVssRestClientOptions
-    spec.typeScript:
-      - name: IVssRestClientOptions
-        fullName: IVssRestClientOptions
-        uid: azure-devops-extension-api.IVssRestClientOptions
-  - uid: azure-devops-extension-api.AccountCreateInfoInternal
-    name: AccountCreateInfoInternal
-    spec.typeScript:
-      - name: AccountCreateInfoInternal
-        fullName: AccountCreateInfoInternal
-        uid: azure-devops-extension-api.AccountCreateInfoInternal
-  - uid: Promise<azure-devops-extension-api.Account>
-    name: Account>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: Account
-        fullName: Account
-        uid: azure-devops-extension-api.Account
-      - name: '>'
-        fullName: '>'
-  - uid: 'Promise<azure-devops-extension-api.Account[]>'
-    name: 'Account[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: Account
-        fullName: Account
-        uid: azure-devops-extension-api.Account
-      - name: '[]>'
-        fullName: '[]>'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAccount(info: AccountCreateInfoInternal, usePrecreated?:
+        boolean): Promise<Account>
+      parameters:
+        - id: info
+          type: <xref uid="azure-devops-extension-api.AccountCreateInfoInternal" />
+          description: '-'
+        - id: usePrecreated
+          type: boolean
+          description: |
+            -
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Account" />&gt;
+  - name: getAccount(string)
+    uid: azure-devops-extension-api.AccountsRestClient.getAccount
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getAccount(accountId: string): Promise<Account>'
+      parameters:
+        - id: accountId
+          type: string
+          description: |
+            -
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Account" />&gt;
+  - name: 'getAccounts(string, string, string)'
+    uid: azure-devops-extension-api.AccountsRestClient.getAccounts
+    package: azure-devops-extension-api
+    summary: Get a list of accounts for a specific owner or a specific member.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccounts(ownerId?: string, memberId?: string, properties?:
+        string): Promise<Account[]>
+      parameters:
+        - id: ownerId
+          type: string
+          description: ID for the owner of the accounts.
+        - id: memberId
+          type: string
+          description: ID for a member of the accounts.
+        - id: properties
+          type: string
+          description: |
+            -
+      return:
+        description: ''
+        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Account" />[]&gt;'
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />
