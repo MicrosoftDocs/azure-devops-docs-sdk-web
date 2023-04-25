@@ -5,60 +5,65 @@ package: azure-devops-extension-api
 summary: List of items to update in the board.
 fullName: UpdateBoardItemList
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: columnId
-    uid: azure-devops-extension-api.UpdateBoardItemList.columnId
-    package: azure-devops-extension-api
-    summary: Board column identifier.
-    fullName: columnId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'columnId: string'
-      return:
-        description: ''
-        type: string
   - name: items
     uid: azure-devops-extension-api.UpdateBoardItemList.items
     package: azure-devops-extension-api
     summary: List of items by id and etag.
     fullName: items
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'items: BoardItemIdAndEtag[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.BoardItemIdAndEtag" />[]'
+        type: <xref uid="azure-devops-extension-api.BoardItemIdAndEtag" />[]
+inheritedProperties:
+  - name: columnId
+    uid: azure-devops-extension-api.UpdateBoardItemList.columnId
+    package: azure-devops-extension-api
+    summary: Board column identifier.
+    fullName: columnId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'columnId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [UpdateBoardItem.columnId](xref:azure-devops-extension-api.UpdateBoardItem.columnId)
   - name: nextId
     uid: azure-devops-extension-api.UpdateBoardItemList.nextId
     package: azure-devops-extension-api
     summary: 'Next board item id or supported directive: $first or $last.'
     fullName: nextId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'nextId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [UpdateBoardItem.nextId](xref:azure-devops-extension-api.UpdateBoardItem.nextId)
   - name: rowId
     uid: azure-devops-extension-api.UpdateBoardItemList.rowId
     package: azure-devops-extension-api
     summary: Board row identifier.
     fullName: rowId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'rowId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [UpdateBoardItem.rowId](xref:azure-devops-extension-api.UpdateBoardItem.rowId)
 extends: <xref uid="azure-devops-extension-api.UpdateBoardItem" />

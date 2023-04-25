@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents the reference to a specific version of a comment on a Work Item.
 fullName: WorkItemCommentVersionRef
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The id assigned to the comment.
     fullName: commentId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'commentId: number'
@@ -28,7 +26,6 @@ properties:
     summary: '[Internal] The work item revision where this comment was originally added.'
     fullName: createdInRevision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdInRevision: number'
@@ -41,7 +38,6 @@ properties:
     summary: '[Internal] Specifies whether comment was deleted.'
     fullName: isDeleted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isDeleted: boolean'
@@ -54,23 +50,9 @@ properties:
     summary: '[Internal] The text of the comment.'
     fullName: text
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'text: string'
-      return:
-        description: ''
-        type: string
-  - name: url
-    uid: azure-devops-extension-api.WorkItemCommentVersionRef.url
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: url
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'url: string'
       return:
         description: ''
         type: string
@@ -80,11 +62,26 @@ properties:
     summary: The version number.
     fullName: version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'version: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: url
+    uid: azure-devops-extension-api.WorkItemCommentVersionRef.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResourceReference.url](xref:azure-devops-extension-api.WorkItemTrackingResourceReference.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResourceReference" />

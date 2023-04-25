@@ -2,10 +2,11 @@
 name: LocationsRestClient
 uid: azure-devops-extension-api.LocationsRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: LocationsRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new LocationsRestClient(options: IVssRestClientOptions)'
@@ -23,12 +23,11 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
-  - name: 'deleteServiceDefinition(string, string)'
+  - name: deleteServiceDefinition(string, string)
     uid: azure-devops-extension-api.LocationsRestClient.deleteServiceDefinition
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -37,20 +36,18 @@ methods:
       parameters:
         - id: serviceType
           type: string
-          description: '-'
+          description: ''
         - id: identifier
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'getConnectionData(ConnectOptions, number, number)'
+  - name: getConnectionData(ConnectOptions, number, number)
     uid: azure-devops-extension-api.LocationsRestClient.getConnectionData
     package: azure-devops-extension-api
     summary: This was copied and adapted from TeamFoundationConnectionService.Connect()
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -59,25 +56,23 @@ methods:
       parameters:
         - id: connectOptions
           type: <xref uid="azure-devops-extension-api.ConnectOptions" />
-          description: '-'
+          description: ''
         - id: lastChangeId
           type: number
           description: Obsolete 32-bit LastChangeId
         - id: lastChangeId64
           type: number
-          description: |
-            Non-truncated 64-bit LastChangeId
+          description: Non-truncated 64-bit LastChangeId
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ConnectionData"
           />&gt;
-  - name: 'getResourceArea(string, string, string)'
+  - name: getResourceArea(string, string, string)
     uid: azure-devops-extension-api.LocationsRestClient.getResourceArea
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -86,25 +81,23 @@ methods:
       parameters:
         - id: areaId
           type: string
-          description: '-'
+          description: ''
         - id: enterpriseName
           type: string
-          description: '-'
+          description: ''
         - id: organizationName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ResourceAreaInfo"
           />&gt;
-  - name: 'getResourceAreaByHost(string, string)'
+  - name: getResourceAreaByHost(string, string)
     uid: azure-devops-extension-api.LocationsRestClient.getResourceAreaByHost
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -113,22 +106,20 @@ methods:
       parameters:
         - id: areaId
           type: string
-          description: '-'
+          description: ''
         - id: hostId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ResourceAreaInfo"
           />&gt;
-  - name: 'getResourceAreas(string, string)'
+  - name: getResourceAreas(string, string)
     uid: azure-devops-extension-api.LocationsRestClient.getResourceAreas
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -137,11 +128,10 @@ methods:
       parameters:
         - id: enterpriseName
           type: string
-          description: '-'
+          description: ''
         - id: organizationName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -152,7 +142,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -161,19 +150,17 @@ methods:
       parameters:
         - id: hostId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ResourceAreaInfo"
           />[]&gt;
-  - name: 'getServiceDefinition(string, string, boolean, boolean)'
+  - name: getServiceDefinition(string, string, boolean, boolean)
     uid: azure-devops-extension-api.LocationsRestClient.getServiceDefinition
     package: azure-devops-extension-api
     summary: Finds a given service definition.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -183,10 +170,10 @@ methods:
       parameters:
         - id: serviceType
           type: string
-          description: '-'
+          description: ''
         - id: identifier
           type: string
-          description: '-'
+          description: ''
         - id: allowFaultIn
           type: boolean
           description: >-
@@ -194,7 +181,7 @@ methods:
             SPS.
         - id: previewFaultIn
           type: boolean
-          description: >
+          description: >-
             If true, we will calculate and return a host instance mapping, but
             not persist it.
       return:
@@ -207,7 +194,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -216,19 +202,17 @@ methods:
       parameters:
         - id: serviceType
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceDefinition"
           />[]&gt;
-  - name: 'updateServiceDefinitions(VssJsonCollectionWrapperV<ServiceDefinition[]>)'
+  - name: updateServiceDefinitions(VssJsonCollectionWrapperV<ServiceDefinition[]>)
     uid: azure-devops-extension-api.LocationsRestClient.updateServiceDefinitions
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -240,8 +224,7 @@ methods:
             <xref uid="azure-devops-extension-api.VssJsonCollectionWrapperV"
             />&lt;<xref uid="azure-devops-extension-api.ServiceDefinition"
             />[]&gt;
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;

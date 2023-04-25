@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Data contract for Data of Delivery View
 fullName: DeliveryViewData
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: Work item child id to parent id map
     fullName: childIdToParentIdMap
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'childIdToParentIdMap: [key: number]: number'
+      content: 'childIdToParentIdMap: {[key: number]: number}'
       return:
         description: ''
-        type: '[key: number]\: number'
+        type: '{[key: number]: number}'
   - name: criteriaStatus
     uid: azure-devops-extension-api.DeliveryViewData.criteriaStatus
     package: azure-devops-extension-api
     summary: Filter criteria status of the timeline
     fullName: criteriaStatus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'criteriaStatus: TimelineCriteriaStatus'
@@ -41,59 +38,42 @@ properties:
     summary: The end date of the delivery view data
     fullName: endDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'endDate: Date'
       return:
         description: ''
         type: Date
-  - name: id
-    uid: azure-devops-extension-api.DeliveryViewData.id
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: string'
-      return:
-        description: ''
-        type: string
   - name: maxExpandedTeams
     uid: azure-devops-extension-api.DeliveryViewData.maxExpandedTeams
     package: azure-devops-extension-api
-    summary: Max number of teams can be configured for a delivery plan.
+    summary: Max number of teams that can be configured for a delivery plan
     fullName: maxExpandedTeams
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxExpandedTeams: number'
       return:
         description: ''
         type: number
-  - name: revision
-    uid: azure-devops-extension-api.DeliveryViewData.revision
+  - name: parentItemMaps
+    uid: azure-devops-extension-api.DeliveryViewData.parentItemMaps
     package: azure-devops-extension-api
-    summary: ''
-    fullName: revision
+    summary: Mapping between parent id, title and all the child work item ids
+    fullName: parentItemMaps
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'revision: number'
+      content: 'parentItemMaps: ParentChildWIMap[]'
       return:
         description: ''
-        type: number
+        type: <xref uid="azure-devops-extension-api.ParentChildWIMap" />[]
   - name: startDate
     uid: azure-devops-extension-api.DeliveryViewData.startDate
     package: azure-devops-extension-api
     summary: The start date for the delivery view data
     fullName: startDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'startDate: Date'
@@ -106,11 +86,65 @@ properties:
     summary: All the team data
     fullName: teams
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'teams: TimelineTeamData[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TimelineTeamData" />[]'
+        type: <xref uid="azure-devops-extension-api.TimelineTeamData" />[]
+  - name: workItemDependencies
+    uid: azure-devops-extension-api.DeliveryViewData.workItemDependencies
+    package: azure-devops-extension-api
+    summary: List of all work item ids that have a dependency but not a violation
+    fullName: workItemDependencies
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItemDependencies: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: workItemViolations
+    uid: azure-devops-extension-api.DeliveryViewData.workItemViolations
+    package: azure-devops-extension-api
+    summary: List of all work item ids that have a violation
+    fullName: workItemViolations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItemViolations: number[]'
+      return:
+        description: ''
+        type: number[]
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.DeliveryViewData.id
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [PlanViewData.id](xref:azure-devops-extension-api.PlanViewData.id)
+  - name: revision
+    uid: azure-devops-extension-api.DeliveryViewData.revision
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: revision
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'revision: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [PlanViewData.revision](xref:azure-devops-extension-api.PlanViewData.revision)
 extends: <xref uid="azure-devops-extension-api.PlanViewData" />

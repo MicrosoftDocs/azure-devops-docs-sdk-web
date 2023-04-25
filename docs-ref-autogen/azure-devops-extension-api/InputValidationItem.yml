@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: InputValidationItem
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,52 +14,58 @@ properties:
     summary: Provides binding context for the expression to evaluate
     fullName: context
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'context: InputBindingContext'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.InputBindingContext" />
+inheritedProperties:
   - name: isValid
     uid: azure-devops-extension-api.InputValidationItem.isValid
     package: azure-devops-extension-api
     summary: Tells whether the current input is valid or not
     fullName: isValid
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isValid: boolean'
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ValidationItem.isValid](xref:azure-devops-extension-api.ValidationItem.isValid)
   - name: reason
     uid: azure-devops-extension-api.InputValidationItem.reason
     package: azure-devops-extension-api
     summary: Reason for input validation failure
     fullName: reason
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'reason: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ValidationItem.reason](xref:azure-devops-extension-api.ValidationItem.reason)
   - name: type
     uid: azure-devops-extension-api.InputValidationItem.type
     package: azure-devops-extension-api
     summary: Type of validation item
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ValidationItem.type](xref:azure-devops-extension-api.ValidationItem.type)
   - name: value
     uid: azure-devops-extension-api.InputValidationItem.value
     package: azure-devops-extension-api
@@ -70,11 +75,13 @@ properties:
       'refs/heads/master');eq(value, 'refs/heads/master')
     fullName: value
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'value: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ValidationItem.value](xref:azure-devops-extension-api.ValidationItem.value)
 extends: <xref uid="azure-devops-extension-api.ValidationItem" />

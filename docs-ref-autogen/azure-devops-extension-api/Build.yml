@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Data representation of a build.
 fullName: Build
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,30 @@ properties:
     summary: The agent specification for the build.
     fullName: agentSpecification
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agentSpecification: AgentSpecification'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.AgentSpecification" />
+  - name: appendCommitMessageToRunName
+    uid: azure-devops-extension-api.Build.appendCommitMessageToRunName
+    package: azure-devops-extension-api
+    summary: Append Commit Message To BuildNumber in UI.
+    fullName: appendCommitMessageToRunName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'appendCommitMessageToRunName: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: buildNumber
     uid: azure-devops-extension-api.Build.buildNumber
     package: azure-devops-extension-api
     summary: The build number/name of the build.
     fullName: buildNumber
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'buildNumber: string'
@@ -41,7 +50,6 @@ properties:
     summary: The build number revision.
     fullName: buildNumberRevision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'buildNumberRevision: number'
@@ -54,7 +62,6 @@ properties:
     summary: The build controller. This is only set if the definition type is Xaml.
     fullName: controller
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'controller: BuildController'
@@ -67,7 +74,6 @@ properties:
     summary: The definition associated with the build.
     fullName: definition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'definition: DefinitionReference'
@@ -80,7 +86,6 @@ properties:
     summary: Indicates whether the build has been deleted.
     fullName: deleted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deleted: boolean'
@@ -93,7 +98,6 @@ properties:
     summary: The identity of the process or person that deleted the build.
     fullName: deletedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deletedBy: IdentityRef'
@@ -106,7 +110,6 @@ properties:
     summary: The date the build was deleted.
     fullName: deletedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deletedDate: Date'
@@ -119,7 +122,6 @@ properties:
     summary: The description of how the build was deleted.
     fullName: deletedReason
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deletedReason: string'
@@ -134,20 +136,18 @@ properties:
       build.
     fullName: demands
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'demands: Demand[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Demand" />[]'
+        type: <xref uid="azure-devops-extension-api.Demand" />[]
   - name: finishTime
     uid: azure-devops-extension-api.Build.finishTime
     package: azure-devops-extension-api
     summary: The time that the build was completed.
     fullName: finishTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'finishTime: Date'
@@ -160,7 +160,6 @@ properties:
     summary: The ID of the build.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
@@ -173,7 +172,6 @@ properties:
     summary: Indicates whether the build should be skipped by retention policies.
     fullName: keepForever
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'keepForever: boolean'
@@ -188,7 +186,6 @@ properties:
       build.
     fullName: lastChangedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastChangedBy: IdentityRef'
@@ -201,7 +198,6 @@ properties:
     summary: The date the build was last changed.
     fullName: lastChangedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastChangedDate: Date'
@@ -214,7 +210,6 @@ properties:
     summary: Information about the build logs.
     fullName: logs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'logs: BuildLogReference'
@@ -227,7 +222,6 @@ properties:
     summary: The orchestration plan for the build.
     fullName: orchestrationPlan
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'orchestrationPlan: TaskOrchestrationPlanReference'
@@ -242,7 +236,6 @@ properties:
     summary: The parameters for the build.
     fullName: parameters
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'parameters: string'
@@ -252,10 +245,9 @@ properties:
   - name: plans
     uid: azure-devops-extension-api.Build.plans
     package: azure-devops-extension-api
-    summary: 'Orchestration plans associated with the build (build, cleanup)'
+    summary: Orchestration plans associated with the build (build, cleanup)
     fullName: plans
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'plans: TaskOrchestrationPlanReference[]'
@@ -270,7 +262,6 @@ properties:
     summary: The build's priority.
     fullName: priority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'priority: QueuePriority'
@@ -283,7 +274,6 @@ properties:
     summary: The team project.
     fullName: project
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
@@ -296,7 +286,6 @@ properties:
     summary: ''
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
@@ -306,10 +295,9 @@ properties:
   - name: quality
     uid: azure-devops-extension-api.Build.quality
     package: azure-devops-extension-api
-    summary: 'The quality of the xaml build (good, bad, etc.)'
+    summary: The quality of the xaml build (good, bad, etc.)
     fullName: quality
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'quality: string'
@@ -319,10 +307,11 @@ properties:
   - name: queue
     uid: azure-devops-extension-api.Build.queue
     package: azure-devops-extension-api
-    summary: The queue. This is only set if the definition type is Build.
+    summary: >-
+      The queue. This is only set if the definition type is Build. WARNING: this
+      field is deprecated and does not corresponds to the jobs queues.
     fullName: queue
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queue: AgentPoolQueue'
@@ -335,7 +324,6 @@ properties:
     summary: Additional options for queueing the build.
     fullName: queueOptions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queueOptions: QueueOptions'
@@ -348,7 +336,6 @@ properties:
     summary: The current position of the build in the queue.
     fullName: queuePosition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queuePosition: number'
@@ -361,7 +348,6 @@ properties:
     summary: The time that the build was queued.
     fullName: queueTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queueTime: Date'
@@ -374,7 +360,6 @@ properties:
     summary: The reason that the build was created.
     fullName: reason
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'reason: BuildReason'
@@ -387,7 +372,6 @@ properties:
     summary: The repository.
     fullName: repository
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'repository: BuildRepository'
@@ -400,7 +384,6 @@ properties:
     summary: The identity that queued the build.
     fullName: requestedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestedBy: IdentityRef'
@@ -413,7 +396,6 @@ properties:
     summary: The identity on whose behalf the build was queued.
     fullName: requestedFor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestedFor: IdentityRef'
@@ -426,7 +408,6 @@ properties:
     summary: The build result.
     fullName: result
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'result: BuildResult'
@@ -439,7 +420,6 @@ properties:
     summary: Indicates whether the build is retained by a release.
     fullName: retainedByRelease
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'retainedByRelease: boolean'
@@ -452,7 +432,6 @@ properties:
     summary: The source branch.
     fullName: sourceBranch
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceBranch: string'
@@ -465,7 +444,6 @@ properties:
     summary: The source version.
     fullName: sourceVersion
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceVersion: string'
@@ -478,7 +456,6 @@ properties:
     summary: The time that the build was started.
     fullName: startTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'startTime: Date'
@@ -491,7 +468,6 @@ properties:
     summary: The status of the build.
     fullName: status
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: BuildStatus'
@@ -504,20 +480,30 @@ properties:
     summary: ''
     fullName: tags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tags: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
+  - name: templateParameters
+    uid: azure-devops-extension-api.Build.templateParameters
+    package: azure-devops-extension-api
+    summary: Parameters to template expression evaluation
+    fullName: templateParameters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'templateParameters: {[key: string]: string}'
+      return:
+        description: ''
+        type: '{[key: string]: string}'
   - name: triggeredByBuild
     uid: azure-devops-extension-api.Build.triggeredByBuild
     package: azure-devops-extension-api
     summary: The build that triggered this build via a Build completion trigger.
     fullName: triggeredByBuild
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'triggeredByBuild: Build'
@@ -530,20 +516,18 @@ properties:
     summary: Sourceprovider-specific information about what triggered the build
     fullName: triggerInfo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'triggerInfo: [key: string]: string'
+      content: 'triggerInfo: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: uri
     uid: azure-devops-extension-api.Build.uri
     package: azure-devops-extension-api
     summary: The URI of the build.
     fullName: uri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'uri: string'
@@ -556,7 +540,6 @@ properties:
     summary: The REST URL of the build.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
@@ -569,7 +552,6 @@ properties:
     summary: ''
     fullName: validationResults
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'validationResults: BuildRequestValidationResult[]'

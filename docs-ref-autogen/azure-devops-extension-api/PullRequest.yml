@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a pull request object.  These are retrieved from Source Providers.
 fullName: PullRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Author of the pull request.
     fullName: author
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'author: IdentityRef'
@@ -30,7 +28,6 @@ properties:
       etc.
     fullName: currentState
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'currentState: string'
@@ -43,20 +40,30 @@ properties:
     summary: Description for the pull request.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
       return:
         description: ''
         type: string
+  - name: draft
+    uid: azure-devops-extension-api.PullRequest.draft
+    package: azure-devops-extension-api
+    summary: Returns if pull request is draft
+    fullName: draft
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'draft: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: id
     uid: azure-devops-extension-api.PullRequest.id
     package: azure-devops-extension-api
     summary: Unique identifier for the pull request
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -69,7 +76,6 @@ properties:
     summary: The name of the provider this pull request is associated with.
     fullName: providerName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'providerName: string'
@@ -82,7 +88,6 @@ properties:
     summary: Source branch ref of this pull request
     fullName: sourceBranchRef
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceBranchRef: string'
@@ -95,7 +100,6 @@ properties:
     summary: Owner of the source repository of this pull request
     fullName: sourceRepositoryOwner
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceRepositoryOwner: string'
@@ -108,7 +112,6 @@ properties:
     summary: Target branch ref of this pull request
     fullName: targetBranchRef
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'targetBranchRef: string'
@@ -121,7 +124,6 @@ properties:
     summary: Owner of the target repository of this pull request
     fullName: targetRepositoryOwner
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'targetRepositoryOwner: string'
@@ -134,7 +136,6 @@ properties:
     summary: Title of the pull request.
     fullName: title
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'title: string'

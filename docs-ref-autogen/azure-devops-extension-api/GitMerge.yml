@@ -2,33 +2,18 @@
 name: GitMerge
 uid: azure-devops-extension-api.GitMerge
 package: azure-devops-extension-api
-summary: ''
+summary: Parameters required for performing git merge.
 fullName: GitMerge
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: comment
-    uid: azure-devops-extension-api.GitMerge.comment
-    package: azure-devops-extension-api
-    summary: Comment or message of the commit.
-    fullName: comment
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'comment: string'
-      return:
-        description: ''
-        type: string
   - name: detailedStatus
     uid: azure-devops-extension-api.GitMerge.detailedStatus
     package: azure-devops-extension-api
     summary: Detailed status of the merge operation.
     fullName: detailedStatus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'detailedStatus: GitMergeOperationStatusDetail'
@@ -43,37 +28,53 @@ properties:
     summary: Unique identifier for the merge operation.
     fullName: mergeOperationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeOperationId: number'
       return:
         description: ''
         type: number
-  - name: parents
-    uid: azure-devops-extension-api.GitMerge.parents
-    package: azure-devops-extension-api
-    summary: An enumeration of the parent commit IDs for the merge  commit.
-    fullName: parents
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'parents: string[]'
-      return:
-        description: ''
-        type: 'string[]'
   - name: status
     uid: azure-devops-extension-api.GitMerge.status
     package: azure-devops-extension-api
     summary: Status of the merge operation.
     fullName: status
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: GitAsyncOperationStatus'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.GitAsyncOperationStatus" />
+inheritedProperties:
+  - name: comment
+    uid: azure-devops-extension-api.GitMerge.comment
+    package: azure-devops-extension-api
+    summary: Comment or message of the commit.
+    fullName: comment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitMergeParameters.comment](xref:azure-devops-extension-api.GitMergeParameters.comment)
+  - name: parents
+    uid: azure-devops-extension-api.GitMerge.parents
+    package: azure-devops-extension-api
+    summary: An enumeration of the parent commit IDs for the merge  commit.
+    fullName: parents
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'parents: string[]'
+      return:
+        description: ''
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitMergeParameters.parents](xref:azure-devops-extension-api.GitMergeParameters.parents)
 extends: <xref uid="azure-devops-extension-api.GitMergeParameters" />

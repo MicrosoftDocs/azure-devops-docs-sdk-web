@@ -10,7 +10,6 @@ summary: >-
   have additional [DataMember] properties
 fullName: IdentityBase
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -24,7 +23,6 @@ properties:
       null values do not get sent over the wire or to the database)
     fullName: customDisplayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customDisplayName: string'
@@ -37,7 +35,6 @@ properties:
     summary: ''
     fullName: descriptor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'descriptor: IdentityDescriptor'
@@ -47,10 +44,9 @@ properties:
   - name: id
     uid: azure-devops-extension-api.IdentityBase.id
     package: azure-devops-extension-api
-    summary: ''
+    summary: Identity Identifier. Also called Storage Key, or VSID
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -60,10 +56,11 @@ properties:
   - name: isActive
     uid: azure-devops-extension-api.IdentityBase.isActive
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      True if the identity has a membership in any Azure Devops group in the
+      organization.
     fullName: isActive
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isActive: boolean'
@@ -73,10 +70,9 @@ properties:
   - name: isContainer
     uid: azure-devops-extension-api.IdentityBase.isContainer
     package: azure-devops-extension-api
-    summary: ''
+    summary: True if the identity is a group.
     fullName: isContainer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isContainer: boolean'
@@ -89,7 +85,6 @@ properties:
     summary: ''
     fullName: masterId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'masterId: string'
@@ -99,49 +94,45 @@ properties:
   - name: memberIds
     uid: azure-devops-extension-api.IdentityBase.memberIds
     package: azure-devops-extension-api
-    summary: ''
+    summary: Id of the members of the identity (groups only).
     fullName: memberIds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'memberIds: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: memberOf
     uid: azure-devops-extension-api.IdentityBase.memberOf
     package: azure-devops-extension-api
     summary: ''
     fullName: memberOf
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'memberOf: IdentityDescriptor[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.IdentityDescriptor" />[]'
+        type: <xref uid="azure-devops-extension-api.IdentityDescriptor" />[]
   - name: members
     uid: azure-devops-extension-api.IdentityBase.members
     package: azure-devops-extension-api
     summary: ''
     fullName: members
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'members: IdentityDescriptor[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.IdentityDescriptor" />[]'
+        type: <xref uid="azure-devops-extension-api.IdentityDescriptor" />[]
   - name: metaTypeId
     uid: azure-devops-extension-api.IdentityBase.metaTypeId
     package: azure-devops-extension-api
     summary: ''
     fullName: metaTypeId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metaTypeId: number'
@@ -154,7 +145,6 @@ properties:
     summary: ''
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
@@ -169,7 +159,6 @@ properties:
       provider.
     fullName: providerDisplayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'providerDisplayName: string'
@@ -182,7 +171,6 @@ properties:
     summary: ''
     fullName: resourceVersion
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resourceVersion: number'
@@ -195,7 +183,6 @@ properties:
     summary: ''
     fullName: socialDescriptor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'socialDescriptor: string'
@@ -205,10 +192,9 @@ properties:
   - name: subjectDescriptor
     uid: azure-devops-extension-api.IdentityBase.subjectDescriptor
     package: azure-devops-extension-api
-    summary: ''
+    summary: Subject descriptor of a Graph entity.
     fullName: subjectDescriptor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subjectDescriptor: string'
@@ -221,7 +207,6 @@ properties:
     summary: ''
     fullName: uniqueUserId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'uniqueUserId: number'

@@ -5,11 +5,10 @@ package: azure-devops-extension-api
 summary: Host service for opening the work item form
 fullName: IWorkItemFormNavigationService
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
-  - name: 'openNewWorkItem(string, [key: string]: Object)'
+  - name: 'openNewWorkItem(string, {[fieldName: string]: Object})'
     uid: azure-devops-extension-api.IWorkItemFormNavigationService.openNewWorkItem
     package: azure-devops-extension-api
     summary: >-
@@ -18,18 +17,17 @@ methods:
 
       or it may update the current page view, depending on the current page.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function openNewWorkItem(workItemTypeName: string, initialValues?: [key:
-        string]: Object): Promise<WorkItem>
+        function openNewWorkItem(workItemTypeName: string, initialValues?:
+        {[fieldName: string]: Object}): Promise<WorkItem>
       parameters:
         - id: workItemTypeName
           type: string
           description: The name of the work item type to open
         - id: initialValues
-          type: '[key: string]\: Object'
+          type: '{[fieldName: string]: Object}'
           description: >-
             (Optional) A dictionary of any initial field values to set after
             opening the new work item.
@@ -39,7 +37,7 @@ methods:
           closed. If the workitem was not saved before closing the dialog, the
           promise will return null
         type: Promise&lt;<xref uid="azure-devops-extension-api.WorkItem" />&gt;
-  - name: 'openWorkItem(number, boolean)'
+  - name: openWorkItem(number, boolean)
     uid: azure-devops-extension-api.IWorkItemFormNavigationService.openWorkItem
     package: azure-devops-extension-api
     summary: >-
@@ -48,7 +46,6 @@ methods:
 
       or it may update the current page view, depending on the current page.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

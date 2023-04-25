@@ -1,0 +1,52 @@
+### YamlMime:TSType
+name: WikiPagesBatchRequest
+uid: azure-devops-extension-api.WikiPagesBatchRequest
+package: azure-devops-extension-api
+summary: Contract encapsulating parameters for the pages batch.
+fullName: WikiPagesBatchRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: continuationToken
+    uid: azure-devops-extension-api.WikiPagesBatchRequest.continuationToken
+    package: azure-devops-extension-api
+    summary: >-
+      If the list of page data returned is not complete, a continuation token to
+      query next batch of pages is included in the response header as
+      "x-ms-continuationtoken". Omit this parameter to get the first batch of
+      Wiki Page Data.
+    fullName: continuationToken
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'continuationToken: string'
+      return:
+        description: ''
+        type: string
+  - name: pageViewsForDays
+    uid: azure-devops-extension-api.WikiPagesBatchRequest.pageViewsForDays
+    package: azure-devops-extension-api
+    summary: >-
+      last N days from the current day for which page views is to be returned.
+      It's inclusive of current day.
+    fullName: pageViewsForDays
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pageViewsForDays: number'
+      return:
+        description: ''
+        type: number
+  - name: top
+    uid: azure-devops-extension-api.WikiPagesBatchRequest.top
+    package: azure-devops-extension-api
+    summary: Total count of pages on a wiki to return.
+    fullName: top
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'top: number'
+      return:
+        description: ''
+        type: number

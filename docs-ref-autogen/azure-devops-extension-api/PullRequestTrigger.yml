@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: PullRequestTrigger
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Artifact alias trigger is linked to.
     fullName: artifactAlias
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'artifactAlias: string'
@@ -28,7 +26,6 @@ properties:
     summary: Code reference details of pull request.
     fullName: pullRequestConfiguration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'pullRequestConfiguration: PullRequestConfiguration'
@@ -41,7 +38,6 @@ properties:
     summary: Policy name using which status will be published to pull request.
     fullName: statusPolicyName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'statusPolicyName: string'
@@ -54,24 +50,26 @@ properties:
     summary: List of filters applied while trigger.
     fullName: triggerConditions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'triggerConditions: PullRequestFilter[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.PullRequestFilter" />[]'
+        type: <xref uid="azure-devops-extension-api.PullRequestFilter" />[]
+inheritedProperties:
   - name: triggerType
     uid: azure-devops-extension-api.PullRequestTrigger.triggerType
     package: azure-devops-extension-api
     summary: Type of release trigger.
     fullName: triggerType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'triggerType: ReleaseTriggerType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.ReleaseTriggerType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ReleaseTriggerBase.triggerType](xref:azure-devops-extension-api.ReleaseTriggerBase.triggerType)
 extends: <xref uid="azure-devops-extension-api.ReleaseTriggerBase" />

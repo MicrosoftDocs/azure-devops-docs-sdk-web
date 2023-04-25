@@ -5,25 +5,9 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TfvcHistoryEntry
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: changeList
-    uid: azure-devops-extension-api.TfvcHistoryEntry.changeList
-    package: azure-devops-extension-api
-    summary: The Change list (changeset/commit/shelveset) for this point in history
-    fullName: changeList
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'changeList: ChangeList<TfvcItem>'
-      return:
-        description: ''
-        type: >-
-          <xref uid="azure-devops-extension-api.ChangeList" />&lt;<xref
-          uid="azure-devops-extension-api.TfvcItem" />&gt;
   - name: encoding
     uid: azure-devops-extension-api.TfvcHistoryEntry.encoding
     package: azure-devops-extension-api
@@ -32,7 +16,6 @@ properties:
       history, not folders)
     fullName: encoding
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'encoding: number'
@@ -47,13 +30,30 @@ properties:
       history, not folders)
     fullName: fileId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fileId: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: changeList
+    uid: azure-devops-extension-api.TfvcHistoryEntry.changeList
+    package: azure-devops-extension-api
+    summary: The Change list (changeset/commit/shelveset) for this point in history
+    fullName: changeList
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changeList: ChangeList<TfvcItem>'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.ChangeList" />&lt;<xref
+          uid="azure-devops-extension-api.TfvcItem" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [HistoryEntry.changeList](xref:azure-devops-extension-api.HistoryEntry.changeList)
   - name: itemChangeType
     uid: azure-devops-extension-api.TfvcHistoryEntry.itemChangeType
     package: azure-devops-extension-api
@@ -62,13 +62,15 @@ properties:
       history, not folders)
     fullName: itemChangeType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'itemChangeType: VersionControlChangeType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.VersionControlChangeType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [HistoryEntry.itemChangeType](xref:azure-devops-extension-api.HistoryEntry.itemChangeType)
   - name: serverItem
     uid: azure-devops-extension-api.TfvcHistoryEntry.serverItem
     package: azure-devops-extension-api
@@ -77,13 +79,15 @@ properties:
       history, not folders)
     fullName: serverItem
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'serverItem: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [HistoryEntry.serverItem](xref:azure-devops-extension-api.HistoryEntry.serverItem)
 extends: >-
   <xref uid="azure-devops-extension-api.HistoryEntry" />&lt;<xref
   uid="azure-devops-extension-api.TfvcItem" />&gt;

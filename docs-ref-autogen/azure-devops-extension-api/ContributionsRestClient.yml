@@ -2,10 +2,11 @@
 name: ContributionsRestClient
 uid: azure-devops-extension-api.ContributionsRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: ContributionsRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ContributionsRestClient(options: IVssRestClientOptions)'
@@ -29,7 +29,6 @@ properties:
     summary: ''
     fullName: RESOURCE_AREA_ID
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
@@ -37,13 +36,12 @@ properties:
         description: ''
         type: string
 methods:
-  - name: 'getInstalledExtensionByName(string, string, string[])'
+  - name: getInstalledExtensionByName(string, string, string[])
     uid: >-
       azure-devops-extension-api.ContributionsRestClient.getInstalledExtensionByName
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -53,25 +51,23 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: assetTypes
-          type: 'string[]'
-          description: |
-            -
+          type: string[]
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />&gt;
-  - name: 'getInstalledExtensions(string[], boolean, string[])'
+  - name: getInstalledExtensions(string[], boolean, string[])
     uid: azure-devops-extension-api.ContributionsRestClient.getInstalledExtensions
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -80,15 +76,14 @@ methods:
         Promise<InstalledExtension[]>
       parameters:
         - id: contributionIds
-          type: 'string[]'
-          description: '-'
+          type: string[]
+          description: ''
         - id: includeDisabledApps
           type: boolean
-          description: '-'
+          description: ''
         - id: assetTypes
-          type: 'string[]'
-          description: |
-            -
+          type: string[]
+          description: ''
       return:
         description: ''
         type: >-
@@ -101,7 +96,6 @@ methods:
       Query for contribution nodes and provider details according the parameters
       in the passed in query object.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -110,19 +104,17 @@ methods:
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.ContributionNodeQuery" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ContributionNodeQueryResult" />&gt;
-  - name: 'queryDataProviders(DataProviderQuery, string, string)'
+  - name: queryDataProviders(DataProviderQuery, string, string)
     uid: azure-devops-extension-api.ContributionsRestClient.queryDataProviders
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -131,14 +123,13 @@ methods:
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.DataProviderQuery" />
-          description: '-'
+          description: ''
         - id: scopeName
           type: string
-          description: '-'
+          description: ''
         - id: scopeValue
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-

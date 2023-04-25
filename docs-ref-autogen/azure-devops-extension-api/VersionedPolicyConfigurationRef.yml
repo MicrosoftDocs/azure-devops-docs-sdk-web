@@ -5,60 +5,65 @@ package: azure-devops-extension-api
 summary: A particular revision for a policy configuration.
 fullName: VersionedPolicyConfigurationRef
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: id
-    uid: azure-devops-extension-api.VersionedPolicyConfigurationRef.id
-    package: azure-devops-extension-api
-    summary: The policy configuration ID.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
   - name: revision
     uid: azure-devops-extension-api.VersionedPolicyConfigurationRef.revision
     package: azure-devops-extension-api
     summary: The policy configuration revision ID.
     fullName: revision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revision: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.VersionedPolicyConfigurationRef.id
+    package: azure-devops-extension-api
+    summary: The policy configuration ID.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [PolicyConfigurationRef.id](xref:azure-devops-extension-api.PolicyConfigurationRef.id)
   - name: type
     uid: azure-devops-extension-api.VersionedPolicyConfigurationRef.type
     package: azure-devops-extension-api
     summary: The policy configuration type.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: PolicyTypeRef'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.PolicyTypeRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [PolicyConfigurationRef.type](xref:azure-devops-extension-api.PolicyConfigurationRef.type)
   - name: url
     uid: azure-devops-extension-api.VersionedPolicyConfigurationRef.url
     package: azure-devops-extension-api
     summary: The URL where the policy configuration can be retrieved.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [PolicyConfigurationRef.url](xref:azure-devops-extension-api.PolicyConfigurationRef.url)
 extends: <xref uid="azure-devops-extension-api.PolicyConfigurationRef" />

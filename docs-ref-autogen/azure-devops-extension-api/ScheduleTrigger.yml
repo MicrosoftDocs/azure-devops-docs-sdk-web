@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a schedule trigger.
 fullName: ScheduleTrigger
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,24 +14,26 @@ properties:
     summary: ''
     fullName: schedules
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'schedules: Schedule[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Schedule" />[]'
+        type: <xref uid="azure-devops-extension-api.Schedule" />[]
+inheritedProperties:
   - name: triggerType
     uid: azure-devops-extension-api.ScheduleTrigger.triggerType
     package: azure-devops-extension-api
     summary: The type of the trigger.
     fullName: triggerType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'triggerType: DefinitionTriggerType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.DefinitionTriggerType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildTrigger.triggerType](xref:azure-devops-extension-api.BuildTrigger.triggerType)
 extends: <xref uid="azure-devops-extension-api.BuildTrigger" />

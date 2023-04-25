@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Data contract for the plan definition
 fullName: Plan
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       upgrading to ScaledAgileViewComponent4.
     fullName: createdByIdentity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdByIdentity: IdentityRef'
@@ -30,7 +28,6 @@ properties:
     summary: Date when the plan was created
     fullName: createdDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdDate: Date'
@@ -43,7 +40,6 @@ properties:
     summary: Description of the plan
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -56,13 +52,24 @@ properties:
     summary: Id of the plan
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+  - name: lastAccessed
+    uid: azure-devops-extension-api.Plan.lastAccessed
+    package: azure-devops-extension-api
+    summary: Date when the plan was last accessed. Default is null.
+    fullName: lastAccessed
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastAccessed: Date'
+      return:
+        description: ''
+        type: Date
   - name: modifiedByIdentity
     uid: azure-devops-extension-api.Plan.modifiedByIdentity
     package: azure-devops-extension-api
@@ -71,7 +78,6 @@ properties:
       upgrading to ScaledAgileViewComponent4.
     fullName: modifiedByIdentity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'modifiedByIdentity: IdentityRef'
@@ -86,7 +92,6 @@ properties:
       is first created.
     fullName: modifiedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'modifiedDate: Date'
@@ -99,7 +104,6 @@ properties:
     summary: Name of the plan
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -115,7 +119,6 @@ properties:
       would be of type DeliveryViewPropertyCollection.
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
@@ -130,7 +133,6 @@ properties:
       other's changes.
     fullName: revision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revision: number'
@@ -143,20 +145,20 @@ properties:
     summary: Type of the plan
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'type: PlanType'
+      content: 'type: DeliveryTimelineView'
       return:
         description: ''
-        type: <xref uid="azure-devops-extension-api.PlanType" />
+        type: >-
+          <xref uid="azure-devops-extension-api.PlanType.DeliveryTimelineView"
+          />
   - name: url
     uid: azure-devops-extension-api.Plan.url
     package: azure-devops-extension-api
     summary: The resource url to locate the plan via rest api
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
@@ -169,7 +171,6 @@ properties:
     summary: Bit flag indicating set of permissions a user has to the plan.
     fullName: userPermissions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'userPermissions: PlanUserPermissions'

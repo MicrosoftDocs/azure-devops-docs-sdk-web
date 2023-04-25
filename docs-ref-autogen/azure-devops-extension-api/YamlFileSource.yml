@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: YamlFileSource
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -14,25 +13,23 @@ properties:
     package: azure-devops-extension-api
     summary: >-
       Gets or sets definition reference. e.g.
-      \{"project":\{"id":"fed755ea-49c5-4399-acea-fd5b5aa90a6c","name":"myProject"\},"definition":\{"id":"1","name":"mybuildDefinition"\},"connection":\{"id":"1","name":"myConnection"\}\}
+      {"project":{"id":"fed755ea-49c5-4399-acea-fd5b5aa90a6c","name":"myProject"},"definition":{"id":"1","name":"mybuildDefinition"},"connection":{"id":"1","name":"myConnection"}}
     fullName: sourceReference
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'sourceReference: [key: string]: YamlSourceReference'
+      content: 'sourceReference: {[key: string]: YamlSourceReference}'
       return:
         description: ''
         type: >-
-          [key: string]\: <xref
-          uid="azure-devops-extension-api.YamlSourceReference" />
+          {[key: string]: <xref
+          uid="azure-devops-extension-api.YamlSourceReference" />}
   - name: type
     uid: azure-devops-extension-api.YamlFileSource.type
     package: azure-devops-extension-api
     summary: ''
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: YamlFileSourceTypes'

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: SupportedTrigger
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       NotificationType is Polling).
     fullName: defaultPollingInterval
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultPollingInterval: number'
@@ -30,7 +28,6 @@ properties:
     summary: How the trigger is notified of changes.
     fullName: notificationType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'notificationType: string'
@@ -43,20 +40,20 @@ properties:
     summary: The capabilities supported by this trigger.
     fullName: supportedCapabilities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'supportedCapabilities: [key: string]: SupportLevel'
+      content: 'supportedCapabilities: {[key: string]: SupportLevel}'
       return:
         description: ''
-        type: '[key: string]\: <xref uid="azure-devops-extension-api.SupportLevel" />'
+        type: >-
+          {[key: string]: <xref uid="azure-devops-extension-api.SupportLevel"
+          />}
   - name: type
     uid: azure-devops-extension-api.SupportedTrigger.type
     package: azure-devops-extension-api
     summary: The type of trigger.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: DefinitionTriggerType'

@@ -6,23 +6,26 @@ type: package
 enums:
   - azure-devops-extension-sdk.HostType
 interfaces:
+  - azure-devops-extension-sdk.ContextIdentifier
+  - azure-devops-extension-sdk.GlobalizationContext
   - azure-devops-extension-sdk.IExtensionContext
   - azure-devops-extension-sdk.IExtensionInitOptions
   - azure-devops-extension-sdk.IHostContext
+  - azure-devops-extension-sdk.IPageContext
+  - azure-devops-extension-sdk.ITeamContext
   - azure-devops-extension-sdk.IUserContext
 functions:
-  - name: 'applyTheme([key: string]: string)'
+  - name: 'applyTheme({[varName: string]: string})'
     uid: azure-devops-extension-sdk.applyTheme
     package: azure-devops-extension-sdk
     summary: Applies theme variables to the current document
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function applyTheme(themeData: [key: string]: string)'
+      content: 'function applyTheme(themeData: {[varName: string]: string})'
       parameters:
         - id: themeData
-          type: '[key: string]\: string'
+          type: '{[varName: string]: string}'
           description: ''
   - name: getAccessToken()
     uid: azure-devops-extension-sdk.getAccessToken
@@ -31,7 +34,6 @@ functions:
       Fetch an access token which will allow calls to be made to other DevOps
       services
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccessToken(): Promise<string>'
@@ -43,7 +45,6 @@ functions:
     package: azure-devops-extension-sdk
     summary: Fetch an token which can be used to identify the current user
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAppToken(): Promise<string>'
@@ -57,13 +58,12 @@ functions:
       Get the configuration data passed in the initial handshake from the parent
       frame
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getConfiguration(): [key: string]: any'
+      content: 'function getConfiguration(): {[key: string]: any}'
       return:
         description: ''
-        type: '[key: string]\: any'
+        type: '{[key: string]: any}'
   - name: getContributionId()
     uid: azure-devops-extension-sdk.getContributionId
     package: azure-devops-extension-sdk
@@ -71,7 +71,6 @@ functions:
       Gets the information about the contribution that first caused this
       extension to load.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getContributionId(): string'
@@ -85,7 +84,6 @@ functions:
       Get the context about the extension that owns the content that is being
       hosted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getExtensionContext(): IExtensionContext'
@@ -99,13 +97,23 @@ functions:
       Gets information about the host (i.e. an Azure DevOps organization) that
       the page is targeting
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getHost(): IHostContext'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-sdk.IHostContext" />
+  - name: getPageContext()
+    uid: azure-devops-extension-sdk.getPageContext
+    package: azure-devops-extension-sdk
+    summary: Get the context about the host page
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getPageContext(): IPageContext'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-sdk.IPageContext" />
   - name: getService<T>(string)
     uid: azure-devops-extension-sdk.getService
     package: azure-devops-extension-sdk
@@ -114,59 +122,75 @@ functions:
       contribution has a method to get a registered object within that
       contribution.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getService<T>(contributionId: string): Promise<T>'
       parameters:
         - id: contributionId
           type: string
-          description: |
-            Id of the contribution to get
+          description: Id of the contribution to get
       return:
         description: ''
         type: Promise&lt;T&gt;
+  - name: getTeamContext()
+    uid: azure-devops-extension-sdk.getTeamContext
+    package: azure-devops-extension-sdk
+    summary: Gets information about the team that the page is targeting
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getTeamContext(): ITeamContext'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-sdk.ITeamContext" />
   - name: getUser()
     uid: azure-devops-extension-sdk.getUser
     package: azure-devops-extension-sdk
     summary: Gets information about the current user
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getUser(): IUserContext'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-sdk.IUserContext" />
+  - name: getWebContext()
+    uid: azure-devops-extension-sdk.getWebContext
+    package: azure-devops-extension-sdk
+    summary: Get the context about the web
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getWebContext(): IWebContext'
+      return:
+        description: ''
+        type: IWebContext
   - name: init(IExtensionInitOptions)
     uid: azure-devops-extension-sdk.init
     package: azure-devops-extension-sdk
     summary: Initiates the handshake with the host window.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function init(options?: IExtensionInitOptions): Promise<void>'
       parameters:
         - id: options
           type: <xref uid="azure-devops-extension-sdk.IExtensionInitOptions" />
-          description: |
-            Initialization options for the extension.
+          description: Initialization options for the extension.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: notifyLoadFailed(Error | string)
+  - name: notifyLoadFailed(string | Error)
     uid: azure-devops-extension-sdk.notifyLoadFailed
     package: azure-devops-extension-sdk
     summary: Notifies the host that the extension failed to load
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function notifyLoadFailed(e: Error | string): Promise<void>'
+      content: 'function notifyLoadFailed(e: string | Error): Promise<void>'
       parameters:
         - id: e
-          type: Error | string
+          type: string | Error
           description: ''
       return:
         description: ''
@@ -178,7 +202,6 @@ functions:
       Notifies the host that the extension successfully loaded (stop showing the
       loading indicator)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function notifyLoadSucceeded(): Promise<void>'
@@ -195,21 +218,19 @@ functions:
       If the initial setup is already completed, the callback is invoked at the
       end of the current call stack.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function ready(): Promise<void>'
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'register<T>(string, T)'
+  - name: register<T>(string, T)
     uid: azure-devops-extension-sdk.register
     package: azure-devops-extension-sdk
     summary: >-
       Register an object (instance or factory method) that this extension
       exposes to the host frame.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function register<T>(instanceId: string, instance: T)'
@@ -219,39 +240,35 @@ functions:
           description: unique id of the registered object
         - id: instance
           type: T
-          description: >
+          description: >-
             Either: (1) an object instance, or (2) a function that takes
             optional context data and returns an object instance.
-  - name: 'resize(number, number)'
+  - name: resize(number, number)
     uid: azure-devops-extension-sdk.resize
     package: azure-devops-extension-sdk
     summary: >-
       Requests the parent window to resize the container for this extension
       based on the current extension size.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function resize(width?: number, height?: number)'
       parameters:
         - id: width
           type: number
-          description: 'Optional width, defaults to scrollWidth'
+          description: Optional width, defaults to scrollWidth
         - id: height
           type: number
-          description: |
-            Optional height, defaults to scrollHeight
+          description: Optional height, defaults to scrollHeight
   - name: unregister(string)
     uid: azure-devops-extension-sdk.unregister
     package: azure-devops-extension-sdk
     summary: Removes an object that this extension exposed to the host frame.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function unregister(instanceId: string)'
       parameters:
         - id: instanceId
           type: string
-          description: |
-            unique id of the registered object
+          description: unique id of the registered object

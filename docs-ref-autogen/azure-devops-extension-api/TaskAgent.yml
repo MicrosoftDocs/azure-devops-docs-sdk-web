@@ -5,30 +5,15 @@ package: azure-devops-extension-api
 summary: A task agent.
 fullName: TaskAgent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: accessPoint
-    uid: azure-devops-extension-api.TaskAgent.accessPoint
-    package: azure-devops-extension-api
-    summary: This agent's access point.
-    fullName: accessPoint
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'accessPoint: string'
-      return:
-        description: ''
-        type: string
   - name: assignedAgentCloudRequest
     uid: azure-devops-extension-api.TaskAgent.assignedAgentCloudRequest
     package: azure-devops-extension-api
     summary: The agent cloud request that's currently associated with this agent.
     fullName: assignedAgentCloudRequest
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'assignedAgentCloudRequest: TaskAgentCloudRequest'
@@ -41,7 +26,6 @@ properties:
     summary: The request which is currently assigned to this agent.
     fullName: assignedRequest
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'assignedRequest: TaskAgentJobRequest'
@@ -54,7 +38,6 @@ properties:
     summary: Authorization information for this agent.
     fullName: authorization
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authorization: TaskAgentAuthorization'
@@ -67,46 +50,18 @@ properties:
     summary: Date on which this agent was created.
     fullName: createdOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdOn: Date'
       return:
         description: ''
         type: Date
-  - name: enabled
-    uid: azure-devops-extension-api.TaskAgent.enabled
-    package: azure-devops-extension-api
-    summary: Whether or not this agent should run jobs.
-    fullName: enabled
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'enabled: boolean'
-      return:
-        description: ''
-        type: boolean
-  - name: id
-    uid: azure-devops-extension-api.TaskAgent.id
-    package: azure-devops-extension-api
-    summary: Identifier of the agent.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
   - name: lastCompletedRequest
     uid: azure-devops-extension-api.TaskAgent.lastCompletedRequest
     package: azure-devops-extension-api
     summary: The last request which was completed by this agent.
     fullName: lastCompletedRequest
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastCompletedRequest: TaskAgentJobRequest'
@@ -119,46 +74,18 @@ properties:
     summary: Maximum job parallelism allowed for this agent.
     fullName: maxParallelism
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxParallelism: number'
       return:
         description: ''
         type: number
-  - name: name
-    uid: azure-devops-extension-api.TaskAgent.name
-    package: azure-devops-extension-api
-    summary: Name of the agent.
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
-  - name: osDescription
-    uid: azure-devops-extension-api.TaskAgent.osDescription
-    package: azure-devops-extension-api
-    summary: Agent OS.
-    fullName: osDescription
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'osDescription: string'
-      return:
-        description: ''
-        type: string
   - name: pendingUpdate
     uid: azure-devops-extension-api.TaskAgent.pendingUpdate
     package: azure-devops-extension-api
     summary: Pending update for this agent.
     fullName: pendingUpdate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'pendingUpdate: TaskAgentUpdate'
@@ -171,46 +98,18 @@ properties:
     summary: ''
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
         description: ''
         type: any
-  - name: provisioningState
-    uid: azure-devops-extension-api.TaskAgent.provisioningState
-    package: azure-devops-extension-api
-    summary: Provisioning state of this agent.
-    fullName: provisioningState
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'provisioningState: string'
-      return:
-        description: ''
-        type: string
-  - name: status
-    uid: azure-devops-extension-api.TaskAgent.status
-    package: azure-devops-extension-api
-    summary: Whether or not the agent is online.
-    fullName: status
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'status: TaskAgentStatus'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.TaskAgentStatus" />
   - name: statusChangedOn
     uid: azure-devops-extension-api.TaskAgent.statusChangedOn
     package: azure-devops-extension-api
     summary: Date on which the last connectivity status change occurred.
     fullName: statusChangedOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'statusChangedOn: Date'
@@ -220,40 +119,152 @@ properties:
   - name: systemCapabilities
     uid: azure-devops-extension-api.TaskAgent.systemCapabilities
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      System-defined capabilities supported by this agent's host. Warning: To
+      set capabilities use the PUT method, PUT will completely overwrite
+      existing capabilities.
     fullName: systemCapabilities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'systemCapabilities: [key: string]: string'
+      content: 'systemCapabilities: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: userCapabilities
     uid: azure-devops-extension-api.TaskAgent.userCapabilities
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      User-defined capabilities supported by this agent's host. Warning: To set
+      capabilities use the PUT method, PUT will completely overwrite existing
+      capabilities.
     fullName: userCapabilities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'userCapabilities: [key: string]: string'
+      content: 'userCapabilities: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
+inheritedProperties:
+  - name: accessPoint
+    uid: azure-devops-extension-api.TaskAgent.accessPoint
+    package: azure-devops-extension-api
+    summary: This agent's access point.
+    fullName: accessPoint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'accessPoint: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentReference.accessPoint](xref:azure-devops-extension-api.TaskAgentReference.accessPoint)
+  - name: enabled
+    uid: azure-devops-extension-api.TaskAgent.enabled
+    package: azure-devops-extension-api
+    summary: Whether or not this agent should run jobs.
+    fullName: enabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enabled: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentReference.enabled](xref:azure-devops-extension-api.TaskAgentReference.enabled)
+  - name: id
+    uid: azure-devops-extension-api.TaskAgent.id
+    package: azure-devops-extension-api
+    summary: Identifier of the agent.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentReference.id](xref:azure-devops-extension-api.TaskAgentReference.id)
+  - name: name
+    uid: azure-devops-extension-api.TaskAgent.name
+    package: azure-devops-extension-api
+    summary: Name of the agent.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentReference.name](xref:azure-devops-extension-api.TaskAgentReference.name)
+  - name: osDescription
+    uid: azure-devops-extension-api.TaskAgent.osDescription
+    package: azure-devops-extension-api
+    summary: Agent OS.
+    fullName: osDescription
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'osDescription: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentReference.osDescription](xref:azure-devops-extension-api.TaskAgentReference.osDescription)
+  - name: provisioningState
+    uid: azure-devops-extension-api.TaskAgent.provisioningState
+    package: azure-devops-extension-api
+    summary: Provisioning state of this agent.
+    fullName: provisioningState
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'provisioningState: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentReference.provisioningState](xref:azure-devops-extension-api.TaskAgentReference.provisioningState)
+  - name: status
+    uid: azure-devops-extension-api.TaskAgent.status
+    package: azure-devops-extension-api
+    summary: Whether or not the agent is online.
+    fullName: status
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'status: TaskAgentStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentStatus" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentReference.status](xref:azure-devops-extension-api.TaskAgentReference.status)
   - name: version
     uid: azure-devops-extension-api.TaskAgent.version
     package: azure-devops-extension-api
     summary: Agent version.
     fullName: version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'version: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentReference.version](xref:azure-devops-extension-api.TaskAgentReference.version)
 extends: <xref uid="azure-devops-extension-api.TaskAgentReference" />

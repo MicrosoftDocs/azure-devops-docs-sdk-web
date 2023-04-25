@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a list of work item comments.
 fullName: CommentList
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,13 +14,12 @@ properties:
     summary: List of comments in the current batch.
     fullName: comments
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'comments: Comment[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Comment" />[]'
+        type: <xref uid="azure-devops-extension-api.Comment" />[]
   - name: continuationToken
     uid: azure-devops-extension-api.CommentList.continuationToken
     package: azure-devops-extension-api
@@ -30,7 +28,6 @@ properties:
       available. Otherwise null.
     fullName: continuationToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'continuationToken: string'
@@ -43,7 +40,6 @@ properties:
     summary: The count of comments in the current batch.
     fullName: count
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'count: number'
@@ -56,7 +52,6 @@ properties:
     summary: Uri to the next page of comments if it is available. Otherwise null.
     fullName: nextPage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'nextPage: string'
@@ -69,24 +64,26 @@ properties:
     summary: Total count of comments on a work item.
     fullName: totalCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'totalCount: number'
       return:
         description: ''
         type: number
+inheritedProperties:
   - name: url
     uid: azure-devops-extension-api.CommentList.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

@@ -5,96 +5,15 @@ package: azure-devops-extension-api
 summary: Test suite Create Parameters
 fullName: TestSuiteCreateParams
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: defaultConfigurations
-    uid: azure-devops-extension-api.TestSuiteCreateParams.defaultConfigurations
-    package: azure-devops-extension-api
-    summary: Test suite default configurations.
-    fullName: defaultConfigurations
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'defaultConfigurations: TestConfigurationReference[]'
-      return:
-        description: ''
-        type: '<xref uid="azure-devops-extension-api.TestConfigurationReference" />[]'
-  - name: defaultTesters
-    uid: azure-devops-extension-api.TestSuiteCreateParams.defaultTesters
-    package: azure-devops-extension-api
-    summary: Test suite default testers.
-    fullName: defaultTesters
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'defaultTesters: IdentityRef[]'
-      return:
-        description: ''
-        type: '<xref uid="azure-devops-extension-api.IdentityRef" />[]'
-  - name: inheritDefaultConfigurations
-    uid: >-
-      azure-devops-extension-api.TestSuiteCreateParams.inheritDefaultConfigurations
-    package: azure-devops-extension-api
-    summary: Default configuration was inherited or not.
-    fullName: inheritDefaultConfigurations
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'inheritDefaultConfigurations: boolean'
-      return:
-        description: ''
-        type: boolean
-  - name: name
-    uid: azure-devops-extension-api.TestSuiteCreateParams.name
-    package: azure-devops-extension-api
-    summary: Name of test suite.
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
-  - name: parentSuite
-    uid: azure-devops-extension-api.TestSuiteCreateParams.parentSuite
-    package: azure-devops-extension-api
-    summary: Test suite parent shallow reference.
-    fullName: parentSuite
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'parentSuite: TestSuiteReference'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.TestSuiteReference" />
-  - name: queryString
-    uid: azure-devops-extension-api.TestSuiteCreateParams.queryString
-    package: azure-devops-extension-api
-    summary: 'Test suite query string, for dynamic suites.'
-    fullName: queryString
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'queryString: string'
-      return:
-        description: ''
-        type: string
   - name: requirementId
     uid: azure-devops-extension-api.TestSuiteCreateParams.requirementId
     package: azure-devops-extension-api
     summary: Test suite requirement id.
     fullName: requirementId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requirementId: number'
@@ -107,11 +26,102 @@ properties:
     summary: Test suite type.
     fullName: suiteType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'suiteType: TestSuiteType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.TestSuiteType" />
+inheritedProperties:
+  - name: defaultConfigurations
+    uid: azure-devops-extension-api.TestSuiteCreateParams.defaultConfigurations
+    package: azure-devops-extension-api
+    summary: Test suite default configurations.
+    fullName: defaultConfigurations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'defaultConfigurations: TestConfigurationReference[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TestConfigurationReference" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestSuiteCreateUpdateCommonParams.defaultConfigurations](xref:azure-devops-extension-api.TestSuiteCreateUpdateCommonParams.defaultConfigurations)
+  - name: defaultTesters
+    uid: azure-devops-extension-api.TestSuiteCreateParams.defaultTesters
+    package: azure-devops-extension-api
+    summary: Test suite default testers.
+    fullName: defaultTesters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'defaultTesters: IdentityRef[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestSuiteCreateUpdateCommonParams.defaultTesters](xref:azure-devops-extension-api.TestSuiteCreateUpdateCommonParams.defaultTesters)
+  - name: inheritDefaultConfigurations
+    uid: >-
+      azure-devops-extension-api.TestSuiteCreateParams.inheritDefaultConfigurations
+    package: azure-devops-extension-api
+    summary: Default configuration was inherited or not.
+    fullName: inheritDefaultConfigurations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'inheritDefaultConfigurations: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestSuiteCreateUpdateCommonParams.inheritDefaultConfigurations](xref:azure-devops-extension-api.TestSuiteCreateUpdateCommonParams.inheritDefaultConfigurations)
+  - name: name
+    uid: azure-devops-extension-api.TestSuiteCreateParams.name
+    package: azure-devops-extension-api
+    summary: Name of test suite.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestSuiteCreateUpdateCommonParams.name](xref:azure-devops-extension-api.TestSuiteCreateUpdateCommonParams.name)
+  - name: parentSuite
+    uid: azure-devops-extension-api.TestSuiteCreateParams.parentSuite
+    package: azure-devops-extension-api
+    summary: Test suite parent shallow reference.
+    fullName: parentSuite
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'parentSuite: TestSuiteReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TestSuiteReference" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestSuiteCreateUpdateCommonParams.parentSuite](xref:azure-devops-extension-api.TestSuiteCreateUpdateCommonParams.parentSuite)
+  - name: queryString
+    uid: azure-devops-extension-api.TestSuiteCreateParams.queryString
+    package: azure-devops-extension-api
+    summary: Test suite query string, for dynamic suites.
+    fullName: queryString
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'queryString: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestSuiteCreateUpdateCommonParams.queryString](xref:azure-devops-extension-api.TestSuiteCreateUpdateCommonParams.queryString)
 extends: <xref uid="azure-devops-extension-api.TestSuiteCreateUpdateCommonParams" />

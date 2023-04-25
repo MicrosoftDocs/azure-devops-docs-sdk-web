@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: An individual contribution made by an extension
 fullName: Contribution
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,39 +16,12 @@ properties:
       of this contribution
     fullName: constraints
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'constraints: ContributionConstraint[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.ContributionConstraint" />[]'
-  - name: description
-    uid: azure-devops-extension-api.Contribution.description
-    package: azure-devops-extension-api
-    summary: Description of the contribution/type
-    fullName: description
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'description: string'
-      return:
-        description: ''
-        type: string
-  - name: id
-    uid: azure-devops-extension-api.Contribution.id
-    package: azure-devops-extension-api
-    summary: Fully qualified identifier of the contribution/type
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: string'
-      return:
-        description: ''
-        type: string
+        type: <xref uid="azure-devops-extension-api.ContributionConstraint" />[]
   - name: includes
     uid: azure-devops-extension-api.Contribution.includes
     package: azure-devops-extension-api
@@ -58,20 +30,18 @@ properties:
       included in their targets list.
     fullName: includes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'includes: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: properties
     uid: azure-devops-extension-api.Contribution.properties
     package: azure-devops-extension-api
     summary: Properties/attributes of this contribution
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
@@ -86,13 +56,12 @@ properties:
       (like anonymous, public, member...).
     fullName: restrictedTo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'restrictedTo: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: targets
     uid: azure-devops-extension-api.Contribution.targets
     package: azure-devops-extension-api
@@ -101,26 +70,55 @@ properties:
       contributions)
     fullName: targets
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'targets: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: type
     uid: azure-devops-extension-api.Contribution.type
     package: azure-devops-extension-api
     summary: Id of the Contribution Type
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: description
+    uid: azure-devops-extension-api.Contribution.description
+    package: azure-devops-extension-api
+    summary: Description of the contribution/type
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContributionBase.description](xref:azure-devops-extension-api.ContributionBase.description)
+  - name: id
+    uid: azure-devops-extension-api.Contribution.id
+    package: azure-devops-extension-api
+    summary: Fully qualified identifier of the contribution/type
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContributionBase.id](xref:azure-devops-extension-api.ContributionBase.id)
   - name: visibleTo
     uid: azure-devops-extension-api.Contribution.visibleTo
     package: azure-devops-extension-api
@@ -132,11 +130,13 @@ properties:
       the "ms" publisher can reference this.
     fullName: visibleTo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'visibleTo: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContributionBase.visibleTo](xref:azure-devops-extension-api.ContributionBase.visibleTo)
 extends: <xref uid="azure-devops-extension-api.ContributionBase" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: The full policy configuration with settings.
 fullName: PolicyConfiguration
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: A reference to the identity that created the policy.
     fullName: createdBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdBy: IdentityRef'
@@ -28,33 +26,18 @@ properties:
     summary: The date and time when the policy was created.
     fullName: createdDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdDate: Date'
       return:
         description: ''
         type: Date
-  - name: id
-    uid: azure-devops-extension-api.PolicyConfiguration.id
-    package: azure-devops-extension-api
-    summary: The policy configuration ID.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
   - name: isBlocking
     uid: azure-devops-extension-api.PolicyConfiguration.isBlocking
     package: azure-devops-extension-api
     summary: Indicates whether the policy is blocking.
     fullName: isBlocking
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isBlocking: boolean'
@@ -67,7 +50,6 @@ properties:
     summary: Indicates whether the policy has been (soft) deleted.
     fullName: isDeleted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isDeleted: boolean'
@@ -80,63 +62,97 @@ properties:
     summary: Indicates whether the policy is enabled.
     fullName: isEnabled
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isEnabled: boolean'
       return:
         description: ''
         type: boolean
-  - name: revision
-    uid: azure-devops-extension-api.PolicyConfiguration.revision
+  - name: isEnterpriseManaged
+    uid: azure-devops-extension-api.PolicyConfiguration.isEnterpriseManaged
     package: azure-devops-extension-api
-    summary: The policy configuration revision ID.
-    fullName: revision
+    summary: >-
+      If set, this policy requires "Manage Enterprise Policies" permission to
+      create, edit, or delete.
+    fullName: isEnterpriseManaged
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'revision: number'
+      content: 'isEnterpriseManaged: boolean'
       return:
         description: ''
-        type: number
+        type: boolean
   - name: settings
     uid: azure-devops-extension-api.PolicyConfiguration.settings
     package: azure-devops-extension-api
     summary: The policy configuration settings.
     fullName: settings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'settings: any'
       return:
         description: ''
         type: any
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.PolicyConfiguration.id
+    package: azure-devops-extension-api
+    summary: The policy configuration ID.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [VersionedPolicyConfigurationRef.id](xref:azure-devops-extension-api.VersionedPolicyConfigurationRef.id)
+  - name: revision
+    uid: azure-devops-extension-api.PolicyConfiguration.revision
+    package: azure-devops-extension-api
+    summary: The policy configuration revision ID.
+    fullName: revision
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'revision: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [VersionedPolicyConfigurationRef.revision](xref:azure-devops-extension-api.VersionedPolicyConfigurationRef.revision)
   - name: type
     uid: azure-devops-extension-api.PolicyConfiguration.type
     package: azure-devops-extension-api
     summary: The policy configuration type.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: PolicyTypeRef'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.PolicyTypeRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [VersionedPolicyConfigurationRef.type](xref:azure-devops-extension-api.VersionedPolicyConfigurationRef.type)
   - name: url
     uid: azure-devops-extension-api.PolicyConfiguration.url
     package: azure-devops-extension-api
     summary: The URL where the policy configuration can be retrieved.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [VersionedPolicyConfigurationRef.url](xref:azure-devops-extension-api.VersionedPolicyConfigurationRef.url)
 extends: <xref uid="azure-devops-extension-api.VersionedPolicyConfigurationRef" />

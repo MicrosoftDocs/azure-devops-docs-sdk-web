@@ -1,0 +1,75 @@
+### YamlMime:TSType
+name: NewRetentionLease
+uid: azure-devops-extension-api.NewRetentionLease
+package: azure-devops-extension-api
+summary: Required information to create a new retention lease.
+fullName: NewRetentionLease
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: daysValid
+    uid: azure-devops-extension-api.NewRetentionLease.daysValid
+    package: azure-devops-extension-api
+    summary: >-
+      The number of days to consider the lease valid. A retention lease valid
+      for more than 100 years (36500 days) will display as retaining the build
+      "forever".
+    fullName: daysValid
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'daysValid: number'
+      return:
+        description: ''
+        type: number
+  - name: definitionId
+    uid: azure-devops-extension-api.NewRetentionLease.definitionId
+    package: azure-devops-extension-api
+    summary: The pipeline definition of the run.
+    fullName: definitionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'definitionId: number'
+      return:
+        description: ''
+        type: number
+  - name: ownerId
+    uid: azure-devops-extension-api.NewRetentionLease.ownerId
+    package: azure-devops-extension-api
+    summary: User-provided string that identifies the owner of a retention lease.
+    fullName: ownerId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ownerId: string'
+      return:
+        description: ''
+        type: string
+  - name: protectPipeline
+    uid: azure-devops-extension-api.NewRetentionLease.protectPipeline
+    package: azure-devops-extension-api
+    summary: >-
+      If set, this lease will also prevent the pipeline from being deleted while
+      the lease is still valid.
+    fullName: protectPipeline
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'protectPipeline: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: runId
+    uid: azure-devops-extension-api.NewRetentionLease.runId
+    package: azure-devops-extension-api
+    summary: The pipeline run to protect.
+    fullName: runId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'runId: number'
+      return:
+        description: ''
+        type: number

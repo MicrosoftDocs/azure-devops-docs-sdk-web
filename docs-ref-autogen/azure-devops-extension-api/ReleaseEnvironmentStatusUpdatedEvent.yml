@@ -5,24 +5,9 @@ package: azure-devops-extension-api
 summary: ''
 fullName: ReleaseEnvironmentStatusUpdatedEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: definitionId
-    uid: >-
-      azure-devops-extension-api.ReleaseEnvironmentStatusUpdatedEvent.definitionId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: definitionId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'definitionId: number'
-      return:
-        description: ''
-        type: number
   - name: environmentId
     uid: >-
       azure-devops-extension-api.ReleaseEnvironmentStatusUpdatedEvent.environmentId
@@ -30,7 +15,6 @@ properties:
     summary: ''
     fullName: environmentId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'environmentId: number'
@@ -44,7 +28,6 @@ properties:
     summary: ''
     fullName: environmentStatus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'environmentStatus: EnvironmentStatus'
@@ -58,7 +41,6 @@ properties:
     summary: ''
     fullName: latestDeploymentOperationStatus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'latestDeploymentOperationStatus: DeploymentOperationStatus'
@@ -72,37 +54,54 @@ properties:
     summary: ''
     fullName: latestDeploymentStatus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'latestDeploymentStatus: DeploymentStatus'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.DeploymentStatus" />
-  - name: projectId
-    uid: azure-devops-extension-api.ReleaseEnvironmentStatusUpdatedEvent.projectId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: projectId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'projectId: string'
-      return:
-        description: ''
-        type: string
   - name: releaseId
     uid: azure-devops-extension-api.ReleaseEnvironmentStatusUpdatedEvent.releaseId
     package: azure-devops-extension-api
     summary: ''
     fullName: releaseId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'releaseId: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: definitionId
+    uid: >-
+      azure-devops-extension-api.ReleaseEnvironmentStatusUpdatedEvent.definitionId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: definitionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'definitionId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealtimeReleaseDefinitionEvent.definitionId](xref:azure-devops-extension-api.RealtimeReleaseDefinitionEvent.definitionId)
+  - name: projectId
+    uid: azure-devops-extension-api.ReleaseEnvironmentStatusUpdatedEvent.projectId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: projectId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealtimeReleaseDefinitionEvent.projectId](xref:azure-devops-extension-api.RealtimeReleaseDefinitionEvent.projectId)
 extends: <xref uid="azure-devops-extension-api.RealtimeReleaseDefinitionEvent" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TaskOrchestrationJob
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: ''
     fullName: demands
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'demands: Demand[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Demand" />[]'
+        type: <xref uid="azure-devops-extension-api.Demand" />[]
   - name: executeAs
     uid: azure-devops-extension-api.TaskOrchestrationJob.executeAs
     package: azure-devops-extension-api
     summary: ''
     fullName: executeAs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'executeAs: IdentityRef'
@@ -41,7 +38,6 @@ properties:
     summary: ''
     fullName: executionMode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'executionMode: string'
@@ -54,7 +50,6 @@ properties:
     summary: ''
     fullName: executionTimeout
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'executionTimeout: any'
@@ -67,33 +62,18 @@ properties:
     summary: ''
     fullName: instanceId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'instanceId: string'
       return:
         description: ''
         type: string
-  - name: itemType
-    uid: azure-devops-extension-api.TaskOrchestrationJob.itemType
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: itemType
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'itemType: TaskOrchestrationItemType'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.TaskOrchestrationItemType" />
   - name: name
     uid: azure-devops-extension-api.TaskOrchestrationJob.name
     package: azure-devops-extension-api
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -106,7 +86,6 @@ properties:
     summary: ''
     fullName: refName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'refName: string'
@@ -119,24 +98,38 @@ properties:
     summary: ''
     fullName: tasks
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tasks: TaskInstance[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TaskInstance" />[]'
+        type: <xref uid="azure-devops-extension-api.TaskInstance" />[]
   - name: variables
     uid: azure-devops-extension-api.TaskOrchestrationJob.variables
     package: azure-devops-extension-api
     summary: ''
     fullName: variables
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'variables: [key: string]: string'
+      content: 'variables: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
+inheritedProperties:
+  - name: itemType
+    uid: azure-devops-extension-api.TaskOrchestrationJob.itemType
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: itemType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'itemType: TaskOrchestrationItemType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskOrchestrationItemType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationItem.itemType](xref:azure-devops-extension-api.TaskOrchestrationItem.itemType)
 extends: <xref uid="azure-devops-extension-api.TaskOrchestrationItem" />

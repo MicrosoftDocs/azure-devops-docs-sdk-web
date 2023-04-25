@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents the work item type relation type.
 fullName: WorkItemRelationType
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,50 +14,56 @@ properties:
     summary: The collection of relation type attributes.
     fullName: attributes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'attributes: [key: string]: any'
+      content: 'attributes: {[key: string]: any}'
       return:
         description: ''
-        type: '[key: string]\: any'
+        type: '{[key: string]: any}'
+inheritedProperties:
   - name: name
     uid: azure-devops-extension-api.WorkItemRelationType.name
     package: azure-devops-extension-api
     summary: The name.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingReference.name](xref:azure-devops-extension-api.WorkItemTrackingReference.name)
   - name: referenceName
     uid: azure-devops-extension-api.WorkItemRelationType.referenceName
     package: azure-devops-extension-api
     summary: The reference name.
     fullName: referenceName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'referenceName: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingReference.referenceName](xref:azure-devops-extension-api.WorkItemTrackingReference.referenceName)
   - name: url
     uid: azure-devops-extension-api.WorkItemRelationType.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingReference.url](xref:azure-devops-extension-api.WorkItemTrackingReference.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingReference" />

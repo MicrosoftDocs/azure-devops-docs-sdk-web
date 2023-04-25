@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: A collection of changes.
 fullName: TfvcChangeset
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,137 +14,54 @@ properties:
     summary: Changeset Account Id also known as Organization Id.
     fullName: accountId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'accountId: string'
       return:
         description: ''
         type: string
-  - name: author
-    uid: azure-devops-extension-api.TfvcChangeset.author
-    package: azure-devops-extension-api
-    summary: Alias or display name of user.
-    fullName: author
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'author: IdentityRef'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
   - name: changes
     uid: azure-devops-extension-api.TfvcChangeset.changes
     package: azure-devops-extension-api
     summary: List of associated changes.
     fullName: changes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'changes: TfvcChange[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TfvcChange" />[]'
-  - name: changesetId
-    uid: azure-devops-extension-api.TfvcChangeset.changesetId
-    package: azure-devops-extension-api
-    summary: Changeset Id.
-    fullName: changesetId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'changesetId: number'
-      return:
-        description: ''
-        type: number
-  - name: checkedInBy
-    uid: azure-devops-extension-api.TfvcChangeset.checkedInBy
-    package: azure-devops-extension-api
-    summary: Alias or display name of user.
-    fullName: checkedInBy
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'checkedInBy: IdentityRef'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        type: <xref uid="azure-devops-extension-api.TfvcChange" />[]
   - name: checkinNotes
     uid: azure-devops-extension-api.TfvcChangeset.checkinNotes
     package: azure-devops-extension-api
     summary: List of Checkin Notes for the changeset.
     fullName: checkinNotes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'checkinNotes: CheckinNote[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.CheckinNote" />[]'
+        type: <xref uid="azure-devops-extension-api.CheckinNote" />[]
   - name: collectionId
     uid: azure-devops-extension-api.TfvcChangeset.collectionId
     package: azure-devops-extension-api
     summary: Changeset collection Id.
     fullName: collectionId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'collectionId: string'
       return:
         description: ''
         type: string
-  - name: comment
-    uid: azure-devops-extension-api.TfvcChangeset.comment
-    package: azure-devops-extension-api
-    summary: Comment for the changeset.
-    fullName: comment
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'comment: string'
-      return:
-        description: ''
-        type: string
-  - name: commentTruncated
-    uid: azure-devops-extension-api.TfvcChangeset.commentTruncated
-    package: azure-devops-extension-api
-    summary: Was the Comment result truncated?
-    fullName: commentTruncated
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'commentTruncated: boolean'
-      return:
-        description: ''
-        type: boolean
-  - name: createdDate
-    uid: azure-devops-extension-api.TfvcChangeset.createdDate
-    package: azure-devops-extension-api
-    summary: Creation date of the changeset.
-    fullName: createdDate
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'createdDate: Date'
-      return:
-        description: ''
-        type: Date
   - name: hasMoreChanges
     uid: azure-devops-extension-api.TfvcChangeset.hasMoreChanges
     package: azure-devops-extension-api
     summary: True if more changes are available.
     fullName: hasMoreChanges
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'hasMoreChanges: boolean'
@@ -158,7 +74,6 @@ properties:
     summary: Policy Override for the changeset.
     fullName: policyOverride
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'policyOverride: TfvcPolicyOverrideInfo'
@@ -171,37 +86,128 @@ properties:
     summary: Team Project Ids for the changeset.
     fullName: teamProjectIds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'teamProjectIds: string[]'
       return:
         description: ''
-        type: 'string[]'
-  - name: url
-    uid: azure-devops-extension-api.TfvcChangeset.url
-    package: azure-devops-extension-api
-    summary: URL to retrieve the item.
-    fullName: url
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'url: string'
-      return:
-        description: ''
-        type: string
+        type: string[]
   - name: workItems
     uid: azure-devops-extension-api.TfvcChangeset.workItems
     package: azure-devops-extension-api
     summary: List of work items associated with the changeset.
     fullName: workItems
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workItems: AssociatedWorkItem[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.AssociatedWorkItem" />[]'
+        type: <xref uid="azure-devops-extension-api.AssociatedWorkItem" />[]
+inheritedProperties:
+  - name: author
+    uid: azure-devops-extension-api.TfvcChangeset.author
+    package: azure-devops-extension-api
+    summary: Alias or display name of user.
+    fullName: author
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'author: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TfvcChangesetRef.author](xref:azure-devops-extension-api.TfvcChangesetRef.author)
+  - name: changesetId
+    uid: azure-devops-extension-api.TfvcChangeset.changesetId
+    package: azure-devops-extension-api
+    summary: Changeset Id.
+    fullName: changesetId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changesetId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TfvcChangesetRef.changesetId](xref:azure-devops-extension-api.TfvcChangesetRef.changesetId)
+  - name: checkedInBy
+    uid: azure-devops-extension-api.TfvcChangeset.checkedInBy
+    package: azure-devops-extension-api
+    summary: Alias or display name of user.
+    fullName: checkedInBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'checkedInBy: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TfvcChangesetRef.checkedInBy](xref:azure-devops-extension-api.TfvcChangesetRef.checkedInBy)
+  - name: comment
+    uid: azure-devops-extension-api.TfvcChangeset.comment
+    package: azure-devops-extension-api
+    summary: Comment for the changeset.
+    fullName: comment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TfvcChangesetRef.comment](xref:azure-devops-extension-api.TfvcChangesetRef.comment)
+  - name: commentTruncated
+    uid: azure-devops-extension-api.TfvcChangeset.commentTruncated
+    package: azure-devops-extension-api
+    summary: Was the Comment result truncated?
+    fullName: commentTruncated
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'commentTruncated: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TfvcChangesetRef.commentTruncated](xref:azure-devops-extension-api.TfvcChangesetRef.commentTruncated)
+  - name: createdDate
+    uid: azure-devops-extension-api.TfvcChangeset.createdDate
+    package: azure-devops-extension-api
+    summary: Creation date of the changeset.
+    fullName: createdDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TfvcChangesetRef.createdDate](xref:azure-devops-extension-api.TfvcChangesetRef.createdDate)
+  - name: url
+    uid: azure-devops-extension-api.TfvcChangeset.url
+    package: azure-devops-extension-api
+    summary: URL to retrieve the item.
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TfvcChangesetRef.url](xref:azure-devops-extension-api.TfvcChangesetRef.url)
 extends: <xref uid="azure-devops-extension-api.TfvcChangesetRef" />

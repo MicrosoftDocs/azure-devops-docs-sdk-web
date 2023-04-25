@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a test result.
 fullName: TestCaseResult
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Test attachment ID of action recording.
     fullName: afnStripId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'afnStripId: number'
@@ -28,7 +26,6 @@ properties:
     summary: Reference to area path of test.
     fullName: area
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'area: ShallowReference'
@@ -41,20 +38,18 @@ properties:
     summary: Reference to bugs linked to test result.
     fullName: associatedBugs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'associatedBugs: ShallowReference[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.ShallowReference" />[]'
+        type: <xref uid="azure-devops-extension-api.ShallowReference" />[]
   - name: automatedTestId
     uid: azure-devops-extension-api.TestCaseResult.automatedTestId
     package: azure-devops-extension-api
     summary: ID representing test method in a dll.
     fullName: automatedTestId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'automatedTestId: string'
@@ -67,7 +62,6 @@ properties:
     summary: Fully qualified name of test executed.
     fullName: automatedTestName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'automatedTestName: string'
@@ -80,7 +74,6 @@ properties:
     summary: Container to which test belongs.
     fullName: automatedTestStorage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'automatedTestStorage: string'
@@ -93,7 +86,6 @@ properties:
     summary: Type of automated test.
     fullName: automatedTestType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'automatedTestType: string'
@@ -106,7 +98,6 @@ properties:
     summary: TypeId of automated test.
     fullName: automatedTestTypeId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'automatedTestTypeId: string'
@@ -119,7 +110,6 @@ properties:
     summary: Shallow reference to build associated with test result.
     fullName: build
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'build: ShallowReference'
@@ -132,7 +122,6 @@ properties:
     summary: Reference to build associated with test result.
     fullName: buildReference
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'buildReference: BuildReference'
@@ -145,7 +134,6 @@ properties:
     summary: Comment in a test result with maxSize= 1000 chars.
     fullName: comment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'comment: string'
@@ -156,11 +144,10 @@ properties:
     uid: azure-devops-extension-api.TestCaseResult.completedDate
     package: azure-devops-extension-api
     summary: >-
-      Time when test execution completed. Completed date should be greater than
-      StartedDate.
+      Time when test execution completed(UTC). Completed date should be greater
+      than StartedDate.
     fullName: completedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'completedDate: Date'
@@ -173,7 +160,6 @@ properties:
     summary: Machine name where test executed.
     fullName: computerName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'computerName: string'
@@ -186,7 +172,6 @@ properties:
     summary: Reference to test configuration. Type ShallowReference.
     fullName: configuration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'configuration: ShallowReference'
@@ -196,10 +181,9 @@ properties:
   - name: createdDate
     uid: azure-devops-extension-api.TestCaseResult.createdDate
     package: azure-devops-extension-api
-    summary: Timestamp when test result created.
+    summary: Timestamp when test result created(UTC).
     fullName: createdDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdDate: Date'
@@ -212,13 +196,12 @@ properties:
     summary: Additional properties of test result.
     fullName: customFields
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customFields: CustomTestField[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.CustomTestField" />[]'
+        type: <xref uid="azure-devops-extension-api.CustomTestField" />[]
   - name: durationInMs
     uid: azure-devops-extension-api.TestCaseResult.durationInMs
     package: azure-devops-extension-api
@@ -227,7 +210,6 @@ properties:
       set as CompletedDate - StartedDate
     fullName: durationInMs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'durationInMs: number'
@@ -240,7 +222,6 @@ properties:
     summary: Error message in test execution.
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -253,7 +234,6 @@ properties:
     summary: Information when test results started failing.
     fullName: failingSince
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'failingSince: FailingSince'
@@ -268,7 +248,6 @@ properties:
       Regression, Unknown, None)
     fullName: failureType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'failureType: string'
@@ -281,7 +260,6 @@ properties:
     summary: ID of a test result.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
@@ -294,20 +272,18 @@ properties:
     summary: Test result details of test iterations used only for Manual Testing.
     fullName: iterationDetails
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'iterationDetails: TestIterationDetailsModel[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TestIterationDetailsModel" />[]'
+        type: <xref uid="azure-devops-extension-api.TestIterationDetailsModel" />[]
   - name: lastUpdatedBy
     uid: azure-devops-extension-api.TestCaseResult.lastUpdatedBy
     package: azure-devops-extension-api
     summary: Reference to identity last updated test result.
     fullName: lastUpdatedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastUpdatedBy: IdentityRef'
@@ -317,10 +293,9 @@ properties:
   - name: lastUpdatedDate
     uid: azure-devops-extension-api.TestCaseResult.lastUpdatedDate
     package: azure-devops-extension-api
-    summary: Last updated datetime of test result.
+    summary: Last updated datetime of test result(UTC).
     fullName: lastUpdatedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastUpdatedDate: Date'
@@ -336,7 +311,6 @@ properties:
       Error, NotApplicable, Paused, InProgress, NotImpacted)
     fullName: outcome
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'outcome: string'
@@ -349,7 +323,6 @@ properties:
     summary: Reference to test owner.
     fullName: owner
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'owner: IdentityRef'
@@ -362,7 +335,6 @@ properties:
     summary: Priority of test executed.
     fullName: priority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'priority: number'
@@ -375,7 +347,6 @@ properties:
     summary: Reference to team project.
     fullName: project
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'project: ShallowReference'
@@ -388,7 +359,6 @@ properties:
     summary: Shallow reference to release associated with test result.
     fullName: release
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'release: ShallowReference'
@@ -401,7 +371,6 @@ properties:
     summary: Reference to release associated with test result.
     fullName: releaseReference
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'releaseReference: ReleaseReference'
@@ -414,7 +383,6 @@ properties:
     summary: ResetCount.
     fullName: resetCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resetCount: number'
@@ -427,7 +395,6 @@ properties:
     summary: Resolution state of test result.
     fullName: resolutionState
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resolutionState: string'
@@ -440,7 +407,6 @@ properties:
     summary: ID of resolution state.
     fullName: resolutionStateId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resolutionStateId: number'
@@ -450,10 +416,9 @@ properties:
   - name: resultGroupType
     uid: azure-devops-extension-api.TestCaseResult.resultGroupType
     package: azure-devops-extension-api
-    summary: 'Hierarchy type of the result, default value of None means its leaf node.'
+    summary: Hierarchy type of the result, default value of None means its leaf node.
     fullName: resultGroupType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resultGroupType: ResultGroupType'
@@ -466,7 +431,6 @@ properties:
     summary: Revision number of test result.
     fullName: revision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revision: number'
@@ -479,7 +443,6 @@ properties:
     summary: Reference to identity executed the test.
     fullName: runBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'runBy: IdentityRef'
@@ -492,7 +455,6 @@ properties:
     summary: Stacktrace with maxSize= 1000 chars.
     fullName: stackTrace
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stackTrace: string'
@@ -502,10 +464,9 @@ properties:
   - name: startedDate
     uid: azure-devops-extension-api.TestCaseResult.startedDate
     package: azure-devops-extension-api
-    summary: Time when test execution started.
+    summary: Time when test execution started(UTC).
     fullName: startedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'startedDate: Date'
@@ -518,7 +479,6 @@ properties:
     summary: State of test result. Type TestRunState.
     fullName: state
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'state: string'
@@ -533,20 +493,18 @@ properties:
       it holds corresponding type sub results.
     fullName: subResults
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subResults: TestSubResult[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TestSubResult" />[]'
+        type: <xref uid="azure-devops-extension-api.TestSubResult" />[]
   - name: testCase
     uid: azure-devops-extension-api.TestCaseResult.testCase
     package: azure-devops-extension-api
     summary: Reference to the test executed.
     fullName: testCase
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testCase: ShallowReference'
@@ -559,7 +517,6 @@ properties:
     summary: Reference ID of test used by test result. Type TestResultMetaData
     fullName: testCaseReferenceId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testCaseReferenceId: number'
@@ -572,7 +529,6 @@ properties:
     summary: TestCaseRevision Number.
     fullName: testCaseRevision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testCaseRevision: number'
@@ -585,7 +541,6 @@ properties:
     summary: Name of test.
     fullName: testCaseTitle
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testCaseTitle: string'
@@ -598,7 +553,6 @@ properties:
     summary: Reference to test plan test case workitem is part of.
     fullName: testPlan
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testPlan: ShallowReference'
@@ -611,7 +565,6 @@ properties:
     summary: Reference to the test point executed.
     fullName: testPoint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testPoint: ShallowReference'
@@ -624,7 +577,6 @@ properties:
     summary: Reference to test run.
     fullName: testRun
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testRun: ShallowReference'
@@ -637,7 +589,6 @@ properties:
     summary: Reference to test suite test case workitem is part of.
     fullName: testSuite
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testSuite: ShallowReference'
@@ -650,7 +601,6 @@ properties:
     summary: Url of test result.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'

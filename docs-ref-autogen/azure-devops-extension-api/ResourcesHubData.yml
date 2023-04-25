@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: ResourcesHubData
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,31 @@ properties:
     summary: ''
     fullName: continuationToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'continuationToken: string'
       return:
         description: ''
         type: string
+  - name: hasProjectLevelManagePermission
+    uid: >-
+      azure-devops-extension-api.ResourcesHubData.hasProjectLevelManagePermission
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: hasProjectLevelManagePermission
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hasProjectLevelManagePermission: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: resourceFilterOptions
     uid: azure-devops-extension-api.ResourcesHubData.resourceFilterOptions
     package: azure-devops-extension-api
     summary: ''
     fullName: resourceFilterOptions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resourceFilterOptions: ResourceFilterOptions'
@@ -41,7 +51,6 @@ properties:
     summary: ''
     fullName: resourceFilters
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resourceFilters: ResourceFilters'
@@ -54,10 +63,9 @@ properties:
     summary: ''
     fullName: resourceItems
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resourceItems: ResourceItem[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.ResourceItem" />[]'
+        type: <xref uid="azure-devops-extension-api.ResourceItem" />[]

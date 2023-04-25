@@ -5,19 +5,8 @@ package: azure-devops-extension-api
 summary: ''
 fullName: PeoplePickerProvider
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
-constructors:
-  - name: PeoplePickerProvider()
-    uid: azure-devops-extension-api.PeoplePickerProvider.constructor
-    package: azure-devops-extension-api
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: new PeoplePickerProvider()
 properties:
   - name: addIdentitiesToMRU
     uid: azure-devops-extension-api.PeoplePickerProvider.addIdentitiesToMRU
@@ -25,7 +14,6 @@ properties:
     summary: ''
     fullName: addIdentitiesToMRU
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'addIdentitiesToMRU: (identities: IIdentity[]) => Promise<boolean>'
@@ -39,7 +27,6 @@ properties:
     summary: ''
     fullName: getEntityFromUniqueAttribute
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -54,30 +41,28 @@ properties:
     summary: ''
     fullName: onEmptyInputFocus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onEmptyInputFocus: () => IIdentity[] | PromiseLike<IIdentity[]>'
       return:
         description: ''
-        type: '() =&gt; IIdentity[] | PromiseLike&lt;IIdentity[]&gt;'
+        type: () =&gt; IIdentity[] | PromiseLike&lt;IIdentity[]&gt;
   - name: onFilterIdentities
     uid: azure-devops-extension-api.PeoplePickerProvider.onFilterIdentities
     package: azure-devops-extension-api
     summary: ''
     fullName: onFilterIdentities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        onFilterIdentities: (filter: string, selectedItems?: IIdentity[] |
-        undefined) => IIdentity[] | Promise<IIdentity[]>
+        onFilterIdentities: (filter: string, selectedItems?: IIdentity[]) =>
+        IIdentity[] | Promise<IIdentity[]>
       return:
         description: ''
         type: >-
-          (filter: string, selectedItems?: IIdentity[] | undefined) =&gt;
-          IIdentity[] | Promise&lt;IIdentity[]&gt;
+          (filter: string, selectedItems?: IIdentity[]) =&gt; IIdentity[] |
+          Promise&lt;IIdentity[]&gt;
   - name: onRequestConnectionInformation
     uid: >-
       azure-devops-extension-api.PeoplePickerProvider.onRequestConnectionInformation
@@ -85,17 +70,16 @@ properties:
     summary: ''
     fullName: onRequestConnectionInformation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         onRequestConnectionInformation: (entity: IIdentity, getDirectReports?:
-        boolean | undefined) => IdentitiesGetConnectionsResponseModel |
+        boolean) => IdentitiesGetConnectionsResponseModel |
         PromiseLike<IdentitiesGetConnectionsResponseModel>
       return:
         description: ''
         type: >-
-          (entity: IIdentity, getDirectReports?: boolean | undefined) =&gt;
+          (entity: IIdentity, getDirectReports?: boolean) =&gt;
           IdentitiesGetConnectionsResponseModel |
           PromiseLike&lt;IdentitiesGetConnectionsResponseModel&gt;
   - name: removeIdentitiesFromMRU
@@ -104,7 +88,6 @@ properties:
     summary: ''
     fullName: removeIdentitiesFromMRU
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'removeIdentitiesFromMRU: (identities: IIdentity[]) => Promise<boolean>'

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Describes a work item.
 fullName: WorkItem
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       this revision.
     fullName: commentVersionRef
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'commentVersionRef: WorkItemCommentVersionRef'
@@ -30,20 +28,18 @@ properties:
     summary: Map of field and values for the work item.
     fullName: fields
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'fields: [key: string]: any'
+      content: 'fields: {[key: string]: any}'
       return:
         description: ''
-        type: '[key: string]\: any'
+        type: '{[key: string]: any}'
   - name: id
     uid: azure-devops-extension-api.WorkItem.id
     package: azure-devops-extension-api
     summary: The work item ID.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
@@ -56,37 +52,38 @@ properties:
     summary: Relations of the work item.
     fullName: relations
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'relations: WorkItemRelation[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.WorkItemRelation" />[]'
+        type: <xref uid="azure-devops-extension-api.WorkItemRelation" />[]
   - name: rev
     uid: azure-devops-extension-api.WorkItem.rev
     package: azure-devops-extension-api
     summary: Revision number of the work item.
     fullName: rev
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'rev: number'
       return:
         description: ''
         type: number
+inheritedProperties:
   - name: url
     uid: azure-devops-extension-api.WorkItem.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

@@ -5,10 +5,23 @@ package: azure-devops-extension-api
 summary: Represents the ability to build forks of the selected repository.
 fullName: Forks
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: allowFullAccessToken
+    uid: azure-devops-extension-api.Forks.allowFullAccessToken
+    package: azure-devops-extension-api
+    summary: >-
+      Indicates whether a build should allow a full access token or scope it
+      down when building forks of the selected repository.
+    fullName: allowFullAccessToken
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'allowFullAccessToken: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: allowSecrets
     uid: azure-devops-extension-api.Forks.allowSecrets
     package: azure-devops-extension-api
@@ -17,7 +30,6 @@ properties:
       selected repository.
     fullName: allowSecrets
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'allowSecrets: boolean'
@@ -32,7 +44,6 @@ properties:
       selected repository.
     fullName: enabled
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'enabled: boolean'

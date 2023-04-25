@@ -9,23 +9,25 @@ summary: >-
   use case when looking up the user by its mail address in the backing provider.
 fullName: GraphUserMailAddressCreationContext
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: mailAddress
     uid: azure-devops-extension-api.GraphUserMailAddressCreationContext.mailAddress
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      This should be the mail address of the user in the source AD or AAD
+      provider. Example: Jamal.Hartnett@contoso.com Team Services will
+      communicate with the source provider to fill all other fields on creation.
     fullName: mailAddress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mailAddress: string'
       return:
         description: ''
         type: string
+inheritedProperties:
   - name: storageKey
     uid: azure-devops-extension-api.GraphUserMailAddressCreationContext.storageKey
     package: azure-devops-extension-api
@@ -34,11 +36,13 @@ properties:
       the created user
     fullName: storageKey
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'storageKey: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GraphUserCreationContext.storageKey](xref:azure-devops-extension-api.GraphUserCreationContext.storageKey)
 extends: <xref uid="azure-devops-extension-api.GraphUserCreationContext" />

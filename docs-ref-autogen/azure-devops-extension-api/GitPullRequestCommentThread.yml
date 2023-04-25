@@ -8,105 +8,9 @@ summary: >-
   initial comment and the subsequent replies).
 fullName: GitPullRequestCommentThread
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: comments
-    uid: azure-devops-extension-api.GitPullRequestCommentThread.comments
-    package: azure-devops-extension-api
-    summary: A list of the comments.
-    fullName: comments
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'comments: Comment[]'
-      return:
-        description: ''
-        type: '<xref uid="azure-devops-extension-api.Comment" />[]'
-  - name: id
-    uid: azure-devops-extension-api.GitPullRequestCommentThread.id
-    package: azure-devops-extension-api
-    summary: The comment thread id.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
-  - name: identities
-    uid: azure-devops-extension-api.GitPullRequestCommentThread.identities
-    package: azure-devops-extension-api
-    summary: Set of identities related to this thread
-    fullName: identities
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'identities: [key: string]: IdentityRef'
-      return:
-        description: ''
-        type: '[key: string]\: <xref uid="azure-devops-extension-api.IdentityRef" />'
-  - name: isDeleted
-    uid: azure-devops-extension-api.GitPullRequestCommentThread.isDeleted
-    package: azure-devops-extension-api
-    summary: >-
-      Specify if the thread is deleted which happens when all comments are
-      deleted.
-    fullName: isDeleted
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'isDeleted: boolean'
-      return:
-        description: ''
-        type: boolean
-  - name: lastUpdatedDate
-    uid: azure-devops-extension-api.GitPullRequestCommentThread.lastUpdatedDate
-    package: azure-devops-extension-api
-    summary: The time this thread was last updated.
-    fullName: lastUpdatedDate
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'lastUpdatedDate: Date'
-      return:
-        description: ''
-        type: Date
-  - name: properties
-    uid: azure-devops-extension-api.GitPullRequestCommentThread.properties
-    package: azure-devops-extension-api
-    summary: >-
-      Optional properties associated with the thread as a collection of
-      key-value pairs.
-    fullName: properties
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'properties: any'
-      return:
-        description: ''
-        type: any
-  - name: publishedDate
-    uid: azure-devops-extension-api.GitPullRequestCommentThread.publishedDate
-    package: azure-devops-extension-api
-    summary: The time this thread was published.
-    fullName: publishedDate
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'publishedDate: Date'
-      return:
-        description: ''
-        type: Date
   - name: pullRequestThreadContext
     uid: >-
       azure-devops-extension-api.GitPullRequestCommentThread.pullRequestThreadContext
@@ -114,7 +18,6 @@ properties:
     summary: Extended context information unique to pull requests
     fullName: pullRequestThreadContext
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'pullRequestThreadContext: GitPullRequestCommentThreadContext'
@@ -123,30 +26,144 @@ properties:
         type: >-
           <xref
           uid="azure-devops-extension-api.GitPullRequestCommentThreadContext" />
+inheritedProperties:
+  - name: comments
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.comments
+    package: azure-devops-extension-api
+    summary: A list of the comments.
+    fullName: comments
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'comments: Comment[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Comment" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentThread.comments](xref:azure-devops-extension-api.CommentThread.comments)
+  - name: id
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.id
+    package: azure-devops-extension-api
+    summary: The comment thread id.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentThread.id](xref:azure-devops-extension-api.CommentThread.id)
+  - name: identities
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.identities
+    package: azure-devops-extension-api
+    summary: Set of identities related to this thread
+    fullName: identities
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'identities: {[key: string]: WebApi.IdentityRef}'
+      return:
+        description: ''
+        type: '{[key: string]: <xref uid="azure-devops-extension-api.IdentityRef" />}'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentThread.identities](xref:azure-devops-extension-api.CommentThread.identities)
+  - name: isDeleted
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.isDeleted
+    package: azure-devops-extension-api
+    summary: >-
+      Specify if the thread is deleted which happens when all comments are
+      deleted.
+    fullName: isDeleted
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isDeleted: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentThread.isDeleted](xref:azure-devops-extension-api.CommentThread.isDeleted)
+  - name: lastUpdatedDate
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.lastUpdatedDate
+    package: azure-devops-extension-api
+    summary: The time this thread was last updated.
+    fullName: lastUpdatedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastUpdatedDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentThread.lastUpdatedDate](xref:azure-devops-extension-api.CommentThread.lastUpdatedDate)
+  - name: properties
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.properties
+    package: azure-devops-extension-api
+    summary: >-
+      Optional properties associated with the thread as a collection of
+      key-value pairs.
+    fullName: properties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'properties: any'
+      return:
+        description: ''
+        type: any
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentThread.properties](xref:azure-devops-extension-api.CommentThread.properties)
+  - name: publishedDate
+    uid: azure-devops-extension-api.GitPullRequestCommentThread.publishedDate
+    package: azure-devops-extension-api
+    summary: The time this thread was published.
+    fullName: publishedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'publishedDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentThread.publishedDate](xref:azure-devops-extension-api.CommentThread.publishedDate)
   - name: status
     uid: azure-devops-extension-api.GitPullRequestCommentThread.status
     package: azure-devops-extension-api
     summary: The status of the comment thread.
     fullName: status
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: CommentThreadStatus'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.CommentThreadStatus" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentThread.status](xref:azure-devops-extension-api.CommentThread.status)
   - name: threadContext
     uid: azure-devops-extension-api.GitPullRequestCommentThread.threadContext
     package: azure-devops-extension-api
     summary: Specify thread context such as position in left/right file.
     fullName: threadContext
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'threadContext: CommentThreadContext'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.CommentThreadContext" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentThread.threadContext](xref:azure-devops-extension-api.CommentThread.threadContext)
 extends: <xref uid="azure-devops-extension-api.CommentThread" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TestRunWithDtlEnvEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: ''
     fullName: configurationIds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'configurationIds: number[]'
       return:
         description: ''
-        type: 'number[]'
+        type: number[]
   - name: mappedTestRunEventType
     uid: azure-devops-extension-api.TestRunWithDtlEnvEvent.mappedTestRunEventType
     package: azure-devops-extension-api
     summary: ''
     fullName: mappedTestRunEventType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mappedTestRunEventType: string'
@@ -41,7 +38,6 @@ properties:
     summary: ''
     fullName: runTimeout
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'runTimeout: any'
@@ -55,24 +51,26 @@ properties:
     summary: ''
     fullName: testConfigurationsMapping
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testConfigurationsMapping: string'
       return:
         description: ''
         type: string
+inheritedProperties:
   - name: testRun
     uid: azure-devops-extension-api.TestRunWithDtlEnvEvent.testRun
     package: azure-devops-extension-api
     summary: ''
     fullName: testRun
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testRun: TestRun'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.TestRun" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestRunEvent.testRun](xref:azure-devops-extension-api.TestRunEvent.testRun)
 extends: <xref uid="azure-devops-extension-api.TestRunEvent" />

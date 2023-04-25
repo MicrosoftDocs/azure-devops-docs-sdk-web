@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Filter to get TestCase result history.
 fullName: TestHistoryQuery
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Automated test name of the TestCase.
     fullName: automatedTestName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'automatedTestName: string'
@@ -28,7 +26,6 @@ properties:
     summary: Results to be get for a particular branches.
     fullName: branch
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'branch: string'
@@ -44,7 +41,6 @@ properties:
       no use.
     fullName: buildDefinitionId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'buildDefinitionId: number'
@@ -61,7 +57,6 @@ properties:
       from server in last batch) by user.
     fullName: continuationToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'continuationToken: string'
@@ -76,7 +71,6 @@ properties:
       Environment or null(if results are fetched by BuildDefinitionId)
     fullName: groupBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'groupBy: TestResultGroupBy'
@@ -91,7 +85,6 @@ properties:
       - TrendDays). Default is current date time.
     fullName: maxCompleteDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxCompleteDate: Date'
@@ -106,7 +99,6 @@ properties:
       used in query GroupBy should be Environment.
     fullName: releaseEnvDefinitionId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'releaseEnvDefinitionId: number'
@@ -119,13 +111,12 @@ properties:
     summary: List of TestResultHistoryForGroup which are grouped by GroupBy
     fullName: resultsForGroup
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resultsForGroup: TestResultHistoryForGroup[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TestResultHistoryForGroup" />[]'
+        type: <xref uid="azure-devops-extension-api.TestResultHistoryForGroup" />[]
   - name: testCaseId
     uid: azure-devops-extension-api.TestHistoryQuery.testCaseId
     package: azure-devops-extension-api
@@ -134,7 +125,6 @@ properties:
       query to filter the result along with automatedtestname
     fullName: testCaseId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testCaseId: number'
@@ -149,7 +139,6 @@ properties:
       days. Default is 7 days.
     fullName: trendDays
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'trendDays: number'

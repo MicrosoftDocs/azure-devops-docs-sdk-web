@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a YAML process.
 fullName: YamlProcess
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,50 +14,50 @@ properties:
     summary: ''
     fullName: errors
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errors: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: resources
     uid: azure-devops-extension-api.YamlProcess.resources
     package: azure-devops-extension-api
     summary: The resources used by the build definition.
     fullName: resources
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resources: BuildProcessResources'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.BuildProcessResources" />
-  - name: type
-    uid: azure-devops-extension-api.YamlProcess.type
-    package: azure-devops-extension-api
-    summary: The type of the process.
-    fullName: type
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'type: number'
-      return:
-        description: ''
-        type: number
   - name: yamlFilename
     uid: azure-devops-extension-api.YamlProcess.yamlFilename
     package: azure-devops-extension-api
     summary: The YAML filename.
     fullName: yamlFilename
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'yamlFilename: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: type
+    uid: azure-devops-extension-api.YamlProcess.type
+    package: azure-devops-extension-api
+    summary: The type of the process.
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildProcess.type](xref:azure-devops-extension-api.BuildProcess.type)
 extends: <xref uid="azure-devops-extension-api.BuildProcess" />

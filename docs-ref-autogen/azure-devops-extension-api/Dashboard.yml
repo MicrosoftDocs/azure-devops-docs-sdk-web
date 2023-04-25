@@ -5,17 +5,27 @@ package: azure-devops-extension-api
 summary: Model of a Dashboard.
 fullName: Dashboard
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: dashboardScope
+    uid: azure-devops-extension-api.Dashboard.dashboardScope
+    package: azure-devops-extension-api
+    summary: Entity to which the dashboard is scoped.
+    fullName: dashboardScope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dashboardScope: DashboardScope'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DashboardScope" />
   - name: description
     uid: azure-devops-extension-api.Dashboard.description
     package: azure-devops-extension-api
     summary: Description of the dashboard.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -25,13 +35,27 @@ properties:
   - name: eTag
     uid: azure-devops-extension-api.Dashboard.eTag
     package: azure-devops-extension-api
-    summary: 'Server defined version tracking value, used for edit collision detection.'
+    summary: Server defined version tracking value, used for edit collision detection.
     fullName: eTag
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eTag: string'
+      return:
+        description: ''
+        type: string
+  - name: groupId
+    uid: azure-devops-extension-api.Dashboard.groupId
+    package: azure-devops-extension-api
+    summary: >-
+      ID of the group for a dashboard. For team-scoped dashboards, this is the
+      unique identifier for the team associated with the dashboard. For
+      project-scoped dashboards this property is empty.
+    fullName: groupId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'groupId: string'
       return:
         description: ''
         type: string
@@ -41,20 +65,54 @@ properties:
     summary: ID of the Dashboard. Provided by service at creation time.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+  - name: lastAccessedDate
+    uid: azure-devops-extension-api.Dashboard.lastAccessedDate
+    package: azure-devops-extension-api
+    summary: Dashboard Last Accessed Date.
+    fullName: lastAccessedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastAccessedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: modifiedBy
+    uid: azure-devops-extension-api.Dashboard.modifiedBy
+    package: azure-devops-extension-api
+    summary: Id of the person who modified Dashboard.
+    fullName: modifiedBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'modifiedBy: string'
+      return:
+        description: ''
+        type: string
+  - name: modifiedDate
+    uid: azure-devops-extension-api.Dashboard.modifiedDate
+    package: azure-devops-extension-api
+    summary: Dashboard's last modified date.
+    fullName: modifiedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'modifiedDate: Date'
+      return:
+        description: ''
+        type: Date
   - name: name
     uid: azure-devops-extension-api.Dashboard.name
     package: azure-devops-extension-api
     summary: Name of the Dashboard.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -65,11 +123,12 @@ properties:
     uid: azure-devops-extension-api.Dashboard.ownerId
     package: azure-devops-extension-api
     summary: >-
-      ID of the Owner for a dashboard. For any legacy dashboards, this would be
-      the unique identifier for the team associated with the dashboard.
+      ID of the owner for a dashboard. For team-scoped dashboards, this is the
+      unique identifier for the team associated with the dashboard. For
+      project-scoped dashboards, this is the unique identifier for the user
+      identity associated with the dashboard.
     fullName: ownerId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'ownerId: string'
@@ -84,7 +143,6 @@ properties:
       time, position is decided by the service.
     fullName: position
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'position: number'
@@ -99,7 +157,6 @@ properties:
       minutes.
     fullName: refreshInterval
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'refreshInterval: number'
@@ -112,7 +169,6 @@ properties:
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
@@ -125,10 +181,9 @@ properties:
     summary: The set of Widgets on the dashboard.
     fullName: widgets
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'widgets: Widget[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Widget" />[]'
+        type: <xref uid="azure-devops-extension-api.Widget" />[]

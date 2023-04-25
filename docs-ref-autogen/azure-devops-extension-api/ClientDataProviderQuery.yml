@@ -7,36 +7,9 @@ summary: >-
   request from the client.
 fullName: ClientDataProviderQuery
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: context
-    uid: azure-devops-extension-api.ClientDataProviderQuery.context
-    package: azure-devops-extension-api
-    summary: Contextual information to pass to the data providers
-    fullName: context
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'context: DataProviderContext'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.DataProviderContext" />
-  - name: contributionIds
-    uid: azure-devops-extension-api.ClientDataProviderQuery.contributionIds
-    package: azure-devops-extension-api
-    summary: The contribution ids of the data providers to resolve
-    fullName: contributionIds
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'contributionIds: string[]'
-      return:
-        description: ''
-        type: 'string[]'
   - name: queryServiceInstanceType
     uid: >-
       azure-devops-extension-api.ClientDataProviderQuery.queryServiceInstanceType
@@ -47,11 +20,41 @@ properties:
       values.
     fullName: queryServiceInstanceType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queryServiceInstanceType: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: context
+    uid: azure-devops-extension-api.ClientDataProviderQuery.context
+    package: azure-devops-extension-api
+    summary: Contextual information to pass to the data providers
+    fullName: context
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'context: DataProviderContext'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DataProviderContext" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DataProviderQuery.context](xref:azure-devops-extension-api.DataProviderQuery.context)
+  - name: contributionIds
+    uid: azure-devops-extension-api.ClientDataProviderQuery.contributionIds
+    package: azure-devops-extension-api
+    summary: The contribution ids of the data providers to resolve
+    fullName: contributionIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'contributionIds: string[]'
+      return:
+        description: ''
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DataProviderQuery.contributionIds](xref:azure-devops-extension-api.DataProviderQuery.contributionIds)
 extends: <xref uid="azure-devops-extension-api.DataProviderQuery" />

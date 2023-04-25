@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GitRepository
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: defaultBranch
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultBranch: string'
@@ -28,23 +26,45 @@ properties:
     summary: ''
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+  - name: isDisabled
+    uid: azure-devops-extension-api.GitRepository.isDisabled
+    package: azure-devops-extension-api
+    summary: True if the repository is disabled. False otherwise.
+    fullName: isDisabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isDisabled: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: isFork
     uid: azure-devops-extension-api.GitRepository.isFork
     package: azure-devops-extension-api
-    summary: True if the repository was created as a fork
+    summary: True if the repository was created as a fork.
     fullName: isFork
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isFork: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isInMaintenance
+    uid: azure-devops-extension-api.GitRepository.isInMaintenance
+    package: azure-devops-extension-api
+    summary: True if the repository is in maintenance. False otherwise.
+    fullName: isInMaintenance
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isInMaintenance: boolean'
       return:
         description: ''
         type: boolean
@@ -54,7 +74,6 @@ properties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -67,7 +86,6 @@ properties:
     summary: ''
     fullName: parentRepository
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'parentRepository: GitRepositoryRef'
@@ -80,7 +98,6 @@ properties:
     summary: ''
     fullName: project
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
@@ -93,7 +110,6 @@ properties:
     summary: ''
     fullName: remoteUrl
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'remoteUrl: string'
@@ -106,7 +122,6 @@ properties:
     summary: Compressed size (bytes) of the repository.
     fullName: size
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'size: number'
@@ -119,7 +134,6 @@ properties:
     summary: ''
     fullName: sshUrl
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sshUrl: string'
@@ -132,7 +146,6 @@ properties:
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
@@ -145,20 +158,18 @@ properties:
     summary: ''
     fullName: validRemoteUrls
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'validRemoteUrls: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: webUrl
     uid: azure-devops-extension-api.GitRepository.webUrl
     package: azure-devops-extension-api
     summary: ''
     fullName: webUrl
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'webUrl: string'

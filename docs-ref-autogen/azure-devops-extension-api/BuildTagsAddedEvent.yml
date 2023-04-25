@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: BuildTagsAddedEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,50 +14,53 @@ properties:
     summary: ''
     fullName: allTags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'allTags: string[]'
       return:
         description: ''
-        type: 'string[]'
-  - name: build
-    uid: azure-devops-extension-api.BuildTagsAddedEvent.build
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: build
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'build: Build'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.Build" />
-  - name: buildId
-    uid: azure-devops-extension-api.BuildTagsAddedEvent.buildId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: buildId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'buildId: number'
-      return:
-        description: ''
-        type: number
+        type: string[]
   - name: newTags
     uid: azure-devops-extension-api.BuildTagsAddedEvent.newTags
     package: azure-devops-extension-api
     summary: ''
     fullName: newTags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'newTags: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
+inheritedProperties:
+  - name: build
+    uid: azure-devops-extension-api.BuildTagsAddedEvent.build
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: build
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'build: Build'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Build" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildUpdatedEvent.build](xref:azure-devops-extension-api.BuildUpdatedEvent.build)
+  - name: buildId
+    uid: azure-devops-extension-api.BuildTagsAddedEvent.buildId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: buildId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'buildId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildUpdatedEvent.buildId](xref:azure-devops-extension-api.BuildUpdatedEvent.buildId)
 extends: <xref uid="azure-devops-extension-api.BuildUpdatedEvent" />

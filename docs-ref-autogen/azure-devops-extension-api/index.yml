@@ -79,6 +79,7 @@ enums:
   - azure-devops-extension-api.ExtensionRequestUpdateType
   - azure-devops-extension-api.ExtensionUpdateType
   - azure-devops-extension-api.ContributedFeatureEnabledValue
+  - azure-devops-extension-api.BlobCompressionType
   - azure-devops-extension-api.ContainerItemStatus
   - azure-devops-extension-api.ContainerItemType
   - azure-devops-extension-api.ContainerOptions
@@ -112,6 +113,7 @@ enums:
   - azure-devops-extension-api.ReviewResourceType
   - azure-devops-extension-api.SortByType
   - azure-devops-extension-api.SortOrderType
+  - azure-devops-extension-api.VSCodeWebExtensionStatisicsType
   - azure-devops-extension-api.IndentAction
   - azure-devops-extension-api.CommentThreadStatus
   - azure-devops-extension-api.CommentType
@@ -177,6 +179,12 @@ enums:
   - azure-devops-extension-api.SubscriptionTemplateType
   - azure-devops-extension-api.OperationStatus
   - azure-devops-extension-api.Operation
+  - azure-devops-extension-api.ConfigurationType
+  - azure-devops-extension-api.GetArtifactExpandOptions
+  - azure-devops-extension-api.GetLogExpandOptions
+  - azure-devops-extension-api.RepositoryType
+  - azure-devops-extension-api.RunResult
+  - azure-devops-extension-api.RunState
   - azure-devops-extension-api.PolicyEvaluationStatus
   - azure-devops-extension-api.AvatarSize
   - azure-devops-extension-api.ProfileState
@@ -211,6 +219,7 @@ enums:
   - azure-devops-extension-api.ReleaseDefinitionExpands
   - azure-devops-extension-api.ReleaseDefinitionQueryOrder
   - azure-devops-extension-api.ReleaseDefinitionSource
+  - azure-devops-extension-api.ReleaseEnvironmentExpands
   - azure-devops-extension-api.ReleaseExpands
   - azure-devops-extension-api.ReleaseQueryOrder
   - azure-devops-extension-api.ReleaseReason
@@ -230,18 +239,29 @@ enums:
   - azure-devops-extension-api.NotificationResult
   - azure-devops-extension-api.NotificationStatus
   - azure-devops-extension-api.SubscriptionInputScope
+  - azure-devops-extension-api.DemandSourceType
   - azure-devops-extension-api.DeploymentGroupActionFilter
   - azure-devops-extension-api.DeploymentGroupExpands
   - azure-devops-extension-api.DeploymentMachineExpands
   - azure-devops-extension-api.DeploymentPoolSummaryExpands
   - azure-devops-extension-api.DeploymentTargetExpands
+  - azure-devops-extension-api.ElasticAgentState
+  - azure-devops-extension-api.ElasticComputeState
+  - azure-devops-extension-api.ElasticNodeState
+  - azure-devops-extension-api.ElasticPoolState
   - azure-devops-extension-api.EnvironmentActionFilter
   - azure-devops-extension-api.EnvironmentExpands
   - azure-devops-extension-api.EnvironmentResourceType
+  - azure-devops-extension-api.ExclusiveLockType
+  - azure-devops-extension-api.LogLevel
   - azure-devops-extension-api.MachineGroupActionFilter
   - azure-devops-extension-api.MaskType
+  - azure-devops-extension-api.OperatingSystemType
+  - azure-devops-extension-api.OperationType
+  - azure-devops-extension-api.OrchestrationType
   - azure-devops-extension-api.PlanGroupStatus
   - azure-devops-extension-api.PlanGroupStatusFilter
+  - azure-devops-extension-api.ResourceLockStatus
   - azure-devops-extension-api.SecureFileActionFilter
   - azure-devops-extension-api.TaskAgentJobResultFilter
   - azure-devops-extension-api.TaskAgentJobStepType
@@ -249,11 +269,14 @@ enums:
   - azure-devops-extension-api.TaskAgentPoolMaintenanceJobResult
   - azure-devops-extension-api.TaskAgentPoolMaintenanceJobStatus
   - azure-devops-extension-api.TaskAgentPoolMaintenanceScheduleDays
+  - azure-devops-extension-api.TaskAgentPoolOptions
   - azure-devops-extension-api.TaskAgentPoolType
   - azure-devops-extension-api.TaskAgentQueueActionFilter
+  - azure-devops-extension-api.TaskAgentRequestUpdateOptions
   - azure-devops-extension-api.TaskAgentStatus
   - azure-devops-extension-api.TaskAgentStatusFilter
   - azure-devops-extension-api.TaskAgentUpdateReasonType
+  - azure-devops-extension-api.TaskCommandMode
   - azure-devops-extension-api.TaskDefinitionStatus
   - azure-devops-extension-api.TaskGroupExpands
   - azure-devops-extension-api.TaskGroupQueryOrder
@@ -269,7 +292,6 @@ enums:
   - azure-devops-extension-api.CustomTestFieldType
   - azure-devops-extension-api.FlakyDetectionType
   - azure-devops-extension-api.Metrics
-  - azure-devops-extension-api.OperationType
   - azure-devops-extension-api.ResultDetails
   - azure-devops-extension-api.ResultGroupType
   - azure-devops-extension-api.ResultMetaDataDetails
@@ -299,10 +321,14 @@ enums:
   - azure-devops-extension-api.ExcludeFlags
   - azure-devops-extension-api.FailureType
   - azure-devops-extension-api.LastResolutionState
+  - azure-devops-extension-api.LibraryTestCasesDataReturnCode
   - azure-devops-extension-api.Outcome
   - azure-devops-extension-api.PointState
   - azure-devops-extension-api.ResultState
   - azure-devops-extension-api.SuiteEntryTypes
+  - azure-devops-extension-api.TestEntityTypes
+  - azure-devops-extension-api.TestPlansLibraryQuery
+  - azure-devops-extension-api.TestPlansLibraryWorkItemFilterMode
   - azure-devops-extension-api.TestSuiteType
   - azure-devops-extension-api.UserFriendlyTestOutcome
   - azure-devops-extension-api.ConnectOptions
@@ -447,6 +473,8 @@ interfaces:
   - azure-devops-extension-api.BuildRepository
   - azure-devops-extension-api.BuildRequestValidationResult
   - azure-devops-extension-api.BuildResourceUsage
+  - azure-devops-extension-api.BuildRetentionHistory
+  - azure-devops-extension-api.BuildRetentionSample
   - azure-devops-extension-api.BuildServer
   - azure-devops-extension-api.BuildSettings
   - azure-devops-extension-api.BuildSummary
@@ -479,15 +507,20 @@ interfaces:
   - azure-devops-extension-api.Issue
   - azure-devops-extension-api.JustInTimeProcess
   - azure-devops-extension-api.MappingDetails
+  - azure-devops-extension-api.MinimalRetentionLease
   - azure-devops-extension-api.MultipleAgentExecutionOptions
+  - azure-devops-extension-api.NewRetentionLease
   - azure-devops-extension-api.Phase
   - azure-devops-extension-api.PhaseTarget
+  - azure-devops-extension-api.PipelineGeneralSettings
   - azure-devops-extension-api.ProjectRetentionSetting
   - azure-devops-extension-api.PullRequest
   - azure-devops-extension-api.PullRequestTrigger
   - azure-devops-extension-api.RealtimeBuildEvent
   - azure-devops-extension-api.RepositoryWebhook
   - azure-devops-extension-api.ResourceReference
+  - azure-devops-extension-api.RetentionLease
+  - azure-devops-extension-api.RetentionLeaseUpdate
   - azure-devops-extension-api.RetentionPolicy
   - azure-devops-extension-api.RetentionSetting
   - azure-devops-extension-api.Schedule
@@ -518,6 +551,7 @@ interfaces:
   - azure-devops-extension-api.UpdateProjectRetentionSettingModel
   - azure-devops-extension-api.UpdateRetentionSettingModel
   - azure-devops-extension-api.UpdateStageParameters
+  - azure-devops-extension-api.UpdateTagParameters
   - azure-devops-extension-api.VariableGroup
   - azure-devops-extension-api.VariableGroupReference
   - azure-devops-extension-api.VariableMultipliersAgentExecutionOptions
@@ -529,6 +563,7 @@ interfaces:
   - azure-devops-extension-api.XamlBuildReference
   - azure-devops-extension-api.XamlBuildServerReference
   - azure-devops-extension-api.XamlDefinitionReference
+  - azure-devops-extension-api.YamlBuild
   - azure-devops-extension-api.YamlProcess
   - azure-devops-extension-api.IBuildPageData
   - azure-devops-extension-api.IBuildPageDataService
@@ -629,6 +664,8 @@ interfaces:
   - azure-devops-extension-api.WebApiTagDefinition
   - azure-devops-extension-api.WebApiTeam
   - azure-devops-extension-api.WebApiTeamRef
+  - azure-devops-extension-api.CopyDashboardOptions
+  - azure-devops-extension-api.CopyDashboardResponse
   - azure-devops-extension-api.Dashboard
   - azure-devops-extension-api.DashboardGroup
   - azure-devops-extension-api.DashboardGroupEntry
@@ -682,6 +719,7 @@ interfaces:
   - azure-devops-extension-api.ContributedFeatureState
   - azure-devops-extension-api.ContributedFeatureStateQuery
   - azure-devops-extension-api.ContributedFeatureValueRule
+  - azure-devops-extension-api.ContainerItemBlobReference
   - azure-devops-extension-api.FileContainer
   - azure-devops-extension-api.FileContainerItem
   - azure-devops-extension-api.InputDescriptor
@@ -701,6 +739,7 @@ interfaces:
   - azure-devops-extension-api.CategoryLanguageTitle
   - azure-devops-extension-api.Concern
   - azure-devops-extension-api.CustomerLastContact
+  - azure-devops-extension-api.CustomerSupportRequest
   - azure-devops-extension-api.EventCounts
   - azure-devops-extension-api.ExtensionBadge
   - azure-devops-extension-api.ExtensionCategory
@@ -775,6 +814,8 @@ interfaces:
   - azure-devops-extension-api.IndentationRule
   - azure-devops-extension-api.LanguageConfiguration
   - azure-devops-extension-api.OnEnterRule
+  - azure-devops-extension-api.AdvSecEnablementStatus
+  - azure-devops-extension-api.AdvSecEnablementUpdate
   - azure-devops-extension-api.AssociatedWorkItem
   - azure-devops-extension-api.AsyncGitOperationNotification
   - azure-devops-extension-api.AsyncRefOperationCommitLevelEventNotification
@@ -784,6 +825,8 @@ interfaces:
   - azure-devops-extension-api.AsyncRefOperationProgressNotification
   - azure-devops-extension-api.AsyncRefOperationTimeoutNotification
   - azure-devops-extension-api.AutoCompleteUpdatedEvent
+  - azure-devops-extension-api.BillableCommitter
+  - azure-devops-extension-api.BillableCommitterDetail
   - azure-devops-extension-api.BranchUpdatedEvent
   - azure-devops-extension-api.ChangeCountDictionary
   - azure-devops-extension-api.ChangeList
@@ -961,6 +1004,7 @@ interfaces:
   - azure-devops-extension-api.UpdateRefsRequest
   - azure-devops-extension-api.VersionControlProjectInfo
   - azure-devops-extension-api.IVersionControlRepositoryService
+  - azure-devops-extension-api.AadGraphMember
   - azure-devops-extension-api.GraphCachePolicies
   - azure-devops-extension-api.GraphDescriptorResult
   - azure-devops-extension-api.GraphFederatedProviderData
@@ -977,6 +1021,11 @@ interfaces:
   - azure-devops-extension-api.GraphProviderInfo
   - azure-devops-extension-api.GraphScope
   - azure-devops-extension-api.GraphScopeCreationContext
+  - azure-devops-extension-api.GraphServicePrincipal
+  - azure-devops-extension-api.GraphServicePrincipalCreationContext
+  - azure-devops-extension-api.GraphServicePrincipalOriginIdCreationContext
+  - azure-devops-extension-api.GraphServicePrincipalOriginIdUpdateContext
+  - azure-devops-extension-api.GraphServicePrincipalUpdateContext
   - azure-devops-extension-api.GraphStorageKeyResult
   - azure-devops-extension-api.GraphSubject
   - azure-devops-extension-api.GraphSubjectBase
@@ -990,10 +1039,18 @@ interfaces:
   - azure-devops-extension-api.GraphUserOriginIdCreationContext
   - azure-devops-extension-api.GraphUserOriginIdUpdateContext
   - azure-devops-extension-api.GraphUserPrincipalNameCreationContext
+  - azure-devops-extension-api.GraphUserPrincipalNameUpdateContext
   - azure-devops-extension-api.GraphUserUpdateContext
+  - azure-devops-extension-api.IdentityMapping
+  - azure-devops-extension-api.IdentityMappings
+  - azure-devops-extension-api.MappingResult
   - azure-devops-extension-api.PagedGraphGroups
+  - azure-devops-extension-api.PagedGraphMembers
+  - azure-devops-extension-api.PagedGraphServicePrincipals
   - azure-devops-extension-api.PagedGraphUsers
   - azure-devops-extension-api.RequestAccessPayLoad
+  - azure-devops-extension-api.ResolveDisconnectedUsersResponse
+  - azure-devops-extension-api.UserPrincipalName
   - azure-devops-extension-api.ChangedIdentities
   - azure-devops-extension-api.ChangedIdentitiesContext
   - azure-devops-extension-api.CreateScopeInfo
@@ -1115,6 +1172,33 @@ interfaces:
   - azure-devops-extension-api.ValueDefinition
   - azure-devops-extension-api.OperationReference
   - azure-devops-extension-api.OperationResultReference
+  - azure-devops-extension-api.Artifact
+  - azure-devops-extension-api.BuildResourceParameters
+  - azure-devops-extension-api.Container
+  - azure-devops-extension-api.ContainerResource
+  - azure-devops-extension-api.ContainerResourceParameters
+  - azure-devops-extension-api.CreatePipelineConfigurationParameters
+  - azure-devops-extension-api.CreatePipelineParameters
+  - azure-devops-extension-api.Log
+  - azure-devops-extension-api.LogCollection
+  - azure-devops-extension-api.PackageResourceParameters
+  - azure-devops-extension-api.Pipeline
+  - azure-devops-extension-api.PipelineBase
+  - azure-devops-extension-api.PipelineConfiguration
+  - azure-devops-extension-api.PipelineReference
+  - azure-devops-extension-api.PipelineResource
+  - azure-devops-extension-api.PipelineResourceParameters
+  - azure-devops-extension-api.PreviewRun
+  - azure-devops-extension-api.Repository
+  - azure-devops-extension-api.RepositoryResource
+  - azure-devops-extension-api.RepositoryResourceParameters
+  - azure-devops-extension-api.Run
+  - azure-devops-extension-api.RunPipelineParameters
+  - azure-devops-extension-api.RunReference
+  - azure-devops-extension-api.RunResources
+  - azure-devops-extension-api.RunResourcesParameters
+  - azure-devops-extension-api.SignalRConnection
+  - azure-devops-extension-api.Variable
   - azure-devops-extension-api.PolicyConfiguration
   - azure-devops-extension-api.PolicyConfigurationRef
   - azure-devops-extension-api.PolicyEvaluationRecord
@@ -1144,7 +1228,6 @@ interfaces:
   - azure-devops-extension-api.AgentBasedDeployPhase
   - azure-devops-extension-api.AgentDeploymentInput
   - azure-devops-extension-api.ApprovalOptions
-  - azure-devops-extension-api.Artifact
   - azure-devops-extension-api.ArtifactContributionDefinition
   - azure-devops-extension-api.ArtifactDownloadInputBase
   - azure-devops-extension-api.ArtifactInstanceData
@@ -1182,6 +1265,7 @@ interfaces:
   - azure-devops-extension-api.DeploymentAttempt
   - azure-devops-extension-api.DeploymentAuthorizationInfo
   - azure-devops-extension-api.DeploymentCompletedEvent
+  - azure-devops-extension-api.DeploymentEvent
   - azure-devops-extension-api.DeploymentInput
   - azure-devops-extension-api.DeploymentJob
   - azure-devops-extension-api.DeploymentManualInterventionPendingEvent
@@ -1210,9 +1294,13 @@ interfaces:
   - azure-devops-extension-api.Metric
   - azure-devops-extension-api.MultiConfigInput
   - azure-devops-extension-api.MultiMachineInput
+  - azure-devops-extension-api.OrgPipelineReleaseSettings
+  - azure-devops-extension-api.OrgPipelineReleaseSettingsUpdateParameters
   - azure-devops-extension-api.PackageTrigger
   - azure-devops-extension-api.ParallelExecutionInputBase
   - azure-devops-extension-api.PipelineProcess
+  - azure-devops-extension-api.ProjectPipelineReleaseSettings
+  - azure-devops-extension-api.ProjectPipelineReleaseSettingsUpdateParameters
   - azure-devops-extension-api.ProjectReference
   - azure-devops-extension-api.PropertySelector
   - azure-devops-extension-api.PullRequestConfiguration
@@ -1249,6 +1337,7 @@ interfaces:
   - azure-devops-extension-api.ReleaseEnvironmentShallowReference
   - azure-devops-extension-api.ReleaseEnvironmentStatusUpdatedEvent
   - azure-devops-extension-api.ReleaseEnvironmentUpdateMetadata
+  - azure-devops-extension-api.ReleaseEvent
   - azure-devops-extension-api.ReleaseGates
   - azure-devops-extension-api.ReleaseGatesPhase
   - azure-devops-extension-api.ReleaseManagementInputValue
@@ -1293,6 +1382,7 @@ interfaces:
   - azure-devops-extension-api.AadOauthTokenResult
   - azure-devops-extension-api.AuthConfiguration
   - azure-devops-extension-api.AuthenticationSchemeReference
+  - azure-devops-extension-api.AzureAppService
   - azure-devops-extension-api.AzureKeyVaultPermission
   - azure-devops-extension-api.AzureMLWorkspace
   - azure-devops-extension-api.AzureManagementGroup
@@ -1352,7 +1442,6 @@ interfaces:
   - azure-devops-extension-api.VersionedResource
   - azure-devops-extension-api.AgentChangeEvent
   - azure-devops-extension-api.AgentJobRequestMessage
-  - azure-devops-extension-api.AgentMigrationMessage
   - azure-devops-extension-api.AgentPoolEvent
   - azure-devops-extension-api.AgentQueueEvent
   - azure-devops-extension-api.AgentQueuesEvent
@@ -1361,6 +1450,7 @@ interfaces:
   - azure-devops-extension-api.DemandEquals
   - azure-devops-extension-api.DemandExists
   - azure-devops-extension-api.DemandMinimumVersion
+  - azure-devops-extension-api.DemandSource
   - azure-devops-extension-api.DeploymentGatesChangeEvent
   - azure-devops-extension-api.DeploymentGroup
   - azure-devops-extension-api.DeploymentGroupCreateParameter
@@ -1376,12 +1466,20 @@ interfaces:
   - azure-devops-extension-api.DeploymentPoolSummary
   - azure-devops-extension-api.DeploymentTargetUpdateParameter
   - azure-devops-extension-api.DiagnosticLogMetadata
+  - azure-devops-extension-api.ElasticAgentPoolResizedEvent
+  - azure-devops-extension-api.ElasticNode
+  - azure-devops-extension-api.ElasticNodeSettings
+  - azure-devops-extension-api.ElasticPool
+  - azure-devops-extension-api.ElasticPoolCreationResult
+  - azure-devops-extension-api.ElasticPoolLog
+  - azure-devops-extension-api.ElasticPoolSettings
   - azure-devops-extension-api.EnvironmentCreateParameter
   - azure-devops-extension-api.EnvironmentDeploymentExecutionRecord
   - azure-devops-extension-api.EnvironmentInstance
   - azure-devops-extension-api.EnvironmentLinkedResourceReference
   - azure-devops-extension-api.EnvironmentReference
   - azure-devops-extension-api.EnvironmentResource
+  - azure-devops-extension-api.EnvironmentResourceDeploymentExecutionRecord
   - azure-devops-extension-api.EnvironmentResourceReference
   - azure-devops-extension-api.EnvironmentUpdateParameter
   - azure-devops-extension-api.EventsConfig
@@ -1391,16 +1489,23 @@ interfaces:
   - azure-devops-extension-api.InputValidationRequest
   - azure-devops-extension-api.JobAssignedEvent
   - azure-devops-extension-api.JobCancelMessage
+  - azure-devops-extension-api.JobCanceledEvent
   - azure-devops-extension-api.JobCompletedEvent
   - azure-devops-extension-api.JobEnvironment
   - azure-devops-extension-api.JobEvent
   - azure-devops-extension-api.JobEventConfig
   - azure-devops-extension-api.JobEventsConfig
+  - azure-devops-extension-api.JobMetadataEvent
+  - azure-devops-extension-api.JobMetadataMessage
   - azure-devops-extension-api.JobOption
   - azure-devops-extension-api.JobRequestMessage
   - azure-devops-extension-api.JobStartedEvent
   - azure-devops-extension-api.KubernetesResource
   - azure-devops-extension-api.KubernetesResourceCreateParameters
+  - >-
+    azure-devops-extension-api.KubernetesResourceCreateParametersExistingEndpoint
+  - azure-devops-extension-api.KubernetesResourceCreateParametersNewEndpoint
+  - azure-devops-extension-api.KubernetesResourcePatchParameters
   - azure-devops-extension-api.MarketplacePurchasedLicense
   - azure-devops-extension-api.MaskHint
   - azure-devops-extension-api.MetricsColumnMetaData
@@ -1414,6 +1519,7 @@ interfaces:
   - azure-devops-extension-api.ResourceFilters
   - azure-devops-extension-api.ResourceItem
   - azure-devops-extension-api.ResourceLimit
+  - azure-devops-extension-api.ResourceLockRequest
   - azure-devops-extension-api.ResourceUsage
   - azure-devops-extension-api.ResourcesHubData
   - azure-devops-extension-api.SecureFile
@@ -1426,7 +1532,7 @@ interfaces:
   - azure-devops-extension-api.TaskAgentCloud
   - azure-devops-extension-api.TaskAgentCloudRequest
   - azure-devops-extension-api.TaskAgentCloudType
-  - azure-devops-extension-api.TaskAgentDelaySource
+  - azure-devops-extension-api.TaskAgentDowngrade
   - azure-devops-extension-api.TaskAgentJob
   - azure-devops-extension-api.TaskAgentJobRequest
   - azure-devops-extension-api.TaskAgentJobStep
@@ -1453,6 +1559,7 @@ interfaces:
   - azure-devops-extension-api.TaskAgentUpdateReason
   - azure-devops-extension-api.TaskAssignedEvent
   - azure-devops-extension-api.TaskAttachment
+  - azure-devops-extension-api.TaskCommandRestrictions
   - azure-devops-extension-api.TaskCompletedEvent
   - azure-devops-extension-api.TaskDefinition
   - azure-devops-extension-api.TaskDefinitionEndpoint
@@ -1468,6 +1575,7 @@ interfaces:
   - azure-devops-extension-api.TaskGroupUpdateParameter
   - azure-devops-extension-api.TaskGroupUpdatePropertiesBase
   - azure-devops-extension-api.TaskHubLicenseDetails
+  - azure-devops-extension-api.TaskHubOidcToken
   - azure-devops-extension-api.TaskInputDefinition
   - azure-devops-extension-api.TaskInstance
   - azure-devops-extension-api.TaskLog
@@ -1483,8 +1591,10 @@ interfaces:
   - azure-devops-extension-api.TaskOrchestrationQueuedPlanGroup
   - azure-devops-extension-api.TaskOutputVariable
   - azure-devops-extension-api.TaskPackageMetadata
+  - azure-devops-extension-api.TaskRestrictions
   - azure-devops-extension-api.TaskSourceDefinition
   - azure-devops-extension-api.TaskStartedEvent
+  - azure-devops-extension-api.TaskVariableRestrictions
   - azure-devops-extension-api.TaskVersion
   - azure-devops-extension-api.TimelineRecordFeedLinesWrapper
   - azure-devops-extension-api.ValidationItem
@@ -1511,6 +1621,7 @@ interfaces:
   - azure-devops-extension-api.CloneOperationInformation
   - azure-devops-extension-api.CloneOptions
   - azure-devops-extension-api.CloneStatistics
+  - azure-devops-extension-api.CloneTestCaseOptions
   - azure-devops-extension-api.CodeCoverageData
   - azure-devops-extension-api.CodeCoverageStatistics
   - azure-devops-extension-api.CodeCoverageSummary
@@ -1555,8 +1666,8 @@ interfaces:
   - azure-devops-extension-api.ModuleCoverage
   - azure-devops-extension-api.ModuleCoverage2
   - azure-devops-extension-api.NameValuePair
+  - azure-devops-extension-api.NewTestResultLoggingSettings
   - azure-devops-extension-api.PhaseReference
-  - azure-devops-extension-api.PipelineReference
   - azure-devops-extension-api.PipelineTestMetrics
   - azure-devops-extension-api.PlanUpdateModel
   - azure-devops-extension-api.PointAssignment
@@ -1639,6 +1750,8 @@ interfaces:
   - azure-devops-extension-api.TestLog
   - azure-devops-extension-api.TestLogReference
   - azure-devops-extension-api.TestLogStatus
+  - azure-devops-extension-api.TestLogStoreAttachment
+  - azure-devops-extension-api.TestLogStoreAttachmentReference
   - azure-devops-extension-api.TestLogStoreEndpointDetails
   - azure-devops-extension-api.TestMessageLog2
   - azure-devops-extension-api.TestMessageLogDetails
@@ -1723,6 +1836,8 @@ interfaces:
   - azure-devops-extension-api.WorkItemReference
   - azure-devops-extension-api.WorkItemToTestLinks
   - azure-devops-extension-api.CloneOperationCommonResponse
+  - azure-devops-extension-api.CloneTestCaseOperationInformation
+  - azure-devops-extension-api.CloneTestCaseParams
   - azure-devops-extension-api.CloneTestPlanOperationInformation
   - azure-devops-extension-api.CloneTestPlanParams
   - azure-devops-extension-api.CloneTestSuiteOperationInformation
@@ -1730,9 +1845,12 @@ interfaces:
   - azure-devops-extension-api.Configuration
   - azure-devops-extension-api.DestinationTestPlanCloneParams
   - azure-devops-extension-api.DestinationTestSuiteInfo
+  - azure-devops-extension-api.LibraryWorkItemsData
+  - azure-devops-extension-api.LibraryWorkItemsDataProviderRequest
   - azure-devops-extension-api.Results
   - azure-devops-extension-api.SourceTestPlanInfo
   - azure-devops-extension-api.SourceTestSuiteInfo
+  - azure-devops-extension-api.SourceTestSuiteResponse
   - azure-devops-extension-api.SourceTestplanResponse
   - azure-devops-extension-api.SuiteEntryUpdateParams
   - azure-devops-extension-api.SuiteTestCaseCreateUpdateParameters
@@ -1742,12 +1860,13 @@ interfaces:
   - azure-devops-extension-api.TestCaseResultsData
   - azure-devops-extension-api.TestConfigurationCreateUpdateParameters
   - azure-devops-extension-api.TestConfigurationReference
+  - azure-devops-extension-api.TestEntityCount
   - azure-devops-extension-api.TestPlanCreateParams
   - azure-devops-extension-api.TestPlanDetailedReference
   - azure-devops-extension-api.TestPlanReference
   - azure-devops-extension-api.TestPlanUpdateParams
   - azure-devops-extension-api.TestPlansHubRefreshData
-  - azure-devops-extension-api.TestPointCount
+  - azure-devops-extension-api.TestPlansLibraryWorkItemFilter
   - azure-devops-extension-api.TestPointDetailedReference
   - azure-devops-extension-api.TestPointResults
   - azure-devops-extension-api.TestPointUpdateParams
@@ -1791,11 +1910,14 @@ interfaces:
   - azure-devops-extension-api.WikiCreateParametersV2
   - azure-devops-extension-api.WikiPage
   - azure-devops-extension-api.WikiPageCreateOrUpdateParameters
+  - azure-devops-extension-api.WikiPageDetail
   - azure-devops-extension-api.WikiPageMove
   - azure-devops-extension-api.WikiPageMoveParameters
   - azure-devops-extension-api.WikiPageMoveResponse
   - azure-devops-extension-api.WikiPageResponse
+  - azure-devops-extension-api.WikiPageStat
   - azure-devops-extension-api.WikiPageViewStats
+  - azure-devops-extension-api.WikiPagesBatchRequest
   - azure-devops-extension-api.WikiUpdateParameters
   - azure-devops-extension-api.WikiUpdatedNotificationMessage
   - azure-devops-extension-api.WikiV2
@@ -1829,6 +1951,7 @@ interfaces:
   - azure-devops-extension-api.FilterClause
   - azure-devops-extension-api.FilterGroup
   - azure-devops-extension-api.ITaskboardColumnMapping
+  - azure-devops-extension-api.IterationCapacity
   - azure-devops-extension-api.IterationWorkItems
   - azure-devops-extension-api.Marker
   - azure-devops-extension-api.Member
@@ -1846,6 +1969,8 @@ interfaces:
   - azure-devops-extension-api.TaskboardColumns
   - azure-devops-extension-api.TaskboardWorkItemColumn
   - azure-devops-extension-api.TeamBacklogMapping
+  - azure-devops-extension-api.TeamCapacity
+  - azure-devops-extension-api.TeamCapacityTotals
   - azure-devops-extension-api.TeamFieldValue
   - azure-devops-extension-api.TeamFieldValues
   - azure-devops-extension-api.TeamFieldValuesPatch
@@ -1884,8 +2009,11 @@ interfaces:
   - azure-devops-extension-api.ExternalEnvironment
   - azure-devops-extension-api.ExternalPipeline
   - azure-devops-extension-api.FieldDependentRule
+  - azure-devops-extension-api.FieldUpdate
   - azure-devops-extension-api.IdentityReference
   - azure-devops-extension-api.Link
+  - azure-devops-extension-api.ProcessIdModel
+  - azure-devops-extension-api.ProcessMigrationResultModel
   - azure-devops-extension-api.ProjectWorkItemStateColors
   - azure-devops-extension-api.ProvisioningResult
   - azure-devops-extension-api.QueryBatchGetRequest
@@ -1894,7 +2022,11 @@ interfaces:
   - azure-devops-extension-api.ReportingWorkItemLinksBatch
   - azure-devops-extension-api.ReportingWorkItemRevisionsBatch
   - azure-devops-extension-api.ReportingWorkItemRevisionsFilter
+  - azure-devops-extension-api.SendMailBody
   - azure-devops-extension-api.StreamedBatch
+  - azure-devops-extension-api.TemporaryQueryRequestModel
+  - azure-devops-extension-api.TemporaryQueryResponseModel
+  - azure-devops-extension-api.UpdateWorkItemField
   - azure-devops-extension-api.Wiql
   - azure-devops-extension-api.WorkArtifactLink
   - azure-devops-extension-api.WorkItemBatchGetRequest
@@ -1903,10 +2035,14 @@ interfaces:
   - azure-devops-extension-api.WorkItemCommentVersionRef
   - azure-devops-extension-api.WorkItemComments
   - azure-devops-extension-api.WorkItemDelete
+  - azure-devops-extension-api.WorkItemDeleteBatch
+  - azure-devops-extension-api.WorkItemDeleteBatchRequest
   - azure-devops-extension-api.WorkItemDeleteReference
   - azure-devops-extension-api.WorkItemDeleteShallowReference
   - azure-devops-extension-api.WorkItemDeleteUpdate
   - azure-devops-extension-api.WorkItemField
+  - azure-devops-extension-api.WorkItemField2
+  - azure-devops-extension-api.WorkItemFieldAllowedValues
   - azure-devops-extension-api.WorkItemFieldOperation
   - azure-devops-extension-api.WorkItemFieldReference
   - azure-devops-extension-api.WorkItemFieldUpdate
@@ -1992,7 +2128,6 @@ interfaces:
   - azure-devops-extension-api.BehaviorCreateModel
   - azure-devops-extension-api.BehaviorModel
   - azure-devops-extension-api.BehaviorReplaceModel
-  - azure-devops-extension-api.FieldUpdate
   - azure-devops-extension-api.PickListItemModel
   - azure-devops-extension-api.PickListMetadataModel
   - azure-devops-extension-api.PickListModel
@@ -2019,6 +2154,7 @@ classes:
   - azure-devops-extension-api.LocationsRestClient
   - azure-devops-extension-api.NotificationRestClient
   - azure-devops-extension-api.OperationsRestClient
+  - azure-devops-extension-api.PipelinesRestClient
   - azure-devops-extension-api.PolicyRestClient
   - azure-devops-extension-api.ProfileRestClient
   - azure-devops-extension-api.ProjectAnalysisRestClient
@@ -2044,12 +2180,11 @@ typeAliases:
   - azure-devops-extension-api.ResourceChangedCallback
   - azure-devops-extension-api.VersionControlType
 functions:
-  - name: 'getClient<T>(RestClientFactory<T>, IVssRestClientOptions)'
+  - name: getClient<T>(RestClientFactory<T>, IVssRestClientOptions)
     uid: azure-devops-extension-api.getClient
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2065,7 +2200,7 @@ functions:
       return:
         description: ''
         type: T
-  - name: 'issueRequest(string, RequestInit, IVssRequestOptions)'
+  - name: issueRequest(string, RequestInit, IVssRequestOptions)
     uid: azure-devops-extension-api.issueRequest
     package: azure-devops-extension-api
     summary: >-
@@ -2074,7 +2209,6 @@ functions:
 
       and triggers events that can be listened to by other modules.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2089,7 +2223,7 @@ functions:
           description: fetch settings/options for the request
         - id: vssRequestOptions
           type: <xref uid="azure-devops-extension-api.IVssRequestOptions" />
-          description: |
+          description: |-
             VSS specific request options
 
             Triggered Events:
@@ -2101,7 +2235,7 @@ functions:
   - name: deserializeVssJsonObject<T>(string)
     uid: azure-devops-extension-api.deserializeVssJsonObject
     package: azure-devops-extension-api
-    summary: >
+    summary: >-
       Handle the raw text of a JSON response which may contain MSJSON style
       dates and
 
@@ -2110,28 +2244,27 @@ functions:
 
       strings.
 
+
       MSJSON style dates are in the form:
 
-          "lastModified": "\/Date(1496158224000)\/"
+          "lastModified": "/Date(1496158224000)/"
 
       This format unnecessarily (but intentionally) escapes the "/" character.
       So the parsed
 
       JSON will have no trace of the escape character (\).
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function deserializeVssJsonObject<T>(text: string): T | null'
       parameters:
         - id: text
           type: string
-          description: |
-            The raw JSON text
+          description: The raw JSON text
       return:
         description: ''
         type: T | null
-  - name: 'combineUrlPaths(string[])'
+  - name: combineUrlPaths(string[])
     uid: azure-devops-extension-api.combineUrlPaths
     package: azure-devops-extension-api
     summary: >-
@@ -2140,19 +2273,17 @@ functions:
 
       with a slash to ensure that the resulting URL does not have double-slashes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function combineUrlPaths(paths: string[]): string'
       parameters:
         - id: paths
-          type: 'string[]'
-          description: |
-            Path segments to concatenate
+          type: string[]
+          description: Path segments to concatenate
       return:
         description: ''
         type: string
-  - name: 'getBestRouteMatch(IParsedRoute[], [key: string]: string)'
+  - name: 'getBestRouteMatch(IParsedRoute[], {[name: string]: string})'
     uid: azure-devops-extension-api.getBestRouteMatch
     package: azure-devops-extension-api
     summary: >-
@@ -2162,20 +2293,18 @@ functions:
       (of the given routeValues dictionary). In the event of a tie (same number
       of replacements) the route that came first wins.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBestRouteMatch(routeCollection: IParsedRoute[], routeValues:
-        [key: string]: string): IRouteMatchResult | undefined
+        {[name: string]: string}): IRouteMatchResult | undefined
       parameters:
         - id: routeCollection
-          type: '<xref uid="azure-devops-extension-api.IParsedRoute" />[]'
+          type: <xref uid="azure-devops-extension-api.IParsedRoute" />[]
           description: Array of parsed routes
         - id: routeValues
-          type: '[key: string]\: string'
-          description: |
-            Replacement values
+          type: '{[name: string]: string}'
+          description: Replacement values
       return:
         description: ''
         type: >-
@@ -2188,40 +2317,39 @@ functions:
       Parse a route template into a structure that can be used to quickly do
       route replacements
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function parseRouteTemplate(routeTemplate: string): IParsedRoute'
       parameters:
         - id: routeTemplate
           type: string
-          description: |
-            MVC route template string (like "/foo/{id}/{*params}")
+          description: MVC route template string (like "/foo/{id}/{*params}")
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.IParsedRoute" />
-  - name: 'replaceParsedRouteValues(IParsedRoute, [key: string]: function, boolean)'
+  - name: >-
+      replaceParsedRouteValues(IParsedRoute, {[name: string]: function},
+      boolean)
     uid: azure-devops-extension-api.replaceParsedRouteValues
     package: azure-devops-extension-api
     summary: Replace route values for a specific parsed route
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function replaceParsedRouteValues(parsedRoute: IParsedRoute,
-        routeValues: [key: string]: function, continueOnUnmatchedSegements?:
+        routeValues: {[name: string]: function}, continueOnUnmatchedSegements?:
         boolean): IRouteMatchResult | undefined
       parameters:
         - id: parsedRoute
           type: <xref uid="azure-devops-extension-api.IParsedRoute" />
           description: The route to evaluate
         - id: routeValues
-          type: '[key: string]\: function'
+          type: '{[name: string]: function}'
           description: Dictionary of route replacement parameters
         - id: continueOnUnmatchedSegements
           type: boolean
-          description: >
+          description: >-
             If true, continue with replacements even after a miss. By default
             (false), stop replacements once a parameter is not present.
       return:
@@ -2229,31 +2357,29 @@ functions:
         type: >-
           <xref uid="azure-devops-extension-api.IRouteMatchResult" /> |
           undefined
-  - name: 'replaceRouteValues(string, [key: string]: function)'
+  - name: 'replaceRouteValues(string, {[name: string]: function})'
     uid: azure-devops-extension-api.replaceRouteValues
     package: azure-devops-extension-api
     summary: >-
       Take an MVC route template (like "/foo/{id}/{*params}") and replace the
       templated parts with values from the given dictionary
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function replaceRouteValues(routeTemplate: string, routeValues: [key:
-        string]: function): string
+        function replaceRouteValues(routeTemplate: string, routeValues: {[name:
+        string]: function}): string
       parameters:
         - id: routeTemplate
           type: string
-          description: 'MVC route template (like "/foo/{id}/{*params}")'
+          description: MVC route template (like "/foo/{id}/{*params}")
         - id: routeValues
-          type: '[key: string]\: function'
-          description: |
-            Route value replacements
+          type: '{[name: string]: function}'
+          description: Route value replacements
       return:
         description: ''
         type: string
-  - name: 'routeUrl(IParsedRoute[], [key: string]: string)'
+  - name: 'routeUrl(IParsedRoute[], {[name: string]: string})'
     uid: azure-devops-extension-api.routeUrl
     package: azure-devops-extension-api
     summary: >-
@@ -2266,20 +2392,18 @@ functions:
       In the event of a tie (same number of replacements) the route that came
       first wins.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function routeUrl(routeCollection: IParsedRoute[], routeValues: [key:
-        string]: string): string
+        function routeUrl(routeCollection: IParsedRoute[], routeValues: {[name:
+        string]: string}): string
       parameters:
         - id: routeCollection
-          type: '<xref uid="azure-devops-extension-api.IParsedRoute" />[]'
+          type: <xref uid="azure-devops-extension-api.IParsedRoute" />[]
           description: Array of parsed routes
         - id: routeValues
-          type: '[key: string]\: string'
-          description: |
-            Replacement values
+          type: '{[name: string]: string}'
+          description: Replacement values
       return:
         description: ''
         type: string

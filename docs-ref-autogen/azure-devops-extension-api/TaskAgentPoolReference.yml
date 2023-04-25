@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TaskAgentPoolReference
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
@@ -30,7 +28,6 @@ properties:
       service.
     fullName: isHosted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isHosted: boolean'
@@ -43,7 +40,6 @@ properties:
     summary: Determines whether the pool is legacy.
     fullName: isLegacy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isLegacy: boolean'
@@ -56,20 +52,30 @@ properties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
       return:
         description: ''
         type: string
+  - name: options
+    uid: azure-devops-extension-api.TaskAgentPoolReference.options
+    package: azure-devops-extension-api
+    summary: Additional pool settings and details
+    fullName: options
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'options: TaskAgentPoolOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentPoolOptions" />
   - name: poolType
     uid: azure-devops-extension-api.TaskAgentPoolReference.poolType
     package: azure-devops-extension-api
     summary: Gets or sets the type of the pool
     fullName: poolType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'poolType: TaskAgentPoolType'
@@ -82,7 +88,6 @@ properties:
     summary: ''
     fullName: scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'scope: string'
@@ -95,7 +100,6 @@ properties:
     summary: Gets the current size of the pool.
     fullName: size
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'size: number'

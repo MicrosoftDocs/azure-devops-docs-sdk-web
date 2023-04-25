@@ -1,0 +1,277 @@
+### YamlMime:TSType
+name: PipelinesRestClient
+uid: azure-devops-extension-api.PipelinesRestClient
+package: azure-devops-extension-api
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
+fullName: PipelinesRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: PipelinesRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.PipelinesRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new PipelinesRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+methods:
+  - name: createPipeline(CreatePipelineParameters, string)
+    uid: azure-devops-extension-api.PipelinesRestClient.createPipeline
+    package: azure-devops-extension-api
+    summary: Create a pipeline.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createPipeline(inputParameters: CreatePipelineParameters,
+        project: string): Promise<Pipeline>
+      parameters:
+        - id: inputParameters
+          type: <xref uid="azure-devops-extension-api.CreatePipelineParameters" />
+          description: Input parameters.
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Pipeline" />&gt;
+  - name: getArtifact(string, number, number, string, GetArtifactExpandOptions)
+    uid: azure-devops-extension-api.PipelinesRestClient.getArtifact
+    package: azure-devops-extension-api
+    summary: Get a specific artifact from a pipeline run
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getArtifact(project: string, pipelineId: number, runId: number,
+        artifactName: string, expand?: GetArtifactExpandOptions):
+        Promise<Artifact>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: pipelineId
+          type: number
+          description: ID of the pipeline.
+        - id: runId
+          type: number
+          description: ID of the run of that pipeline.
+        - id: artifactName
+          type: string
+          description: Name of the artifact.
+        - id: expand
+          type: <xref uid="azure-devops-extension-api.GetArtifactExpandOptions" />
+          description: Expand options. Default is None.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Artifact" />&gt;
+  - name: getLog(string, number, number, number, GetLogExpandOptions)
+    uid: azure-devops-extension-api.PipelinesRestClient.getLog
+    package: azure-devops-extension-api
+    summary: Get a specific log from a pipeline run
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getLog(project: string, pipelineId: number, runId: number,
+        logId: number, expand?: GetLogExpandOptions): Promise<Log>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: pipelineId
+          type: number
+          description: ID of the pipeline.
+        - id: runId
+          type: number
+          description: ID of the run of that pipeline.
+        - id: logId
+          type: number
+          description: ID of the log.
+        - id: expand
+          type: <xref uid="azure-devops-extension-api.GetLogExpandOptions" />
+          description: Expand options. Default is None.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Log" />&gt;
+  - name: getPipeline(string, number, number)
+    uid: azure-devops-extension-api.PipelinesRestClient.getPipeline
+    package: azure-devops-extension-api
+    summary: Gets a pipeline, optionally at the specified version
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPipeline(project: string, pipelineId: number,
+        pipelineVersion?: number): Promise<Pipeline>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: pipelineId
+          type: number
+          description: The pipeline ID
+        - id: pipelineVersion
+          type: number
+          description: The pipeline version
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Pipeline" />&gt;
+  - name: getRun(string, number, number)
+    uid: azure-devops-extension-api.PipelinesRestClient.getRun
+    package: azure-devops-extension-api
+    summary: Gets a run for a particular pipeline.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRun(project: string, pipelineId: number, runId: number):
+        Promise<Run>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: pipelineId
+          type: number
+          description: The pipeline id
+        - id: runId
+          type: number
+          description: The run id
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Run" />&gt;
+  - name: listLogs(string, number, number, GetLogExpandOptions)
+    uid: azure-devops-extension-api.PipelinesRestClient.listLogs
+    package: azure-devops-extension-api
+    summary: Get a list of logs from a pipeline run.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listLogs(project: string, pipelineId: number, runId: number,
+        expand?: GetLogExpandOptions): Promise<LogCollection>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: pipelineId
+          type: number
+          description: ID of the pipeline.
+        - id: runId
+          type: number
+          description: ID of the run of that pipeline.
+        - id: expand
+          type: <xref uid="azure-devops-extension-api.GetLogExpandOptions" />
+          description: Expand options. Default is None.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.LogCollection" />&gt;
+  - name: listPipelines(string, string, number, string)
+    uid: azure-devops-extension-api.PipelinesRestClient.listPipelines
+    package: azure-devops-extension-api
+    summary: Get a list of pipelines.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listPipelines(project: string, orderBy?: string, top?: number,
+        continuationToken?: string): Promise<Pipeline[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: orderBy
+          type: string
+          description: A sort expression. Defaults to "name asc"
+        - id: top
+          type: number
+          description: The maximum number of pipelines to return
+        - id: continuationToken
+          type: string
+          description: >-
+            A continuation token from a previous request, to retrieve the next
+            page of results
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Pipeline" />[]&gt;
+  - name: listRuns(string, number)
+    uid: azure-devops-extension-api.PipelinesRestClient.listRuns
+    package: azure-devops-extension-api
+    summary: Gets top 10000 runs for a particular pipeline.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function listRuns(project: string, pipelineId: number): Promise<Run[]>'
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: pipelineId
+          type: number
+          description: The pipeline id
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Run" />[]&gt;
+  - name: preview(RunPipelineParameters, string, number, number)
+    uid: azure-devops-extension-api.PipelinesRestClient.preview
+    package: azure-devops-extension-api
+    summary: >-
+      Queues a dry run of the pipeline and returns an object containing the
+      final yaml.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function preview(runParameters: RunPipelineParameters, project: string,
+        pipelineId: number, pipelineVersion?: number): Promise<PreviewRun>
+      parameters:
+        - id: runParameters
+          type: <xref uid="azure-devops-extension-api.RunPipelineParameters" />
+          description: Optional additional parameters for this run.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: pipelineId
+          type: number
+          description: The pipeline ID.
+        - id: pipelineVersion
+          type: number
+          description: The pipeline version.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.PreviewRun" />&gt;
+  - name: runPipeline(RunPipelineParameters, string, number, number)
+    uid: azure-devops-extension-api.PipelinesRestClient.runPipeline
+    package: azure-devops-extension-api
+    summary: Runs a pipeline.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function runPipeline(runParameters: RunPipelineParameters, project:
+        string, pipelineId: number, pipelineVersion?: number): Promise<Run>
+      parameters:
+        - id: runParameters
+          type: <xref uid="azure-devops-extension-api.RunPipelineParameters" />
+          description: Optional additional parameters for this run.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: pipelineId
+          type: number
+          description: The pipeline ID.
+        - id: pipelineVersion
+          type: number
+          description: The pipeline version.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Run" />&gt;
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

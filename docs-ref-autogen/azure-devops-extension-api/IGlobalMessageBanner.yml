@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Banner Props specifying how it will be rendered by the service
 fullName: IGlobalMessageBanner
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: Buttons to display after the message
     fullName: buttons
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'buttons?: IContributedButton[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.IContributedButton" />[]'
+        type: <xref uid="azure-devops-extension-api.IContributedButton" />[]
   - name: customIcon
     uid: azure-devops-extension-api.IGlobalMessageBanner.customIcon
     package: azure-devops-extension-api
     summary: Custom icon name. Must be an icon in the Azure DevOps icon font.
     fullName: customIcon
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customIcon?: string'
@@ -43,7 +40,6 @@ properties:
       the close (X) icon.
     fullName: dismissable
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dismissable?: boolean'
@@ -58,7 +54,6 @@ properties:
       information and/or a hyperlink.
     fullName: helpInfo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'helpInfo?: IGlobalMessageHelpInfo'
@@ -71,7 +66,6 @@ properties:
     summary: banner level (controls the background and icon of the banner)
     fullName: level
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'level?: MessageBannerLevel'
@@ -84,7 +78,6 @@ properties:
     summary: Banner message. Ignored if messageFormat is also provided
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message?: string'
@@ -95,11 +88,10 @@ properties:
     uid: azure-devops-extension-api.IGlobalMessageBanner.messageFormat
     package: azure-devops-extension-api
     summary: >-
-      Banner message format string. Arguments (like \{0\}, \{1\} are filled in
-      with hyperlinks supplied in messageLinks)
+      Banner message format string. Arguments (like {0}, {1} are filled in with
+      hyperlinks supplied in messageLinks)
     fullName: messageFormat
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'messageFormat?: string'
@@ -112,10 +104,9 @@ properties:
     summary: Links to supply to the format arguments in `messageFormat`
     fullName: messageLinks
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'messageLinks?: IGlobalMessageLink[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.IGlobalMessageLink" />[]'
+        type: <xref uid="azure-devops-extension-api.IGlobalMessageLink" />[]

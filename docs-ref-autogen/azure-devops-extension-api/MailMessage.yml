@@ -5,17 +5,15 @@ package: azure-devops-extension-api
 summary: ''
 fullName: MailMessage
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: body
     uid: azure-devops-extension-api.MailMessage.body
     package: azure-devops-extension-api
-    summary: Body of mail.
+    summary: The mail body in HTML format.
     fullName: body
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'body: string'
@@ -25,10 +23,9 @@ properties:
   - name: cc
     uid: azure-devops-extension-api.MailMessage.cc
     package: azure-devops-extension-api
-    summary: Mail CC recipients.
+    summary: CC recipients.
     fullName: cc
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'cc: EmailRecipients'
@@ -38,10 +35,9 @@ properties:
   - name: inReplyTo
     uid: azure-devops-extension-api.MailMessage.inReplyTo
     package: azure-devops-extension-api
-    summary: Reply to.
+    summary: The in-reply-to header value
     fullName: inReplyTo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'inReplyTo: string'
@@ -51,75 +47,33 @@ properties:
   - name: messageId
     uid: azure-devops-extension-api.MailMessage.messageId
     package: azure-devops-extension-api
-    summary: Message ID of the mail.
+    summary: The Message Id value
     fullName: messageId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'messageId: string'
       return:
         description: ''
         type: string
-  - name: replyBy
-    uid: azure-devops-extension-api.MailMessage.replyBy
-    package: azure-devops-extension-api
-    summary: Data when should be replied to mail.
-    fullName: replyBy
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'replyBy: Date'
-      return:
-        description: ''
-        type: Date
   - name: replyTo
     uid: azure-devops-extension-api.MailMessage.replyTo
     package: azure-devops-extension-api
-    summary: Reply to Email recipients.
+    summary: Reply To recipients.
     fullName: replyTo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'replyTo: EmailRecipients'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.EmailRecipients" />
-  - name: sections
-    uid: azure-devops-extension-api.MailMessage.sections
-    package: azure-devops-extension-api
-    summary: List of mail section types.
-    fullName: sections
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'sections: MailSectionType[]'
-      return:
-        description: ''
-        type: '<xref uid="azure-devops-extension-api.MailSectionType" />[]'
-  - name: senderType
-    uid: azure-devops-extension-api.MailMessage.senderType
-    package: azure-devops-extension-api
-    summary: Mail sender type.
-    fullName: senderType
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'senderType: SenderType'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.SenderType" />
   - name: subject
     uid: azure-devops-extension-api.MailMessage.subject
     package: azure-devops-extension-api
-    summary: Subject of the mail.
+    summary: The mail subject.
     fullName: subject
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subject: string'
@@ -129,10 +83,9 @@ properties:
   - name: to
     uid: azure-devops-extension-api.MailMessage.to
     package: azure-devops-extension-api
-    summary: Mail To recipients.
+    summary: To recipients
     fullName: to
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'to: EmailRecipients'

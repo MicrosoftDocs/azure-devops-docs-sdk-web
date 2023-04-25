@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GitResolutionPathConflict
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: action
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'action: GitResolutionPathConflictAction'
@@ -24,30 +22,32 @@ properties:
         type: >-
           <xref uid="azure-devops-extension-api.GitResolutionPathConflictAction"
           />
-  - name: author
-    uid: azure-devops-extension-api.GitResolutionPathConflict.author
-    package: azure-devops-extension-api
-    summary: User who created the resolution.
-    fullName: author
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'author: IdentityRef'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
   - name: renamePath
     uid: azure-devops-extension-api.GitResolutionPathConflict.renamePath
     package: azure-devops-extension-api
     summary: ''
     fullName: renamePath
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'renamePath: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: author
+    uid: azure-devops-extension-api.GitResolutionPathConflict.author
+    package: azure-devops-extension-api
+    summary: User who created the resolution.
+    fullName: author
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'author: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitResolution.author](xref:azure-devops-extension-api.GitResolution.author)
 extends: <xref uid="azure-devops-extension-api.GitResolution" />

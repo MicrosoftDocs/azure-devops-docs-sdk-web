@@ -8,7 +8,6 @@ summary: >-
   comment and the subsequent replies).
 fullName: CommentThread
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -18,20 +17,18 @@ properties:
     summary: A list of the comments.
     fullName: comments
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'comments: Comment[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Comment" />[]'
+        type: <xref uid="azure-devops-extension-api.Comment" />[]
   - name: id
     uid: azure-devops-extension-api.CommentThread.id
     package: azure-devops-extension-api
     summary: The comment thread id.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
@@ -44,13 +41,12 @@ properties:
     summary: Set of identities related to this thread
     fullName: identities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'identities: [key: string]: IdentityRef'
+      content: 'identities: {[key: string]: WebApi.IdentityRef}'
       return:
         description: ''
-        type: '[key: string]\: <xref uid="azure-devops-extension-api.IdentityRef" />'
+        type: '{[key: string]: <xref uid="azure-devops-extension-api.IdentityRef" />}'
   - name: isDeleted
     uid: azure-devops-extension-api.CommentThread.isDeleted
     package: azure-devops-extension-api
@@ -59,7 +55,6 @@ properties:
       deleted.
     fullName: isDeleted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isDeleted: boolean'
@@ -72,7 +67,6 @@ properties:
     summary: The time this thread was last updated.
     fullName: lastUpdatedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastUpdatedDate: Date'
@@ -87,7 +81,6 @@ properties:
       key-value pairs.
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
@@ -100,7 +93,6 @@ properties:
     summary: The time this thread was published.
     fullName: publishedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'publishedDate: Date'
@@ -113,7 +105,6 @@ properties:
     summary: The status of the comment thread.
     fullName: status
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: CommentThreadStatus'
@@ -126,7 +117,6 @@ properties:
     summary: Specify thread context such as position in left/right file.
     fullName: threadContext
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'threadContext: CommentThreadContext'

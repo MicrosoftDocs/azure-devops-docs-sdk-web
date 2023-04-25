@@ -5,36 +5,51 @@ package: azure-devops-extension-api
 summary: ''
 fullName: FieldValuesQuery
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: inputValues
+    uid: azure-devops-extension-api.FieldValuesQuery.inputValues
+    package: azure-devops-extension-api
+    summary: >-
+      The input values to return on input, and the result from the consumer on
+      output.
+    fullName: inputValues
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'inputValues: FieldInputValues[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.FieldInputValues" />[]
+  - name: scope
+    uid: azure-devops-extension-api.FieldValuesQuery.scope
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: scope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scope: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
   - name: currentValues
     uid: azure-devops-extension-api.FieldValuesQuery.currentValues
     package: azure-devops-extension-api
     summary: ''
     fullName: currentValues
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'currentValues: [key: string]: string'
+      content: 'currentValues: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
-  - name: inputValues
-    uid: azure-devops-extension-api.FieldValuesQuery.inputValues
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: inputValues
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'inputValues: FieldInputValues[]'
-      return:
-        description: ''
-        type: '<xref uid="azure-devops-extension-api.FieldInputValues" />[]'
+        type: '{[key: string]: string}'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InputValuesQuery.currentValues](xref:azure-devops-extension-api.InputValuesQuery.currentValues)
   - name: resource
     uid: azure-devops-extension-api.FieldValuesQuery.resource
     package: azure-devops-extension-api
@@ -43,24 +58,13 @@ properties:
       current input values
     fullName: resource
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resource: any'
       return:
         description: ''
         type: any
-  - name: scope
-    uid: azure-devops-extension-api.FieldValuesQuery.scope
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: scope
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'scope: string'
-      return:
-        description: ''
-        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InputValuesQuery.resource](xref:azure-devops-extension-api.InputValuesQuery.resource)
 extends: <xref uid="azure-devops-extension-api.InputValuesQuery" />

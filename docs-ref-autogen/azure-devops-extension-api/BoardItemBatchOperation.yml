@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Data to perform an operation on a batch of board items.
 fullName: BoardItemBatchOperation
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       type of the operation.
     fullName: data
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'data: UpdateBoardItem'
@@ -30,25 +28,24 @@ properties:
     summary: The list of items with etags to perform the operation on.
     fullName: items
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'items: BoardItemIdAndEtag[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.BoardItemIdAndEtag" />[]'
+        type: <xref uid="azure-devops-extension-api.BoardItemIdAndEtag" />[]
   - name: operation
     uid: azure-devops-extension-api.BoardItemBatchOperation.operation
     package: azure-devops-extension-api
     summary: Operation to perform.
     fullName: operation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'operation: BoardItemBatchOperationTypeEnum'
+      content: 'operation: Reorder'
       return:
         description: ''
         type: >-
-          <xref uid="azure-devops-extension-api.BoardItemBatchOperationTypeEnum"
+          <xref
+          uid="azure-devops-extension-api.BoardItemBatchOperationTypeEnum.Reorder"
           />

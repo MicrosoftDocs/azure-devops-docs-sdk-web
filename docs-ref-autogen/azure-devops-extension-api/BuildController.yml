@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: BuildController
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The date the controller was created.
     fullName: createdDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdDate: Date'
@@ -28,7 +26,6 @@ properties:
     summary: The description of the controller.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -41,46 +38,18 @@ properties:
     summary: Indicates whether the controller is enabled.
     fullName: enabled
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'enabled: boolean'
       return:
         description: ''
         type: boolean
-  - name: id
-    uid: azure-devops-extension-api.BuildController.id
-    package: azure-devops-extension-api
-    summary: Id of the resource
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
-  - name: name
-    uid: azure-devops-extension-api.BuildController.name
-    package: azure-devops-extension-api
-    summary: 'Name of the linked resource (definition name, controller name, etc.)'
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
   - name: status
     uid: azure-devops-extension-api.BuildController.status
     package: azure-devops-extension-api
     summary: The status of the controller.
     fullName: status
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: ControllerStatus'
@@ -93,7 +62,6 @@ properties:
     summary: The date the controller was last updated.
     fullName: updatedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'updatedDate: Date'
@@ -106,24 +74,56 @@ properties:
     summary: The controller's URI.
     fullName: uri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'uri: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.BuildController.id
+    package: azure-devops-extension-api
+    summary: Id of the resource
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [XamlBuildControllerReference.id](xref:azure-devops-extension-api.XamlBuildControllerReference.id)
+  - name: name
+    uid: azure-devops-extension-api.BuildController.name
+    package: azure-devops-extension-api
+    summary: Name of the linked resource (definition name, controller name, etc.)
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [XamlBuildControllerReference.name](xref:azure-devops-extension-api.XamlBuildControllerReference.name)
   - name: url
     uid: azure-devops-extension-api.BuildController.url
     package: azure-devops-extension-api
     summary: Full http link to the resource
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [XamlBuildControllerReference.url](xref:azure-devops-extension-api.XamlBuildControllerReference.url)
 extends: <xref uid="azure-devops-extension-api.XamlBuildControllerReference" />

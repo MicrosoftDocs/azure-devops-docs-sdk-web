@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Request to sync data between two forks.
 fullName: GitForkSyncRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: detailedStatus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'detailedStatus: GitForkOperationStatusDetail'
@@ -28,7 +26,6 @@ properties:
     summary: Unique identifier for the operation.
     fullName: operationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'operationId: number'
@@ -41,7 +38,6 @@ properties:
     summary: Fully-qualified identifier for the source repository.
     fullName: source
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'source: GlobalGitRepositoryKey'
@@ -56,20 +52,18 @@ properties:
       create. If missing, all refs will be synchronized.
     fullName: sourceToTargetRefs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceToTargetRefs: SourceToTargetRef[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.SourceToTargetRef" />[]'
+        type: <xref uid="azure-devops-extension-api.SourceToTargetRef" />[]
   - name: status
     uid: azure-devops-extension-api.GitForkSyncRequest.status
     package: azure-devops-extension-api
     summary: ''
     fullName: status
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: GitAsyncOperationStatus'

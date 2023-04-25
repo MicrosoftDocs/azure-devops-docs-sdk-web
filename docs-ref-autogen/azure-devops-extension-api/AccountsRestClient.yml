@@ -2,10 +2,11 @@
 name: AccountsRestClient
 uid: azure-devops-extension-api.AccountsRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: AccountsRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new AccountsRestClient(options: IVssRestClientOptions)'
@@ -29,7 +29,6 @@ properties:
     summary: ''
     fullName: RESOURCE_AREA_ID
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
@@ -37,12 +36,11 @@ properties:
         description: ''
         type: string
 methods:
-  - name: 'createAccount(AccountCreateInfoInternal, boolean)'
+  - name: createAccount(AccountCreateInfoInternal, boolean)
     uid: azure-devops-extension-api.AccountsRestClient.createAccount
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -51,11 +49,10 @@ methods:
       parameters:
         - id: info
           type: <xref uid="azure-devops-extension-api.AccountCreateInfoInternal" />
-          description: '-'
+          description: ''
         - id: usePrecreated
           type: boolean
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Account" />&gt;
@@ -64,24 +61,23 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAccount(accountId: string): Promise<Account>'
       parameters:
         - id: accountId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Account" />&gt;
-  - name: 'getAccounts(string, string, string)'
+  - name: getAccounts(string, string, string)
     uid: azure-devops-extension-api.AccountsRestClient.getAccounts
     package: azure-devops-extension-api
-    summary: Get a list of accounts for a specific owner or a specific member.
+    summary: >-
+      Get a list of accounts for a specific owner or a specific member. One of
+      the following parameters is required: ownerId, memberId.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -96,9 +92,8 @@ methods:
           description: ID for a member of the accounts.
         - id: properties
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Account" />[]&gt;'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Account" />[]&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

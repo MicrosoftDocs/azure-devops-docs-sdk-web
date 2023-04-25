@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TaskAgentJob
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: container
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'container: string'
@@ -28,7 +26,6 @@ properties:
     summary: ''
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -41,7 +38,6 @@ properties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -54,36 +50,33 @@ properties:
     summary: ''
     fullName: sidecarContainers
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'sidecarContainers: [key: string]: string'
+      content: 'sidecarContainers: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: steps
     uid: azure-devops-extension-api.TaskAgentJob.steps
     package: azure-devops-extension-api
     summary: ''
     fullName: steps
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'steps: TaskAgentJobStep[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TaskAgentJobStep" />[]'
+        type: <xref uid="azure-devops-extension-api.TaskAgentJobStep" />[]
   - name: variables
     uid: azure-devops-extension-api.TaskAgentJob.variables
     package: azure-devops-extension-api
     summary: ''
     fullName: variables
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'variables: TaskAgentJobVariable[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TaskAgentJobVariable" />[]'
+        type: <xref uid="azure-devops-extension-api.TaskAgentJobVariable" />[]

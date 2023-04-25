@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Describes a work item type category.
 fullName: WorkItemTypeCategory
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Gets or sets the default type of the work item.
     fullName: defaultWorkItemType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultWorkItemType: WorkItemTypeReference'
@@ -28,7 +26,6 @@ properties:
     summary: The name of the category.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -41,23 +38,9 @@ properties:
     summary: The reference name of the category.
     fullName: referenceName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'referenceName: string'
-      return:
-        description: ''
-        type: string
-  - name: url
-    uid: azure-devops-extension-api.WorkItemTypeCategory.url
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: url
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'url: string'
       return:
         description: ''
         type: string
@@ -67,11 +50,26 @@ properties:
     summary: The work item types that belong to the category.
     fullName: workItemTypes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workItemTypes: WorkItemTypeReference[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.WorkItemTypeReference" />[]'
+        type: <xref uid="azure-devops-extension-api.WorkItemTypeReference" />[]
+inheritedProperties:
+  - name: url
+    uid: azure-devops-extension-api.WorkItemTypeCategory.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: WorkflowTask
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Gets or sets as the task always run or not.
     fullName: alwaysRun
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'alwaysRun: boolean'
@@ -28,7 +26,6 @@ properties:
     summary: Gets or sets the task condition.
     fullName: condition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'condition: string'
@@ -41,7 +38,6 @@ properties:
     summary: Gets or sets as the task continue run on error or not.
     fullName: continueOnError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'continueOnError: boolean'
@@ -56,7 +52,6 @@ properties:
       DeploymentGroup', 'Server' or 'ServerGate'.
     fullName: definitionType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'definitionType: string'
@@ -69,7 +64,6 @@ properties:
     summary: Gets or sets as the task enabled or not.
     fullName: enabled
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'enabled: boolean'
@@ -82,33 +76,30 @@ properties:
     summary: Gets or sets the task environment variables.
     fullName: environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'environment: [key: string]: string'
+      content: 'environment: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: inputs
     uid: azure-devops-extension-api.WorkflowTask.inputs
     package: azure-devops-extension-api
     summary: Gets or sets the task inputs.
     fullName: inputs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'inputs: [key: string]: string'
+      content: 'inputs: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: name
     uid: azure-devops-extension-api.WorkflowTask.name
     package: azure-devops-extension-api
     summary: Gets or sets the name of the task.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -121,33 +112,42 @@ properties:
     summary: Gets or sets the task override inputs.
     fullName: overrideInputs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'overrideInputs: [key: string]: string'
+      content: 'overrideInputs: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: refName
     uid: azure-devops-extension-api.WorkflowTask.refName
     package: azure-devops-extension-api
     summary: Gets or sets the reference name of the task.
     fullName: refName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'refName: string'
       return:
         description: ''
         type: string
+  - name: retryCountOnTaskFailure
+    uid: azure-devops-extension-api.WorkflowTask.retryCountOnTaskFailure
+    package: azure-devops-extension-api
+    summary: Gets or sets the task retryCount.
+    fullName: retryCountOnTaskFailure
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'retryCountOnTaskFailure: number'
+      return:
+        description: ''
+        type: number
   - name: taskId
     uid: azure-devops-extension-api.WorkflowTask.taskId
     package: azure-devops-extension-api
     summary: Gets or sets the ID of the task.
     fullName: taskId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'taskId: string'
@@ -160,7 +160,6 @@ properties:
     summary: Gets or sets the task timeout.
     fullName: timeoutInMinutes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeoutInMinutes: number'
@@ -173,7 +172,6 @@ properties:
     summary: Gets or sets the version of the task.
     fullName: version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'version: string'

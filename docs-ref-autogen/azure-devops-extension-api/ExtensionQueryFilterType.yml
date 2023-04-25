@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Type of extension filters that are supported in the queries.
 fullName: ExtensionQueryFilterType
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: Tag
@@ -91,7 +90,7 @@ fields:
       When retrieving extensions from a query, exclude the extensions which are
       having the given flags. The value specified for this filter should be a
       string representing the integer values of the flags to be excluded. In
-      case of mulitple flags to be specified, a logical OR of the interger
+      case of multiple flags to be specified, a logical OR of the interger
       values should be given as value for this filter This should be at most one
       filter of this type. This only acts as a restrictive filter after. In case
       of having a particular flag in both IncludeWithFlags and ExcludeWithFlags,
@@ -105,7 +104,7 @@ fields:
       When retrieving extensions from a query, include the extensions which are
       having the given flags. The value specified for this filter should be a
       string representing the integer values of the flags to be included. In
-      case of mulitple flags to be specified, a logical OR of the integer values
+      case of multiple flags to be specified, a logical OR of the integer values
       should be given as value for this filter This should be at most one filter
       of this type. This only acts as a restrictive filter after. In case of
       having a particular flag in both IncludeWithFlags and ExcludeWithFlags,
@@ -169,7 +168,7 @@ fields:
       When retrieving extensions from a query, include the extensions which have
       a publisher having the given flags. The value specified for this filter
       should be a string representing the integer values of the flags to be
-      included. In case of mulitple flags to be specified, a logical OR of the
+      included. In case of multiple flags to be specified, a logical OR of the
       integer values should be given as value for this filter There should be at
       most one filter of this type. This only acts as a restrictive filter
       after. In case of multiple flags given in IncludeWithFlags in ORed
@@ -180,3 +179,18 @@ fields:
     package: azure-devops-extension-api
     summary: Filter to get extensions shared with particular organization
     numericValue: 21
+  - name: ProductArchitecture
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.ProductArchitecture
+    package: azure-devops-extension-api
+    summary: Filter to get VS IDE extensions by Product Architecture
+    numericValue: 22
+  - name: TargetPlatform
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.TargetPlatform
+    package: azure-devops-extension-api
+    summary: Filter to get VS Code extensions by target platform.
+    numericValue: 23
+  - name: ExtensionName
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.ExtensionName
+    package: azure-devops-extension-api
+    summary: Retrieve an extension based on the extensionName.
+    numericValue: 24

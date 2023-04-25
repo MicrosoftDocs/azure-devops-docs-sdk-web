@@ -2,20 +2,21 @@
 name: TaskReference
 uid: azure-devops-extension-api.TaskReference
 package: azure-devops-extension-api
-summary: ''
+summary: A reference to a task.
 fullName: TaskReference
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: id
     uid: azure-devops-extension-api.TaskReference.id
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The ID of the task definition. Corresponds to the id value of task.json
+      file. \<br /\>Example: CmdLineV2 { "id":
+      "D9BAFED4-0B18-4F58-968D-86655B4D2CE9" }
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -25,23 +26,25 @@ properties:
   - name: inputs
     uid: azure-devops-extension-api.TaskReference.inputs
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      A dictionary of inputs specific to a task definition. Corresponds to
+      inputs value of task.json file.
     fullName: inputs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'inputs: [key: string]: string'
+      content: 'inputs: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: name
     uid: azure-devops-extension-api.TaskReference.name
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The name of the task definition. Corresponds to the name value of
+      task.json file. \<br /\>Example: CmdLineV2 { "name": "CmdLine" }
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -51,10 +54,12 @@ properties:
   - name: version
     uid: azure-devops-extension-api.TaskReference.version
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The version of the task definition. Corresponds to the version value of
+      task.json file. \<br /\>Example: CmdLineV2 { "version": { "Major": 2,
+      "Minor": 212, "Patch": 0 } }
     fullName: version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'version: string'

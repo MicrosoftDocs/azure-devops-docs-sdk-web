@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TaskAgentJobStep
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: condition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'condition: string'
@@ -28,7 +26,6 @@ properties:
     summary: ''
     fullName: continueOnError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'continueOnError: boolean'
@@ -41,7 +38,6 @@ properties:
     summary: ''
     fullName: enabled
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'enabled: boolean'
@@ -54,20 +50,18 @@ properties:
     summary: ''
     fullName: env
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'env: [key: string]: string'
+      content: 'env: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: id
     uid: azure-devops-extension-api.TaskAgentJobStep.id
     package: azure-devops-extension-api
     summary: ''
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -80,33 +74,42 @@ properties:
     summary: ''
     fullName: inputs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'inputs: [key: string]: string'
+      content: 'inputs: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: name
     uid: azure-devops-extension-api.TaskAgentJobStep.name
     package: azure-devops-extension-api
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
       return:
         description: ''
         type: string
+  - name: retryCountOnTaskFailure
+    uid: azure-devops-extension-api.TaskAgentJobStep.retryCountOnTaskFailure
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: retryCountOnTaskFailure
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'retryCountOnTaskFailure: number'
+      return:
+        description: ''
+        type: number
   - name: task
     uid: azure-devops-extension-api.TaskAgentJobStep.task
     package: azure-devops-extension-api
     summary: ''
     fullName: task
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'task: TaskAgentJobTask'
@@ -119,7 +122,6 @@ properties:
     summary: ''
     fullName: timeoutInMinutes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeoutInMinutes: number'
@@ -132,7 +134,6 @@ properties:
     summary: ''
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: TaskAgentJobStepType'

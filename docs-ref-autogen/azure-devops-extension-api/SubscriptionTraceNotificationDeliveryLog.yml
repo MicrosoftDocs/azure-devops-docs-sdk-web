@@ -2,13 +2,26 @@
 name: SubscriptionTraceNotificationDeliveryLog
 uid: azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog
 package: azure-devops-extension-api
-summary: ''
+summary: Abstract base class for all of the diagnostic logs.
 fullName: SubscriptionTraceNotificationDeliveryLog
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: notifications
+    uid: >-
+      azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.notifications
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: notifications
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'notifications: DiagnosticNotification[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DiagnosticNotification" />[]
+inheritedProperties:
   - name: activityId
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.activityId
@@ -18,13 +31,15 @@ properties:
       recorded elsewhere.
     fullName: activityId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'activityId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.activityId](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.activityId)
   - name: description
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.description
@@ -32,13 +47,15 @@ properties:
     summary: ''
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.description](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.description)
   - name: endTime
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.endTime
@@ -46,52 +63,60 @@ properties:
     summary: ''
     fullName: endTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'endTime: Date'
       return:
         description: ''
         type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.endTime](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.endTime)
   - name: errors
     uid: azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.errors
     package: azure-devops-extension-api
     summary: ''
     fullName: errors
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errors: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.errors](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.errors)
   - name: id
     uid: azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.id
     package: azure-devops-extension-api
     summary: Unique instance identifier.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.id](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.id)
   - name: jobId
     uid: azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.jobId
     package: azure-devops-extension-api
     summary: Indicates the job Id that processed or delivered this subscription
     fullName: jobId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'jobId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.jobId](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.jobId)
   - name: jobInstanceId
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.jobInstanceId
@@ -101,13 +126,15 @@ properties:
       delivered this subscription
     fullName: jobInstanceId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'jobInstanceId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.jobInstanceId](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.jobInstanceId)
   - name: logType
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.logType
@@ -115,13 +142,15 @@ properties:
     summary: ''
     fullName: logType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'logType: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.logType](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.logType)
   - name: messages
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.messages
@@ -129,7 +158,6 @@ properties:
     summary: ''
     fullName: messages
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'messages: NotificationDiagnosticLogMessage[]'
@@ -138,20 +166,9 @@ properties:
         type: >-
           <xref
           uid="azure-devops-extension-api.NotificationDiagnosticLogMessage" />[]
-  - name: notifications
-    uid: >-
-      azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.notifications
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: notifications
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'notifications: DiagnosticNotification[]'
-      return:
-        description: ''
-        type: '<xref uid="azure-devops-extension-api.DiagnosticNotification" />[]'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.messages](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.messages)
   - name: properties
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.properties
@@ -159,13 +176,15 @@ properties:
     summary: ''
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'properties: [key: string]: string'
+      content: 'properties: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.properties](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.properties)
   - name: source
     uid: azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.source
     package: azure-devops-extension-api
@@ -175,13 +194,15 @@ properties:
       with the subscription Id encoded.
     fullName: source
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'source: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.source](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.source)
   - name: startTime
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.startTime
@@ -189,13 +210,15 @@ properties:
     summary: ''
     fullName: startTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'startTime: Date'
       return:
         description: ''
         type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.startTime](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.startTime)
   - name: subscriptionId
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.subscriptionId
@@ -203,13 +226,15 @@ properties:
     summary: ''
     fullName: subscriptionId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subscriptionId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.subscriptionId](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.subscriptionId)
   - name: warnings
     uid: >-
       azure-devops-extension-api.SubscriptionTraceNotificationDeliveryLog.warnings
@@ -217,11 +242,13 @@ properties:
     summary: ''
     fullName: warnings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'warnings: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubscriptionTraceDiagnosticLog.warnings](xref:azure-devops-extension-api.SubscriptionTraceDiagnosticLog.warnings)
 extends: <xref uid="azure-devops-extension-api.SubscriptionTraceDiagnosticLog" />

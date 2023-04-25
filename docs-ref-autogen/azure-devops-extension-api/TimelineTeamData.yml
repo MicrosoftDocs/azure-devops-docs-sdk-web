@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TimelineTeamData
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Backlog matching the mapped backlog associated with this team.
     fullName: backlog
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'backlog: BacklogLevel'
@@ -28,20 +26,18 @@ properties:
     summary: The field reference names of the work item data
     fullName: fieldReferenceNames
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fieldReferenceNames: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: id
     uid: azure-devops-extension-api.TimelineTeamData.id
     package: azure-devops-extension-api
     summary: The id of the team
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -59,7 +55,6 @@ properties:
       there will be data. \</remarks\>
     fullName: isExpanded
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isExpanded: boolean'
@@ -69,23 +64,21 @@ properties:
   - name: iterations
     uid: azure-devops-extension-api.TimelineTeamData.iterations
     package: azure-devops-extension-api
-    summary: 'The iteration data, including the work items, in the queried date range.'
+    summary: The iteration data, including the work items, in the queried date range.
     fullName: iterations
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'iterations: TimelineTeamIteration[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TimelineTeamIteration" />[]'
+        type: <xref uid="azure-devops-extension-api.TimelineTeamIteration" />[]
   - name: name
     uid: azure-devops-extension-api.TimelineTeamData.name
     package: azure-devops-extension-api
     summary: The name of the team
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -98,7 +91,6 @@ properties:
     summary: The order by field name of this team
     fullName: orderByField
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'orderByField: string'
@@ -114,33 +106,54 @@ properties:
       WorkItemType
     fullName: partiallyPagedFieldReferenceNames
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'partiallyPagedFieldReferenceNames: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
+  - name: partiallyPagedWorkItems
+    uid: azure-devops-extension-api.TimelineTeamData.partiallyPagedWorkItems
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: partiallyPagedWorkItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'partiallyPagedWorkItems: any[][]'
+      return:
+        description: ''
+        type: any[][]
   - name: projectId
     uid: azure-devops-extension-api.TimelineTeamData.projectId
     package: azure-devops-extension-api
     summary: The project id the team belongs team
     fullName: projectId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'projectId: string'
       return:
         description: ''
         type: string
+  - name: rollupWorkItemTypes
+    uid: azure-devops-extension-api.TimelineTeamData.rollupWorkItemTypes
+    package: azure-devops-extension-api
+    summary: Work item types for which we will collect roll up data on the client side
+    fullName: rollupWorkItemTypes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rollupWorkItemTypes: string[]'
+      return:
+        description: ''
+        type: string[]
   - name: status
     uid: azure-devops-extension-api.TimelineTeamData.status
     package: azure-devops-extension-api
     summary: Status for this team.
     fullName: status
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: TimelineTeamStatus'
@@ -153,7 +166,6 @@ properties:
     summary: The team field default value
     fullName: teamFieldDefaultValue
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'teamFieldDefaultValue: string'
@@ -166,7 +178,6 @@ properties:
     summary: The team field name of this team
     fullName: teamFieldName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'teamFieldName: string'
@@ -179,23 +190,35 @@ properties:
     summary: The team field values
     fullName: teamFieldValues
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'teamFieldValues: TeamFieldValue[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TeamFieldValue" />[]'
+        type: <xref uid="azure-devops-extension-api.TeamFieldValue" />[]
+  - name: workItems
+    uid: azure-devops-extension-api.TimelineTeamData.workItems
+    package: azure-devops-extension-api
+    summary: >-
+      Work items associated with the team that are not under any of the team's
+      iterations
+    fullName: workItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItems: any[][]'
+      return:
+        description: ''
+        type: any[][]
   - name: workItemTypeColors
     uid: azure-devops-extension-api.TimelineTeamData.workItemTypeColors
     package: azure-devops-extension-api
     summary: Colors for the work item types.
     fullName: workItemTypeColors
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workItemTypeColors: WorkItemColor[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.WorkItemColor" />[]'
+        type: <xref uid="azure-devops-extension-api.WorkItemColor" />[]

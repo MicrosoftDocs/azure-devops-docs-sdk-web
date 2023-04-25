@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: WebApiTeam
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,23 +14,9 @@ properties:
     summary: Team description
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
-      return:
-        description: ''
-        type: string
-  - name: id
-    uid: azure-devops-extension-api.WebApiTeam.id
-    package: azure-devops-extension-api
-    summary: Team (Identity) Guid. A Team Foundation ID.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: string'
       return:
         description: ''
         type: string
@@ -41,7 +26,6 @@ properties:
     summary: Team identity.
     fullName: identity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'identity: Identity'
@@ -54,23 +38,9 @@ properties:
     summary: Identity REST API Url to this team
     fullName: identityUrl
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'identityUrl: string'
-      return:
-        description: ''
-        type: string
-  - name: name
-    uid: azure-devops-extension-api.WebApiTeam.name
-    package: azure-devops-extension-api
-    summary: Team name
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
       return:
         description: ''
         type: string
@@ -80,7 +50,6 @@ properties:
     summary: ''
     fullName: projectId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'projectId: string'
@@ -93,24 +62,56 @@ properties:
     summary: ''
     fullName: projectName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'projectName: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.WebApiTeam.id
+    package: azure-devops-extension-api
+    summary: Team (Identity) Guid. A Team Foundation ID.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WebApiTeamRef.id](xref:azure-devops-extension-api.WebApiTeamRef.id)
+  - name: name
+    uid: azure-devops-extension-api.WebApiTeam.name
+    package: azure-devops-extension-api
+    summary: Team name
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WebApiTeamRef.name](xref:azure-devops-extension-api.WebApiTeamRef.name)
   - name: url
     uid: azure-devops-extension-api.WebApiTeam.url
     package: azure-devops-extension-api
     summary: Team REST API Url
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WebApiTeamRef.url](xref:azure-devops-extension-api.WebApiTeamRef.url)
 extends: <xref uid="azure-devops-extension-api.WebApiTeamRef" />

@@ -5,101 +5,109 @@ package: azure-devops-extension-api
 summary: A change.
 fullName: TfvcChange
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: changeType
-    uid: azure-devops-extension-api.TfvcChange.changeType
-    package: azure-devops-extension-api
-    summary: The type of change that was made to the item.
-    fullName: changeType
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'changeType: VersionControlChangeType'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.VersionControlChangeType" />
-  - name: item
-    uid: azure-devops-extension-api.TfvcChange.item
-    package: azure-devops-extension-api
-    summary: Current version.
-    fullName: item
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'item: TfvcItem'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.TfvcItem" />
   - name: mergeSources
     uid: azure-devops-extension-api.TfvcChange.mergeSources
     package: azure-devops-extension-api
     summary: List of merge sources in case of rename or branch creation.
     fullName: mergeSources
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeSources: TfvcMergeSource[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TfvcMergeSource" />[]'
-  - name: newContent
-    uid: azure-devops-extension-api.TfvcChange.newContent
-    package: azure-devops-extension-api
-    summary: Content of the item after the change.
-    fullName: newContent
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'newContent: ItemContent'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.ItemContent" />
+        type: <xref uid="azure-devops-extension-api.TfvcMergeSource" />[]
   - name: pendingVersion
     uid: azure-devops-extension-api.TfvcChange.pendingVersion
     package: azure-devops-extension-api
     summary: Version at which a (shelved) change was pended against
     fullName: pendingVersion
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'pendingVersion: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: changeType
+    uid: azure-devops-extension-api.TfvcChange.changeType
+    package: azure-devops-extension-api
+    summary: The type of change that was made to the item.
+    fullName: changeType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changeType: VersionControlChangeType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.VersionControlChangeType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.changeType](xref:azure-devops-extension-api.Change.changeType)
+  - name: item
+    uid: azure-devops-extension-api.TfvcChange.item
+    package: azure-devops-extension-api
+    summary: Current version.
+    fullName: item
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'item: TfvcItem'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TfvcItem" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.item](xref:azure-devops-extension-api.Change.item)
+  - name: newContent
+    uid: azure-devops-extension-api.TfvcChange.newContent
+    package: azure-devops-extension-api
+    summary: Content of the item after the change.
+    fullName: newContent
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'newContent: ItemContent'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ItemContent" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.newContent](xref:azure-devops-extension-api.Change.newContent)
   - name: sourceServerItem
     uid: azure-devops-extension-api.TfvcChange.sourceServerItem
     package: azure-devops-extension-api
     summary: Path of the item on the server.
     fullName: sourceServerItem
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceServerItem: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.sourceServerItem](xref:azure-devops-extension-api.Change.sourceServerItem)
   - name: url
     uid: azure-devops-extension-api.TfvcChange.url
     package: azure-devops-extension-api
     summary: URL to retrieve the item.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.url](xref:azure-devops-extension-api.Change.url)
 extends: >-
   <xref uid="azure-devops-extension-api.Change" />&lt;<xref
   uid="azure-devops-extension-api.TfvcItem" />&gt;

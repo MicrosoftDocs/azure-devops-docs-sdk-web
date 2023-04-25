@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GitResolutionRename1to2
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: action
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'action: GitResolutionRename1to2Action'
@@ -24,56 +22,65 @@ properties:
         type: >-
           <xref uid="azure-devops-extension-api.GitResolutionRename1to2Action"
           />
+inheritedProperties:
   - name: author
     uid: azure-devops-extension-api.GitResolutionRename1to2.author
     package: azure-devops-extension-api
     summary: User who created the resolution.
     fullName: author
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'author: IdentityRef'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.IdentityRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitResolutionMergeContent.author](xref:azure-devops-extension-api.GitResolutionMergeContent.author)
   - name: mergeType
     uid: azure-devops-extension-api.GitResolutionRename1to2.mergeType
     package: azure-devops-extension-api
     summary: ''
     fullName: mergeType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeType: GitResolutionMergeType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.GitResolutionMergeType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitResolutionMergeContent.mergeType](xref:azure-devops-extension-api.GitResolutionMergeContent.mergeType)
   - name: userMergedBlob
     uid: azure-devops-extension-api.GitResolutionRename1to2.userMergedBlob
     package: azure-devops-extension-api
     summary: ''
     fullName: userMergedBlob
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'userMergedBlob: GitBlobRef'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.GitBlobRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitResolutionMergeContent.userMergedBlob](xref:azure-devops-extension-api.GitResolutionMergeContent.userMergedBlob)
   - name: userMergedContent
     uid: azure-devops-extension-api.GitResolutionRename1to2.userMergedContent
     package: azure-devops-extension-api
     summary: ''
     fullName: userMergedContent
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'userMergedContent: number[]'
       return:
         description: ''
-        type: 'number[]'
+        type: number[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitResolutionMergeContent.userMergedContent](xref:azure-devops-extension-api.GitResolutionMergeContent.userMergedContent)
 extends: <xref uid="azure-devops-extension-api.GitResolutionMergeContent" />

@@ -2,20 +2,32 @@
 name: VariableValue
 uid: azure-devops-extension-api.VariableValue
 package: azure-devops-extension-api
-summary: ''
+summary: A wrapper class for a generic variable.
 fullName: VariableValue
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: isReadOnly
+    uid: azure-devops-extension-api.VariableValue.isReadOnly
+    package: azure-devops-extension-api
+    summary: >-
+      Indicates whether the variable can be changed during script's execution
+      runtime.
+    fullName: isReadOnly
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isReadOnly: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: isSecret
     uid: azure-devops-extension-api.VariableValue.isSecret
     package: azure-devops-extension-api
-    summary: ''
+    summary: Indicates whether the variable should be encrypted at rest.
     fullName: isSecret
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isSecret: boolean'
@@ -25,10 +37,9 @@ properties:
   - name: value
     uid: azure-devops-extension-api.VariableValue.value
     package: azure-devops-extension-api
-    summary: ''
+    summary: The value of the variable.
     fullName: value
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'value: string'

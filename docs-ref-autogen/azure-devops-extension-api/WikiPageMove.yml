@@ -5,60 +5,65 @@ package: azure-devops-extension-api
 summary: Request contract for Wiki Page Move.
 fullName: WikiPageMove
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: newOrder
-    uid: azure-devops-extension-api.WikiPageMove.newOrder
-    package: azure-devops-extension-api
-    summary: New order of the wiki page.
-    fullName: newOrder
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'newOrder: number'
-      return:
-        description: ''
-        type: number
-  - name: newPath
-    uid: azure-devops-extension-api.WikiPageMove.newPath
-    package: azure-devops-extension-api
-    summary: New path of the wiki page.
-    fullName: newPath
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'newPath: string'
-      return:
-        description: ''
-        type: string
   - name: page
     uid: azure-devops-extension-api.WikiPageMove.page
     package: azure-devops-extension-api
     summary: Resultant page of this page move operation.
     fullName: page
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'page: WikiPage'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.WikiPage" />
+inheritedProperties:
+  - name: newOrder
+    uid: azure-devops-extension-api.WikiPageMove.newOrder
+    package: azure-devops-extension-api
+    summary: New order of the wiki page.
+    fullName: newOrder
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'newOrder: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiPageMoveParameters.newOrder](xref:azure-devops-extension-api.WikiPageMoveParameters.newOrder)
+  - name: newPath
+    uid: azure-devops-extension-api.WikiPageMove.newPath
+    package: azure-devops-extension-api
+    summary: New path of the wiki page.
+    fullName: newPath
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'newPath: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiPageMoveParameters.newPath](xref:azure-devops-extension-api.WikiPageMoveParameters.newPath)
   - name: path
     uid: azure-devops-extension-api.WikiPageMove.path
     package: azure-devops-extension-api
     summary: Current path of the wiki page.
     fullName: path
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'path: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiPageMoveParameters.path](xref:azure-devops-extension-api.WikiPageMoveParameters.path)
 extends: <xref uid="azure-devops-extension-api.WikiPageMoveParameters" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: RunUpdateModel
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: An abstracted reference to the build that it belongs.
     fullName: build
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'build: ShallowReference'
@@ -28,7 +26,6 @@ properties:
     summary: Drop location of the build used for test run.
     fullName: buildDropLocation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'buildDropLocation: string'
@@ -41,7 +38,6 @@ properties:
     summary: 'Flavor of the build used for test run. (E.g: Release, Debug)'
     fullName: buildFlavor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'buildFlavor: string'
@@ -54,7 +50,6 @@ properties:
     summary: 'Platform of the build used for test run. (E.g.: x86, amd64)'
     fullName: buildPlatform
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'buildPlatform: string'
@@ -67,7 +62,6 @@ properties:
     summary: Comments entered by those analyzing the run.
     fullName: comment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'comment: string'
@@ -80,7 +74,6 @@ properties:
     summary: Completed date time of the run.
     fullName: completedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'completedDate: string'
@@ -93,7 +86,6 @@ properties:
     summary: Name of the test controller used for automated run.
     fullName: controller
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'controller: string'
@@ -103,10 +95,9 @@ properties:
   - name: deleteInProgressResults
     uid: azure-devops-extension-api.RunUpdateModel.deleteInProgressResults
     package: azure-devops-extension-api
-    summary: 'true to delete inProgess Results , false otherwise.'
+    summary: true to delete inProgess Results , false otherwise.
     fullName: deleteInProgressResults
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deleteInProgressResults: boolean'
@@ -119,7 +110,6 @@ properties:
     summary: An abstracted reference to DtlAutEnvironment.
     fullName: dtlAutEnvironment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dtlAutEnvironment: ShallowReference'
@@ -132,7 +122,6 @@ properties:
     summary: An abstracted reference to DtlEnvironment.
     fullName: dtlEnvironment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dtlEnvironment: ShallowReference'
@@ -145,7 +134,6 @@ properties:
     summary: ''
     fullName: dtlEnvironmentDetails
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dtlEnvironmentDetails: DtlEnvironmentDetails'
@@ -158,7 +146,6 @@ properties:
     summary: Due date and time for test run.
     fullName: dueDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dueDate: string'
@@ -171,7 +158,6 @@ properties:
     summary: Error message associated with the run.
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -184,7 +170,6 @@ properties:
     summary: The iteration in which to create the run.
     fullName: iteration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'iteration: string'
@@ -196,23 +181,21 @@ properties:
     package: azure-devops-extension-api
     summary: >-
       Log entries associated with the run. Use a comma-separated list of
-      multiple log entry objects. \{ logEntry \}, \{ logEntry \}, ...
+      multiple log entry objects. { logEntry }, { logEntry }, ...
     fullName: logEntries
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'logEntries: TestMessageLogDetails[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TestMessageLogDetails" />[]'
+        type: <xref uid="azure-devops-extension-api.TestMessageLogDetails" />[]
   - name: name
     uid: azure-devops-extension-api.RunUpdateModel.name
     package: azure-devops-extension-api
     summary: Name of the test run.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -225,7 +208,6 @@ properties:
     summary: URI of release environment associated with the run.
     fullName: releaseEnvironmentUri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'releaseEnvironmentUri: string'
@@ -238,7 +220,6 @@ properties:
     summary: URI of release associated with the run.
     fullName: releaseUri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'releaseUri: string'
@@ -251,20 +232,18 @@ properties:
     summary: Run summary for run Type = NoConfigRun.
     fullName: runSummary
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'runSummary: RunSummaryModel[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.RunSummaryModel" />[]'
+        type: <xref uid="azure-devops-extension-api.RunSummaryModel" />[]
   - name: sourceWorkflow
     uid: azure-devops-extension-api.RunUpdateModel.sourceWorkflow
     package: azure-devops-extension-api
     summary: SourceWorkFlow(CI/CD) of the test run.
     fullName: sourceWorkflow
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceWorkflow: string'
@@ -277,7 +256,6 @@ properties:
     summary: Start date time of the run.
     fullName: startedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'startedDate: string'
@@ -292,7 +270,6 @@ properties:
       InProgress, Completed, Aborted, Waiting
     fullName: state
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'state: string'
@@ -305,7 +282,6 @@ properties:
     summary: The types of sub states for test run.
     fullName: substate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'substate: TestRunSubstate'
@@ -318,20 +294,18 @@ properties:
     summary: Tags to attach with the test run.
     fullName: tags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tags: TestTag[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TestTag" />[]'
+        type: <xref uid="azure-devops-extension-api.TestTag" />[]
   - name: testEnvironmentId
     uid: azure-devops-extension-api.RunUpdateModel.testEnvironmentId
     package: azure-devops-extension-api
     summary: ID of the test environment associated with the run.
     fullName: testEnvironmentId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testEnvironmentId: string'
@@ -344,7 +318,6 @@ properties:
     summary: An abstracted reference to test setting resource.
     fullName: testSettings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testSettings: ShallowReference'

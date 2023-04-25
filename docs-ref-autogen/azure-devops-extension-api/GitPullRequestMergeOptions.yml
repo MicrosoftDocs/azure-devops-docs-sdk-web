@@ -5,10 +5,24 @@ package: azure-devops-extension-api
 summary: The options which are used when a pull request merge is created.
 fullName: GitPullRequestMergeOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: conflictAuthorshipCommits
+    uid: >-
+      azure-devops-extension-api.GitPullRequestMergeOptions.conflictAuthorshipCommits
+    package: azure-devops-extension-api
+    summary: >-
+      If true, conflict resolutions applied during the merge will be put in
+      separate commits to preserve authorship info for git blame, etc.
+    fullName: conflictAuthorshipCommits
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'conflictAuthorshipCommits: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: detectRenameFalsePositives
     uid: >-
       azure-devops-extension-api.GitPullRequestMergeOptions.detectRenameFalsePositives
@@ -16,7 +30,6 @@ properties:
     summary: ''
     fullName: detectRenameFalsePositives
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'detectRenameFalsePositives: boolean'
@@ -26,10 +39,9 @@ properties:
   - name: disableRenames
     uid: azure-devops-extension-api.GitPullRequestMergeOptions.disableRenames
     package: azure-devops-extension-api
-    summary: 'If true, rename detection will not be performed during the merge.'
+    summary: If true, rename detection will not be performed during the merge.
     fullName: disableRenames
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'disableRenames: boolean'

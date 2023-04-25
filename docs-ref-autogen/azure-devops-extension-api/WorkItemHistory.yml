@@ -2,10 +2,9 @@
 name: WorkItemHistory
 uid: azure-devops-extension-api.WorkItemHistory
 package: azure-devops-extension-api
-summary: ''
+summary: Base class for WIT REST resources.
 fullName: WorkItemHistory
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: rev
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'rev: number'
@@ -28,7 +26,6 @@ properties:
     summary: ''
     fullName: revisedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revisedBy: IdentityReference'
@@ -41,37 +38,38 @@ properties:
     summary: ''
     fullName: revisedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revisedDate: Date'
       return:
         description: ''
         type: Date
-  - name: url
-    uid: azure-devops-extension-api.WorkItemHistory.url
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: url
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'url: string'
-      return:
-        description: ''
-        type: string
   - name: value
     uid: azure-devops-extension-api.WorkItemHistory.value
     package: azure-devops-extension-api
     summary: ''
     fullName: value
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'value: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: url
+    uid: azure-devops-extension-api.WorkItemHistory.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

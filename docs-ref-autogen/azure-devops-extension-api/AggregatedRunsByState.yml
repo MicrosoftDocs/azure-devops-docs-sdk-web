@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: AggregatedRunsByState
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,22 +14,20 @@ properties:
     summary: ''
     fullName: resultsByOutcome
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'resultsByOutcome: [key: number]: AggregatedResultsByOutcome'
+      content: 'resultsByOutcome: {[key: number]: AggregatedResultsByOutcome}'
       return:
         description: ''
         type: >-
-          [key: number]\: <xref
-          uid="azure-devops-extension-api.AggregatedResultsByOutcome" />
+          {[key: number]: <xref
+          uid="azure-devops-extension-api.AggregatedResultsByOutcome" />}
   - name: runsCount
     uid: azure-devops-extension-api.AggregatedRunsByState.runsCount
     package: azure-devops-extension-api
     summary: ''
     fullName: runsCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'runsCount: number'
@@ -43,7 +40,6 @@ properties:
     summary: ''
     fullName: state
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'state: TestRunState'

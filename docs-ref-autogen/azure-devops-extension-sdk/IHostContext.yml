@@ -5,7 +5,6 @@ package: azure-devops-extension-sdk
 summary: Information about the current DevOps host (organization)
 fullName: IHostContext
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,32 @@ properties:
     summary: Unique GUID for this host
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+  - name: isHosted
+    uid: azure-devops-extension-sdk.IHostContext.isHosted
+    package: azure-devops-extension-sdk
+    summary: >-
+      Distinguish between Azure DevOps Services (true) and Azure DevOps Server
+      (false)
+    fullName: isHosted
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isHosted: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: name
     uid: azure-devops-extension-sdk.IHostContext.name
     package: azure-devops-extension-sdk
     summary: Name of the host (i.e. Organization name)
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -41,7 +52,6 @@ properties:
     summary: Version of Azure DevOps used by the current host (organization)
     fullName: serviceVersion
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'serviceVersion: string'
@@ -54,7 +64,6 @@ properties:
     summary: DevOps host level
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: HostType'

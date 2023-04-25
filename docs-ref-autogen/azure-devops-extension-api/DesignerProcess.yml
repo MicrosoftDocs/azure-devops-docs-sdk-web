@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a build process supported by the build definition designer.
 fullName: DesignerProcess
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,37 +14,38 @@ properties:
     summary: ''
     fullName: phases
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'phases: Phase[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Phase" />[]'
+        type: <xref uid="azure-devops-extension-api.Phase" />[]
   - name: target
     uid: azure-devops-extension-api.DesignerProcess.target
     package: azure-devops-extension-api
     summary: The target for the build process.
     fullName: target
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'target: DesignerProcessTarget'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.DesignerProcessTarget" />
+inheritedProperties:
   - name: type
     uid: azure-devops-extension-api.DesignerProcess.type
     package: azure-devops-extension-api
     summary: The type of the process.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildProcess.type](xref:azure-devops-extension-api.BuildProcess.type)
 extends: <xref uid="azure-devops-extension-api.BuildProcess" />

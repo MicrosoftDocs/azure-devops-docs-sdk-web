@@ -5,30 +5,15 @@ package: azure-devops-extension-api
 summary: A job request for an agent.
 fullName: TaskAgentJobRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: agentDelays
-    uid: azure-devops-extension-api.TaskAgentJobRequest.agentDelays
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: agentDelays
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'agentDelays: TaskAgentDelaySource[]'
-      return:
-        description: ''
-        type: '<xref uid="azure-devops-extension-api.TaskAgentDelaySource" />[]'
   - name: agentSpecification
     uid: azure-devops-extension-api.TaskAgentJobRequest.agentSpecification
     package: azure-devops-extension-api
     summary: ''
     fullName: agentSpecification
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agentSpecification: any'
@@ -41,7 +26,6 @@ properties:
     summary: The date/time this request was assigned.
     fullName: assignTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'assignTime: Date'
@@ -54,20 +38,18 @@ properties:
     summary: Additional data about the request.
     fullName: data
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'data: [key: string]: string'
+      content: 'data: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: definition
     uid: azure-devops-extension-api.TaskAgentJobRequest.definition
     package: azure-devops-extension-api
     summary: The pipeline definition associated with this request
     fullName: definition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'definition: TaskOrchestrationOwner'
@@ -80,33 +62,18 @@ properties:
     summary: A list of demands required to fulfill this request.
     fullName: demands
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'demands: Demand[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Demand" />[]'
-  - name: expectedDuration
-    uid: azure-devops-extension-api.TaskAgentJobRequest.expectedDuration
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: expectedDuration
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'expectedDuration: any'
-      return:
-        description: ''
-        type: any
+        type: <xref uid="azure-devops-extension-api.Demand" />[]
   - name: finishTime
     uid: azure-devops-extension-api.TaskAgentJobRequest.finishTime
     package: azure-devops-extension-api
     summary: The date/time this request was finished.
     fullName: finishTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'finishTime: Date'
@@ -119,7 +86,6 @@ properties:
     summary: The host which triggered this request.
     fullName: hostId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'hostId: string'
@@ -132,7 +98,6 @@ properties:
     summary: ID of the job resulting from this request.
     fullName: jobId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'jobId: string'
@@ -145,7 +110,6 @@ properties:
     summary: Name of the job resulting from this request.
     fullName: jobName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'jobName: string'
@@ -158,7 +122,6 @@ properties:
     summary: The deadline for the agent to renew the lock.
     fullName: lockedUntil
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lockedUntil: Date'
@@ -171,20 +134,18 @@ properties:
     summary: ''
     fullName: matchedAgents
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'matchedAgents: TaskAgentReference[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TaskAgentReference" />[]'
+        type: <xref uid="azure-devops-extension-api.TaskAgentReference" />[]
   - name: matchesAllAgentsInPool
     uid: azure-devops-extension-api.TaskAgentJobRequest.matchesAllAgentsInPool
     package: azure-devops-extension-api
     summary: ''
     fullName: matchesAllAgentsInPool
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'matchesAllAgentsInPool: boolean'
@@ -197,7 +158,6 @@ properties:
     summary: ''
     fullName: orchestrationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'orchestrationId: string'
@@ -210,7 +170,6 @@ properties:
     summary: The pipeline associated with this request
     fullName: owner
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'owner: TaskOrchestrationOwner'
@@ -223,7 +182,6 @@ properties:
     summary: ''
     fullName: planGroup
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'planGroup: string'
@@ -236,7 +194,6 @@ properties:
     summary: Internal ID for the orchestration plan connected with this request.
     fullName: planId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'planId: string'
@@ -249,7 +206,6 @@ properties:
     summary: Internal detail representing the type of orchestration plan.
     fullName: planType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'planType: string'
@@ -262,10 +218,21 @@ properties:
     summary: The ID of the pool this request targets
     fullName: poolId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'poolId: number'
+      return:
+        description: ''
+        type: number
+  - name: priority
+    uid: azure-devops-extension-api.TaskAgentJobRequest.priority
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: priority
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'priority: number'
       return:
         description: ''
         type: number
@@ -275,7 +242,6 @@ properties:
     summary: The ID of the queue this request targets
     fullName: queueId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queueId: number'
@@ -288,7 +254,6 @@ properties:
     summary: The date/time this request was queued.
     fullName: queueTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queueTime: Date'
@@ -301,7 +266,6 @@ properties:
     summary: The date/time this request was receieved by an agent.
     fullName: receiveTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'receiveTime: Date'
@@ -314,7 +278,6 @@ properties:
     summary: ID of the request.
     fullName: requestId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestId: number'
@@ -327,7 +290,6 @@ properties:
     summary: The agent allocated for this request.
     fullName: reservedAgent
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'reservedAgent: TaskAgentReference'
@@ -340,7 +302,6 @@ properties:
     summary: The result of this request.
     fullName: result
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'result: TaskResult'
@@ -353,7 +314,6 @@ properties:
     summary: Scope of the pipeline; matches the project ID.
     fullName: scopeId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'scopeId: string'
@@ -366,7 +326,6 @@ properties:
     summary: The service which owns this request.
     fullName: serviceOwner
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'serviceOwner: string'
@@ -379,7 +338,6 @@ properties:
     summary: ''
     fullName: statusMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'statusMessage: string'
@@ -392,7 +350,6 @@ properties:
     summary: ''
     fullName: userDelayed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'userDelayed: boolean'

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Defines the data contract of notification details.
 fullName: NotificationDetails
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       received from the consumer)
     fullName: completedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'completedDate: Date'
@@ -30,7 +28,6 @@ properties:
     summary: Gets or sets this notification detail's consumer action identifier.
     fullName: consumerActionId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'consumerActionId: string'
@@ -43,7 +40,6 @@ properties:
     summary: Gets or sets this notification detail's consumer identifier.
     fullName: consumerId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'consumerId: string'
@@ -56,20 +52,18 @@ properties:
     summary: Gets or sets this notification detail's consumer inputs.
     fullName: consumerInputs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'consumerInputs: [key: string]: string'
+      content: 'consumerInputs: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: dequeuedDate
     uid: azure-devops-extension-api.NotificationDetails.dequeuedDate
     package: azure-devops-extension-api
     summary: Gets or sets the time that this notification was dequeued for processing
     fullName: dequeuedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dequeuedDate: Date'
@@ -82,7 +76,6 @@ properties:
     summary: Gets or sets this notification detail's error detail.
     fullName: errorDetail
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorDetail: string'
@@ -95,7 +88,6 @@ properties:
     summary: Gets or sets this notification detail's error message.
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -108,7 +100,6 @@ properties:
     summary: Gets or sets this notification detail's event content.
     fullName: event
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'event: Event'
@@ -121,7 +112,6 @@ properties:
     summary: Gets or sets this notification detail's event type.
     fullName: eventType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventType: string'
@@ -136,7 +126,6 @@ properties:
       before the request is sent to the consumer)
     fullName: processedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'processedDate: Date'
@@ -149,7 +138,6 @@ properties:
     summary: Gets or sets this notification detail's publisher identifier.
     fullName: publisherId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'publisherId: string'
@@ -162,20 +150,18 @@ properties:
     summary: Gets or sets this notification detail's publisher inputs.
     fullName: publisherInputs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'publisherInputs: [key: string]: string'
+      content: 'publisherInputs: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: queuedDate
     uid: azure-devops-extension-api.NotificationDetails.queuedDate
     package: azure-devops-extension-api
     summary: Gets or sets the time that this notification was queued (created)
     fullName: queuedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queuedDate: Date'
@@ -188,7 +174,6 @@ properties:
     summary: Gets or sets this notification detail's request.
     fullName: request
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'request: string'
@@ -201,7 +186,6 @@ properties:
     summary: Number of requests attempted to be sent to the consumer
     fullName: requestAttempts
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestAttempts: number'
@@ -214,7 +198,6 @@ properties:
     summary: Duration of the request to the consumer in seconds
     fullName: requestDuration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestDuration: number'
@@ -227,7 +210,6 @@ properties:
     summary: Gets or sets this notification detail's response.
     fullName: response
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'response: string'

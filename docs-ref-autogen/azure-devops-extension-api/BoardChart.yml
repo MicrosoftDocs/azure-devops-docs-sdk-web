@@ -5,47 +5,50 @@ package: azure-devops-extension-api
 summary: ''
 fullName: BoardChart
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: name
-    uid: azure-devops-extension-api.BoardChart.name
-    package: azure-devops-extension-api
-    summary: Name of the resource
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
   - name: settings
     uid: azure-devops-extension-api.BoardChart.settings
     package: azure-devops-extension-api
     summary: The settings for the resource
     fullName: settings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'settings: [key: string]: any'
+      content: 'settings: {[key: string]: any}'
       return:
         description: ''
-        type: '[key: string]\: any'
+        type: '{[key: string]: any}'
+inheritedProperties:
+  - name: name
+    uid: azure-devops-extension-api.BoardChart.name
+    package: azure-devops-extension-api
+    summary: Name of the resource
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BoardChartReference.name](xref:azure-devops-extension-api.BoardChartReference.name)
   - name: url
     uid: azure-devops-extension-api.BoardChart.url
     package: azure-devops-extension-api
     summary: Full http link to the resource
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BoardChartReference.url](xref:azure-devops-extension-api.BoardChartReference.url)
 extends: <xref uid="azure-devops-extension-api.BoardChartReference" />

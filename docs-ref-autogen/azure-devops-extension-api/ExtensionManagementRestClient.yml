@@ -2,10 +2,11 @@
 name: ExtensionManagementRestClient
 uid: azure-devops-extension-api.ExtensionManagementRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: ExtensionManagementRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ExtensionManagementRestClient(options: IVssRestClientOptions)'
@@ -29,7 +29,6 @@ properties:
     summary: ''
     fullName: RESOURCE_AREA_ID
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
@@ -37,13 +36,12 @@ properties:
         description: ''
         type: string
 methods:
-  - name: 'createDocumentByName(any, string, string, string, string, string)'
+  - name: createDocumentByName(any, string, string, string, string, string)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.createDocumentByName
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -53,33 +51,31 @@ methods:
       parameters:
         - id: doc
           type: any
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: scopeType
           type: string
-          description: '-'
+          description: ''
         - id: scopeValue
           type: string
-          description: '-'
+          description: ''
         - id: collectionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;any&gt;
-  - name: 'deleteDocumentByName(string, string, string, string, string, string)'
+  - name: deleteDocumentByName(string, string, string, string, string, string)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.deleteDocumentByName
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -89,32 +85,30 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: scopeType
           type: string
-          description: '-'
+          description: ''
         - id: scopeValue
           type: string
-          description: '-'
+          description: ''
         - id: collectionName
           type: string
-          description: '-'
+          description: ''
         - id: documentId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteRequest(string, string)'
+  - name: deleteRequest(string, string)
     uid: azure-devops-extension-api.ExtensionManagementRestClient.deleteRequest
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -123,11 +117,10 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -139,7 +132,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -150,37 +142,35 @@ methods:
       parameters:
         - id: itemId
           type: string
-          description: '-'
+          description: ''
         - id: testCommerce
           type: boolean
-          description: '-'
+          description: ''
         - id: isFreeOrTrialInstall
           type: boolean
-          description: '-'
+          description: ''
         - id: isAccountOwner
           type: boolean
-          description: '-'
+          description: ''
         - id: isLinked
           type: boolean
-          description: '-'
+          description: ''
         - id: isConnectedServer
           type: boolean
-          description: '-'
+          description: ''
         - id: isBuyOperationValid
           type: boolean
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AcquisitionOptions"
           />&gt;
-  - name: 'getAuditLog(string, string)'
+  - name: getAuditLog(string, string)
     uid: azure-devops-extension-api.ExtensionManagementRestClient.getAuditLog
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -189,22 +179,20 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionAuditLog"
           />&gt;
-  - name: 'getDocumentByName(string, string, string, string, string, string)'
+  - name: getDocumentByName(string, string, string, string, string, string)
     uid: azure-devops-extension-api.ExtensionManagementRestClient.getDocumentByName
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -214,33 +202,31 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: scopeType
           type: string
-          description: '-'
+          description: ''
         - id: scopeValue
           type: string
-          description: '-'
+          description: ''
         - id: collectionName
           type: string
-          description: '-'
+          description: ''
         - id: documentId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;any&gt;
-  - name: 'getDocumentsByName(string, string, string, string, string)'
+  - name: getDocumentsByName(string, string, string, string, string)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.getDocumentsByName
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -250,30 +236,28 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: scopeType
           type: string
-          description: '-'
+          description: ''
         - id: scopeValue
           type: string
-          description: '-'
+          description: ''
         - id: collectionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;any[]&gt;'
-  - name: 'getInstalledExtensionByName(string, string, string[])'
+        type: Promise&lt;any[]&gt;
+  - name: getInstalledExtensionByName(string, string, string[])
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.getInstalledExtensionByName
     package: azure-devops-extension-api
     summary: Get an installed extension by its publisher and extension name.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -288,21 +272,22 @@ methods:
           type: string
           description: 'Name of the extension. Example: "ops-tools".'
         - id: assetTypes
-          type: 'string[]'
-          description: |
-            -
+          type: string[]
+          description: >-
+            Determines which files are returned in the files array.  Provide the
+            wildcard '*' to return all files, or a colon separated list to
+            retrieve files with specific asset types.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />&gt;
-  - name: 'getInstalledExtensions(boolean, boolean, string[], boolean)'
+  - name: getInstalledExtensions(boolean, boolean, string[], boolean)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.getInstalledExtensions
     package: azure-devops-extension-api
     summary: List the installed extensions in the account / project collection.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -312,17 +297,19 @@ methods:
       parameters:
         - id: includeDisabledExtensions
           type: boolean
-          description: 'If true (the default), include disabled extensions in the results.'
+          description: If true (the default), include disabled extensions in the results.
         - id: includeErrors
           type: boolean
-          description: 'If true, include installed extensions with errors.'
+          description: If true, include installed extensions with errors.
         - id: assetTypes
-          type: 'string[]'
-          description: '-'
+          type: string[]
+          description: >-
+            Determines which files are returned in the files array.  Provide the
+            wildcard '*' to return all files, or a colon separated list to
+            retrieve files with specific asset types.
         - id: includeInstallationIssues
           type: boolean
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -333,15 +320,13 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getPolicies(userId: string): Promise<UserExtensionPolicy>'
       parameters:
         - id: userId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -352,7 +337,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getRequests(): Promise<RequestedExtension[]>'
@@ -361,12 +345,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.RequestedExtension"
           />[]&gt;
-  - name: 'getStates(boolean, boolean, boolean, boolean)'
+  - name: getStates(boolean, boolean, boolean, boolean)
     uid: azure-devops-extension-api.ExtensionManagementRestClient.getStates
     package: azure-devops-extension-api
     summary: List state and version information for all installed extensions.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -376,7 +359,7 @@ methods:
       parameters:
         - id: includeDisabled
           type: boolean
-          description: 'If true (the default), include disabled extensions in the results.'
+          description: If true (the default), include disabled extensions in the results.
         - id: includeErrors
           type: boolean
           description: >-
@@ -384,11 +367,10 @@ methods:
             results.
         - id: includeInstallationIssues
           type: boolean
-          description: '-'
+          description: ''
         - id: forceRefresh
           type: boolean
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -399,20 +381,18 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getToken(): Promise<string>'
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: 'installExtensionByName(string, string, string)'
+  - name: installExtensionByName(string, string, string)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.installExtensionByName
     package: azure-devops-extension-api
     summary: Install the specified extension into the account / project collection.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -427,14 +407,13 @@ methods:
           description: 'Name of the extension. Example: "ops-tools".'
         - id: version
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />&gt;
-  - name: 'queryCollectionsByName(ExtensionDataCollectionQuery, string, string)'
+  - name: queryCollectionsByName(ExtensionDataCollectionQuery, string, string)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.queryCollectionsByName
     package: azure-devops-extension-api
@@ -443,7 +422,6 @@ methods:
       the token used for authorization must have been issued on behalf of the
       specified extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -455,14 +433,13 @@ methods:
           type: >-
             <xref uid="azure-devops-extension-api.ExtensionDataCollectionQuery"
             />
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
           description: 'Name of the publisher. Example: "fabrikam".'
         - id: extensionName
           type: string
-          description: |
-            Name of the extension. Example: "ops-tools".
+          description: 'Name of the extension. Example: "ops-tools".'
       return:
         description: ''
         type: >-
@@ -473,7 +450,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -482,20 +458,18 @@ methods:
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.InstalledExtensionQuery" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InstalledExtension"
           />[]&gt;
-  - name: 'registerAuthorization(string, string, string)'
+  - name: registerAuthorization(string, string, string)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.registerAuthorization
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -504,14 +478,13 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: registrationId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -523,7 +496,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -534,19 +506,17 @@ methods:
           type: >-
             <xref uid="azure-devops-extension-api.ExtensionAcquisitionRequest"
             />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ExtensionAcquisitionRequest" />&gt;
-  - name: 'requestExtension(string, string, string)'
+  - name: requestExtension(string, string, string)
     uid: azure-devops-extension-api.ExtensionManagementRestClient.requestExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -555,26 +525,24 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: requestMessage
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.RequestedExtension"
           />&gt;
-  - name: 'resolveAllRequests(string, string, string, ExtensionRequestState)'
+  - name: resolveAllRequests(string, string, string, ExtensionRequestState)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.resolveAllRequests
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -584,26 +552,24 @@ methods:
       parameters:
         - id: rejectMessage
           type: string
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: state
           type: <xref uid="azure-devops-extension-api.ExtensionRequestState" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;number&gt;
-  - name: 'resolveRequest(string, string, string, string, ExtensionRequestState)'
+  - name: resolveRequest(string, string, string, string, ExtensionRequestState)
     uid: azure-devops-extension-api.ExtensionManagementRestClient.resolveRequest
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -613,29 +579,27 @@ methods:
       parameters:
         - id: rejectMessage
           type: string
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: requesterId
           type: string
-          description: '-'
+          description: ''
         - id: state
           type: <xref uid="azure-devops-extension-api.ExtensionRequestState" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;number&gt;
-  - name: 'setDocumentByName(any, string, string, string, string, string)'
+  - name: setDocumentByName(any, string, string, string, string, string)
     uid: azure-devops-extension-api.ExtensionManagementRestClient.setDocumentByName
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -645,33 +609,31 @@ methods:
       parameters:
         - id: doc
           type: any
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: scopeType
           type: string
-          description: '-'
+          description: ''
         - id: scopeValue
           type: string
-          description: '-'
+          description: ''
         - id: collectionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;any&gt;
-  - name: 'uninstallExtensionByName(string, string, string, string)'
+  - name: uninstallExtensionByName(string, string, string, string)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.uninstallExtensionByName
     package: azure-devops-extension-api
     summary: Uninstall the specified extension from the account / project collection.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -686,21 +648,19 @@ methods:
           description: 'Name of the extension. Example: "ops-tools".'
         - id: reason
           type: string
-          description: '-'
+          description: ''
         - id: reasonCode
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'updateDocumentByName(any, string, string, string, string, string)'
+  - name: updateDocumentByName(any, string, string, string, string, string)
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.updateDocumentByName
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -710,23 +670,22 @@ methods:
       parameters:
         - id: doc
           type: any
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: scopeType
           type: string
-          description: '-'
+          description: ''
         - id: scopeValue
           type: string
-          description: '-'
+          description: ''
         - id: collectionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;any&gt;
@@ -738,7 +697,6 @@ methods:
       Update an installed extension. Typically this API is used to enable or
       disable an extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -747,8 +705,7 @@ methods:
       parameters:
         - id: extension
           type: <xref uid="azure-devops-extension-api.InstalledExtension" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-

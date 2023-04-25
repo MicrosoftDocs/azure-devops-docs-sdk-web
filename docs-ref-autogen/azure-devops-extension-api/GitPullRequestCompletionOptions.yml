@@ -5,10 +5,25 @@ package: azure-devops-extension-api
 summary: Preferences about how the pull request should be completed.
 fullName: GitPullRequestCompletionOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: autoCompleteIgnoreConfigIds
+    uid: >-
+      azure-devops-extension-api.GitPullRequestCompletionOptions.autoCompleteIgnoreConfigIds
+    package: azure-devops-extension-api
+    summary: >-
+      List of any policy configuration Id's which auto-complete should not wait
+      for. Only applies to optional policies (isBlocking == false).
+      Auto-complete always waits for required policies (isBlocking == true).
+    fullName: autoCompleteIgnoreConfigIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autoCompleteIgnoreConfigIds: number[]'
+      return:
+        description: ''
+        type: number[]
   - name: bypassPolicy
     uid: azure-devops-extension-api.GitPullRequestCompletionOptions.bypassPolicy
     package: azure-devops-extension-api
@@ -17,7 +32,6 @@ properties:
       completed.
     fullName: bypassPolicy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bypassPolicy: boolean'
@@ -27,10 +41,9 @@ properties:
   - name: bypassReason
     uid: azure-devops-extension-api.GitPullRequestCompletionOptions.bypassReason
     package: azure-devops-extension-api
-    summary: 'If policies are bypassed, this reason is stored as to why bypass was used.'
+    summary: If policies are bypassed, this reason is stored as to why bypass was used.
     fullName: bypassReason
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bypassReason: string'
@@ -46,7 +59,6 @@ properties:
       completion.
     fullName: deleteSourceBranch
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deleteSourceBranch: boolean'
@@ -57,10 +69,9 @@ properties:
     uid: >-
       azure-devops-extension-api.GitPullRequestCompletionOptions.mergeCommitMessage
     package: azure-devops-extension-api
-    summary: 'If set, this will be used as the commit message of the merge commit.'
+    summary: If set, this will be used as the commit message of the merge commit.
     fullName: mergeCommitMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeCommitMessage: string'
@@ -74,13 +85,12 @@ properties:
       Specify the strategy used to merge the pull request during completion. If
       MergeStrategy is not set to any value, a no-FF merge will be created if
       SquashMerge == false. If MergeStrategy is not set to any value, the pull
-      request commits will be squash if SquashMerge == true. The SquashMerge
-      member is deprecated. It is recommended that you explicitly set
+      request commits will be squashed if SquashMerge == true. The SquashMerge
+      property is deprecated. It is recommended that you explicitly set
       MergeStrategy in all cases. If an explicit value is provided for
-      MergeStrategy, the SquashMerge member will be ignored.
+      MergeStrategy, the SquashMerge property will be ignored.
     fullName: mergeStrategy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeStrategy: GitPullRequestMergeStrategy'
@@ -91,13 +101,12 @@ properties:
     uid: azure-devops-extension-api.GitPullRequestCompletionOptions.squashMerge
     package: azure-devops-extension-api
     summary: >-
-      SquashMerge is deprecated. You should explicity set the value of
+      SquashMerge is deprecated. You should explicitly set the value of
       MergeStrategy. If MergeStrategy is set to any value, the SquashMerge value
       will be ignored. If MergeStrategy is not set, the merge strategy will be
       no-fast-forward if this flag is false, or squash if true.
     fullName: squashMerge
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'squashMerge: boolean'
@@ -113,7 +122,6 @@ properties:
       request into the next logical state (i.e. Active -\> Resolved)
     fullName: transitionWorkItems
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'transitionWorkItems: boolean'
@@ -129,7 +137,6 @@ properties:
       Used internally.
     fullName: triggeredByAutoComplete
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'triggeredByAutoComplete: boolean'

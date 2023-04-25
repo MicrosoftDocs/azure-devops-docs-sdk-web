@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: ReleaseCreatedEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: project
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'project: ProjectReference'
@@ -28,10 +26,41 @@ properties:
     summary: ''
     fullName: release
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'release: Release'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.Release" />
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.ReleaseCreatedEvent.id
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ReleaseEvent.id](xref:azure-devops-extension-api.ReleaseEvent.id)
+  - name: url
+    uid: azure-devops-extension-api.ReleaseCreatedEvent.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ReleaseEvent.url](xref:azure-devops-extension-api.ReleaseEvent.url)
+extends: <xref uid="azure-devops-extension-api.ReleaseEvent" />

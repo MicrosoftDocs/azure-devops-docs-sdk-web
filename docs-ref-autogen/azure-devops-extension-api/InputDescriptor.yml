@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Describes an input for subscriptions.
 fullName: InputDescriptor
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: The ids of all inputs that the value of this input is dependent on.
     fullName: dependencyInputIds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dependencyInputIds: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: description
     uid: azure-devops-extension-api.InputDescriptor.description
     package: azure-devops-extension-api
     summary: Description of what this input is used for
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -43,7 +40,6 @@ properties:
       header for the container that will include all the inputs in the group.
     fullName: groupName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'groupName: string'
@@ -58,7 +54,6 @@ properties:
       fetched when the value of dependency inputs change.
     fullName: hasDynamicValueInformation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'hasDynamicValueInformation: boolean'
@@ -71,7 +66,6 @@ properties:
     summary: Identifier for the subscription input
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -84,7 +78,6 @@ properties:
     summary: Mode in which the value of this input should be entered
     fullName: inputMode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'inputMode: InputMode'
@@ -99,7 +92,6 @@ properties:
       application key
     fullName: isConfidential
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isConfidential: boolean'
@@ -112,7 +104,6 @@ properties:
     summary: Localized name which can be shown as a label for the subscription input
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -125,13 +116,12 @@ properties:
     summary: Custom properties for the input which can be used by the service provider
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'properties: [key: string]: any'
+      content: 'properties: {[key: string]: any}'
       return:
         description: ''
-        type: '[key: string]\: any'
+        type: '{[key: string]: any}'
   - name: type
     uid: azure-devops-extension-api.InputDescriptor.type
     package: azure-devops-extension-api
@@ -140,7 +130,6 @@ properties:
       InputMode, Validation and Values are optional.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
@@ -155,7 +144,6 @@ properties:
       description.
     fullName: useInDefaultDescription
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'useInDefaultDescription: boolean'
@@ -168,7 +156,6 @@ properties:
     summary: Information to use to validate this input's value
     fullName: validation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'validation: InputValidation'
@@ -181,7 +168,6 @@ properties:
     summary: A hint for input value. It can be used in the UI as the input placeholder.
     fullName: valueHint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'valueHint: string'
@@ -194,7 +180,6 @@ properties:
     summary: Information about possible values for this input
     fullName: values
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'values: InputValues'

@@ -2,13 +2,37 @@
 name: NotificationJobDiagnosticLog
 uid: azure-devops-extension-api.NotificationJobDiagnosticLog
 package: azure-devops-extension-api
-summary: ''
+summary: Abstract base class for all of the diagnostic logs.
 fullName: NotificationJobDiagnosticLog
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: result
+    uid: azure-devops-extension-api.NotificationJobDiagnosticLog.result
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: result
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'result: string'
+      return:
+        description: ''
+        type: string
+  - name: stats
+    uid: azure-devops-extension-api.NotificationJobDiagnosticLog.stats
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: stats
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stats: {[key: string]: function}'
+      return:
+        description: ''
+        type: '{[key: string]: function}'
+inheritedProperties:
   - name: activityId
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.activityId
     package: azure-devops-extension-api
@@ -17,85 +41,96 @@ properties:
       recorded elsewhere.
     fullName: activityId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'activityId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.activityId](xref:azure-devops-extension-api.NotificationDiagnosticLog.activityId)
   - name: description
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.description
     package: azure-devops-extension-api
     summary: ''
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.description](xref:azure-devops-extension-api.NotificationDiagnosticLog.description)
   - name: endTime
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.endTime
     package: azure-devops-extension-api
     summary: ''
     fullName: endTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'endTime: Date'
       return:
         description: ''
         type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.endTime](xref:azure-devops-extension-api.NotificationDiagnosticLog.endTime)
   - name: errors
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.errors
     package: azure-devops-extension-api
     summary: ''
     fullName: errors
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errors: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.errors](xref:azure-devops-extension-api.NotificationDiagnosticLog.errors)
   - name: id
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.id
     package: azure-devops-extension-api
     summary: Unique instance identifier.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.id](xref:azure-devops-extension-api.NotificationDiagnosticLog.id)
   - name: logType
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.logType
     package: azure-devops-extension-api
     summary: ''
     fullName: logType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'logType: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.logType](xref:azure-devops-extension-api.NotificationDiagnosticLog.logType)
   - name: messages
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.messages
     package: azure-devops-extension-api
     summary: ''
     fullName: messages
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'messages: NotificationDiagnosticLogMessage[]'
@@ -104,32 +139,24 @@ properties:
         type: >-
           <xref
           uid="azure-devops-extension-api.NotificationDiagnosticLogMessage" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.messages](xref:azure-devops-extension-api.NotificationDiagnosticLog.messages)
   - name: properties
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.properties
     package: azure-devops-extension-api
     summary: ''
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'properties: [key: string]: string'
+      content: 'properties: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
-  - name: result
-    uid: azure-devops-extension-api.NotificationJobDiagnosticLog.result
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: result
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'result: string'
-      return:
-        description: ''
-        type: string
+        type: '{[key: string]: string}'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.properties](xref:azure-devops-extension-api.NotificationDiagnosticLog.properties)
   - name: source
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.source
     package: azure-devops-extension-api
@@ -139,50 +166,43 @@ properties:
       with the subscription Id encoded.
     fullName: source
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'source: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.source](xref:azure-devops-extension-api.NotificationDiagnosticLog.source)
   - name: startTime
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.startTime
     package: azure-devops-extension-api
     summary: ''
     fullName: startTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'startTime: Date'
       return:
         description: ''
         type: Date
-  - name: stats
-    uid: azure-devops-extension-api.NotificationJobDiagnosticLog.stats
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: stats
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'stats: [key: string]: function'
-      return:
-        description: ''
-        type: '[key: string]\: function'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.startTime](xref:azure-devops-extension-api.NotificationDiagnosticLog.startTime)
   - name: warnings
     uid: azure-devops-extension-api.NotificationJobDiagnosticLog.warnings
     package: azure-devops-extension-api
     summary: ''
     fullName: warnings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'warnings: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [NotificationDiagnosticLog.warnings](xref:azure-devops-extension-api.NotificationDiagnosticLog.warnings)
 extends: <xref uid="azure-devops-extension-api.NotificationDiagnosticLog" />

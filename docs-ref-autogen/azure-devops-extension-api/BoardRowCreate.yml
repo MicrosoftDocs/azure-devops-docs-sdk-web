@@ -5,34 +5,35 @@ package: azure-devops-extension-api
 summary: Describes a row to create on a board.
 fullName: BoardRowCreate
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: name
-    uid: azure-devops-extension-api.BoardRowCreate.name
-    package: azure-devops-extension-api
-    summary: Row name.
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
   - name: nextRowId
     uid: azure-devops-extension-api.BoardRowCreate.nextRowId
     package: azure-devops-extension-api
     summary: 'Next row identifier or supported directive: $first or $last.'
     fullName: nextRowId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'nextRowId: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: name
+    uid: azure-devops-extension-api.BoardRowCreate.name
+    package: azure-devops-extension-api
+    summary: Row name.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BoardRowBase.name](xref:azure-devops-extension-api.BoardRowBase.name)
 extends: <xref uid="azure-devops-extension-api.BoardRowBase" />

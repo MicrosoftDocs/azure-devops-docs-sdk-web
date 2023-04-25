@@ -5,16 +5,14 @@ package: azure-devops-extension-api
 summary: ''
 fullName: IVssIdentityService
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
-  - name: 'addMruIdentitiesAsync(IIdentity[])'
+  - name: addMruIdentitiesAsync(IIdentity[])
     uid: azure-devops-extension-api.IVssIdentityService.addMruIdentitiesAsync
     package: azure-devops-extension-api
     summary: Add a list of identities to the MRU
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -22,17 +20,16 @@ methods:
         Promise<boolean>
       parameters:
         - id: identities
-          type: '<xref uid="azure-devops-extension-api.IIdentity" />[]'
+          type: <xref uid="azure-devops-extension-api.IIdentity" />[]
           description: list of IdentityRefs to add to the MRU
       return:
-        description: 'True if the item was added, false otherwise'
+        description: True if the item was added, false otherwise
         type: Promise&lt;boolean&gt;
-  - name: 'getConnections(IIdentity, boolean)'
+  - name: getConnections(IIdentity, boolean)
     uid: azure-devops-extension-api.IVssIdentityService.getConnections
     package: azure-devops-extension-api
     summary: Gets a list of connections for a given identity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -56,19 +53,17 @@ methods:
     package: azure-devops-extension-api
     summary: Get a list of the Most Recently Used (MRU) identities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getIdentityMruAsync(): Promise<IIdentity[]>'
       return:
         description: list of the Most Recently Used (MRU) identities
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IIdentity" />[]&gt;'
-  - name: 'removeMruIdentitiesAsync(IIdentity[])'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.IIdentity" />[]&gt;
+  - name: removeMruIdentitiesAsync(IIdentity[])
     uid: azure-devops-extension-api.IVssIdentityService.removeMruIdentitiesAsync
     package: azure-devops-extension-api
     summary: Remove a list of identities from the MRU
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -76,10 +71,10 @@ methods:
         Promise<boolean>
       parameters:
         - id: identity
-          type: '<xref uid="azure-devops-extension-api.IIdentity" />[]'
+          type: <xref uid="azure-devops-extension-api.IIdentity" />[]
           description: ''
       return:
-        description: 'True if the item was removed, false otherwise'
+        description: True if the item was removed, false otherwise
         type: Promise&lt;boolean&gt;
   - name: >-
       searchIdentitiesAsync(string, string[], string[], string, any,
@@ -91,7 +86,6 @@ methods:
       filterIdentity callback is added, additionally filter the values before
       returning
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -104,11 +98,11 @@ methods:
           type: string
           description: The query to search the identities type with.
         - id: identityTypes
-          type: 'string[]'
+          type: string[]
           description: The types of identities to search (default "user" and "group")
         - id: operationScopes
-          type: 'string[]'
-          description: 'The scope you would like to search (default "ims", "source")'
+          type: string[]
+          description: The scope you would like to search (default "ims", "source")
         - id: queryTypeHint
           type: string
           description: A hint of what property your query is trying to search
@@ -120,4 +114,4 @@ methods:
           description: A filter passed in to alter the results of the identities found
       return:
         description: The list of filtered identities from the search.
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.IIdentity" />[]&gt;'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.IIdentity" />[]&gt;

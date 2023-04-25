@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: Artifact
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Gets or sets alias.
     fullName: alias
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'alias: string'
@@ -27,25 +25,23 @@ properties:
     package: azure-devops-extension-api
     summary: >-
       Gets or sets definition reference. e.g.
-      \{"project":\{"id":"fed755ea-49c5-4399-acea-fd5b5aa90a6c","name":"myProject"\},"definition":\{"id":"1","name":"mybuildDefinition"\},"connection":\{"id":"1","name":"myConnection"\}\}.
+      {"project":{"id":"fed755ea-49c5-4399-acea-fd5b5aa90a6c","name":"myProject"},"definition":{"id":"1","name":"mybuildDefinition"},"connection":{"id":"1","name":"myConnection"}}.
     fullName: definitionReference
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'definitionReference: [key: string]: ArtifactSourceReference'
+      content: 'definitionReference: {[key: string]: ArtifactSourceReference}'
       return:
         description: ''
         type: >-
-          [key: string]\: <xref
-          uid="azure-devops-extension-api.ArtifactSourceReference" />
+          {[key: string]: <xref
+          uid="azure-devops-extension-api.ArtifactSourceReference" />}
   - name: isPrimary
     uid: azure-devops-extension-api.Artifact.isPrimary
     package: azure-devops-extension-api
     summary: Indicates whether artifact is primary or not.
     fullName: isPrimary
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isPrimary: boolean'
@@ -58,7 +54,6 @@ properties:
     summary: Indicates whether artifact is retained by release or not.
     fullName: isRetained
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isRetained: boolean'
@@ -71,7 +66,6 @@ properties:
     summary: ''
     fullName: sourceId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceId: string'
@@ -87,7 +81,6 @@ properties:
       'ExternalTfsXamlBuild'.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'

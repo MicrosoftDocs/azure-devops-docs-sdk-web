@@ -1,0 +1,112 @@
+### YamlMime:TSType
+name: LibraryWorkItemsDataProviderRequest
+uid: azure-devops-extension-api.LibraryWorkItemsDataProviderRequest
+package: azure-devops-extension-api
+summary: This is the request data contract for LibraryTestCaseDataProvider.
+fullName: LibraryWorkItemsDataProviderRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: columnOptions
+    uid: >-
+      azure-devops-extension-api.LibraryWorkItemsDataProviderRequest.columnOptions
+    package: azure-devops-extension-api
+    summary: Specifies the list of column options to show in test cases table.
+    fullName: columnOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'columnOptions: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: continuationToken
+    uid: >-
+      azure-devops-extension-api.LibraryWorkItemsDataProviderRequest.continuationToken
+    package: azure-devops-extension-api
+    summary: >-
+      The continuation token required for paging of work items. This is required
+      when getting subsequent sets of work items when OrderByField is Id.
+    fullName: continuationToken
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'continuationToken: string'
+      return:
+        description: ''
+        type: string
+  - name: filterValues
+    uid: >-
+      azure-devops-extension-api.LibraryWorkItemsDataProviderRequest.filterValues
+    package: azure-devops-extension-api
+    summary: >-
+      List of filter values to be supplied. Currently supported filters are
+      Title, State, AssignedTo, Priority, AreaPath.
+    fullName: filterValues
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filterValues: TestPlansLibraryWorkItemFilter[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.TestPlansLibraryWorkItemFilter"
+          />[]
+  - name: isAscending
+    uid: azure-devops-extension-api.LibraryWorkItemsDataProviderRequest.isAscending
+    package: azure-devops-extension-api
+    summary: >-
+      Whether the data is to be sorted in ascending or descending order. When
+      not supplied, defaults to descending.
+    fullName: isAscending
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isAscending: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: libraryQueryType
+    uid: >-
+      azure-devops-extension-api.LibraryWorkItemsDataProviderRequest.libraryQueryType
+    package: azure-devops-extension-api
+    summary: The type of query to run.
+    fullName: libraryQueryType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'libraryQueryType: TestPlansLibraryQuery'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TestPlansLibraryQuery" />
+  - name: orderByField
+    uid: >-
+      azure-devops-extension-api.LibraryWorkItemsDataProviderRequest.orderByField
+    package: azure-devops-extension-api
+    summary: >-
+      Work item field on which to order the results. When not supplied, defaults
+      to work item IDs.
+    fullName: orderByField
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'orderByField: string'
+      return:
+        description: ''
+        type: string
+  - name: workItemIds
+    uid: azure-devops-extension-api.LibraryWorkItemsDataProviderRequest.workItemIds
+    package: azure-devops-extension-api
+    summary: >-
+      List of work items to query for field details. This is required when
+      getting subsequent sets of work item fields when OrderByField is other
+      than Id.
+    fullName: workItemIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItemIds: number[]'
+      return:
+        description: ''
+        type: number[]

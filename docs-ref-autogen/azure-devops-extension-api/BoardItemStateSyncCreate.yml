@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Describes a board item state sync to create on a board.
 fullName: BoardItemStateSyncCreate
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,26 +14,28 @@ properties:
     summary: The Item type.
     fullName: itemType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'itemType: string'
       return:
         description: ''
         type: string
+inheritedProperties:
   - name: stateValue
     uid: azure-devops-extension-api.BoardItemStateSyncCreate.stateValue
     package: azure-devops-extension-api
     summary: The state value that will be synced to.
     fullName: stateValue
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stateValue: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubTypeAndStateValue.stateValue](xref:azure-devops-extension-api.SubTypeAndStateValue.stateValue)
   - name: subType
     uid: azure-devops-extension-api.BoardItemStateSyncCreate.subType
     package: azure-devops-extension-api
@@ -43,11 +44,13 @@ properties:
       item.
     fullName: subType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subType: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SubTypeAndStateValue.subType](xref:azure-devops-extension-api.SubTypeAndStateValue.subType)
 extends: <xref uid="azure-devops-extension-api.SubTypeAndStateValue" />

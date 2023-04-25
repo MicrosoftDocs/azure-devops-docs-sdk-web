@@ -2,10 +2,11 @@
 name: BoardItemReference
 uid: azure-devops-extension-api.BoardItemReference
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Provides properties that describe an item's source identifier and type in a
+  board.
 fullName: BoardItemReference
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,36 +16,9 @@ properties:
     summary: Board item identifier. Unique for each item in the board.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
-      return:
-        description: ''
-        type: string
-  - name: itemSourceId
-    uid: azure-devops-extension-api.BoardItemReference.itemSourceId
-    package: azure-devops-extension-api
-    summary: Item id.
-    fullName: itemSourceId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'itemSourceId: string'
-      return:
-        description: ''
-        type: string
-  - name: itemType
-    uid: azure-devops-extension-api.BoardItemReference.itemType
-    package: azure-devops-extension-api
-    summary: Item type.
-    fullName: itemType
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'itemType: string'
       return:
         description: ''
         type: string
@@ -54,11 +28,41 @@ properties:
     summary: Full http link to the resource.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: itemSourceId
+    uid: azure-devops-extension-api.BoardItemReference.itemSourceId
+    package: azure-devops-extension-api
+    summary: Item id.
+    fullName: itemSourceId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'itemSourceId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BoardItemSourceIdAndType.itemSourceId](xref:azure-devops-extension-api.BoardItemSourceIdAndType.itemSourceId)
+  - name: itemType
+    uid: azure-devops-extension-api.BoardItemReference.itemType
+    package: azure-devops-extension-api
+    summary: Item type.
+    fullName: itemType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'itemType: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BoardItemSourceIdAndType.itemType](xref:azure-devops-extension-api.BoardItemSourceIdAndType.itemType)
 extends: <xref uid="azure-devops-extension-api.BoardItemSourceIdAndType" />
