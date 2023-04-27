@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Dialog Props specifying how it will be rendered by the service
 fullName: IGlobalDialog
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: Props to pass to buttons in the footer.
     fullName: buttonProps
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'buttonProps?: Array<Object>'
+      content: 'buttonProps?: Object[]'
       return:
         description: ''
-        type: Array&lt;Object&gt;
+        type: Object[]
   - name: closeButtonProps
     uid: azure-devops-extension-api.IGlobalDialog.closeButtonProps
     package: azure-devops-extension-api
     summary: Props to pass to the close button.
     fullName: closeButtonProps
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'closeButtonProps?: Object'
@@ -41,7 +38,6 @@ properties:
     summary: 'Props (type: ICustomDialogProps) to pass to the custom contribution.'
     fullName: contentProperties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'contentProperties?: Object'
@@ -56,7 +52,6 @@ properties:
       with contributionId.
     fullName: contributionConfiguration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'contributionConfiguration?: Object'
@@ -71,7 +66,6 @@ properties:
       customized dialog.
     fullName: contributionId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'contributionId?: string'
@@ -84,7 +78,6 @@ properties:
     summary: The text of the dialog message. Ignored if contributionId is specified.
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message?: string'
@@ -97,7 +90,6 @@ properties:
     summary: The format to use to replace links within the message.
     fullName: messageFormat
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'messageFormat?: string'
@@ -110,20 +102,18 @@ properties:
     summary: Links to be formatted into the message.
     fullName: messageLinks
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'messageLinks?: IGlobalMessageLink[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.IGlobalMessageLink" />[]'
+        type: <xref uid="azure-devops-extension-api.IGlobalMessageLink" />[]
   - name: onDismiss
     uid: azure-devops-extension-api.IGlobalDialog.onDismiss
     package: azure-devops-extension-api
     summary: Method that is called when the dialog is dismissed.
     fullName: onDismiss
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onDismiss?: () => void'
@@ -136,7 +126,6 @@ properties:
     summary: The priority of the dialog determines if it will be shown over others.
     fullName: priority
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'priority?: number'
@@ -149,7 +138,6 @@ properties:
     summary: The id used to check if the dialog has been dismissed.
     fullName: settingId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'settingId?: string'
@@ -162,7 +150,6 @@ properties:
     summary: The title of the dialog.
     fullName: title
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'title?: string'

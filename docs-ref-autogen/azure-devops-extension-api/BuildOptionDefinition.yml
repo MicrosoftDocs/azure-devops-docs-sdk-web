@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents an optional behavior that can be applied to a build definition.
 fullName: BuildOptionDefinition
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The description.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -28,46 +26,30 @@ properties:
     summary: The list of input groups defined for the build option.
     fullName: groups
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'groups: BuildOptionGroupDefinition[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.BuildOptionGroupDefinition" />[]'
-  - name: id
-    uid: azure-devops-extension-api.BuildOptionDefinition.id
-    package: azure-devops-extension-api
-    summary: The ID of the referenced build option.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: string'
-      return:
-        description: ''
-        type: string
+        type: <xref uid="azure-devops-extension-api.BuildOptionGroupDefinition" />[]
   - name: inputs
     uid: azure-devops-extension-api.BuildOptionDefinition.inputs
     package: azure-devops-extension-api
     summary: The list of inputs defined for the build option.
     fullName: inputs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'inputs: BuildOptionInputDefinition[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.BuildOptionInputDefinition" />[]'
+        type: <xref uid="azure-devops-extension-api.BuildOptionInputDefinition" />[]
   - name: name
     uid: azure-devops-extension-api.BuildOptionDefinition.name
     package: azure-devops-extension-api
     summary: The name of the build option.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -82,11 +64,26 @@ properties:
       applied.
     fullName: ordinal
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'ordinal: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.BuildOptionDefinition.id
+    package: azure-devops-extension-api
+    summary: The ID of the referenced build option.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildOptionDefinitionReference.id](xref:azure-devops-extension-api.BuildOptionDefinitionReference.id)
 extends: <xref uid="azure-devops-extension-api.BuildOptionDefinitionReference" />

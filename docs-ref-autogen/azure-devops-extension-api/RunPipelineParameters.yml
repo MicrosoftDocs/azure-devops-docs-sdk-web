@@ -1,0 +1,87 @@
+### YamlMime:TSType
+name: RunPipelineParameters
+uid: azure-devops-extension-api.RunPipelineParameters
+package: azure-devops-extension-api
+summary: Settings which influence pipeline runs.
+fullName: RunPipelineParameters
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: previewRun
+    uid: azure-devops-extension-api.RunPipelineParameters.previewRun
+    package: azure-devops-extension-api
+    summary: >-
+      If true, don't actually create a new run. Instead, return the final YAML
+      document after parsing templates.
+    fullName: previewRun
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'previewRun: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: resources
+    uid: azure-devops-extension-api.RunPipelineParameters.resources
+    package: azure-devops-extension-api
+    summary: The resources the run requires.
+    fullName: resources
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resources: RunResourcesParameters'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.RunResourcesParameters" />
+  - name: stagesToSkip
+    uid: azure-devops-extension-api.RunPipelineParameters.stagesToSkip
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: stagesToSkip
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stagesToSkip: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: templateParameters
+    uid: azure-devops-extension-api.RunPipelineParameters.templateParameters
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: templateParameters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'templateParameters: {[key: string]: string}'
+      return:
+        description: ''
+        type: '{[key: string]: string}'
+  - name: variables
+    uid: azure-devops-extension-api.RunPipelineParameters.variables
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: variables
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'variables: {[key: string]: Variable}'
+      return:
+        description: ''
+        type: '{[key: string]: <xref uid="azure-devops-extension-api.Variable" />}'
+  - name: yamlOverride
+    uid: azure-devops-extension-api.RunPipelineParameters.yamlOverride
+    package: azure-devops-extension-api
+    summary: >-
+      If you use the preview run option, you may optionally supply different
+      YAML. This allows you to preview the final YAML document without
+      committing a changed file.
+    fullName: yamlOverride
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'yamlOverride: string'
+      return:
+        description: ''
+        type: string

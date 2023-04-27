@@ -5,10 +5,9 @@ package: azure-devops-extension-api
 summary: Real time event (SignalR) for deleted statuses on a pull request
 fullName: StatusesDeletedEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
-properties:
+inheritedProperties:
   - name: eventId
     uid: azure-devops-extension-api.StatusesDeletedEvent.eventId
     package: azure-devops-extension-api
@@ -17,24 +16,28 @@ properties:
       client and server.
     fullName: eventId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealTimePullRequestEvent.eventId](xref:azure-devops-extension-api.RealTimePullRequestEvent.eventId)
   - name: pullRequestId
     uid: azure-devops-extension-api.StatusesDeletedEvent.pullRequestId
     package: azure-devops-extension-api
     summary: The id of the pull request this event was generated for.
     fullName: pullRequestId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'pullRequestId: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealTimePullRequestEvent.pullRequestId](xref:azure-devops-extension-api.RealTimePullRequestEvent.pullRequestId)
 extends: <xref uid="azure-devops-extension-api.RealTimePullRequestEvent" />

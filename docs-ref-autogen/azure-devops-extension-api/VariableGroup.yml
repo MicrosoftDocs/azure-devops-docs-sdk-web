@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: A variable group is a collection of related variables.
 fullName: VariableGroup
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Gets or sets the identity who created the variable group.
     fullName: createdBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdBy: IdentityRef'
@@ -28,7 +26,6 @@ properties:
     summary: Gets or sets the time when variable group was created.
     fullName: createdOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdOn: Date'
@@ -41,7 +38,6 @@ properties:
     summary: Gets or sets description of the variable group.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -54,7 +50,6 @@ properties:
     summary: Gets or sets id of the variable group.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
@@ -67,7 +62,6 @@ properties:
     summary: Indicates whether variable group is shared with other projects or not.
     fullName: isShared
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isShared: boolean'
@@ -80,7 +74,6 @@ properties:
     summary: Gets or sets the identity who modified the variable group.
     fullName: modifiedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'modifiedBy: IdentityRef'
@@ -93,7 +86,6 @@ properties:
     summary: Gets or sets the time when variable group was modified
     fullName: modifiedOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'modifiedOn: Date'
@@ -106,7 +98,6 @@ properties:
     summary: Gets or sets name of the variable group.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -119,7 +110,6 @@ properties:
     summary: Gets or sets provider data.
     fullName: providerData
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'providerData: VariableGroupProviderData'
@@ -132,7 +122,6 @@ properties:
     summary: Gets or sets type of the variable group.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
@@ -147,7 +136,6 @@ properties:
       projects.
     fullName: variableGroupProjectReferences
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'variableGroupProjectReferences: VariableGroupProjectReference[]'
@@ -162,12 +150,11 @@ properties:
     summary: Gets or sets variables contained in the variable group.
     fullName: variables
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'variables: [key: string]: VariableValue'
+      content: 'variables: {[key: string]: VariableValue}'
       return:
         description: ''
         type: >-
-          [key: string]\: <xref uid="azure-devops-extension-api.VariableValue"
-          />
+          {[key: string]: <xref uid="azure-devops-extension-api.VariableValue"
+          />}

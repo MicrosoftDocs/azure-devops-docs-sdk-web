@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Collection of comments.
 fullName: WorkItemComments
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: Comments collection.
     fullName: comments
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'comments: WorkItemComment[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.WorkItemComment" />[]'
+        type: <xref uid="azure-devops-extension-api.WorkItemComment" />[]
   - name: count
     uid: azure-devops-extension-api.WorkItemComments.count
     package: azure-devops-extension-api
     summary: The count of comments.
     fullName: count
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'count: number'
@@ -41,7 +38,6 @@ properties:
     summary: Count of comments from the revision.
     fullName: fromRevisionCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fromRevisionCount: number'
@@ -54,24 +50,26 @@ properties:
     summary: Total count of comments.
     fullName: totalCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'totalCount: number'
       return:
         description: ''
         type: number
+inheritedProperties:
   - name: url
     uid: azure-devops-extension-api.WorkItemComments.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

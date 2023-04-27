@@ -5,30 +5,15 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GitResolutionMergeContent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: author
-    uid: azure-devops-extension-api.GitResolutionMergeContent.author
-    package: azure-devops-extension-api
-    summary: User who created the resolution.
-    fullName: author
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'author: IdentityRef'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
   - name: mergeType
     uid: azure-devops-extension-api.GitResolutionMergeContent.mergeType
     package: azure-devops-extension-api
     summary: ''
     fullName: mergeType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mergeType: GitResolutionMergeType'
@@ -41,7 +26,6 @@ properties:
     summary: ''
     fullName: userMergedBlob
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'userMergedBlob: GitBlobRef'
@@ -54,11 +38,26 @@ properties:
     summary: ''
     fullName: userMergedContent
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'userMergedContent: number[]'
       return:
         description: ''
-        type: 'number[]'
+        type: number[]
+inheritedProperties:
+  - name: author
+    uid: azure-devops-extension-api.GitResolutionMergeContent.author
+    package: azure-devops-extension-api
+    summary: User who created the resolution.
+    fullName: author
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'author: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitResolution.author](xref:azure-devops-extension-api.GitResolution.author)
 extends: <xref uid="azure-devops-extension-api.GitResolution" />

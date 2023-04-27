@@ -2,10 +2,11 @@
 name: ReleaseRestClient
 uid: azure-devops-extension-api.ReleaseRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: ReleaseRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ReleaseRestClient(options: IVssRestClientOptions)'
@@ -29,7 +29,6 @@ properties:
     summary: ''
     fullName: RESOURCE_AREA_ID
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
@@ -37,12 +36,11 @@ properties:
         description: ''
         type: string
 methods:
-  - name: 'addDefinitionTag(string, number, string)'
+  - name: addDefinitionTag(string, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.addDefinitionTag
     package: azure-devops-extension-api
     summary: Adds a tag to a definition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -54,20 +52,18 @@ methods:
           description: Project ID or project name
         - id: releaseDefinitionId
           type: number
-          description: '-'
+          description: ''
         - id: tag
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
-  - name: 'addDefinitionTags(string[], string, number)'
+        type: Promise&lt;string[]&gt;
+  - name: addDefinitionTags(string[], string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.addDefinitionTags
     package: azure-devops-extension-api
     summary: Adds multiple tags to a definition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -75,24 +71,22 @@ methods:
         releaseDefinitionId: number): Promise<string[]>
       parameters:
         - id: tags
-          type: 'string[]'
-          description: '-'
+          type: string[]
+          description: ''
         - id: project
           type: string
           description: Project ID or project name
         - id: releaseDefinitionId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
-  - name: 'addReleaseTag(string, number, string)'
+        type: Promise&lt;string[]&gt;
+  - name: addReleaseTag(string, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.addReleaseTag
     package: azure-devops-extension-api
     summary: Adds a tag to a releaseId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -104,20 +98,18 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: tag
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
-  - name: 'addReleaseTags(string[], string, number)'
+        type: Promise&lt;string[]&gt;
+  - name: addReleaseTags(string[], string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.addReleaseTags
     package: azure-devops-extension-api
     summary: Adds tag to a release
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -125,18 +117,17 @@ methods:
         number): Promise<string[]>
       parameters:
         - id: tags
-          type: 'string[]'
-          description: '-'
+          type: string[]
+          description: ''
         - id: project
           type: string
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
+        type: Promise&lt;string[]&gt;
   - name: >-
       createDefinitionEnvironmentTemplate(ReleaseDefinitionEnvironmentTemplate,
       string)
@@ -145,7 +136,6 @@ methods:
     package: azure-devops-extension-api
     summary: Creates a definition environment template
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -161,20 +151,18 @@ methods:
           description: Definition environment template to create
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReleaseDefinitionEnvironmentTemplate"
           />&gt;
-  - name: 'createFavorites(FavoriteItem[], string, string, string)'
+  - name: createFavorites(FavoriteItem[], string, string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.createFavorites
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -182,29 +170,27 @@ methods:
         scope: string, identityId?: string): Promise<FavoriteItem[]>
       parameters:
         - id: favoriteItems
-          type: '<xref uid="azure-devops-extension-api.FavoriteItem" />[]'
-          description: '-'
+          type: <xref uid="azure-devops-extension-api.FavoriteItem" />[]
+          description: ''
         - id: project
           type: string
           description: Project ID or project name
         - id: scope
           type: string
-          description: '-'
+          description: ''
         - id: identityId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.FavoriteItem"
           />[]&gt;
-  - name: 'createFolder(Folder, string, string)'
+  - name: createFolder(Folder, string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.createFolder
     package: azure-devops-extension-api
     summary: Creates a new folder.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -219,17 +205,15 @@ methods:
           description: Project ID or project name
         - id: path
           type: string
-          description: |
-            Path of the folder.
+          description: Path of the folder.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Folder" />&gt;
-  - name: 'createRelease(ReleaseStartMetadata, string)'
+  - name: createRelease(ReleaseStartMetadata, string)
     uid: azure-devops-extension-api.ReleaseRestClient.createRelease
     package: azure-devops-extension-api
     summary: Create a release.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -241,17 +225,15 @@ methods:
           description: Metadata to create a release.
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Release" />&gt;
-  - name: 'createReleaseDefinition(ReleaseDefinition, string)'
+  - name: createReleaseDefinition(ReleaseDefinition, string)
     uid: azure-devops-extension-api.ReleaseRestClient.createReleaseDefinition
     package: azure-devops-extension-api
     summary: Create a release definition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -263,20 +245,18 @@ methods:
           description: release definition object to create.
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseDefinition"
           />&gt;
-  - name: 'deleteDefinitionEnvironmentTemplate(string, string)'
+  - name: deleteDefinitionEnvironmentTemplate(string, string)
     uid: >-
       azure-devops-extension-api.ReleaseRestClient.deleteDefinitionEnvironmentTemplate
     package: azure-devops-extension-api
     summary: Delete a definition environment template
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -288,17 +268,15 @@ methods:
           description: Project ID or project name
         - id: templateId
           type: string
-          description: |
-            Id of the definition environment template
+          description: Id of the definition environment template
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteDefinitionTag(string, number, string)'
+  - name: deleteDefinitionTag(string, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.deleteDefinitionTag
     package: azure-devops-extension-api
     summary: Deletes a tag from a definition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -310,20 +288,18 @@ methods:
           description: Project ID or project name
         - id: releaseDefinitionId
           type: number
-          description: '-'
+          description: ''
         - id: tag
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
-  - name: 'deleteFavorites(string, string, string, string)'
+        type: Promise&lt;string[]&gt;
+  - name: deleteFavorites(string, string, string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.deleteFavorites
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -335,25 +311,23 @@ methods:
           description: Project ID or project name
         - id: scope
           type: string
-          description: '-'
+          description: ''
         - id: identityId
           type: string
-          description: '-'
+          description: ''
         - id: favoriteItemIds
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteFolder(string, string)'
+  - name: deleteFolder(string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.deleteFolder
     package: azure-devops-extension-api
     summary: >-
       Deletes a definition folder for given folder name and path and all it's
       existing definitions.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function deleteFolder(project: string, path: string): Promise<void>'
@@ -363,17 +337,15 @@ methods:
           description: Project ID or project name
         - id: path
           type: string
-          description: |
-            Path of the folder to delete.
+          description: Path of the folder to delete.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteRelease(string, number, string)'
+  - name: deleteRelease(string, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.deleteRelease
     package: azure-devops-extension-api
     summary: Soft delete a release
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -388,17 +360,15 @@ methods:
           description: Id of the release.
         - id: comment
           type: string
-          description: |
-            Comment for deleting a release.
+          description: Comment for deleting a release.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteReleaseDefinition(string, number, string, boolean)'
+  - name: deleteReleaseDefinition(string, number, string, boolean)
     uid: azure-devops-extension-api.ReleaseRestClient.deleteReleaseDefinition
     package: azure-devops-extension-api
     summary: Delete a release definition.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -416,18 +386,17 @@ methods:
           description: Comment for deleting a release definition.
         - id: forceDelete
           type: boolean
-          description: >
+          description: >-
             'true' to automatically cancel any in-progress release deployments
             and proceed with release definition deletion . Default is 'false'.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteReleaseTag(string, number, string)'
+  - name: deleteReleaseTag(string, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.deleteReleaseTag
     package: azure-devops-extension-api
     summary: Deletes a tag from a release
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -439,20 +408,18 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: tag
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
-  - name: 'getAgentArtifactDefinitions(string, number)'
+        type: Promise&lt;string[]&gt;
+  - name: getAgentArtifactDefinitions(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getAgentArtifactDefinitions
     package: azure-devops-extension-api
     summary: Returns the artifact details that automation agent requires
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -464,19 +431,17 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AgentArtifactDefinition" />[]&gt;
-  - name: 'getApproval(string, number, boolean)'
+  - name: getApproval(string, number, boolean)
     uid: azure-devops-extension-api.ReleaseRestClient.getApproval
     package: azure-devops-extension-api
     summary: Get an approval.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -491,19 +456,17 @@ methods:
           description: Id of the approval.
         - id: includeHistory
           type: boolean
-          description: |
-            'true' to include history of the approval. Default is 'false'.
+          description: '''true'' to include history of the approval. Default is ''false''.'
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseApproval"
           />&gt;
-  - name: 'getApprovalHistory(string, number)'
+  - name: getApprovalHistory(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getApprovalHistory
     package: azure-devops-extension-api
     summary: Get approval history.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -515,8 +478,7 @@ methods:
           description: Project ID or project name
         - id: approvalStepId
           type: number
-          description: |
-            Id of the approval.
+          description: Id of the approval.
       return:
         description: ''
         type: >-
@@ -529,7 +491,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a list of approvals
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -537,7 +498,7 @@ methods:
         statusFilter?: ApprovalStatus, releaseIdsFilter?: number[], typeFilter?:
         ApprovalType, top?: number, continuationToken?: number, queryOrder?:
         ReleaseQueryOrder, includeMyGroupApprovals?: boolean):
-        Promise<ReleaseApproval[]>
+        Promise<PagedList<ReleaseApproval>>
       parameters:
         - id: project
           type: string
@@ -549,7 +510,7 @@ methods:
           type: <xref uid="azure-devops-extension-api.ApprovalStatus" />
           description: Approvals with this status. Default is 'pending'.
         - id: releaseIdsFilter
-          type: 'number[]'
+          type: number[]
           description: >-
             Approvals for release id(s) mentioned in the filter. Multiple
             releases can be mentioned by separating them with ',' e.g.
@@ -570,19 +531,18 @@ methods:
             is 'descending'.
         - id: includeMyGroupApprovals
           type: boolean
-          description: |
-            'true' to include my group approvals. Default is 'false'.
+          description: '''true'' to include my group approvals. Default is ''false''.'
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.ReleaseApproval"
-          />[]&gt;
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.ReleaseApproval"
+          />&gt;&gt;
   - name: getArtifactTypeDefinitions(string)
     uid: azure-devops-extension-api.ReleaseRestClient.getArtifactTypeDefinitions
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -591,19 +551,17 @@ methods:
       parameters:
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ArtifactTypeDefinition" />[]&gt;
-  - name: 'getArtifactVersions(string, number)'
+  - name: getArtifactVersions(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getArtifactVersions
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -615,19 +573,17 @@ methods:
           description: Project ID or project name
         - id: releaseDefinitionId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ArtifactVersionQueryResult" />&gt;
-  - name: 'getArtifactVersionsForSources(Artifact[], string)'
+  - name: getArtifactVersionsForSources(Artifact[], string)
     uid: azure-devops-extension-api.ReleaseRestClient.getArtifactVersionsForSources
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -635,23 +591,21 @@ methods:
         string): Promise<ArtifactVersionQueryResult>
       parameters:
         - id: artifacts
-          type: '<xref uid="azure-devops-extension-api.Artifact" />[]'
-          description: '-'
+          type: <xref uid="azure-devops-extension-api.Artifact" />[]
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ArtifactVersionQueryResult" />&gt;
-  - name: 'getAutoTriggerIssues(string, string, string, string)'
+  - name: getAutoTriggerIssues(string, string, string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getAutoTriggerIssues
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -661,28 +615,26 @@ methods:
       parameters:
         - id: artifactType
           type: string
-          description: '-'
+          description: ''
         - id: sourceId
           type: string
-          description: '-'
+          description: ''
         - id: artifactVersionId
           type: string
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AutoTriggerIssue"
           />[]&gt;
-  - name: 'getDefinitionEnvironments(string, string, string[])'
+  - name: getDefinitionEnvironments(string, string, string[])
     uid: azure-devops-extension-api.ReleaseRestClient.getDefinitionEnvironments
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -695,24 +647,22 @@ methods:
           description: Project ID or project name
         - id: taskGroupId
           type: string
-          description: '-'
+          description: ''
         - id: propertyFilters
-          type: 'string[]'
-          description: |
-            -
+          type: string[]
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.DefinitionEnvironmentReference"
           />[]&gt;
-  - name: 'getDefinitionEnvironmentTemplate(string, string)'
+  - name: getDefinitionEnvironmentTemplate(string, string)
     uid: >-
       azure-devops-extension-api.ReleaseRestClient.getDefinitionEnvironmentTemplate
     package: azure-devops-extension-api
     summary: Gets a definition environment template
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -724,20 +674,18 @@ methods:
           description: Project ID or project name
         - id: templateId
           type: string
-          description: |
-            Id of the definition environment template
+          description: Id of the definition environment template
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReleaseDefinitionEnvironmentTemplate"
           />&gt;
-  - name: 'getDefinitionRevision(string, number, number)'
+  - name: getDefinitionRevision(string, number, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getDefinitionRevision
     package: azure-devops-extension-api
     summary: Get release definition for a given definitionId and revision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -752,17 +700,15 @@ methods:
           description: Id of the definition.
         - id: revision
           type: number
-          description: |
-            Id of the revision.
+          description: Id of the revision.
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: 'getDefinitionTags(string, number)'
+  - name: getDefinitionTags(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getDefinitionTags
     package: azure-devops-extension-api
     summary: Gets the tags for a definition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -774,19 +720,17 @@ methods:
           description: Project ID or project name
         - id: releaseDefinitionId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
-  - name: 'getDeploymentBadge(string, number, number, string)'
+        type: Promise&lt;string[]&gt;
+  - name: getDeploymentBadge(string, number, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getDeploymentBadge
     package: azure-devops-extension-api
     summary: >-
       Gets a badge that indicates the status of the most recent deployment for
       an environment.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -804,8 +748,7 @@ methods:
           description: The ID of the Environment.
         - id: branchName
           type: string
-          description: |
-            The name of the branch.
+          description: The name of the branch.
       return:
         description: ''
         type: Promise&lt;string&gt;
@@ -817,7 +760,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -827,67 +769,68 @@ methods:
         operationStatus?: DeploymentOperationStatus, latestAttemptsOnly?:
         boolean, queryOrder?: ReleaseQueryOrder, top?: number,
         continuationToken?: number, createdFor?: string, minStartedTime?: Date,
-        maxStartedTime?: Date, sourceBranch?: string): Promise<Deployment[]>
+        maxStartedTime?: Date, sourceBranch?: string):
+        Promise<PagedList<Deployment>>
       parameters:
         - id: project
           type: string
           description: Project ID or project name
         - id: definitionId
           type: number
-          description: '-'
+          description: ''
         - id: definitionEnvironmentId
           type: number
-          description: '-'
+          description: ''
         - id: createdBy
           type: string
-          description: '-'
+          description: ''
         - id: minModifiedTime
           type: Date
-          description: '-'
+          description: ''
         - id: maxModifiedTime
           type: Date
-          description: '-'
+          description: ''
         - id: deploymentStatus
           type: <xref uid="azure-devops-extension-api.DeploymentStatus" />
-          description: '-'
+          description: ''
         - id: operationStatus
           type: <xref uid="azure-devops-extension-api.DeploymentOperationStatus" />
-          description: '-'
+          description: ''
         - id: latestAttemptsOnly
           type: boolean
-          description: '-'
+          description: ''
         - id: queryOrder
           type: <xref uid="azure-devops-extension-api.ReleaseQueryOrder" />
-          description: '-'
+          description: ''
         - id: top
           type: number
-          description: '-'
+          description: ''
         - id: continuationToken
           type: number
-          description: '-'
+          description: ''
         - id: createdFor
           type: string
-          description: '-'
+          description: ''
         - id: minStartedTime
           type: Date
-          description: '-'
+          description: ''
         - id: maxStartedTime
           type: Date
-          description: '-'
+          description: ''
         - id: sourceBranch
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Deployment" />[]&gt;'
-  - name: 'getDeploymentsForMultipleEnvironments(DeploymentQueryParameters, string)'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.Deployment" />&gt;&gt;
+  - name: getDeploymentsForMultipleEnvironments(DeploymentQueryParameters, string)
     uid: >-
       azure-devops-extension-api.ReleaseRestClient.getDeploymentsForMultipleEnvironments
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -896,20 +839,18 @@ methods:
       parameters:
         - id: queryParameters
           type: <xref uid="azure-devops-extension-api.DeploymentQueryParameters" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Deployment" />[]&gt;'
-  - name: 'getFavorites(string, string, string)'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Deployment" />[]&gt;
+  - name: getFavorites(string, string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getFavorites
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -921,11 +862,10 @@ methods:
           description: Project ID or project name
         - id: scope
           type: string
-          description: '-'
+          description: ''
         - id: identityId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -936,24 +876,21 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getFlightAssignments(flightName?: string): Promise<string[]>'
       parameters:
         - id: flightName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
-  - name: 'getFolders(string, string, FolderPathQueryOrder)'
+        type: Promise&lt;string[]&gt;
+  - name: getFolders(string, string, FolderPathQueryOrder)
     uid: azure-devops-extension-api.ReleaseRestClient.getFolders
     package: azure-devops-extension-api
     summary: Gets folders.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -968,17 +905,15 @@ methods:
           description: Path of the folder.
         - id: queryOrder
           type: <xref uid="azure-devops-extension-api.FolderPathQueryOrder" />
-          description: |
-            Gets the results in the defined order. Default is 'None'.
+          description: Gets the results in the defined order. Default is 'None'.
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Folder" />[]&gt;'
-  - name: 'getGateLog(string, number, number, number, number)'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Folder" />[]&gt;
+  - name: getGateLog(string, number, number, number, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getGateLog
     package: azure-devops-extension-api
     summary: Gets gate logs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -999,17 +934,15 @@ methods:
           description: Id of the gate.
         - id: taskId
           type: number
-          description: |
-            ReleaseTask Id for the log.
+          description: ReleaseTask Id for the log.
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: 'getInputValues(InputValuesQuery, string)'
+  - name: getInputValues(InputValuesQuery, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getInputValues
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1018,22 +951,20 @@ methods:
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.InputValuesQuery" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.InputValuesQuery"
           />&gt;
-  - name: 'getIssues(string, number, string)'
+  - name: getIssues(string, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getIssues
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1045,22 +976,20 @@ methods:
           description: Project ID or project name
         - id: buildId
           type: number
-          description: '-'
+          description: ''
         - id: sourceId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AutoTriggerIssue"
           />[]&gt;
-  - name: 'getLog(string, number, number, number, number)'
+  - name: getLog(string, number, number, number, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getLog
     package: azure-devops-extension-api
     summary: Gets logs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1081,17 +1010,15 @@ methods:
           description: ReleaseTask Id for the log.
         - id: attemptId
           type: number
-          description: |
-            Id of the attempt.
+          description: Id of the attempt.
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: 'getLogs(string, number)'
+  - name: getLogs(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getLogs
     package: azure-devops-extension-api
     summary: Get logs for a release Id.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1103,17 +1030,15 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            Id of the release.
+          description: Id of the release.
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getManualIntervention(string, number, number)'
+  - name: getManualIntervention(string, number, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getManualIntervention
     package: azure-devops-extension-api
     summary: Get manual intervention for a given release and manual intervention id.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1128,19 +1053,17 @@ methods:
           description: Id of the release.
         - id: manualInterventionId
           type: number
-          description: |
-            Id of the manual intervention.
+          description: Id of the manual intervention.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ManualIntervention"
           />&gt;
-  - name: 'getManualInterventions(string, number)'
+  - name: getManualInterventions(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getManualInterventions
     package: azure-devops-extension-api
     summary: List all manual interventions for a given release.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1152,19 +1075,17 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            Id of the release.
+          description: Id of the release.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ManualIntervention"
           />[]&gt;
-  - name: 'getMetrics(string, Date)'
+  - name: getMetrics(string, Date)
     uid: azure-devops-extension-api.ReleaseRestClient.getMetrics
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1176,11 +1097,44 @@ methods:
           description: Project ID or project name
         - id: minMetricsTime
           type: Date
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Metric" />[]&gt;'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Metric" />[]&gt;
+  - name: getOrgPipelineReleaseSettings()
+    uid: azure-devops-extension-api.ReleaseRestClient.getOrgPipelineReleaseSettings
+    package: azure-devops-extension-api
+    summary: Gets Org pipeline release settings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getOrgPipelineReleaseSettings():
+        Promise<OrgPipelineReleaseSettings>
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.OrgPipelineReleaseSettings" />&gt;
+  - name: getPipelineReleaseSettings(string)
+    uid: azure-devops-extension-api.ReleaseRestClient.getPipelineReleaseSettings
+    package: azure-devops-extension-api
+    summary: Gets pipeline release settings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPipelineReleaseSettings(project: string):
+        Promise<ProjectPipelineReleaseSettings>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.ProjectPipelineReleaseSettings" />&gt;
   - name: >-
       getRelease(string, number, ApprovalFilters, string[],
       SingleReleaseExpands, number)
@@ -1188,7 +1142,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a Release
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1210,7 +1163,7 @@ methods:
             whether we should fetch pre and post approval snapshots. Assumes All
             by default
         - id: propertyFilters
-          type: 'string[]'
+          type: string[]
           description: >-
             A comma-delimited list of extended properties to be retrieved. If
             set, the returned Release will contain values for the specified
@@ -1221,17 +1174,15 @@ methods:
           description: A property that should be expanded in the release.
         - id: topGateRecords
           type: number
-          description: |
-            Number of release gate records to get. Default is 5.
+          description: Number of release gate records to get. Default is 5.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Release" />&gt;
-  - name: 'getReleaseChanges(string, number, number, number, string)'
+  - name: getReleaseChanges(string, number, number, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseChanges
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1244,26 +1195,24 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: baseReleaseId
           type: number
-          description: '-'
+          description: ''
         - id: top
           type: number
-          description: '-'
+          description: ''
         - id: artifactAlias
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Change" />[]&gt;'
-  - name: 'getReleaseDefinition(string, number, string[])'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Change" />[]&gt;
+  - name: getReleaseDefinition(string, number, string[])
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseDefinition
     package: azure-devops-extension-api
     summary: Get a release definition.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1277,8 +1226,8 @@ methods:
           type: number
           description: Id of the release definition.
         - id: propertyFilters
-          type: 'string[]'
-          description: >
+          type: string[]
+          description: >-
             A comma-delimited list of extended properties to be retrieved. If
             set, the returned Release Definition will contain values for the
             specified property Ids (if they exist). If not set, properties will
@@ -1288,12 +1237,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseDefinition"
           />&gt;
-  - name: 'getReleaseDefinitionHistory(string, number)'
+  - name: getReleaseDefinitionHistory(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseDefinitionHistory
     package: azure-devops-extension-api
     summary: Get revision history for a release definition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1305,19 +1253,17 @@ methods:
           description: Project ID or project name
         - id: definitionId
           type: number
-          description: |
-            Id of the definition.
+          description: Id of the definition.
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReleaseDefinitionRevision" />[]&gt;
-  - name: 'getReleaseDefinitionRevision(string, number, number)'
+  - name: getReleaseDefinitionRevision(string, number, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseDefinitionRevision
     package: azure-devops-extension-api
     summary: Get release definition of a given revision.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1332,8 +1278,7 @@ methods:
           description: Id of the release definition.
         - id: revision
           type: number
-          description: |
-            Revision number of the release definition.
+          description: Revision number of the release definition.
       return:
         description: ''
         type: Promise&lt;string&gt;
@@ -1345,7 +1290,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a list of release definitions.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1355,7 +1299,8 @@ methods:
         queryOrder?: ReleaseDefinitionQueryOrder, path?: string,
         isExactNameMatch?: boolean, tagFilter?: string[], propertyFilters?:
         string[], definitionIdFilter?: string[], isDeleted?: boolean,
-        searchTextContainsFolderName?: boolean): Promise<ReleaseDefinition[]>
+        searchTextContainsFolderName?: boolean):
+        Promise<PagedList<ReleaseDefinition>>
       parameters:
         - id: project
           type: string
@@ -1378,12 +1323,11 @@ methods:
           type: string
           description: >-
             Release definitions with given artifactSourceId will be returned.
-            e.g. For build it would be \{projectGuid\}:\{BuildDefinitionId\},
-            for Jenkins it would be
-            \{JenkinsConnectionId\}:\{JenkinsDefinitionId\}, for TfsOnPrem it
-            would be
-            \{TfsOnPremConnectionId\}:\{ProjectName\}:\{TfsOnPremDefinitionId\}.
-            For third-party artifacts e.g. TeamCity, BitBucket you may refer
+            e.g. For build it would be {projectGuid}:{BuildDefinitionId}, for
+            Jenkins it would be {JenkinsConnectionId}:{JenkinsDefinitionId}, for
+            TfsOnPrem it would be
+            {TfsOnPremConnectionId}:{ProjectName}:{TfsOnPremDefinitionId}. For
+            third-party artifacts e.g. TeamCity, BitBucket you may refer
             'uniqueSourceIdentifier' inside vss-extension.json at
             https://github.com/Microsoft/vsts-rm-extensions/blob/master/Extensions.
         - id: top
@@ -1406,12 +1350,12 @@ methods:
             'true'to gets the release definitions with exact match as specified
             in searchText. Default is 'false'.
         - id: tagFilter
-          type: 'string[]'
+          type: string[]
           description: >-
             A comma-delimited list of tags. Only release definitions with these
             tags will be returned.
         - id: propertyFilters
-          type: 'string[]'
+          type: string[]
           description: >-
             A comma-delimited list of extended properties to be retrieved. If
             set, the returned Release Definitions will contain values for the
@@ -1420,7 +1364,7 @@ methods:
             Definition from results irrespective of whether it has property set
             or not.
         - id: definitionIdFilter
-          type: 'string[]'
+          type: string[]
           description: A comma-delimited list of release definitions to retrieve.
         - id: isDeleted
           type: boolean
@@ -1429,20 +1373,20 @@ methods:
             'false'
         - id: searchTextContainsFolderName
           type: boolean
-          description: >
+          description: >-
             'true' to get the release definitions under the folder with name as
             specified in searchText. Default is 'false'.
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.ReleaseDefinition"
-          />[]&gt;
-  - name: 'getReleaseDefinitionSummary(string, number, number, boolean, number[])'
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.ReleaseDefinition"
+          />&gt;&gt;
+  - name: getReleaseDefinitionSummary(string, number, number, boolean, number[])
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseDefinitionSummary
     package: azure-devops-extension-api
     summary: Get release summary of a given definition Id.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1464,25 +1408,24 @@ methods:
           type: boolean
           description: Include artifact details.Default is 'false'.
         - id: definitionEnvironmentIdsFilter
-          type: 'number[]'
-          description: |
-            -
+          type: number[]
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReleaseDefinitionSummary" />&gt;
-  - name: 'getReleaseEnvironment(string, number, number)'
+  - name: getReleaseEnvironment(string, number, number, ReleaseEnvironmentExpands)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseEnvironment
     package: azure-devops-extension-api
     summary: Get a release environment.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getReleaseEnvironment(project: string, releaseId: number,
-        environmentId: number): Promise<ReleaseEnvironment>
+        environmentId: number, expand?: ReleaseEnvironmentExpands):
+        Promise<ReleaseEnvironment>
       parameters:
         - id: project
           type: string
@@ -1492,19 +1435,20 @@ methods:
           description: Id of the release.
         - id: environmentId
           type: number
-          description: |
-            Id of the release environment.
+          description: Id of the release environment.
+        - id: expand
+          type: <xref uid="azure-devops-extension-api.ReleaseEnvironmentExpands" />
+          description: A property that should be expanded in the environment.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseEnvironment"
           />&gt;
-  - name: 'getReleaseHistory(string, number)'
+  - name: getReleaseHistory(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseHistory
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1516,19 +1460,17 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseRevision"
           />[]&gt;
-  - name: 'getReleaseProjects(string, string)'
+  - name: getReleaseProjects(string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseProjects
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1537,22 +1479,20 @@ methods:
       parameters:
         - id: artifactType
           type: string
-          description: '-'
+          description: ''
         - id: artifactSourceId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ProjectReference"
           />[]&gt;
-  - name: 'getReleaseRevision(string, number, number)'
+  - name: getReleaseRevision(string, number, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseRevision
     package: azure-devops-extension-api
     summary: Get release for a given revision number.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1567,8 +1507,7 @@ methods:
           description: Id of the release.
         - id: definitionSnapshotRevision
           type: number
-          description: |
-            Definition snapshot revision number.
+          description: Definition snapshot revision number.
       return:
         description: ''
         type: Promise&lt;string&gt;
@@ -1580,7 +1519,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a list of releases
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1592,7 +1530,7 @@ methods:
         ReleaseExpands, artifactTypeId?: string, sourceId?: string,
         artifactVersionId?: string, sourceBranchFilter?: string, isDeleted?:
         boolean, tagFilter?: string[], propertyFilters?: string[],
-        releaseIdFilter?: number[], path?: string): Promise<Release[]>
+        releaseIdFilter?: number[], path?: string): Promise<PagedList<Release>>
       parameters:
         - id: project
           type: string
@@ -1602,7 +1540,7 @@ methods:
           description: Releases from this release definition Id.
         - id: definitionEnvironmentId
           type: number
-          description: '-'
+          description: ''
         - id: searchText
           type: string
           description: Releases with names containing searchText.
@@ -1614,7 +1552,7 @@ methods:
           description: Releases that have this status.
         - id: environmentStatusFilter
           type: number
-          description: '-'
+          description: ''
         - id: minCreatedTime
           type: Date
           description: Releases that were created after this time.
@@ -1645,10 +1583,9 @@ methods:
           type: string
           description: >-
             Unique identifier of the artifact used. e.g. For build it would be
-            \{projectGuid\}:\{BuildDefinitionId\}, for Jenkins it would be
-            \{JenkinsConnectionId\}:\{JenkinsDefinitionId\}, for TfsOnPrem it
-            would be
-            \{TfsOnPremConnectionId\}:\{ProjectName\}:\{TfsOnPremDefinitionId\}.
+            {projectGuid}:{BuildDefinitionId}, for Jenkins it would be
+            {JenkinsConnectionId}:{JenkinsDefinitionId}, for TfsOnPrem it would
+            be {TfsOnPremConnectionId}:{ProjectName}:{TfsOnPremDefinitionId}.
             For third-party artifacts e.g. TeamCity, BitBucket you may refer
             'uniqueSourceIdentifier' inside vss-extension.json
             https://github.com/Microsoft/vsts-rm-extensions/blob/master/Extensions.
@@ -1662,14 +1599,14 @@ methods:
           description: Releases with given sourceBranchFilter will be returned.
         - id: isDeleted
           type: boolean
-          description: 'Gets the soft deleted releases, if true.'
+          description: Gets the soft deleted releases, if true.
         - id: tagFilter
-          type: 'string[]'
+          type: string[]
           description: >-
             A comma-delimited list of tags. Only releases with these tags will
             be returned.
         - id: propertyFilters
-          type: 'string[]'
+          type: string[]
           description: >-
             A comma-delimited list of extended properties to be retrieved. If
             set, the returned Releases will contain values for the specified
@@ -1677,42 +1614,40 @@ methods:
             included. Note that this will not filter out any Release from
             results irrespective of whether it has property set or not.
         - id: releaseIdFilter
-          type: 'number[]'
+          type: number[]
           description: >-
             A comma-delimited list of releases Ids. Only releases with these Ids
             will be returned.
         - id: path
           type: string
-          description: |
-            Releases under this folder path will be returned
+          description: Releases under this folder path will be returned
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.Release" />[]&gt;'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.Release" />&gt;&gt;
   - name: getReleaseSettings(string)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseSettings
     package: azure-devops-extension-api
     summary: Gets the release settings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getReleaseSettings(project: string): Promise<ReleaseSettings>'
       parameters:
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseSettings"
           />&gt;
-  - name: 'getReleaseTags(string, number)'
+  - name: getReleaseTags(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseTags
     package: azure-devops-extension-api
     summary: Gets the tags for a release
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1724,11 +1659,10 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
+        type: Promise&lt;string[]&gt;
   - name: >-
       getReleaseTaskAttachmentContent(string, number, number, number, string,
       string, string, string, string)
@@ -1737,7 +1671,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a release task attachment.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1772,17 +1705,15 @@ methods:
           description: Type of the attachment.
         - id: name
           type: string
-          description: |
-            Name of the attachment.
+          description: Name of the attachment.
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getReleaseTaskAttachments(string, number, number, number, string, string)'
+  - name: getReleaseTaskAttachments(string, number, number, number, string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseTaskAttachments
     package: azure-devops-extension-api
     summary: Get the release task attachments.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1807,19 +1738,17 @@ methods:
           description: Plan Id of the deploy phase.
         - id: type
           type: string
-          description: |
-            Type of the attachment.
+          description: Type of the attachment.
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReleaseTaskAttachment" />[]&gt;
-  - name: 'getReleaseWorkItemsRefs(string, number, number, number, string)'
+  - name: getReleaseWorkItemsRefs(string, number, number, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseWorkItemsRefs
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1832,28 +1761,26 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: baseReleaseId
           type: number
-          description: '-'
+          description: ''
         - id: top
           type: number
-          description: '-'
+          description: ''
         - id: artifactAlias
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseWorkItemRef"
           />[]&gt;
-  - name: 'getSourceBranches(string, number)'
+  - name: getSourceBranches(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getSourceBranches
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1865,17 +1792,15 @@ methods:
           description: Project ID or project name
         - id: definitionId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
-  - name: 'getSummaryMailSections(string, number)'
+        type: Promise&lt;string[]&gt;
+  - name: getSummaryMailSections(string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getSummaryMailSections
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1887,8 +1812,7 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -1899,18 +1823,16 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getTags(project: string): Promise<string[]>'
       parameters:
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
+        type: Promise&lt;string[]&gt;
   - name: >-
       getTaskAttachmentContent(string, number, number, number, string, string,
       string, string)
@@ -1918,7 +1840,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a task attachment.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1949,17 +1870,15 @@ methods:
           description: Type of the attachment.
         - id: name
           type: string
-          description: |
-            Name of the attachment.
+          description: Name of the attachment.
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getTaskAttachments(string, number, number, number, string, string)'
+  - name: getTaskAttachments(string, number, number, number, string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getTaskAttachments
     package: azure-devops-extension-api
     summary: Get the task attachments.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1984,19 +1903,17 @@ methods:
           description: Timeline Id of the task.
         - id: type
           type: string
-          description: |
-            Type of the attachment.
+          description: Type of the attachment.
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReleaseTaskAttachment" />[]&gt;
-  - name: 'getTaskLog(string, number, number, number, number, number, number)'
+  - name: getTaskLog(string, number, number, number, number, number, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getTaskLog
     package: azure-devops-extension-api
     summary: Gets the task log of a release as a plain text file.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2024,8 +1941,7 @@ methods:
           description: Starting line number for logs
         - id: endLine
           type: number
-          description: |
-            Ending line number for logs
+          description: Ending line number for logs
       return:
         description: ''
         type: Promise&lt;string&gt;
@@ -2036,7 +1952,6 @@ methods:
     package: azure-devops-extension-api
     summary: Gets the task log of a release as a plain text file.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2055,10 +1970,10 @@ methods:
           description: Id of release environment.
         - id: attemptId
           type: number
-          description: '-'
+          description: ''
         - id: timelineId
           type: string
-          description: '-'
+          description: ''
         - id: taskId
           type: number
           description: ReleaseTask Id for the log.
@@ -2067,17 +1982,15 @@ methods:
           description: Starting line number for logs
         - id: endLine
           type: number
-          description: |
-            Ending line number for logs
+          description: Ending line number for logs
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: 'getTasks(string, number, number, number)'
+  - name: getTasks(string, number, number, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getTasks
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2089,23 +2002,21 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: environmentId
           type: number
-          description: '-'
+          description: ''
         - id: attemptId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ReleaseTask" />[]&gt;'
-  - name: 'getTasks2(string, number, number, number, string)'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.ReleaseTask" />[]&gt;
+  - name: getTasks2(string, number, number, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getTasks2
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2117,26 +2028,24 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: environmentId
           type: number
-          description: '-'
+          description: ''
         - id: attemptId
           type: number
-          description: '-'
+          description: ''
         - id: timelineId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ReleaseTask" />[]&gt;'
-  - name: 'getTasksForTaskGroup(string, number, number, number)'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.ReleaseTask" />[]&gt;
+  - name: getTasksForTaskGroup(string, number, number, number)
     uid: azure-devops-extension-api.ReleaseRestClient.getTasksForTaskGroup
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2149,24 +2058,22 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: environmentId
           type: number
-          description: '-'
+          description: ''
         - id: releaseDeployPhaseId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.ReleaseTask" />[]&gt;'
-  - name: 'listDefinitionEnvironmentTemplates(string, boolean)'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.ReleaseTask" />[]&gt;
+  - name: listDefinitionEnvironmentTemplates(string, boolean)
     uid: >-
       azure-devops-extension-api.ReleaseRestClient.listDefinitionEnvironmentTemplates
     package: azure-devops-extension-api
     summary: Gets a list of definition environment templates
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2178,7 +2085,7 @@ methods:
           description: Project ID or project name
         - id: isDeleted
           type: boolean
-          description: >
+          description: >-
             'true' to get definition environment templates that have been
             deleted. Default is 'false'
       return:
@@ -2187,12 +2094,11 @@ methods:
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReleaseDefinitionEnvironmentTemplate"
           />[]&gt;
-  - name: 'sendSummaryMail(MailMessage, string, number)'
+  - name: sendSummaryMail(MailMessage, string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.sendSummaryMail
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2201,23 +2107,21 @@ methods:
       parameters:
         - id: mailMessage
           type: <xref uid="azure-devops-extension-api.MailMessage" />
-          description: '-'
+          description: ''
         - id: project
           type: string
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'undeleteRelease(string, number, string)'
+  - name: undeleteRelease(string, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.undeleteRelease
     package: azure-devops-extension-api
     summary: Undelete a soft deleted release.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2232,8 +2136,7 @@ methods:
           description: Id of release to be undeleted.
         - id: comment
           type: string
-          description: |
-            Any comment for undeleting.
+          description: Any comment for undeleting.
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -2244,7 +2147,6 @@ methods:
     package: azure-devops-extension-api
     summary: Undelete a release definition.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2263,20 +2165,18 @@ methods:
           description: Project ID or project name
         - id: definitionId
           type: number
-          description: |
-            Id of the release definition to be undeleted
+          description: Id of the release definition to be undeleted
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseDefinition"
           />&gt;
-  - name: 'undeleteReleaseDefinitionEnvironmentTemplate(string, string)'
+  - name: undeleteReleaseDefinitionEnvironmentTemplate(string, string)
     uid: >-
       azure-devops-extension-api.ReleaseRestClient.undeleteReleaseDefinitionEnvironmentTemplate
     package: azure-devops-extension-api
     summary: Undelete a release definition environment template.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2288,20 +2188,18 @@ methods:
           description: Project ID or project name
         - id: templateId
           type: string
-          description: |
-            Id of the definition environment template to be undeleted
+          description: Id of the definition environment template to be undeleted
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReleaseDefinitionEnvironmentTemplate"
           />&gt;
-  - name: 'updateFolder(Folder, string, string)'
+  - name: updateFolder(Folder, string, string)
     uid: azure-devops-extension-api.ReleaseRestClient.updateFolder
     package: azure-devops-extension-api
     summary: Updates an existing folder at given existing path.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2316,17 +2214,15 @@ methods:
           description: Project ID or project name
         - id: path
           type: string
-          description: |
-            Path of the folder to update.
+          description: Path of the folder to update.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Folder" />&gt;
-  - name: 'updateGates(GateUpdateMetadata, string, number)'
+  - name: updateGates(GateUpdateMetadata, string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.updateGates
     package: azure-devops-extension-api
     summary: Updates the gate for a deployment.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2341,8 +2237,7 @@ methods:
           description: Project ID or project name
         - id: gateStepId
           type: number
-          description: |
-            Gate step Id.
+          description: Gate step Id.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.ReleaseGates" />&gt;
@@ -2353,7 +2248,6 @@ methods:
     package: azure-devops-extension-api
     summary: Update manual intervention.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2374,19 +2268,70 @@ methods:
           description: Id of the release.
         - id: manualInterventionId
           type: number
-          description: |
-            Id of the manual intervention.
+          description: Id of the manual intervention.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ManualIntervention"
           />&gt;
-  - name: 'updateRelease(Release, string, number)'
+  - name: >-
+      updateOrgPipelineReleaseSettings(OrgPipelineReleaseSettingsUpdateParameters)
+    uid: >-
+      azure-devops-extension-api.ReleaseRestClient.updateOrgPipelineReleaseSettings
+    package: azure-devops-extension-api
+    summary: Updates Org pipeline release settings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateOrgPipelineReleaseSettings(newSettings:
+        OrgPipelineReleaseSettingsUpdateParameters):
+        Promise<OrgPipelineReleaseSettings>
+      parameters:
+        - id: newSettings
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.OrgPipelineReleaseSettingsUpdateParameters"
+            />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.OrgPipelineReleaseSettings" />&gt;
+  - name: >-
+      updatePipelineReleaseSettings(ProjectPipelineReleaseSettingsUpdateParameters,
+      string)
+    uid: azure-devops-extension-api.ReleaseRestClient.updatePipelineReleaseSettings
+    package: azure-devops-extension-api
+    summary: Updates pipeline release settings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updatePipelineReleaseSettings(newSettings:
+        ProjectPipelineReleaseSettingsUpdateParameters, project: string):
+        Promise<ProjectPipelineReleaseSettings>
+      parameters:
+        - id: newSettings
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.ProjectPipelineReleaseSettingsUpdateParameters"
+            />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.ProjectPipelineReleaseSettings" />&gt;
+  - name: updateRelease(Release, string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.updateRelease
     package: azure-devops-extension-api
     summary: Update a complete release object.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2401,17 +2346,15 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            Id of the release to update.
+          description: Id of the release to update.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Release" />&gt;
-  - name: 'updateReleaseApproval(ReleaseApproval, string, number)'
+  - name: updateReleaseApproval(ReleaseApproval, string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.updateReleaseApproval
     package: azure-devops-extension-api
     summary: Update status of an approval
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2420,25 +2363,23 @@ methods:
       parameters:
         - id: approval
           type: <xref uid="azure-devops-extension-api.ReleaseApproval" />
-          description: 'ReleaseApproval object having status, approver and comments.'
+          description: ReleaseApproval object having status, approver and comments.
         - id: project
           type: string
           description: Project ID or project name
         - id: approvalId
           type: number
-          description: |
-            Id of the approval.
+          description: Id of the approval.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseApproval"
           />&gt;
-  - name: 'updateReleaseApprovals(ReleaseApproval[], string)'
+  - name: updateReleaseApprovals(ReleaseApproval[], string)
     uid: azure-devops-extension-api.ReleaseRestClient.updateReleaseApprovals
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2446,23 +2387,21 @@ methods:
         string): Promise<ReleaseApproval[]>
       parameters:
         - id: approvals
-          type: '<xref uid="azure-devops-extension-api.ReleaseApproval" />[]'
-          description: '-'
+          type: <xref uid="azure-devops-extension-api.ReleaseApproval" />[]
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseApproval"
           />[]&gt;
-  - name: 'updateReleaseDefinition(ReleaseDefinition, string)'
+  - name: updateReleaseDefinition(ReleaseDefinition, string)
     uid: azure-devops-extension-api.ReleaseRestClient.updateReleaseDefinition
     package: azure-devops-extension-api
     summary: Update a release definition.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2474,8 +2413,7 @@ methods:
           description: Release definition object to update.
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
@@ -2488,7 +2426,6 @@ methods:
     package: azure-devops-extension-api
     summary: Update the status of a release environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2509,19 +2446,17 @@ methods:
           description: Id of the release.
         - id: environmentId
           type: number
-          description: |
-            Id of release environment.
+          description: Id of release environment.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseEnvironment"
           />&gt;
-  - name: 'updateReleaseResource(ReleaseUpdateMetadata, string, number)'
+  - name: updateReleaseResource(ReleaseUpdateMetadata, string, number)
     uid: azure-devops-extension-api.ReleaseRestClient.updateReleaseResource
     package: azure-devops-extension-api
     summary: Update few properties of a release.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2537,17 +2472,15 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: |
-            Id of the release to update.
+          description: Id of the release to update.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Release" />&gt;
-  - name: 'updateReleaseSettings(ReleaseSettings, string)'
+  - name: updateReleaseSettings(ReleaseSettings, string)
     uid: azure-devops-extension-api.ReleaseRestClient.updateReleaseSettings
     package: azure-devops-extension-api
     summary: Updates the release settings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2556,11 +2489,10 @@ methods:
       parameters:
         - id: releaseSettings
           type: <xref uid="azure-devops-extension-api.ReleaseSettings" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-

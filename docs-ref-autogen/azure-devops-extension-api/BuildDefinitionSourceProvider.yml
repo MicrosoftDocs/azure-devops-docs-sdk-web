@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: BuildDefinitionSourceProvider
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Uri of the associated definition
     fullName: definitionUri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'definitionUri: string'
@@ -28,20 +26,18 @@ properties:
     summary: fields associated with this build definition
     fullName: fields
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'fields: [key: string]: string'
+      content: 'fields: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: id
     uid: azure-devops-extension-api.BuildDefinitionSourceProvider.id
     package: azure-devops-extension-api
     summary: Id of this source provider
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
@@ -54,7 +50,6 @@ properties:
     summary: The lst time this source provider was modified
     fullName: lastModified
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastModified: Date'
@@ -67,7 +62,6 @@ properties:
     summary: Name of the source provider
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -81,7 +75,6 @@ properties:
     summary: Which trigger types are supported by this definition source provider
     fullName: supportedTriggerTypes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'supportedTriggerTypes: DefinitionTriggerType'

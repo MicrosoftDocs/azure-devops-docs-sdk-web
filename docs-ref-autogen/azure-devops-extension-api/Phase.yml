@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a phase of a build definition.
 fullName: Phase
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The condition that must be true for this phase to execute.
     fullName: condition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'condition: string'
@@ -28,20 +26,18 @@ properties:
     summary: ''
     fullName: dependencies
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dependencies: Dependency[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Dependency" />[]'
+        type: <xref uid="azure-devops-extension-api.Dependency" />[]
   - name: jobAuthorizationScope
     uid: azure-devops-extension-api.Phase.jobAuthorizationScope
     package: azure-devops-extension-api
     summary: The job authorization scope for builds queued against this definition.
     fullName: jobAuthorizationScope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'jobAuthorizationScope: BuildAuthorizationScope'
@@ -56,7 +52,6 @@ properties:
       definition.
     fullName: jobCancelTimeoutInMinutes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'jobCancelTimeoutInMinutes: number'
@@ -71,7 +66,6 @@ properties:
       definition.
     fullName: jobTimeoutInMinutes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'jobTimeoutInMinutes: number'
@@ -84,7 +78,6 @@ properties:
     summary: The name of the phase.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -97,7 +90,6 @@ properties:
     summary: The unique ref name of the phase.
     fullName: refName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'refName: string'
@@ -110,20 +102,18 @@ properties:
     summary: ''
     fullName: steps
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'steps: BuildDefinitionStep[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.BuildDefinitionStep" />[]'
+        type: <xref uid="azure-devops-extension-api.BuildDefinitionStep" />[]
   - name: target
     uid: azure-devops-extension-api.Phase.target
     package: azure-devops-extension-api
-    summary: 'The target (agent, server, etc.) for this phase.'
+    summary: The target (agent, server, etc.) for this phase.
     fullName: target
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'target: PhaseTarget'
@@ -136,12 +126,11 @@ properties:
     summary: ''
     fullName: variables
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'variables: [key: string]: BuildDefinitionVariable'
+      content: 'variables: {[key: string]: BuildDefinitionVariable}'
       return:
         description: ''
         type: >-
-          [key: string]\: <xref
-          uid="azure-devops-extension-api.BuildDefinitionVariable" />
+          {[key: string]: <xref
+          uid="azure-devops-extension-api.BuildDefinitionVariable" />}

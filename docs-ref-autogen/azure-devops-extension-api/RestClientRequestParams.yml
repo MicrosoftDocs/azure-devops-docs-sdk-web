@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Parameters for sending a WebApi request
 fullName: RestClientRequestParams
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       "2.0-preview.2")
     fullName: apiVersion
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'apiVersion: string'
@@ -36,7 +34,6 @@ properties:
       into a JSON string unless isRawData is set to true).
     fullName: body
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'body?: any'
@@ -51,7 +48,6 @@ properties:
       base option.
     fullName: command
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'command?: string'
@@ -64,13 +60,12 @@ properties:
     summary: Allows the caller to specify custom request headers.
     fullName: customHeaders
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'customHeaders?: [key: string]: any'
+      content: 'customHeaders?: {[headerName: string]: any}'
       return:
         description: ''
-        type: '[key: string]\: any'
+        type: '{[headerName: string]: any}'
   - name: httpResponseType
     uid: azure-devops-extension-api.RestClientRequestParams.httpResponseType
     package: azure-devops-extension-api
@@ -84,7 +79,6 @@ properties:
       header equivalents (e.g. application/zip).
     fullName: httpResponseType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'httpResponseType?: string'
@@ -104,7 +98,6 @@ properties:
       an HTML5 File object.
     fullName: isRawData
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isRawData?: boolean'
@@ -117,7 +110,6 @@ properties:
     summary: HTTP verb (GET by default if not specified)
     fullName: method
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'method?: string'
@@ -139,13 +131,12 @@ properties:
       body).
     fullName: queryParams
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'queryParams?: [key: string]: any'
+      content: 'queryParams?: {[key: string]: any}'
       return:
         description: ''
-        type: '[key: string]\: any'
+        type: '{[key: string]: any}'
   - name: returnRawResponse
     uid: azure-devops-extension-api.RestClientRequestParams.returnRawResponse
     package: azure-devops-extension-api
@@ -156,7 +147,6 @@ properties:
       rather than deserializing the response (the default).
     fullName: returnRawResponse
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'returnRawResponse?: boolean'
@@ -173,7 +163,6 @@ properties:
       is used to lookup the template via an OPTIONS request.
     fullName: routeTemplate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'routeTemplate: string'
@@ -186,10 +175,9 @@ properties:
     summary: Dictionary of route template replacement values
     fullName: routeValues
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'routeValues?: [key: string]: any'
+      content: 'routeValues?: {[key: string]: any}'
       return:
         description: ''
-        type: '[key: string]\: any'
+        type: '{[key: string]: any}'

@@ -2,10 +2,9 @@
 name: CommentMention
 uid: azure-devops-extension-api.CommentMention
 package: azure-devops-extension-api
-summary: ''
+summary: Base class for WIT REST resources.
 fullName: CommentMention
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The artifact portion of the parsed text. (i.e. the work item's id)
     fullName: artifactId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'artifactId: string'
@@ -25,10 +23,9 @@ properties:
   - name: artifactType
     uid: azure-devops-extension-api.CommentMention.artifactType
     package: azure-devops-extension-api
-    summary: 'The type the parser assigned to the mention. (i.e. person, work item, etc)'
+    summary: The type the parser assigned to the mention. (i.e. person, work item, etc)
     fullName: artifactType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'artifactType: string'
@@ -41,7 +38,6 @@ properties:
     summary: The comment id of the mention.
     fullName: commentId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'commentId: number'
@@ -56,24 +52,26 @@ properties:
       tfid
     fullName: targetId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'targetId: string'
       return:
         description: ''
         type: string
+inheritedProperties:
   - name: url
     uid: azure-devops-extension-api.CommentMention.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

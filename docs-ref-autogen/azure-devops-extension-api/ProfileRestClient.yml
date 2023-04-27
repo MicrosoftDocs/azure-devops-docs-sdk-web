@@ -2,10 +2,11 @@
 name: ProfileRestClient
 uid: azure-devops-extension-api.ProfileRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: ProfileRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ProfileRestClient(options: IVssRestClientOptions)'
@@ -29,7 +29,6 @@ properties:
     summary: ''
     fullName: RESOURCE_AREA_ID
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
@@ -37,12 +36,11 @@ properties:
         description: ''
         type: string
 methods:
-  - name: 'createProfile(CreateProfileContext, boolean)'
+  - name: createProfile(CreateProfileContext, boolean)
     uid: azure-devops-extension-api.ProfileRestClient.createProfile
     package: azure-devops-extension-api
     summary: Create profile
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -54,17 +52,15 @@ methods:
           description: Context for profile creation
         - id: autoCreate
           type: boolean
-          description: |
-            Create profile automatically
+          description: Create profile automatically
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Profile" />&gt;
-  - name: 'deleteProfileAttribute(string, string)'
+  - name: deleteProfileAttribute(string, string)
     uid: azure-devops-extension-api.ProfileRestClient.deleteProfileAttribute
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -73,20 +69,18 @@ methods:
       parameters:
         - id: id
           type: string
-          description: '-'
+          description: ''
         - id: descriptor
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'getAvatar(string, string, string)'
+  - name: getAvatar(string, string, string)
     uid: azure-devops-extension-api.ProfileRestClient.getAvatar
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -95,23 +89,21 @@ methods:
       parameters:
         - id: id
           type: string
-          description: '-'
+          description: ''
         - id: size
           type: string
-          description: '-'
+          description: ''
         - id: format
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Avatar" />&gt;
-  - name: 'getAvatarPreview(any, string, string, string, string)'
+  - name: getAvatarPreview(any, string, string, string, string)
     uid: azure-devops-extension-api.ProfileRestClient.getAvatarPreview
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -120,29 +112,27 @@ methods:
       parameters:
         - id: container
           type: any
-          description: '-'
+          description: ''
         - id: id
           type: string
-          description: '-'
+          description: ''
         - id: size
           type: string
-          description: '-'
+          description: ''
         - id: format
           type: string
-          description: '-'
+          description: ''
         - id: displayName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Avatar" />&gt;
-  - name: 'getProfile(string, boolean, boolean, string, string, boolean)'
+  - name: getProfile(string, boolean, boolean, string, string, boolean)
     uid: azure-devops-extension-api.ProfileRestClient.getProfile
     package: azure-devops-extension-api
     summary: Gets a user profile.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -177,17 +167,15 @@ methods:
             values are Email, Avatar, DisplayName, and ContactWithOffers.
         - id: forceRefresh
           type: boolean
-          description: |
-            Not used in this version of the API.
+          description: Not used in this version of the API.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Profile" />&gt;
-  - name: 'getProfileAttribute(string, string)'
+  - name: getProfileAttribute(string, string)
     uid: azure-devops-extension-api.ProfileRestClient.getProfileAttribute
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -196,22 +184,20 @@ methods:
       parameters:
         - id: id
           type: string
-          description: '-'
+          description: ''
         - id: descriptor
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ProfileAttribute"
           />&gt;
-  - name: 'getProfileAttributes(string, string, string, string, boolean, string)'
+  - name: getProfileAttributes(string, string, string, string, boolean, string)
     uid: azure-devops-extension-api.ProfileRestClient.getProfileAttributes
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -222,23 +208,22 @@ methods:
       parameters:
         - id: id
           type: string
-          description: '-'
+          description: ''
         - id: partition
           type: string
-          description: '-'
+          description: ''
         - id: modifiedSince
           type: string
-          description: '-'
+          description: ''
         - id: modifiedAfterRevision
           type: string
-          description: '-'
+          description: ''
         - id: withCoreAttributes
           type: boolean
-          description: '-'
+          description: ''
         - id: coreAttributes
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -249,44 +234,39 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function resetAvatar(id: string): Promise<void>'
       parameters:
         - id: id
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'setAvatar(any, string)'
+  - name: setAvatar(any, string)
     uid: azure-devops-extension-api.ProfileRestClient.setAvatar
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setAvatar(container: any, id: string): Promise<void>'
       parameters:
         - id: container
           type: any
-          description: '-'
+          description: ''
         - id: id
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'setProfileAttribute(any, string, string)'
+  - name: setProfileAttribute(any, string, string)
     uid: azure-devops-extension-api.ProfileRestClient.setProfileAttribute
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -295,14 +275,13 @@ methods:
       parameters:
         - id: container
           type: any
-          description: '-'
+          description: ''
         - id: id
           type: string
-          description: '-'
+          description: ''
         - id: descriptor
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -313,7 +292,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -326,20 +304,18 @@ methods:
             <xref uid="azure-devops-extension-api.VssJsonCollectionWrapperV"
             />&lt;<xref uid="azure-devops-extension-api.ProfileAttributeBase"
             />&lt;any&gt;[]&gt;
-          description: '-'
+          description: ''
         - id: id
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'updateProfile(Profile, string)'
+  - name: updateProfile(Profile, string)
     uid: azure-devops-extension-api.ProfileRestClient.updateProfile
     package: azure-devops-extension-api
     summary: Update profile
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function updateProfile(profile: Profile, id: string): Promise<void>'
@@ -349,8 +325,7 @@ methods:
           description: Update profile
         - id: id
           type: string
-          description: |
-            Profile ID
+          description: Profile ID
       return:
         description: ''
         type: Promise&lt;void&gt;

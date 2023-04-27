@@ -2,10 +2,11 @@
 name: NotificationRestClient
 uid: azure-devops-extension-api.NotificationRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: NotificationRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new NotificationRestClient(options: IVssRestClientOptions)'
@@ -28,7 +28,6 @@ methods:
     package: azure-devops-extension-api
     summary: Create a new subscription.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -41,8 +40,7 @@ methods:
             <xref
             uid="azure-devops-extension-api.NotificationSubscriptionCreateParameters"
             />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -53,15 +51,13 @@ methods:
     package: azure-devops-extension-api
     summary: Delete a subscription.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function deleteSubscription(subscriptionId: string): Promise<void>'
       parameters:
         - id: subscriptionId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -70,15 +66,13 @@ methods:
     package: azure-devops-extension-api
     summary: Get a specific event type.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getEventType(eventType: string): Promise<NotificationEventType>'
       parameters:
         - id: eventType
           type: string
-          description: |
-            The ID of the event type.
+          description: The ID of the event type.
       return:
         description: ''
         type: >-
@@ -89,7 +83,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -98,8 +91,7 @@ methods:
       parameters:
         - id: notificationId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -110,7 +102,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getSettings(): Promise<NotificationAdminSettings>'
@@ -124,7 +115,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get delivery preferences of a notifications subscriber.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -133,19 +123,17 @@ methods:
       parameters:
         - id: subscriberId
           type: string
-          description: |
-            ID of the user or group.
+          description: ID of the user or group.
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.NotificationSubscriber" />&gt;
-  - name: 'getSubscription(string, SubscriptionQueryFlags)'
+  - name: getSubscription(string, SubscriptionQueryFlags)
     uid: azure-devops-extension-api.NotificationRestClient.getSubscription
     package: azure-devops-extension-api
     summary: Get a notification subscription by its ID.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -154,11 +142,10 @@ methods:
       parameters:
         - id: subscriptionId
           type: string
-          description: '-'
+          description: ''
         - id: queryFlags
           type: <xref uid="azure-devops-extension-api.SubscriptionQueryFlags" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -170,7 +157,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get the diagnostics settings for a subscription.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -179,8 +165,7 @@ methods:
       parameters:
         - id: subscriptionId
           type: string
-          description: |
-            The id of the notifications subscription.
+          description: The id of the notifications subscription.
       return:
         description: ''
         type: >-
@@ -191,7 +176,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get available subscription templates.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -210,7 +194,6 @@ methods:
       List available event types for this service. Optionally filter by only
       event types for the specified publisher.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -219,19 +202,17 @@ methods:
       parameters:
         - id: publisherId
           type: string
-          description: |
-            Limit to event types for this publisher
+          description: Limit to event types for this publisher
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.NotificationEventType" />[]&gt;
-  - name: 'listLogs(string, string, Date, Date)'
+  - name: listLogs(string, string, Date, Date)
     uid: azure-devops-extension-api.NotificationRestClient.listLogs
     package: azure-devops-extension-api
     summary: Get a list of diagnostic logs for this service.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -249,8 +230,7 @@ methods:
           description: Start time for the time range to query in.
         - id: endTime
           type: Date
-          description: |
-            End time for the time range to query in.
+          description: End time for the time range to query in.
       return:
         description: ''
         type: >-
@@ -261,7 +241,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -270,21 +249,19 @@ methods:
       parameters:
         - id: notificationIds
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.NotificationReason"
           />[]&gt;
-  - name: 'listSubscriptions(string, string[], SubscriptionQueryFlags)'
+  - name: listSubscriptions(string, string[], SubscriptionQueryFlags)
     uid: azure-devops-extension-api.NotificationRestClient.listSubscriptions
     package: azure-devops-extension-api
     summary: >-
       Get a list of notification subscriptions, either by subscription IDs or by
       all subscriptions for a given user or group.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -296,12 +273,11 @@ methods:
           type: string
           description: User or Group ID
         - id: ids
-          type: 'string[]'
+          type: string[]
           description: List of subscription IDs
         - id: queryFlags
           type: <xref uid="azure-devops-extension-api.SubscriptionQueryFlags" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -313,7 +289,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -322,8 +297,7 @@ methods:
       parameters:
         - id: operation
           type: <xref uid="azure-devops-extension-api.BatchNotificationOperation" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -332,7 +306,6 @@ methods:
     package: azure-devops-extension-api
     summary: Publish an event. This request must be directed to the service "extmgmt".
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -341,19 +314,38 @@ methods:
       parameters:
         - id: notificationEvent
           type: <xref uid="azure-devops-extension-api.VssNotificationEvent" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.VssNotificationEvent"
           />&gt;
-  - name: 'queryEventTypes(FieldValuesQuery, string)'
+  - name: publishTokenEvent(VssNotificationEvent)
+    uid: azure-devops-extension-api.NotificationRestClient.publishTokenEvent
+    package: azure-devops-extension-api
+    summary: >-
+      Publish an event. This request is only for the Token service since it's a
+      deploy only service.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function publishTokenEvent(notificationEvent: VssNotificationEvent):
+        Promise<VssNotificationEvent>
+      parameters:
+        - id: notificationEvent
+          type: <xref uid="azure-devops-extension-api.VssNotificationEvent" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.VssNotificationEvent"
+          />&gt;
+  - name: queryEventTypes(FieldValuesQuery, string)
     uid: azure-devops-extension-api.NotificationRestClient.queryEventTypes
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -362,11 +354,10 @@ methods:
       parameters:
         - id: inputValuesQuery
           type: <xref uid="azure-devops-extension-api.FieldValuesQuery" />
-          description: '-'
+          description: ''
         - id: eventType
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -379,7 +370,6 @@ methods:
       Query for subscriptions. A subscription is returned if it matches one or
       more of the specified conditions.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -388,8 +378,7 @@ methods:
       parameters:
         - id: subscriptionQuery
           type: <xref uid="azure-devops-extension-api.SubscriptionQuery" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -400,7 +389,6 @@ methods:
     package: azure-devops-extension-api
     summary: Tranform a notification event.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -409,8 +397,7 @@ methods:
       parameters:
         - id: transformRequest
           type: <xref uid="azure-devops-extension-api.EventTransformRequest" />
-          description: |
-            Object to be transformed.
+          description: Object to be transformed.
       return:
         description: ''
         type: >-
@@ -421,7 +408,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -434,19 +420,17 @@ methods:
             <xref
             uid="azure-devops-extension-api.NotificationAdminSettingsUpdateParameters"
             />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.NotificationAdminSettings" />&gt;
-  - name: 'updateSubscriber(NotificationSubscriberUpdateParameters, string)'
+  - name: updateSubscriber(NotificationSubscriberUpdateParameters, string)
     uid: azure-devops-extension-api.NotificationRestClient.updateSubscriber
     package: azure-devops-extension-api
     summary: Update delivery preferences of a notifications subscriber.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -459,17 +443,16 @@ methods:
             <xref
             uid="azure-devops-extension-api.NotificationSubscriberUpdateParameters"
             />
-          description: '-'
+          description: ''
         - id: subscriberId
           type: string
-          description: |
-            ID of the user or group.
+          description: ID of the user or group.
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.NotificationSubscriber" />&gt;
-  - name: 'updateSubscription(NotificationSubscriptionUpdateParameters, string)'
+  - name: updateSubscription(NotificationSubscriptionUpdateParameters, string)
     uid: azure-devops-extension-api.NotificationRestClient.updateSubscription
     package: azure-devops-extension-api
     summary: >-
@@ -477,7 +460,6 @@ methods:
       permissions, the caller can update the description, filter settings,
       channel (delivery) settings and more.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -490,11 +472,10 @@ methods:
             <xref
             uid="azure-devops-extension-api.NotificationSubscriptionUpdateParameters"
             />
-          description: '-'
+          description: ''
         - id: subscriptionId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -508,7 +489,6 @@ methods:
     package: azure-devops-extension-api
     summary: Update the diagnostics settings for a subscription.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -521,17 +501,16 @@ methods:
             <xref
             uid="azure-devops-extension-api.UpdateSubscripitonDiagnosticsParameters"
             />
-          description: '-'
+          description: ''
         - id: subscriptionId
           type: string
-          description: |
-            The id of the notifications subscription.
+          description: The id of the notifications subscription.
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.SubscriptionDiagnostics" />&gt;
-  - name: 'updateSubscriptionUserSettings(SubscriptionUserSettings, string, string)'
+  - name: updateSubscriptionUserSettings(SubscriptionUserSettings, string, string)
     uid: >-
       azure-devops-extension-api.NotificationRestClient.updateSubscriptionUserSettings
     package: azure-devops-extension-api
@@ -541,7 +520,6 @@ methods:
       settings can only be applied to shared subscriptions, like team
       subscriptions or default subscriptions.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -551,14 +529,13 @@ methods:
       parameters:
         - id: userSettings
           type: <xref uid="azure-devops-extension-api.SubscriptionUserSettings" />
-          description: '-'
+          description: ''
         - id: subscriptionId
           type: string
-          description: '-'
+          description: ''
         - id: userId
           type: string
-          description: |
-            ID of the user
+          description: ID of the user
       return:
         description: ''
         type: >-

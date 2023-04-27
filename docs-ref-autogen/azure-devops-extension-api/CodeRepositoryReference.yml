@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: CodeRepositoryReference
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,22 +14,20 @@ properties:
     summary: Gets and sets the repository references.
     fullName: repositoryReference
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'repositoryReference: [key: string]: ReleaseManagementInputValue'
+      content: 'repositoryReference: {[key: string]: ReleaseManagementInputValue}'
       return:
         description: ''
         type: >-
-          [key: string]\: <xref
-          uid="azure-devops-extension-api.ReleaseManagementInputValue" />
+          {[key: string]: <xref
+          uid="azure-devops-extension-api.ReleaseManagementInputValue" />}
   - name: systemType
     uid: azure-devops-extension-api.CodeRepositoryReference.systemType
     package: azure-devops-extension-api
-    summary: 'It can have value as ‘GitHub’, ‘Vsts’.'
+    summary: It can have value as ‘GitHub’, ‘Vsts’.
     fullName: systemType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'systemType: PullRequestSystemType'

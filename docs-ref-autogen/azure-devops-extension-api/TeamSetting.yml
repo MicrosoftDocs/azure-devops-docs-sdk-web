@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Data contract for TeamSettings
 fullName: TeamSetting
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Backlog Iteration
     fullName: backlogIteration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'backlogIteration: TeamSettingsIteration'
@@ -28,20 +26,18 @@ properties:
     summary: Information about categories that are visible on the backlog.
     fullName: backlogVisibilities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'backlogVisibilities: [key: string]: boolean'
+      content: 'backlogVisibilities: {[key: string]: boolean}'
       return:
         description: ''
-        type: '[key: string]\: boolean'
+        type: '{[key: string]: boolean}'
   - name: bugsBehavior
     uid: azure-devops-extension-api.TeamSetting.bugsBehavior
     package: azure-devops-extension-api
-    summary: 'BugsBehavior (Off, AsTasks, AsRequirements, ...)'
+    summary: BugsBehavior (Off, AsTasks, AsRequirements, ...)
     fullName: bugsBehavior
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bugsBehavior: BugsBehavior'
@@ -56,7 +52,6 @@ properties:
       queries page.
     fullName: defaultIteration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultIteration: TeamSettingsIteration'
@@ -69,23 +64,9 @@ properties:
     summary: Default Iteration macro (if any)
     fullName: defaultIterationMacro
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultIterationMacro: string'
-      return:
-        description: ''
-        type: string
-  - name: url
-    uid: azure-devops-extension-api.TeamSetting.url
-    package: azure-devops-extension-api
-    summary: Full http link to the resource
-    fullName: url
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'url: string'
       return:
         description: ''
         type: string
@@ -95,11 +76,26 @@ properties:
     summary: Days that the team is working
     fullName: workingDays
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workingDays: DayOfWeek[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.DayOfWeek" />[]'
+        type: <xref uid="azure-devops-extension-api.DayOfWeek" />[]
+inheritedProperties:
+  - name: url
+    uid: azure-devops-extension-api.TeamSetting.url
+    package: azure-devops-extension-api
+    summary: Full http link to the resource
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TeamSettingsDataContractBase.url](xref:azure-devops-extension-api.TeamSettingsDataContractBase.url)
 extends: <xref uid="azure-devops-extension-api.TeamSettingsDataContractBase" />

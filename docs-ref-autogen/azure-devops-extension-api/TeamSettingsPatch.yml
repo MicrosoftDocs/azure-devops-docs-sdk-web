@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Data contract for what we expect to receive when PATCH
 fullName: TeamSettingsPatch
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: backlogIteration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'backlogIteration: string'
@@ -28,20 +26,18 @@ properties:
     summary: ''
     fullName: backlogVisibilities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'backlogVisibilities: [key: string]: boolean'
+      content: 'backlogVisibilities: {[key: string]: boolean}'
       return:
         description: ''
-        type: '[key: string]\: boolean'
+        type: '{[key: string]: boolean}'
   - name: bugsBehavior
     uid: azure-devops-extension-api.TeamSettingsPatch.bugsBehavior
     package: azure-devops-extension-api
     summary: ''
     fullName: bugsBehavior
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bugsBehavior: BugsBehavior'
@@ -54,7 +50,6 @@ properties:
     summary: ''
     fullName: defaultIteration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultIteration: string'
@@ -67,7 +62,6 @@ properties:
     summary: ''
     fullName: defaultIterationMacro
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultIterationMacro: string'
@@ -80,10 +74,9 @@ properties:
     summary: ''
     fullName: workingDays
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workingDays: DayOfWeek[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.DayOfWeek" />[]'
+        type: <xref uid="azure-devops-extension-api.DayOfWeek" />[]

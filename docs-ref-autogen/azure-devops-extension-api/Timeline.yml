@@ -2,46 +2,18 @@
 name: Timeline
 uid: azure-devops-extension-api.Timeline
 package: azure-devops-extension-api
-summary: ''
+summary: A reference to a timeline.
 fullName: Timeline
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: changeId
-    uid: azure-devops-extension-api.Timeline.changeId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: changeId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'changeId: number'
-      return:
-        description: ''
-        type: number
-  - name: id
-    uid: azure-devops-extension-api.Timeline.id
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: string'
-      return:
-        description: ''
-        type: string
   - name: lastChangedBy
     uid: azure-devops-extension-api.Timeline.lastChangedBy
     package: azure-devops-extension-api
     summary: ''
     fullName: lastChangedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastChangedBy: string'
@@ -54,37 +26,68 @@ properties:
     summary: ''
     fullName: lastChangedOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastChangedOn: Date'
       return:
         description: ''
         type: Date
-  - name: location
-    uid: azure-devops-extension-api.Timeline.location
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: location
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'location: string'
-      return:
-        description: ''
-        type: string
   - name: records
     uid: azure-devops-extension-api.Timeline.records
     package: azure-devops-extension-api
     summary: ''
     fullName: records
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'records: TimelineRecord[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TimelineRecord" />[]'
+        type: <xref uid="azure-devops-extension-api.TimelineRecord" />[]
+inheritedProperties:
+  - name: changeId
+    uid: azure-devops-extension-api.Timeline.changeId
+    package: azure-devops-extension-api
+    summary: The change ID.
+    fullName: changeId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changeId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TimelineReference.changeId](xref:azure-devops-extension-api.TimelineReference.changeId)
+  - name: id
+    uid: azure-devops-extension-api.Timeline.id
+    package: azure-devops-extension-api
+    summary: The ID of the timeline.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TimelineReference.id](xref:azure-devops-extension-api.TimelineReference.id)
+  - name: location
+    uid: azure-devops-extension-api.Timeline.location
+    package: azure-devops-extension-api
+    summary: The REST URL of the timeline.
+    fullName: location
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'location: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TimelineReference.location](xref:azure-devops-extension-api.TimelineReference.location)
 extends: <xref uid="azure-devops-extension-api.TimelineReference" />

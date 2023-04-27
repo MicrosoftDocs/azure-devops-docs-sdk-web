@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a build log.
 fullName: BuildLog
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,33 +14,18 @@ properties:
     summary: The date and time the log was created.
     fullName: createdOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdOn: Date'
       return:
         description: ''
         type: Date
-  - name: id
-    uid: azure-devops-extension-api.BuildLog.id
-    package: azure-devops-extension-api
-    summary: The ID of the log.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
   - name: lastChangedOn
     uid: azure-devops-extension-api.BuildLog.lastChangedOn
     package: azure-devops-extension-api
     summary: The date and time the log was last changed.
     fullName: lastChangedOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastChangedOn: Date'
@@ -54,37 +38,56 @@ properties:
     summary: The number of lines in the log.
     fullName: lineCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lineCount: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.BuildLog.id
+    package: azure-devops-extension-api
+    summary: The ID of the log.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildLogReference.id](xref:azure-devops-extension-api.BuildLogReference.id)
   - name: type
     uid: azure-devops-extension-api.BuildLog.type
     package: azure-devops-extension-api
     summary: The type of the log location.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildLogReference.type](xref:azure-devops-extension-api.BuildLogReference.type)
   - name: url
     uid: azure-devops-extension-api.BuildLog.url
     package: azure-devops-extension-api
     summary: A full link to the log resource.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildLogReference.url](xref:azure-devops-extension-api.BuildLogReference.url)
 extends: <xref uid="azure-devops-extension-api.BuildLogReference" />

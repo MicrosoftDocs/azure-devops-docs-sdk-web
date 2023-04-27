@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Host service for accessing repository information.
 fullName: IVersionControlRepositoryService
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -17,12 +16,11 @@ methods:
       Gets the currently selected Git repository. Returns null if a Git
       repository is not currently selected.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getCurrentGitRepository(): Promise<GitRepository | null>'
+      content: 'function getCurrentGitRepository(): Promise<null | GitRepository>'
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" /> |
-          null&gt;
+          Promise&lt;null | <xref uid="azure-devops-extension-api.GitRepository"
+          />&gt;

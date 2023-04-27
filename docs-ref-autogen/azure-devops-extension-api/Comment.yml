@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Comment on a Work Item.
 fullName: Comment
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: IdentityRef of the creator of the comment.
     fullName: createdBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdBy: IdentityRef'
@@ -28,7 +26,6 @@ properties:
     summary: The creation date of the comment.
     fullName: createdDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdDate: Date'
@@ -43,7 +40,6 @@ properties:
       different from CreatedDate.
     fullName: createdOnBehalfDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdOnBehalfDate: Date'
@@ -58,7 +54,6 @@ properties:
       different from CreatedBy.
     fullName: createdOnBehalfOf
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdOnBehalfOf: IdentityRef'
@@ -71,7 +66,6 @@ properties:
     summary: The id assigned to the comment.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
@@ -84,7 +78,6 @@ properties:
     summary: Indicates if the comment has been deleted.
     fullName: isDeleted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isDeleted: boolean'
@@ -97,20 +90,18 @@ properties:
     summary: The mentions of the comment.
     fullName: mentions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mentions: CommentMention[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.CommentMention" />[]'
+        type: <xref uid="azure-devops-extension-api.CommentMention" />[]
   - name: modifiedBy
     uid: azure-devops-extension-api.Comment.modifiedBy
     package: azure-devops-extension-api
     summary: IdentityRef of the user who last modified the comment.
     fullName: modifiedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'modifiedBy: IdentityRef'
@@ -123,7 +114,6 @@ properties:
     summary: The last modification date of the comment.
     fullName: modifiedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'modifiedDate: Date'
@@ -136,36 +126,21 @@ properties:
     summary: The reactions of the comment.
     fullName: reactions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'reactions: CommentReaction[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.CommentReaction" />[]'
+        type: <xref uid="azure-devops-extension-api.CommentReaction" />[]
   - name: text
     uid: azure-devops-extension-api.Comment.text
     package: azure-devops-extension-api
     summary: The text of the comment.
     fullName: text
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'text: string'
-      return:
-        description: ''
-        type: string
-  - name: url
-    uid: azure-devops-extension-api.Comment.url
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: url
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'url: string'
       return:
         description: ''
         type: string
@@ -175,7 +150,6 @@ properties:
     summary: The current version of the comment.
     fullName: version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'version: number'
@@ -188,11 +162,26 @@ properties:
     summary: The id of the work item this comment belongs to.
     fullName: workItemId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workItemId: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: url
+    uid: azure-devops-extension-api.Comment.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

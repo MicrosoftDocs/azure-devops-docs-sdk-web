@@ -5,77 +5,166 @@ package: azure-devops-extension-api
 summary: Response from RestAPI when saving and editing DashboardGroupEntry
 fullName: DashboardGroupEntryResponse
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
-properties:
+inheritedProperties:
+  - name: dashboardScope
+    uid: azure-devops-extension-api.DashboardGroupEntryResponse.dashboardScope
+    package: azure-devops-extension-api
+    summary: Entity to which the dashboard is scoped.
+    fullName: dashboardScope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dashboardScope: DashboardScope'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DashboardScope" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.dashboardScope](xref:azure-devops-extension-api.DashboardGroupEntry.dashboardScope)
   - name: description
     uid: azure-devops-extension-api.DashboardGroupEntryResponse.description
     package: azure-devops-extension-api
     summary: Description of the dashboard.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.description](xref:azure-devops-extension-api.DashboardGroupEntry.description)
   - name: eTag
     uid: azure-devops-extension-api.DashboardGroupEntryResponse.eTag
     package: azure-devops-extension-api
-    summary: 'Server defined version tracking value, used for edit collision detection.'
+    summary: Server defined version tracking value, used for edit collision detection.
     fullName: eTag
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eTag: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.eTag](xref:azure-devops-extension-api.DashboardGroupEntry.eTag)
+  - name: groupId
+    uid: azure-devops-extension-api.DashboardGroupEntryResponse.groupId
+    package: azure-devops-extension-api
+    summary: >-
+      ID of the group for a dashboard. For team-scoped dashboards, this is the
+      unique identifier for the team associated with the dashboard. For
+      project-scoped dashboards this property is empty.
+    fullName: groupId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'groupId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.groupId](xref:azure-devops-extension-api.DashboardGroupEntry.groupId)
   - name: id
     uid: azure-devops-extension-api.DashboardGroupEntryResponse.id
     package: azure-devops-extension-api
     summary: ID of the Dashboard. Provided by service at creation time.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.id](xref:azure-devops-extension-api.DashboardGroupEntry.id)
+  - name: lastAccessedDate
+    uid: azure-devops-extension-api.DashboardGroupEntryResponse.lastAccessedDate
+    package: azure-devops-extension-api
+    summary: Dashboard Last Accessed Date.
+    fullName: lastAccessedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastAccessedDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.lastAccessedDate](xref:azure-devops-extension-api.DashboardGroupEntry.lastAccessedDate)
+  - name: modifiedBy
+    uid: azure-devops-extension-api.DashboardGroupEntryResponse.modifiedBy
+    package: azure-devops-extension-api
+    summary: Id of the person who modified Dashboard.
+    fullName: modifiedBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'modifiedBy: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.modifiedBy](xref:azure-devops-extension-api.DashboardGroupEntry.modifiedBy)
+  - name: modifiedDate
+    uid: azure-devops-extension-api.DashboardGroupEntryResponse.modifiedDate
+    package: azure-devops-extension-api
+    summary: Dashboard's last modified date.
+    fullName: modifiedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'modifiedDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.modifiedDate](xref:azure-devops-extension-api.DashboardGroupEntry.modifiedDate)
   - name: name
     uid: azure-devops-extension-api.DashboardGroupEntryResponse.name
     package: azure-devops-extension-api
     summary: Name of the Dashboard.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.name](xref:azure-devops-extension-api.DashboardGroupEntry.name)
   - name: ownerId
     uid: azure-devops-extension-api.DashboardGroupEntryResponse.ownerId
     package: azure-devops-extension-api
     summary: >-
-      ID of the Owner for a dashboard. For any legacy dashboards, this would be
-      the unique identifier for the team associated with the dashboard.
+      ID of the owner for a dashboard. For team-scoped dashboards, this is the
+      unique identifier for the team associated with the dashboard. For
+      project-scoped dashboards, this is the unique identifier for the user
+      identity associated with the dashboard.
     fullName: ownerId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'ownerId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.ownerId](xref:azure-devops-extension-api.DashboardGroupEntry.ownerId)
   - name: position
     uid: azure-devops-extension-api.DashboardGroupEntryResponse.position
     package: azure-devops-extension-api
@@ -84,13 +173,15 @@ properties:
       time, position is decided by the service.
     fullName: position
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'position: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.position](xref:azure-devops-extension-api.DashboardGroupEntry.position)
   - name: refreshInterval
     uid: azure-devops-extension-api.DashboardGroupEntryResponse.refreshInterval
     package: azure-devops-extension-api
@@ -99,37 +190,43 @@ properties:
       minutes.
     fullName: refreshInterval
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'refreshInterval: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.refreshInterval](xref:azure-devops-extension-api.DashboardGroupEntry.refreshInterval)
   - name: url
     uid: azure-devops-extension-api.DashboardGroupEntryResponse.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.url](xref:azure-devops-extension-api.DashboardGroupEntry.url)
   - name: widgets
     uid: azure-devops-extension-api.DashboardGroupEntryResponse.widgets
     package: azure-devops-extension-api
     summary: The set of Widgets on the dashboard.
     fullName: widgets
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'widgets: Widget[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Widget" />[]'
+        type: <xref uid="azure-devops-extension-api.Widget" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DashboardGroupEntry.widgets](xref:azure-devops-extension-api.DashboardGroupEntry.widgets)
 extends: <xref uid="azure-devops-extension-api.DashboardGroupEntry" />

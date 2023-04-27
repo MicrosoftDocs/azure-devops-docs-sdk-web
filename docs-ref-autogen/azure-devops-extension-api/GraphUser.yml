@@ -2,13 +2,12 @@
 name: GraphUser
 uid: azure-devops-extension-api.GraphUser
 package: azure-devops-extension-api
-summary: Graph user entity
+summary: Top-level graph entity
 fullName: GraphUser
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
-properties:
+inheritedProperties:
   - name: descriptor
     uid: azure-devops-extension-api.GraphUser.descriptor
     package: azure-devops-extension-api
@@ -18,13 +17,15 @@ properties:
       subject across both Accounts and Organizations.
     fullName: descriptor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'descriptor: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.descriptor](xref:azure-devops-extension-api.AadGraphMember.descriptor)
   - name: directoryAlias
     uid: azure-devops-extension-api.GraphUser.directoryAlias
     package: azure-devops-extension-api
@@ -32,16 +33,18 @@ properties:
       The short, generally unique name for the user in the backing directory.
       For AAD users, this corresponds to the mail nickname, which is often but
       not necessarily similar to the part of the user's mail address before the
-      \@ sign. For GitHub users, this corresponds to the GitHub user handle.
+      @ sign. For GitHub users, this corresponds to the GitHub user handle.
     fullName: directoryAlias
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'directoryAlias: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.directoryAlias](xref:azure-devops-extension-api.AadGraphMember.directoryAlias)
   - name: displayName
     uid: azure-devops-extension-api.GraphUser.displayName
     package: azure-devops-extension-api
@@ -50,13 +53,15 @@ properties:
       field, you must alter its value in the source provider.
     fullName: displayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'displayName: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.displayName](xref:azure-devops-extension-api.AadGraphMember.displayName)
   - name: domain
     uid: azure-devops-extension-api.GraphUser.domain
     package: azure-devops-extension-api
@@ -66,26 +71,30 @@ properties:
       the tenantID of the directory, for VSTS groups the ScopeId, etc)
     fullName: domain
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'domain: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.domain](xref:azure-devops-extension-api.AadGraphMember.domain)
   - name: isDeletedInOrigin
     uid: azure-devops-extension-api.GraphUser.isDeletedInOrigin
     package: azure-devops-extension-api
-    summary: 'When true, the group has been deleted in the identity provider'
+    summary: When true, the group has been deleted in the identity provider
     fullName: isDeletedInOrigin
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isDeletedInOrigin: boolean'
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.isDeletedInOrigin](xref:azure-devops-extension-api.AadGraphMember.isDeletedInOrigin)
   - name: legacyDescriptor
     uid: azure-devops-extension-api.GraphUser.legacyDescriptor
     package: azure-devops-extension-api
@@ -94,13 +103,15 @@ properties:
       access old version IMS using identity descriptor.
     fullName: legacyDescriptor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'legacyDescriptor: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.legacyDescriptor](xref:azure-devops-extension-api.AadGraphMember.legacyDescriptor)
   - name: mailAddress
     uid: azure-devops-extension-api.GraphUser.mailAddress
     package: azure-devops-extension-api
@@ -109,26 +120,30 @@ properties:
       different than the principal name.
     fullName: mailAddress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mailAddress: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.mailAddress](xref:azure-devops-extension-api.AadGraphMember.mailAddress)
   - name: metadataUpdateDate
     uid: azure-devops-extension-api.GraphUser.metadataUpdateDate
     package: azure-devops-extension-api
     summary: ''
     fullName: metadataUpdateDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metadataUpdateDate: Date'
       return:
         description: ''
         type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.metadataUpdateDate](xref:azure-devops-extension-api.AadGraphMember.metadataUpdateDate)
   - name: metaType
     uid: azure-devops-extension-api.GraphUser.metaType
     package: azure-devops-extension-api
@@ -137,26 +152,30 @@ properties:
       See UserMetaType for the set of possible values.
     fullName: metaType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metaType: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.metaType](xref:azure-devops-extension-api.AadGraphMember.metaType)
   - name: origin
     uid: azure-devops-extension-api.GraphUser.origin
     package: azure-devops-extension-api
-    summary: 'The type of source provider for the origin identifier (ex:AD, AAD, MSA)'
+    summary: The type of source provider for the origin identifier (ex:AD, AAD, MSA)
     fullName: origin
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'origin: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.origin](xref:azure-devops-extension-api.AadGraphMember.origin)
   - name: originId
     uid: azure-devops-extension-api.GraphUser.originId
     package: azure-devops-extension-api
@@ -167,13 +186,15 @@ properties:
       and has a different unique id in the new provider.
     fullName: originId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'originId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.originId](xref:azure-devops-extension-api.AadGraphMember.originId)
   - name: principalName
     uid: azure-devops-extension-api.GraphUser.principalName
     package: azure-devops-extension-api
@@ -183,13 +204,15 @@ properties:
       guaranteed to be immutable for the life of the graph member by VSTS.
     fullName: principalName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'principalName: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.principalName](xref:azure-devops-extension-api.AadGraphMember.principalName)
   - name: subjectKind
     uid: azure-devops-extension-api.GraphUser.subjectKind
     package: azure-devops-extension-api
@@ -198,24 +221,28 @@ properties:
       User).
     fullName: subjectKind
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subjectKind: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.subjectKind](xref:azure-devops-extension-api.AadGraphMember.subjectKind)
   - name: url
     uid: azure-devops-extension-api.GraphUser.url
     package: azure-devops-extension-api
     summary: This url is the full route to the source resource of this graph subject.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
-extends: <xref uid="azure-devops-extension-api.GraphMember" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AadGraphMember.url](xref:azure-devops-extension-api.AadGraphMember.url)
+extends: <xref uid="azure-devops-extension-api.AadGraphMember" />

@@ -2,20 +2,20 @@
 name: Issue
 uid: azure-devops-extension-api.Issue
 package: azure-devops-extension-api
-summary: ''
+summary: An issue (error, warning) associated with a pipeline run.
 fullName: Issue
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: category
     uid: azure-devops-extension-api.Issue.category
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The category of the issue. \<br /\>Example: Code - refers to compilation
+      errors \<br /\>Example: General - refers to generic errors
     fullName: category
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'category: string'
@@ -25,23 +25,21 @@ properties:
   - name: data
     uid: azure-devops-extension-api.Issue.data
     package: azure-devops-extension-api
-    summary: ''
+    summary: A dictionary containing details about the issue.
     fullName: data
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'data: [key: string]: string'
+      content: 'data: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: message
     uid: azure-devops-extension-api.Issue.message
     package: azure-devops-extension-api
-    summary: ''
+    summary: A description of issue.
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message: string'
@@ -51,10 +49,9 @@ properties:
   - name: type
     uid: azure-devops-extension-api.Issue.type
     package: azure-devops-extension-api
-    summary: ''
+    summary: The type (error, warning) of the issue.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: IssueType'

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GitPush
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,102 +14,110 @@ properties:
     summary: ''
     fullName: commits
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'commits: GitCommitRef[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.GitCommitRef" />[]'
-  - name: date
-    uid: azure-devops-extension-api.GitPush.date
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: date
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'date: Date'
-      return:
-        description: ''
-        type: Date
-  - name: pushCorrelationId
-    uid: azure-devops-extension-api.GitPush.pushCorrelationId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: pushCorrelationId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'pushCorrelationId: string'
-      return:
-        description: ''
-        type: string
-  - name: pushedBy
-    uid: azure-devops-extension-api.GitPush.pushedBy
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: pushedBy
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'pushedBy: IdentityRef'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
-  - name: pushId
-    uid: azure-devops-extension-api.GitPush.pushId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: pushId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'pushId: number'
-      return:
-        description: ''
-        type: number
+        type: <xref uid="azure-devops-extension-api.GitCommitRef" />[]
   - name: refUpdates
     uid: azure-devops-extension-api.GitPush.refUpdates
     package: azure-devops-extension-api
     summary: ''
     fullName: refUpdates
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'refUpdates: GitRefUpdate[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.GitRefUpdate" />[]'
+        type: <xref uid="azure-devops-extension-api.GitRefUpdate" />[]
   - name: repository
     uid: azure-devops-extension-api.GitPush.repository
     package: azure-devops-extension-api
     summary: ''
     fullName: repository
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'repository: GitRepository'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.GitRepository" />
+inheritedProperties:
+  - name: date
+    uid: azure-devops-extension-api.GitPush.date
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: date
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'date: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitPushRef.date](xref:azure-devops-extension-api.GitPushRef.date)
+  - name: pushCorrelationId
+    uid: azure-devops-extension-api.GitPush.pushCorrelationId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: pushCorrelationId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pushCorrelationId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitPushRef.pushCorrelationId](xref:azure-devops-extension-api.GitPushRef.pushCorrelationId)
+  - name: pushedBy
+    uid: azure-devops-extension-api.GitPush.pushedBy
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: pushedBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pushedBy: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitPushRef.pushedBy](xref:azure-devops-extension-api.GitPushRef.pushedBy)
+  - name: pushId
+    uid: azure-devops-extension-api.GitPush.pushId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: pushId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pushId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitPushRef.pushId](xref:azure-devops-extension-api.GitPushRef.pushId)
   - name: url
     uid: azure-devops-extension-api.GitPush.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitPushRef.url](xref:azure-devops-extension-api.GitPushRef.url)
 extends: <xref uid="azure-devops-extension-api.GitPushRef" />

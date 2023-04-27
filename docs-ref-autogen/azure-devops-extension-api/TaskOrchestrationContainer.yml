@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TaskOrchestrationContainer
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: ''
     fullName: children
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'children: TaskOrchestrationItem[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TaskOrchestrationItem" />[]'
+        type: <xref uid="azure-devops-extension-api.TaskOrchestrationItem" />[]
   - name: continueOnError
     uid: azure-devops-extension-api.TaskOrchestrationContainer.continueOnError
     package: azure-devops-extension-api
     summary: ''
     fullName: continueOnError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'continueOnError: boolean'
@@ -41,33 +38,18 @@ properties:
     summary: ''
     fullName: data
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'data: [key: string]: string'
+      content: 'data: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
-  - name: itemType
-    uid: azure-devops-extension-api.TaskOrchestrationContainer.itemType
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: itemType
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'itemType: TaskOrchestrationItemType'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.TaskOrchestrationItemType" />
+        type: '{[key: string]: string}'
   - name: maxConcurrency
     uid: azure-devops-extension-api.TaskOrchestrationContainer.maxConcurrency
     package: azure-devops-extension-api
     summary: ''
     fullName: maxConcurrency
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxConcurrency: number'
@@ -80,7 +62,6 @@ properties:
     summary: ''
     fullName: parallel
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'parallel: boolean'
@@ -93,11 +74,26 @@ properties:
     summary: ''
     fullName: rollback
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'rollback: TaskOrchestrationContainer'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.TaskOrchestrationContainer" />
+inheritedProperties:
+  - name: itemType
+    uid: azure-devops-extension-api.TaskOrchestrationContainer.itemType
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: itemType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'itemType: TaskOrchestrationItemType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskOrchestrationItemType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationItem.itemType](xref:azure-devops-extension-api.TaskOrchestrationItem.itemType)
 extends: <xref uid="azure-devops-extension-api.TaskOrchestrationItem" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Defines a wiki resource.
 fullName: WikiV2
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,115 +14,54 @@ properties:
     summary: ID of the wiki.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
-  - name: mappedPath
-    uid: azure-devops-extension-api.WikiV2.mappedPath
+  - name: isDisabled
+    uid: azure-devops-extension-api.WikiV2.isDisabled
     package: azure-devops-extension-api
-    summary: >-
-      Folder path inside repository which is shown as Wiki. Not required for
-      ProjectWiki type.
-    fullName: mappedPath
+    summary: Is wiki repository disabled
+    fullName: isDisabled
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'mappedPath: string'
+      content: 'isDisabled: boolean'
       return:
         description: ''
-        type: string
-  - name: name
-    uid: azure-devops-extension-api.WikiV2.name
-    package: azure-devops-extension-api
-    summary: Wiki name.
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
-  - name: projectId
-    uid: azure-devops-extension-api.WikiV2.projectId
-    package: azure-devops-extension-api
-    summary: ID of the project in which the wiki is to be created.
-    fullName: projectId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'projectId: string'
-      return:
-        description: ''
-        type: string
+        type: boolean
   - name: properties
     uid: azure-devops-extension-api.WikiV2.properties
     package: azure-devops-extension-api
     summary: Properties of the wiki.
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'properties: [key: string]: string'
+      content: 'properties: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: remoteUrl
     uid: azure-devops-extension-api.WikiV2.remoteUrl
     package: azure-devops-extension-api
     summary: Remote web url to the wiki.
     fullName: remoteUrl
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'remoteUrl: string'
       return:
         description: ''
         type: string
-  - name: repositoryId
-    uid: azure-devops-extension-api.WikiV2.repositoryId
-    package: azure-devops-extension-api
-    summary: >-
-      ID of the git repository that backs up the wiki. Not required for
-      ProjectWiki type.
-    fullName: repositoryId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'repositoryId: string'
-      return:
-        description: ''
-        type: string
-  - name: type
-    uid: azure-devops-extension-api.WikiV2.type
-    package: azure-devops-extension-api
-    summary: Type of the wiki.
-    fullName: type
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'type: WikiType'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.WikiType" />
   - name: url
     uid: azure-devops-extension-api.WikiV2.url
     package: azure-devops-extension-api
     summary: REST url for this wiki.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
@@ -136,11 +74,90 @@ properties:
     summary: Versions of the wiki.
     fullName: versions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'versions: GitVersionDescriptor[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.GitVersionDescriptor" />[]'
+        type: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />[]
+inheritedProperties:
+  - name: mappedPath
+    uid: azure-devops-extension-api.WikiV2.mappedPath
+    package: azure-devops-extension-api
+    summary: >-
+      Folder path inside repository which is shown as Wiki. Not required for
+      ProjectWiki type.
+    fullName: mappedPath
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mappedPath: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiCreateBaseParameters.mappedPath](xref:azure-devops-extension-api.WikiCreateBaseParameters.mappedPath)
+  - name: name
+    uid: azure-devops-extension-api.WikiV2.name
+    package: azure-devops-extension-api
+    summary: Wiki name.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiCreateBaseParameters.name](xref:azure-devops-extension-api.WikiCreateBaseParameters.name)
+  - name: projectId
+    uid: azure-devops-extension-api.WikiV2.projectId
+    package: azure-devops-extension-api
+    summary: ID of the project in which the wiki is to be created.
+    fullName: projectId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiCreateBaseParameters.projectId](xref:azure-devops-extension-api.WikiCreateBaseParameters.projectId)
+  - name: repositoryId
+    uid: azure-devops-extension-api.WikiV2.repositoryId
+    package: azure-devops-extension-api
+    summary: >-
+      ID of the git repository that backs up the wiki. Not required for
+      ProjectWiki type.
+    fullName: repositoryId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiCreateBaseParameters.repositoryId](xref:azure-devops-extension-api.WikiCreateBaseParameters.repositoryId)
+  - name: type
+    uid: azure-devops-extension-api.WikiV2.type
+    package: azure-devops-extension-api
+    summary: Type of the wiki.
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: WikiType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WikiType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiCreateBaseParameters.type](xref:azure-devops-extension-api.WikiCreateBaseParameters.type)
 extends: <xref uid="azure-devops-extension-api.WikiCreateBaseParameters" />

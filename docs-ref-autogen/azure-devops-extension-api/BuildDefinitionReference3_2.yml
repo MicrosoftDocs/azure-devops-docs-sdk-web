@@ -7,7 +7,6 @@ summary: >-
   Process and Phases
 fullName: BuildDefinitionReference3_2
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,26 +16,12 @@ properties:
     summary: The author of the definition.
     fullName: authoredBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authoredBy: IdentityRef'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.IdentityRef" />
-  - name: createdDate
-    uid: azure-devops-extension-api.BuildDefinitionReference3_2.createdDate
-    package: azure-devops-extension-api
-    summary: The date this version of the definition was created.
-    fullName: createdDate
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'createdDate: Date'
-      return:
-        description: ''
-        type: Date
   - name: draftOf
     uid: azure-devops-extension-api.BuildDefinitionReference3_2.draftOf
     package: azure-devops-extension-api
@@ -45,7 +30,6 @@ properties:
       is a draft definition.
     fullName: draftOf
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'draftOf: DefinitionReference'
@@ -60,85 +44,30 @@ properties:
       definition.
     fullName: drafts
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'drafts: DefinitionReference[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.DefinitionReference" />[]'
-  - name: id
-    uid: azure-devops-extension-api.BuildDefinitionReference3_2.id
-    package: azure-devops-extension-api
-    summary: The ID of the referenced definition.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
+        type: <xref uid="azure-devops-extension-api.DefinitionReference" />[]
   - name: metrics
     uid: azure-devops-extension-api.BuildDefinitionReference3_2.metrics
     package: azure-devops-extension-api
     summary: ''
     fullName: metrics
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metrics: BuildMetric[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.BuildMetric" />[]'
-  - name: name
-    uid: azure-devops-extension-api.BuildDefinitionReference3_2.name
-    package: azure-devops-extension-api
-    summary: The name of the referenced definition.
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
-  - name: path
-    uid: azure-devops-extension-api.BuildDefinitionReference3_2.path
-    package: azure-devops-extension-api
-    summary: The folder path of the definition.
-    fullName: path
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'path: string'
-      return:
-        description: ''
-        type: string
-  - name: project
-    uid: azure-devops-extension-api.BuildDefinitionReference3_2.project
-    package: azure-devops-extension-api
-    summary: A reference to the project.
-    fullName: project
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'project: TeamProjectReference'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+        type: <xref uid="azure-devops-extension-api.BuildMetric" />[]
   - name: quality
     uid: azure-devops-extension-api.BuildDefinitionReference3_2.quality
     package: azure-devops-extension-api
-    summary: 'The quality of the definition document (draft, etc.)'
+    summary: The quality of the definition document (draft, etc.)
     fullName: quality
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'quality: DefinitionQuality'
@@ -151,13 +80,88 @@ properties:
     summary: The default queue for builds run against this definition.
     fullName: queue
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queue: AgentPoolQueue'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.AgentPoolQueue" />
+inheritedProperties:
+  - name: createdDate
+    uid: azure-devops-extension-api.BuildDefinitionReference3_2.createdDate
+    package: azure-devops-extension-api
+    summary: The date this version of the definition was created.
+    fullName: createdDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.createdDate](xref:azure-devops-extension-api.DefinitionReference.createdDate)
+  - name: id
+    uid: azure-devops-extension-api.BuildDefinitionReference3_2.id
+    package: azure-devops-extension-api
+    summary: The ID of the referenced definition.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.id](xref:azure-devops-extension-api.DefinitionReference.id)
+  - name: name
+    uid: azure-devops-extension-api.BuildDefinitionReference3_2.name
+    package: azure-devops-extension-api
+    summary: The name of the referenced definition.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.name](xref:azure-devops-extension-api.DefinitionReference.name)
+  - name: path
+    uid: azure-devops-extension-api.BuildDefinitionReference3_2.path
+    package: azure-devops-extension-api
+    summary: The folder path of the definition.
+    fullName: path
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'path: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.path](xref:azure-devops-extension-api.DefinitionReference.path)
+  - name: project
+    uid: azure-devops-extension-api.BuildDefinitionReference3_2.project
+    package: azure-devops-extension-api
+    summary: A reference to the project.
+    fullName: project
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'project: TeamProjectReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.project](xref:azure-devops-extension-api.DefinitionReference.project)
   - name: queueStatus
     uid: azure-devops-extension-api.BuildDefinitionReference3_2.queueStatus
     package: azure-devops-extension-api
@@ -166,63 +170,73 @@ properties:
       definition.
     fullName: queueStatus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queueStatus: DefinitionQueueStatus'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.DefinitionQueueStatus" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.queueStatus](xref:azure-devops-extension-api.DefinitionReference.queueStatus)
   - name: revision
     uid: azure-devops-extension-api.BuildDefinitionReference3_2.revision
     package: azure-devops-extension-api
     summary: The definition revision number.
     fullName: revision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revision: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.revision](xref:azure-devops-extension-api.DefinitionReference.revision)
   - name: type
     uid: azure-devops-extension-api.BuildDefinitionReference3_2.type
     package: azure-devops-extension-api
     summary: The type of the definition.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: DefinitionType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.DefinitionType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.type](xref:azure-devops-extension-api.DefinitionReference.type)
   - name: uri
     uid: azure-devops-extension-api.BuildDefinitionReference3_2.uri
     package: azure-devops-extension-api
     summary: The definition's URI.
     fullName: uri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'uri: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.uri](xref:azure-devops-extension-api.DefinitionReference.uri)
   - name: url
     uid: azure-devops-extension-api.BuildDefinitionReference3_2.url
     package: azure-devops-extension-api
     summary: The REST URL of the definition.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DefinitionReference.url](xref:azure-devops-extension-api.DefinitionReference.url)
 extends: <xref uid="azure-devops-extension-api.DefinitionReference" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: A single query parameter entry in a Uri
 fullName: IQueryParameter
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Unencoded name of the query parameter
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -28,10 +26,9 @@ properties:
     summary: Unencoded value of the query parameter
     fullName: value
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'value: string | null'
+      content: 'value: null | string'
       return:
         description: ''
-        type: string | null
+        type: null | string

@@ -2,10 +2,9 @@
 name: TeamSettingsDaysOff
 uid: azure-devops-extension-api.TeamSettingsDaysOff
 package: azure-devops-extension-api
-summary: ''
+summary: Base class for TeamSettings data contracts. Anything common goes here.
 fullName: TeamSettingsDaysOff
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,24 +14,26 @@ properties:
     summary: ''
     fullName: daysOff
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'daysOff: DateRange[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.DateRange" />[]'
+        type: <xref uid="azure-devops-extension-api.DateRange" />[]
+inheritedProperties:
   - name: url
     uid: azure-devops-extension-api.TeamSettingsDaysOff.url
     package: azure-devops-extension-api
     summary: Full http link to the resource
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TeamSettingsDataContractBase.url](xref:azure-devops-extension-api.TeamSettingsDataContractBase.url)
 extends: <xref uid="azure-devops-extension-api.TeamSettingsDataContractBase" />

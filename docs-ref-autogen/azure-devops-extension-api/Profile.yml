@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: A user profile.
 fullName: Profile
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The attributes of this profile.
     fullName: applicationContainer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'applicationContainer: AttributesContainer'
@@ -28,22 +26,20 @@ properties:
     summary: The core attributes of this profile.
     fullName: coreAttributes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'coreAttributes: [key: string]: CoreProfileAttribute'
+      content: 'coreAttributes: {[key: string]: CoreProfileAttribute}'
       return:
         description: ''
         type: >-
-          [key: string]\: <xref
-          uid="azure-devops-extension-api.CoreProfileAttribute" />
+          {[key: string]: <xref
+          uid="azure-devops-extension-api.CoreProfileAttribute" />}
   - name: coreRevision
     uid: azure-devops-extension-api.Profile.coreRevision
     package: azure-devops-extension-api
     summary: The maximum revision number of any attribute.
     fullName: coreRevision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'coreRevision: number'
@@ -56,7 +52,6 @@ properties:
     summary: The unique identifier of the profile.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -69,7 +64,6 @@ properties:
     summary: The current state of the profile.
     fullName: profileState
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'profileState: ProfileState'
@@ -82,7 +76,6 @@ properties:
     summary: The maximum revision number of any attribute.
     fullName: revision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revision: number'
@@ -95,7 +88,6 @@ properties:
     summary: The time at which this profile was last changed.
     fullName: timeStamp
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeStamp: Date'

@@ -5,73 +5,77 @@ package: azure-devops-extension-api
 summary: Test Variable
 fullName: TestVariable
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: description
-    uid: azure-devops-extension-api.TestVariable.description
-    package: azure-devops-extension-api
-    summary: Description of the test variable
-    fullName: description
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'description: string'
-      return:
-        description: ''
-        type: string
   - name: id
     uid: azure-devops-extension-api.TestVariable.id
     package: azure-devops-extension-api
     summary: Id of the test variable
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
       return:
         description: ''
         type: number
-  - name: name
-    uid: azure-devops-extension-api.TestVariable.name
-    package: azure-devops-extension-api
-    summary: Name of the test variable
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
   - name: project
     uid: azure-devops-extension-api.TestVariable.project
     package: azure-devops-extension-api
     summary: Id of the test variable
     fullName: project
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'project: TeamProjectReference'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.TeamProjectReference" />
+inheritedProperties:
+  - name: description
+    uid: azure-devops-extension-api.TestVariable.description
+    package: azure-devops-extension-api
+    summary: Description of the test variable
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestVariableCreateUpdateParameters.description](xref:azure-devops-extension-api.TestVariableCreateUpdateParameters.description)
+  - name: name
+    uid: azure-devops-extension-api.TestVariable.name
+    package: azure-devops-extension-api
+    summary: Name of the test variable
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestVariableCreateUpdateParameters.name](xref:azure-devops-extension-api.TestVariableCreateUpdateParameters.name)
   - name: values
     uid: azure-devops-extension-api.TestVariable.values
     package: azure-devops-extension-api
     summary: List of allowed values
     fullName: values
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'values: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestVariableCreateUpdateParameters.values](xref:azure-devops-extension-api.TestVariableCreateUpdateParameters.values)
 extends: <xref uid="azure-devops-extension-api.TestVariableCreateUpdateParameters" />

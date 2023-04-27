@@ -5,17 +5,39 @@ package: azure-devops-extension-api
 summary: Represents an item in a container.
 fullName: FileContainerItem
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: artifactId
+    uid: azure-devops-extension-api.FileContainerItem.artifactId
+    package: azure-devops-extension-api
+    summary: Id for Blobstore reference
+    fullName: artifactId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'artifactId: number'
+      return:
+        description: ''
+        type: number
+  - name: blobMetadata
+    uid: azure-devops-extension-api.FileContainerItem.blobMetadata
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: blobMetadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'blobMetadata: ContainerItemBlobReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ContainerItemBlobReference" />
   - name: containerId
     uid: azure-devops-extension-api.FileContainerItem.containerId
     package: azure-devops-extension-api
     summary: Container Id.
     fullName: containerId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'containerId: number'
@@ -28,20 +50,18 @@ properties:
     summary: ''
     fullName: contentId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'contentId: number[]'
       return:
         description: ''
-        type: 'number[]'
+        type: number[]
   - name: contentLocation
     uid: azure-devops-extension-api.FileContainerItem.contentLocation
     package: azure-devops-extension-api
     summary: Download Url for the content of this item.
     fullName: contentLocation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'contentLocation: string'
@@ -54,7 +74,6 @@ properties:
     summary: Creator.
     fullName: createdBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdBy: string'
@@ -67,7 +86,6 @@ properties:
     summary: Creation date.
     fullName: dateCreated
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dateCreated: Date'
@@ -80,7 +98,6 @@ properties:
     summary: Last modified date.
     fullName: dateLastModified
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dateLastModified: Date'
@@ -93,7 +110,6 @@ properties:
     summary: Encoding of the file. Zero if not a file.
     fullName: fileEncoding
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fileEncoding: number'
@@ -106,20 +122,18 @@ properties:
     summary: Hash value of the file. Null if not a file.
     fullName: fileHash
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fileHash: number[]'
       return:
         description: ''
-        type: 'number[]'
+        type: number[]
   - name: fileId
     uid: azure-devops-extension-api.FileContainerItem.fileId
     package: azure-devops-extension-api
     summary: Id of the file content.
     fullName: fileId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fileId: number'
@@ -132,7 +146,6 @@ properties:
     summary: Length of the file. Zero if not of a file.
     fullName: fileLength
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fileLength: number'
@@ -145,7 +158,6 @@ properties:
     summary: Type of the file. Zero if not a file.
     fullName: fileType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fileType: number'
@@ -158,7 +170,6 @@ properties:
     summary: Location of the item resource.
     fullName: itemLocation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'itemLocation: string'
@@ -171,7 +182,6 @@ properties:
     summary: 'Type of the item: Folder, File or String.'
     fullName: itemType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'itemType: ContainerItemType'
@@ -184,7 +194,6 @@ properties:
     summary: Modifier.
     fullName: lastModifiedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastModifiedBy: string'
@@ -197,7 +206,6 @@ properties:
     summary: Unique path that identifies the item.
     fullName: path
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'path: string'
@@ -210,7 +218,6 @@ properties:
     summary: Project Id.
     fullName: scopeIdentifier
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'scopeIdentifier: string'
@@ -223,7 +230,6 @@ properties:
     summary: 'Status of the item: Created or Pending Upload.'
     fullName: status
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: ContainerItemStatus'
@@ -236,7 +242,6 @@ properties:
     summary: ''
     fullName: ticket
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'ticket: string'

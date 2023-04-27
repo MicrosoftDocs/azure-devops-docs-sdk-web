@@ -5,30 +5,15 @@ package: azure-devops-extension-api
 summary: ''
 fullName: ReleaseTasksUpdatedEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: environmentId
-    uid: azure-devops-extension-api.ReleaseTasksUpdatedEvent.environmentId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: environmentId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'environmentId: number'
-      return:
-        description: ''
-        type: number
   - name: job
     uid: azure-devops-extension-api.ReleaseTasksUpdatedEvent.job
     package: azure-devops-extension-api
     summary: ''
     fullName: job
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'job: ReleaseTask'
@@ -41,23 +26,9 @@ properties:
     summary: ''
     fullName: planId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'planId: string'
-      return:
-        description: ''
-        type: string
-  - name: projectId
-    uid: azure-devops-extension-api.ReleaseTasksUpdatedEvent.projectId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: projectId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'projectId: string'
       return:
         description: ''
         type: string
@@ -67,23 +38,9 @@ properties:
     summary: ''
     fullName: releaseDeployPhaseId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'releaseDeployPhaseId: number'
-      return:
-        description: ''
-        type: number
-  - name: releaseId
-    uid: azure-devops-extension-api.ReleaseTasksUpdatedEvent.releaseId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: releaseId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'releaseId: number'
       return:
         description: ''
         type: number
@@ -93,7 +50,6 @@ properties:
     summary: ''
     fullName: releaseStepId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'releaseStepId: number'
@@ -106,11 +62,56 @@ properties:
     summary: ''
     fullName: tasks
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tasks: ReleaseTask[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.ReleaseTask" />[]'
+        type: <xref uid="azure-devops-extension-api.ReleaseTask" />[]
+inheritedProperties:
+  - name: environmentId
+    uid: azure-devops-extension-api.ReleaseTasksUpdatedEvent.environmentId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: environmentId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'environmentId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealtimeReleaseEvent.environmentId](xref:azure-devops-extension-api.RealtimeReleaseEvent.environmentId)
+  - name: projectId
+    uid: azure-devops-extension-api.ReleaseTasksUpdatedEvent.projectId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: projectId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealtimeReleaseEvent.projectId](xref:azure-devops-extension-api.RealtimeReleaseEvent.projectId)
+  - name: releaseId
+    uid: azure-devops-extension-api.ReleaseTasksUpdatedEvent.releaseId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: releaseId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'releaseId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealtimeReleaseEvent.releaseId](xref:azure-devops-extension-api.RealtimeReleaseEvent.releaseId)
 extends: <xref uid="azure-devops-extension-api.RealtimeReleaseEvent" />

@@ -5,73 +5,80 @@ package: azure-devops-extension-api
 summary: INTERNAL. Event that is fired when a column is deleted.
 fullName: BoardColumnDeletedRealtimeEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: boardId
-    uid: azure-devops-extension-api.BoardColumnDeletedRealtimeEvent.boardId
-    package: azure-devops-extension-api
-    summary: The Board ID of the event
-    fullName: boardId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'boardId: number'
-      return:
-        description: ''
-        type: number
   - name: columnId
     uid: azure-devops-extension-api.BoardColumnDeletedRealtimeEvent.columnId
     package: azure-devops-extension-api
     summary: Gets the column identifier.
     fullName: columnId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'columnId: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: boardId
+    uid: azure-devops-extension-api.BoardColumnDeletedRealtimeEvent.boardId
+    package: azure-devops-extension-api
+    summary: The Board ID of the event
+    fullName: boardId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'boardId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealtimeBoardEvent.boardId](xref:azure-devops-extension-api.RealtimeBoardEvent.boardId)
   - name: eventId
     uid: azure-devops-extension-api.BoardColumnDeletedRealtimeEvent.eventId
     package: azure-devops-extension-api
-    summary: 'A unique ID for events, used for logging and tracing.'
+    summary: A unique ID for events, used for logging and tracing.
     fullName: eventId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'eventId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealtimeBoardEvent.eventId](xref:azure-devops-extension-api.RealtimeBoardEvent.eventId)
   - name: projectId
     uid: azure-devops-extension-api.BoardColumnDeletedRealtimeEvent.projectId
     package: azure-devops-extension-api
     summary: The Project ID of the board.
     fullName: projectId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'projectId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealtimeBoardEvent.projectId](xref:azure-devops-extension-api.RealtimeBoardEvent.projectId)
   - name: type
     uid: azure-devops-extension-api.BoardColumnDeletedRealtimeEvent.type
     package: azure-devops-extension-api
-    summary: 'The type of this event, so the client can disambiguate'
+    summary: The type of this event, so the client can disambiguate
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealtimeBoardEvent.type](xref:azure-devops-extension-api.RealtimeBoardEvent.type)
 extends: <xref uid="azure-devops-extension-api.RealtimeBoardEvent" />

@@ -5,23 +5,9 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TaskGroupPublishPreviewParameter
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: comment
-    uid: azure-devops-extension-api.TaskGroupPublishPreviewParameter.comment
-    package: azure-devops-extension-api
-    summary: Comment for this update request
-    fullName: comment
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'comment: string'
-      return:
-        description: ''
-        type: string
   - name: disablePriorVersions
     uid: >-
       azure-devops-extension-api.TaskGroupPublishPreviewParameter.disablePriorVersions
@@ -29,7 +15,6 @@ properties:
     summary: This is to disable previous versions of task group upon publish
     fullName: disablePriorVersions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'disablePriorVersions: boolean'
@@ -42,7 +27,6 @@ properties:
     summary: Denotes if task group is in preview
     fullName: preview
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'preview: boolean'
@@ -55,7 +39,6 @@ properties:
     summary: This is the revision of task group that is getting published
     fullName: revision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revision: number'
@@ -68,11 +51,26 @@ properties:
     summary: This is the version of task group that is getting published
     fullName: version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'version: TaskVersion'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.TaskVersion" />
+inheritedProperties:
+  - name: comment
+    uid: azure-devops-extension-api.TaskGroupPublishPreviewParameter.comment
+    package: azure-devops-extension-api
+    summary: Comment for this update request
+    fullName: comment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskGroupUpdatePropertiesBase.comment](xref:azure-devops-extension-api.TaskGroupUpdatePropertiesBase.comment)
 extends: <xref uid="azure-devops-extension-api.TaskGroupUpdatePropertiesBase" />

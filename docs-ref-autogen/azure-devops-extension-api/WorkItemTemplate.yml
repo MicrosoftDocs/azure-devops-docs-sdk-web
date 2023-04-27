@@ -5,86 +5,95 @@ package: azure-devops-extension-api
 summary: Describes a work item template.
 fullName: WorkItemTemplate
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: description
-    uid: azure-devops-extension-api.WorkItemTemplate.description
-    package: azure-devops-extension-api
-    summary: The description of the work item template.
-    fullName: description
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'description: string'
-      return:
-        description: ''
-        type: string
   - name: fields
     uid: azure-devops-extension-api.WorkItemTemplate.fields
     package: azure-devops-extension-api
     summary: Mapping of field and its templated value.
     fullName: fields
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'fields: [key: string]: string'
+      content: 'fields: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
+inheritedProperties:
+  - name: description
+    uid: azure-devops-extension-api.WorkItemTemplate.description
+    package: azure-devops-extension-api
+    summary: The description of the work item template.
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTemplateReference.description](xref:azure-devops-extension-api.WorkItemTemplateReference.description)
   - name: id
     uid: azure-devops-extension-api.WorkItemTemplate.id
     package: azure-devops-extension-api
     summary: The identifier of the work item template.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTemplateReference.id](xref:azure-devops-extension-api.WorkItemTemplateReference.id)
   - name: name
     uid: azure-devops-extension-api.WorkItemTemplate.name
     package: azure-devops-extension-api
     summary: The name of the work item template.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTemplateReference.name](xref:azure-devops-extension-api.WorkItemTemplateReference.name)
   - name: url
     uid: azure-devops-extension-api.WorkItemTemplate.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTemplateReference.url](xref:azure-devops-extension-api.WorkItemTemplateReference.url)
   - name: workItemTypeName
     uid: azure-devops-extension-api.WorkItemTemplate.workItemTypeName
     package: azure-devops-extension-api
     summary: The name of the work item type.
     fullName: workItemTypeName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workItemTypeName: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTemplateReference.workItemTypeName](xref:azure-devops-extension-api.WorkItemTemplateReference.workItemTypeName)
 extends: <xref uid="azure-devops-extension-api.WorkItemTemplateReference" />

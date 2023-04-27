@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a build completion trigger.
 fullName: BuildCompletionTrigger
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,13 +14,12 @@ properties:
     summary: ''
     fullName: branchFilters
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'branchFilters: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: definition
     uid: azure-devops-extension-api.BuildCompletionTrigger.definition
     package: azure-devops-extension-api
@@ -30,7 +28,6 @@ properties:
       definition.
     fullName: definition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'definition: DefinitionReference'
@@ -43,24 +40,26 @@ properties:
     summary: ''
     fullName: requiresSuccessfulBuild
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requiresSuccessfulBuild: boolean'
       return:
         description: ''
         type: boolean
+inheritedProperties:
   - name: triggerType
     uid: azure-devops-extension-api.BuildCompletionTrigger.triggerType
     package: azure-devops-extension-api
     summary: The type of the trigger.
     fullName: triggerType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'triggerType: DefinitionTriggerType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.DefinitionTriggerType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildTrigger.triggerType](xref:azure-devops-extension-api.BuildTrigger.triggerType)
 extends: <xref uid="azure-devops-extension-api.BuildTrigger" />

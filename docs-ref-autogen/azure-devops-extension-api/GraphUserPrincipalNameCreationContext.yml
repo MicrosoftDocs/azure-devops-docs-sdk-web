@@ -10,7 +10,6 @@ summary: >-
   provider.
 fullName: GraphUserPrincipalNameCreationContext
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -20,17 +19,17 @@ properties:
     package: azure-devops-extension-api
     summary: >-
       This should be the principal name or upn of the user in the source AD or
-      AAD provider. Example: jamal\@contoso.com Team Services will communicate
+      AAD provider. Example: jamal@contoso.com Team Services will communicate
       with the source provider to fill all other fields on creation.
     fullName: principalName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'principalName: string'
       return:
         description: ''
         type: string
+inheritedProperties:
   - name: storageKey
     uid: >-
       azure-devops-extension-api.GraphUserPrincipalNameCreationContext.storageKey
@@ -40,11 +39,13 @@ properties:
       the created user
     fullName: storageKey
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'storageKey: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GraphUserCreationContext.storageKey](xref:azure-devops-extension-api.GraphUserCreationContext.storageKey)
 extends: <xref uid="azure-devops-extension-api.GraphUserCreationContext" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: ReleaseDefinitionApprovalStep
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,33 +14,18 @@ properties:
     summary: Gets and sets the approver.
     fullName: approver
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'approver: IdentityRef'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.IdentityRef" />
-  - name: id
-    uid: azure-devops-extension-api.ReleaseDefinitionApprovalStep.id
-    package: azure-devops-extension-api
-    summary: ID of the approval or deploy step.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
   - name: isAutomated
     uid: azure-devops-extension-api.ReleaseDefinitionApprovalStep.isAutomated
     package: azure-devops-extension-api
     summary: Indicates whether the approval automated.
     fullName: isAutomated
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isAutomated: boolean'
@@ -54,7 +38,6 @@ properties:
     summary: Indicates whether the approval notification set.
     fullName: isNotificationOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isNotificationOn: boolean'
@@ -67,11 +50,26 @@ properties:
     summary: Gets or sets the rank of approval step.
     fullName: rank
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'rank: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.ReleaseDefinitionApprovalStep.id
+    package: azure-devops-extension-api
+    summary: ID of the approval or deploy step.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ReleaseDefinitionEnvironmentStep.id](xref:azure-devops-extension-api.ReleaseDefinitionEnvironmentStep.id)
 extends: <xref uid="azure-devops-extension-api.ReleaseDefinitionEnvironmentStep" />

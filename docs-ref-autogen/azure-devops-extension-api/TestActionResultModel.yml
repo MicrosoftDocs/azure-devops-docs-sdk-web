@@ -5,72 +5,26 @@ package: azure-devops-extension-api
 summary: Represents a test step result.
 fullName: TestActionResultModel
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: actionPath
     uid: azure-devops-extension-api.TestActionResultModel.actionPath
     package: azure-devops-extension-api
-    summary: Path identifier test step in test case workitem.
+    summary: >-
+      Path identifier for test step in test case workitem. Note: 1) It is
+      represented in Hexadecimal format with 8 digits for a step. 2) Internally,
+      the step ID value for first step starts with 2 so actionPath = 00000002
+      step 9, will have an ID = 10 and actionPath = 0000000a step 15, will have
+      an ID =16 and actionPath = 00000010 3) actionPath of shared step is
+      concatenated with the parent step of test case. Example, it would be
+      something of type -  0000000300000001 where 00000003 denotes action path
+      of test step and 00000001 denotes action path for shared step
     fullName: actionPath
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'actionPath: string'
-      return:
-        description: ''
-        type: string
-  - name: comment
-    uid: azure-devops-extension-api.TestActionResultModel.comment
-    package: azure-devops-extension-api
-    summary: Comment in result.
-    fullName: comment
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'comment: string'
-      return:
-        description: ''
-        type: string
-  - name: completedDate
-    uid: azure-devops-extension-api.TestActionResultModel.completedDate
-    package: azure-devops-extension-api
-    summary: Time when execution completed.
-    fullName: completedDate
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'completedDate: Date'
-      return:
-        description: ''
-        type: Date
-  - name: durationInMs
-    uid: azure-devops-extension-api.TestActionResultModel.durationInMs
-    package: azure-devops-extension-api
-    summary: Duration of execution.
-    fullName: durationInMs
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'durationInMs: number'
-      return:
-        description: ''
-        type: number
-  - name: errorMessage
-    uid: azure-devops-extension-api.TestActionResultModel.errorMessage
-    package: azure-devops-extension-api
-    summary: Error message in result.
-    fullName: errorMessage
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'errorMessage: string'
       return:
         description: ''
         type: string
@@ -80,52 +34,24 @@ properties:
     summary: Iteration ID of test action result.
     fullName: iterationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'iterationId: number'
       return:
         description: ''
         type: number
-  - name: outcome
-    uid: azure-devops-extension-api.TestActionResultModel.outcome
-    package: azure-devops-extension-api
-    summary: Test outcome of result.
-    fullName: outcome
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'outcome: string'
-      return:
-        description: ''
-        type: string
   - name: sharedStepModel
     uid: azure-devops-extension-api.TestActionResultModel.sharedStepModel
     package: azure-devops-extension-api
     summary: Reference to shared step workitem.
     fullName: sharedStepModel
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sharedStepModel: SharedStepModel'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.SharedStepModel" />
-  - name: startedDate
-    uid: azure-devops-extension-api.TestActionResultModel.startedDate
-    package: azure-devops-extension-api
-    summary: Time when execution started.
-    fullName: startedDate
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'startedDate: Date'
-      return:
-        description: ''
-        type: Date
   - name: stepIdentifier
     uid: azure-devops-extension-api.TestActionResultModel.stepIdentifier
     package: azure-devops-extension-api
@@ -137,7 +63,6 @@ properties:
       StepIdentifier for First step: "1" Second step: "2;1"
     fullName: stepIdentifier
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stepIdentifier: string'
@@ -147,14 +72,104 @@ properties:
   - name: url
     uid: azure-devops-extension-api.TestActionResultModel.url
     package: azure-devops-extension-api
-    summary: Url of test action result.
+    summary: Url of test action result. Deprecated in hosted environment.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: comment
+    uid: azure-devops-extension-api.TestActionResultModel.comment
+    package: azure-devops-extension-api
+    summary: Comment in result.
+    fullName: comment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestResultModelBase.comment](xref:azure-devops-extension-api.TestResultModelBase.comment)
+  - name: completedDate
+    uid: azure-devops-extension-api.TestActionResultModel.completedDate
+    package: azure-devops-extension-api
+    summary: Time when execution completed(UTC).
+    fullName: completedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'completedDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestResultModelBase.completedDate](xref:azure-devops-extension-api.TestResultModelBase.completedDate)
+  - name: durationInMs
+    uid: azure-devops-extension-api.TestActionResultModel.durationInMs
+    package: azure-devops-extension-api
+    summary: Duration of execution.
+    fullName: durationInMs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'durationInMs: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestResultModelBase.durationInMs](xref:azure-devops-extension-api.TestResultModelBase.durationInMs)
+  - name: errorMessage
+    uid: azure-devops-extension-api.TestActionResultModel.errorMessage
+    package: azure-devops-extension-api
+    summary: Error message in result.
+    fullName: errorMessage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestResultModelBase.errorMessage](xref:azure-devops-extension-api.TestResultModelBase.errorMessage)
+  - name: outcome
+    uid: azure-devops-extension-api.TestActionResultModel.outcome
+    package: azure-devops-extension-api
+    summary: Test outcome of result.
+    fullName: outcome
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'outcome: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestResultModelBase.outcome](xref:azure-devops-extension-api.TestResultModelBase.outcome)
+  - name: startedDate
+    uid: azure-devops-extension-api.TestActionResultModel.startedDate
+    package: azure-devops-extension-api
+    summary: Time when execution started(UTC).
+    fullName: startedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'startedDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestResultModelBase.startedDate](xref:azure-devops-extension-api.TestResultModelBase.startedDate)
 extends: <xref uid="azure-devops-extension-api.TestResultModelBase" />

@@ -5,10 +5,22 @@ package: azure-devops-extension-api
 summary: A suite entry defines properties for a test suite.
 fullName: SuiteEntry
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: suiteId
+    uid: azure-devops-extension-api.SuiteEntry.suiteId
+    package: azure-devops-extension-api
+    summary: Id for the test suite.
+    fullName: suiteId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'suiteId: number'
+      return:
+        description: ''
+        type: number
+inheritedProperties:
   - name: id
     uid: azure-devops-extension-api.SuiteEntry.id
     package: azure-devops-extension-api
@@ -17,50 +29,43 @@ properties:
       suite id.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SuiteEntryUpdateParams.id](xref:azure-devops-extension-api.SuiteEntryUpdateParams.id)
   - name: sequenceNumber
     uid: azure-devops-extension-api.SuiteEntry.sequenceNumber
     package: azure-devops-extension-api
     summary: Sequence number for the suite entry object in the test suite.
     fullName: sequenceNumber
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sequenceNumber: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SuiteEntryUpdateParams.sequenceNumber](xref:azure-devops-extension-api.SuiteEntryUpdateParams.sequenceNumber)
   - name: suiteEntryType
     uid: azure-devops-extension-api.SuiteEntry.suiteEntryType
     package: azure-devops-extension-api
     summary: Defines whether the entry is of type test case or suite.
     fullName: suiteEntryType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'suiteEntryType: SuiteEntryTypes'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.SuiteEntryTypes" />
-  - name: suiteId
-    uid: azure-devops-extension-api.SuiteEntry.suiteId
-    package: azure-devops-extension-api
-    summary: Id for the test suite.
-    fullName: suiteId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'suiteId: number'
-      return:
-        description: ''
-        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SuiteEntryUpdateParams.suiteEntryType](xref:azure-devops-extension-api.SuiteEntryUpdateParams.suiteEntryType)
 extends: <xref uid="azure-devops-extension-api.SuiteEntryUpdateParams" />

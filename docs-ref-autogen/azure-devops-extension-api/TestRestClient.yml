@@ -2,10 +2,11 @@
 name: TestRestClient
 uid: azure-devops-extension-api.TestRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: TestRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new TestRestClient(options: IVssRestClientOptions)'
@@ -29,7 +29,6 @@ properties:
     summary: ''
     fullName: RESOURCE_AREA_ID
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
@@ -37,12 +36,11 @@ properties:
         description: ''
         type: string
 methods:
-  - name: 'addCustomFields(CustomTestFieldDefinition[], string)'
+  - name: addCustomFields(CustomTestFieldDefinition[], string)
     uid: azure-devops-extension-api.TestRestClient.addCustomFields
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -53,22 +51,20 @@ methods:
           type: >-
             <xref uid="azure-devops-extension-api.CustomTestFieldDefinition"
             />[]
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.CustomTestFieldDefinition" />[]&gt;
-  - name: 'addTestCasesToSuite(string, number, number, string)'
+  - name: addTestCasesToSuite(string, number, number, string)
     uid: azure-devops-extension-api.TestRestClient.addTestCasesToSuite
     package: azure-devops-extension-api
     summary: Add test cases to suite.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -86,7 +82,7 @@ methods:
           description: ID of the test suite to which the test cases must be added.
         - id: testCaseIds
           type: string
-          description: >
+          description: >-
             IDs of the test cases to add to the suite. Ids are specified in
             comma separated format.
       return:
@@ -94,12 +90,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.SuiteTestCase"
           />[]&gt;
-  - name: 'addTestResultsToTestRun(TestCaseResult[], string, number)'
+  - name: addTestResultsToTestRun(TestCaseResult[], string, number)
     uid: azure-devops-extension-api.TestRestClient.addTestResultsToTestRun
     package: azure-devops-extension-api
     summary: Add test results to a test run.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -107,26 +102,24 @@ methods:
         string, runId: number): Promise<TestCaseResult[]>
       parameters:
         - id: results
-          type: '<xref uid="azure-devops-extension-api.TestCaseResult" />[]'
+          type: <xref uid="azure-devops-extension-api.TestCaseResult" />[]
           description: List of test results to add.
         - id: project
           type: string
           description: Project ID or project name
         - id: runId
           type: number
-          description: |
-            Test run ID into which test results to add.
+          description: Test run ID into which test results to add.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestCaseResult"
           />[]&gt;
-  - name: 'addWorkItemToTestLinks(WorkItemToTestLinks, string)'
+  - name: addWorkItemToTestLinks(WorkItemToTestLinks, string)
     uid: azure-devops-extension-api.TestRestClient.addWorkItemToTestLinks
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -135,11 +128,10 @@ methods:
       parameters:
         - id: workItemToTestLinks
           type: <xref uid="azure-devops-extension-api.WorkItemToTestLinks" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
@@ -153,7 +145,6 @@ methods:
     package: azure-devops-extension-api
     summary: Attach a file to test step result
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -179,8 +170,7 @@ methods:
           description: ID of the test result iteration.
         - id: actionPath
           type: string
-          description: |
-            Hex value of test result action path.
+          description: Hex value of test result action path.
       return:
         description: ''
         type: >-
@@ -193,7 +183,6 @@ methods:
     package: azure-devops-extension-api
     summary: Attach a file to a test result.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -212,19 +201,17 @@ methods:
           description: ID of the test run that contains the result.
         - id: testCaseResultId
           type: number
-          description: |
-            ID of the test result against which attachment has to be uploaded.
+          description: ID of the test result against which attachment has to be uploaded.
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
-  - name: 'createTestRun(RunCreateModel, string)'
+  - name: createTestRun(RunCreateModel, string)
     uid: azure-devops-extension-api.TestRestClient.createTestRun
     package: azure-devops-extension-api
     summary: Create new test run.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -236,17 +223,15 @@ methods:
           description: Run details RunCreateModel
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestRun" />&gt;
-  - name: 'createTestRunAttachment(TestAttachmentRequestModel, string, number)'
+  - name: createTestRunAttachment(TestAttachmentRequestModel, string, number)
     uid: azure-devops-extension-api.TestRestClient.createTestRunAttachment
     package: azure-devops-extension-api
     summary: Attach a file to a test run.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -262,19 +247,17 @@ methods:
           description: Project ID or project name
         - id: runId
           type: number
-          description: |
-            ID of the test run against which attachment has to be uploaded.
+          description: ID of the test run against which attachment has to be uploaded.
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
-  - name: 'createTestSession(TestSession, TeamContext)'
+  - name: createTestSession(TestSession, TeamContext)
     uid: azure-devops-extension-api.TestRestClient.createTestSession
     package: azure-devops-extension-api
     summary: Create a test session
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -286,17 +269,15 @@ methods:
           description: Test session details for creation
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
-          description: |
-            The team context for the operation
+          description: The team context for the operation
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestSession" />&gt;
-  - name: 'createTestSettings(TestSettings, string)'
+  - name: createTestSettings(TestSettings, string)
     uid: azure-devops-extension-api.TestRestClient.createTestSettings
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -305,11 +286,10 @@ methods:
       parameters:
         - id: testSettings
           type: <xref uid="azure-devops-extension-api.TestSettings" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: Promise&lt;number&gt;
@@ -320,7 +300,6 @@ methods:
     package: azure-devops-extension-api
     summary: Attach a file to a test result
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -343,7 +322,7 @@ methods:
           description: ID of the test results that contains sub result.
         - id: testSubResultId
           type: number
-          description: >
+          description: >-
             ID of the test sub results against which attachment has to be
             uploaded.
       return:
@@ -351,12 +330,11 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
-  - name: 'deleteSharedParameter(string, number)'
+  - name: deleteSharedParameter(string, number)
     uid: azure-devops-extension-api.TestRestClient.deleteSharedParameter
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -368,17 +346,15 @@ methods:
           description: Project ID or project name
         - id: sharedParameterId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteSharedStep(string, number)'
+  - name: deleteSharedStep(string, number)
     uid: azure-devops-extension-api.TestRestClient.deleteSharedStep
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -390,17 +366,15 @@ methods:
           description: Project ID or project name
         - id: sharedStepId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteTestCase(string, number)'
+  - name: deleteTestCase(string, number)
     uid: azure-devops-extension-api.TestRestClient.deleteTestCase
     package: azure-devops-extension-api
     summary: Delete a test case.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -412,17 +386,15 @@ methods:
           description: Project ID or project name
         - id: testCaseId
           type: number
-          description: |
-            Id of test case to delete.
+          description: Id of test case to delete.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteTestMethodToWorkItemLink(string, string, number)'
+  - name: deleteTestMethodToWorkItemLink(string, string, number)
     uid: azure-devops-extension-api.TestRestClient.deleteTestMethodToWorkItemLink
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -434,20 +406,18 @@ methods:
           description: Project ID or project name
         - id: testName
           type: string
-          description: '-'
+          description: ''
         - id: workItemId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;boolean&gt;
-  - name: 'deleteTestRun(string, number)'
+  - name: deleteTestRun(string, number)
     uid: azure-devops-extension-api.TestRestClient.deleteTestRun
     package: azure-devops-extension-api
     summary: Delete a test run by its ID.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function deleteTestRun(project: string, runId: number): Promise<void>'
@@ -457,17 +427,15 @@ methods:
           description: Project ID or project name
         - id: runId
           type: number
-          description: |
-            ID of the run to delete.
+          description: ID of the run to delete.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteTestSettings(string, number)'
+  - name: deleteTestSettings(string, number)
     uid: azure-devops-extension-api.TestRestClient.deleteTestSettings
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -479,51 +447,15 @@ methods:
           description: Project ID or project name
         - id: testSettingsId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'getActionResults(string, number, number, number, string)'
-    uid: azure-devops-extension-api.TestRestClient.getActionResults
-    package: azure-devops-extension-api
-    summary: Gets the action results for an iteration in a test result.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function getActionResults(project: string, runId: number,
-        testCaseResultId: number, iterationId: number, actionPath?: string):
-        Promise<TestActionResultModel[]>
-      parameters:
-        - id: project
-          type: string
-          description: Project ID or project name
-        - id: runId
-          type: number
-          description: ID of the test run that contains the result.
-        - id: testCaseResultId
-          type: number
-          description: ID of the test result that contains the iterations.
-        - id: iterationId
-          type: number
-          description: ID of the iteration that contains the actions.
-        - id: actionPath
-          type: string
-          description: |
-            Path of a specific action, used to get just that action.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="azure-devops-extension-api.TestActionResultModel" />[]&gt;
-  - name: 'getBugsLinkedToTestResult(string, number, number)'
+  - name: getBugsLinkedToTestResult(string, number, number)
     uid: azure-devops-extension-api.TestRestClient.getBugsLinkedToTestResult
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -535,22 +467,20 @@ methods:
           description: Project ID or project name
         - id: runId
           type: number
-          description: '-'
+          description: ''
         - id: testCaseResultId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemReference"
           />[]&gt;
-  - name: 'getBuildCodeCoverage(string, number, number)'
+  - name: getBuildCodeCoverage(string, number, number)
     uid: azure-devops-extension-api.TestRestClient.getBuildCodeCoverage
     package: azure-devops-extension-api
     summary: Get code coverage data for a build.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -565,7 +495,7 @@ methods:
           description: ID of the build for which code coverage data needs to be fetched.
         - id: flags
           type: number
-          description: >
+          description: >-
             Value of flags determine the level of code coverage details to be
             fetched. Flags are additive. Expected Values are 1 for Modules, 2
             for Functions, 4 for BlockData.
@@ -574,12 +504,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BuildCoverage"
           />[]&gt;
-  - name: 'getCodeCoverageSummary(string, number, number)'
+  - name: getCodeCoverageSummary(string, number, number)
     uid: azure-devops-extension-api.TestRestClient.getCodeCoverageSummary
     package: azure-devops-extension-api
     summary: Get Code Coverage Summary for Build.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -594,19 +523,17 @@ methods:
           description: ID of the build for which code coverage data needs to be fetched.
         - id: deltaBuildId
           type: number
-          description: |
-            Delta Build id (optional)
+          description: Delta Build id (optional)
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.CodeCoverageSummary"
           />&gt;
-  - name: 'getLinkedWorkItemsByQuery(LinkedWorkItemsQuery, string)'
+  - name: getLinkedWorkItemsByQuery(LinkedWorkItemsQuery, string)
     uid: azure-devops-extension-api.TestRestClient.getLinkedWorkItemsByQuery
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -615,22 +542,20 @@ methods:
       parameters:
         - id: workItemQuery
           type: <xref uid="azure-devops-extension-api.LinkedWorkItemsQuery" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.LinkedWorkItemsQueryResult" />[]&gt;
-  - name: 'getPoint(string, number, number, number, string)'
+  - name: getPoint(string, number, number, number, string)
     uid: azure-devops-extension-api.TestRestClient.getPoint
     package: azure-devops-extension-api
     summary: Get a test point.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -651,8 +576,7 @@ methods:
           description: ID of the test point to get.
         - id: witFields
           type: string
-          description: |
-            Comma-separated list of work item field names.
+          description: Comma-separated list of work item field names.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestPoint" />&gt;
@@ -663,7 +587,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a list of test points.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -705,17 +628,15 @@ methods:
           description: Number of test points to skip..
         - id: top
           type: number
-          description: |
-            Number of test points to return.
+          description: Number of test points to return.
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestPoint" />[]&gt;'
-  - name: 'getPointsByQuery(TestPointsQuery, string, number, number)'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestPoint" />[]&gt;
+  - name: getPointsByQuery(TestPointsQuery, string, number, number)
     uid: azure-devops-extension-api.TestRestClient.getPointsByQuery
     package: azure-devops-extension-api
     summary: Get test points using query.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -733,124 +654,87 @@ methods:
           description: Number of test points to skip..
         - id: top
           type: number
-          description: |
-            Number of test points to return.
+          description: Number of test points to return.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestPointsQuery"
           />&gt;
-  - name: 'getResultGroupsByBuild(string, number, string, string[], string)'
+  - name: getResultGroupsByBuild(string, number, string, string[], string)
     uid: azure-devops-extension-api.TestRestClient.getResultGroupsByBuild
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getResultGroupsByBuild(project: string, buildId: number,
         publishContext: string, fields?: string[], continuationToken?: string):
-        Promise<FieldDetailsForTestResults[]>
+        Promise<PagedList<FieldDetailsForTestResults>>
       parameters:
         - id: project
           type: string
           description: Project ID or project name
         - id: buildId
           type: number
-          description: '-'
+          description: ''
         - id: publishContext
           type: string
-          description: '-'
+          description: ''
         - id: fields
-          type: 'string[]'
-          description: '-'
+          type: string[]
+          description: ''
         - id: continuationToken
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="azure-devops-extension-api.FieldDetailsForTestResults" />[]&gt;
-  - name: 'getResultGroupsByRelease(string, number, string, number, string[], string)'
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref
+          uid="azure-devops-extension-api.FieldDetailsForTestResults" />&gt;&gt;
+  - name: getResultGroupsByRelease(string, number, string, number, string[], string)
     uid: azure-devops-extension-api.TestRestClient.getResultGroupsByRelease
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getResultGroupsByRelease(project: string, releaseId: number,
         publishContext: string, releaseEnvId?: number, fields?: string[],
-        continuationToken?: string): Promise<FieldDetailsForTestResults[]>
+        continuationToken?: string):
+        Promise<PagedList<FieldDetailsForTestResults>>
       parameters:
         - id: project
           type: string
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: publishContext
           type: string
-          description: '-'
+          description: ''
         - id: releaseEnvId
           type: number
-          description: '-'
+          description: ''
         - id: fields
-          type: 'string[]'
-          description: '-'
+          type: string[]
+          description: ''
         - id: continuationToken
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="azure-devops-extension-api.FieldDetailsForTestResults" />[]&gt;
-  - name: 'getResultParameters(string, number, number, number, string)'
-    uid: azure-devops-extension-api.TestRestClient.getResultParameters
-    package: azure-devops-extension-api
-    summary: Get a list of parameterized results
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function getResultParameters(project: string, runId: number,
-        testCaseResultId: number, iterationId: number, paramName?: string):
-        Promise<TestResultParameterModel[]>
-      parameters:
-        - id: project
-          type: string
-          description: Project ID or project name
-        - id: runId
-          type: number
-          description: ID of the test run that contains the result.
-        - id: testCaseResultId
-          type: number
-          description: ID of the test result that contains the iterations.
-        - id: iterationId
-          type: number
-          description: ID of the iteration that contains the parameterized results.
-        - id: paramName
-          type: string
-          description: |
-            Name of the parameter.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="azure-devops-extension-api.TestResultParameterModel" />[]&gt;
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref
+          uid="azure-devops-extension-api.FieldDetailsForTestResults" />&gt;&gt;
   - name: getResultRetentionSettings(string)
     uid: azure-devops-extension-api.TestRestClient.getResultRetentionSettings
     package: azure-devops-extension-api
     summary: Get test result retention settings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -859,19 +743,17 @@ methods:
       parameters:
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ResultRetentionSettings" />&gt;
-  - name: 'getTestCaseById(string, number, number, number)'
+  - name: getTestCaseById(string, number, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestCaseById
     package: azure-devops-extension-api
     summary: Get a specific test case in a test suite with test case id.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -889,17 +771,15 @@ methods:
           description: ID of the suite that contains the test case.
         - id: testCaseIds
           type: number
-          description: |
-            ID of the test case to get.
+          description: ID of the test case to get.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.SuiteTestCase" />&gt;
-  - name: 'getTestCases(string, number, number)'
+  - name: getTestCases(string, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestCases
     package: azure-devops-extension-api
     summary: Get all test cases in a suite.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -914,19 +794,17 @@ methods:
           description: ID of the test plan that contains the suites.
         - id: suiteId
           type: number
-          description: |
-            ID of the suite to get.
+          description: ID of the suite to get.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.SuiteTestCase"
           />[]&gt;
-  - name: 'getTestIteration(string, number, number, number, boolean)'
+  - name: getTestIteration(string, number, number, number, boolean)
     uid: azure-devops-extension-api.TestRestClient.getTestIteration
     package: azure-devops-extension-api
     summary: Get iteration for a result
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -948,7 +826,7 @@ methods:
           description: Id of the test results Iteration.
         - id: includeActionResults
           type: boolean
-          description: >
+          description: >-
             Include result details for each action performed in the test
             iteration. ActionResults refer to outcome (pass/fail) of test steps
             that are executed as part of a running a manual test. Including the
@@ -960,12 +838,11 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestIterationDetailsModel" />&gt;
-  - name: 'getTestIterations(string, number, number, boolean)'
+  - name: getTestIterations(string, number, number, boolean)
     uid: azure-devops-extension-api.TestRestClient.getTestIterations
     package: azure-devops-extension-api
     summary: Get iterations for a result
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -984,7 +861,7 @@ methods:
           description: ID of the test result that contains the iterations.
         - id: includeActionResults
           type: boolean
-          description: >
+          description: >-
             Include result details for each action performed in the test
             iteration. ActionResults refer to outcome (pass/fail) of test steps
             that are executed as part of a running a manual test. Including the
@@ -996,12 +873,11 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestIterationDetailsModel" />[]&gt;
-  - name: 'getTestResultAttachmentContent(string, number, number, number)'
+  - name: getTestResultAttachmentContent(string, number, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestResultAttachmentContent
     package: azure-devops-extension-api
     summary: Download a test result attachment by its ID.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1019,17 +895,15 @@ methods:
           description: ID of the test result whose attachment has to be downloaded.
         - id: attachmentId
           type: number
-          description: |
-            ID of the test result attachment to be downloaded.
+          description: ID of the test result attachment to be downloaded.
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getTestResultAttachments(string, number, number)'
+  - name: getTestResultAttachments(string, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestResultAttachments
     package: azure-devops-extension-api
     summary: Get list of test result attachments reference.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1044,19 +918,17 @@ methods:
           description: ID of the test run that contains the result.
         - id: testCaseResultId
           type: number
-          description: |
-            ID of the test result.
+          description: ID of the test result.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestAttachment"
           />[]&gt;
-  - name: 'getTestResultAttachmentZip(string, number, number, number)'
+  - name: getTestResultAttachmentZip(string, number, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestResultAttachmentZip
     package: azure-devops-extension-api
     summary: Download a test result attachment by its ID.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1074,17 +946,15 @@ methods:
           description: ID of the test result whose attachment has to be downloaded.
         - id: attachmentId
           type: number
-          description: |
-            ID of the test result attachment to be downloaded.
+          description: ID of the test result attachment to be downloaded.
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getTestResultById(string, number, number, ResultDetails)'
+  - name: getTestResultById(string, number, number, ResultDetails)
     uid: azure-devops-extension-api.TestRestClient.getTestResultById
     package: azure-devops-extension-api
     summary: Get a test result for a test run.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1103,7 +973,7 @@ methods:
           description: Test result ID.
         - id: detailsToInclude
           type: <xref uid="azure-devops-extension-api.ResultDetails" />
-          description: >
+          description: >-
             Details to include with test results. Default is None. Other values
             are Iterations, WorkItems and SubResults.
       return:
@@ -1118,7 +988,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1132,26 +1001,25 @@ methods:
           description: Project ID or project name
         - id: buildId
           type: number
-          description: '-'
+          description: ''
         - id: publishContext
           type: string
-          description: '-'
+          description: ''
         - id: groupBy
           type: string
-          description: '-'
+          description: ''
         - id: filter
           type: string
-          description: '-'
+          description: ''
         - id: orderby
           type: string
-          description: '-'
+          description: ''
         - id: shouldIncludeResults
           type: boolean
-          description: '-'
+          description: ''
         - id: queryRunSummaryForInProgress
           type: boolean
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -1164,7 +1032,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1178,29 +1045,28 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: releaseEnvId
           type: number
-          description: '-'
+          description: ''
         - id: publishContext
           type: string
-          description: '-'
+          description: ''
         - id: groupBy
           type: string
-          description: '-'
+          description: ''
         - id: filter
           type: string
-          description: '-'
+          description: ''
         - id: orderby
           type: string
-          description: '-'
+          description: ''
         - id: shouldIncludeResults
           type: boolean
-          description: '-'
+          description: ''
         - id: queryRunSummaryForInProgress
           type: boolean
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -1213,7 +1079,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get test results for a test run.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1241,9 +1106,8 @@ methods:
             Number of test results to return. Maximum is 1000 when
             detailsToInclude is None and 200 otherwise.
         - id: outcomes
-          type: '<xref uid="azure-devops-extension-api.TestOutcome" />[]'
-          description: |
-            Comma separated list of test outcomes to filter test results.
+          type: <xref uid="azure-devops-extension-api.TestOutcome" />[]
+          description: Comma separated list of test outcomes to filter test results.
       return:
         description: ''
         type: >-
@@ -1256,44 +1120,45 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTestResultsByBuild(project: string, buildId: number,
         publishContext?: string, outcomes?: TestOutcome[], top?: number,
-        continuationToken?: string): Promise<ShallowTestCaseResult[]>
+        continuationToken?: string): Promise<PagedList<ShallowTestCaseResult>>
       parameters:
         - id: project
           type: string
           description: Project ID or project name
         - id: buildId
           type: number
-          description: '-'
+          description: ''
         - id: publishContext
           type: string
-          description: '-'
+          description: ''
         - id: outcomes
-          type: '<xref uid="azure-devops-extension-api.TestOutcome" />[]'
-          description: '-'
+          type: <xref uid="azure-devops-extension-api.TestOutcome" />[]
+          description: ''
         - id: top
           type: number
-          description: '-'
+          description: ''
         - id: continuationToken
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="azure-devops-extension-api.ShallowTestCaseResult" />[]&gt;
-  - name: 'getTestResultsByQuery(TestResultsQuery, string)'
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.ShallowTestCaseResult"
+          />&gt;&gt;
+  - name: getTestResultsByQuery(TestResultsQuery, string)
     uid: azure-devops-extension-api.TestRestClient.getTestResultsByQuery
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      This API will return results by Ids with fields specified/trend for
+      particular automated test method. We are still improving this API and have
+      not finalized proper signature and contract.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1302,11 +1167,10 @@ methods:
       parameters:
         - id: query
           type: <xref uid="azure-devops-extension-api.TestResultsQuery" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
@@ -1319,48 +1183,46 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getTestResultsByRelease(project: string, releaseId: number,
         releaseEnvid?: number, publishContext?: string, outcomes?:
         TestOutcome[], top?: number, continuationToken?: string):
-        Promise<ShallowTestCaseResult[]>
+        Promise<PagedList<ShallowTestCaseResult>>
       parameters:
         - id: project
           type: string
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: releaseEnvid
           type: number
-          description: '-'
+          description: ''
         - id: publishContext
           type: string
-          description: '-'
+          description: ''
         - id: outcomes
-          type: '<xref uid="azure-devops-extension-api.TestOutcome" />[]'
-          description: '-'
+          type: <xref uid="azure-devops-extension-api.TestOutcome" />[]
+          description: ''
         - id: top
           type: number
-          description: '-'
+          description: ''
         - id: continuationToken
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="azure-devops-extension-api.ShallowTestCaseResult" />[]&gt;
-  - name: 'getTestRunAttachmentContent(string, number, number)'
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.ShallowTestCaseResult"
+          />&gt;&gt;
+  - name: getTestRunAttachmentContent(string, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestRunAttachmentContent
     package: azure-devops-extension-api
     summary: Download a test run attachment by its ID.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1375,17 +1237,15 @@ methods:
           description: ID of the test run whose attachment has to be downloaded.
         - id: attachmentId
           type: number
-          description: |
-            ID of the test run attachment to be downloaded.
+          description: ID of the test run attachment to be downloaded.
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getTestRunAttachments(string, number)'
+  - name: getTestRunAttachments(string, number)
     uid: azure-devops-extension-api.TestRestClient.getTestRunAttachments
     package: azure-devops-extension-api
     summary: Get list of test run attachments reference.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1397,19 +1257,17 @@ methods:
           description: Project ID or project name
         - id: runId
           type: number
-          description: |
-            ID of the test run.
+          description: ID of the test run.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestAttachment"
           />[]&gt;
-  - name: 'getTestRunAttachmentZip(string, number, number)'
+  - name: getTestRunAttachmentZip(string, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestRunAttachmentZip
     package: azure-devops-extension-api
     summary: Download a test run attachment by its ID.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1424,17 +1282,15 @@ methods:
           description: ID of the test run whose attachment has to be downloaded.
         - id: attachmentId
           type: number
-          description: |
-            ID of the test run attachment to be downloaded.
+          description: ID of the test run attachment to be downloaded.
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getTestRunById(string, number, boolean)'
+  - name: getTestRunById(string, number, boolean)
     uid: azure-devops-extension-api.TestRestClient.getTestRunById
     package: azure-devops-extension-api
     summary: Get a test run by its ID.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1449,19 +1305,17 @@ methods:
           description: ID of the run to get.
         - id: includeDetails
           type: boolean
-          description: >
-            Defualt value is true. It includes details like run
-            statistics,release,build,Test enviornment,Post process state and
-            more
+          description: >-
+            Default value is true. It includes details like run statistics,
+            release, build, test environment, post process state, and more.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestRun" />&gt;
-  - name: 'getTestRunCodeCoverage(string, number, number)'
+  - name: getTestRunCodeCoverage(string, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestRunCodeCoverage
     package: azure-devops-extension-api
     summary: Get code coverage data for a test run
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1476,7 +1330,7 @@ methods:
           description: ID of the test run for which code coverage data needs to be fetched.
         - id: flags
           type: number
-          description: >
+          description: >-
             Value of flags determine the level of code coverage details to be
             fetched. Flags are additive. Expected Values are 1 for Modules, 2
             for Functions, 4 for BlockData.
@@ -1485,12 +1339,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestRunCoverage"
           />[]&gt;
-  - name: 'getTestRunLogs(string, number)'
+  - name: getTestRunLogs(string, number)
     uid: azure-devops-extension-api.TestRestClient.getTestRunLogs
     package: azure-devops-extension-api
     summary: Get test run message logs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1502,8 +1355,7 @@ methods:
           description: Project ID or project name
         - id: runId
           type: number
-          description: |
-            ID of the run to get.
+          description: ID of the run to get.
       return:
         description: ''
         type: >-
@@ -1516,7 +1368,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a list of test runs.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1535,34 +1386,32 @@ methods:
           description: Team foundation ID of the owner of the runs.
         - id: tmiRunId
           type: string
-          description: '-'
+          description: ''
         - id: planId
           type: number
           description: ID of the test plan that the runs are a part of.
         - id: includeRunDetails
           type: boolean
-          description: 'If true, include all the properties of the runs.'
+          description: If true, include all the properties of the runs.
         - id: automated
           type: boolean
-          description: 'If true, only returns automated runs.'
+          description: If true, only returns automated runs.
         - id: skip
           type: number
           description: Number of test runs to skip.
         - id: top
           type: number
-          description: |
-            Number of test runs to return.
+          description: Number of test runs to return.
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestRun" />[]&gt;'
-  - name: 'getTestRunStatistics(string, number)'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestRun" />[]&gt;
+  - name: getTestRunStatistics(string, number)
     uid: azure-devops-extension-api.TestRestClient.getTestRunStatistics
     package: azure-devops-extension-api
     summary: >-
       Get test run statistics , used when we want to get summary of a run by
       outcome.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1574,8 +1423,7 @@ methods:
           description: Project ID or project name
         - id: runId
           type: number
-          description: |
-            ID of the run to get.
+          description: ID of the run to get.
       return:
         description: ''
         type: >-
@@ -1588,7 +1436,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a list of test sessions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1602,7 +1449,7 @@ methods:
           description: The team context for the operation
         - id: period
           type: number
-          description: 'Period in days from now, for which test sessions are fetched.'
+          description: Period in days from now, for which test sessions are fetched.
         - id: allSessions
           type: boolean
           description: >-
@@ -1618,18 +1465,17 @@ methods:
           description: Source of the test session.
         - id: includeOnlyCompletedSessions
           type: boolean
-          description: >
+          description: >-
             If true, it returns test sessions in completed state. Otherwise, it
             returns test sessions for all states
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestSession" />[]&gt;'
-  - name: 'getTestSettingsById(string, number)'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestSession" />[]&gt;
+  - name: getTestSettingsById(string, number)
     uid: azure-devops-extension-api.TestRestClient.getTestSettingsById
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1641,18 +1487,16 @@ methods:
           description: Project ID or project name
         - id: testSettingsId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestSettings" />&gt;
-  - name: 'getTestSubResultAttachmentContent(string, number, number, number, number)'
+  - name: getTestSubResultAttachmentContent(string, number, number, number, number)
     uid: >-
       azure-devops-extension-api.TestRestClient.getTestSubResultAttachmentContent
     package: azure-devops-extension-api
     summary: Download a test sub result attachment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1674,17 +1518,15 @@ methods:
           description: ID of the test result attachment to be downloaded
         - id: testSubResultId
           type: number
-          description: |
-            ID of the test sub result whose attachment has to be downloaded
+          description: ID of the test sub result whose attachment has to be downloaded
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getTestSubResultAttachments(string, number, number, number)'
+  - name: getTestSubResultAttachments(string, number, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestSubResultAttachments
     package: azure-devops-extension-api
     summary: Get list of test sub result attachments
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1703,19 +1545,17 @@ methods:
           description: ID of the test results that contains sub result.
         - id: testSubResultId
           type: number
-          description: |
-            ID of the test sub result whose attachment has to be downloaded
+          description: ID of the test sub result whose attachment has to be downloaded
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestAttachment"
           />[]&gt;
-  - name: 'getTestSubResultAttachmentZip(string, number, number, number, number)'
+  - name: getTestSubResultAttachmentZip(string, number, number, number, number)
     uid: azure-devops-extension-api.TestRestClient.getTestSubResultAttachmentZip
     package: azure-devops-extension-api
     summary: Download a test sub result attachment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1737,17 +1577,15 @@ methods:
           description: ID of the test result attachment to be downloaded
         - id: testSubResultId
           type: number
-          description: |
-            ID of the test sub result whose attachment has to be downloaded
+          description: ID of the test sub result whose attachment has to be downloaded
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'publishTestResultDocument(TestResultDocument, string, number)'
+  - name: publishTestResultDocument(TestResultDocument, string, number)
     uid: azure-devops-extension-api.TestRestClient.publishTestResultDocument
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1756,25 +1594,23 @@ methods:
       parameters:
         - id: document
           type: <xref uid="azure-devops-extension-api.TestResultDocument" />
-          description: '-'
+          description: ''
         - id: project
           type: string
           description: Project ID or project name
         - id: runId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestResultDocument"
           />&gt;
-  - name: 'queryCustomFields(string, CustomTestFieldScope)'
+  - name: queryCustomFields(string, CustomTestFieldScope)
     uid: azure-devops-extension-api.TestRestClient.queryCustomFields
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1786,19 +1622,17 @@ methods:
           description: Project ID or project name
         - id: scopeFilter
           type: <xref uid="azure-devops-extension-api.CustomTestFieldScope" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.CustomTestFieldDefinition" />[]&gt;
-  - name: 'queryResultTrendForBuild(TestResultTrendFilter, string)'
+  - name: queryResultTrendForBuild(TestResultTrendFilter, string)
     uid: azure-devops-extension-api.TestRestClient.queryResultTrendForBuild
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1807,22 +1641,20 @@ methods:
       parameters:
         - id: filter
           type: <xref uid="azure-devops-extension-api.TestResultTrendFilter" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AggregatedDataForResultTrend" />[]&gt;
-  - name: 'queryResultTrendForRelease(TestResultTrendFilter, string)'
+  - name: queryResultTrendForRelease(TestResultTrendFilter, string)
     uid: azure-devops-extension-api.TestRestClient.queryResultTrendForRelease
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1831,22 +1663,20 @@ methods:
       parameters:
         - id: filter
           type: <xref uid="azure-devops-extension-api.TestResultTrendFilter" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AggregatedDataForResultTrend" />[]&gt;
-  - name: 'queryTestHistory(TestHistoryQuery, string)'
+  - name: queryTestHistory(TestHistoryQuery, string)
     uid: azure-devops-extension-api.TestRestClient.queryTestHistory
     package: azure-devops-extension-api
     summary: Get history of a test method using TestHistoryQuery
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1858,19 +1688,17 @@ methods:
           description: TestHistoryQuery to get history
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestHistoryQuery"
           />&gt;
-  - name: 'queryTestMethodLinkedWorkItems(string, string)'
+  - name: queryTestMethodLinkedWorkItems(string, string)
     uid: azure-devops-extension-api.TestRestClient.queryTestMethodLinkedWorkItems
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1882,19 +1710,17 @@ methods:
           description: Project ID or project name
         - id: testName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestToWorkItemLinks"
           />&gt;
-  - name: 'queryTestResultHistory(ResultsFilter, string)'
+  - name: queryTestResultHistory(ResultsFilter, string)
     uid: azure-devops-extension-api.TestRestClient.queryTestResultHistory
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1903,24 +1729,22 @@ methods:
       parameters:
         - id: filter
           type: <xref uid="azure-devops-extension-api.ResultsFilter" />
-          description: '-'
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestResultHistory"
           />&gt;
-  - name: 'queryTestResultsMetaData(string[], string)'
+  - name: queryTestResultsMetaData(string[], string)
     uid: azure-devops-extension-api.TestRestClient.queryTestResultsMetaData
     package: azure-devops-extension-api
     summary: >-
       Get list of test Result meta data details for corresponding
       testcasereferenceId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1928,14 +1752,13 @@ methods:
         string): Promise<TestResultMetaData[]>
       parameters:
         - id: testReferenceIds
-          type: 'string[]'
+          type: string[]
           description: >-
             TestCaseReference Ids of the test Result to be queried, comma
-            seperated list of valid ids (limit no. of ids 200).
+            separated list of valid ids (limit no. of ids 200).
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
@@ -1948,7 +1771,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1961,17 +1783,16 @@ methods:
           description: Project ID or project name
         - id: buildId
           type: number
-          description: '-'
+          description: ''
         - id: publishContext
           type: string
-          description: '-'
+          description: ''
         - id: includeFailureDetails
           type: boolean
-          description: '-'
+          description: ''
         - id: buildToCompare
           type: <xref uid="azure-devops-extension-api.BuildReference" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -1984,7 +1805,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1998,32 +1818,30 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: '-'
+          description: ''
         - id: releaseEnvId
           type: number
-          description: '-'
+          description: ''
         - id: publishContext
           type: string
-          description: '-'
+          description: ''
         - id: includeFailureDetails
           type: boolean
-          description: '-'
+          description: ''
         - id: releaseToCompare
           type: <xref uid="azure-devops-extension-api.ReleaseReference" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestResultSummary"
           />&gt;
-  - name: 'queryTestResultsSummaryForReleases(ReleaseReference[], string)'
+  - name: queryTestResultsSummaryForReleases(ReleaseReference[], string)
     uid: >-
       azure-devops-extension-api.TestRestClient.queryTestResultsSummaryForReleases
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2031,12 +1849,11 @@ methods:
         ReleaseReference[], project: string): Promise<TestResultSummary[]>
       parameters:
         - id: releases
-          type: '<xref uid="azure-devops-extension-api.ReleaseReference" />[]'
-          description: '-'
+          type: <xref uid="azure-devops-extension-api.ReleaseReference" />[]
+          description: ''
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
@@ -2049,7 +1866,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2063,23 +1879,22 @@ methods:
           description: Project ID or project name
         - id: workItemCategory
           type: string
-          description: '-'
+          description: ''
         - id: automatedTestName
           type: string
-          description: '-'
+          description: ''
         - id: testCaseId
           type: number
-          description: '-'
+          description: ''
         - id: maxCompleteDate
           type: Date
-          description: '-'
+          description: ''
         - id: days
           type: number
-          description: '-'
+          description: ''
         - id: workItemCount
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -2095,7 +1910,6 @@ methods:
       Query Test Runs based on filters. Mandatory fields are minLastUpdatedDate
       and maxLastUpdatedDate.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2105,7 +1919,7 @@ methods:
         buildIds?: number[], buildDefIds?: number[], branchName?: string,
         releaseIds?: number[], releaseDefIds?: number[], releaseEnvIds?:
         number[], releaseEnvDefIds?: number[], runTitle?: string, top?: number,
-        continuationToken?: string): Promise<TestRun[]>
+        continuationToken?: string): Promise<PagedList<TestRun>>
       parameters:
         - id: project
           type: string
@@ -2122,9 +1936,9 @@ methods:
           type: <xref uid="azure-devops-extension-api.TestRunState" />
           description: Current state of the Runs to be queried.
         - id: planIds
-          type: 'number[]'
+          type: number[]
           description: >-
-            Plan Ids of the Runs to be queried, comma seperated list of valid
+            Plan Ids of the Runs to be queried, comma separated list of valid
             ids (limit no. of ids 10).
         - id: isAutomated
           type: boolean
@@ -2133,38 +1947,38 @@ methods:
           type: <xref uid="azure-devops-extension-api.TestRunPublishContext" />
           description: PublishContext of the Runs to be queried.
         - id: buildIds
-          type: 'number[]'
+          type: number[]
           description: >-
-            Build Ids of the Runs to be queried, comma seperated list of valid
+            Build Ids of the Runs to be queried, comma separated list of valid
             ids (limit no. of ids 10).
         - id: buildDefIds
-          type: 'number[]'
+          type: number[]
           description: >-
-            Build Definition Ids of the Runs to be queried, comma seperated list
+            Build Definition Ids of the Runs to be queried, comma separated list
             of valid ids (limit no. of ids 10).
         - id: branchName
           type: string
           description: Source Branch name of the Runs to be queried.
         - id: releaseIds
-          type: 'number[]'
+          type: number[]
           description: >-
-            Release Ids of the Runs to be queried, comma seperated list of valid
+            Release Ids of the Runs to be queried, comma separated list of valid
             ids (limit no. of ids 10).
         - id: releaseDefIds
-          type: 'number[]'
+          type: number[]
           description: >-
-            Release Definition Ids of the Runs to be queried, comma seperated
+            Release Definition Ids of the Runs to be queried, comma separated
             list of valid ids (limit no. of ids 10).
         - id: releaseEnvIds
-          type: 'number[]'
+          type: number[]
           description: >-
-            Release Environment Ids of the Runs to be queried, comma seperated
+            Release Environment Ids of the Runs to be queried, comma separated
             list of valid ids (limit no. of ids 10).
         - id: releaseEnvDefIds
-          type: 'number[]'
+          type: number[]
           description: >-
             Release Environment Definition Ids of the Runs to be queried, comma
-            seperated list of valid ids (limit no. of ids 10).
+            separated list of valid ids (limit no. of ids 10).
         - id: runTitle
           type: string
           description: Run Title of the Runs to be queried.
@@ -2173,19 +1987,20 @@ methods:
           description: Number of runs to be queried. Limit is 100
         - id: continuationToken
           type: string
-          description: >
+          description: >-
             continuationToken received from previous batch or null for first
             batch. It is not supposed to be created (or altered, if received
             from last batch) by user.
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestRun" />[]&gt;'
-  - name: 'queryTestSummaryByRequirement(TestResultsContext, string, number[])'
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.TestRun" />&gt;&gt;
+  - name: queryTestSummaryByRequirement(TestResultsContext, string, number[])
     uid: azure-devops-extension-api.TestRestClient.queryTestSummaryByRequirement
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2195,20 +2010,19 @@ methods:
       parameters:
         - id: resultsContext
           type: <xref uid="azure-devops-extension-api.TestResultsContext" />
-          description: '-'
+          description: ''
         - id: project
           type: string
           description: Project ID or project name
         - id: workItemIds
-          type: 'number[]'
-          description: |
-            -
+          type: number[]
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestSummaryForWorkItem" />[]&gt;
-  - name: 'removeTestCasesFromSuiteUrl(string, number, number, string)'
+  - name: removeTestCasesFromSuiteUrl(string, number, number, string)
     uid: azure-devops-extension-api.TestRestClient.removeTestCasesFromSuiteUrl
     package: azure-devops-extension-api
     summary: >-
@@ -2216,7 +2030,6 @@ methods:
       suite. The test case work item is not deleted from the system. See test
       cases resource to delete a test case permanently.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2234,19 +2047,17 @@ methods:
           description: ID of the suite to get.
         - id: testCaseIds
           type: string
-          description: |
-            IDs of the test cases to remove from the suite.
+          description: IDs of the test cases to remove from the suite.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'updateCodeCoverageSummary(CodeCoverageData, string, number)'
+  - name: updateCodeCoverageSummary(CodeCoverageData, string, number)
     uid: azure-devops-extension-api.TestRestClient.updateCodeCoverageSummary
     package: azure-devops-extension-api
     summary: >-
       http://(tfsserver):8080/tfs/DefaultCollection/_apis/test/CodeCoverage?buildId=10
       Request: Json of code coverage summary
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2255,23 +2066,21 @@ methods:
       parameters:
         - id: coverageData
           type: <xref uid="azure-devops-extension-api.CodeCoverageData" />
-          description: '-'
+          description: ''
         - id: project
           type: string
           description: Project ID or project name
         - id: buildId
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'updateResultRetentionSettings(ResultRetentionSettings, string)'
+  - name: updateResultRetentionSettings(ResultRetentionSettings, string)
     uid: azure-devops-extension-api.TestRestClient.updateResultRetentionSettings
     package: azure-devops-extension-api
     summary: Update test result retention settings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2284,8 +2093,7 @@ methods:
           description: Test result retention settings details to be updated
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
@@ -2298,7 +2106,6 @@ methods:
     package: azure-devops-extension-api
     summary: Updates the properties of the test case association in a suite.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2320,7 +2127,7 @@ methods:
           description: ID of the test suite to which the test cases must be added.
         - id: testCaseIds
           type: string
-          description: >
+          description: >-
             IDs of the test cases to add to the suite. Ids are specified in
             comma separated format.
       return:
@@ -2328,12 +2135,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.SuiteTestCase"
           />[]&gt;
-  - name: 'updateTestPoints(PointUpdateModel, string, number, number, string)'
+  - name: updateTestPoints(PointUpdateModel, string, number, number, string)
     uid: azure-devops-extension-api.TestRestClient.updateTestPoints
     package: azure-devops-extension-api
     summary: Update test points.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2355,18 +2161,17 @@ methods:
           description: ID of the suite that contains the points.
         - id: pointIds
           type: string
-          description: >
+          description: >-
             ID of the test point to get. Use a comma-separated list of IDs to
             update multiple test points.
       return:
         description: ''
-        type: 'Promise&lt;<xref uid="azure-devops-extension-api.TestPoint" />[]&gt;'
-  - name: 'updateTestResults(TestCaseResult[], string, number)'
+        type: Promise&lt;<xref uid="azure-devops-extension-api.TestPoint" />[]&gt;
+  - name: updateTestResults(TestCaseResult[], string, number)
     uid: azure-devops-extension-api.TestRestClient.updateTestResults
     package: azure-devops-extension-api
     summary: Update test results in a test run.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2374,26 +2179,24 @@ methods:
         runId: number): Promise<TestCaseResult[]>
       parameters:
         - id: results
-          type: '<xref uid="azure-devops-extension-api.TestCaseResult" />[]'
+          type: <xref uid="azure-devops-extension-api.TestCaseResult" />[]
           description: List of test results to update.
         - id: project
           type: string
           description: Project ID or project name
         - id: runId
           type: number
-          description: |
-            Test run ID whose test results to update.
+          description: Test run ID whose test results to update.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestCaseResult"
           />[]&gt;
-  - name: 'updateTestRun(RunUpdateModel, string, number)'
+  - name: updateTestRun(RunUpdateModel, string, number)
     uid: azure-devops-extension-api.TestRestClient.updateTestRun
     package: azure-devops-extension-api
     summary: Update test run by its ID.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2408,17 +2211,15 @@ methods:
           description: Project ID or project name
         - id: runId
           type: number
-          description: |
-            ID of the run to update.
+          description: ID of the run to update.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestRun" />&gt;
-  - name: 'updateTestSession(TestSession, TeamContext)'
+  - name: updateTestSession(TestSession, TeamContext)
     uid: azure-devops-extension-api.TestRestClient.updateTestSession
     package: azure-devops-extension-api
     summary: Update a test session
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2430,8 +2231,7 @@ methods:
           description: Test session details for update
         - id: teamContext
           type: <xref uid="azure-devops-extension-api.TeamContext" />
-          description: |
-            The team context for the operation
+          description: The team context for the operation
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestSession" />&gt;

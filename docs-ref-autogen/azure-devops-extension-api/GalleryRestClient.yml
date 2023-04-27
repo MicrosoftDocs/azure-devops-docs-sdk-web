@@ -2,10 +2,11 @@
 name: GalleryRestClient
 uid: azure-devops-extension-api.GalleryRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: GalleryRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new GalleryRestClient(options: IVssRestClientOptions)'
@@ -29,7 +29,6 @@ properties:
     summary: ''
     fullName: RESOURCE_AREA_ID
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
@@ -37,12 +36,11 @@ properties:
         description: ''
         type: string
 methods:
-  - name: 'addAssetForEditExtensionDraft(string, string, string, string, string)'
+  - name: addAssetForEditExtensionDraft(string, string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.addAssetForEditExtensionDraft
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -55,28 +53,26 @@ methods:
           description: Content to upload
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: draftId
           type: string
-          description: '-'
+          description: ''
         - id: assetType
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDraftAsset"
           />&gt;
-  - name: 'addAssetForNewExtensionDraft(string, string, string, string)'
+  - name: addAssetForNewExtensionDraft(string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.addAssetForNewExtensionDraft
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -89,25 +85,23 @@ methods:
           description: Content to upload
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: draftId
           type: string
-          description: '-'
+          description: ''
         - id: assetType
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDraftAsset"
           />&gt;
-  - name: 'associateAzurePublisher(string, string)'
+  - name: associateAzurePublisher(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.associateAzurePublisher
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -116,11 +110,10 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: azurePublisherId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -131,7 +124,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -140,19 +132,17 @@ methods:
       parameters:
         - id: category
           type: <xref uid="azure-devops-extension-api.ExtensionCategory" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionCategory"
           />&gt;
-  - name: 'createDraftForEditExtension(string, string)'
+  - name: createDraftForEditExtension(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.createDraftForEditExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -161,22 +151,20 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDraft"
           />&gt;
-  - name: 'createDraftForNewExtension(any, string, String, String)'
+  - name: createDraftForNewExtension(any, string, String, String)
     uid: azure-devops-extension-api.GalleryRestClient.createDraftForNewExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -188,57 +176,67 @@ methods:
           description: Content to upload
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: product
           type: String
           description: Header to pass the product type of the payload file
         - id: fileName
           type: String
-          description: |
-            Header to pass the filename of the uploaded data
+          description: Header to pass the filename of the uploaded data
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDraft"
           />&gt;
-  - name: createExtension(any)
+  - name: createExtension(any, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.createExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function createExtension(content: any): Promise<PublishedExtension>'
+      content: >-
+        function createExtension(content: any, extensionType?: string,
+        reCaptchaToken?: string): Promise<PublishedExtension>
       parameters:
         - id: content
           type: any
-          description: |
-            Content to upload
+          description: Content to upload
+        - id: extensionType
+          type: string
+          description: ''
+        - id: reCaptchaToken
+          type: string
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PublishedExtension"
           />&gt;
-  - name: 'createExtensionWithPublisher(any, string)'
+  - name: createExtensionWithPublisher(any, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.createExtensionWithPublisher
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createExtensionWithPublisher(content: any, publisherName:
-        string): Promise<PublishedExtension>
+        string, extensionType?: string, reCaptchaToken?: string):
+        Promise<PublishedExtension>
       parameters:
         - id: content
           type: any
           description: Content to upload
         - id: publisherName
           type: string
-          description: |
-            -
+          description: ''
+        - id: extensionType
+          type: string
+          description: ''
+        - id: reCaptchaToken
+          type: string
+          description: ''
       return:
         description: ''
         type: >-
@@ -249,24 +247,21 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function createPublisher(publisher: Publisher): Promise<Publisher>'
       parameters:
         - id: publisher
           type: <xref uid="azure-devops-extension-api.Publisher" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Publisher" />&gt;
-  - name: 'createQuestion(Question, string, string)'
+  - name: createQuestion(Question, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.createQuestion
     package: azure-devops-extension-api
     summary: Creates a new question for an extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -281,17 +276,15 @@ methods:
           description: Name of the publisher who published the extension.
         - id: extensionName
           type: string
-          description: |
-            Name of the extension.
+          description: Name of the extension.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Question" />&gt;
-  - name: 'createResponse(Response, string, string, number)'
+  - name: createResponse(Response, string, string, number)
     uid: azure-devops-extension-api.GalleryRestClient.createResponse
     package: azure-devops-extension-api
     summary: Creates a new response for a given question for an extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -309,18 +302,17 @@ methods:
           description: Name of the extension.
         - id: questionId
           type: number
-          description: >
+          description: >-
             Identifier of the question for which response is to be created for
             the extension.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Response" />&gt;
-  - name: 'createReview(Review, string, string)'
+  - name: createReview(Review, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.createReview
     package: azure-devops-extension-api
     summary: Creates a new review for an extension
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -335,17 +327,32 @@ methods:
           description: Name of the publisher who published the extension
         - id: extName
           type: string
-          description: |
-            Name of the extension
+          description: Name of the extension
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Review" />&gt;
-  - name: 'deleteExtension(string, string, string)'
+  - name: createSupportRequest(CustomerSupportRequest)
+    uid: azure-devops-extension-api.GalleryRestClient.createSupportRequest
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createSupportRequest(customerSupportRequest:
+        CustomerSupportRequest): Promise<void>
+      parameters:
+        - id: customerSupportRequest
+          type: <xref uid="azure-devops-extension-api.CustomerSupportRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: deleteExtension(string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.deleteExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -354,23 +361,21 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteExtensionById(string, string)'
+  - name: deleteExtensionById(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.deleteExtensionById
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -379,11 +384,10 @@ methods:
       parameters:
         - id: extensionId
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -392,24 +396,21 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function deletePublisher(publisherName: string): Promise<void>'
       parameters:
         - id: publisherName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deletePublisherAsset(string, string)'
+  - name: deletePublisherAsset(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.deletePublisherAsset
     package: azure-devops-extension-api
     summary: Delete publisher asset like logo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -421,19 +422,17 @@ methods:
           description: Internal name of the publisher
         - id: assetType
           type: string
-          description: |
-            Type of asset. Default value is 'logo'.
+          description: Type of asset. Default value is 'logo'.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteQuestion(string, string, number)'
+  - name: deleteQuestion(string, string, number)
     uid: azure-devops-extension-api.GalleryRestClient.deleteQuestion
     package: azure-devops-extension-api
     summary: >-
       Deletes an existing question and all its associated responses for an
       extension. (soft delete)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -448,17 +447,15 @@ methods:
           description: Name of the extension.
         - id: questionId
           type: number
-          description: |
-            Identifier of the question to be deleted for the extension.
+          description: Identifier of the question to be deleted for the extension.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteResponse(string, string, number, number)'
+  - name: deleteResponse(string, string, number, number)
     uid: azure-devops-extension-api.GalleryRestClient.deleteResponse
     package: azure-devops-extension-api
     summary: Deletes a response for an extension. (soft delete)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -476,17 +473,15 @@ methods:
           description: Identifies the question whose response is to be deleted.
         - id: responseId
           type: number
-          description: |
-            Identifies the response to be deleted.
+          description: Identifies the response to be deleted.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'deleteReview(string, string, number)'
+  - name: deleteReview(string, string, number)
     uid: azure-devops-extension-api.GalleryRestClient.deleteReview
     package: azure-devops-extension-api
     summary: Deletes a review
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -495,14 +490,13 @@ methods:
       parameters:
         - id: pubName
           type: string
-          description: Name of the pubilsher who published the extension
+          description: Name of the publisher who published the extension
         - id: extName
           type: string
           description: Name of the extension
         - id: reviewId
           type: number
-          description: |
-            Id of the review which needs to be updated
+          description: Id of the review which needs to be updated
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -511,7 +505,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -520,17 +513,30 @@ methods:
       parameters:
         - id: azureRestApiRequestModel
           type: <xref uid="azure-devops-extension-api.AzureRestApiRequestModel" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'generateKey(string, number)'
+  - name: fetchDomainToken(string)
+    uid: azure-devops-extension-api.GalleryRestClient.fetchDomainToken
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function fetchDomainToken(publisherName: string): Promise<string>'
+      parameters:
+        - id: publisherName
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: generateKey(string, number)
     uid: azure-devops-extension-api.GalleryRestClient.generateKey
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -539,20 +545,18 @@ methods:
       parameters:
         - id: keyType
           type: string
-          description: '-'
+          description: ''
         - id: expireCurrentSeconds
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'getAcquisitionOptions(string, string, boolean, boolean)'
+  - name: getAcquisitionOptions(string, string, boolean, boolean)
     uid: azure-devops-extension-api.GalleryRestClient.getAcquisitionOptions
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -562,28 +566,26 @@ methods:
       parameters:
         - id: itemId
           type: string
-          description: '-'
+          description: ''
         - id: installationTarget
           type: string
-          description: '-'
+          description: ''
         - id: testCommerce
           type: boolean
-          description: '-'
+          description: ''
         - id: isFreeOrTrialInstall
           type: boolean
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AcquisitionOptions"
           />&gt;
-  - name: 'getAsset(string, string, string, string, boolean, String)'
+  - name: getAsset(string, string, string, string, boolean, String)
     uid: azure-devops-extension-api.GalleryRestClient.getAsset
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -593,32 +595,30 @@ methods:
       parameters:
         - id: extensionId
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: '-'
+          description: ''
         - id: assetType
           type: string
-          description: '-'
+          description: ''
         - id: accountToken
           type: string
-          description: '-'
+          description: ''
         - id: acceptDefault
           type: boolean
-          description: '-'
+          description: ''
         - id: accountTokenHeader
           type: String
-          description: |
-            Header to pass the account token
+          description: Header to pass the account token
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getAssetAuthenticated(string, string, string, string, string, String)'
+  - name: getAssetAuthenticated(string, string, string, string, string, String)
     uid: azure-devops-extension-api.GalleryRestClient.getAssetAuthenticated
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -628,32 +628,30 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: '-'
+          description: ''
         - id: assetType
           type: string
-          description: '-'
+          description: ''
         - id: accountToken
           type: string
-          description: '-'
+          description: ''
         - id: accountTokenHeader
           type: String
-          description: |
-            Header to pass the account token
+          description: Header to pass the account token
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getAssetByName(string, string, string, string, string, boolean, String)'
+  - name: getAssetByName(string, string, string, string, string, boolean, String)
     uid: azure-devops-extension-api.GalleryRestClient.getAssetByName
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -664,36 +662,34 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: '-'
+          description: ''
         - id: assetType
           type: string
-          description: '-'
+          description: ''
         - id: accountToken
           type: string
-          description: '-'
+          description: ''
         - id: acceptDefault
           type: boolean
-          description: '-'
+          description: ''
         - id: accountTokenHeader
           type: String
-          description: |
-            Header to pass the account token
+          description: Header to pass the account token
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getAssetFromEditExtensionDraft(string, string, string, string)'
+  - name: getAssetFromEditExtensionDraft(string, string, string, string)
     uid: >-
       azure-devops-extension-api.GalleryRestClient.getAssetFromEditExtensionDraft
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -702,26 +698,24 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: draftId
           type: string
-          description: '-'
+          description: ''
         - id: assetType
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getAssetFromNewExtensionDraft(string, string, string)'
+  - name: getAssetFromNewExtensionDraft(string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.getAssetFromNewExtensionDraft
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -730,14 +724,13 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: draftId
           type: string
-          description: '-'
+          description: ''
         - id: assetType
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
@@ -748,7 +741,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -759,29 +751,28 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: '-'
+          description: ''
         - id: assetType
           type: string
-          description: '-'
+          description: ''
         - id: assetToken
           type: string
-          description: '-'
+          description: ''
         - id: accountToken
           type: string
-          description: '-'
+          description: ''
         - id: acceptDefault
           type: boolean
-          description: '-'
+          description: ''
         - id: accountTokenHeader
           type: String
-          description: |
-            Header to pass the account token
+          description: Header to pass the account token
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
@@ -790,24 +781,21 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCategories(languages?: string): Promise<string[]>'
       parameters:
         - id: languages
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
-        type: 'Promise&lt;string[]&gt;'
-  - name: 'getCategoryDetails(string, string, string)'
+        type: Promise&lt;string[]&gt;
+  - name: getCategoryDetails(string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.getCategoryDetails
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -816,65 +804,67 @@ methods:
       parameters:
         - id: categoryName
           type: string
-          description: '-'
+          description: ''
         - id: languages
           type: string
-          description: '-'
+          description: ''
         - id: product
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.CategoriesResult"
           />&gt;
-  - name: 'getCategoryTree(string, string, number, string, string, string, string)'
+  - name: >-
+      getCategoryTree(string, string, number, string, string, string, string,
+      string)
     uid: azure-devops-extension-api.GalleryRestClient.getCategoryTree
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getCategoryTree(product: string, categoryId: string, lcid?:
         number, source?: string, productVersion?: string, skus?: string,
-        subSkus?: string): Promise<ProductCategory>
+        subSkus?: string, productArchitecture?: string):
+        Promise<ProductCategory>
       parameters:
         - id: product
           type: string
-          description: '-'
+          description: ''
         - id: categoryId
           type: string
-          description: '-'
+          description: ''
         - id: lcid
           type: number
-          description: '-'
+          description: ''
         - id: source
           type: string
-          description: '-'
+          description: ''
         - id: productVersion
           type: string
-          description: '-'
+          description: ''
         - id: skus
           type: string
-          description: '-'
+          description: ''
         - id: subSkus
           type: string
-          description: |
-            -
+          description: ''
+        - id: productArchitecture
+          type: string
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ProductCategory"
           />&gt;
-  - name: 'getCertificate(string, string, string)'
+  - name: getCertificate(string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.getCertificate
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -883,23 +873,21 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getContentVerificationLog(string, string)'
+  - name: getContentVerificationLog(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.getContentVerificationLog
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -908,20 +896,18 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getExtension(string, string, string, ExtensionQueryFlags, string, String)'
+  - name: getExtension(string, string, string, ExtensionQueryFlags, string, String)
     uid: azure-devops-extension-api.GalleryRestClient.getExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -931,34 +917,32 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: '-'
+          description: ''
         - id: flags
           type: <xref uid="azure-devops-extension-api.ExtensionQueryFlags" />
-          description: '-'
+          description: ''
         - id: accountToken
           type: string
-          description: '-'
+          description: ''
         - id: accountTokenHeader
           type: String
-          description: |
-            Header to pass the account token
+          description: Header to pass the account token
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PublishedExtension"
           />&gt;
-  - name: 'getExtensionById(string, string, ExtensionQueryFlags)'
+  - name: getExtensionById(string, string, ExtensionQueryFlags)
     uid: azure-devops-extension-api.GalleryRestClient.getExtensionById
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -967,56 +951,54 @@ methods:
       parameters:
         - id: extensionId
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: '-'
+          description: ''
         - id: flags
           type: <xref uid="azure-devops-extension-api.ExtensionQueryFlags" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PublishedExtension"
           />&gt;
-  - name: >-
-      getExtensionDailyStats(string, string, number,
-      Gallery.ExtensionStatsAggregateType, Date)
+  - name: getExtensionDailyStats(string, string, number, Daily, Date)
     uid: azure-devops-extension-api.GalleryRestClient.getExtensionDailyStats
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getExtensionDailyStats(publisherName: string, extensionName:
-        string, days?: number, aggregate?: Gallery.ExtensionStatsAggregateType,
-        afterDate?: Date): Promise<ExtensionDailyStats>
+        string, days?: number, aggregate?: Daily, afterDate?: Date):
+        Promise<ExtensionDailyStats>
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: days
           type: number
-          description: '-'
+          description: ''
         - id: aggregate
-          type: <xref uid="Gallery.ExtensionStatsAggregateType" />
-          description: '-'
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.ExtensionStatsAggregateType.Daily"
+            />
+          description: ''
         - id: afterDate
           type: Date
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDailyStats"
           />&gt;
-  - name: 'getExtensionDailyStatsAnonymous(string, string, string)'
+  - name: getExtensionDailyStatsAnonymous(string, string, string)
     uid: >-
       azure-devops-extension-api.GalleryRestClient.getExtensionDailyStatsAnonymous
     package: azure-devops-extension-api
@@ -1027,7 +1009,6 @@ methods:
       explicit implementation, calling GET on this public route invokes the
       above GET implementation GetExtensionDailyStats.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1042,21 +1023,19 @@ methods:
           description: Name of the extension
         - id: version
           type: string
-          description: |
-            Version of the extension
+          description: Version of the extension
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDailyStats"
           />&gt;
-  - name: 'getExtensionEvents(string, string, number, Date, string, string)'
+  - name: getExtensionEvents(string, string, number, Date, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.getExtensionEvents
     package: azure-devops-extension-api
     summary: >-
       Get install/uninstall events of an extension. If both count and afterDate
       parameters are specified, count takes precedence.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1072,7 +1051,7 @@ methods:
           description: Name of the extension
         - id: count
           type: number
-          description: 'Count of events to fetch, applies to each event type.'
+          description: Count of events to fetch, applies to each event type.
         - id: afterDate
           type: Date
           description: Fetch events that occurred on or after this date
@@ -1083,7 +1062,7 @@ methods:
             acquisition, sales. Default is to fetch all types of events
         - id: includeProperty
           type: string
-          description: >
+          description: >-
             Event properties to include. Currently only 'lastContactDetails' is
             supported for uninstall events
       return:
@@ -1091,12 +1070,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionEvents"
           />&gt;
-  - name: 'getExtensionReports(string, string, number, number, Date)'
+  - name: getExtensionReports(string, string, number, number, Date)
     uid: azure-devops-extension-api.GalleryRestClient.getExtensionReports
     package: azure-devops-extension-api
     summary: Returns extension reports
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1119,22 +1097,20 @@ methods:
           description: Number of events to be returned
         - id: afterDate
           type: Date
-          description: |
-            Use if you want to fetch events newer than the specified date
+          description: Use if you want to fetch events newer than the specified date
       return:
         description: ''
         type: Promise&lt;any&gt;
-  - name: 'getGalleryUserSettings(string, string)'
+  - name: getGalleryUserSettings(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.getGalleryUserSettings
     package: azure-devops-extension-api
     summary: Get all setting entries for the given user/all-users scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getGalleryUserSettings(userScope: string, key?: string):
-        Promise<[key: string]: any>
+        Promise<{[key: string]: any}>
       parameters:
         - id: userScope
           type: string
@@ -1143,17 +1119,15 @@ methods:
             user or "host" for all users.
         - id: key
           type: string
-          description: |
-            Optional key under which to filter all the entries
+          description: Optional key under which to filter all the entries
       return:
         description: ''
-        type: 'Promise&lt;[key: string]: any&gt;'
-  - name: 'getPackage(string, string, string, string, boolean, String)'
+        type: 'Promise&lt;{[key: string]: any}&gt;'
+  - name: getPackage(string, string, string, string, boolean, String)
     uid: azure-devops-extension-api.GalleryRestClient.getPackage
     package: azure-devops-extension-api
     summary: This endpoint gets hit when you download a VSTS extension from the Web UI
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1163,32 +1137,30 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: '-'
+          description: ''
         - id: accountToken
           type: string
-          description: '-'
+          description: ''
         - id: acceptDefault
           type: boolean
-          description: '-'
+          description: ''
         - id: accountTokenHeader
           type: String
-          description: |
-            Header to pass the account token
+          description: Header to pass the account token
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getPublisher(string, number)'
+  - name: getPublisher(string, number)
     uid: azure-devops-extension-api.GalleryRestClient.getPublisher
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1197,20 +1169,18 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: flags
           type: number
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Publisher" />&gt;
-  - name: 'getPublisherAsset(string, string)'
+  - name: getPublisherAsset(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.getPublisherAsset
     package: azure-devops-extension-api
     summary: Get publisher asset like logo as a stream
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1222,19 +1192,34 @@ methods:
           description: Internal name of the publisher
         - id: assetType
           type: string
-          description: |
-            Type of asset. Default value is 'logo'.
+          description: Type of asset. Default value is 'logo'.
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'getQuestions(string, string, number, number, Date)'
+  - name: getPublisherWithoutToken(string)
+    uid: azure-devops-extension-api.GalleryRestClient.getPublisherWithoutToken
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPublisherWithoutToken(publisherName: string):
+        Promise<Publisher>
+      parameters:
+        - id: publisherName
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Publisher" />&gt;
+  - name: getQuestions(string, string, number, number, Date)
     uid: azure-devops-extension-api.GalleryRestClient.getQuestions
     package: azure-devops-extension-api
     summary: >-
       Returns a list of questions with their responses associated with an
       extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1256,7 +1241,7 @@ methods:
           description: Page number from which set of questions are to be retrieved.
         - id: afterDate
           type: Date
-          description: >
+          description: >-
             If provided, results questions are returned which were posted after
             this date
       return:
@@ -1264,12 +1249,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.QuestionsResult"
           />&gt;
-  - name: 'getReviews(string, string, number, ReviewFilterOptions, Date, Date)'
+  - name: getReviews(string, string, number, ReviewFilterOptions, Date, Date)
     uid: azure-devops-extension-api.GalleryRestClient.getReviews
     package: azure-devops-extension-api
     summary: Returns a list of reviews associated with an extension
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1288,7 +1272,7 @@ methods:
           description: Number of reviews to retrieve (defaults to 5)
         - id: filterOptions
           type: <xref uid="azure-devops-extension-api.ReviewFilterOptions" />
-          description: 'FilterOptions to filter out empty reviews etcetera, defaults to none'
+          description: FilterOptions to filter out empty reviews etcetera, defaults to none
         - id: beforeDate
           type: Date
           description: >-
@@ -1296,18 +1280,17 @@ methods:
             defaults to null
         - id: afterDate
           type: Date
-          description: >
+          description: >-
             Use if you want to fetch reviews newer than the specified date,
             defaults to null
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.ReviewsResult" />&gt;
-  - name: 'getReviewsSummary(string, string, Date, Date)'
+  - name: getReviewsSummary(string, string, Date, Date)
     uid: azure-devops-extension-api.GalleryRestClient.getReviewsSummary
     package: azure-devops-extension-api
     summary: Returns a summary of the reviews
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1327,18 +1310,17 @@ methods:
             date, defaults to null
         - id: afterDate
           type: Date
-          description: >
+          description: >-
             Use if you want to fetch summary of reviews newer than the specified
             date, defaults to null
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.ReviewSummary" />&gt;
-  - name: 'getRootCategories(string, number, string, string, string, string)'
+  - name: getRootCategories(string, number, string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.getRootCategories
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1348,23 +1330,22 @@ methods:
       parameters:
         - id: product
           type: string
-          description: '-'
+          description: ''
         - id: lcid
           type: number
-          description: '-'
+          description: ''
         - id: source
           type: string
-          description: '-'
+          description: ''
         - id: productVersion
           type: string
-          description: '-'
+          description: ''
         - id: skus
           type: string
-          description: '-'
+          description: ''
         - id: subSkus
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -1375,54 +1356,53 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getSigningKey(keyType: string): Promise<string>'
       parameters:
         - id: keyType
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: 'getVerificationLog(string, string, string)'
+  - name: getVerificationLog(string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.getVerificationLog
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getVerificationLog(publisherName: string, extensionName:
-        string, version: string): Promise<ArrayBuffer>
+        string, version: string, targetPlatform?: string): Promise<ArrayBuffer>
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: version
           type: string
-          description: |
-            -
+          description: ''
+        - id: targetPlatform
+          type: string
+          description: ''
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: 'incrementExtensionDailyStat(string, string, string, string)'
+  - name: incrementExtensionDailyStat(string, string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.incrementExtensionDailyStat
     package: azure-devops-extension-api
     summary: Increments a daily statistic associated with the extension
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function incrementExtensionDailyStat(publisherName: string,
-        extensionName: string, version: string, statType: string): Promise<void>
+        extensionName: string, version: string, statType: string,
+        targetPlatform?: string): Promise<void>
       parameters:
         - id: publisherName
           type: string
@@ -1435,8 +1415,10 @@ methods:
           description: Version of the extension
         - id: statType
           type: string
-          description: |
-            Type of stat to increment
+          description: Type of stat to increment
+        - id: targetPlatform
+          type: string
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -1448,7 +1430,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1458,29 +1439,27 @@ methods:
       parameters:
         - id: draftPatch
           type: <xref uid="azure-devops-extension-api.ExtensionDraftPatch" />
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: draftId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDraft"
           />&gt;
-  - name: 'performNewExtensionDraftOperation(ExtensionDraftPatch, string, string)'
+  - name: performNewExtensionDraftOperation(ExtensionDraftPatch, string, string)
     uid: >-
       azure-devops-extension-api.GalleryRestClient.performNewExtensionDraftOperation
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1490,20 +1469,19 @@ methods:
       parameters:
         - id: draftPatch
           type: <xref uid="azure-devops-extension-api.ExtensionDraftPatch" />
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: draftId
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDraft"
           />&gt;
-  - name: 'publishExtensionEvents(ExtensionEvents[])'
+  - name: publishExtensionEvents(ExtensionEvents[])
     uid: azure-devops-extension-api.GalleryRestClient.publishExtensionEvents
     package: azure-devops-extension-api
     summary: >-
@@ -1511,7 +1489,6 @@ methods:
       to be invoked by EMS only for sending us data related to install/uninstall
       of an extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1519,9 +1496,8 @@ methods:
         Promise<void>
       parameters:
         - id: extensionEvents
-          type: '<xref uid="azure-devops-extension-api.ExtensionEvents" />[]'
-          description: |
-            -
+          type: <xref uid="azure-devops-extension-api.ExtensionEvents" />[]
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -1530,7 +1506,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1539,19 +1514,17 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AzurePublisher"
           />&gt;
-  - name: 'queryExtensions(ExtensionQuery, string, String)'
+  - name: queryExtensions(ExtensionQuery, string, String)
     uid: azure-devops-extension-api.GalleryRestClient.queryExtensions
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1560,14 +1533,13 @@ methods:
       parameters:
         - id: extensionQuery
           type: <xref uid="azure-devops-extension-api.ExtensionQuery" />
-          description: '-'
+          description: ''
         - id: accountToken
           type: string
-          description: '-'
+          description: ''
         - id: accountTokenHeader
           type: String
-          description: |
-            Header to pass the account token
+          description: Header to pass the account token
       return:
         description: ''
         type: >-
@@ -1578,7 +1550,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1587,19 +1558,17 @@ methods:
       parameters:
         - id: publisherQuery
           type: <xref uid="azure-devops-extension-api.PublisherQuery" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PublisherQueryResult"
           />&gt;
-  - name: 'reportQuestion(Concern, string, string, number)'
+  - name: reportQuestion(Concern, string, string, number)
     uid: azure-devops-extension-api.GalleryRestClient.reportQuestion
     package: azure-devops-extension-api
     summary: Flags a concern with an existing question for an extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1617,8 +1586,7 @@ methods:
           description: Name of the extension.
         - id: questionId
           type: number
-          description: |
-            Identifier of the question to be updated for the extension.
+          description: Identifier of the question to be updated for the extension.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Concern" />&gt;
@@ -1627,7 +1595,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1638,8 +1605,7 @@ methods:
           type: >-
             <xref uid="azure-devops-extension-api.ExtensionAcquisitionRequest"
             />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -1650,7 +1616,6 @@ methods:
     package: azure-devops-extension-api
     summary: Send Notification
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1659,40 +1624,37 @@ methods:
       parameters:
         - id: notificationData
           type: <xref uid="azure-devops-extension-api.NotificationsData" />
-          description: |
-            Denoting the data needed to send notification
+          description: Denoting the data needed to send notification
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'setGalleryUserSettings([key: string]: any, string)'
+  - name: 'setGalleryUserSettings({[key: string]: any}, string)'
     uid: azure-devops-extension-api.GalleryRestClient.setGalleryUserSettings
     package: azure-devops-extension-api
     summary: Set all setting entries for the given user/all-users scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function setGalleryUserSettings(entries: [key: string]: any, userScope:
-        string): Promise<void>
+        function setGalleryUserSettings(entries: {[key: string]: any},
+        userScope: string): Promise<void>
       parameters:
         - id: entries
-          type: '[key: string]\: any'
+          type: '{[key: string]: any}'
           description: A key-value pair of all settings that need to be set
         - id: userScope
           type: string
-          description: >
+          description: >-
             User-Scope at which to get the value. Should be "me" for the current
             user or "host" for all users.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'shareExtension(string, string, string)'
+  - name: shareExtension(string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.shareExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1701,23 +1663,21 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: accountName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'shareExtensionById(string, string)'
+  - name: shareExtensionById(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.shareExtensionById
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1726,20 +1686,18 @@ methods:
       parameters:
         - id: extensionId
           type: string
-          description: '-'
+          description: ''
         - id: accountName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'shareExtensionWithHost(string, string, string, string)'
+  - name: shareExtensionWithHost(string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.shareExtensionWithHost
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1748,26 +1706,24 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: hostType
           type: string
-          description: '-'
+          description: ''
         - id: hostName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'unshareExtension(string, string, string)'
+  - name: unshareExtension(string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.unshareExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1776,23 +1732,21 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: accountName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'unshareExtensionById(string, string)'
+  - name: unshareExtensionById(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.unshareExtensionById
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1801,20 +1755,18 @@ methods:
       parameters:
         - id: extensionId
           type: string
-          description: '-'
+          description: ''
         - id: accountName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'unshareExtensionWithHost(string, string, string, string)'
+  - name: unshareExtensionWithHost(string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.unshareExtensionWithHost
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1823,32 +1775,30 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: hostType
           type: string
-          description: '-'
+          description: ''
         - id: hostName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'updateExtension(any, string, string, boolean)'
+  - name: updateExtension(any, string, string, string, string, boolean)
     uid: azure-devops-extension-api.GalleryRestClient.updateExtension
     package: azure-devops-extension-api
     summary: REST endpoint to update an extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updateExtension(content: any, publisherName: string,
-        extensionName: string, bypassScopeCheck?: boolean):
-        Promise<PublishedExtension>
+        extensionName: string, extensionType?: string, reCaptchaToken?: string,
+        bypassScopeCheck?: boolean): Promise<PublishedExtension>
       parameters:
         - id: content
           type: any
@@ -1859,9 +1809,15 @@ methods:
         - id: extensionName
           type: string
           description: Name of the extension
+        - id: extensionType
+          type: string
+          description: ''
+        - id: reCaptchaToken
+          type: string
+          description: ''
         - id: bypassScopeCheck
           type: boolean
-          description: >
+          description: >-
             This parameter decides if the scope change check needs to be invoked
             or not
       return:
@@ -1869,33 +1825,33 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PublishedExtension"
           />&gt;
-  - name: updateExtensionById(string)
+  - name: updateExtensionById(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.updateExtensionById
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function updateExtensionById(extensionId: string):
-        Promise<PublishedExtension>
+        function updateExtensionById(extensionId: string, reCaptchaToken?:
+        string): Promise<PublishedExtension>
       parameters:
         - id: extensionId
           type: string
-          description: |
-            -
+          description: ''
+        - id: reCaptchaToken
+          type: string
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PublishedExtension"
           />&gt;
-  - name: 'updateExtensionProperties(string, string, PublishedExtensionFlags)'
+  - name: updateExtensionProperties(string, string, PublishedExtensionFlags)
     uid: azure-devops-extension-api.GalleryRestClient.updateExtensionProperties
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1904,25 +1860,23 @@ methods:
       parameters:
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: flags
           type: <xref uid="azure-devops-extension-api.PublishedExtensionFlags" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PublishedExtension"
           />&gt;
-  - name: 'updateExtensionStatistics(ExtensionStatisticUpdate, string, string)'
+  - name: updateExtensionStatistics(ExtensionStatisticUpdate, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.updateExtensionStatistics
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1932,24 +1886,22 @@ methods:
       parameters:
         - id: extensionStatisticsUpdate
           type: <xref uid="azure-devops-extension-api.ExtensionStatisticUpdate" />
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'updatePayloadInDraftForEditExtension(any, string, string, string, String)'
+  - name: updatePayloadInDraftForEditExtension(any, string, string, string, String)
     uid: >-
       azure-devops-extension-api.GalleryRestClient.updatePayloadInDraftForEditExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1962,29 +1914,27 @@ methods:
           description: Content to upload
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: extensionName
           type: string
-          description: '-'
+          description: ''
         - id: draftId
           type: string
-          description: '-'
+          description: ''
         - id: fileName
           type: String
-          description: |
-            Header to pass the filename of the uploaded data
+          description: Header to pass the filename of the uploaded data
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDraft"
           />&gt;
-  - name: 'updatePayloadInDraftForNewExtension(any, string, string, String)'
+  - name: updatePayloadInDraftForNewExtension(any, string, string, String)
     uid: >-
       azure-devops-extension-api.GalleryRestClient.updatePayloadInDraftForNewExtension
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -1997,25 +1947,23 @@ methods:
           description: Content to upload
         - id: publisherName
           type: string
-          description: '-'
+          description: ''
         - id: draftId
           type: string
-          description: '-'
+          description: ''
         - id: fileName
           type: String
-          description: |
-            Header to pass the filename of the uploaded data
+          description: Header to pass the filename of the uploaded data
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDraft"
           />&gt;
-  - name: 'updatePublisher(Publisher, string)'
+  - name: updatePublisher(Publisher, string)
     uid: azure-devops-extension-api.GalleryRestClient.updatePublisher
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2024,27 +1972,25 @@ methods:
       parameters:
         - id: publisher
           type: <xref uid="azure-devops-extension-api.Publisher" />
-          description: '-'
+          description: ''
         - id: publisherName
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Publisher" />&gt;
-  - name: 'updatePublisherAsset(any, string, string, String)'
+  - name: updatePublisherAsset(any, string, string, String)
     uid: azure-devops-extension-api.GalleryRestClient.updatePublisherAsset
     package: azure-devops-extension-api
     summary: >-
       Update publisher asset like logo. It accepts asset file as an octet stream
       and file name is passed in header values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function updatePublisherAsset(content: any, publisherName: string,
-        assetType?: string, fileName?: String): Promise<[key: string]: string>
+        assetType?: string, fileName?: String): Promise<{[key: string]: string}>
       parameters:
         - id: content
           type: any
@@ -2057,12 +2003,11 @@ methods:
           description: Type of asset. Default value is 'logo'.
         - id: fileName
           type: String
-          description: |
-            Header to pass the filename of the uploaded data
+          description: Header to pass the filename of the uploaded data
       return:
         description: ''
-        type: 'Promise&lt;[key: string]: string&gt;'
-  - name: 'updatePublisherMembers(PublisherUserRoleAssignmentRef[], string, boolean)'
+        type: 'Promise&lt;{[key: string]: string}&gt;'
+  - name: updatePublisherMembers(PublisherUserRoleAssignmentRef[], string, boolean)
     uid: azure-devops-extension-api.GalleryRestClient.updatePublisherMembers
     package: azure-devops-extension-api
     summary: >-
@@ -2070,7 +2015,6 @@ methods:
       addition/modification of 1 user at a time Works only for adding members of
       same tenant.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2091,19 +2035,17 @@ methods:
           description: The name/id of publisher to which users have to be added
         - id: limitToCallerIdentityDomain
           type: boolean
-          description: |
-            Should cross tenant addtions be allowed or not.
+          description: Should cross tenant addtions be allowed or not.
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.PublisherRoleAssignment" />[]&gt;
-  - name: 'updateQuestion(Question, string, string, number)'
+  - name: updateQuestion(Question, string, string, number)
     uid: azure-devops-extension-api.GalleryRestClient.updateQuestion
     package: azure-devops-extension-api
     summary: Updates an existing question for an extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2121,17 +2063,15 @@ methods:
           description: Name of the extension.
         - id: questionId
           type: number
-          description: |
-            Identifier of the question to be updated for the extension.
+          description: Identifier of the question to be updated for the extension.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Question" />&gt;
-  - name: 'updateResponse(Response, string, string, number, number)'
+  - name: updateResponse(Response, string, string, number, number)
     uid: azure-devops-extension-api.GalleryRestClient.updateResponse
     package: azure-devops-extension-api
     summary: Updates an existing response for a given question for an extension.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2155,17 +2095,15 @@ methods:
             the extension.
         - id: responseId
           type: number
-          description: |
-            Identifier of the response which has to be updated.
+          description: Identifier of the response which has to be updated.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Response" />&gt;
-  - name: 'updateReview(ReviewPatch, string, string, number)'
+  - name: updateReview(ReviewPatch, string, string, number)
     uid: azure-devops-extension-api.GalleryRestClient.updateReview
     package: azure-devops-extension-api
     summary: Updates or Flags a review
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -2179,15 +2117,57 @@ methods:
             review
         - id: pubName
           type: string
-          description: Name of the pubilsher who published the extension
+          description: Name of the publisher who published the extension
         - id: extName
           type: string
           description: Name of the extension
         - id: reviewId
           type: number
-          description: |
-            Id of the review which needs to be updated
+          description: Id of the review which needs to be updated
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.ReviewPatch" />&gt;
+  - name: >-
+      updateVSCodeWebExtensionStatistics(string, string,
+      VSCodeWebExtensionStatisicsType)
+    uid: >-
+      azure-devops-extension-api.GalleryRestClient.updateVSCodeWebExtensionStatistics
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateVSCodeWebExtensionStatistics(itemName: string, version:
+        string, statType: VSCodeWebExtensionStatisicsType): Promise<void>
+      parameters:
+        - id: itemName
+          type: string
+          description: ''
+        - id: version
+          type: string
+          description: ''
+        - id: statType
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.VSCodeWebExtensionStatisicsType" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: verifyDomainToken(string)
+    uid: azure-devops-extension-api.GalleryRestClient.verifyDomainToken
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function verifyDomainToken(publisherName: string): Promise<void>'
+      parameters:
+        - id: publisherName
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

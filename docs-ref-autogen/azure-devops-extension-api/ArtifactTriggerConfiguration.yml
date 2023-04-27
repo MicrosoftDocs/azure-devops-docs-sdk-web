@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: ArtifactTriggerConfiguration
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Gets or sets the whether trigger is supported or not.
     fullName: isTriggerSupported
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isTriggerSupported: boolean'
@@ -29,7 +27,6 @@ properties:
     summary: Gets or sets the whether trigger is supported only on hosted environment.
     fullName: isTriggerSupportedOnlyInHosted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isTriggerSupportedOnlyInHosted: boolean'
@@ -43,7 +40,6 @@ properties:
     summary: Gets or sets the whether webhook is supported at server level.
     fullName: isWebhookSupportedAtServerLevel
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isWebhookSupportedAtServerLevel: boolean'
@@ -59,7 +55,6 @@ properties:
       configuration.
     fullName: payloadHashHeaderName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'payloadHashHeaderName: string'
@@ -72,13 +67,12 @@ properties:
     summary: Gets or sets the resources for artifact trigger configuration.
     fullName: resources
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'resources: [key: string]: string'
+      content: 'resources: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: webhookPayloadMapping
     uid: >-
       azure-devops-extension-api.ArtifactTriggerConfiguration.webhookPayloadMapping
@@ -88,10 +82,9 @@ properties:
       configuration.
     fullName: webhookPayloadMapping
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'webhookPayloadMapping: [key: string]: string'
+      content: 'webhookPayloadMapping: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'

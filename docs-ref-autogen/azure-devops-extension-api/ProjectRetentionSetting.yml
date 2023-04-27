@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Contains the settings for the retention rules.
 fullName: ProjectRetentionSetting
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       run, so will be overridden by a shorter run purge setting.
     fullName: purgeArtifacts
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'purgeArtifacts: RetentionSetting'
@@ -30,7 +28,6 @@ properties:
     summary: The rules for pull request pipeline run retention.
     fullName: purgePullRequestRuns
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'purgePullRequestRuns: RetentionSetting'
@@ -43,10 +40,22 @@ properties:
     summary: The rules for pipeline run retention.
     fullName: purgeRuns
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'purgeRuns: RetentionSetting'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.RetentionSetting" />
+  - name: retainRunsPerProtectedBranch
+    uid: >-
+      azure-devops-extension-api.ProjectRetentionSetting.retainRunsPerProtectedBranch
+    package: azure-devops-extension-api
+    summary: The rules for retaining runs per protected branch.
+    fullName: retainRunsPerProtectedBranch
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'retainRunsPerProtectedBranch: RetentionSetting'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.RetentionSetting" />

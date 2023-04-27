@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: A set of pull request queries and their results.
 fullName: GitPullRequestQuery
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,13 +14,12 @@ properties:
     summary: The queries to perform.
     fullName: queries
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queries: GitPullRequestQueryInput[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.GitPullRequestQueryInput" />[]'
+        type: <xref uid="azure-devops-extension-api.GitPullRequestQueryInput" />[]
   - name: results
     uid: azure-devops-extension-api.GitPullRequestQuery.results
     package: azure-devops-extension-api
@@ -31,10 +29,9 @@ properties:
       dictionary of commit-\>pull requests.
     fullName: results
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'results: [key: string]: function[]'
+      content: 'results: {[key: string]: function}[]'
       return:
         description: ''
-        type: '[key: string]\: function[]'
+        type: '{[key: string]: function}[]'

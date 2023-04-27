@@ -7,7 +7,6 @@ summary: >-
   reaction type.
 fullName: CommentReaction
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
     summary: The id of the comment this reaction belongs to.
     fullName: commentId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'commentId: number'
@@ -30,7 +28,6 @@ properties:
     summary: Total number of reactions for the CommentReactionType.
     fullName: count
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'count: number'
@@ -45,7 +42,6 @@ properties:
       EngagementType (e.g. if they liked the associated comment).
     fullName: isCurrentUserEngaged
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isCurrentUserEngaged: boolean'
@@ -58,24 +54,26 @@ properties:
     summary: Type of the reaction.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: CommentReactionType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.CommentReactionType" />
+inheritedProperties:
   - name: url
     uid: azure-devops-extension-api.CommentReaction.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

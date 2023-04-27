@@ -2,10 +2,9 @@
 name: PublisherFacts
 uid: azure-devops-extension-api.PublisherFacts
 package: azure-devops-extension-api
-summary: 'High-level information about the publisher, like id''s and names'
+summary: High-level information about the publisher, like id's and names
 fullName: PublisherFacts
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,10 +14,21 @@ properties:
     summary: ''
     fullName: displayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'displayName: string'
+      return:
+        description: ''
+        type: string
+  - name: domain
+    uid: azure-devops-extension-api.PublisherFacts.domain
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: domain
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'domain: string'
       return:
         description: ''
         type: string
@@ -28,20 +38,30 @@ properties:
     summary: ''
     fullName: flags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'flags: PublisherFlags'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.PublisherFlags" />
+  - name: isDomainVerified
+    uid: azure-devops-extension-api.PublisherFacts.isDomainVerified
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: isDomainVerified
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isDomainVerified: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: publisherId
     uid: azure-devops-extension-api.PublisherFacts.publisherId
     package: azure-devops-extension-api
     summary: ''
     fullName: publisherId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'publisherId: string'
@@ -54,7 +74,6 @@ properties:
     summary: ''
     fullName: publisherName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'publisherName: string'

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Describes how a phase should run against an agent queue.
 fullName: AgentPoolQueueTarget
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Agent specification of the target.
     fullName: agentSpecification
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agentSpecification: AgentSpecification'
@@ -31,7 +29,6 @@ properties:
       access the OAuth token
     fullName: allowScriptsAuthAccessOption
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'allowScriptsAuthAccessOption: boolean'
@@ -44,20 +41,18 @@ properties:
     summary: ''
     fullName: demands
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'demands: Demand[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Demand" />[]'
+        type: <xref uid="azure-devops-extension-api.Demand" />[]
   - name: executionOptions
     uid: azure-devops-extension-api.AgentPoolQueueTarget.executionOptions
     package: azure-devops-extension-api
     summary: The execution options.
     fullName: executionOptions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'executionOptions: AgentTargetExecutionOptions'
@@ -70,24 +65,26 @@ properties:
     summary: The queue.
     fullName: queue
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queue: AgentPoolQueue'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.AgentPoolQueue" />
+inheritedProperties:
   - name: type
     uid: azure-devops-extension-api.AgentPoolQueueTarget.type
     package: azure-devops-extension-api
     summary: The type of the target.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [PhaseTarget.type](xref:azure-devops-extension-api.PhaseTarget.type)
 extends: <xref uid="azure-devops-extension-api.PhaseTarget" />

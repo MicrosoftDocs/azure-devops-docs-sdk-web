@@ -5,17 +5,15 @@ package: azure-devops-extension-api
 summary: Represents tasks in the task group.
 fullName: TaskGroupStep
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: alwaysRun
     uid: azure-devops-extension-api.TaskGroupStep.alwaysRun
     package: azure-devops-extension-api
-    summary: 'Gets or sets as ''true'' to run the task always, ''false'' otherwise.'
+    summary: Gets or sets as 'true' to run the task always, 'false' otherwise.
     fullName: alwaysRun
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'alwaysRun: boolean'
@@ -28,7 +26,6 @@ properties:
     summary: Gets or sets condition for the task.
     fullName: condition
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'condition: string'
@@ -38,10 +35,9 @@ properties:
   - name: continueOnError
     uid: azure-devops-extension-api.TaskGroupStep.continueOnError
     package: azure-devops-extension-api
-    summary: 'Gets or sets as ''true'' to continue on error, ''false'' otherwise.'
+    summary: Gets or sets as 'true' to continue on error, 'false' otherwise.
     fullName: continueOnError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'continueOnError: boolean'
@@ -54,7 +50,6 @@ properties:
     summary: Gets or sets the display name.
     fullName: displayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'displayName: string'
@@ -67,7 +62,6 @@ properties:
     summary: Gets or sets as task is enabled or not.
     fullName: enabled
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'enabled: boolean'
@@ -80,33 +74,42 @@ properties:
     summary: Gets dictionary of environment variables.
     fullName: environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'environment: [key: string]: string'
+      content: 'environment: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: inputs
     uid: azure-devops-extension-api.TaskGroupStep.inputs
     package: azure-devops-extension-api
     summary: Gets or sets dictionary of inputs.
     fullName: inputs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'inputs: [key: string]: string'
+      content: 'inputs: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
+  - name: retryCountOnTaskFailure
+    uid: azure-devops-extension-api.TaskGroupStep.retryCountOnTaskFailure
+    package: azure-devops-extension-api
+    summary: Gets or sets the maximum number of retries
+    fullName: retryCountOnTaskFailure
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'retryCountOnTaskFailure: number'
+      return:
+        description: ''
+        type: number
   - name: task
     uid: azure-devops-extension-api.TaskGroupStep.task
     package: azure-devops-extension-api
     summary: Gets or sets the reference of the task.
     fullName: task
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'task: TaskDefinitionReference'
@@ -122,7 +125,6 @@ properties:
       an infinite timeout.
     fullName: timeoutInMinutes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeoutInMinutes: number'

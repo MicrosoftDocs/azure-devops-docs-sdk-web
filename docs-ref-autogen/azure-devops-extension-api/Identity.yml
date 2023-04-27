@@ -2,13 +2,17 @@
 name: Identity
 uid: azure-devops-extension-api.Identity
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base Identity class to allow "trimmed" identity class in the GetConnectionData
+  API Makes sure that on-the-wire representations of the derived classes are
+  compatible with each other (e.g. Server responds with PublicIdentity object
+  while client deserializes it as Identity object) Derived classes should not
+  have additional [DataMember] properties
 fullName: Identity
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
-properties:
+inheritedProperties:
   - name: customDisplayName
     uid: azure-devops-extension-api.Identity.customDisplayName
     package: azure-devops-extension-api
@@ -19,143 +23,167 @@ properties:
       null values do not get sent over the wire or to the database)
     fullName: customDisplayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customDisplayName: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.customDisplayName](xref:azure-devops-extension-api.IdentityBase.customDisplayName)
   - name: descriptor
     uid: azure-devops-extension-api.Identity.descriptor
     package: azure-devops-extension-api
     summary: ''
     fullName: descriptor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'descriptor: IdentityDescriptor'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.IdentityDescriptor" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.descriptor](xref:azure-devops-extension-api.IdentityBase.descriptor)
   - name: id
     uid: azure-devops-extension-api.Identity.id
     package: azure-devops-extension-api
-    summary: ''
+    summary: Identity Identifier. Also called Storage Key, or VSID
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.id](xref:azure-devops-extension-api.IdentityBase.id)
   - name: isActive
     uid: azure-devops-extension-api.Identity.isActive
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      True if the identity has a membership in any Azure Devops group in the
+      organization.
     fullName: isActive
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isActive: boolean'
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.isActive](xref:azure-devops-extension-api.IdentityBase.isActive)
   - name: isContainer
     uid: azure-devops-extension-api.Identity.isContainer
     package: azure-devops-extension-api
-    summary: ''
+    summary: True if the identity is a group.
     fullName: isContainer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isContainer: boolean'
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.isContainer](xref:azure-devops-extension-api.IdentityBase.isContainer)
   - name: masterId
     uid: azure-devops-extension-api.Identity.masterId
     package: azure-devops-extension-api
     summary: ''
     fullName: masterId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'masterId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.masterId](xref:azure-devops-extension-api.IdentityBase.masterId)
   - name: memberIds
     uid: azure-devops-extension-api.Identity.memberIds
     package: azure-devops-extension-api
-    summary: ''
+    summary: Id of the members of the identity (groups only).
     fullName: memberIds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'memberIds: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.memberIds](xref:azure-devops-extension-api.IdentityBase.memberIds)
   - name: memberOf
     uid: azure-devops-extension-api.Identity.memberOf
     package: azure-devops-extension-api
     summary: ''
     fullName: memberOf
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'memberOf: IdentityDescriptor[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.IdentityDescriptor" />[]'
+        type: <xref uid="azure-devops-extension-api.IdentityDescriptor" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.memberOf](xref:azure-devops-extension-api.IdentityBase.memberOf)
   - name: members
     uid: azure-devops-extension-api.Identity.members
     package: azure-devops-extension-api
     summary: ''
     fullName: members
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'members: IdentityDescriptor[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.IdentityDescriptor" />[]'
+        type: <xref uid="azure-devops-extension-api.IdentityDescriptor" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.members](xref:azure-devops-extension-api.IdentityBase.members)
   - name: metaTypeId
     uid: azure-devops-extension-api.Identity.metaTypeId
     package: azure-devops-extension-api
     summary: ''
     fullName: metaTypeId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metaTypeId: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.metaTypeId](xref:azure-devops-extension-api.IdentityBase.metaTypeId)
   - name: properties
     uid: azure-devops-extension-api.Identity.properties
     package: azure-devops-extension-api
     summary: ''
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
         description: ''
         type: any
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.properties](xref:azure-devops-extension-api.IdentityBase.properties)
   - name: providerDisplayName
     uid: azure-devops-extension-api.Identity.providerDisplayName
     package: azure-devops-extension-api
@@ -164,63 +192,73 @@ properties:
       provider.
     fullName: providerDisplayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'providerDisplayName: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.providerDisplayName](xref:azure-devops-extension-api.IdentityBase.providerDisplayName)
   - name: resourceVersion
     uid: azure-devops-extension-api.Identity.resourceVersion
     package: azure-devops-extension-api
     summary: ''
     fullName: resourceVersion
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resourceVersion: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.resourceVersion](xref:azure-devops-extension-api.IdentityBase.resourceVersion)
   - name: socialDescriptor
     uid: azure-devops-extension-api.Identity.socialDescriptor
     package: azure-devops-extension-api
     summary: ''
     fullName: socialDescriptor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'socialDescriptor: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.socialDescriptor](xref:azure-devops-extension-api.IdentityBase.socialDescriptor)
   - name: subjectDescriptor
     uid: azure-devops-extension-api.Identity.subjectDescriptor
     package: azure-devops-extension-api
-    summary: ''
+    summary: Subject descriptor of a Graph entity.
     fullName: subjectDescriptor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subjectDescriptor: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.subjectDescriptor](xref:azure-devops-extension-api.IdentityBase.subjectDescriptor)
   - name: uniqueUserId
     uid: azure-devops-extension-api.Identity.uniqueUserId
     package: azure-devops-extension-api
     summary: ''
     fullName: uniqueUserId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'uniqueUserId: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IdentityBase.uniqueUserId](xref:azure-devops-extension-api.IdentityBase.uniqueUserId)
 extends: <xref uid="azure-devops-extension-api.IdentityBase" />

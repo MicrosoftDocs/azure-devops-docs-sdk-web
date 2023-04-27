@@ -5,41 +5,9 @@ package: azure-devops-extension-api
 summary: Top-level graph entity
 fullName: GraphSubject
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: descriptor
-    uid: azure-devops-extension-api.GraphSubject.descriptor
-    package: azure-devops-extension-api
-    summary: >-
-      The descriptor is the primary way to reference the graph subject while the
-      system is running. This field will uniquely identify the same graph
-      subject across both Accounts and Organizations.
-    fullName: descriptor
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'descriptor: string'
-      return:
-        description: ''
-        type: string
-  - name: displayName
-    uid: azure-devops-extension-api.GraphSubject.displayName
-    package: azure-devops-extension-api
-    summary: >-
-      This is the non-unique display name of the graph subject. To change this
-      field, you must alter its value in the source provider.
-    fullName: displayName
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'displayName: string'
-      return:
-        description: ''
-        type: string
   - name: legacyDescriptor
     uid: azure-devops-extension-api.GraphSubject.legacyDescriptor
     package: azure-devops-extension-api
@@ -48,7 +16,6 @@ properties:
       access old version IMS using identity descriptor.
     fullName: legacyDescriptor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'legacyDescriptor: string'
@@ -58,10 +25,9 @@ properties:
   - name: origin
     uid: azure-devops-extension-api.GraphSubject.origin
     package: azure-devops-extension-api
-    summary: 'The type of source provider for the origin identifier (ex:AD, AAD, MSA)'
+    summary: The type of source provider for the origin identifier (ex:AD, AAD, MSA)
     fullName: origin
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'origin: string'
@@ -78,7 +44,6 @@ properties:
       and has a different unique id in the new provider.
     fullName: originId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'originId: string'
@@ -93,24 +58,61 @@ properties:
       User).
     fullName: subjectKind
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subjectKind: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: descriptor
+    uid: azure-devops-extension-api.GraphSubject.descriptor
+    package: azure-devops-extension-api
+    summary: >-
+      The descriptor is the primary way to reference the graph subject while the
+      system is running. This field will uniquely identify the same graph
+      subject across both Accounts and Organizations.
+    fullName: descriptor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'descriptor: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GraphSubjectBase.descriptor](xref:azure-devops-extension-api.GraphSubjectBase.descriptor)
+  - name: displayName
+    uid: azure-devops-extension-api.GraphSubject.displayName
+    package: azure-devops-extension-api
+    summary: >-
+      This is the non-unique display name of the graph subject. To change this
+      field, you must alter its value in the source provider.
+    fullName: displayName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GraphSubjectBase.displayName](xref:azure-devops-extension-api.GraphSubjectBase.displayName)
   - name: url
     uid: azure-devops-extension-api.GraphSubject.url
     package: azure-devops-extension-api
     summary: This url is the full route to the source resource of this graph subject.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GraphSubjectBase.url](xref:azure-devops-extension-api.GraphSubjectBase.url)
 extends: <xref uid="azure-devops-extension-api.GraphSubjectBase" />

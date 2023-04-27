@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a phase target that runs on the server.
 fullName: ServerTarget
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,24 +14,26 @@ properties:
     summary: The execution options.
     fullName: executionOptions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'executionOptions: ServerTargetExecutionOptions'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.ServerTargetExecutionOptions" />
+inheritedProperties:
   - name: type
     uid: azure-devops-extension-api.ServerTarget.type
     package: azure-devops-extension-api
     summary: The type of the target.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [PhaseTarget.type](xref:azure-devops-extension-api.PhaseTarget.type)
 extends: <xref uid="azure-devops-extension-api.PhaseTarget" />

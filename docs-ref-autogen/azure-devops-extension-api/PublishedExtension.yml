@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: PublishedExtension
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: ''
     fullName: categories
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'categories: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: deploymentType
     uid: azure-devops-extension-api.PublishedExtension.deploymentType
     package: azure-devops-extension-api
     summary: ''
     fullName: deploymentType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deploymentType: ExtensionDeploymentTechnology'
@@ -43,7 +40,6 @@ properties:
     summary: ''
     fullName: displayName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'displayName: string'
@@ -56,7 +52,6 @@ properties:
     summary: ''
     fullName: extensionId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'extensionId: string'
@@ -69,7 +64,6 @@ properties:
     summary: ''
     fullName: extensionName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'extensionName: string'
@@ -82,7 +76,6 @@ properties:
     summary: ''
     fullName: flags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'flags: PublishedExtensionFlags'
@@ -95,20 +88,18 @@ properties:
     summary: ''
     fullName: installationTargets
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'installationTargets: InstallationTarget[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.InstallationTarget" />[]'
+        type: <xref uid="azure-devops-extension-api.InstallationTarget" />[]
   - name: lastUpdated
     uid: azure-devops-extension-api.PublishedExtension.lastUpdated
     package: azure-devops-extension-api
     summary: ''
     fullName: lastUpdated
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastUpdated: Date'
@@ -121,10 +112,24 @@ properties:
     summary: ''
     fullName: longDescription
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'longDescription: string'
+      return:
+        description: ''
+        type: string
+  - name: presentInConflictList
+    uid: azure-devops-extension-api.PublishedExtension.presentInConflictList
+    package: azure-devops-extension-api
+    summary: >-
+      Check if Extension is in conflict list or not. Taking as String and not as
+      boolean because we don't want end customer to see this flag and by making
+      it Boolean it is coming as false for all the cases.
+    fullName: presentInConflictList
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'presentInConflictList: string'
       return:
         description: ''
         type: string
@@ -134,7 +139,6 @@ properties:
     summary: Date on which the extension was first uploaded.
     fullName: publishedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'publishedDate: Date'
@@ -147,7 +151,6 @@ properties:
     summary: ''
     fullName: publisher
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'publisher: PublisherFacts'
@@ -160,7 +163,6 @@ properties:
     summary: Date on which the extension first went public.
     fullName: releaseDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'releaseDate: Date'
@@ -173,20 +175,18 @@ properties:
     summary: ''
     fullName: sharedWith
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sharedWith: ExtensionShare[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.ExtensionShare" />[]'
+        type: <xref uid="azure-devops-extension-api.ExtensionShare" />[]
   - name: shortDescription
     uid: azure-devops-extension-api.PublishedExtension.shortDescription
     package: azure-devops-extension-api
     summary: ''
     fullName: shortDescription
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'shortDescription: string'
@@ -199,36 +199,33 @@ properties:
     summary: ''
     fullName: statistics
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'statistics: ExtensionStatistic[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.ExtensionStatistic" />[]'
+        type: <xref uid="azure-devops-extension-api.ExtensionStatistic" />[]
   - name: tags
     uid: azure-devops-extension-api.PublishedExtension.tags
     package: azure-devops-extension-api
     summary: ''
     fullName: tags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tags: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: versions
     uid: azure-devops-extension-api.PublishedExtension.versions
     package: azure-devops-extension-api
     summary: ''
     fullName: versions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'versions: ExtensionVersion[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.ExtensionVersion" />[]'
+        type: <xref uid="azure-devops-extension-api.ExtensionVersion" />[]

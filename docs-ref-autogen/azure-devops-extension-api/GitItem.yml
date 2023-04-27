@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GitItem
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,78 +14,24 @@ properties:
     summary: SHA1 of commit item was fetched at
     fullName: commitId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'commitId: string'
       return:
         description: ''
         type: string
-  - name: content
-    uid: azure-devops-extension-api.GitItem.content
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: content
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'content: string'
-      return:
-        description: ''
-        type: string
-  - name: contentMetadata
-    uid: azure-devops-extension-api.GitItem.contentMetadata
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: contentMetadata
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'contentMetadata: FileContentMetadata'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.FileContentMetadata" />
   - name: gitObjectType
     uid: azure-devops-extension-api.GitItem.gitObjectType
     package: azure-devops-extension-api
-    summary: 'Type of object (Commit, Tree, Blob, Tag, ...)'
+    summary: Type of object (Commit, Tree, Blob, Tag, ...)
     fullName: gitObjectType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'gitObjectType: GitObjectType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.GitObjectType" />
-  - name: isFolder
-    uid: azure-devops-extension-api.GitItem.isFolder
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: isFolder
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'isFolder: boolean'
-      return:
-        description: ''
-        type: boolean
-  - name: isSymLink
-    uid: azure-devops-extension-api.GitItem.isSymLink
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: isSymLink
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'isSymLink: boolean'
-      return:
-        description: ''
-        type: boolean
   - name: latestProcessedChange
     uid: azure-devops-extension-api.GitItem.latestProcessedChange
     package: azure-devops-extension-api
@@ -96,7 +41,6 @@ properties:
       not yet cached
     fullName: latestProcessedChange
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'latestProcessedChange: GitCommitRef'
@@ -109,7 +53,6 @@ properties:
     summary: Git object id
     fullName: objectId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'objectId: string'
@@ -122,37 +65,101 @@ properties:
     summary: Git object id
     fullName: originalObjectId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'originalObjectId: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: content
+    uid: azure-devops-extension-api.GitItem.content
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: content
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'content: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ItemModel.content](xref:azure-devops-extension-api.ItemModel.content)
+  - name: contentMetadata
+    uid: azure-devops-extension-api.GitItem.contentMetadata
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: contentMetadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'contentMetadata: FileContentMetadata'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.FileContentMetadata" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ItemModel.contentMetadata](xref:azure-devops-extension-api.ItemModel.contentMetadata)
+  - name: isFolder
+    uid: azure-devops-extension-api.GitItem.isFolder
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: isFolder
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isFolder: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ItemModel.isFolder](xref:azure-devops-extension-api.ItemModel.isFolder)
+  - name: isSymLink
+    uid: azure-devops-extension-api.GitItem.isSymLink
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: isSymLink
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isSymLink: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ItemModel.isSymLink](xref:azure-devops-extension-api.ItemModel.isSymLink)
   - name: path
     uid: azure-devops-extension-api.GitItem.path
     package: azure-devops-extension-api
     summary: ''
     fullName: path
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'path: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ItemModel.path](xref:azure-devops-extension-api.ItemModel.path)
   - name: url
     uid: azure-devops-extension-api.GitItem.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ItemModel.url](xref:azure-devops-extension-api.ItemModel.url)
 extends: <xref uid="azure-devops-extension-api.ItemModel" />

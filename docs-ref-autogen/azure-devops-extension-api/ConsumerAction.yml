@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Defines the data contract of a consumer action.
 fullName: ConsumerAction
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       when creating or editing a subscription.
     fullName: allowResourceVersionOverride
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'allowResourceVersionOverride: boolean'
@@ -30,7 +28,6 @@ properties:
     summary: Gets or sets the identifier of the consumer to which this action belongs.
     fullName: consumerId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'consumerId: string'
@@ -43,7 +40,6 @@ properties:
     summary: Gets or sets this action's localized description.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -56,7 +52,6 @@ properties:
     summary: Gets or sets this action's identifier.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -69,20 +64,18 @@ properties:
     summary: Gets or sets this action's input descriptors.
     fullName: inputDescriptors
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'inputDescriptors: InputDescriptor[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.InputDescriptor" />[]'
+        type: <xref uid="azure-devops-extension-api.InputDescriptor" />[]
   - name: name
     uid: azure-devops-extension-api.ConsumerAction.name
     package: azure-devops-extension-api
     summary: Gets or sets this action's localized name.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -95,33 +88,30 @@ properties:
     summary: Gets or sets this action's supported event identifiers.
     fullName: supportedEventTypes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'supportedEventTypes: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: supportedResourceVersions
     uid: azure-devops-extension-api.ConsumerAction.supportedResourceVersions
     package: azure-devops-extension-api
     summary: Gets or sets this action's supported resource versions.
     fullName: supportedResourceVersions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'supportedResourceVersions: [key: string]: function'
+      content: 'supportedResourceVersions: {[key: string]: function}'
       return:
         description: ''
-        type: '[key: string]\: function'
+        type: '{[key: string]: function}'
   - name: url
     uid: azure-devops-extension-api.ConsumerAction.url
     package: azure-devops-extension-api
     summary: The url for this resource
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'

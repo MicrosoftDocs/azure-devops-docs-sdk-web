@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: IPeoplePickerProvider
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Add identities to the MRU
     fullName: addIdentitiesToMRU
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'addIdentitiesToMRU?: (identities: IIdentity[]) => Promise<boolean>'
@@ -29,7 +27,6 @@ properties:
     summary: Request Entity information given an entityId
     fullName: getEntityFromUniqueAttribute
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -46,13 +43,12 @@ properties:
       to show (used for MRU)
     fullName: onEmptyInputFocus
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'onEmptyInputFocus?: () => IIdentity[] | PromiseLike<IIdentity[]> | null'
+      content: 'onEmptyInputFocus?: () => null | IIdentity[] | PromiseLike<IIdentity[]>'
       return:
         description: ''
-        type: '() =&gt; IIdentity[] | PromiseLike&lt;IIdentity[]&gt; | null'
+        type: () =&gt; null | IIdentity[] | PromiseLike&lt;IIdentity[]&gt;
   - name: onFilterIdentities
     uid: azure-devops-extension-api.IPeoplePickerProvider.onFilterIdentities
     package: azure-devops-extension-api
@@ -61,17 +57,16 @@ properties:
       list of suggestions to put in the suggestion list
     fullName: onFilterIdentities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         onFilterIdentities: (filter: string, selectedItems?: IIdentity[]) =>
-        IIdentity[] | PromiseLike<IIdentity[]> | null
+        null | IIdentity[] | PromiseLike<IIdentity[]>
       return:
         description: ''
         type: >-
-          (filter: string, selectedItems?: IIdentity[]) =&gt; IIdentity[] |
-          PromiseLike&lt;IIdentity[]&gt; | null
+          (filter: string, selectedItems?: IIdentity[]) =&gt; null | IIdentity[]
+          | PromiseLike&lt;IIdentity[]&gt;
   - name: onRequestConnectionInformation
     uid: >-
       azure-devops-extension-api.IPeoplePickerProvider.onRequestConnectionInformation
@@ -79,7 +74,6 @@ properties:
     summary: Request connection information about a given Entity.
     fullName: onRequestConnectionInformation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -98,7 +92,6 @@ properties:
     summary: Remove identities from the MRU
     fullName: removeIdentitiesFromMRU
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'removeIdentitiesFromMRU?: (identities: IIdentity[]) => Promise<boolean>'

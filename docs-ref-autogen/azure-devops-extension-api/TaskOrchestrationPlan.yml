@@ -5,69 +5,39 @@ package: azure-devops-extension-api
 summary: ''
 fullName: TaskOrchestrationPlan
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: artifactLocation
-    uid: azure-devops-extension-api.TaskOrchestrationPlan.artifactLocation
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: artifactLocation
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'artifactLocation: string'
-      return:
-        description: ''
-        type: string
-  - name: artifactUri
-    uid: azure-devops-extension-api.TaskOrchestrationPlan.artifactUri
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: artifactUri
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'artifactUri: string'
-      return:
-        description: ''
-        type: string
-  - name: definition
-    uid: azure-devops-extension-api.TaskOrchestrationPlan.definition
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: definition
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'definition: TaskOrchestrationOwner'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.TaskOrchestrationOwner" />
   - name: environment
     uid: azure-devops-extension-api.TaskOrchestrationPlan.environment
     package: azure-devops-extension-api
     summary: ''
     fullName: environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'environment: PlanEnvironment'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.PlanEnvironment" />
+  - name: expandedYaml
+    uid: azure-devops-extension-api.TaskOrchestrationPlan.expandedYaml
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: expandedYaml
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'expandedYaml: TaskLogReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskLogReference" />
   - name: finishTime
     uid: azure-devops-extension-api.TaskOrchestrationPlan.finishTime
     package: azure-devops-extension-api
     summary: ''
     fullName: finishTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'finishTime: Date'
@@ -80,7 +50,6 @@ properties:
     summary: ''
     fullName: implementation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'implementation: TaskOrchestrationContainer'
@@ -93,72 +62,18 @@ properties:
     summary: ''
     fullName: initializationLog
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'initializationLog: TaskLogReference'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.TaskLogReference" />
-  - name: owner
-    uid: azure-devops-extension-api.TaskOrchestrationPlan.owner
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: owner
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'owner: TaskOrchestrationOwner'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.TaskOrchestrationOwner" />
-  - name: planGroup
-    uid: azure-devops-extension-api.TaskOrchestrationPlan.planGroup
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: planGroup
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'planGroup: string'
-      return:
-        description: ''
-        type: string
-  - name: planId
-    uid: azure-devops-extension-api.TaskOrchestrationPlan.planId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: planId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'planId: string'
-      return:
-        description: ''
-        type: string
-  - name: planType
-    uid: azure-devops-extension-api.TaskOrchestrationPlan.planType
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: planType
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'planType: string'
-      return:
-        description: ''
-        type: string
   - name: requestedById
     uid: azure-devops-extension-api.TaskOrchestrationPlan.requestedById
     package: azure-devops-extension-api
     summary: ''
     fullName: requestedById
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestedById: string'
@@ -171,7 +86,6 @@ properties:
     summary: ''
     fullName: requestedForId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestedForId: string'
@@ -184,7 +98,6 @@ properties:
     summary: ''
     fullName: result
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'result: TaskResult'
@@ -197,23 +110,9 @@ properties:
     summary: ''
     fullName: resultCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resultCode: string'
-      return:
-        description: ''
-        type: string
-  - name: scopeIdentifier
-    uid: azure-devops-extension-api.TaskOrchestrationPlan.scopeIdentifier
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: scopeIdentifier
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'scopeIdentifier: string'
       return:
         description: ''
         type: string
@@ -223,7 +122,6 @@ properties:
     summary: ''
     fullName: startTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'startTime: Date'
@@ -236,7 +134,6 @@ properties:
     summary: ''
     fullName: state
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'state: TaskOrchestrationPlanState'
@@ -249,24 +146,146 @@ properties:
     summary: ''
     fullName: timeline
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeline: TimelineReference'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.TimelineReference" />
+inheritedProperties:
+  - name: artifactLocation
+    uid: azure-devops-extension-api.TaskOrchestrationPlan.artifactLocation
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: artifactLocation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'artifactLocation: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationPlanReference.artifactLocation](xref:azure-devops-extension-api.TaskOrchestrationPlanReference.artifactLocation)
+  - name: artifactUri
+    uid: azure-devops-extension-api.TaskOrchestrationPlan.artifactUri
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: artifactUri
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'artifactUri: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationPlanReference.artifactUri](xref:azure-devops-extension-api.TaskOrchestrationPlanReference.artifactUri)
+  - name: definition
+    uid: azure-devops-extension-api.TaskOrchestrationPlan.definition
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: definition
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'definition: TaskOrchestrationOwner'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskOrchestrationOwner" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationPlanReference.definition](xref:azure-devops-extension-api.TaskOrchestrationPlanReference.definition)
+  - name: owner
+    uid: azure-devops-extension-api.TaskOrchestrationPlan.owner
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: owner
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'owner: TaskOrchestrationOwner'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskOrchestrationOwner" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationPlanReference.owner](xref:azure-devops-extension-api.TaskOrchestrationPlanReference.owner)
+  - name: planGroup
+    uid: azure-devops-extension-api.TaskOrchestrationPlan.planGroup
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: planGroup
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'planGroup: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationPlanReference.planGroup](xref:azure-devops-extension-api.TaskOrchestrationPlanReference.planGroup)
+  - name: planId
+    uid: azure-devops-extension-api.TaskOrchestrationPlan.planId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: planId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'planId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationPlanReference.planId](xref:azure-devops-extension-api.TaskOrchestrationPlanReference.planId)
+  - name: planType
+    uid: azure-devops-extension-api.TaskOrchestrationPlan.planType
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: planType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'planType: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationPlanReference.planType](xref:azure-devops-extension-api.TaskOrchestrationPlanReference.planType)
+  - name: scopeIdentifier
+    uid: azure-devops-extension-api.TaskOrchestrationPlan.scopeIdentifier
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: scopeIdentifier
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scopeIdentifier: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationPlanReference.scopeIdentifier](xref:azure-devops-extension-api.TaskOrchestrationPlanReference.scopeIdentifier)
   - name: version
     uid: azure-devops-extension-api.TaskOrchestrationPlan.version
     package: azure-devops-extension-api
     summary: ''
     fullName: version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'version: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskOrchestrationPlanReference.version](xref:azure-devops-extension-api.TaskOrchestrationPlanReference.version)
 extends: <xref uid="azure-devops-extension-api.TaskOrchestrationPlanReference" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Data contract for a TeamProjectCollection.
 fullName: TeamProjectCollection
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,36 +14,9 @@ properties:
     summary: Project collection description.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
-      return:
-        description: ''
-        type: string
-  - name: id
-    uid: azure-devops-extension-api.TeamProjectCollection.id
-    package: azure-devops-extension-api
-    summary: Collection Id.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: string'
-      return:
-        description: ''
-        type: string
-  - name: name
-    uid: azure-devops-extension-api.TeamProjectCollection.name
-    package: azure-devops-extension-api
-    summary: Collection Name.
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
       return:
         description: ''
         type: string
@@ -54,7 +26,6 @@ properties:
     summary: Process customization type on this collection. It can be Xml or Inherited.
     fullName: processCustomizationType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'processCustomizationType: ProcessCustomizationType'
@@ -67,24 +38,56 @@ properties:
     summary: Project collection state.
     fullName: state
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'state: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.TeamProjectCollection.id
+    package: azure-devops-extension-api
+    summary: Collection Id.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TeamProjectCollectionReference.id](xref:azure-devops-extension-api.TeamProjectCollectionReference.id)
+  - name: name
+    uid: azure-devops-extension-api.TeamProjectCollection.name
+    package: azure-devops-extension-api
+    summary: Collection Name.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TeamProjectCollectionReference.name](xref:azure-devops-extension-api.TeamProjectCollectionReference.name)
   - name: url
     uid: azure-devops-extension-api.TeamProjectCollection.url
     package: azure-devops-extension-api
     summary: Collection REST Url.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TeamProjectCollectionReference.url](xref:azure-devops-extension-api.TeamProjectCollectionReference.url)
 extends: <xref uid="azure-devops-extension-api.TeamProjectCollectionReference" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a session for performing message exchanges from an agent.
 fullName: TaskAgentSession
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Gets or sets the agent which is the target of the session.
     fullName: agent
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agent: TaskAgentReference'
@@ -28,7 +26,6 @@ properties:
     summary: Gets the key used to encrypt message traffic for this session.
     fullName: encryptionKey
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'encryptionKey: TaskAgentSessionKey'
@@ -43,7 +40,6 @@ properties:
       machine of origination.
     fullName: ownerName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'ownerName: string'
@@ -56,7 +52,6 @@ properties:
     summary: Gets the unique identifier for this session.
     fullName: sessionId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sessionId: string'
@@ -69,10 +64,9 @@ properties:
     summary: ''
     fullName: systemCapabilities
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'systemCapabilities: [key: string]: string'
+      content: 'systemCapabilities: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'

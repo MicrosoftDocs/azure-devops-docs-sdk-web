@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: An organization-level grouping of agents.
 fullName: TaskAgentPool
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The ID of the associated agent cloud.
     fullName: agentCloudId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agentCloudId: number'
@@ -30,7 +28,6 @@ properties:
       project collection.
     fullName: autoProvision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'autoProvision: boolean'
@@ -45,10 +42,21 @@ properties:
       Provider settings.
     fullName: autoSize
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'autoSize: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: autoUpdate
+    uid: azure-devops-extension-api.TaskAgentPool.autoUpdate
+    package: azure-devops-extension-api
+    summary: Whether or not agents in this pool are allowed to automatically update
+    fullName: autoUpdate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autoUpdate: boolean'
       return:
         description: ''
         type: boolean
@@ -60,7 +68,6 @@ properties:
       the administrators group for the pool on creation.
     fullName: createdBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdBy: IdentityRef'
@@ -73,26 +80,66 @@ properties:
     summary: The date/time of the pool creation.
     fullName: createdOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdOn: Date'
       return:
         description: ''
         type: Date
+  - name: owner
+    uid: azure-devops-extension-api.TaskAgentPool.owner
+    package: azure-devops-extension-api
+    summary: Owner or administrator of the pool.
+    fullName: owner
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'owner: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+  - name: properties
+    uid: azure-devops-extension-api.TaskAgentPool.properties
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: properties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'properties: any'
+      return:
+        description: ''
+        type: any
+  - name: targetSize
+    uid: azure-devops-extension-api.TaskAgentPool.targetSize
+    package: azure-devops-extension-api
+    summary: >-
+      Target parallelism - Only applies to agent pools that are backed by pool
+      providers. It will be null for regular pools.
+    fullName: targetSize
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'targetSize: number'
+      return:
+        description: ''
+        type: number
+inheritedProperties:
   - name: id
     uid: azure-devops-extension-api.TaskAgentPool.id
     package: azure-devops-extension-api
     summary: ''
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentPoolReference.id](xref:azure-devops-extension-api.TaskAgentPoolReference.id)
   - name: isHosted
     uid: azure-devops-extension-api.TaskAgentPool.isHosted
     package: azure-devops-extension-api
@@ -101,115 +148,103 @@ properties:
       service.
     fullName: isHosted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isHosted: boolean'
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentPoolReference.isHosted](xref:azure-devops-extension-api.TaskAgentPoolReference.isHosted)
   - name: isLegacy
     uid: azure-devops-extension-api.TaskAgentPool.isLegacy
     package: azure-devops-extension-api
     summary: Determines whether the pool is legacy.
     fullName: isLegacy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isLegacy: boolean'
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentPoolReference.isLegacy](xref:azure-devops-extension-api.TaskAgentPoolReference.isLegacy)
   - name: name
     uid: azure-devops-extension-api.TaskAgentPool.name
     package: azure-devops-extension-api
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
       return:
         description: ''
         type: string
-  - name: owner
-    uid: azure-devops-extension-api.TaskAgentPool.owner
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentPoolReference.name](xref:azure-devops-extension-api.TaskAgentPoolReference.name)
+  - name: options
+    uid: azure-devops-extension-api.TaskAgentPool.options
     package: azure-devops-extension-api
-    summary: Owner or administrator of the pool.
-    fullName: owner
+    summary: Additional pool settings and details
+    fullName: options
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'owner: IdentityRef'
+      content: 'options: TaskAgentPoolOptions'
       return:
         description: ''
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+        type: <xref uid="azure-devops-extension-api.TaskAgentPoolOptions" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentPoolReference.options](xref:azure-devops-extension-api.TaskAgentPoolReference.options)
   - name: poolType
     uid: azure-devops-extension-api.TaskAgentPool.poolType
     package: azure-devops-extension-api
     summary: Gets or sets the type of the pool
     fullName: poolType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'poolType: TaskAgentPoolType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.TaskAgentPoolType" />
-  - name: properties
-    uid: azure-devops-extension-api.TaskAgentPool.properties
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: properties
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'properties: any'
-      return:
-        description: ''
-        type: any
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentPoolReference.poolType](xref:azure-devops-extension-api.TaskAgentPoolReference.poolType)
   - name: scope
     uid: azure-devops-extension-api.TaskAgentPool.scope
     package: azure-devops-extension-api
     summary: ''
     fullName: scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'scope: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentPoolReference.scope](xref:azure-devops-extension-api.TaskAgentPoolReference.scope)
   - name: size
     uid: azure-devops-extension-api.TaskAgentPool.size
     package: azure-devops-extension-api
     summary: Gets the current size of the pool.
     fullName: size
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'size: number'
       return:
         description: ''
         type: number
-  - name: targetSize
-    uid: azure-devops-extension-api.TaskAgentPool.targetSize
-    package: azure-devops-extension-api
-    summary: Target parallelism.
-    fullName: targetSize
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'targetSize: number'
-      return:
-        description: ''
-        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskAgentPoolReference.size](xref:azure-devops-extension-api.TaskAgentPoolReference.size)
 extends: <xref uid="azure-devops-extension-api.TaskAgentPoolReference" />

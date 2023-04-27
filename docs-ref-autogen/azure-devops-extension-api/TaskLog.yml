@@ -2,46 +2,30 @@
 name: TaskLog
 uid: azure-devops-extension-api.TaskLog
 package: azure-devops-extension-api
-summary: ''
+summary: A task log connected to a timeline record.
 fullName: TaskLog
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: createdOn
     uid: azure-devops-extension-api.TaskLog.createdOn
     package: azure-devops-extension-api
-    summary: ''
+    summary: The time of the task log creation.
     fullName: createdOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdOn: Date'
       return:
         description: ''
         type: Date
-  - name: id
-    uid: azure-devops-extension-api.TaskLog.id
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
   - name: indexLocation
     uid: azure-devops-extension-api.TaskLog.indexLocation
     package: azure-devops-extension-api
-    summary: ''
+    summary: The REST URL of the task log when indexed.
     fullName: indexLocation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'indexLocation: string'
@@ -51,10 +35,9 @@ properties:
   - name: lastChangedOn
     uid: azure-devops-extension-api.TaskLog.lastChangedOn
     package: azure-devops-extension-api
-    summary: ''
+    summary: The time of the last modification of the task log.
     fullName: lastChangedOn
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastChangedOn: Date'
@@ -64,40 +47,56 @@ properties:
   - name: lineCount
     uid: azure-devops-extension-api.TaskLog.lineCount
     package: azure-devops-extension-api
-    summary: ''
+    summary: The number of the task log lines.
     fullName: lineCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lineCount: number'
       return:
         description: ''
         type: number
-  - name: location
-    uid: azure-devops-extension-api.TaskLog.location
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: location
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'location: string'
-      return:
-        description: ''
-        type: string
   - name: path
     uid: azure-devops-extension-api.TaskLog.path
     package: azure-devops-extension-api
-    summary: ''
+    summary: The path of the task log.
     fullName: path
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'path: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.TaskLog.id
+    package: azure-devops-extension-api
+    summary: The ID of the task log.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskLogReference.id](xref:azure-devops-extension-api.TaskLogReference.id)
+  - name: location
+    uid: azure-devops-extension-api.TaskLog.location
+    package: azure-devops-extension-api
+    summary: The REST URL of the task log.
+    fullName: location
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'location: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TaskLogReference.location](xref:azure-devops-extension-api.TaskLogReference.location)
 extends: <xref uid="azure-devops-extension-api.TaskLogReference" />

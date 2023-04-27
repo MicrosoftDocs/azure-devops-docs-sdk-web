@@ -3,39 +3,39 @@ name: VssJsonCollectionWrapperV
 uid: azure-devops-extension-api.VssJsonCollectionWrapperV
 package: azure-devops-extension-api
 summary: >-
-  This class is used to serialized collections as a single JSON object on the
-  wire, to avoid serializing JSON arrays directly to the client, which can be a
-  security hole
+  This class is used to serialize collections as a single JSON object on the
+  wire.
 fullName: VssJsonCollectionWrapperV<T>
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: count
-    uid: azure-devops-extension-api.VssJsonCollectionWrapperV.count
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: count
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'count: number'
-      return:
-        description: ''
-        type: number
   - name: value
     uid: azure-devops-extension-api.VssJsonCollectionWrapperV.value
     package: azure-devops-extension-api
-    summary: ''
+    summary: The serialized item.
     fullName: value
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'value: T'
       return:
         description: ''
         type: T
+inheritedProperties:
+  - name: count
+    uid: azure-devops-extension-api.VssJsonCollectionWrapperV.count
+    package: azure-devops-extension-api
+    summary: The number of serialized items.
+    fullName: count
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'count: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [VssJsonCollectionWrapperBase.count](xref:azure-devops-extension-api.VssJsonCollectionWrapperBase.count)
 extends: <xref uid="azure-devops-extension-api.VssJsonCollectionWrapperBase" />

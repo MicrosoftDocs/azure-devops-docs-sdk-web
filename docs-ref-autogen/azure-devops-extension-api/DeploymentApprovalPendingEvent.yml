@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: DeploymentApprovalPendingEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: approval
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'approval: ReleaseApproval'
@@ -28,7 +26,6 @@ properties:
     summary: ''
     fullName: approvalOptions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'approvalOptions: ApprovalOptions'
@@ -42,33 +39,30 @@ properties:
     summary: ''
     fullName: completedApprovals
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'completedApprovals: ReleaseApproval[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.ReleaseApproval" />[]'
+        type: <xref uid="azure-devops-extension-api.ReleaseApproval" />[]
   - name: data
     uid: azure-devops-extension-api.DeploymentApprovalPendingEvent.data
     package: azure-devops-extension-api
     summary: ''
     fullName: data
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'data: [key: string]: any'
+      content: 'data: {[key: string]: any}'
       return:
         description: ''
-        type: '[key: string]\: any'
+        type: '{[key: string]: any}'
   - name: deployment
     uid: azure-devops-extension-api.DeploymentApprovalPendingEvent.deployment
     package: azure-devops-extension-api
     summary: ''
     fullName: deployment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deployment: Deployment'
@@ -82,7 +76,6 @@ properties:
     summary: ''
     fullName: isMultipleRankApproval
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isMultipleRankApproval: boolean'
@@ -95,20 +88,18 @@ properties:
     summary: ''
     fullName: pendingApprovals
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'pendingApprovals: ReleaseApproval[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.ReleaseApproval" />[]'
+        type: <xref uid="azure-devops-extension-api.ReleaseApproval" />[]
   - name: project
     uid: azure-devops-extension-api.DeploymentApprovalPendingEvent.project
     package: azure-devops-extension-api
     summary: ''
     fullName: project
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'project: ProjectReference'
@@ -121,10 +112,71 @@ properties:
     summary: ''
     fullName: release
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'release: Release'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.Release" />
+inheritedProperties:
+  - name: attemptId
+    uid: azure-devops-extension-api.DeploymentApprovalPendingEvent.attemptId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: attemptId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'attemptId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DeploymentEvent.attemptId](xref:azure-devops-extension-api.DeploymentEvent.attemptId)
+  - name: id
+    uid: azure-devops-extension-api.DeploymentApprovalPendingEvent.id
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DeploymentEvent.id](xref:azure-devops-extension-api.DeploymentEvent.id)
+  - name: stageName
+    uid: azure-devops-extension-api.DeploymentApprovalPendingEvent.stageName
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: stageName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stageName: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DeploymentEvent.stageName](xref:azure-devops-extension-api.DeploymentEvent.stageName)
+  - name: url
+    uid: azure-devops-extension-api.DeploymentApprovalPendingEvent.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DeploymentEvent.url](xref:azure-devops-extension-api.DeploymentEvent.url)
+extends: <xref uid="azure-devops-extension-api.DeploymentEvent" />

@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: PackageTrigger
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,24 +14,26 @@ properties:
     summary: Package trigger alias.
     fullName: alias
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'alias: string'
       return:
         description: ''
         type: string
+inheritedProperties:
   - name: triggerType
     uid: azure-devops-extension-api.PackageTrigger.triggerType
     package: azure-devops-extension-api
     summary: Type of release trigger.
     fullName: triggerType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'triggerType: ReleaseTriggerType'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.ReleaseTriggerType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ReleaseTriggerBase.triggerType](xref:azure-devops-extension-api.ReleaseTriggerBase.triggerType)
 extends: <xref uid="azure-devops-extension-api.ReleaseTriggerBase" />

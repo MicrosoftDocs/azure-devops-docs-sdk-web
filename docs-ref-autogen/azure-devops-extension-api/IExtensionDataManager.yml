@@ -5,16 +5,14 @@ package: azure-devops-extension-api
 summary: ''
 fullName: IExtensionDataManager
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
-  - name: 'createDocument(string, any, IDocumentOptions)'
+  - name: createDocument(string, any, IDocumentOptions)
     uid: azure-devops-extension-api.IExtensionDataManager.createDocument
     package: azure-devops-extension-api
     summary: Returns a promise for creating a document in the provided collection
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -29,19 +27,17 @@ methods:
           description: The document to store
         - id: documentOptions
           type: <xref uid="azure-devops-extension-api.IDocumentOptions" />
-          description: |
-            Extension document options, the default scope value is account-wide
+          description: Extension document options, the default scope value is account-wide
       return:
         description: ''
         type: Promise&lt;any&gt;
-  - name: 'deleteDocument(string, string, IDocumentOptions)'
+  - name: deleteDocument(string, string, IDocumentOptions)
     uid: azure-devops-extension-api.IExtensionDataManager.deleteDocument
     package: azure-devops-extension-api
     summary: >-
       Returns a promise for deleting the document at the provided scope,
       collection and id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -56,19 +52,17 @@ methods:
           description: The id of the document in the collection
         - id: documentOptions
           type: <xref uid="azure-devops-extension-api.IDocumentOptions" />
-          description: |
-            Extension document options, the default scope value is account-wide
+          description: Extension document options, the default scope value is account-wide
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'getDocument(string, string, IDocumentOptions)'
+  - name: getDocument(string, string, IDocumentOptions)
     uid: azure-devops-extension-api.IExtensionDataManager.getDocument
     package: azure-devops-extension-api
     summary: >-
       Returns a promise for getting a document with the provided id in the
       provided collection
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -83,19 +77,17 @@ methods:
           description: The id of the document in the collection
         - id: documentOptions
           type: <xref uid="azure-devops-extension-api.IDocumentOptions" />
-          description: |
-            Extension document options, the default scope value is account-wide
+          description: Extension document options, the default scope value is account-wide
       return:
         description: ''
         type: Promise&lt;any&gt;
-  - name: 'getDocuments(string, IDocumentOptions)'
+  - name: getDocuments(string, IDocumentOptions)
     uid: azure-devops-extension-api.IExtensionDataManager.getDocuments
     package: azure-devops-extension-api
     summary: >-
       Returns a promise for getting all of the documents in the provided
       collection
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -107,17 +99,15 @@ methods:
           description: The name of the collection where the document lives
         - id: documentOptions
           type: <xref uid="azure-devops-extension-api.IDocumentOptions" />
-          description: |
-            Extension document options, the default scope value is account-wide
+          description: Extension document options, the default scope value is account-wide
       return:
         description: ''
-        type: 'Promise&lt;any[]&gt;'
-  - name: 'getValue<T>(string, IDocumentOptions)'
+        type: Promise&lt;any[]&gt;
+  - name: getValue<T>(string, IDocumentOptions)
     uid: azure-devops-extension-api.IExtensionDataManager.getValue
     package: azure-devops-extension-api
     summary: Returns a promise for retrieving a setting at the provided key and scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -129,17 +119,15 @@ methods:
           description: The key to retrieve a value for
         - id: documentOptions
           type: <xref uid="azure-devops-extension-api.IDocumentOptions" />
-          description: |
-            Extension document options, the default scope value is account-wide
+          description: Extension document options, the default scope value is account-wide
       return:
         description: ''
         type: Promise&lt;T&gt;
-  - name: 'queryCollections(ExtensionDataCollection[])'
+  - name: queryCollections(ExtensionDataCollection[])
     uid: azure-devops-extension-api.IExtensionDataManager.queryCollections
     package: azure-devops-extension-api
     summary: Returns a promise for querying a set of collections
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -147,8 +135,8 @@ methods:
         Promise<ExtensionDataCollection[]>
       parameters:
         - id: collections
-          type: '<xref uid="azure-devops-extension-api.ExtensionDataCollection" />[]'
-          description: >
+          type: <xref uid="azure-devops-extension-api.ExtensionDataCollection" />[]
+          description: >-
             The list of collections to query. Each collection will contain its
             collectionName, scopeType, and scopeValue
       return:
@@ -156,12 +144,11 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ExtensionDataCollection" />[]&gt;
-  - name: 'queryCollectionsByName(string[])'
+  - name: queryCollectionsByName(string[])
     uid: azure-devops-extension-api.IExtensionDataManager.queryCollectionsByName
     package: azure-devops-extension-api
     summary: Returns a promise for querying a set of collections
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -169,14 +156,14 @@ methods:
         Promise<ExtensionDataCollection[]>
       parameters:
         - id: collectionNames
-          type: 'string[]'
+          type: string[]
           description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ExtensionDataCollection" />[]&gt;
-  - name: 'setDocument(string, any, IDocumentOptions)'
+  - name: setDocument(string, any, IDocumentOptions)
     uid: azure-devops-extension-api.IExtensionDataManager.setDocument
     package: azure-devops-extension-api
     summary: >-
@@ -185,7 +172,6 @@ methods:
       Creates the document if it does not exist, otherwise updates the existing
       document with the id provided
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -200,17 +186,15 @@ methods:
           description: The document to store
         - id: documentOptions
           type: <xref uid="azure-devops-extension-api.IDocumentOptions" />
-          description: |
-            Extension document options, the default scope value is account-wide
+          description: Extension document options, the default scope value is account-wide
       return:
         description: ''
         type: Promise&lt;any&gt;
-  - name: 'setValue<T>(string, T, IDocumentOptions)'
+  - name: setValue<T>(string, T, IDocumentOptions)
     uid: azure-devops-extension-api.IExtensionDataManager.setValue
     package: azure-devops-extension-api
     summary: Returns a promise for saving a setting at the provided key and scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -225,19 +209,17 @@ methods:
           description: The value to save
         - id: documentOptions
           type: <xref uid="azure-devops-extension-api.IDocumentOptions" />
-          description: |
-            Extension document options, the default scope value is account-wide
+          description: Extension document options, the default scope value is account-wide
       return:
         description: ''
         type: Promise&lt;T&gt;
-  - name: 'updateDocument(string, any, IDocumentOptions)'
+  - name: updateDocument(string, any, IDocumentOptions)
     uid: azure-devops-extension-api.IExtensionDataManager.updateDocument
     package: azure-devops-extension-api
     summary: |-
       Returns a promise for updating a document in the provided collection
       A document with the id provided must exist
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -252,8 +234,7 @@ methods:
           description: The document to store
         - id: documentOptions
           type: <xref uid="azure-devops-extension-api.IDocumentOptions" />
-          description: |
-            Extension document options, the default scope value is account-wide
+          description: Extension document options, the default scope value is account-wide
       return:
         description: ''
         type: Promise&lt;any&gt;

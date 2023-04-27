@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents a template from which new build definitions can be created.
 fullName: BuildDefinitionTemplate
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Indicates whether the template can be deleted.
     fullName: canDelete
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'canDelete: boolean'
@@ -28,7 +26,6 @@ properties:
     summary: The template category.
     fullName: category
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'category: string'
@@ -41,7 +38,6 @@ properties:
     summary: An optional hosted agent queue for the template to use by default.
     fullName: defaultHostedQueue
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultHostedQueue: string'
@@ -54,7 +50,6 @@ properties:
     summary: A description of the template.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -67,13 +62,12 @@ properties:
     summary: ''
     fullName: icons
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'icons: [key: string]: string'
+      content: 'icons: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: iconTaskId
     uid: azure-devops-extension-api.BuildDefinitionTemplate.iconTaskId
     package: azure-devops-extension-api
@@ -82,7 +76,6 @@ properties:
       UI.
     fullName: iconTaskId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'iconTaskId: string'
@@ -95,7 +88,6 @@ properties:
     summary: The ID of the template.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -108,7 +100,6 @@ properties:
     summary: The name of the template.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -121,7 +112,6 @@ properties:
     summary: The actual template.
     fullName: template
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'template: BuildDefinition'

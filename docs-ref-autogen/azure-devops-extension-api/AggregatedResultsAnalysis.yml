@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: AggregatedResultsAnalysis
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: duration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'duration: any'
@@ -29,22 +27,20 @@ properties:
     summary: ''
     fullName: notReportedResultsByOutcome
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'notReportedResultsByOutcome: [key: number]: AggregatedResultsByOutcome'
+      content: 'notReportedResultsByOutcome: {[key: number]: AggregatedResultsByOutcome}'
       return:
         description: ''
         type: >-
-          [key: number]\: <xref
-          uid="azure-devops-extension-api.AggregatedResultsByOutcome" />
+          {[key: number]: <xref
+          uid="azure-devops-extension-api.AggregatedResultsByOutcome" />}
   - name: previousContext
     uid: azure-devops-extension-api.AggregatedResultsAnalysis.previousContext
     package: azure-devops-extension-api
     summary: ''
     fullName: previousContext
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'previousContext: TestResultsContext'
@@ -57,22 +53,20 @@ properties:
     summary: ''
     fullName: resultsByOutcome
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'resultsByOutcome: [key: number]: AggregatedResultsByOutcome'
+      content: 'resultsByOutcome: {[key: number]: AggregatedResultsByOutcome}'
       return:
         description: ''
         type: >-
-          [key: number]\: <xref
-          uid="azure-devops-extension-api.AggregatedResultsByOutcome" />
+          {[key: number]: <xref
+          uid="azure-devops-extension-api.AggregatedResultsByOutcome" />}
   - name: resultsDifference
     uid: azure-devops-extension-api.AggregatedResultsAnalysis.resultsDifference
     package: azure-devops-extension-api
     summary: ''
     fullName: resultsDifference
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resultsDifference: AggregatedResultsDifference'
@@ -85,37 +79,34 @@ properties:
     summary: ''
     fullName: runSummaryByOutcome
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'runSummaryByOutcome: [key: number]: AggregatedRunsByOutcome'
+      content: 'runSummaryByOutcome: {[key: number]: AggregatedRunsByOutcome}'
       return:
         description: ''
         type: >-
-          [key: number]\: <xref
-          uid="azure-devops-extension-api.AggregatedRunsByOutcome" />
+          {[key: number]: <xref
+          uid="azure-devops-extension-api.AggregatedRunsByOutcome" />}
   - name: runSummaryByState
     uid: azure-devops-extension-api.AggregatedResultsAnalysis.runSummaryByState
     package: azure-devops-extension-api
     summary: ''
     fullName: runSummaryByState
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'runSummaryByState: [key: number]: AggregatedRunsByState'
+      content: 'runSummaryByState: {[key: number]: AggregatedRunsByState}'
       return:
         description: ''
         type: >-
-          [key: number]\: <xref
-          uid="azure-devops-extension-api.AggregatedRunsByState" />
+          {[key: number]: <xref
+          uid="azure-devops-extension-api.AggregatedRunsByState" />}
   - name: totalTests
     uid: azure-devops-extension-api.AggregatedResultsAnalysis.totalTests
     package: azure-devops-extension-api
     summary: ''
     fullName: totalTests
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'totalTests: number'

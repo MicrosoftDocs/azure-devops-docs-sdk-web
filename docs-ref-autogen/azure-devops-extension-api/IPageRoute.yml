@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Route information for the current page
 fullName: IPageRoute
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Id of the contributed route
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -28,10 +26,9 @@ properties:
     summary: The route values that were specified in the request
     fullName: routeValues
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'routeValues: [key: string]: string'
+      content: 'routeValues: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'

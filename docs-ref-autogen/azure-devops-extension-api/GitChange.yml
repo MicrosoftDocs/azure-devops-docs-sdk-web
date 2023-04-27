@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GitChange
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,59 +14,18 @@ properties:
     summary: ID of the change within the group of changes.
     fullName: changeId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'changeId: number'
       return:
         description: ''
         type: number
-  - name: changeType
-    uid: azure-devops-extension-api.GitChange.changeType
-    package: azure-devops-extension-api
-    summary: The type of change that was made to the item.
-    fullName: changeType
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'changeType: VersionControlChangeType'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.VersionControlChangeType" />
-  - name: item
-    uid: azure-devops-extension-api.GitChange.item
-    package: azure-devops-extension-api
-    summary: Current version.
-    fullName: item
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'item: GitItem'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.GitItem" />
-  - name: newContent
-    uid: azure-devops-extension-api.GitChange.newContent
-    package: azure-devops-extension-api
-    summary: Content of the item after the change.
-    fullName: newContent
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'newContent: ItemContent'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.ItemContent" />
   - name: newContentTemplate
     uid: azure-devops-extension-api.GitChange.newContentTemplate
     package: azure-devops-extension-api
     summary: New Content template to be used when pushing new changes.
     fullName: newContentTemplate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'newContentTemplate: GitTemplate'
@@ -80,39 +38,88 @@ properties:
     summary: Original path of item if different from current path.
     fullName: originalPath
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'originalPath: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: changeType
+    uid: azure-devops-extension-api.GitChange.changeType
+    package: azure-devops-extension-api
+    summary: The type of change that was made to the item.
+    fullName: changeType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changeType: VersionControlChangeType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.VersionControlChangeType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.changeType](xref:azure-devops-extension-api.Change.changeType)
+  - name: item
+    uid: azure-devops-extension-api.GitChange.item
+    package: azure-devops-extension-api
+    summary: Current version.
+    fullName: item
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'item: GitItem'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitItem" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.item](xref:azure-devops-extension-api.Change.item)
+  - name: newContent
+    uid: azure-devops-extension-api.GitChange.newContent
+    package: azure-devops-extension-api
+    summary: Content of the item after the change.
+    fullName: newContent
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'newContent: ItemContent'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ItemContent" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.newContent](xref:azure-devops-extension-api.Change.newContent)
   - name: sourceServerItem
     uid: azure-devops-extension-api.GitChange.sourceServerItem
     package: azure-devops-extension-api
     summary: Path of the item on the server.
     fullName: sourceServerItem
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceServerItem: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.sourceServerItem](xref:azure-devops-extension-api.Change.sourceServerItem)
   - name: url
     uid: azure-devops-extension-api.GitChange.url
     package: azure-devops-extension-api
     summary: URL to retrieve the item.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Change.url](xref:azure-devops-extension-api.Change.url)
 extends: >-
   <xref uid="azure-devops-extension-api.Change" />&lt;<xref
   uid="azure-devops-extension-api.GitItem" />&gt;

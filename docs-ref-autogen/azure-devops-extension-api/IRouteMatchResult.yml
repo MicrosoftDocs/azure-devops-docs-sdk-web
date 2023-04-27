@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Result of a call to replace route values for a parsed route
 fullName: IRouteMatchResult
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: Dictionary of the route value keys that were used as replacements
     fullName: matchedParameters
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'matchedParameters: [key: string]: boolean'
+      content: 'matchedParameters: {[key: string]: boolean}'
       return:
         description: ''
-        type: '[key: string]\: boolean'
+        type: '{[key: string]: boolean}'
   - name: matchedParametersCount
     uid: azure-devops-extension-api.IRouteMatchResult.matchedParametersCount
     package: azure-devops-extension-api
     summary: The number of parameter replacements made
     fullName: matchedParametersCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'matchedParametersCount: number'
@@ -43,7 +40,6 @@ properties:
       parameters that would be added from extra route values.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'

@@ -2,10 +2,11 @@
 name: ProjectAnalysisRestClient
 uid: azure-devops-extension-api.ProjectAnalysisRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: ProjectAnalysisRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ProjectAnalysisRestClient(options: IVssRestClientOptions)'
@@ -29,7 +29,6 @@ properties:
     summary: ''
     fullName: RESOURCE_AREA_ID
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static RESOURCE_AREA_ID: string'
@@ -47,7 +46,6 @@ methods:
       Retrieves git activity metrics for repositories matching a specified
       criteria.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -60,16 +58,16 @@ methods:
           description: Project ID or project name
         - id: fromDate
           type: Date
-          description: 'Date from which, the trends are to be fetched.'
+          description: Date from which, the trends are to be fetched.
         - id: aggregationType
           type: <xref uid="azure-devops-extension-api.AggregationType" />
-          description: 'Bucket size on which, trends are to be aggregated.'
+          description: Bucket size on which, trends are to be aggregated.
         - id: skip
           type: number
           description: The number of repositories to ignore.
         - id: top
           type: number
-          description: >
+          description: >-
             The number of repositories for which activity metrics are to be
             retrieved.
       return:
@@ -77,13 +75,12 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.RepositoryActivityMetrics" />[]&gt;
-  - name: 'getProjectActivityMetrics(string, Date, AggregationType)'
+  - name: getProjectActivityMetrics(string, Date, AggregationType)
     uid: >-
       azure-devops-extension-api.ProjectAnalysisRestClient.getProjectActivityMetrics
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -95,11 +92,10 @@ methods:
           description: Project ID or project name
         - id: fromDate
           type: Date
-          description: '-'
+          description: ''
         - id: aggregationType
           type: <xref uid="azure-devops-extension-api.AggregationType" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -111,7 +107,6 @@ methods:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -120,20 +115,18 @@ methods:
       parameters:
         - id: project
           type: string
-          description: |
-            Project ID or project name
+          description: Project ID or project name
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ProjectLanguageAnalytics" />&gt;
-  - name: 'getRepositoryActivityMetrics(string, string, Date, AggregationType)'
+  - name: getRepositoryActivityMetrics(string, string, Date, AggregationType)
     uid: >-
       azure-devops-extension-api.ProjectAnalysisRestClient.getRepositoryActivityMetrics
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -146,14 +139,13 @@ methods:
           description: Project ID or project name
         - id: repositoryId
           type: string
-          description: '-'
+          description: ''
         - id: fromDate
           type: Date
-          description: '-'
+          description: ''
         - id: aggregationType
           type: <xref uid="azure-devops-extension-api.AggregationType" />
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-

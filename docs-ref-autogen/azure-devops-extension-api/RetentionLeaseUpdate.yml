@@ -1,0 +1,39 @@
+### YamlMime:TSType
+name: RetentionLeaseUpdate
+uid: azure-devops-extension-api.RetentionLeaseUpdate
+package: azure-devops-extension-api
+summary: An update to the retention parameters of a retention lease.
+fullName: RetentionLeaseUpdate
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: daysValid
+    uid: azure-devops-extension-api.RetentionLeaseUpdate.daysValid
+    package: azure-devops-extension-api
+    summary: >-
+      The number of days to consider the lease valid. A retention lease valid
+      for more than 100 years (36500 days) will display as retaining the build
+      "forever".
+    fullName: daysValid
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'daysValid: number'
+      return:
+        description: ''
+        type: number
+  - name: protectPipeline
+    uid: azure-devops-extension-api.RetentionLeaseUpdate.protectPipeline
+    package: azure-devops-extension-api
+    summary: >-
+      If set, this lease will also prevent the pipeline from being deleted while
+      the lease is still valid.
+    fullName: protectPipeline
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'protectPipeline: boolean'
+      return:
+        description: ''
+        type: boolean

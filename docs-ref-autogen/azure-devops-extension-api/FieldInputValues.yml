@@ -2,65 +2,85 @@
 name: FieldInputValues
 uid: azure-devops-extension-api.FieldInputValues
 package: azure-devops-extension-api
-summary: ''
+summary: Information about the possible/allowed values for a given subscription input
 fullName: FieldInputValues
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: operators
+    uid: azure-devops-extension-api.FieldInputValues.operators
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: operators
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'operators: number[]'
+      return:
+        description: ''
+        type: number[]
+inheritedProperties:
   - name: defaultValue
     uid: azure-devops-extension-api.FieldInputValues.defaultValue
     package: azure-devops-extension-api
     summary: The default value to use for this input
     fullName: defaultValue
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultValue: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InputValues.defaultValue](xref:azure-devops-extension-api.InputValues.defaultValue)
   - name: error
     uid: azure-devops-extension-api.FieldInputValues.error
     package: azure-devops-extension-api
     summary: Errors encountered while computing dynamic values.
     fullName: error
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'error: InputValuesError'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.InputValuesError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InputValues.error](xref:azure-devops-extension-api.InputValues.error)
   - name: inputId
     uid: azure-devops-extension-api.FieldInputValues.inputId
     package: azure-devops-extension-api
     summary: The id of the input
     fullName: inputId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'inputId: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InputValues.inputId](xref:azure-devops-extension-api.InputValues.inputId)
   - name: isDisabled
     uid: azure-devops-extension-api.FieldInputValues.isDisabled
     package: azure-devops-extension-api
     summary: Should this input be disabled
     fullName: isDisabled
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isDisabled: boolean'
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InputValues.isDisabled](xref:azure-devops-extension-api.InputValues.isDisabled)
   - name: isLimitedToPossibleValues
     uid: azure-devops-extension-api.FieldInputValues.isLimitedToPossibleValues
     package: azure-devops-extension-api
@@ -69,50 +89,43 @@ properties:
       (True) or are the values in PossibleValues just a suggestion (False)
     fullName: isLimitedToPossibleValues
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isLimitedToPossibleValues: boolean'
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InputValues.isLimitedToPossibleValues](xref:azure-devops-extension-api.InputValues.isLimitedToPossibleValues)
   - name: isReadOnly
     uid: azure-devops-extension-api.FieldInputValues.isReadOnly
     package: azure-devops-extension-api
     summary: Should this input be made read-only
     fullName: isReadOnly
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isReadOnly: boolean'
       return:
         description: ''
         type: boolean
-  - name: operators
-    uid: azure-devops-extension-api.FieldInputValues.operators
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: operators
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'operators: number[]'
-      return:
-        description: ''
-        type: 'number[]'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InputValues.isReadOnly](xref:azure-devops-extension-api.InputValues.isReadOnly)
   - name: possibleValues
     uid: azure-devops-extension-api.FieldInputValues.possibleValues
     package: azure-devops-extension-api
     summary: Possible values that this input can take
     fullName: possibleValues
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'possibleValues: InputValue[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.InputValue" />[]'
+        type: <xref uid="azure-devops-extension-api.InputValue" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InputValues.possibleValues](xref:azure-devops-extension-api.InputValues.possibleValues)
 extends: <xref uid="azure-devops-extension-api.InputValues" />

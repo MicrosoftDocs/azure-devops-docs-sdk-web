@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: InputValuesQuery
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,13 +14,12 @@ properties:
     summary: ''
     fullName: currentValues
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'currentValues: [key: string]: string'
+      content: 'currentValues: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: inputValues
     uid: azure-devops-extension-api.InputValuesQuery.inputValues
     package: azure-devops-extension-api
@@ -30,13 +28,12 @@ properties:
       output.
     fullName: inputValues
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'inputValues: InputValues[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.InputValues" />[]'
+        type: <xref uid="azure-devops-extension-api.InputValues" />[]
   - name: resource
     uid: azure-devops-extension-api.InputValuesQuery.resource
     package: azure-devops-extension-api
@@ -45,7 +42,6 @@ properties:
       current input values
     fullName: resource
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resource: any'

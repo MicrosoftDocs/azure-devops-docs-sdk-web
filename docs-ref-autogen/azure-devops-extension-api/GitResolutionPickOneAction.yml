@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GitResolutionPickOneAction
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,24 +14,26 @@ properties:
     summary: ''
     fullName: action
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'action: GitResolutionWhichAction'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.GitResolutionWhichAction" />
+inheritedProperties:
   - name: author
     uid: azure-devops-extension-api.GitResolutionPickOneAction.author
     package: azure-devops-extension-api
     summary: User who created the resolution.
     fullName: author
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'author: IdentityRef'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.IdentityRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitResolution.author](xref:azure-devops-extension-api.GitResolution.author)
 extends: <xref uid="azure-devops-extension-api.GitResolution" />

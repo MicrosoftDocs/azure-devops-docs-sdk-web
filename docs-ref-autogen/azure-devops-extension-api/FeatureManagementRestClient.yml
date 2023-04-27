@@ -2,10 +2,11 @@
 name: FeatureManagementRestClient
 uid: azure-devops-extension-api.FeatureManagementRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: FeatureManagementRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new FeatureManagementRestClient(options: IVssRestClientOptions)'
@@ -28,15 +28,13 @@ methods:
     package: azure-devops-extension-api
     summary: Get a specific feature by its id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getFeature(featureId: string): Promise<ContributedFeature>'
       parameters:
         - id: featureId
           type: string
-          description: |
-            The contribution id of the feature
+          description: The contribution id of the feature
       return:
         description: ''
         type: >-
@@ -47,7 +45,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get a list of all defined features
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -56,7 +53,7 @@ methods:
       parameters:
         - id: targetContributionId
           type: string
-          description: >
+          description: >-
             Optional target contribution. If null/empty, return all features. If
             specified include the features that target the specified
             contribution.
@@ -65,12 +62,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ContributedFeature"
           />[]&gt;
-  - name: 'getFeatureState(string, string)'
+  - name: getFeatureState(string, string)
     uid: azure-devops-extension-api.FeatureManagementRestClient.getFeatureState
     package: azure-devops-extension-api
     summary: Get the state of the specified feature for the given user/all-users scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -82,7 +78,7 @@ methods:
           description: Contribution id of the feature
         - id: userScope
           type: string
-          description: >
+          description: >-
             User-Scope at which to get the value. Should be "me" for the current
             user or "host" for all users.
       return:
@@ -90,13 +86,12 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ContributedFeatureState" />&gt;
-  - name: 'getFeatureStateForScope(string, string, string, string)'
+  - name: getFeatureStateForScope(string, string, string, string)
     uid: >-
       azure-devops-extension-api.FeatureManagementRestClient.getFeatureStateForScope
     package: azure-devops-extension-api
     summary: Get the state of the specified feature for the given named scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -118,8 +113,7 @@ methods:
             "team")
         - id: scopeValue
           type: string
-          description: |
-            Value of the scope (e.g. the project or team id)
+          description: Value of the scope (e.g. the project or team id)
       return:
         description: ''
         type: >-
@@ -130,7 +124,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get the effective state for a list of feature ids
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -141,20 +134,18 @@ methods:
           type: >-
             <xref uid="azure-devops-extension-api.ContributedFeatureStateQuery"
             />
-          description: |
-            Features to query along with current scope values
+          description: Features to query along with current scope values
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ContributedFeatureStateQuery" />&gt;
-  - name: 'queryFeatureStatesForDefaultScope(ContributedFeatureStateQuery, string)'
+  - name: queryFeatureStatesForDefaultScope(ContributedFeatureStateQuery, string)
     uid: >-
       azure-devops-extension-api.FeatureManagementRestClient.queryFeatureStatesForDefaultScope
     package: azure-devops-extension-api
     summary: Get the states of the specified features for the default scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -169,8 +160,7 @@ methods:
           description: Query describing the features to query.
         - id: userScope
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -184,7 +174,6 @@ methods:
     package: azure-devops-extension-api
     summary: Get the states of the specified features for the specific named scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -199,25 +188,23 @@ methods:
           description: Query describing the features to query.
         - id: userScope
           type: string
-          description: '-'
+          description: ''
         - id: scopeName
           type: string
-          description: '-'
+          description: ''
         - id: scopeValue
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ContributedFeatureStateQuery" />&gt;
-  - name: 'setFeatureState(ContributedFeatureState, string, string, string, string)'
+  - name: setFeatureState(ContributedFeatureState, string, string, string, string)
     uid: azure-devops-extension-api.FeatureManagementRestClient.setFeatureState
     package: azure-devops-extension-api
     summary: Set the state of a feature
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -241,8 +228,7 @@ methods:
           description: Reason for changing the state
         - id: reasonCode
           type: string
-          description: |
-            Short reason code
+          description: Short reason code
       return:
         description: ''
         type: >-
@@ -256,7 +242,6 @@ methods:
     package: azure-devops-extension-api
     summary: Set the state of a feature at a specific scope
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -289,8 +274,7 @@ methods:
           description: Reason for changing the state
         - id: reasonCode
           type: string
-          description: |
-            Short reason code
+          description: Short reason code
       return:
         description: ''
         type: >-

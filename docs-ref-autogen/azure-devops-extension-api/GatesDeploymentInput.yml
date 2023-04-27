@@ -5,71 +5,27 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GatesDeploymentInput
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: condition
-    uid: azure-devops-extension-api.GatesDeploymentInput.condition
-    package: azure-devops-extension-api
-    summary: Gets or sets the job condition.
-    fullName: condition
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'condition: string'
-      return:
-        description: ''
-        type: string
-  - name: jobCancelTimeoutInMinutes
-    uid: azure-devops-extension-api.GatesDeploymentInput.jobCancelTimeoutInMinutes
-    package: azure-devops-extension-api
-    summary: >-
-      Gets or sets the job cancel timeout in minutes for deployment which are
-      cancelled by user for this release environment.
-    fullName: jobCancelTimeoutInMinutes
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'jobCancelTimeoutInMinutes: number'
-      return:
-        description: ''
-        type: number
   - name: minimumSuccessDuration
     uid: azure-devops-extension-api.GatesDeploymentInput.minimumSuccessDuration
     package: azure-devops-extension-api
     summary: Gates minimum success duration.
     fullName: minimumSuccessDuration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'minimumSuccessDuration: number'
       return:
         description: ''
         type: number
-  - name: overrideInputs
-    uid: azure-devops-extension-api.GatesDeploymentInput.overrideInputs
-    package: azure-devops-extension-api
-    summary: Gets or sets the override inputs.
-    fullName: overrideInputs
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'overrideInputs: [key: string]: string'
-      return:
-        description: ''
-        type: '[key: string]\: string'
   - name: samplingInterval
     uid: azure-devops-extension-api.GatesDeploymentInput.samplingInterval
     package: azure-devops-extension-api
     summary: Gates sampling interval.
     fullName: samplingInterval
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'samplingInterval: number'
@@ -82,13 +38,60 @@ properties:
     summary: Gates stabilization time.
     fullName: stabilizationTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stabilizationTime: number'
       return:
         description: ''
         type: number
+inheritedProperties:
+  - name: condition
+    uid: azure-devops-extension-api.GatesDeploymentInput.condition
+    package: azure-devops-extension-api
+    summary: Gets or sets the job condition.
+    fullName: condition
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'condition: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseDeploymentInput.condition](xref:azure-devops-extension-api.BaseDeploymentInput.condition)
+  - name: jobCancelTimeoutInMinutes
+    uid: azure-devops-extension-api.GatesDeploymentInput.jobCancelTimeoutInMinutes
+    package: azure-devops-extension-api
+    summary: >-
+      Gets or sets the job cancel timeout in minutes for deployment which are
+      cancelled by user for this release environment.
+    fullName: jobCancelTimeoutInMinutes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'jobCancelTimeoutInMinutes: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseDeploymentInput.jobCancelTimeoutInMinutes](xref:azure-devops-extension-api.BaseDeploymentInput.jobCancelTimeoutInMinutes)
+  - name: overrideInputs
+    uid: azure-devops-extension-api.GatesDeploymentInput.overrideInputs
+    package: azure-devops-extension-api
+    summary: Gets or sets the override inputs.
+    fullName: overrideInputs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'overrideInputs: {[key: string]: string}'
+      return:
+        description: ''
+        type: '{[key: string]: string}'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseDeploymentInput.overrideInputs](xref:azure-devops-extension-api.BaseDeploymentInput.overrideInputs)
   - name: timeoutInMinutes
     uid: azure-devops-extension-api.GatesDeploymentInput.timeoutInMinutes
     package: azure-devops-extension-api
@@ -97,11 +100,13 @@ properties:
       queued against this release environment.
     fullName: timeoutInMinutes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeoutInMinutes: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseDeploymentInput.timeoutInMinutes](xref:azure-devops-extension-api.BaseDeploymentInput.timeoutInMinutes)
 extends: <xref uid="azure-devops-extension-api.BaseDeploymentInput" />

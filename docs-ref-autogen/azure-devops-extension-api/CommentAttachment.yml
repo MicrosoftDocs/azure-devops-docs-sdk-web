@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Represents an attachment to a comment.
 fullName: CommentAttachment
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: IdentityRef of the creator of the attachment.
     fullName: createdBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdBy: IdentityRef'
@@ -28,7 +26,6 @@ properties:
     summary: The creation date of the attachment.
     fullName: createdDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdDate: Date'
@@ -41,24 +38,26 @@ properties:
     summary: Unique Id of the attachment.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
       return:
         description: ''
         type: string
+inheritedProperties:
   - name: url
     uid: azure-devops-extension-api.CommentAttachment.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CommentResourceReference.url](xref:azure-devops-extension-api.CommentResourceReference.url)
 extends: <xref uid="azure-devops-extension-api.CommentResourceReference" />

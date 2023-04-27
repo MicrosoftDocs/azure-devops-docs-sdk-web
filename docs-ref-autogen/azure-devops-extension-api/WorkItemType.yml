@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Describes a work item type.
 fullName: WorkItemType
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The color.
     fullName: color
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'color: string'
@@ -28,7 +26,6 @@ properties:
     summary: The description of the work item type.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -41,33 +38,30 @@ properties:
     summary: The fields that exist on the work item type.
     fullName: fieldInstances
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fieldInstances: WorkItemTypeFieldInstance[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.WorkItemTypeFieldInstance" />[]'
+        type: <xref uid="azure-devops-extension-api.WorkItemTypeFieldInstance" />[]
   - name: fields
     uid: azure-devops-extension-api.WorkItemType.fields
     package: azure-devops-extension-api
     summary: The fields that exist on the work item type.
     fullName: fields
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fields: WorkItemTypeFieldInstance[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.WorkItemTypeFieldInstance" />[]'
+        type: <xref uid="azure-devops-extension-api.WorkItemTypeFieldInstance" />[]
   - name: icon
     uid: azure-devops-extension-api.WorkItemType.icon
     package: azure-devops-extension-api
     summary: The icon of the work item type.
     fullName: icon
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'icon: WorkItemIcon'
@@ -80,7 +74,6 @@ properties:
     summary: True if work item type is disabled
     fullName: isDisabled
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isDisabled: boolean'
@@ -93,7 +86,6 @@ properties:
     summary: Gets the name of the work item type.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -106,7 +98,6 @@ properties:
     summary: The reference name of the work item type.
     fullName: referenceName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'referenceName: string'
@@ -119,50 +110,50 @@ properties:
     summary: Gets state information for the work item type.
     fullName: states
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'states: WorkItemStateColor[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.WorkItemStateColor" />[]'
+        type: <xref uid="azure-devops-extension-api.WorkItemStateColor" />[]
   - name: transitions
     uid: azure-devops-extension-api.WorkItemType.transitions
     package: azure-devops-extension-api
     summary: Gets the various state transition mappings in the work item type.
     fullName: transitions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'transitions: [key: string]: function'
+      content: 'transitions: {[key: string]: function}'
       return:
         description: ''
-        type: '[key: string]\: function'
-  - name: url
-    uid: azure-devops-extension-api.WorkItemType.url
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: url
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'url: string'
-      return:
-        description: ''
-        type: string
+        type: '{[key: string]: function}'
   - name: xmlForm
     uid: azure-devops-extension-api.WorkItemType.xmlForm
     package: azure-devops-extension-api
     summary: The XML form.
     fullName: xmlForm
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'xmlForm: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: url
+    uid: azure-devops-extension-api.WorkItemType.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

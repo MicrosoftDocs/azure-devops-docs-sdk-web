@@ -2,20 +2,23 @@
 name: TimelineRecord
 uid: azure-devops-extension-api.TimelineRecord
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Detailed information about the execution of different operations during
+  pipeline run.
 fullName: TimelineRecord
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: agentSpecification
     uid: azure-devops-extension-api.TimelineRecord.agentSpecification
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The specification of an agent running a pipeline job, in binary format.
+      Applicable when record is of type Job. \<br /\>Example: { "VMImage" :
+      "windows-2019" }
     fullName: agentSpecification
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agentSpecification: any'
@@ -25,10 +28,9 @@ properties:
   - name: attempt
     uid: azure-devops-extension-api.TimelineRecord.attempt
     package: azure-devops-extension-api
-    summary: ''
+    summary: The number of record attempts.
     fullName: attempt
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'attempt: number'
@@ -38,10 +40,11 @@ properties:
   - name: changeId
     uid: azure-devops-extension-api.TimelineRecord.changeId
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The ID connecting all records updated at the same time. This value is
+      taken from timeline's ChangeId.
     fullName: changeId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'changeId: number'
@@ -51,10 +54,9 @@ properties:
   - name: currentOperation
     uid: azure-devops-extension-api.TimelineRecord.currentOperation
     package: azure-devops-extension-api
-    summary: ''
+    summary: A string that indicates the current operation.
     fullName: currentOperation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'currentOperation: string'
@@ -64,10 +66,9 @@ properties:
   - name: details
     uid: azure-devops-extension-api.TimelineRecord.details
     package: azure-devops-extension-api
-    summary: ''
+    summary: A reference to a sub-timeline.
     fullName: details
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'details: TimelineReference'
@@ -77,10 +78,9 @@ properties:
   - name: errorCount
     uid: azure-devops-extension-api.TimelineRecord.errorCount
     package: azure-devops-extension-api
-    summary: ''
+    summary: The number of errors produced by this operation.
     fullName: errorCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorCount: number'
@@ -90,10 +90,9 @@ properties:
   - name: finishTime
     uid: azure-devops-extension-api.TimelineRecord.finishTime
     package: azure-devops-extension-api
-    summary: ''
+    summary: The finish time of the record.
     fullName: finishTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'finishTime: Date'
@@ -103,10 +102,9 @@ properties:
   - name: id
     uid: azure-devops-extension-api.TimelineRecord.id
     package: azure-devops-extension-api
-    summary: ''
+    summary: The ID of the record.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: string'
@@ -116,10 +114,9 @@ properties:
   - name: identifier
     uid: azure-devops-extension-api.TimelineRecord.identifier
     package: azure-devops-extension-api
-    summary: ''
+    summary: String identifier that is consistent across attempts.
     fullName: identifier
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'identifier: string'
@@ -129,23 +126,21 @@ properties:
   - name: issues
     uid: azure-devops-extension-api.TimelineRecord.issues
     package: azure-devops-extension-api
-    summary: ''
+    summary: The list of issues produced by this operation.
     fullName: issues
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'issues: Issue[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Issue" />[]'
+        type: <xref uid="azure-devops-extension-api.Issue" />[]
   - name: lastModified
     uid: azure-devops-extension-api.TimelineRecord.lastModified
     package: azure-devops-extension-api
-    summary: ''
+    summary: The time the record was last modified.
     fullName: lastModified
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastModified: Date'
@@ -155,10 +150,9 @@ properties:
   - name: location
     uid: azure-devops-extension-api.TimelineRecord.location
     package: azure-devops-extension-api
-    summary: ''
+    summary: The REST URL of the record.
     fullName: location
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'location: string'
@@ -168,10 +162,9 @@ properties:
   - name: log
     uid: azure-devops-extension-api.TimelineRecord.log
     package: azure-devops-extension-api
-    summary: ''
+    summary: A reference to the log produced by this operation.
     fullName: log
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'log: TaskLogReference'
@@ -181,10 +174,9 @@ properties:
   - name: name
     uid: azure-devops-extension-api.TimelineRecord.name
     package: azure-devops-extension-api
-    summary: ''
+    summary: The name of the record.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -194,10 +186,9 @@ properties:
   - name: order
     uid: azure-devops-extension-api.TimelineRecord.order
     package: azure-devops-extension-api
-    summary: ''
+    summary: An ordinal value relative to other records within the timeline.
     fullName: order
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'order: number'
@@ -207,10 +198,11 @@ properties:
   - name: parentId
     uid: azure-devops-extension-api.TimelineRecord.parentId
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The ID of the record's parent. \<br /\>Example: Stage is a parent of a
+      Phase, Phase is a parent of a Job, Job is a parent of a Task.
     fullName: parentId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'parentId: string'
@@ -220,10 +212,9 @@ properties:
   - name: percentComplete
     uid: azure-devops-extension-api.TimelineRecord.percentComplete
     package: azure-devops-extension-api
-    summary: ''
+    summary: The percentage of record completion.
     fullName: percentComplete
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'percentComplete: number'
@@ -233,23 +224,23 @@ properties:
   - name: previousAttempts
     uid: azure-devops-extension-api.TimelineRecord.previousAttempts
     package: azure-devops-extension-api
-    summary: ''
+    summary: The previous record attempts.
     fullName: previousAttempts
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'previousAttempts: TimelineAttempt[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TimelineAttempt" />[]'
+        type: <xref uid="azure-devops-extension-api.TimelineAttempt" />[]
   - name: queueId
     uid: azure-devops-extension-api.TimelineRecord.queueId
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The ID of the queue which connects projects to agent pools on which the
+      operation ran on. Applicable when record is of type Job.
     fullName: queueId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queueId: number'
@@ -259,10 +250,9 @@ properties:
   - name: refName
     uid: azure-devops-extension-api.TimelineRecord.refName
     package: azure-devops-extension-api
-    summary: ''
+    summary: Name of the referenced record.
     fullName: refName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'refName: string'
@@ -272,10 +262,9 @@ properties:
   - name: result
     uid: azure-devops-extension-api.TimelineRecord.result
     package: azure-devops-extension-api
-    summary: ''
+    summary: The result of the record.
     fullName: result
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'result: TaskResult'
@@ -285,10 +274,13 @@ properties:
   - name: resultCode
     uid: azure-devops-extension-api.TimelineRecord.resultCode
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Evaluation of predefined conditions upon completion of record's operation.
+      \<br /\>Example: Evaluating `succeeded()`, Result = True \<br /\>Example:
+      Evaluating `and(succeeded(), eq(variables['system.debug'], False))`,
+      Result = False
     fullName: resultCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'resultCode: string'
@@ -298,10 +290,9 @@ properties:
   - name: startTime
     uid: azure-devops-extension-api.TimelineRecord.startTime
     package: azure-devops-extension-api
-    summary: ''
+    summary: The start time of the record.
     fullName: startTime
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'startTime: Date'
@@ -311,10 +302,9 @@ properties:
   - name: state
     uid: azure-devops-extension-api.TimelineRecord.state
     package: azure-devops-extension-api
-    summary: ''
+    summary: The state of the record.
     fullName: state
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'state: TimelineRecordState'
@@ -324,10 +314,9 @@ properties:
   - name: task
     uid: azure-devops-extension-api.TimelineRecord.task
     package: azure-devops-extension-api
-    summary: ''
+    summary: A reference to the task. Applicable when record is of type Task.
     fullName: task
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'task: TaskReference'
@@ -337,10 +326,11 @@ properties:
   - name: type
     uid: azure-devops-extension-api.TimelineRecord.type
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The type of operation being tracked by the record. \<br /\>Example: Stage,
+      Phase, Job, Task...
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
@@ -350,25 +340,23 @@ properties:
   - name: variables
     uid: azure-devops-extension-api.TimelineRecord.variables
     package: azure-devops-extension-api
-    summary: ''
+    summary: The variables of the record.
     fullName: variables
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'variables: [key: string]: VariableValue'
+      content: 'variables: {[key: string]: VariableValue}'
       return:
         description: ''
         type: >-
-          [key: string]\: <xref uid="azure-devops-extension-api.VariableValue"
-          />
+          {[key: string]: <xref uid="azure-devops-extension-api.VariableValue"
+          />}
   - name: warningCount
     uid: azure-devops-extension-api.TimelineRecord.warningCount
     package: azure-devops-extension-api
-    summary: ''
+    summary: The number of warnings produced by this operation.
     fullName: warningCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'warningCount: number'
@@ -378,10 +366,11 @@ properties:
   - name: workerName
     uid: azure-devops-extension-api.TimelineRecord.workerName
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      The name of the agent running the operation. Applicable when record is of
+      type Job.
     fullName: workerName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workerName: string'

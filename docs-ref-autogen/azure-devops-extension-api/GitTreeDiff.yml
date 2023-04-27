@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: GitTreeDiff
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ObjectId of the base tree of this diff.
     fullName: baseTreeId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'baseTreeId: string'
@@ -30,24 +28,22 @@ properties:
       Renames and object type changes are returned as a delete for the old
       object and add for the new object.  If a continuation token is returned in
       the response header, some tree entries are yet to be processed and may
-      yeild more diff entries. If the continuation token is not returned all the
+      yield more diff entries. If the continuation token is not returned all the
       diff entries have been included in this response.
     fullName: diffEntries
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'diffEntries: GitTreeDiffEntry[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.GitTreeDiffEntry" />[]'
+        type: <xref uid="azure-devops-extension-api.GitTreeDiffEntry" />[]
   - name: targetTreeId
     uid: azure-devops-extension-api.GitTreeDiff.targetTreeId
     package: azure-devops-extension-api
     summary: ObjectId of the target tree of this diff.
     fullName: targetTreeId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'targetTreeId: string'
@@ -60,7 +56,6 @@ properties:
     summary: REST Url to this resource.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'

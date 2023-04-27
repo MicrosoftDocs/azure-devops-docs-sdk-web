@@ -2,46 +2,30 @@
 name: JobCompletedEvent
 uid: azure-devops-extension-api.JobCompletedEvent
 package: azure-devops-extension-api
-summary: ''
+summary: A pipeline job event to be processed by the execution plan.
 fullName: JobCompletedEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: jobId
-    uid: azure-devops-extension-api.JobCompletedEvent.jobId
+  - name: agentShuttingDown
+    uid: azure-devops-extension-api.JobCompletedEvent.agentShuttingDown
     package: azure-devops-extension-api
-    summary: ''
-    fullName: jobId
+    summary: Indicates whether the agent is in the process of shutting down.
+    fullName: agentShuttingDown
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'jobId: string'
+      content: 'agentShuttingDown: boolean'
       return:
         description: ''
-        type: string
-  - name: name
-    uid: azure-devops-extension-api.JobCompletedEvent.name
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
+        type: boolean
   - name: requestId
     uid: azure-devops-extension-api.JobCompletedEvent.requestId
     package: azure-devops-extension-api
-    summary: ''
+    summary: The ID of the request.
     fullName: requestId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'requestId: number'
@@ -51,14 +35,44 @@ properties:
   - name: result
     uid: azure-devops-extension-api.JobCompletedEvent.result
     package: azure-devops-extension-api
-    summary: ''
+    summary: The result of the request.
     fullName: result
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'result: TaskResult'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.TaskResult" />
+inheritedProperties:
+  - name: jobId
+    uid: azure-devops-extension-api.JobCompletedEvent.jobId
+    package: azure-devops-extension-api
+    summary: The ID of the pipeline job affected by the event.
+    fullName: jobId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'jobId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobEvent.jobId](xref:azure-devops-extension-api.JobEvent.jobId)
+  - name: name
+    uid: azure-devops-extension-api.JobCompletedEvent.name
+    package: azure-devops-extension-api
+    summary: The name of the pipeline job event.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [JobEvent.name](xref:azure-devops-extension-api.JobEvent.name)
 extends: <xref uid="azure-devops-extension-api.JobEvent" />

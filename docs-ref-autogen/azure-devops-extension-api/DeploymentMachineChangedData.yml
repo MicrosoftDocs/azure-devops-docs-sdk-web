@@ -2,10 +2,9 @@
 name: DeploymentMachineChangedData
 uid: azure-devops-extension-api.DeploymentMachineChangedData
 package: azure-devops-extension-api
-summary: ''
+summary: Deployment target.
 fullName: DeploymentMachineChangedData
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,76 +14,83 @@ properties:
     summary: ''
     fullName: addedTags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'addedTags: string[]'
       return:
         description: ''
-        type: 'string[]'
-  - name: agent
-    uid: azure-devops-extension-api.DeploymentMachineChangedData.agent
-    package: azure-devops-extension-api
-    summary: Deployment agent.
-    fullName: agent
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'agent: TaskAgent'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.TaskAgent" />
+        type: string[]
   - name: deletedTags
     uid: azure-devops-extension-api.DeploymentMachineChangedData.deletedTags
     package: azure-devops-extension-api
     summary: ''
     fullName: deletedTags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deletedTags: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
+inheritedProperties:
+  - name: agent
+    uid: azure-devops-extension-api.DeploymentMachineChangedData.agent
+    package: azure-devops-extension-api
+    summary: Deployment agent.
+    fullName: agent
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'agent: TaskAgent'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgent" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DeploymentMachine.agent](xref:azure-devops-extension-api.DeploymentMachine.agent)
   - name: id
     uid: azure-devops-extension-api.DeploymentMachineChangedData.id
     package: azure-devops-extension-api
     summary: Deployment target Identifier.
     fullName: id
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'id: number'
       return:
         description: ''
         type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DeploymentMachine.id](xref:azure-devops-extension-api.DeploymentMachine.id)
   - name: properties
     uid: azure-devops-extension-api.DeploymentMachineChangedData.properties
     package: azure-devops-extension-api
     summary: Properties of the deployment target.
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
         description: ''
         type: any
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DeploymentMachine.properties](xref:azure-devops-extension-api.DeploymentMachine.properties)
   - name: tags
     uid: azure-devops-extension-api.DeploymentMachineChangedData.tags
     package: azure-devops-extension-api
     summary: Tags of the deployment target.
     fullName: tags
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tags: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [DeploymentMachine.tags](xref:azure-devops-extension-api.DeploymentMachine.tags)
 extends: <xref uid="azure-devops-extension-api.DeploymentMachine" />

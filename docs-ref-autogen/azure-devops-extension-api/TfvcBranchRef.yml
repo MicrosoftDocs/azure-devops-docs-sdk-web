@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Metadata for a branchref.
 fullName: TfvcBranchRef
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Creation date of the branch.
     fullName: createdDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'createdDate: Date'
@@ -28,7 +26,6 @@ properties:
     summary: Branch description.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description: string'
@@ -41,7 +38,6 @@ properties:
     summary: Is the branch deleted?
     fullName: isDeleted
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isDeleted: boolean'
@@ -54,37 +50,38 @@ properties:
     summary: Alias or display name of user
     fullName: owner
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'owner: IdentityRef'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.IdentityRef" />
-  - name: path
-    uid: azure-devops-extension-api.TfvcBranchRef.path
-    package: azure-devops-extension-api
-    summary: Path for the branch.
-    fullName: path
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'path: string'
-      return:
-        description: ''
-        type: string
   - name: url
     uid: azure-devops-extension-api.TfvcBranchRef.url
     package: azure-devops-extension-api
     summary: URL to retrieve the item.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+inheritedProperties:
+  - name: path
+    uid: azure-devops-extension-api.TfvcBranchRef.path
+    package: azure-devops-extension-api
+    summary: Path for the branch.
+    fullName: path
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'path: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TfvcShallowBranchRef.path](xref:azure-devops-extension-api.TfvcShallowBranchRef.path)
 extends: <xref uid="azure-devops-extension-api.TfvcShallowBranchRef" />

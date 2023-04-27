@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: ParallelExecutionInputBase
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Indicate whether continue execution of deployment on error or not.
     fullName: continueOnError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'continueOnError: boolean'
@@ -28,25 +26,27 @@ properties:
     summary: Maximum number of agents used while parallel execution.
     fullName: maxNumberOfAgents
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxNumberOfAgents: number'
       return:
         description: ''
         type: number
+inheritedProperties:
   - name: parallelExecutionType
     uid: >-
       azure-devops-extension-api.ParallelExecutionInputBase.parallelExecutionType
     package: azure-devops-extension-api
-    summary: 'Parallel execution type, for example MultiConfiguration or MultiMachine.'
+    summary: Parallel execution type, for example MultiConfiguration or MultiMachine.
     fullName: parallelExecutionType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'parallelExecutionType: ParallelExecutionTypes'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.ParallelExecutionTypes" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ExecutionInput.parallelExecutionType](xref:azure-devops-extension-api.ExecutionInput.parallelExecutionType)
 extends: <xref uid="azure-devops-extension-api.ExecutionInput" />

@@ -1,0 +1,98 @@
+### YamlMime:TSType
+name: RetentionLease
+uid: azure-devops-extension-api.RetentionLease
+package: azure-devops-extension-api
+summary: >-
+  A valid retention lease prevents automated systems from deleting a pipeline
+  run.
+fullName: RetentionLease
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: createdOn
+    uid: azure-devops-extension-api.RetentionLease.createdOn
+    package: azure-devops-extension-api
+    summary: When the lease was created.
+    fullName: createdOn
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdOn: Date'
+      return:
+        description: ''
+        type: Date
+  - name: definitionId
+    uid: azure-devops-extension-api.RetentionLease.definitionId
+    package: azure-devops-extension-api
+    summary: The pipeline definition of the run.
+    fullName: definitionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'definitionId: number'
+      return:
+        description: ''
+        type: number
+  - name: leaseId
+    uid: azure-devops-extension-api.RetentionLease.leaseId
+    package: azure-devops-extension-api
+    summary: The unique identifier for this lease.
+    fullName: leaseId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'leaseId: number'
+      return:
+        description: ''
+        type: number
+  - name: ownerId
+    uid: azure-devops-extension-api.RetentionLease.ownerId
+    package: azure-devops-extension-api
+    summary: Non-unique string that identifies the owner of a retention lease.
+    fullName: ownerId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ownerId: string'
+      return:
+        description: ''
+        type: string
+  - name: protectPipeline
+    uid: azure-devops-extension-api.RetentionLease.protectPipeline
+    package: azure-devops-extension-api
+    summary: >-
+      If set, this lease will also prevent the pipeline from being deleted while
+      the lease is still valid.
+    fullName: protectPipeline
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'protectPipeline: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: runId
+    uid: azure-devops-extension-api.RetentionLease.runId
+    package: azure-devops-extension-api
+    summary: The pipeline run protected by this lease.
+    fullName: runId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'runId: number'
+      return:
+        description: ''
+        type: number
+  - name: validUntil
+    uid: azure-devops-extension-api.RetentionLease.validUntil
+    package: azure-devops-extension-api
+    summary: The last day the lease is considered valid.
+    fullName: validUntil
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'validUntil: Date'
+      return:
+        description: ''
+        type: Date

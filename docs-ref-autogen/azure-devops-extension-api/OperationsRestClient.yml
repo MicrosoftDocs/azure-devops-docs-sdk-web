@@ -2,10 +2,11 @@
 name: OperationsRestClient
 uid: azure-devops-extension-api.OperationsRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: OperationsRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new OperationsRestClient(options: IVssRestClientOptions)'
@@ -23,12 +23,11 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
-  - name: 'getOperation(string, string)'
+  - name: getOperation(string, string)
     uid: azure-devops-extension-api.OperationsRestClient.getOperation
     package: azure-devops-extension-api
-    summary: Gets an operation from the the operationId using the given pluginId.
+    summary: Gets an operation from the operationId using the given pluginId.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -40,8 +39,7 @@ methods:
           description: The ID for the operation.
         - id: pluginId
           type: string
-          description: |
-            The ID for the plugin.
+          description: The ID for the plugin.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Operation" />&gt;

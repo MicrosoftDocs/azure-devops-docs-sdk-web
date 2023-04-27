@@ -5,22 +5,20 @@ package: azure-devops-extension-api
 summary: Summary of results for a pipeline instance.
 fullName: ResultSummary
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: resultSummaryByRunState
     uid: azure-devops-extension-api.ResultSummary.resultSummaryByRunState
     package: azure-devops-extension-api
-    summary: 'Result summary of pipeline, group by TestRun state.'
+    summary: Result summary of pipeline, group by TestRun state.
     fullName: resultSummaryByRunState
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'resultSummaryByRunState: [key: number]: ResultsSummaryByOutcome'
+      content: 'resultSummaryByRunState: {[key: number]: ResultsSummaryByOutcome}'
       return:
         description: ''
         type: >-
-          [key: number]\: <xref
-          uid="azure-devops-extension-api.ResultsSummaryByOutcome" />
+          {[key: number]: <xref
+          uid="azure-devops-extension-api.ResultsSummaryByOutcome" />}

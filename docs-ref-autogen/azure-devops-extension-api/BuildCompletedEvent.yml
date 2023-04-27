@@ -5,56 +5,27 @@ package: azure-devops-extension-api
 summary: ''
 fullName: BuildCompletedEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: build
-    uid: azure-devops-extension-api.BuildCompletedEvent.build
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: build
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'build: Build'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.Build" />
-  - name: buildId
-    uid: azure-devops-extension-api.BuildCompletedEvent.buildId
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: buildId
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'buildId: number'
-      return:
-        description: ''
-        type: number
   - name: changes
     uid: azure-devops-extension-api.BuildCompletedEvent.changes
     package: azure-devops-extension-api
     summary: Changes associated with a build used for build notifications
     fullName: changes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'changes: Change[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Change" />[]'
+        type: <xref uid="azure-devops-extension-api.Change" />[]
   - name: pullRequest
     uid: azure-devops-extension-api.BuildCompletedEvent.pullRequest
     package: azure-devops-extension-api
     summary: Pull request for the build used for build notifications
     fullName: pullRequest
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'pullRequest: PullRequest'
@@ -67,7 +38,6 @@ properties:
     summary: Test results associated with a build used for build notifications
     fullName: testResults
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'testResults: AggregatedResultsAnalysis'
@@ -80,24 +50,53 @@ properties:
     summary: Timeline records associated with a build used for build notifications
     fullName: timelineRecords
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timelineRecords: TimelineRecord[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.TimelineRecord" />[]'
+        type: <xref uid="azure-devops-extension-api.TimelineRecord" />[]
   - name: workItems
     uid: azure-devops-extension-api.BuildCompletedEvent.workItems
     package: azure-devops-extension-api
     summary: Work items associated with a build used for build notifications
     fullName: workItems
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workItems: AssociatedWorkItem[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.AssociatedWorkItem" />[]'
+        type: <xref uid="azure-devops-extension-api.AssociatedWorkItem" />[]
+inheritedProperties:
+  - name: build
+    uid: azure-devops-extension-api.BuildCompletedEvent.build
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: build
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'build: Build'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Build" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildUpdatedEvent.build](xref:azure-devops-extension-api.BuildUpdatedEvent.build)
+  - name: buildId
+    uid: azure-devops-extension-api.BuildCompletedEvent.buildId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: buildId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'buildId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildUpdatedEvent.buildId](xref:azure-devops-extension-api.BuildUpdatedEvent.buildId)
 extends: <xref uid="azure-devops-extension-api.BuildUpdatedEvent" />

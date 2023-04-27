@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: ''
 fullName: Board
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: ''
     fullName: allowedMappings
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'allowedMappings: [key: string]: function'
+      content: 'allowedMappings: {[key: string]: function}'
       return:
         description: ''
-        type: '[key: string]\: function'
+        type: '{[key: string]: function}'
   - name: canEdit
     uid: azure-devops-extension-api.Board.canEdit
     package: azure-devops-extension-api
     summary: ''
     fullName: canEdit
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'canEdit: boolean'
@@ -41,72 +38,42 @@ properties:
     summary: ''
     fullName: columns
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'columns: BoardColumn[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.BoardColumn" />[]'
+        type: <xref uid="azure-devops-extension-api.BoardColumn" />[]
   - name: fields
     uid: azure-devops-extension-api.Board.fields
     package: azure-devops-extension-api
     summary: ''
     fullName: fields
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fields: BoardFields'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.BoardFields" />
-  - name: id
-    uid: azure-devops-extension-api.Board.id
-    package: azure-devops-extension-api
-    summary: Id of the resource
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: string'
-      return:
-        description: ''
-        type: string
   - name: isValid
     uid: azure-devops-extension-api.Board.isValid
     package: azure-devops-extension-api
     summary: ''
     fullName: isValid
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isValid: boolean'
       return:
         description: ''
         type: boolean
-  - name: name
-    uid: azure-devops-extension-api.Board.name
-    package: azure-devops-extension-api
-    summary: Name of the resource
-    fullName: name
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'name: string'
-      return:
-        description: ''
-        type: string
   - name: revision
     uid: azure-devops-extension-api.Board.revision
     package: azure-devops-extension-api
     summary: ''
     fullName: revision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revision: number'
@@ -119,24 +86,56 @@ properties:
     summary: ''
     fullName: rows
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'rows: BoardRow[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.BoardRow" />[]'
+        type: <xref uid="azure-devops-extension-api.BoardRow" />[]
+inheritedProperties:
+  - name: id
+    uid: azure-devops-extension-api.Board.id
+    package: azure-devops-extension-api
+    summary: Id of the resource
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BoardReference.id](xref:azure-devops-extension-api.BoardReference.id)
+  - name: name
+    uid: azure-devops-extension-api.Board.name
+    package: azure-devops-extension-api
+    summary: Name of the resource
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BoardReference.name](xref:azure-devops-extension-api.BoardReference.name)
   - name: url
     uid: azure-devops-extension-api.Board.url
     package: azure-devops-extension-api
     summary: Full http link to the resource
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BoardReference.url](xref:azure-devops-extension-api.BoardReference.url)
 extends: <xref uid="azure-devops-extension-api.BoardReference" />

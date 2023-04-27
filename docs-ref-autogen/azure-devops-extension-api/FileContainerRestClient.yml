@@ -2,10 +2,11 @@
 name: FileContainerRestClient
 uid: azure-devops-extension-api.FileContainerRestClient
 package: azure-devops-extension-api
-summary: ''
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
 fullName: FileContainerRestClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +15,6 @@ constructors:
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new FileContainerRestClient(options: IVssRestClientOptions)'
@@ -28,9 +28,8 @@ methods:
       string)
     uid: azure-devops-extension-api.FileContainerRestClient.createItems
     package: azure-devops-extension-api
-    summary: Creates the specified items in in the referenced container.
+    summary: Creates the specified items in the referenced container.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -43,13 +42,13 @@ methods:
             <xref uid="azure-devops-extension-api.VssJsonCollectionWrapperV"
             />&lt;<xref uid="azure-devops-extension-api.FileContainerItem"
             />[]&gt;
-          description: '-'
+          description: ''
         - id: containerId
           type: number
-          description: '-'
+          description: ''
         - id: scope
           type: string
-          description: >
+          description: >-
             A guid representing the scope of the container. This is often the
             project id.
       return:
@@ -57,12 +56,11 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.FileContainerItem"
           />[]&gt;
-  - name: 'deleteItem(number, string, string)'
+  - name: deleteItem(number, string, string)
     uid: azure-devops-extension-api.FileContainerRestClient.deleteItem
     package: azure-devops-extension-api
     summary: Deletes the specified items in a container.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -77,20 +75,19 @@ methods:
           description: Path to delete.
         - id: scope
           type: string
-          description: >
+          description: >-
             A guid representing the scope of the container. This is often the
             project id.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'getContainers(string, string)'
+  - name: getContainers(string, string)
     uid: azure-devops-extension-api.FileContainerRestClient.getContainers
     package: azure-devops-extension-api
     summary: >-
       Gets containers filtered by a comma separated list of artifact uris within
       the same scope, if not specified returns all containers
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -104,8 +101,7 @@ methods:
             project id.
         - id: artifactUris
           type: string
-          description: |
-            -
+          description: ''
       return:
         description: ''
         type: >-
@@ -113,45 +109,53 @@ methods:
           />[]&gt;
   - name: >-
       getItems(number, string, string, boolean, string, string, boolean,
-      boolean)
+      boolean, boolean, boolean, boolean)
     uid: azure-devops-extension-api.FileContainerRestClient.getItems
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getItems(containerId: number, scope?: string, itemPath?:
         string, metadata?: boolean, format?: string, downloadFileName?: string,
-        includeDownloadTickets?: boolean, isShallow?: boolean):
-        Promise<FileContainerItem[]>
+        includeDownloadTickets?: boolean, isShallow?: boolean,
+        ignoreRequestedMediaType?: boolean, includeBlobMetadata?: boolean,
+        saveAbsolutePath?: boolean): Promise<FileContainerItem[]>
       parameters:
         - id: containerId
           type: number
-          description: '-'
+          description: ''
         - id: scope
           type: string
-          description: '-'
+          description: ''
         - id: itemPath
           type: string
-          description: '-'
+          description: ''
         - id: metadata
           type: boolean
-          description: '-'
+          description: ''
         - id: format
           type: string
-          description: '-'
+          description: ''
         - id: downloadFileName
           type: string
-          description: '-'
+          description: ''
         - id: includeDownloadTickets
           type: boolean
-          description: '-'
+          description: ''
         - id: isShallow
           type: boolean
-          description: |
-            -
+          description: ''
+        - id: ignoreRequestedMediaType
+          type: boolean
+          description: ''
+        - id: includeBlobMetadata
+          type: boolean
+          description: ''
+        - id: saveAbsolutePath
+          type: boolean
+          description: ''
       return:
         description: ''
         type: >-

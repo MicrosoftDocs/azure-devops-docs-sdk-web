@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Comment on Work Item
 fullName: WorkItemComment
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Identity of user who added the comment.
     fullName: revisedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revisedBy: IdentityReference'
@@ -28,7 +26,6 @@ properties:
     summary: The date of comment.
     fullName: revisedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revisedDate: Date'
@@ -41,7 +38,6 @@ properties:
     summary: The work item revision number.
     fullName: revision
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'revision: number'
@@ -54,24 +50,26 @@ properties:
     summary: The text of the comment.
     fullName: text
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'text: string'
       return:
         description: ''
         type: string
+inheritedProperties:
   - name: url
     uid: azure-devops-extension-api.WorkItemComment.url
     package: azure-devops-extension-api
     summary: ''
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
 extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

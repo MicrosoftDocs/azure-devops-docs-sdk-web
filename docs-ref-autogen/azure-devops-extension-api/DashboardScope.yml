@@ -5,16 +5,20 @@ package: azure-devops-extension-api
 summary: identifies the scope of dashboard storage and permissions.
 fullName: DashboardScope
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: Collection_User
     uid: azure-devops-extension-api.DashboardScope.Collection_User
     package: azure-devops-extension-api
-    summary: ''
+    summary: '[DEPRECATED] Dashboard is scoped to the collection user.'
     numericValue: 0
   - name: Project_Team
     uid: azure-devops-extension-api.DashboardScope.Project_Team
     package: azure-devops-extension-api
-    summary: ''
+    summary: Dashboard is scoped to the team.
     numericValue: 1
+  - name: Project
+    uid: azure-devops-extension-api.DashboardScope.Project
+    package: azure-devops-extension-api
+    summary: Dashboard is scoped to the project.
+    numericValue: 2

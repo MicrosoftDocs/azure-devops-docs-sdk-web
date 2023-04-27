@@ -1,0 +1,104 @@
+### YamlMime:TSType
+name: LibraryWorkItemsData
+uid: azure-devops-extension-api.LibraryWorkItemsData
+package: azure-devops-extension-api
+summary: This data model is used in Work item-based tabs of Test Plans Library.
+fullName: LibraryWorkItemsData
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: columnOptions
+    uid: azure-devops-extension-api.LibraryWorkItemsData.columnOptions
+    package: azure-devops-extension-api
+    summary: Specifies the column option field names
+    fullName: columnOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'columnOptions: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: continuationToken
+    uid: azure-devops-extension-api.LibraryWorkItemsData.continuationToken
+    package: azure-devops-extension-api
+    summary: >-
+      Continuation token to fetch next set of elements. Present only when
+      HasMoreElements is true.
+    fullName: continuationToken
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'continuationToken: string'
+      return:
+        description: ''
+        type: string
+  - name: exceededWorkItemQueryLimit
+    uid: azure-devops-extension-api.LibraryWorkItemsData.exceededWorkItemQueryLimit
+    package: azure-devops-extension-api
+    summary: >-
+      Boolean indicating if the WIQL query has exceeded the limit of items
+      returned.
+    fullName: exceededWorkItemQueryLimit
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'exceededWorkItemQueryLimit: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: hasMoreElements
+    uid: azure-devops-extension-api.LibraryWorkItemsData.hasMoreElements
+    package: azure-devops-extension-api
+    summary: >-
+      Boolean indicating if there are more elements present than what are being
+      sent.
+    fullName: hasMoreElements
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hasMoreElements: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: returnCode
+    uid: azure-devops-extension-api.LibraryWorkItemsData.returnCode
+    package: azure-devops-extension-api
+    summary: Specifies if there was an error while execution of data provider.
+    fullName: returnCode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'returnCode: LibraryTestCasesDataReturnCode'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.LibraryTestCasesDataReturnCode"
+          />
+  - name: workItemIds
+    uid: azure-devops-extension-api.LibraryWorkItemsData.workItemIds
+    package: azure-devops-extension-api
+    summary: >-
+      List of work items returned when OrderByField is sent something other than
+      Id.
+    fullName: workItemIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItemIds: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: workItems
+    uid: azure-devops-extension-api.LibraryWorkItemsData.workItems
+    package: azure-devops-extension-api
+    summary: List of work items to be returned.
+    fullName: workItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItems: WorkItemDetails[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WorkItemDetails" />[]

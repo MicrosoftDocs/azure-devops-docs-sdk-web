@@ -5,7 +5,6 @@ package: azure-devops-extension-api
 summary: Data representation of an information node associated with a build
 fullName: InformationNode
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,20 +14,18 @@ properties:
     summary: Fields of the information node
     fullName: fields
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'fields: [key: string]: string'
+      content: 'fields: {[key: string]: string}'
       return:
         description: ''
-        type: '[key: string]\: string'
+        type: '{[key: string]: string}'
   - name: lastModifiedBy
     uid: azure-devops-extension-api.InformationNode.lastModifiedBy
     package: azure-devops-extension-api
     summary: Process or person that last modified this node
     fullName: lastModifiedBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastModifiedBy: string'
@@ -41,7 +38,6 @@ properties:
     summary: Date this node was last modified
     fullName: lastModifiedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lastModifiedDate: Date'
@@ -54,7 +50,6 @@ properties:
     summary: Node Id of this information node
     fullName: nodeId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'nodeId: number'
@@ -67,7 +62,6 @@ properties:
     summary: Id of parent node (xml tree)
     fullName: parentId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'parentId: number'
@@ -80,7 +74,6 @@ properties:
     summary: The type of the information node
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'

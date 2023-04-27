@@ -7,82 +7,15 @@ summary: >-
   status. Status can be associated with a pull request or an iteration.
 fullName: GitPullRequestStatus
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: context
-    uid: azure-devops-extension-api.GitPullRequestStatus.context
-    package: azure-devops-extension-api
-    summary: Context of the status.
-    fullName: context
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'context: GitStatusContext'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.GitStatusContext" />
-  - name: createdBy
-    uid: azure-devops-extension-api.GitPullRequestStatus.createdBy
-    package: azure-devops-extension-api
-    summary: Identity that created the status.
-    fullName: createdBy
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'createdBy: IdentityRef'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.IdentityRef" />
-  - name: creationDate
-    uid: azure-devops-extension-api.GitPullRequestStatus.creationDate
-    package: azure-devops-extension-api
-    summary: Creation date and time of the status.
-    fullName: creationDate
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'creationDate: Date'
-      return:
-        description: ''
-        type: Date
-  - name: description
-    uid: azure-devops-extension-api.GitPullRequestStatus.description
-    package: azure-devops-extension-api
-    summary: Status description. Typically describes current state of the status.
-    fullName: description
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'description: string'
-      return:
-        description: ''
-        type: string
-  - name: id
-    uid: azure-devops-extension-api.GitPullRequestStatus.id
-    package: azure-devops-extension-api
-    summary: Status identifier.
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
   - name: iterationId
     uid: azure-devops-extension-api.GitPullRequestStatus.iterationId
     package: azure-devops-extension-api
     summary: ID of the iteration to associate status with. Minimum value is 1.
     fullName: iterationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'iterationId: number'
@@ -95,50 +28,131 @@ properties:
     summary: Custom properties of the status.
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
       return:
         description: ''
         type: any
+inheritedProperties:
+  - name: context
+    uid: azure-devops-extension-api.GitPullRequestStatus.context
+    package: azure-devops-extension-api
+    summary: Context of the status.
+    fullName: context
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'context: GitStatusContext'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitStatusContext" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitStatus.context](xref:azure-devops-extension-api.GitStatus.context)
+  - name: createdBy
+    uid: azure-devops-extension-api.GitPullRequestStatus.createdBy
+    package: azure-devops-extension-api
+    summary: Identity that created the status.
+    fullName: createdBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdBy: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitStatus.createdBy](xref:azure-devops-extension-api.GitStatus.createdBy)
+  - name: creationDate
+    uid: azure-devops-extension-api.GitPullRequestStatus.creationDate
+    package: azure-devops-extension-api
+    summary: Creation date and time of the status.
+    fullName: creationDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'creationDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitStatus.creationDate](xref:azure-devops-extension-api.GitStatus.creationDate)
+  - name: description
+    uid: azure-devops-extension-api.GitPullRequestStatus.description
+    package: azure-devops-extension-api
+    summary: Status description. Typically describes current state of the status.
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitStatus.description](xref:azure-devops-extension-api.GitStatus.description)
+  - name: id
+    uid: azure-devops-extension-api.GitPullRequestStatus.id
+    package: azure-devops-extension-api
+    summary: Status identifier.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitStatus.id](xref:azure-devops-extension-api.GitStatus.id)
   - name: state
     uid: azure-devops-extension-api.GitPullRequestStatus.state
     package: azure-devops-extension-api
     summary: State of the status.
     fullName: state
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'state: GitStatusState'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.GitStatusState" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitStatus.state](xref:azure-devops-extension-api.GitStatus.state)
   - name: targetUrl
     uid: azure-devops-extension-api.GitPullRequestStatus.targetUrl
     package: azure-devops-extension-api
     summary: URL with status details.
     fullName: targetUrl
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'targetUrl: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitStatus.targetUrl](xref:azure-devops-extension-api.GitStatus.targetUrl)
   - name: updatedDate
     uid: azure-devops-extension-api.GitPullRequestStatus.updatedDate
     package: azure-devops-extension-api
     summary: Last update date and time of the status.
     fullName: updatedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'updatedDate: Date'
       return:
         description: ''
         type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GitStatus.updatedDate](xref:azure-devops-extension-api.GitStatus.updatedDate)
 extends: <xref uid="azure-devops-extension-api.GitStatus" />

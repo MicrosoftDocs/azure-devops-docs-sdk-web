@@ -5,99 +5,122 @@ package: azure-devops-extension-api
 summary: The structure of the question / thread
 fullName: Question
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: createdDate
-    uid: azure-devops-extension-api.Question.createdDate
+  - name: reCaptchaToken
+    uid: azure-devops-extension-api.Question.reCaptchaToken
     package: azure-devops-extension-api
-    summary: Time when the review was first created
-    fullName: createdDate
+    summary: ''
+    fullName: reCaptchaToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'createdDate: Date'
+      content: 'reCaptchaToken: string'
       return:
         description: ''
-        type: Date
-  - name: id
-    uid: azure-devops-extension-api.Question.id
-    package: azure-devops-extension-api
-    summary: Unique identifier of a QnA item
-    fullName: id
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'id: number'
-      return:
-        description: ''
-        type: number
+        type: string
   - name: responses
     uid: azure-devops-extension-api.Question.responses
     package: azure-devops-extension-api
     summary: List of answers in for the question / thread
     fullName: responses
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'responses: Response[]'
       return:
         description: ''
-        type: '<xref uid="azure-devops-extension-api.Response" />[]'
+        type: <xref uid="azure-devops-extension-api.Response" />[]
+inheritedProperties:
+  - name: createdDate
+    uid: azure-devops-extension-api.Question.createdDate
+    package: azure-devops-extension-api
+    summary: Time when the review was first created
+    fullName: createdDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [QnAItem.createdDate](xref:azure-devops-extension-api.QnAItem.createdDate)
+  - name: id
+    uid: azure-devops-extension-api.Question.id
+    package: azure-devops-extension-api
+    summary: Unique identifier of a QnA item
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [QnAItem.id](xref:azure-devops-extension-api.QnAItem.id)
   - name: status
     uid: azure-devops-extension-api.Question.status
     package: azure-devops-extension-api
     summary: Get status of item
     fullName: status
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'status: QnAItemStatus'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.QnAItemStatus" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [QnAItem.status](xref:azure-devops-extension-api.QnAItem.status)
   - name: text
     uid: azure-devops-extension-api.Question.text
     package: azure-devops-extension-api
     summary: Text description of the QnA item
     fullName: text
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'text: string'
       return:
         description: ''
         type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [QnAItem.text](xref:azure-devops-extension-api.QnAItem.text)
   - name: updatedDate
     uid: azure-devops-extension-api.Question.updatedDate
     package: azure-devops-extension-api
     summary: Time when the review was edited/updated
     fullName: updatedDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'updatedDate: Date'
       return:
         description: ''
         type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [QnAItem.updatedDate](xref:azure-devops-extension-api.QnAItem.updatedDate)
   - name: user
     uid: azure-devops-extension-api.Question.user
     package: azure-devops-extension-api
     summary: User details for the item.
     fullName: user
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'user: UserIdentityRef'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.UserIdentityRef" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [QnAItem.user](xref:azure-devops-extension-api.QnAItem.user)
 extends: <xref uid="azure-devops-extension-api.QnAItem" />
