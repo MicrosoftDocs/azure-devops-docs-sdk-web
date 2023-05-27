@@ -716,6 +716,33 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: deleteEnablementStatus(boolean, boolean, string[])
+    uid: azure-devops-extension-api.GitRestClient.deleteEnablementStatus
+    package: azure-devops-extension-api
+    summary: >-
+      DELETE Deletes Enablement status and BillableCommitters data from DB.
+      Deleting the enablement data will effectively disable it for the
+      repositories affected.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteEnablementStatus(allProjects: boolean,
+        includeBillableCommitters?: boolean, projectIds?: string[]):
+        Promise<void>
+      parameters:
+        - id: allProjects
+          type: boolean
+          description: ''
+        - id: includeBillableCommitters
+          type: boolean
+          description: ''
+        - id: projectIds
+          type: string[]
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: deleteLike(string, number, number, number, string)
     uid: azure-devops-extension-api.GitRestClient.deleteLike
     package: azure-devops-extension-api
@@ -1035,7 +1062,9 @@ methods:
           description: Project ID or project name
         - id: billingDate
           type: Date
-          description: If not specified defaults to the previous billing day.
+          description: >-
+            UTC expected.  If not specified defaults to the previous billing
+            day.
         - id: skip
           type: number
           description: Skip X rows of resultset to simulate paging.
@@ -1069,7 +1098,7 @@ methods:
           description: Return all the details on the billable committers.
         - id: billingDate
           type: Date
-          description: If not specified defaults to the previous billing day.
+          description: UTC expected. If not specified defaults to the previous billing day.
         - id: skip
           type: number
           description: Skip X rows of resultset to simulate paging.
@@ -1724,7 +1753,9 @@ methods:
             status to return
         - id: billingDate
           type: Date
-          description: Null defaults to Now(), can be provided for a point in time status
+          description: >-
+            UTC expected, Null defaults to UtcNow(), can be provided for a point
+            in time status
         - id: skip
           type: number
           description: Skip X rows of resultset to simulate paging.
@@ -2379,7 +2410,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.GitMerge" />&gt;
-  - name: getPermission(string, string)
+  - name: getPermission(string, string, string)
     uid: azure-devops-extension-api.GitRestClient.getPermission
     package: azure-devops-extension-api
     summary: GET Advanced Security Permission status.
@@ -2387,9 +2418,12 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getPermission(repositoryId?: string, permission?: string):
-        Promise<boolean>
+        function getPermission(projectName?: string, repositoryId?: string,
+        permission?: string): Promise<boolean>
       parameters:
+        - id: projectName
+          type: string
+          description: ''
         - id: repositoryId
           type: string
           description: Repository user is trying to access

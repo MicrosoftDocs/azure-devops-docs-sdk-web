@@ -112,6 +112,28 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: createFailureType(TestFailureType, string)
+    uid: azure-devops-extension-api.TestResultsRestClient.createFailureType
+    package: azure-devops-extension-api
+    summary: Creates a new test failure type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createFailureType(testResultFailureType: TestFailureType,
+        project: string): Promise<TestFailureType>
+      parameters:
+        - id: testResultFailureType
+          type: <xref uid="azure-devops-extension-api.TestFailureType" />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestFailureType"
+          />&gt;
   - name: >-
       createTestIterationResultAttachment(TestAttachmentRequestModel, string,
       number, number, number, string)
@@ -317,6 +339,26 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
+  - name: deleteFailureType(string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.deleteFailureType
+    package: azure-devops-extension-api
+    summary: Deletes a test failure type with specified failureTypeId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteFailureType(project: string, failureTypeId: number):
+        Promise<void>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: failureTypeId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: deleteTestMethodToWorkItemLink(string, string, number)
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.deleteTestMethodToWorkItemLink
@@ -560,6 +602,23 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
+  - name: getFailureTypes(string)
+    uid: azure-devops-extension-api.TestResultsRestClient.getFailureTypes
+    package: azure-devops-extension-api
+    summary: Returns the list of test failure types.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getFailureTypes(project: string): Promise<TestFailureType[]>'
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestFailureType"
+          />[]&gt;
   - name: getFileLevelCodeCoverage(FileCoverageRequest, string)
     uid: azure-devops-extension-api.TestResultsRestClient.getFileLevelCodeCoverage
     package: azure-devops-extension-api

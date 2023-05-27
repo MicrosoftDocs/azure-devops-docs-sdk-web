@@ -710,6 +710,12 @@ interfaces:
   - azure-devops-extension-api.RequestedExtension
   - azure-devops-extension-api.Scope
   - azure-devops-extension-api.SupportedExtension
+  - azure-devops-extension-api.ArtifactProperties
+  - azure-devops-extension-api.ArtifactScope
+  - azure-devops-extension-api.Favorite
+  - azure-devops-extension-api.FavoriteCreateParameters
+  - azure-devops-extension-api.FavoriteProvider
+  - azure-devops-extension-api.FavoritesSecuredObject
   - azure-devops-extension-api.FeatureFlag
   - azure-devops-extension-api.FeatureFlagPatch
   - azure-devops-extension-api.ContributedFeature
@@ -2010,6 +2016,9 @@ interfaces:
   - azure-devops-extension-api.ExternalPipeline
   - azure-devops-extension-api.FieldDependentRule
   - azure-devops-extension-api.FieldUpdate
+  - azure-devops-extension-api.GitHubConnectionModel
+  - azure-devops-extension-api.GitHubConnectionRepoModel
+  - azure-devops-extension-api.GitHubConnectionReposBatchRequest
   - azure-devops-extension-api.IdentityReference
   - azure-devops-extension-api.Link
   - azure-devops-extension-api.ProcessIdModel
@@ -2144,6 +2153,7 @@ classes:
   - azure-devops-extension-api.CoreRestClient
   - azure-devops-extension-api.DashboardRestClient
   - azure-devops-extension-api.ExtensionManagementRestClient
+  - azure-devops-extension-api.FavoriteRestClient
   - azure-devops-extension-api.FeatureAvailabilityRestClient
   - azure-devops-extension-api.FeatureManagementRestClient
   - azure-devops-extension-api.FileContainerRestClient
@@ -2328,8 +2338,8 @@ functions:
         description: ''
         type: <xref uid="azure-devops-extension-api.IParsedRoute" />
   - name: >-
-      replaceParsedRouteValues(IParsedRoute, {[name: string]: function},
-      boolean)
+      replaceParsedRouteValues(IParsedRoute, {[name: string]: string | number |
+      undefined}, boolean)
     uid: azure-devops-extension-api.replaceParsedRouteValues
     package: azure-devops-extension-api
     summary: Replace route values for a specific parsed route
@@ -2338,14 +2348,14 @@ functions:
     syntax:
       content: >-
         function replaceParsedRouteValues(parsedRoute: IParsedRoute,
-        routeValues: {[name: string]: function}, continueOnUnmatchedSegements?:
-        boolean): IRouteMatchResult | undefined
+        routeValues: {[name: string]: string | number | undefined},
+        continueOnUnmatchedSegements?: boolean): IRouteMatchResult | undefined
       parameters:
         - id: parsedRoute
           type: <xref uid="azure-devops-extension-api.IParsedRoute" />
           description: The route to evaluate
         - id: routeValues
-          type: '{[name: string]: function}'
+          type: '{[name: string]: string | number | undefined}'
           description: Dictionary of route replacement parameters
         - id: continueOnUnmatchedSegements
           type: boolean
@@ -2357,7 +2367,7 @@ functions:
         type: >-
           <xref uid="azure-devops-extension-api.IRouteMatchResult" /> |
           undefined
-  - name: 'replaceRouteValues(string, {[name: string]: function})'
+  - name: 'replaceRouteValues(string, {[name: string]: string | number | undefined})'
     uid: azure-devops-extension-api.replaceRouteValues
     package: azure-devops-extension-api
     summary: >-
@@ -2368,13 +2378,13 @@ functions:
     syntax:
       content: >-
         function replaceRouteValues(routeTemplate: string, routeValues: {[name:
-        string]: function}): string
+        string]: string | number | undefined}): string
       parameters:
         - id: routeTemplate
           type: string
           description: MVC route template (like "/foo/{id}/{*params}")
         - id: routeValues
-          type: '{[name: string]: function}'
+          type: '{[name: string]: string | number | undefined}'
           description: Route value replacements
       return:
         description: ''
