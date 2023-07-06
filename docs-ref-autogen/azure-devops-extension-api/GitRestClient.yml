@@ -394,8 +394,9 @@ methods:
     uid: azure-devops-extension-api.GitRestClient.createPullRequestLabel
     package: azure-devops-extension-api
     summary: >-
-      Create a label for a specified pull request. The only required field is
-      the name of the new label.
+      Create a tag (if that does not exists yet) and add that as a label (tag)
+      for a specified pull request. The only required field is the name of the
+      new label (tag).
     remarks: ''
     isDeprecated: false
     syntax:
@@ -805,7 +806,9 @@ methods:
   - name: deletePullRequestLabels(string, number, string, string, string)
     uid: azure-devops-extension-api.GitRestClient.deletePullRequestLabels
     package: azure-devops-extension-api
-    summary: Removes a label from the set of those assigned to the pull request.
+    summary: >-
+      Removes a label (tag) from the set of those assigned to the pull request.
+      The tag itself will not be deleted.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -2816,7 +2819,7 @@ methods:
   - name: getPullRequestLabel(string, number, string, string, string)
     uid: azure-devops-extension-api.GitRestClient.getPullRequestLabel
     package: azure-devops-extension-api
-    summary: Retrieves a single label that has been assigned to a pull request.
+    summary: Retrieves a single label (tag) that has been assigned to a pull request.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -2848,7 +2851,7 @@ methods:
   - name: getPullRequestLabels(string, number, string, string)
     uid: azure-devops-extension-api.GitRestClient.getPullRequestLabels
     package: azure-devops-extension-api
-    summary: Get all the labels assigned to a pull request.
+    summary: Get all the labels (tags) assigned to a pull request.
     remarks: ''
     isDeprecated: false
     syntax:

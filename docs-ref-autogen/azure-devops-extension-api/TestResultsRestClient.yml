@@ -112,7 +112,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: createFailureType(TestFailureType, string)
+  - name: createFailureType(TestResultFailureTypeRequestModel, string)
     uid: azure-devops-extension-api.TestResultsRestClient.createFailureType
     package: azure-devops-extension-api
     summary: Creates a new test failure type
@@ -120,11 +120,15 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function createFailureType(testResultFailureType: TestFailureType,
-        project: string): Promise<TestFailureType>
+        function createFailureType(testResultFailureType:
+        TestResultFailureTypeRequestModel, project: string):
+        Promise<TestResultFailureType>
       parameters:
         - id: testResultFailureType
-          type: <xref uid="azure-devops-extension-api.TestFailureType" />
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.TestResultFailureTypeRequestModel"
+            />
           description: ''
         - id: project
           type: string
@@ -132,8 +136,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.TestFailureType"
-          />&gt;
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TestResultFailureType" />&gt;
   - name: >-
       createTestIterationResultAttachment(TestAttachmentRequestModel, string,
       number, number, number, string)
@@ -609,7 +613,9 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getFailureTypes(project: string): Promise<TestFailureType[]>'
+      content: >-
+        function getFailureTypes(project: string):
+        Promise<TestResultFailureType[]>
       parameters:
         - id: project
           type: string
@@ -617,8 +623,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.TestFailureType"
-          />[]&gt;
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TestResultFailureType" />[]&gt;
   - name: getFileLevelCodeCoverage(FileCoverageRequest, string)
     uid: azure-devops-extension-api.TestResultsRestClient.getFileLevelCodeCoverage
     package: azure-devops-extension-api
