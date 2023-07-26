@@ -461,6 +461,40 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ProjectProperties"
           />[]&gt;
+  - name: getProjectTeamsByCategory(string, boolean, number, number)
+    uid: azure-devops-extension-api.CoreRestClient.getProjectTeamsByCategory
+    package: azure-devops-extension-api
+    summary: >-
+      Gets list of user readable teams in a project and teams user is member of
+      (excluded from readable list).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getProjectTeamsByCategory(projectId: string, expandIdentity?:
+        boolean, top?: number, skip?: number): Promise<CategorizedWebApiTeams>
+      parameters:
+        - id: projectId
+          type: string
+          description: >-
+            The name or ID (GUID) of the team project containing the teams to
+            retrieve.
+        - id: expandIdentity
+          type: boolean
+          description: >-
+            A value indicating whether or not to expand Identity information in
+            the result WebApiTeam object.
+        - id: top
+          type: number
+          description: Maximum number of teams to return.
+        - id: skip
+          type: number
+          description: Number of teams to skip.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CategorizedWebApiTeams" />&gt;
   - name: getProxies(string)
     uid: azure-devops-extension-api.CoreRestClient.getProxies
     package: azure-devops-extension-api
