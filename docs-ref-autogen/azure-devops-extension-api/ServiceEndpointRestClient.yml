@@ -347,7 +347,7 @@ methods:
           />&gt;&gt;
   - name: >-
       getServiceEndpoints(string, string, string[], string[], string, boolean,
-      boolean)
+      boolean, ServiceEndpointActionFilter)
     uid: azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpoints
     package: azure-devops-extension-api
     summary: Get the service endpoints.
@@ -357,8 +357,8 @@ methods:
       content: >-
         function getServiceEndpoints(project: string, type?: string,
         authSchemes?: string[], endpointIds?: string[], owner?: string,
-        includeFailed?: boolean, includeDetails?: boolean):
-        Promise<ServiceEndpoint[]>
+        includeFailed?: boolean, includeDetails?: boolean, actionFilter?:
+        ServiceEndpointActionFilter): Promise<ServiceEndpoint[]>
       parameters:
         - id: project
           type: string
@@ -384,6 +384,15 @@ methods:
             Flag to include more details for service endpoints. This is for
             internal use only and the flag will be treated as false for all
             other requests
+        - id: actionFilter
+          type: >-
+            <xref uid="azure-devops-extension-api.ServiceEndpointActionFilter"
+            />
+          description: >-
+            The "actionFilter" parameter allows users to evaluate requestor
+            permissions and retrieve a list of endpoints that match the
+            specified conditions, ensuring that only relevant endpoints are
+            returned based on their permissions
       return:
         description: ''
         type: >-
