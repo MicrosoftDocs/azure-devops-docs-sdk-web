@@ -357,6 +357,28 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: exportTestCases(ExportTestCaseParams, string)
+    uid: azure-devops-extension-api.TestPlanRestClient.exportTestCases
+    package: azure-devops-extension-api
+    summary: >-
+      Exports a set of test cases from a suite to a file. Currently supported 
+      formats: xlsx
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function exportTestCases(exportTestCaseRequestBody:
+        ExportTestCaseParams, project: string): Promise<ArrayBuffer>
+      parameters:
+        - id: exportTestCaseRequestBody
+          type: <xref uid="azure-devops-extension-api.ExportTestCaseParams" />
+          description: A ExportTestCaseParams object.ExportTestCaseParams
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: getCloneInformation(string, number)
     uid: azure-devops-extension-api.TestPlanRestClient.getCloneInformation
     package: azure-devops-extension-api
