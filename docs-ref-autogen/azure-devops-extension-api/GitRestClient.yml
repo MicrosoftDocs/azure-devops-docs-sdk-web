@@ -1707,10 +1707,10 @@ methods:
           description: Project ID or project name
         - id: skip
           type: number
-          description: Number of commits to skip.
+          description: Number of commits to skip. The value cannot exceed 3,000,000.
         - id: top
           type: number
-          description: Maximum number of commits to return.
+          description: Maximum number of commits to return. The value cannot exceed 50,000.
         - id: includeStatuses
           type: boolean
           description: True to include additional commit status information.
@@ -1770,6 +1770,40 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AdvSecEnablementStatus" />[]&gt;
+  - name: getEnableOnCreateHost(boolean)
+    uid: azure-devops-extension-api.GitRestClient.getEnableOnCreateHost
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEnableOnCreateHost(enableOnCreateHost: boolean):
+        Promise<boolean>
+      parameters:
+        - id: enableOnCreateHost
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: getEnableOnCreateProject(string)
+    uid: azure-devops-extension-api.GitRestClient.getEnableOnCreateProject
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEnableOnCreateProject(enableOnCreateProjectId: string):
+        Promise<boolean>
+      parameters:
+        - id: enableOnCreateProjectId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
   - name: getEstimatedBillableCommitters(string, string, string)
     uid: azure-devops-extension-api.GitRestClient.getEstimatedBillableCommitters
     package: azure-devops-extension-api
@@ -3839,6 +3873,43 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;
+  - name: setEnableOnCreateHost(boolean)
+    uid: azure-devops-extension-api.GitRestClient.setEnableOnCreateHost
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setEnableOnCreateHost(enableOnCreateHost: boolean):
+        Promise<void>
+      parameters:
+        - id: enableOnCreateHost
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: setEnableOnCreateProject(string, boolean)
+    uid: azure-devops-extension-api.GitRestClient.setEnableOnCreateProject
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setEnableOnCreateProject(enableOnCreateProjectId: string,
+        enableOnStatus: boolean): Promise<void>
+      parameters:
+        - id: enableOnCreateProjectId
+          type: string
+          description: ''
+        - id: enableOnStatus
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: sharePullRequest(ShareNotificationContext, string, number, string)
     uid: azure-devops-extension-api.GitRestClient.sharePullRequest
     package: azure-devops-extension-api
