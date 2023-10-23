@@ -1084,7 +1084,8 @@ methods:
     package: azure-devops-extension-api
     summary: >-
       Retrieve detailed actual billable committers for Advanced Security service
-      for a given date.
+      for a given date. Detailed results intentionally does not filter out soft
+      deleted projects and repositories to help diagnose billing issues.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1804,25 +1805,21 @@ methods:
       return:
         description: ''
         type: Promise&lt;boolean&gt;
-  - name: getEstimatedBillableCommitters(string, string, string)
-    uid: azure-devops-extension-api.GitRestClient.getEstimatedBillableCommitters
+  - name: getEstimatedBillableCommittersRepo(string, string)
+    uid: >-
+      azure-devops-extension-api.GitRestClient.getEstimatedBillableCommittersRepo
     package: azure-devops-extension-api
-    summary: >-
-      Retrieve actual billable committers for Advanced Security service for a
-      given date.
+    summary: Get estimated billable committers for a repository for the last 90 days.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function getEstimatedBillableCommitters(project: string, estimateOnly:
-        string, repositoryId?: string): Promise<BillableCommitter[]>
+        function getEstimatedBillableCommittersRepo(project: string,
+        repositoryId: string): Promise<BillableCommitter[]>
       parameters:
         - id: project
           type: string
           description: Project ID or project name
-        - id: estimateOnly
-          type: string
-          description: ''
         - id: repositoryId
           type: string
           description: ''
@@ -1830,6 +1827,39 @@ methods:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BillableCommitter"
+          />[]&gt;
+  - name: getEstimatedBillablePushersOrg()
+    uid: azure-devops-extension-api.GitRestClient.getEstimatedBillablePushersOrg
+    package: azure-devops-extension-api
+    summary: Get estimated billable pushers for an Organization for last 90 days.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getEstimatedBillablePushersOrg(): Promise<BillablePusher[]>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BillablePusher"
+          />[]&gt;
+  - name: getEstimatedBillablePushersProject(string)
+    uid: >-
+      azure-devops-extension-api.GitRestClient.getEstimatedBillablePushersProject
+    package: azure-devops-extension-api
+    summary: Get estimated billable pushers for a project for last 90 days.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEstimatedBillablePushersProject(project: string):
+        Promise<BillablePusher[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BillablePusher"
           />[]&gt;
   - name: getFileDiffs(FileDiffsCriteria, string, string)
     uid: azure-devops-extension-api.GitRestClient.getFileDiffs
