@@ -1,0 +1,67 @@
+### YamlMime:TSType
+name: IXDMObjectRegistry
+uid: azure-devops-extension-sdk.IXDMObjectRegistry
+package: azure-devops-extension-sdk
+summary: Registry of XDM objects that can be invoked by an XDM channel
+fullName: IXDMObjectRegistry
+remarks: ''
+isDeprecated: false
+type: interface
+methods:
+  - name: getInstance<T>(string, Object)
+    uid: azure-devops-extension-sdk.IXDMObjectRegistry.getInstance
+    package: azure-devops-extension-sdk
+    summary: Get an instance of an object registered with the given id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getInstance<T>(instanceId: string, contextData?: Object):
+        undefined | T
+      parameters:
+        - id: instanceId
+          type: string
+          description: unique id of the registered object
+        - id: contextData
+          type: Object
+          description: >-
+            Optional context data to pass to the contructor of an object factory
+            method
+      return:
+        description: ''
+        type: undefined | T
+  - name: 'register(string, Object | (contextData?: any) => Object)'
+    uid: azure-devops-extension-sdk.IXDMObjectRegistry.register
+    package: azure-devops-extension-sdk
+    summary: >-
+      Register an object (instance or factory method) exposed by this frame to
+      callers in a remote frame
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function register(instanceId: string, instance: Object | (contextData?:
+        any) => Object)
+      parameters:
+        - id: instanceId
+          type: string
+          description: unique id of the registered object
+        - id: instance
+          type: 'Object | (contextData?: any) =&gt; Object'
+          description: >-
+            Either: (1) an object instance, or (2) a function that takes
+            optional context data and returns an object instance.
+  - name: unregister(string)
+    uid: azure-devops-extension-sdk.IXDMObjectRegistry.unregister
+    package: azure-devops-extension-sdk
+    summary: >-
+      Unregister an object (instance or factory method) that was previously
+      registered by this frame
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function unregister(instanceId: string)'
+      parameters:
+        - id: instanceId
+          type: string
+          description: unique id of the registered object
