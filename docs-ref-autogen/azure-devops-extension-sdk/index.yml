@@ -14,6 +14,11 @@ interfaces:
   - azure-devops-extension-sdk.IPageContext
   - azure-devops-extension-sdk.ITeamContext
   - azure-devops-extension-sdk.IUserContext
+  - azure-devops-extension-sdk.IJsonRpcMessage
+  - azure-devops-extension-sdk.ISerializationSettings
+  - azure-devops-extension-sdk.IXDMChannel
+  - azure-devops-extension-sdk.IXDMChannelManager
+  - azure-devops-extension-sdk.IXDMObjectRegistry
 functions:
   - name: 'applyTheme({[varName: string]: string})'
     uid: azure-devops-extension-sdk.applyTheme
@@ -272,3 +277,6 @@ functions:
         - id: instanceId
           type: string
           description: unique id of the registered object
+classes:
+  - azure-devops-extension-sdk.XDMChannel
+  - azure-devops-extension-sdk.XDMObjectRegistry

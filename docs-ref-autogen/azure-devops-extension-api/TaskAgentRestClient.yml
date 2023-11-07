@@ -2299,6 +2299,29 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PackageMetadata"
           />[]&gt;
+  - name: getPoolPermission(number, number, boolean)
+    uid: azure-devops-extension-api.TaskAgentRestClient.getPoolPermission
+    package: azure-devops-extension-api
+    summary: Get Permissions on Pool.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPoolPermission(poolId: number, agentId: number,
+        isCheckPermissions: boolean): Promise<boolean>
+      parameters:
+        - id: poolId
+          type: number
+          description: The agent pool to use
+        - id: agentId
+          type: number
+          description: The agent id to use
+        - id: isCheckPermissions
+          type: boolean
+          description: To check the permissions
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
   - name: getResourceLimits()
     uid: azure-devops-extension-api.TaskAgentRestClient.getResourceLimits
     package: azure-devops-extension-api
