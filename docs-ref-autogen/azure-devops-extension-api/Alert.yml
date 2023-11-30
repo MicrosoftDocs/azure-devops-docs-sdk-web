@@ -1,0 +1,213 @@
+### YamlMime:TSType
+name: Alert
+uid: azure-devops-extension-api.Alert
+package: azure-devops-extension-api
+summary: ''
+fullName: Alert
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: alertId
+    uid: azure-devops-extension-api.Alert.alertId
+    package: azure-devops-extension-api
+    summary: Identifier for the alert. It is unqiue within Azure DevOps organization.
+    fullName: alertId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertId: number'
+      return:
+        description: ''
+        type: number
+  - name: alertType
+    uid: azure-devops-extension-api.Alert.alertType
+    package: azure-devops-extension-api
+    summary: Type of the alert. E.g. secret, code, etc.
+    fullName: alertType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertType: AlertType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AlertType" />
+  - name: dismissal
+    uid: azure-devops-extension-api.Alert.dismissal
+    package: azure-devops-extension-api
+    summary: >-
+      Contains information for the dismissal of the alert if the alert has been
+      dismissed.
+    fullName: dismissal
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dismissal: Dismissal'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Dismissal" />
+  - name: firstSeenDate
+    uid: azure-devops-extension-api.Alert.firstSeenDate
+    package: azure-devops-extension-api
+    summary: >-
+      This value is computed and returned by the service. This value represents
+      the first time the service has seen this issue reported in an analysis
+      instance.
+    fullName: firstSeenDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'firstSeenDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: fixedDate
+    uid: azure-devops-extension-api.Alert.fixedDate
+    package: azure-devops-extension-api
+    summary: >-
+      This value is computed and returned by the service. If the issue is fixed,
+      this value represents the time the service has seen this issue fixed in an
+      analysis instance.
+    fullName: fixedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fixedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: gitRef
+    uid: azure-devops-extension-api.Alert.gitRef
+    package: azure-devops-extension-api
+    summary: Reference to a git object, e.g. branch ref.
+    fullName: gitRef
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'gitRef: string'
+      return:
+        description: ''
+        type: string
+  - name: introducedDate
+    uid: azure-devops-extension-api.Alert.introducedDate
+    package: azure-devops-extension-api
+    summary: >-
+      This value is computed and returned by the service. This value represents
+      the first time the vulnerability was introduced.
+    fullName: introducedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'introducedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: lastSeenDate
+    uid: azure-devops-extension-api.Alert.lastSeenDate
+    package: azure-devops-extension-api
+    summary: >-
+      This value is computed and returned by the service. This value represents
+      the last time the service has seen this issue reported in an analysis
+      instance.
+    fullName: lastSeenDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastSeenDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: logicalLocations
+    uid: azure-devops-extension-api.Alert.logicalLocations
+    package: azure-devops-extension-api
+    summary: >-
+      Logical locations for the alert. This value is computed and returned by
+      the service. It is a value based on the results from all analysis
+      configurations. An example of a logical location is a component.
+    fullName: logicalLocations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'logicalLocations: LogicalLocation[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.LogicalLocation" />[]
+  - name: physicalLocations
+    uid: azure-devops-extension-api.Alert.physicalLocations
+    package: azure-devops-extension-api
+    summary: >-
+      This value is computed and returned by the service. It is a value based on
+      the results from all analysis configurations. An example of a physical
+      location is a file location.
+    fullName: physicalLocations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'physicalLocations: PhysicalLocation[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.PhysicalLocation" />[]
+  - name: repositoryUrl
+    uid: azure-devops-extension-api.Alert.repositoryUrl
+    package: azure-devops-extension-api
+    summary: Repository URL where the alert was detected.
+    fullName: repositoryUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryUrl: string'
+      return:
+        description: ''
+        type: string
+  - name: severity
+    uid: azure-devops-extension-api.Alert.severity
+    package: azure-devops-extension-api
+    summary: Severity of the alert.
+    fullName: severity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'severity: Severity'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Severity" />
+  - name: state
+    uid: azure-devops-extension-api.Alert.state
+    package: azure-devops-extension-api
+    summary: >-
+      This value is computed and returned by the service. It is a value based on
+      the results from all analysis configurations.
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: State'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.State" />
+  - name: title
+    uid: azure-devops-extension-api.Alert.title
+    package: azure-devops-extension-api
+    summary: >-
+      Title will only be rendered as text and does not support markdown
+      formatting. There is a maximum character limit of 256.
+    fullName: title
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'title: string'
+      return:
+        description: ''
+        type: string
+  - name: tools
+    uid: azure-devops-extension-api.Alert.tools
+    package: azure-devops-extension-api
+    summary: Tools that have detected this issue.
+    fullName: tools
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tools: Tool[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Tool" />[]

@@ -1,0 +1,233 @@
+### YamlMime:TSType
+name: AlertRestClient
+uid: azure-devops-extension-api.AlertRestClient
+package: azure-devops-extension-api
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
+fullName: AlertRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: AlertRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.AlertRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new AlertRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+methods:
+  - name: getAlert(string, number, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.getAlert
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAlert(project: string, alertId: number, repository: string,
+        ref?: string): Promise<Alert>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: alertId
+          type: number
+          description: ''
+        - id: repository
+          type: string
+          description: ''
+        - id: ref
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;
+  - name: getAlertInstances(string, number, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.getAlertInstances
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAlertInstances(project: string, alertId: number, repository:
+        string, ref?: string): Promise<AlertAnalysisInstance[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: alertId
+          type: number
+          description: ''
+        - id: repository
+          type: string
+          description: ''
+        - id: ref
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.AlertAnalysisInstance" />[]&gt;
+  - name: getAlerts(string, string, number, string, SearchCriteria, string)
+    uid: azure-devops-extension-api.AlertRestClient.getAlerts
+    package: azure-devops-extension-api
+    summary: Get alerts for a repository
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAlerts(project: string, repository: string, top?: number,
+        orderBy?: string, criteria?: SearchCriteria, continuationToken?:
+        string): Promise<PagedList<Alert>>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+        - id: top
+          type: number
+          description: The maximum number of alerts to return
+        - id: orderBy
+          type: string
+          description: >-
+            Must be "id" "firstSeen" "lastSeen" "fixedOn" or "severity" 
+            Defaults to "id"
+        - id: criteria
+          type: <xref uid="azure-devops-extension-api.SearchCriteria" />
+          description: Options to limit the alerts returned
+        - id: continuationToken
+          type: string
+          description: >-
+            If there are more alerts than can be returned, a continuation token
+            is placed in the "x-ms-continuationtoken" header.  Use that token
+            here to get the next page of alerts
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;&gt;
+  - name: getAlertSarif(string, number, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.getAlertSarif
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAlertSarif(project: string, alertId: number, repository:
+        string, ref?: string): Promise<string>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: alertId
+          type: number
+          description: ''
+        - id: repository
+          type: string
+          description: ''
+        - id: ref
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: getSarif(number)
+    uid: azure-devops-extension-api.AlertRestClient.getSarif
+    package: azure-devops-extension-api
+    summary: Get the status of the Sarif processing job
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getSarif(sarifId: number): Promise<boolean>'
+      parameters:
+        - id: sarifId
+          type: number
+          description: Sarif ID returned when the Sarif was uploaded
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: getUxFilters(string, string, AlertType)
+    uid: azure-devops-extension-api.AlertRestClient.getUxFilters
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getUxFilters(project: string, repository: string, alertType:
+        AlertType): Promise<UxFilters>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: ''
+        - id: alertType
+          type: <xref uid="azure-devops-extension-api.AlertType" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.UxFilters" />&gt;
+  - name: updateAlert(AlertStateUpdate, string, number, string)
+    uid: azure-devops-extension-api.AlertRestClient.updateAlert
+    package: azure-devops-extension-api
+    summary: Update the status of an alert
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateAlert(stateUpdate: AlertStateUpdate, project: string,
+        alertId: number, repository: string): Promise<Alert>
+      parameters:
+        - id: stateUpdate
+          type: <xref uid="azure-devops-extension-api.AlertStateUpdate" />
+          description: The new status of the alert
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: alertId
+          type: number
+          description: The ID of the alert
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;
+  - name: uploadSarif(string, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.uploadSarif
+    package: azure-devops-extension-api
+    summary: Upload a Sarif containing security alerts
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function uploadSarif(content: string, project: string, repository:
+        string): Promise<number>
+      parameters:
+        - id: content
+          type: string
+          description: Content to upload
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of a repository
+      return:
+        description: ''
+        type: Promise&lt;number&gt;
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

@@ -109,7 +109,7 @@ methods:
           />[]&gt;
   - name: >-
       getItems(number, string, string, boolean, string, string, boolean,
-      boolean, boolean, boolean, boolean)
+      boolean, boolean, boolean, boolean, boolean)
     uid: azure-devops-extension-api.FileContainerRestClient.getItems
     package: azure-devops-extension-api
     summary: ''
@@ -121,7 +121,8 @@ methods:
         string, metadata?: boolean, format?: string, downloadFileName?: string,
         includeDownloadTickets?: boolean, isShallow?: boolean,
         ignoreRequestedMediaType?: boolean, includeBlobMetadata?: boolean,
-        saveAbsolutePath?: boolean): Promise<FileContainerItem[]>
+        saveAbsolutePath?: boolean, preferRedirect?: boolean):
+        Promise<FileContainerItem[]>
       parameters:
         - id: containerId
           type: number
@@ -154,6 +155,9 @@ methods:
           type: boolean
           description: ''
         - id: saveAbsolutePath
+          type: boolean
+          description: ''
+        - id: preferRedirect
           type: boolean
           description: ''
       return:

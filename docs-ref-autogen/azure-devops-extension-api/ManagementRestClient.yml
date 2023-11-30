@@ -1,0 +1,332 @@
+### YamlMime:TSType
+name: ManagementRestClient
+uid: azure-devops-extension-api.ManagementRestClient
+package: azure-devops-extension-api
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
+fullName: ManagementRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: ManagementRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.ManagementRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new ManagementRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+methods:
+  - name: deleteBillingInfo(string)
+    uid: azure-devops-extension-api.ManagementRestClient.deleteBillingInfo
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function deleteBillingInfo(organizationId: string): Promise<void>'
+      parameters:
+        - id: organizationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: deleteMeterUsageHistory(string)
+    uid: azure-devops-extension-api.ManagementRestClient.deleteMeterUsageHistory
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function deleteMeterUsageHistory(organizationId: string): Promise<void>'
+      parameters:
+        - id: organizationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: getBillingInfo(string)
+    uid: azure-devops-extension-api.ManagementRestClient.getBillingInfo
+    package: azure-devops-extension-api
+    summary: Get the billing info for an organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getBillingInfo(organizationId: string): Promise<BillingInfo>'
+      parameters:
+        - id: organizationId
+          type: string
+          description: Organization ID to get billing info for.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.BillingInfo" />&gt;
+  - name: getEstimatedOrgBillablePushers()
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getEstimatedOrgBillablePushers
+    package: azure-devops-extension-api
+    summary: >-
+      Estimate the committers that would be added to the customer's usage if
+      Advanced Security was enabled for this organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getEstimatedOrgBillablePushers(): Promise<string[]>'
+      return:
+        description: ''
+        type: Promise&lt;string[]&gt;
+  - name: getEstimatedProjectBillablePushers(string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getEstimatedProjectBillablePushers
+    package: azure-devops-extension-api
+    summary: >-
+      Estimate the number of committers that would be added to the customer's
+      usage if Advanced Security was enabled for this project.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEstimatedProjectBillablePushers(project: string):
+        Promise<string[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;string[]&gt;
+  - name: getEstimatedRepoBillableCommitters(string, string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getEstimatedRepoBillableCommitters
+    package: azure-devops-extension-api
+    summary: >-
+      Estimate the committers that would be added to the customer's usage if
+      Advanced Security was enabled for this repository.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEstimatedRepoBillableCommitters(project: string, repository:
+        string): Promise<string[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+      return:
+        description: ''
+        type: Promise&lt;string[]&gt;
+  - name: getLastMeterUsage()
+    uid: azure-devops-extension-api.ManagementRestClient.getLastMeterUsage
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getLastMeterUsage(): Promise<MeterUsage>'
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.MeterUsage" />&gt;
+  - name: getMeterUsage(Date)
+    uid: azure-devops-extension-api.ManagementRestClient.getMeterUsage
+    package: azure-devops-extension-api
+    summary: Get commiters used when calculating billing information.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getMeterUsage(billingDate?: Date): Promise<MeterUsage>'
+      parameters:
+        - id: billingDate
+          type: Date
+          description: The date to query, or if not provided, today
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.MeterUsage" />&gt;
+  - name: getOrgEnablementStatus(boolean)
+    uid: azure-devops-extension-api.ManagementRestClient.getOrgEnablementStatus
+    package: azure-devops-extension-api
+    summary: Get the current status of Advanced Security for the organization
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getOrgEnablementStatus(includeAllProperties?: boolean):
+        Promise<AdvSecEnablementSettings>
+      parameters:
+        - id: includeAllProperties
+          type: boolean
+          description: >-
+            When true, also determine if pushes are blocked if they contain
+            secrets
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.AdvSecEnablementSettings" />&gt;
+  - name: getProjectEnablementStatus(string, boolean)
+    uid: azure-devops-extension-api.ManagementRestClient.getProjectEnablementStatus
+    package: azure-devops-extension-api
+    summary: Get the current status of Advanced Security for a project
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getProjectEnablementStatus(project: string,
+        includeAllProperties?: boolean): Promise<AdvSecEnablementSettings>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: includeAllProperties
+          type: boolean
+          description: >-
+            When true, also determine if pushes are blocked if they contain
+            secrets
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.AdvSecEnablementSettings" />&gt;
+  - name: getRepoEnablementStatus(string, string, boolean)
+    uid: azure-devops-extension-api.ManagementRestClient.getRepoEnablementStatus
+    package: azure-devops-extension-api
+    summary: Determine if Advanced Security is enabled for a repository
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRepoEnablementStatus(project: string, repository: string,
+        includeAllProperties?: boolean): Promise<AdvSecEnablementStatus>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+        - id: includeAllProperties
+          type: boolean
+          description: >-
+            When true, will also determine if pushes are blocked when secrets
+            are detected
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.AdvSecEnablementStatus" />&gt;
+  - name: saveBillingInfo(BillingInfo, string)
+    uid: azure-devops-extension-api.ManagementRestClient.saveBillingInfo
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function saveBillingInfo(billingInfo: BillingInfo, organizationId:
+        string): Promise<void>
+      parameters:
+        - id: billingInfo
+          type: <xref uid="azure-devops-extension-api.BillingInfo" />
+          description: ''
+        - id: organizationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: setBillingSnapshot(MeterUsage)
+    uid: azure-devops-extension-api.ManagementRestClient.setBillingSnapshot
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setBillingSnapshot(meterUsage: MeterUsage): Promise<void>'
+      parameters:
+        - id: meterUsage
+          type: <xref uid="azure-devops-extension-api.MeterUsage" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: updateOrgEnablementStatus(AdvSecEnablementSettingsUpdate)
+    uid: azure-devops-extension-api.ManagementRestClient.updateOrgEnablementStatus
+    package: azure-devops-extension-api
+    summary: Update the status of Advanced Security for the organization
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateOrgEnablementStatus(savedAdvSecEnablementStatus:
+        AdvSecEnablementSettingsUpdate): Promise<void>
+      parameters:
+        - id: savedAdvSecEnablementStatus
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.AdvSecEnablementSettingsUpdate" />
+          description: The new status
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: updateProjectEnablementStatus(AdvSecEnablementSettingsUpdate, string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.updateProjectEnablementStatus
+    package: azure-devops-extension-api
+    summary: Update the status of Advanced Security for the project
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateProjectEnablementStatus(savedAdvSecEnablementStatus:
+        AdvSecEnablementSettingsUpdate, project: string): Promise<void>
+      parameters:
+        - id: savedAdvSecEnablementStatus
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.AdvSecEnablementSettingsUpdate" />
+          description: The new status
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: >-
+      updateRepoAdvSecEnablementStatus(AdvSecEnablementStatusUpdate, string,
+      string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.updateRepoAdvSecEnablementStatus
+    package: azure-devops-extension-api
+    summary: Update the enablement of Advanced Security for a repository
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateRepoAdvSecEnablementStatus(savedAdvSecEnablementStatus:
+        AdvSecEnablementStatusUpdate, project: string, repository: string):
+        Promise<void>
+      parameters:
+        - id: savedAdvSecEnablementStatus
+          type: >-
+            <xref uid="azure-devops-extension-api.AdvSecEnablementStatusUpdate"
+            />
+          description: new status
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: Name or ID of the repository
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />
