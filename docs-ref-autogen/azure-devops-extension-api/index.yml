@@ -7,6 +7,13 @@ enums:
   - azure-devops-extension-api.AccountStatus
   - azure-devops-extension-api.AccountType
   - azure-devops-extension-api.AccountUserStatus
+  - azure-devops-extension-api.AlertType
+  - azure-devops-extension-api.AnalysisConfigurationType
+  - azure-devops-extension-api.ComponentType
+  - azure-devops-extension-api.DismissalType
+  - azure-devops-extension-api.ResultType
+  - azure-devops-extension-api.Severity
+  - azure-devops-extension-api.State
   - azure-devops-extension-api.BoardItemBatchOperationTypeEnum
   - azure-devops-extension-api.BoardTypeEnum
   - azure-devops-extension-api.AgentStatus
@@ -162,6 +169,7 @@ enums:
   - azure-devops-extension-api.InheritLevel
   - azure-devops-extension-api.RelativeToSetting
   - azure-devops-extension-api.ServiceStatus
+  - azure-devops-extension-api.BillingMode
   - azure-devops-extension-api.DefaultGroupDeliveryPreference
   - azure-devops-extension-api.EvaluationOperationStatus
   - azure-devops-extension-api.EventPublisherQueryFlags
@@ -384,6 +392,30 @@ interfaces:
   - azure-devops-extension-api.Account
   - azure-devops-extension-api.AccountCreateInfoInternal
   - azure-devops-extension-api.AccountPreferencesInternal
+  - azure-devops-extension-api.Alert
+  - azure-devops-extension-api.AlertAnalysisInstance
+  - azure-devops-extension-api.AlertStateUpdate
+  - azure-devops-extension-api.AnalysisConfiguration
+  - azure-devops-extension-api.AnalysisConfigurationDetails
+  - azure-devops-extension-api.AnalysisInstance
+  - azure-devops-extension-api.AnalysisResult
+  - azure-devops-extension-api.Branch
+  - azure-devops-extension-api.Dependency
+  - azure-devops-extension-api.DependencyResult
+  - azure-devops-extension-api.Dismissal
+  - azure-devops-extension-api.LogicalLocation
+  - azure-devops-extension-api.PhysicalLocation
+  - azure-devops-extension-api.Pipeline
+  - azure-devops-extension-api.Region
+  - azure-devops-extension-api.Result
+  - azure-devops-extension-api.Rule
+  - azure-devops-extension-api.SearchCriteria
+  - azure-devops-extension-api.Tool
+  - azure-devops-extension-api.UxFilters
+  - azure-devops-extension-api.VersionControlDetails
+  - azure-devops-extension-api.VersionControlFilePath
+  - azure-devops-extension-api.VersionControlResult
+  - azure-devops-extension-api.VersionControlSnippet
   - azure-devops-extension-api.Board
   - azure-devops-extension-api.BoardColumn
   - azure-devops-extension-api.BoardColumnBase
@@ -493,7 +525,6 @@ interfaces:
   - azure-devops-extension-api.DefinitionReference
   - azure-devops-extension-api.DefinitionResourceReference
   - azure-devops-extension-api.Demand
-  - azure-devops-extension-api.Dependency
   - azure-devops-extension-api.Deployment
   - azure-devops-extension-api.DeploymentBuild
   - azure-devops-extension-api.DeploymentDeploy
@@ -1090,6 +1121,11 @@ interfaces:
   - azure-devops-extension-api.LocationServiceData
   - azure-devops-extension-api.ResourceAreaInfo
   - azure-devops-extension-api.ServiceDefinition
+  - azure-devops-extension-api.AdvSecEnablementSettings
+  - azure-devops-extension-api.AdvSecEnablementSettingsUpdate
+  - azure-devops-extension-api.AdvSecEnablementStatusUpdate
+  - azure-devops-extension-api.BillingInfo
+  - azure-devops-extension-api.MeterUsage
   - azure-devops-extension-api.ActorFilter
   - azure-devops-extension-api.ActorNotificationReason
   - azure-devops-extension-api.ArtifactFilter
@@ -1193,7 +1229,6 @@ interfaces:
   - azure-devops-extension-api.Log
   - azure-devops-extension-api.LogCollection
   - azure-devops-extension-api.PackageResourceParameters
-  - azure-devops-extension-api.Pipeline
   - azure-devops-extension-api.PipelineBase
   - azure-devops-extension-api.PipelineConfiguration
   - azure-devops-extension-api.PipelineReference
@@ -1608,6 +1643,7 @@ interfaces:
   - azure-devops-extension-api.TaskVariableRestrictions
   - azure-devops-extension-api.TaskVersion
   - azure-devops-extension-api.TimelineRecordFeedLinesWrapper
+  - azure-devops-extension-api.TimelineRecordReference
   - azure-devops-extension-api.ValidationItem
   - azure-devops-extension-api.VariableGroupParameters
   - azure-devops-extension-api.VirtualMachine
@@ -1980,11 +2016,11 @@ interfaces:
   - azure-devops-extension-api.ProcessConfiguration
   - azure-devops-extension-api.ReorderOperation
   - azure-devops-extension-api.ReorderResult
-  - azure-devops-extension-api.Rule
   - azure-devops-extension-api.TaskboardColumn
   - azure-devops-extension-api.TaskboardColumnMapping
   - azure-devops-extension-api.TaskboardColumns
   - azure-devops-extension-api.TaskboardWorkItemColumn
+  - azure-devops-extension-api.TeamAutomationRulesSettingsRequestModel
   - azure-devops-extension-api.TeamBacklogMapping
   - azure-devops-extension-api.TeamCapacity
   - azure-devops-extension-api.TeamCapacityTotals
@@ -2157,6 +2193,7 @@ interfaces:
   - azure-devops-extension-api.WorkItemTypeUpdateModel
 classes:
   - azure-devops-extension-api.AccountsRestClient
+  - azure-devops-extension-api.AlertRestClient
   - azure-devops-extension-api.BoardsRestClient
   - azure-devops-extension-api.BuildRestClient
   - azure-devops-extension-api.RestClientBase
@@ -2174,6 +2211,7 @@ classes:
   - azure-devops-extension-api.GraphRestClient
   - azure-devops-extension-api.PeoplePickerProvider
   - azure-devops-extension-api.LocationsRestClient
+  - azure-devops-extension-api.ManagementRestClient
   - azure-devops-extension-api.NotificationRestClient
   - azure-devops-extension-api.OperationsRestClient
   - azure-devops-extension-api.PipelinesRestClient

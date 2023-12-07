@@ -1079,7 +1079,7 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.BillableCommitter"
           />[]&gt;
-  - name: getBillableCommittersDetail(string, string, Date, number, number)
+  - name: getBillableCommittersDetail(string, string, Date)
     uid: azure-devops-extension-api.GitRestClient.getBillableCommittersDetail
     package: azure-devops-extension-api
     summary: >-
@@ -1091,8 +1091,7 @@ methods:
     syntax:
       content: >-
         function getBillableCommittersDetail(project: string, includeDetails:
-        string, billingDate?: Date, skip?: number, take?: number):
-        Promise<BillableCommitterDetail[]>
+        string, billingDate?: Date): Promise<BillableCommitterDetail[]>
       parameters:
         - id: project
           type: string
@@ -1103,12 +1102,6 @@ methods:
         - id: billingDate
           type: Date
           description: UTC expected. If not specified defaults to the previous billing day.
-        - id: skip
-          type: number
-          description: Skip X rows of resultset to simulate paging.
-        - id: take
-          type: number
-          description: Return Y rows of resultset to simulate paging.
       return:
         description: ''
         type: >-
@@ -2497,8 +2490,8 @@ methods:
         - id: permission
           type: string
           description: >-
-            Permission being requestd, must be "viewAlert" "dismissAlert" or
-            "manage"
+            Permission being requestd, must be "viewAlert" "dismissAlert"
+            "manage" "viewEnablement" or "repoRead"
       return:
         description: ''
         type: Promise&lt;boolean&gt;
@@ -3414,6 +3407,28 @@ methods:
           description: >-
             The id of the identity whose favorites are to be retrieved. If null,
             the requesting identity is used.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.GitRefFavorite"
+          />[]&gt;
+  - name: getRefFavoritesForProject(string, string)
+    uid: azure-devops-extension-api.GitRestClient.getRefFavoritesForProject
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRefFavoritesForProject(project: string, identityId?:
+        string): Promise<GitRefFavorite[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: identityId
+          type: string
+          description: ''
       return:
         description: ''
         type: >-
