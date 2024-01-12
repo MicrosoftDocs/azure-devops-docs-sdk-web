@@ -23,7 +23,7 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
-  - name: getAlert(string, number, string, string)
+  - name: getAlert(string, number, string, string, ExpandOption)
     uid: azure-devops-extension-api.AlertRestClient.getAlert
     package: azure-devops-extension-api
     summary: Get an alert.
@@ -32,7 +32,7 @@ methods:
     syntax:
       content: >-
         function getAlert(project: string, alertId: number, repository: string,
-        ref?: string): Promise<Alert>
+        ref?: string, expand?: ExpandOption): Promise<Alert>
       parameters:
         - id: project
           type: string
@@ -46,6 +46,11 @@ methods:
         - id: ref
           type: string
           description: ''
+        - id: expand
+          type: <xref uid="azure-devops-extension-api.ExpandOption" />
+          description: >-
+            Expand alert attributes. Possible options are
+            {ValidationFingerprint, None}
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;
@@ -117,7 +122,7 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
           />&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;&gt;
-  - name: getAlertSarif(string, number, string, string)
+  - name: getAlertSarif(string, number, string, string, ExpandOption)
     uid: azure-devops-extension-api.AlertRestClient.getAlertSarif
     package: azure-devops-extension-api
     summary: Get an alert.
@@ -126,7 +131,7 @@ methods:
     syntax:
       content: >-
         function getAlertSarif(project: string, alertId: number, repository:
-        string, ref?: string): Promise<string>
+        string, ref?: string, expand?: ExpandOption): Promise<string>
       parameters:
         - id: project
           type: string
@@ -140,6 +145,11 @@ methods:
         - id: ref
           type: string
           description: ''
+        - id: expand
+          type: <xref uid="azure-devops-extension-api.ExpandOption" />
+          description: >-
+            Expand alert attributes. Possible options are
+            {ValidationFingerprint, None}
       return:
         description: ''
         type: Promise&lt;string&gt;

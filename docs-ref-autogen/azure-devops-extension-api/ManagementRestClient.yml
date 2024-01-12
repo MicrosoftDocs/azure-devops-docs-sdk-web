@@ -53,6 +53,28 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: getBillableCommitterDetails(Date)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getBillableCommitterDetails
+    package: azure-devops-extension-api
+    summary: >-
+      Get all billable committers details, including those not matched with a
+      VSID.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getBillableCommitterDetails(billingDate?: Date):
+        Promise<BillableCommitterDetails[]>
+      parameters:
+        - id: billingDate
+          type: Date
+          description: The date to query, or if not provided, today
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.BillableCommitterDetails" />[]&gt;
   - name: getBillingInfo(string)
     uid: azure-devops-extension-api.ManagementRestClient.getBillingInfo
     package: azure-devops-extension-api
