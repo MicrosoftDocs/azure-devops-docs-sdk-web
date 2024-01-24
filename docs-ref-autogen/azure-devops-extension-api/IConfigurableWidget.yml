@@ -1,0 +1,134 @@
+### YamlMime:TSType
+name: IConfigurableWidget
+uid: azure-devops-extension-api.IConfigurableWidget
+package: azure-devops-extension-api
+summary: Configurable widgets implement this interface
+fullName: IConfigurableWidget
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: reload
+    uid: azure-devops-extension-api.IConfigurableWidget.reload
+    package: azure-devops-extension-api
+    summary: >-
+      When the configuration view is changed, the widget is expected to update
+      its view.
+    fullName: reload
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'reload: (newWidgetSettings: WidgetSettings) => Promise<WidgetStatus>'
+      return:
+        description: ''
+        type: '(newWidgetSettings: WidgetSettings) =&gt; Promise&lt;WidgetStatus&gt;'
+inheritedProperties:
+  - name: disableWidgetForStakeholders
+    uid: >-
+      azure-devops-extension-api.IConfigurableWidget.disableWidgetForStakeholders
+    package: azure-devops-extension-api
+    summary: >-
+      The framework calls this method to determine if the widget should be
+      disabled for users with stakeholder license
+    fullName: disableWidgetForStakeholders
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        disableWidgetForStakeholders?: (widgetSettings: WidgetSettings) =>
+        Promise<boolean>
+      return:
+        description: ''
+        type: '(widgetSettings: WidgetSettings) =&gt; Promise&lt;boolean&gt;'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IWidget.disableWidgetForStakeholders](xref:azure-devops-extension-api.IWidget.disableWidgetForStakeholders)
+  - name: lightbox
+    uid: azure-devops-extension-api.IConfigurableWidget.lightbox
+    package: azure-devops-extension-api
+    summary: Run widget in lightboxed mode
+    fullName: lightbox
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        lightbox?: (widgetSettings: WidgetSettings, lightboxSize: Size) =>
+        Promise<WidgetStatus>
+      return:
+        description: ''
+        type: >-
+          (widgetSettings: WidgetSettings, lightboxSize: Size) =&gt;
+          Promise&lt;WidgetStatus&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IWidget.lightbox](xref:azure-devops-extension-api.IWidget.lightbox)
+  - name: listen
+    uid: azure-devops-extension-api.IConfigurableWidget.listen
+    package: azure-devops-extension-api
+    summary: Listen to message from host
+    fullName: listen
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'listen?: (event: string, eventArgs: EventArgs<T>) => void'
+      return:
+        description: ''
+        type: '(event: string, eventArgs: EventArgs&lt;T&gt;) =&gt; void'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IWidget.listen](xref:azure-devops-extension-api.IWidget.listen)
+  - name: load
+    uid: azure-devops-extension-api.IConfigurableWidget.load
+    package: azure-devops-extension-api
+    summary: >-
+      Widgets use the settings provided as well as server side calls to complete
+      their rendering experience.
+       In the future, widgets are expected to provide a loading experience while the calls are being waited to be completed.
+       Until then, the widget host will provide the loading experience
+    fullName: load
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'load: (widgetSettings: WidgetSettings) => Promise<WidgetStatus>'
+      return:
+        description: ''
+        type: '(widgetSettings: WidgetSettings) =&gt; Promise&lt;WidgetStatus&gt;'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IWidget.load](xref:azure-devops-extension-api.IWidget.load)
+  - name: onDashboardLoaded
+    uid: azure-devops-extension-api.IConfigurableWidget.onDashboardLoaded
+    package: azure-devops-extension-api
+    summary: >-
+      Widgets manage any operations that are not necessary for initial load but
+      are required for the full widget experience.
+    fullName: onDashboardLoaded
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onDashboardLoaded?: () => void'
+      return:
+        description: ''
+        type: () =&gt; void
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IWidget.onDashboardLoaded](xref:azure-devops-extension-api.IWidget.onDashboardLoaded)
+  - name: preload
+    uid: azure-devops-extension-api.IConfigurableWidget.preload
+    package: azure-devops-extension-api
+    summary: >-
+      widgets use the settings provided along with the any cached data they may
+      have to paint an interactive state. No network calls should be made by the
+      widget.
+    fullName: preload
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'preload: (widgetSettings: WidgetSettings) => Promise<WidgetStatus>'
+      return:
+        description: ''
+        type: '(widgetSettings: WidgetSettings) =&gt; Promise&lt;WidgetStatus&gt;'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IWidget.preload](xref:azure-devops-extension-api.IWidget.preload)
+extends: <xref uid="azure-devops-extension-api.IWidget" />
