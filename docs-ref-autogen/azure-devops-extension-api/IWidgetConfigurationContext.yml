@@ -1,0 +1,30 @@
+### YamlMime:TSType
+name: IWidgetConfigurationContext
+uid: azure-devops-extension-api.IWidgetConfigurationContext
+package: azure-devops-extension-api
+summary: >-
+  Interface for the object passed to the widget configuration to communicate
+  with its host.
+fullName: IWidgetConfigurationContext
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: notify
+    uid: azure-devops-extension-api.IWidgetConfigurationContext.notify
+    package: azure-devops-extension-api
+    summary: >-
+      The widget configuration calls this method when it wants to notify any of
+      the WidgetEvents to the host
+    fullName: notify
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        notify: (event: string, eventArgs: EventArgs<T>) =>
+        Promise<NotifyResult>
+      return:
+        description: ''
+        type: >-
+          (event: string, eventArgs: EventArgs&lt;T&gt;) =&gt;
+          Promise&lt;NotifyResult&gt;

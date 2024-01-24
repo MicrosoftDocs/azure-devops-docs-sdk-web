@@ -138,6 +138,26 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestResultFailureType" />&gt;
+  - name: createOneMRXTestSession(Session, string)
+    uid: azure-devops-extension-api.TestResultsRestClient.createOneMRXTestSession
+    package: azure-devops-extension-api
+    summary: Creates OneMRX Session object in TCM data store
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createOneMRXTestSession(session: Session, project: string):
+        Promise<number>
+      parameters:
+        - id: session
+          type: <xref uid="azure-devops-extension-api.Session" />
+          description: Received session object.
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;number&gt;
   - name: >-
       createTestIterationResultAttachment(TestAttachmentRequestModel, string,
       number, number, number, string)
@@ -668,6 +688,47 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
+  - name: getOneMRXTestSession(string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.getOneMRXTestSession
+    package: azure-devops-extension-api
+    summary: Retrieves OneMRX Session metadata object in TCM data store
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getOneMRXTestSession(project: string, buildId: number):
+        Promise<Session[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: buildId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Session" />[]&gt;
+  - name: getOneMRXTestSessionLayout(string, string)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.getOneMRXTestSessionLayout
+    package: azure-devops-extension-api
+    summary: Retrieves OneMRX Session Layout object in TCM data store
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getOneMRXTestSessionLayout(project: string, sessionId: string):
+        Promise<any[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: sessionId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;any[]&gt;
   - name: getResultGroupsByBuild(string, number, string, string[], string)
     uid: azure-devops-extension-api.TestResultsRestClient.getResultGroupsByBuild
     package: azure-devops-extension-api

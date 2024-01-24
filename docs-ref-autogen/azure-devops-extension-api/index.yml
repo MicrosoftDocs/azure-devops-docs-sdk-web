@@ -80,6 +80,7 @@ enums:
   - azure-devops-extension-api.GroupMemberPermission
   - azure-devops-extension-api.TeamDashboardPermission
   - azure-devops-extension-api.WidgetScope
+  - azure-devops-extension-api.WidgetStatusType
   - azure-devops-extension-api.AcquisitionAssignmentType
   - azure-devops-extension-api.AcquisitionOperationState
   - azure-devops-extension-api.AcquisitionOperationType
@@ -302,7 +303,9 @@ enums:
   - azure-devops-extension-api.CustomTestFieldScope
   - azure-devops-extension-api.CustomTestFieldType
   - azure-devops-extension-api.FlakyDetectionType
+  - azure-devops-extension-api.LayoutType
   - azure-devops-extension-api.Metrics
+  - azure-devops-extension-api.OneMRXSessionState
   - azure-devops-extension-api.ResultDetails
   - azure-devops-extension-api.ResultGroupType
   - azure-devops-extension-api.ResultMetaDataDetails
@@ -310,6 +313,9 @@ enums:
   - azure-devops-extension-api.ResultObjectType
   - azure-devops-extension-api.RunType
   - azure-devops-extension-api.Service
+  - azure-devops-extension-api.SessionLinkType
+  - azure-devops-extension-api.SessionResult
+  - azure-devops-extension-api.SessionTimelineType
   - azure-devops-extension-api.SuiteExpand
   - azure-devops-extension-api.TCMServiceDataMigrationStatus
   - azure-devops-extension-api.TestConfigurationState
@@ -719,6 +725,17 @@ interfaces:
   - azure-devops-extension-api.WidgetSize
   - azure-devops-extension-api.WidgetTypesResponse
   - azure-devops-extension-api.WidgetsVersionedList
+  - azure-devops-extension-api.CustomSettings
+  - azure-devops-extension-api.EventArgs
+  - azure-devops-extension-api.IConfigurableWidget
+  - azure-devops-extension-api.IWidget
+  - azure-devops-extension-api.IWidgetConfiguration
+  - azure-devops-extension-api.IWidgetConfigurationContext
+  - azure-devops-extension-api.NotifyResult
+  - azure-devops-extension-api.SaveStatus
+  - azure-devops-extension-api.Size
+  - azure-devops-extension-api.WidgetSettings
+  - azure-devops-extension-api.WidgetStatus
   - azure-devops-extension-api.AuthorizationHeader
   - azure-devops-extension-api.DataSourceBindingBase
   - azure-devops-extension-api.ProcessParameters
@@ -1714,6 +1731,7 @@ interfaces:
   - azure-devops-extension-api.LegacyTestRunStatistic
   - azure-devops-extension-api.LegacyTestSettings
   - azure-devops-extension-api.LineBlockCoverage
+  - azure-devops-extension-api.Link
   - azure-devops-extension-api.LinkedWorkItemsQuery
   - azure-devops-extension-api.LinkedWorkItemsQueryResult
   - azure-devops-extension-api.ModuleCoverage
@@ -1762,9 +1780,12 @@ interfaces:
   - azure-devops-extension-api.RunSummary
   - azure-devops-extension-api.RunSummaryModel
   - azure-devops-extension-api.RunUpdateModel
+  - azure-devops-extension-api.Session
+  - azure-devops-extension-api.SessionSourcePipeline
   - azure-devops-extension-api.ShallowReference
   - azure-devops-extension-api.ShallowTestCaseResult
   - azure-devops-extension-api.SharedStepModel
+  - azure-devops-extension-api.Source
   - azure-devops-extension-api.SourceViewBuildCoverage
   - azure-devops-extension-api.StageReference
   - azure-devops-extension-api.SuiteCreateModel
@@ -2071,7 +2092,6 @@ interfaces:
   - azure-devops-extension-api.GitHubConnectionRepoModel
   - azure-devops-extension-api.GitHubConnectionReposBatchRequest
   - azure-devops-extension-api.IdentityReference
-  - azure-devops-extension-api.Link
   - azure-devops-extension-api.ProcessIdModel
   - azure-devops-extension-api.ProcessMigrationResultModel
   - azure-devops-extension-api.ProjectWorkItemStateColors
@@ -2205,6 +2225,10 @@ classes:
   - azure-devops-extension-api.ContributionsRestClient
   - azure-devops-extension-api.CoreRestClient
   - azure-devops-extension-api.DashboardRestClient
+  - azure-devops-extension-api.ConfigurationEvent
+  - azure-devops-extension-api.WidgetConfigurationSave
+  - azure-devops-extension-api.WidgetSizeConverter
+  - azure-devops-extension-api.WidgetStatusHelper
   - azure-devops-extension-api.ExtensionManagementRestClient
   - azure-devops-extension-api.FavoriteRestClient
   - azure-devops-extension-api.FeatureAvailabilityRestClient
