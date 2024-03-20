@@ -758,7 +758,7 @@ methods:
       number, number, string, Date, Date, string)
     uid: azure-devops-extension-api.ReleaseRestClient.getDeployments
     package: azure-devops-extension-api
-    summary: ''
+    summary: Get a list of deployments
     remarks: ''
     isDeprecated: false
     syntax:
@@ -777,49 +777,59 @@ methods:
           description: Project ID or project name
         - id: definitionId
           type: number
-          description: ''
+          description: List the deployments for a given definition id.
         - id: definitionEnvironmentId
           type: number
-          description: ''
+          description: List the deployments for a given definition environment id.
         - id: createdBy
           type: string
-          description: ''
+          description: >-
+            List the deployments for which deployments are created as identity
+            specified.
         - id: minModifiedTime
           type: Date
-          description: ''
+          description: List the deployments with LastModified time \>= minModifiedTime.
         - id: maxModifiedTime
           type: Date
-          description: ''
+          description: List the deployments with LastModified time \<= maxModifiedTime.
         - id: deploymentStatus
           type: <xref uid="azure-devops-extension-api.DeploymentStatus" />
-          description: ''
+          description: List the deployments with given deployment status. Defult is 'All'.
         - id: operationStatus
           type: <xref uid="azure-devops-extension-api.DeploymentOperationStatus" />
-          description: ''
+          description: List the deployments with given operation status. Default is 'All'.
         - id: latestAttemptsOnly
           type: boolean
-          description: ''
+          description: >-
+            'true' to include deployments with latest attempt only. Default is
+            'false'.
         - id: queryOrder
           type: <xref uid="azure-devops-extension-api.ReleaseQueryOrder" />
-          description: ''
+          description: >-
+            List the deployments with given query order. Default is
+            'Descending'.
         - id: top
           type: number
-          description: ''
+          description: >-
+            List the deployments with given top. Default top is '50' and Max top
+            is '100'.
         - id: continuationToken
           type: number
-          description: ''
+          description: List the deployments with deployment id \>= continuationToken.
         - id: createdFor
           type: string
-          description: ''
+          description: >-
+            List the deployments for which deployments are requested as identity
+            specified.
         - id: minStartedTime
           type: Date
-          description: ''
+          description: List the deployments with StartedOn time \>= minStartedTime.
         - id: maxStartedTime
           type: Date
-          description: ''
+          description: List the deployments with StartedOn time \<= maxStartedTime.
         - id: sourceBranch
           type: string
-          description: ''
+          description: List the deployments that are deployed from given branch name.
       return:
         description: ''
         type: >-
