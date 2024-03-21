@@ -508,7 +508,7 @@ methods:
   - name: getSubject(string)
     uid: azure-devops-extension-api.GraphRestClient.getSubject
     package: azure-devops-extension-api
-    summary: ''
+    summary: Resolve a descriptor to a user, group or scope.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -516,7 +516,7 @@ methods:
       parameters:
         - id: subjectDescriptor
           type: string
-          description: ''
+          description: The descriptor of the desired subject.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.GraphSubject" />&gt;
@@ -567,7 +567,9 @@ methods:
   - name: lookupMembers(GraphSubjectLookup)
     uid: azure-devops-extension-api.GraphRestClient.lookupMembers
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Gets all requested members in the current scope (usually organization or
+      account).
     remarks: ''
     isDeprecated: false
     syntax:

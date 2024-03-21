@@ -10,12 +10,16 @@ fields:
   - name: Source
     uid: azure-devops-extension-api.RepositoryCleanOptions.Source
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Run git clean -fdx && git reset --hard or Tf /scorch on
+      $(build.sourcesDirectory)
     numericValue: 0
   - name: SourceAndOutputDir
     uid: azure-devops-extension-api.RepositoryCleanOptions.SourceAndOutputDir
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Run git clean -fdx && git reset --hard or Tf /scorch on
+      $(build.sourcesDirectory), also re-create $(build.binariesDirectory)
     numericValue: 1
   - name: SourceDir
     uid: azure-devops-extension-api.RepositoryCleanOptions.SourceDir

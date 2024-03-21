@@ -503,7 +503,11 @@ methods:
   - name: extensionValidator(AzureRestApiRequestModel)
     uid: azure-devops-extension-api.GalleryRestClient.extensionValidator
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Rest end point to validate if an Azure publisher owns an extension for 3rd
+      party commerce scenario. Azure only supports POST operations and the above
+      signature is not typical of the REST operations.
+      http://sharepoint/sites/AzureUX/_layouts/15/WopiFrame2.aspx?sourcedoc={A793D31E-6DC6-4174-8FA3-DE3F82B51642}&file=Data%20Market%20Partner%20integration%20with%20Marketplace%20service.docx&action=default
     remarks: ''
     isDeprecated: false
     syntax:
@@ -513,7 +517,7 @@ methods:
       parameters:
         - id: azureRestApiRequestModel
           type: <xref uid="azure-devops-extension-api.AzureRestApiRequestModel" />
-          description: ''
+          description: All the parameters are sent in the request body
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -1501,6 +1505,45 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: >-
+      publishExtensionWithPublisherSignature(any, string, string, string,
+      string, boolean)
+    uid: >-
+      azure-devops-extension-api.GalleryRestClient.publishExtensionWithPublisherSignature
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function publishExtensionWithPublisherSignature(content: any,
+        publisherName: string, extensionName: string, extensionType?: string,
+        reCaptchaToken?: string, bypassScopeCheck?: boolean):
+        Promise<PublishedExtension>
+      parameters:
+        - id: content
+          type: any
+          description: Content to upload
+        - id: publisherName
+          type: string
+          description: ''
+        - id: extensionName
+          type: string
+          description: ''
+        - id: extensionType
+          type: string
+          description: ''
+        - id: reCaptchaToken
+          type: string
+          description: ''
+        - id: bypassScopeCheck
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PublishedExtension"
+          />&gt;
   - name: queryAssociatedAzurePublisher(string)
     uid: azure-devops-extension-api.GalleryRestClient.queryAssociatedAzurePublisher
     package: azure-devops-extension-api

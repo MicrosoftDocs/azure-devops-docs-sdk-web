@@ -130,7 +130,9 @@ methods:
     uid: >-
       azure-devops-extension-api.ExtensionManagementRestClient.getAcquisitionOptions
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      This API is called by acquisition/install page to get possible user
+      actions like Buy/Request
     remarks: ''
     isDeprecated: false
     syntax:
@@ -142,22 +144,28 @@ methods:
       parameters:
         - id: itemId
           type: string
-          description: ''
+          description: >-
+            Fully qualified name of extension
+            (\<publisher_id\>.\<extension_id\>)
         - id: testCommerce
           type: boolean
-          description: ''
+          description: >-
+            Parameter to test paid preview extension without making azure plans
+            public
         - id: isFreeOrTrialInstall
           type: boolean
-          description: ''
+          description: >-
+            Parameter represents install or trial workflow (required for legacy
+            install flows)
         - id: isAccountOwner
           type: boolean
-          description: ''
+          description: Parameter represents whether user is owner or PCA of an account
         - id: isLinked
           type: boolean
-          description: ''
+          description: Parameter represents whether account is linked with a subscription
         - id: isConnectedServer
           type: boolean
-          description: ''
+          description: Parameter represents whether Buy operation should be evaluated
         - id: isBuyOperationValid
           type: boolean
           description: ''

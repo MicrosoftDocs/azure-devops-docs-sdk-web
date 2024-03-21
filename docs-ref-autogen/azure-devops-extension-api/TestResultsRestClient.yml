@@ -112,6 +112,26 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: createEnvironment(TestSessionEnvironment[], string)
+    uid: azure-devops-extension-api.TestResultsRestClient.createEnvironment
+    package: azure-devops-extension-api
+    summary: Creates Environment object in TCM data store
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createEnvironment(environments: TestSessionEnvironment[],
+        project: string): Promise<void>
+      parameters:
+        - id: environments
+          type: <xref uid="azure-devops-extension-api.TestSessionEnvironment" />[]
+          description: Received Environment object.
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: createFailureType(TestResultFailureTypeRequestModel, string)
     uid: azure-devops-extension-api.TestResultsRestClient.createFailureType
     package: azure-devops-extension-api
@@ -138,26 +158,6 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestResultFailureType" />&gt;
-  - name: createOneMRXTestSession(Session, string)
-    uid: azure-devops-extension-api.TestResultsRestClient.createOneMRXTestSession
-    package: azure-devops-extension-api
-    summary: Creates OneMRX Session object in TCM data store
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function createOneMRXTestSession(session: Session, project: string):
-        Promise<number>
-      parameters:
-        - id: session
-          type: <xref uid="azure-devops-extension-api.Session" />
-          description: Received session object.
-        - id: project
-          type: string
-          description: Project ID or project name
-      return:
-        description: ''
-        type: Promise&lt;number&gt;
   - name: >-
       createTestIterationResultAttachment(TestAttachmentRequestModel, string,
       number, number, number, string)
@@ -307,6 +307,26 @@ methods:
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestLogStoreAttachmentReference"
           />&gt;
+  - name: createTestSession(TestResultsSession, string)
+    uid: azure-devops-extension-api.TestResultsRestClient.createTestSession
+    package: azure-devops-extension-api
+    summary: Creates TestResultsSession object in TCM data store
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createTestSession(session: TestResultsSession, project:
+        string): Promise<number>
+      parameters:
+        - id: session
+          type: <xref uid="azure-devops-extension-api.TestResultsSession" />
+          description: Received session object.
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;number&gt;
   - name: createTestSettings(TestSettings, string)
     uid: azure-devops-extension-api.TestResultsRestClient.createTestSettings
     package: azure-devops-extension-api
@@ -597,7 +617,9 @@ methods:
   - name: getCodeCoverageSummary(string, number, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getCodeCoverageSummary
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      http://(tfsserver):8080/tfs/DefaultCollection/_apis/test/CodeCoverage?buildId=10&deltaBuildId=9
+      Request: build id and delta build id (optional)
     remarks: ''
     isDeprecated: false
     syntax:
@@ -688,47 +710,6 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: getOneMRXTestSession(string, number)
-    uid: azure-devops-extension-api.TestResultsRestClient.getOneMRXTestSession
-    package: azure-devops-extension-api
-    summary: Retrieves OneMRX Session metadata object in TCM data store
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function getOneMRXTestSession(project: string, buildId: number):
-        Promise<Session[]>
-      parameters:
-        - id: project
-          type: string
-          description: Project ID or project name
-        - id: buildId
-          type: number
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;<xref uid="azure-devops-extension-api.Session" />[]&gt;
-  - name: getOneMRXTestSessionLayout(string, string)
-    uid: >-
-      azure-devops-extension-api.TestResultsRestClient.getOneMRXTestSessionLayout
-    package: azure-devops-extension-api
-    summary: Retrieves OneMRX Session Layout object in TCM data store
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function getOneMRXTestSessionLayout(project: string, sessionId: string):
-        Promise<any[]>
-      parameters:
-        - id: project
-          type: string
-          description: Project ID or project name
-        - id: sessionId
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;any[]&gt;
   - name: getResultGroupsByBuild(string, number, string, string[], string)
     uid: azure-devops-extension-api.TestResultsRestClient.getResultGroupsByBuild
     package: azure-devops-extension-api
@@ -2005,6 +1986,48 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestRunStatistic"
           />&gt;
+  - name: getTestSession(string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.getTestSession
+    package: azure-devops-extension-api
+    summary: Retrieves TestResultsSession metadata object in TCM data store
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTestSession(project: string, buildId: number):
+        Promise<TestResultsSession[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: buildId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestResultsSession"
+          />[]&gt;
+  - name: getTestSessionLayout(string, string)
+    uid: azure-devops-extension-api.TestResultsRestClient.getTestSessionLayout
+    package: azure-devops-extension-api
+    summary: Retrieves TestResultsSession Layout object in TCM data store
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTestSessionLayout(project: string, sessionId: string):
+        Promise<any[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: sessionId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;any[]&gt;
   - name: getTestSettingsById(string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getTestSettingsById
     package: azure-devops-extension-api
@@ -2170,7 +2193,7 @@ methods:
   - name: getTestTagsForBuild(string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getTestTagsForBuild
     package: azure-devops-extension-api
-    summary: ''
+    summary: Get all the tags in a build.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -2183,14 +2206,14 @@ methods:
           description: Project ID or project name
         - id: buildId
           type: number
-          description: ''
+          description: Build ID
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestTag" />[]&gt;
   - name: getTestTagsForRelease(string, number, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getTestTagsForRelease
     package: azure-devops-extension-api
-    summary: ''
+    summary: Get all the tags in a release.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -2203,17 +2226,17 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: ''
+          description: Release ID
         - id: releaseEnvId
           type: number
-          description: ''
+          description: Release environment ID
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestTag" />[]&gt;
   - name: getTestTagSummaryForBuild(string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getTestTagSummaryForBuild
     package: azure-devops-extension-api
-    summary: ''
+    summary: Get all the tags in a build.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -2226,7 +2249,7 @@ methods:
           description: Project ID or project name
         - id: buildId
           type: number
-          description: ''
+          description: Build ID
       return:
         description: ''
         type: >-
@@ -2236,7 +2259,7 @@ methods:
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.getTestTagSummaryForRelease
     package: azure-devops-extension-api
-    summary: ''
+    summary: Get all the tags in a release.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -2249,10 +2272,10 @@ methods:
           description: Project ID or project name
         - id: releaseId
           type: number
-          description: ''
+          description: Release ID
         - id: releaseEnvId
           type: number
-          description: ''
+          description: Release environment ID
       return:
         description: ''
         type: >-
@@ -3017,7 +3040,7 @@ methods:
   - name: updateTestRunTags(TestTagsUpdateModel, string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.updateTestRunTags
     package: azure-devops-extension-api
-    summary: ''
+    summary: Update tags of a run, Tags can be Added and Deleted
     remarks: ''
     isDeprecated: false
     syntax:
@@ -3027,13 +3050,13 @@ methods:
       parameters:
         - id: testTagsUpdateModel
           type: <xref uid="azure-devops-extension-api.TestTagsUpdateModel" />
-          description: ''
+          description: TestTagsUpdateModel
         - id: project
           type: string
           description: Project ID or project name
         - id: runId
           type: number
-          description: ''
+          description: RunId of the run
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestTag" />[]&gt;
