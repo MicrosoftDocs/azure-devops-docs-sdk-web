@@ -8,6 +8,20 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: alertIds
+    uid: azure-devops-extension-api.SearchCriteria.alertIds
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts with the ids specified. \<br /\>Otherwise,
+      return any alert.
+    fullName: alertIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertIds: number[]'
+      return:
+        description: ''
+        type: number[]
   - name: alertType
     uid: azure-devops-extension-api.SearchCriteria.alertType
     package: azure-devops-extension-api
@@ -22,6 +36,20 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.AlertType" />
+  - name: confidenceLevels
+    uid: azure-devops-extension-api.SearchCriteria.confidenceLevels
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts at these confidence levels. \<br
+      /\>Otherwise, return alerts at any confidence level.
+    fullName: confidenceLevels
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'confidenceLevels: Confidence[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Confidence" />[]
   - name: dependencyName
     uid: azure-devops-extension-api.SearchCriteria.dependencyName
     package: azure-devops-extension-api

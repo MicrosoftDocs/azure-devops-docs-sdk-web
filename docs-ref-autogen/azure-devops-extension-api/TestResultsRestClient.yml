@@ -61,6 +61,32 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestCaseResult"
           />[]&gt;
+  - name: addTestResultsToTestRunSession(TestCaseResult[], string, number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.addTestResultsToTestRunSession
+    package: azure-devops-extension-api
+    summary: Add Test Results to test run session
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addTestResultsToTestRunSession(results: TestCaseResult[],
+        project: string, runId: number): Promise<TestCaseResult[]>
+      parameters:
+        - id: results
+          type: <xref uid="azure-devops-extension-api.TestCaseResult" />[]
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: RunId of test run
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestCaseResult"
+          />[]&gt;
   - name: addWorkItemToTestLinks(WorkItemToTestLinks, string)
     uid: azure-devops-extension-api.TestResultsRestClient.addWorkItemToTestLinks
     package: azure-devops-extension-api
@@ -2028,6 +2054,47 @@ methods:
       return:
         description: ''
         type: Promise&lt;any[]&gt;
+  - name: >-
+      getTestSessionResults(string, number, ResultDetails, number, number,
+      TestOutcome[], boolean)
+    uid: azure-devops-extension-api.TestResultsRestClient.getTestSessionResults
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTestSessionResults(project: string, runId: number,
+        detailsToInclude?: ResultDetails, skip?: number, top?: number,
+        outcomes?: TestOutcome[], newTestsOnly?: boolean):
+        Promise<TestCaseResult[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ''
+        - id: detailsToInclude
+          type: <xref uid="azure-devops-extension-api.ResultDetails" />
+          description: ''
+        - id: skip
+          type: number
+          description: ''
+        - id: top
+          type: number
+          description: ''
+        - id: outcomes
+          type: <xref uid="azure-devops-extension-api.TestOutcome" />[]
+          description: ''
+        - id: newTestsOnly
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestCaseResult"
+          />[]&gt;
   - name: getTestSettingsById(string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getTestSettingsById
     package: azure-devops-extension-api

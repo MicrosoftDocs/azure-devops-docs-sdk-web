@@ -3728,7 +3728,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.GitStatus" />[]&gt;
-  - name: getSuggestions(string, string)
+  - name: getSuggestions(string, string, boolean)
     uid: azure-devops-extension-api.GitRestClient.getSuggestions
     package: azure-devops-extension-api
     summary: >-
@@ -3738,8 +3738,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getSuggestions(repositoryId: string, project?: string):
-        Promise<GitSuggestion[]>
+        function getSuggestions(repositoryId: string, project?: string,
+        preferCompareBranch?: boolean): Promise<GitSuggestion[]>
       parameters:
         - id: repositoryId
           type: string
@@ -3747,6 +3747,11 @@ methods:
         - id: project
           type: string
           description: Project ID or project name
+        - id: preferCompareBranch
+          type: boolean
+          description: >-
+            If true, prefer the compare branch over the default branch as target
+            branch for pull requests.
       return:
         description: ''
         type: >-
