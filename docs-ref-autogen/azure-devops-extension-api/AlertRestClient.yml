@@ -219,6 +219,31 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;
+  - name: updateAlertsMetadata(AlertMetadata[], string, string)
+    uid: azure-devops-extension-api.AlertRestClient.updateAlertsMetadata
+    package: azure-devops-extension-api
+    summary: Update alert metadata associations.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateAlertsMetadata(alertsMetadata: AlertMetadata[], project:
+        string, repository: string): Promise<AlertMetadataChange[]>
+      parameters:
+        - id: alertsMetadata
+          type: <xref uid="azure-devops-extension-api.AlertMetadata" />[]
+          description: A list of metadata to associate with alerts.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AlertMetadataChange"
+          />[]&gt;
   - name: uploadSarif(string, string, string)
     uid: azure-devops-extension-api.AlertRestClient.uploadSarif
     package: azure-devops-extension-api

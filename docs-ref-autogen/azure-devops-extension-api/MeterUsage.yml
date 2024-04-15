@@ -36,8 +36,9 @@ properties:
     uid: azure-devops-extension-api.MeterUsage.billedCommitters
     package: azure-devops-extension-api
     summary: >-
-      A list of identifiers for the commiters to the repositories that have
-      Advanced Security features enabled
+      Deprecated - use BilledCommittersIdentities instead A list of Cuids for
+      the commiters to the repositories that have Advanced Security features
+      enabled
     fullName: billedCommitters
     remarks: ''
     isDeprecated: false
@@ -46,6 +47,20 @@ properties:
       return:
         description: ''
         type: string[]
+  - name: billedUsers
+    uid: azure-devops-extension-api.MeterUsage.billedUsers
+    package: azure-devops-extension-api
+    summary: >-
+      A list of BilledCommitter objects that contain the identityRef of
+      committers that have AdvSec enabled
+    fullName: billedUsers
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'billedUsers: BilledCommitter[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.BilledCommitter" />[]
   - name: billingDate
     uid: azure-devops-extension-api.MeterUsage.billingDate
     package: azure-devops-extension-api

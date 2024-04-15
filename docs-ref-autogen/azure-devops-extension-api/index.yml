@@ -10,8 +10,11 @@ enums:
   - azure-devops-extension-api.AlertType
   - azure-devops-extension-api.AnalysisConfigurationType
   - azure-devops-extension-api.ComponentType
+  - azure-devops-extension-api.Confidence
   - azure-devops-extension-api.DismissalType
   - azure-devops-extension-api.ExpandOption
+  - azure-devops-extension-api.MetadataChangeType
+  - azure-devops-extension-api.MetadataOperation
   - azure-devops-extension-api.ResultType
   - azure-devops-extension-api.SarifJobStatus
   - azure-devops-extension-api.Severity
@@ -304,10 +307,11 @@ enums:
   - azure-devops-extension-api.CustomTestFieldScope
   - azure-devops-extension-api.CustomTestFieldType
   - azure-devops-extension-api.FlakyDetectionType
+  - azure-devops-extension-api.LinkOperationType
   - azure-devops-extension-api.Metrics
-  - azure-devops-extension-api.OneMRXSessionState
   - azure-devops-extension-api.ResultDetails
   - azure-devops-extension-api.ResultGroupType
+  - azure-devops-extension-api.ResultLinkType
   - azure-devops-extension-api.ResultMetaDataDetails
   - azure-devops-extension-api.ResultMetadata
   - azure-devops-extension-api.ResultObjectType
@@ -403,6 +407,8 @@ interfaces:
   - azure-devops-extension-api.AccountPreferencesInternal
   - azure-devops-extension-api.Alert
   - azure-devops-extension-api.AlertAnalysisInstance
+  - azure-devops-extension-api.AlertMetadata
+  - azure-devops-extension-api.AlertMetadataChange
   - azure-devops-extension-api.AlertStateUpdate
   - azure-devops-extension-api.AnalysisConfiguration
   - azure-devops-extension-api.AnalysisConfigurationDetails
@@ -413,9 +419,12 @@ interfaces:
   - azure-devops-extension-api.DependencyResult
   - azure-devops-extension-api.Dismissal
   - azure-devops-extension-api.LogicalLocation
+  - azure-devops-extension-api.Metadata
+  - azure-devops-extension-api.MetadataChange
   - azure-devops-extension-api.PhysicalLocation
   - azure-devops-extension-api.Pipeline
   - azure-devops-extension-api.Region
+  - azure-devops-extension-api.RelationMetadata
   - azure-devops-extension-api.Result
   - azure-devops-extension-api.Rule
   - azure-devops-extension-api.SarifUploadStatus
@@ -1148,6 +1157,7 @@ interfaces:
   - azure-devops-extension-api.AdvSecEnablementSettingsUpdate
   - azure-devops-extension-api.AdvSecEnablementStatusUpdate
   - azure-devops-extension-api.BillableCommitterDetails
+  - azure-devops-extension-api.BilledCommitter
   - azure-devops-extension-api.BillingInfo
   - azure-devops-extension-api.MeterUsage
   - azure-devops-extension-api.ActorFilter
@@ -1784,7 +1794,6 @@ interfaces:
   - azure-devops-extension-api.RunSummary
   - azure-devops-extension-api.RunSummaryModel
   - azure-devops-extension-api.RunUpdateModel
-  - azure-devops-extension-api.Session
   - azure-devops-extension-api.SessionSourcePipeline
   - azure-devops-extension-api.ShallowReference
   - azure-devops-extension-api.ShallowTestCaseResult
@@ -1855,6 +1864,7 @@ interfaces:
   - azure-devops-extension-api.TestResultAttachment
   - azure-devops-extension-api.TestResultAttachmentIdentity
   - azure-devops-extension-api.TestResultCreateModel
+  - azure-devops-extension-api.TestResultDimension
   - azure-devops-extension-api.TestResultDocument
   - azure-devops-extension-api.TestResultFailureType
   - azure-devops-extension-api.TestResultFailureTypeRequestModel
