@@ -2740,7 +2740,7 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.VariableGroup"
           />[]&gt;
-  - name: getVariableGroupsById(string, number[])
+  - name: getVariableGroupsById(string, number[], boolean)
     uid: azure-devops-extension-api.TaskAgentRestClient.getVariableGroupsById
     package: azure-devops-extension-api
     summary: Get variable groups by ids.
@@ -2748,8 +2748,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getVariableGroupsById(project: string, groupIds: number[]):
-        Promise<VariableGroup[]>
+        function getVariableGroupsById(project: string, groupIds: number[],
+        loadSecrets?: boolean): Promise<VariableGroup[]>
       parameters:
         - id: project
           type: string
@@ -2757,6 +2757,9 @@ methods:
         - id: groupIds
           type: number[]
           description: Comma separated list of Ids of variable groups.
+        - id: loadSecrets
+          type: boolean
+          description: ''
       return:
         description: ''
         type: >-
