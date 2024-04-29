@@ -23,6 +23,27 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
+  - name: createBillingSnapshot(MeterUsage)
+    uid: azure-devops-extension-api.ManagementRestClient.createBillingSnapshot
+    package: azure-devops-extension-api
+    summary: >-
+      During multi-org billing computation in primary scale unit(EUS21), this
+      API is used to create billing snapshot for a specific org. Primary scale
+      unit will call this API for each org in different scsle units to create
+      billing snapshot. Data will be stored in the org specific partition DB -\>
+      billing snapshot table. This is needed as customers will fetch billing
+      data from their org specific partition DB.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function createBillingSnapshot(meterUsage: MeterUsage): Promise<void>'
+      parameters:
+        - id: meterUsage
+          type: <xref uid="azure-devops-extension-api.MeterUsage" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: deleteBillingInfo(string)
     uid: azure-devops-extension-api.ManagementRestClient.deleteBillingInfo
     package: azure-devops-extension-api
@@ -261,21 +282,6 @@ methods:
           description: ''
         - id: organizationId
           type: string
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;void&gt;
-  - name: setBillingSnapshot(MeterUsage)
-    uid: azure-devops-extension-api.ManagementRestClient.setBillingSnapshot
-    package: azure-devops-extension-api
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function setBillingSnapshot(meterUsage: MeterUsage): Promise<void>'
-      parameters:
-        - id: meterUsage
-          type: <xref uid="azure-devops-extension-api.MeterUsage" />
           description: ''
       return:
         description: ''

@@ -1,0 +1,52 @@
+### YamlMime:TSType
+name: ReportingRestClient
+uid: azure-devops-extension-api.ReportingRestClient
+package: azure-devops-extension-api
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
+fullName: ReportingRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: ReportingRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.ReportingRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new ReportingRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+methods:
+  - name: getAlertSummaryForOrg()
+    uid: azure-devops-extension-api.ReportingRestClient.getAlertSummaryForOrg
+    package: azure-devops-extension-api
+    summary: Get Alert summary by severity for the org
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAlertSummaryForOrg(): Promise<OrgAlertSummary>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.OrgAlertSummary"
+          />&gt;
+  - name: getEnablementSummaryForOrg()
+    uid: azure-devops-extension-api.ReportingRestClient.getEnablementSummaryForOrg
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getEnablementSummaryForOrg(): Promise<OrgEnablementSummary>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.OrgEnablementSummary"
+          />&gt;
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

@@ -36,6 +36,30 @@ properties:
         description: ''
         type: string
 methods:
+  - name: addCustomFields(CustomTestFieldDefinition[], string)
+    uid: azure-devops-extension-api.TestResultsRestClient.addCustomFields
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addCustomFields(newFields: CustomTestFieldDefinition[],
+        project: string): Promise<CustomTestFieldDefinition[]>
+      parameters:
+        - id: newFields
+          type: >-
+            <xref uid="azure-devops-extension-api.CustomTestFieldDefinition"
+            />[]
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CustomTestFieldDefinition" />[]&gt;
   - name: addTestResultsToTestRun(TestCaseResult[], string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.addTestResultsToTestRun
     package: azure-devops-extension-api
@@ -184,6 +208,29 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestResultFailureType" />&gt;
+  - name: createNotification(TestSessionNotification[], string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.createNotification
+    package: azure-devops-extension-api
+    summary: Creates Notification object in TCM data store for a given session
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createNotification(notifications: TestSessionNotification[],
+        project: string, sessionId: number): Promise<number[]>
+      parameters:
+        - id: notifications
+          type: <xref uid="azure-devops-extension-api.TestSessionNotification" />[]
+          description: Notification(s) to add for the specified sessionId
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: sessionId
+          type: number
+          description: ID of Session to add Notification
+      return:
+        description: ''
+        type: Promise&lt;number[]&gt;
   - name: >-
       createTestIterationResultAttachment(TestAttachmentRequestModel, string,
       number, number, number, string)
@@ -736,6 +783,56 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
+  - name: getFlakyTestResultsByBuildDefinitionId(string, number, Date)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.getFlakyTestResultsByBuildDefinitionId
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFlakyTestResultsByBuildDefinitionId(project: string,
+        buildDefinitionId: number, minBuildCreatedDate: Date):
+        Promise<TestCaseResult[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: buildDefinitionId
+          type: number
+          description: ''
+        - id: minBuildCreatedDate
+          type: Date
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestCaseResult"
+          />[]&gt;
+  - name: getFlakyTestResultsByTestRun(string, number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.getFlakyTestResultsByTestRun
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFlakyTestResultsByTestRun(project: string, runId: number):
+        Promise<TestCaseResult[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestCaseResult"
+          />[]&gt;
   - name: getResultGroupsByBuild(string, number, string, string[], string)
     uid: azure-devops-extension-api.TestResultsRestClient.getResultGroupsByBuild
     package: azure-devops-extension-api
@@ -806,6 +903,28 @@ methods:
           Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
           />&lt;<xref
           uid="azure-devops-extension-api.FieldDetailsForTestResults" />&gt;&gt;
+  - name: getSessionNotifications(string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.getSessionNotifications
+    package: azure-devops-extension-api
+    summary: Retrieves TestResultsSession Notification objects in TCM data store
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getSessionNotifications(project: string, sessionId: number):
+        Promise<TestSessionNotification[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: sessionId
+          type: number
+          description: Id of TestResults session to obtain Notifications for.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TestSessionNotification" />[]&gt;
   - name: getSimilarTestResults(string, number, number, number, number, String)
     uid: azure-devops-extension-api.TestResultsRestClient.getSimilarTestResults
     package: azure-devops-extension-api
@@ -1963,6 +2082,26 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestRun" />[]&gt;
+  - name: getTestRunsBySessionId(string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.getTestRunsBySessionId
+    package: azure-devops-extension-api
+    summary: Retrieves Test runs associated to a session
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTestRunsBySessionId(project: string, sessionId: number):
+        Promise<number[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: sessionId
+          type: number
+          description: Id of TestResults session to obtain Test Runs for.
+      return:
+        description: ''
+        type: Promise&lt;number[]&gt;
   - name: getTestRunStatistics(string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getTestRunStatistics
     package: azure-devops-extension-api
@@ -2373,6 +2512,28 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestResultDocument"
           />&gt;
+  - name: queryCustomFields(string, CustomTestFieldScope)
+    uid: azure-devops-extension-api.TestResultsRestClient.queryCustomFields
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryCustomFields(project: string, scopeFilter:
+        CustomTestFieldScope): Promise<CustomTestFieldDefinition[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: scopeFilter
+          type: <xref uid="azure-devops-extension-api.CustomTestFieldScope" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CustomTestFieldDefinition" />[]&gt;
   - name: queryResultTrendForBuild(TestResultTrendFilter, string)
     uid: azure-devops-extension-api.TestResultsRestClient.queryResultTrendForBuild
     package: azure-devops-extension-api
@@ -3081,6 +3242,32 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestResultMetaData"
           />&gt;
+  - name: updateTestResultsToTestRunSession(TestCaseResult[], string, number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.updateTestResultsToTestRunSession
+    package: azure-devops-extension-api
+    summary: Creates TestResultsMRX objects in TCM data store for existing test results
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateTestResultsToTestRunSession(results: TestCaseResult[],
+        project: string, runId: number): Promise<number[]>
+      parameters:
+        - id: results
+          type: <xref uid="azure-devops-extension-api.TestCaseResult" />[]
+          description: >-
+            Results object with only test results MRX properties and existing
+            testResultId
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: RunId of test run
+      return:
+        description: ''
+        type: Promise&lt;number[]&gt;
   - name: updateTestRun(RunUpdateModel, string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.updateTestRun
     package: azure-devops-extension-api
