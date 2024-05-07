@@ -1027,6 +1027,57 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.SuiteEntry" />[]&gt;
+  - name: restoreDeletedTestPlan(TestPlanAndSuiteRestoreModel, string, number)
+    uid: azure-devops-extension-api.TestPlanRestClient.restoreDeletedTestPlan
+    package: azure-devops-extension-api
+    summary: Restore deleted test plan
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function restoreDeletedTestPlan(restoreModel:
+        TestPlanAndSuiteRestoreModel, project: string, planId: number):
+        Promise<void>
+      parameters:
+        - id: restoreModel
+          type: >-
+            <xref uid="azure-devops-extension-api.TestPlanAndSuiteRestoreModel"
+            />
+          description: The model containing the restore information
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: planId
+          type: number
+          description: The ID of the test plan to restore
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: restoreDeletedTestSuite(TestPlanAndSuiteRestoreModel, string, number)
+    uid: azure-devops-extension-api.TestPlanRestClient.restoreDeletedTestSuite
+    package: azure-devops-extension-api
+    summary: Restore deleted test suite
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function restoreDeletedTestSuite(payload: TestPlanAndSuiteRestoreModel,
+        project: string, suiteId: number): Promise<void>
+      parameters:
+        - id: payload
+          type: >-
+            <xref uid="azure-devops-extension-api.TestPlanAndSuiteRestoreModel"
+            />
+          description: The model containing the restore information
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: suiteId
+          type: number
+          description: The ID of the test suite to restore
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: >-
       updateSuiteTestCases(SuiteTestCaseCreateUpdateParameters[], string,
       number, number)

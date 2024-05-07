@@ -38,6 +38,24 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AdvSecEnablementStatusUpdate.advSecEnabled](xref:azure-devops-extension-api.AdvSecEnablementStatusUpdate.advSecEnabled)
+  - name: advSecEnablementFeatures
+    uid: >-
+      azure-devops-extension-api.AdvSecEnablementSettingsUpdate.advSecEnablementFeatures
+    package: azure-devops-extension-api
+    summary: >-
+      Includes additional features that can be enabled alongside Advanced
+      Security
+    fullName: advSecEnablementFeatures
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'advSecEnablementFeatures: AdvSecEnablementFeatures'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AdvSecEnablementFeatures" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AdvSecEnablementStatusUpdate.advSecEnablementFeatures](xref:azure-devops-extension-api.AdvSecEnablementStatusUpdate.advSecEnablementFeatures)
   - name: blockPushes
     uid: azure-devops-extension-api.AdvSecEnablementSettingsUpdate.blockPushes
     package: azure-devops-extension-api
@@ -56,24 +74,4 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AdvSecEnablementStatusUpdate.blockPushes](xref:azure-devops-extension-api.AdvSecEnablementStatusUpdate.blockPushes)
-  - name: dependabotEnabled
-    uid: >-
-      azure-devops-extension-api.AdvSecEnablementSettingsUpdate.dependabotEnabled
-    package: azure-devops-extension-api
-    summary: >-
-      Dependabot enablement status set to False when disabled and True when
-      enabled; Null is never explicitly set. \<br /\>When true, Dependabot will
-      open PRs to support security updates for outdated dependencies. \<br /\>If
-      includeAllProperties in the request is false, this value will be null.
-    fullName: dependabotEnabled
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'dependabotEnabled: boolean'
-      return:
-        description: ''
-        type: boolean
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AdvSecEnablementStatusUpdate.dependabotEnabled](xref:azure-devops-extension-api.AdvSecEnablementStatusUpdate.dependabotEnabled)
 extends: <xref uid="azure-devops-extension-api.AdvSecEnablementStatusUpdate" />
