@@ -1963,6 +1963,298 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitForkSyncRequest"
           />[]&gt;
+  - name: >-
+      getHfsItem(string, string, string, string, VersionControlRecursionType,
+      boolean, boolean, boolean, GitVersionDescriptor, boolean, boolean,
+      boolean)
+    uid: azure-devops-extension-api.GitRestClient.getHfsItem
+    package: azure-devops-extension-api
+    summary: >-
+      Get Item Metadata and/or Content for a single item. The download parameter
+      is to indicate whether the content should be available as a download or
+      just sent as a stream in the response. Doesn't apply to zipped content,
+      which is always returned as a download.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getHfsItem(repositoryId: string, path: string, project?:
+        string, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, includeContentMetadata?: boolean,
+        latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
+        GitVersionDescriptor, includeContent?: boolean, resolveHfs?: boolean,
+        sanitize?: boolean): Promise<GitItem>
+      parameters:
+        - id: repositoryId
+          type: string
+          description: The name or ID of the repository.
+        - id: path
+          type: string
+          description: The item path.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: scopePath
+          type: string
+          description: The path scope.  The default is null.
+        - id: recursionLevel
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
+          description: >-
+            The recursion level of this request. The default is 'none', no
+            recursion.
+        - id: includeContentMetadata
+          type: boolean
+          description: Set to true to include content metadata.  Default is false.
+        - id: latestProcessedChange
+          type: boolean
+          description: Set to true to include the latest changes.  Default is false.
+        - id: download
+          type: boolean
+          description: Set to true to download the response as a file.  Default is false.
+        - id: versionDescriptor
+          type: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />
+          description: >-
+            Version descriptor.  Default is the default branch for the
+            repository.
+        - id: includeContent
+          type: boolean
+          description: >-
+            Set to true to include item content when requesting json.  Default
+            is false.
+        - id: resolveHfs
+          type: boolean
+          description: >-
+            Set to true to resolve Git HFS pointer files to return actual
+            content from Git HFS.  Default is true.
+        - id: sanitize
+          type: boolean
+          description: >-
+            Set to true to sanitize an svg file and return it as image. Useful
+            only if requested for svg file. Default is false.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitItem" />&gt;
+  - name: >-
+      getHfsItemContent(string, string, string, string,
+      VersionControlRecursionType, boolean, boolean, boolean,
+      GitVersionDescriptor, boolean, boolean, boolean)
+    uid: azure-devops-extension-api.GitRestClient.getHfsItemContent
+    package: azure-devops-extension-api
+    summary: >-
+      Get Item Metadata and/or Content for a single item. The download parameter
+      is to indicate whether the content should be available as a download or
+      just sent as a stream in the response. Doesn't apply to zipped content,
+      which is always returned as a download.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getHfsItemContent(repositoryId: string, path: string, project?:
+        string, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, includeContentMetadata?: boolean,
+        latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
+        GitVersionDescriptor, includeContent?: boolean, resolveHfs?: boolean,
+        sanitize?: boolean): Promise<ArrayBuffer>
+      parameters:
+        - id: repositoryId
+          type: string
+          description: The name or ID of the repository.
+        - id: path
+          type: string
+          description: The item path.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: scopePath
+          type: string
+          description: The path scope.  The default is null.
+        - id: recursionLevel
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
+          description: >-
+            The recursion level of this request. The default is 'none', no
+            recursion.
+        - id: includeContentMetadata
+          type: boolean
+          description: Set to true to include content metadata.  Default is false.
+        - id: latestProcessedChange
+          type: boolean
+          description: Set to true to include the latest changes.  Default is false.
+        - id: download
+          type: boolean
+          description: Set to true to download the response as a file.  Default is false.
+        - id: versionDescriptor
+          type: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />
+          description: >-
+            Version descriptor.  Default is the default branch for the
+            repository.
+        - id: includeContent
+          type: boolean
+          description: >-
+            Set to true to include item content when requesting json.  Default
+            is false.
+        - id: resolveHfs
+          type: boolean
+          description: >-
+            Set to true to resolve Git HFS pointer files to return actual
+            content from Git HFS.  Default is true.
+        - id: sanitize
+          type: boolean
+          description: >-
+            Set to true to sanitize an svg file and return it as image. Useful
+            only if requested for svg file. Default is false.
+      return:
+        description: ''
+        type: Promise&lt;ArrayBuffer&gt;
+  - name: >-
+      getHfsItemText(string, string, string, string,
+      VersionControlRecursionType, boolean, boolean, boolean,
+      GitVersionDescriptor, boolean, boolean, boolean)
+    uid: azure-devops-extension-api.GitRestClient.getHfsItemText
+    package: azure-devops-extension-api
+    summary: >-
+      Get Item Metadata and/or Content for a single item. The download parameter
+      is to indicate whether the content should be available as a download or
+      just sent as a stream in the response. Doesn't apply to zipped content,
+      which is always returned as a download.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getHfsItemText(repositoryId: string, path: string, project?:
+        string, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, includeContentMetadata?: boolean,
+        latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
+        GitVersionDescriptor, includeContent?: boolean, resolveHfs?: boolean,
+        sanitize?: boolean): Promise<string>
+      parameters:
+        - id: repositoryId
+          type: string
+          description: The name or ID of the repository.
+        - id: path
+          type: string
+          description: The item path.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: scopePath
+          type: string
+          description: The path scope.  The default is null.
+        - id: recursionLevel
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
+          description: >-
+            The recursion level of this request. The default is 'none', no
+            recursion.
+        - id: includeContentMetadata
+          type: boolean
+          description: Set to true to include content metadata.  Default is false.
+        - id: latestProcessedChange
+          type: boolean
+          description: Set to true to include the latest changes.  Default is false.
+        - id: download
+          type: boolean
+          description: Set to true to download the response as a file.  Default is false.
+        - id: versionDescriptor
+          type: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />
+          description: >-
+            Version descriptor.  Default is the default branch for the
+            repository.
+        - id: includeContent
+          type: boolean
+          description: >-
+            Set to true to include item content when requesting json.  Default
+            is false.
+        - id: resolveHfs
+          type: boolean
+          description: >-
+            Set to true to resolve Git HFS pointer files to return actual
+            content from Git HFS.  Default is true.
+        - id: sanitize
+          type: boolean
+          description: >-
+            Set to true to sanitize an svg file and return it as image. Useful
+            only if requested for svg file. Default is false.
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: >-
+      getHfsItemZip(string, string, string, string, VersionControlRecursionType,
+      boolean, boolean, boolean, GitVersionDescriptor, boolean, boolean,
+      boolean)
+    uid: azure-devops-extension-api.GitRestClient.getHfsItemZip
+    package: azure-devops-extension-api
+    summary: >-
+      Get Item Metadata and/or Content for a single item. The download parameter
+      is to indicate whether the content should be available as a download or
+      just sent as a stream in the response. Doesn't apply to zipped content,
+      which is always returned as a download.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getHfsItemZip(repositoryId: string, path: string, project?:
+        string, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, includeContentMetadata?: boolean,
+        latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
+        GitVersionDescriptor, includeContent?: boolean, resolveHfs?: boolean,
+        sanitize?: boolean): Promise<ArrayBuffer>
+      parameters:
+        - id: repositoryId
+          type: string
+          description: The name or ID of the repository.
+        - id: path
+          type: string
+          description: The item path.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: scopePath
+          type: string
+          description: The path scope.  The default is null.
+        - id: recursionLevel
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
+          description: >-
+            The recursion level of this request. The default is 'none', no
+            recursion.
+        - id: includeContentMetadata
+          type: boolean
+          description: Set to true to include content metadata.  Default is false.
+        - id: latestProcessedChange
+          type: boolean
+          description: Set to true to include the latest changes.  Default is false.
+        - id: download
+          type: boolean
+          description: Set to true to download the response as a file.  Default is false.
+        - id: versionDescriptor
+          type: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />
+          description: >-
+            Version descriptor.  Default is the default branch for the
+            repository.
+        - id: includeContent
+          type: boolean
+          description: >-
+            Set to true to include item content when requesting json.  Default
+            is false.
+        - id: resolveHfs
+          type: boolean
+          description: >-
+            Set to true to resolve Git HFS pointer files to return actual
+            content from Git HFS.  Default is true.
+        - id: sanitize
+          type: boolean
+          description: >-
+            Set to true to sanitize an svg file and return it as image. Useful
+            only if requested for svg file. Default is false.
+      return:
+        description: ''
+        type: Promise&lt;ArrayBuffer&gt;
   - name: getImportRequest(string, string, number)
     uid: azure-devops-extension-api.GitRestClient.getImportRequest
     package: azure-devops-extension-api
