@@ -182,6 +182,35 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: createEnvironmentAndMachine(SessionEnvironmentAndMachine, string, number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.createEnvironmentAndMachine
+    package: azure-devops-extension-api
+    summary: >-
+      For the provided sessionId, creates environment, configuration, and
+      machine objects in TCM data store
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createEnvironmentAndMachine(sessionEnvironmentAndMachine:
+        SessionEnvironmentAndMachine, project: string, sessionId: number):
+        Promise<void>
+      parameters:
+        - id: sessionEnvironmentAndMachine
+          type: >-
+            <xref uid="azure-devops-extension-api.SessionEnvironmentAndMachine"
+            />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: sessionId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: createFailureType(TestResultFailureTypeRequestModel, string)
     uid: azure-devops-extension-api.TestResultsRestClient.createFailureType
     package: azure-devops-extension-api
@@ -456,6 +485,26 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
+  - name: deleteCustomFieldById(string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.deleteCustomFieldById
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteCustomFieldById(project: string, testExtensionFieldId:
+        number): Promise<void>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: testExtensionFieldId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: deleteFailureType(string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.deleteFailureType
     package: azure-devops-extension-api
@@ -3186,6 +3235,31 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: updateCustomField(CustomTestFieldUpdateDefinition, string)
+    uid: azure-devops-extension-api.TestResultsRestClient.updateCustomField
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateCustomField(updateCustomTestField:
+        CustomTestFieldUpdateDefinition, project: string):
+        Promise<CustomTestFieldDefinition>
+      parameters:
+        - id: updateCustomTestField
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.CustomTestFieldUpdateDefinition" />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CustomTestFieldDefinition" />&gt;
   - name: updatePipelinesTestSettings(TestResultsUpdateSettings, string)
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.updatePipelinesTestSettings
