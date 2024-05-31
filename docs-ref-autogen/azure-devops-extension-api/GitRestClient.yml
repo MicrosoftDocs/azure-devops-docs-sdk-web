@@ -2110,6 +2110,67 @@ methods:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
   - name: >-
+      getHfsItems(string, string, string, VersionControlRecursionType, boolean,
+      boolean, boolean, boolean, GitVersionDescriptor, boolean)
+    uid: azure-devops-extension-api.GitRestClient.getHfsItems
+    package: azure-devops-extension-api
+    summary: >-
+      Get Item Metadata and/or Content for a collection of items. The download
+      parameter is to indicate whether the content should be available as a
+      download or just sent as a stream in the response. Doesn't apply to zipped
+      content which is always returned as a download.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getHfsItems(repositoryId: string, project?: string, scopePath?:
+        string, recursionLevel?: VersionControlRecursionType,
+        includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+        download?: boolean, includeLinks?: boolean, versionDescriptor?:
+        GitVersionDescriptor, zipForUnix?: boolean): Promise<GitItem[]>
+      parameters:
+        - id: repositoryId
+          type: string
+          description: The name or ID of the repository.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: scopePath
+          type: string
+          description: The path scope.  The default is null.
+        - id: recursionLevel
+          type: >-
+            <xref uid="azure-devops-extension-api.VersionControlRecursionType"
+            />
+          description: >-
+            The recursion level of this request. The default is 'none', no
+            recursion.
+        - id: includeContentMetadata
+          type: boolean
+          description: Set to true to include content metadata.  Default is false.
+        - id: latestProcessedChange
+          type: boolean
+          description: Set to true to include the latest changes.  Default is false.
+        - id: download
+          type: boolean
+          description: Set to true to download the response as a file.  Default is false.
+        - id: includeLinks
+          type: boolean
+          description: Set to true to include links to items.  Default is false.
+        - id: versionDescriptor
+          type: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />
+          description: >-
+            Version descriptor.  Default is the default branch for the
+            repository.
+        - id: zipForUnix
+          type: boolean
+          description: >-
+            Set to true to keep the file permissions for unix (and POSIX)
+            systems like executables and symlinks
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.GitItem" />[]&gt;
+  - name: >-
       getHfsItemText(string, string, string, string,
       VersionControlRecursionType, boolean, boolean, boolean,
       GitVersionDescriptor, boolean, boolean, boolean)

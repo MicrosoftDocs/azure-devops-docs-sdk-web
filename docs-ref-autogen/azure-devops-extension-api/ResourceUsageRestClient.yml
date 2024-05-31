@@ -1,0 +1,71 @@
+### YamlMime:TSType
+name: ResourceUsageRestClient
+uid: azure-devops-extension-api.ResourceUsageRestClient
+package: azure-devops-extension-api
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
+fullName: ResourceUsageRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: ResourceUsageRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.ResourceUsageRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new ResourceUsageRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+properties:
+  - name: RESOURCE_AREA_ID
+    uid: azure-devops-extension-api.ResourceUsageRestClient.RESOURCE_AREA_ID
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: RESOURCE_AREA_ID
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static RESOURCE_AREA_ID: string'
+      return:
+        description: ''
+        type: string
+methods:
+  - name: getLimits()
+    uid: azure-devops-extension-api.ResourceUsageRestClient.getLimits
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getLimits(): Promise<{[key: string]: ResourceUsage.Usage}>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;{[key: string]: <xref
+          uid="azure-devops-extension-api.Usage" />}&gt;
+  - name: getProjectLimit(string)
+    uid: azure-devops-extension-api.ResourceUsageRestClient.getProjectLimit
+    package: azure-devops-extension-api
+    summary: Gets the Project Level limits and Usage for a project.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getProjectLimit(project: string): Promise<{[key: string]:
+        ResourceUsage.Usage}>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;{[key: string]: <xref
+          uid="azure-devops-extension-api.Usage" />}&gt;
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />
