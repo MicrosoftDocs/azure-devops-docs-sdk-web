@@ -244,7 +244,7 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AlertMetadataChange"
           />[]&gt;
-  - name: uploadSarif(string, string, string)
+  - name: uploadSarif(string, string, string, String)
     uid: azure-devops-extension-api.AlertRestClient.uploadSarif
     package: azure-devops-extension-api
     summary: Upload a Sarif containing security alerts
@@ -253,7 +253,7 @@ methods:
     syntax:
       content: >-
         function uploadSarif(content: string, project: string, repository:
-        string): Promise<number>
+        string, notificationFlag?: String): Promise<number>
       parameters:
         - id: content
           type: string
@@ -264,6 +264,9 @@ methods:
         - id: repository
           type: string
           description: The name or ID of a repository
+        - id: notificationFlag
+          type: String
+          description: Header to signal that this is a progress notification
       return:
         description: ''
         type: Promise&lt;number&gt;

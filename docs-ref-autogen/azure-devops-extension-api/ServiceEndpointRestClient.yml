@@ -281,7 +281,9 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OAuthConfiguration"
           />[]&gt;
-  - name: getServiceEndpointDetails(string, string, ServiceEndpointActionFilter)
+  - name: >-
+      getServiceEndpointDetails(string, string, ServiceEndpointActionFilter,
+      boolean)
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpointDetails
     package: azure-devops-extension-api
@@ -291,7 +293,8 @@ methods:
     syntax:
       content: >-
         function getServiceEndpointDetails(project: string, endpointId: string,
-        actionFilter?: ServiceEndpointActionFilter): Promise<ServiceEndpoint>
+        actionFilter?: ServiceEndpointActionFilter, loadConfidetantialData?:
+        boolean): Promise<ServiceEndpoint>
       parameters:
         - id: project
           type: string
@@ -306,6 +309,11 @@ methods:
           description: >-
             Action filter for the service connection. It specifies the action
             which can be performed on the service connection.
+        - id: loadConfidetantialData
+          type: boolean
+          description: >-
+            Flag to include confidential details of service endpoint. This is
+            for internal use only.
       return:
         description: ''
         type: >-
