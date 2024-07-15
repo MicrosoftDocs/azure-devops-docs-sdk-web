@@ -68,7 +68,7 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ConnectionData"
           />&gt;
-  - name: getResourceArea(string, string, string)
+  - name: getResourceArea(string, string, string, string)
     uid: azure-devops-extension-api.LocationsRestClient.getResourceArea
     package: azure-devops-extension-api
     summary: ''
@@ -77,7 +77,8 @@ methods:
     syntax:
       content: >-
         function getResourceArea(areaId: string, enterpriseName?: string,
-        organizationName?: string): Promise<ResourceAreaInfo>
+        organizationName?: string, accessMapping?: string):
+        Promise<ResourceAreaInfo>
       parameters:
         - id: areaId
           type: string
@@ -88,12 +89,15 @@ methods:
         - id: organizationName
           type: string
           description: ''
+        - id: accessMapping
+          type: string
+          description: ''
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ResourceAreaInfo"
           />&gt;
-  - name: getResourceAreaByHost(string, string)
+  - name: getResourceAreaByHost(string, string, string)
     uid: azure-devops-extension-api.LocationsRestClient.getResourceAreaByHost
     package: azure-devops-extension-api
     summary: ''
@@ -101,13 +105,16 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getResourceAreaByHost(areaId: string, hostId: string):
-        Promise<ResourceAreaInfo>
+        function getResourceAreaByHost(areaId: string, hostId: string,
+        accessMapping?: string): Promise<ResourceAreaInfo>
       parameters:
         - id: areaId
           type: string
           description: ''
         - id: hostId
+          type: string
+          description: ''
+        - id: accessMapping
           type: string
           description: ''
       return:

@@ -133,6 +133,31 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemToTestLinks"
           />&gt;
+  - name: createAnalysis(TestSessionAnalysis[], string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.createAnalysis
+    package: azure-devops-extension-api
+    summary: Creates Session Analysis object in TCM data store for a given session
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAnalysis(analysis: TestSessionAnalysis[], project:
+        string, sessionId: number): Promise<AnalysisFailureGroupReturn[]>
+      parameters:
+        - id: analysis
+          type: <xref uid="azure-devops-extension-api.TestSessionAnalysis" />[]
+          description: Session Analysis details
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: sessionId
+          type: number
+          description: ID of Session to add Notification
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.AnalysisFailureGroupReturn" />[]&gt;
   - name: >-
       createBuildAttachmentInLogStore(TestAttachmentRequestModel, string,
       number)

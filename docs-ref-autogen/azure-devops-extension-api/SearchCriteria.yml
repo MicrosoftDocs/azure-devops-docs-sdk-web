@@ -56,7 +56,7 @@ properties:
     summary: >-
       If provided, only alerts for this dependency are returned. \<br
       /\>Otherwise, return alerts for all dependencies. \<br /\>In a sarif
-      submission, a dependency (or a vulnerable component) is specified in
+      submission, a dependency (or a component) is specified in
       result.RelatedLocations[].logicalLocation.
     fullName: dependencyName
     remarks: ''
@@ -89,6 +89,22 @@ properties:
     isDeprecated: false
     syntax:
       content: 'keywords: string'
+      return:
+        description: ''
+        type: string
+  - name: licenseName
+    uid: azure-devops-extension-api.SearchCriteria.licenseName
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only alerts created for dependency with this license are
+      returned. \<br /\>Otherwise, return alerts for all licenses. \<br /\>In a
+      sarif submission, license for a dependency (or a component) is specified
+      in result.RelatedLocations[].logicalLocation.properties.license.
+    fullName: licenseName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'licenseName: string'
       return:
         description: ''
         type: string
