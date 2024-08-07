@@ -3881,6 +3881,56 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.GitRepository"
           />[]&gt;
+  - name: >-
+      getRepositoriesPaged(string, boolean, boolean, boolean, string, number,
+      string)
+    uid: azure-devops-extension-api.GitRestClient.getRepositoriesPaged
+    package: azure-devops-extension-api
+    summary: Retrieve git repositories with filter by name and pagination.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRepositoriesPaged(projectId: string, includeLinks?: boolean,
+        includeAllUrls?: boolean, includeHidden?: boolean, filterContains?:
+        string, top?: number, continuationToken?: string):
+        Promise<PagedList<GitRepository>>
+      parameters:
+        - id: projectId
+          type: string
+          description: "ID or name of the\_team project."
+        - id: includeLinks
+          type: boolean
+          description: >-
+            [optional] True to include reference links. The default value is
+            false.
+        - id: includeAllUrls
+          type: boolean
+          description: >-
+            [optional] True to include all remote URLs. The default value is
+            false.
+        - id: includeHidden
+          type: boolean
+          description: >-
+            [optional] True to include hidden repositories. The default value is
+            false.
+        - id: filterContains
+          type: string
+          description: '[optional] A filter to apply to the refs (contains).'
+        - id: top
+          type: number
+          description: >-
+            [optional] Maximum number of repositories to return. It cannot be
+            bigger than 500. If it is not provided but continuationToken is, top
+            will default to 100.
+        - id: continuationToken
+          type: string
+          description: The continuation token used for pagination.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.GitRepository" />&gt;&gt;
   - name: getRepository(string, string)
     uid: azure-devops-extension-api.GitRestClient.getRepository
     package: azure-devops-extension-api

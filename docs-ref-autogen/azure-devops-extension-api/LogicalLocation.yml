@@ -23,12 +23,26 @@ properties:
   - name: kind
     uid: azure-devops-extension-api.LogicalLocation.kind
     package: azure-devops-extension-api
-    summary: 'Possible values: "unknown" "rootDependency" and "vulnerableDependency"'
+    summary: Dependency kind of this logical location.
     fullName: kind
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'kind: string'
+      content: 'kind: DependencyKind'
       return:
         description: ''
-        type: string
+        type: <xref uid="azure-devops-extension-api.DependencyKind" />
+  - name: license
+    uid: azure-devops-extension-api.LogicalLocation.license
+    package: azure-devops-extension-api
+    summary: >-
+      License information for Dependency Only applicable when Kind is
+      "Component" and the alertType of the alert with this location is License
+    fullName: license
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'license: License'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.License" />

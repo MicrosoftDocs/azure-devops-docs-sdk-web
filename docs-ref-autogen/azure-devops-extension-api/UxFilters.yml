@@ -11,7 +11,9 @@ properties:
   - name: branches
     uid: azure-devops-extension-api.UxFilters.branches
     package: azure-devops-extension-api
-    summary: Branches to display alerts for.  If empty, show alerts from all branches
+    summary: >-
+      Display alerts for specified branches. Show alerts for all branches if
+      none are specified.
     fullName: branches
     remarks: ''
     isDeprecated: false
@@ -23,7 +25,9 @@ properties:
   - name: confidenceLevels
     uid: azure-devops-extension-api.UxFilters.confidenceLevels
     package: azure-devops-extension-api
-    summary: Confidence levels to show, only valid when AlertType is Secret.
+    summary: >-
+      Display alerts for specified confidence levels. Show alerts for all
+      confidence levels. if none are specified.
     fullName: confidenceLevels
     remarks: ''
     isDeprecated: false
@@ -32,10 +36,26 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.Confidence" />[]
+  - name: licenses
+    uid: azure-devops-extension-api.UxFilters.licenses
+    package: azure-devops-extension-api
+    summary: >-
+      Display alerts for specified licenses. Show alerts for all licenses if
+      none are specified.
+    fullName: licenses
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'licenses: License[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.License" />[]
   - name: packages
     uid: azure-devops-extension-api.UxFilters.packages
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Display alerts for specified packages. Show alerts for all packages if
+      none are specified.
     fullName: packages
     remarks: ''
     isDeprecated: false
@@ -47,7 +67,9 @@ properties:
   - name: pipelines
     uid: azure-devops-extension-api.UxFilters.pipelines
     package: azure-devops-extension-api
-    summary: Pipelines to show alerts for.  If empty, show alerts for all pipelines
+    summary: >-
+      Display alerts for specified pipelines. Show alerts for all pipelines if
+      none are specified.
     fullName: pipelines
     remarks: ''
     isDeprecated: false
@@ -71,7 +93,9 @@ properties:
   - name: rules
     uid: azure-devops-extension-api.UxFilters.rules
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Display alerts for specified rules. Show alerts for all rules if none are
+      specified.
     fullName: rules
     remarks: ''
     isDeprecated: false
@@ -83,7 +107,9 @@ properties:
   - name: secretTypes
     uid: azure-devops-extension-api.UxFilters.secretTypes
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Display alerts for specified secret types. Show alerts for all secret
+      types if none are specified.
     fullName: secretTypes
     remarks: ''
     isDeprecated: false
@@ -95,7 +121,9 @@ properties:
   - name: severities
     uid: azure-devops-extension-api.UxFilters.severities
     package: azure-devops-extension-api
-    summary: Alert severities to show.  If empty show all alert servities
+    summary: >-
+      Display alerts for specified severities. Show alerts for all severities if
+      none are specified.
     fullName: severities
     remarks: ''
     isDeprecated: false
@@ -107,7 +135,9 @@ properties:
   - name: states
     uid: azure-devops-extension-api.UxFilters.states
     package: azure-devops-extension-api
-    summary: Alert states to show.  If empty show all alert states
+    summary: >-
+      Display alerts for specified states. Show alerts for all states if none
+      are specified.
     fullName: states
     remarks: ''
     isDeprecated: false
@@ -119,7 +149,9 @@ properties:
   - name: tools
     uid: azure-devops-extension-api.UxFilters.tools
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Display alerts for specified tools. Show alerts for all tools if none are
+      specified.
     fullName: tools
     remarks: ''
     isDeprecated: false
