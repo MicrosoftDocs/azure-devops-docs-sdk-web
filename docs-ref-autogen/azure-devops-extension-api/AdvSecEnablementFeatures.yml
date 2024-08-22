@@ -25,3 +25,28 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: forceRepoSecretScanning
+    uid: >-
+      azure-devops-extension-api.AdvSecEnablementFeatures.forceRepoSecretScanning
+    package: azure-devops-extension-api
+    summary: >-
+      ForceRepoSecretScanning will be set to true when Enabled, false when
+      Disabled, and null when not set. \<br /\> If GHAzDO is NOT already
+      enabled, behavior will depend on if GHAzDO is to be enabled/disabled.
+      ForceRepoSecretScanning will not affect anything in this scenario. \<br
+      /\> If GHAzDO is to be disabled, the value of ForceRepoSecretScan will
+      have no effect. \<br /\> If GHAzDO is to be enabled for the first time on
+      a repo, then ForceRepoSecretScanning will have no effect. \<br /\> If
+      GHAzDO is to be enabled and the repo is already enabled, then
+      ForceRepoSecretScanning will force the secret scanning job to be run if it
+      is set to true. \<br /\> In all cases where ForceRepoSecretScanning is not
+      expected to affect behavior, it will be set to false before being sent to
+      Tfs.
+    fullName: forceRepoSecretScanning
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'forceRepoSecretScanning: boolean'
+      return:
+        description: ''
+        type: boolean
