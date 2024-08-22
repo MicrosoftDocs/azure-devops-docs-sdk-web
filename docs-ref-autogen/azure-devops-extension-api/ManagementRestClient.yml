@@ -47,7 +47,7 @@ methods:
   - name: deleteBillingInfo(string)
     uid: azure-devops-extension-api.ManagementRestClient.deleteBillingInfo
     package: azure-devops-extension-api
-    summary: Delete the billing info for an organization.
+    summary: Delete the billing info for an organization from config DB.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -99,7 +99,7 @@ methods:
   - name: getBillingInfo(string)
     uid: azure-devops-extension-api.ManagementRestClient.getBillingInfo
     package: azure-devops-extension-api
-    summary: Get the billing info for an organization.
+    summary: Get the billing info for an organization from config DB.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -111,6 +111,46 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.BillingInfo" />&gt;
+  - name: getEstimatedBillablePushersDetailsForOrg()
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getEstimatedBillablePushersDetailsForOrg
+    package: azure-devops-extension-api
+    summary: >-
+      Estimate the pushers that would be added to the customer's usage if
+      Advanced Security was enabled for this organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEstimatedBillablePushersDetailsForOrg():
+        Promise<BilledCommitter[]>
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BilledCommitter"
+          />[]&gt;
+  - name: getEstimatedBillablePushersDetailsForProject(string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getEstimatedBillablePushersDetailsForProject
+    package: azure-devops-extension-api
+    summary: >-
+      Estimate the pushers that would be added to the customer's usage if
+      Advanced Security was enabled for this project.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEstimatedBillablePushersDetailsForProject(project: string):
+        Promise<BilledCommitter[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BilledCommitter"
+          />[]&gt;
   - name: getEstimatedOrgBillablePushers()
     uid: >-
       azure-devops-extension-api.ManagementRestClient.getEstimatedOrgBillablePushers
@@ -168,6 +208,31 @@ methods:
       return:
         description: ''
         type: Promise&lt;string[]&gt;
+  - name: getEstimatedRepoBillablePushersDetails(string, string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getEstimatedRepoBillablePushersDetails
+    package: azure-devops-extension-api
+    summary: >-
+      Estimate the pushers that would be added to the customer's usage if
+      Advanced Security was enabled for this repository.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEstimatedRepoBillablePushersDetails(project: string,
+        repository: string): Promise<BilledCommitter[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.BilledCommitter"
+          />[]&gt;
   - name: getLastMeterUsage()
     uid: azure-devops-extension-api.ManagementRestClient.getLastMeterUsage
     package: azure-devops-extension-api
@@ -269,7 +334,7 @@ methods:
   - name: saveBillingInfo(BillingInfo, string)
     uid: azure-devops-extension-api.ManagementRestClient.saveBillingInfo
     package: azure-devops-extension-api
-    summary: Save the billing info for an organization.
+    summary: Save the billing info for an organization in config DB.
     remarks: ''
     isDeprecated: false
     syntax:
