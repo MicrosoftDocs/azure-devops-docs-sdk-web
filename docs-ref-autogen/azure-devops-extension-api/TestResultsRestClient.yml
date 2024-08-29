@@ -39,7 +39,7 @@ methods:
   - name: addCustomFields(CustomTestFieldDefinition[], string)
     uid: azure-devops-extension-api.TestResultsRestClient.addCustomFields
     package: azure-devops-extension-api
-    summary: ''
+    summary: Creates custom test fields based on the data provided.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -51,7 +51,7 @@ methods:
           type: >-
             <xref uid="azure-devops-extension-api.CustomTestFieldDefinition"
             />[]
-          description: ''
+          description: NewFields is an array of type CustomTestFieldDefinition.
         - id: project
           type: string
           description: Project ID or project name
@@ -356,6 +356,29 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
+  - name: createTestResultMachines(TestResultMachine[], string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.createTestResultMachines
+    package: azure-devops-extension-api
+    summary: Creates test result machines for the provided TestRunId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createTestResultMachines(testResultMachines:
+        TestResultMachine[], project: string, runId: number): Promise<void>
+      parameters:
+        - id: testResultMachines
+          type: <xref uid="azure-devops-extension-api.TestResultMachine" />[]
+          description: List of machines for test results in the run
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ID of the TestRun to add machines for
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: createTestRun(RunCreateModel, string)
     uid: azure-devops-extension-api.TestResultsRestClient.createTestRun
     package: azure-devops-extension-api
@@ -513,7 +536,9 @@ methods:
   - name: deleteCustomFieldById(string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.deleteCustomFieldById
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Returns details of the custom test field for the specified
+      testExtensionFieldId.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -526,7 +551,7 @@ methods:
           description: Project ID or project name
         - id: testExtensionFieldId
           type: number
-          description: ''
+          description: Custom test field id which has to be deleted.
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -1571,6 +1596,28 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
           />&lt;<xref uid="azure-devops-extension-api.TestLog" />&gt;&gt;
+  - name: getTestResultMachines(string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.getTestResultMachines
+    package: azure-devops-extension-api
+    summary: Gets test result machines for the provided TestRunId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTestResultMachines(project: string, runId: number):
+        Promise<TestResultMachine[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ID of the TestRun to add machines for
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestResultMachine"
+          />[]&gt;
   - name: >-
       getTestResults(string, number, ResultDetails, number, number,
       TestOutcome[], boolean)
@@ -2610,7 +2657,7 @@ methods:
   - name: queryCustomFields(string, CustomTestFieldScope)
     uid: azure-devops-extension-api.TestResultsRestClient.queryCustomFields
     package: azure-devops-extension-api
-    summary: ''
+    summary: Returns List of custom test fields for the given custom test field scope.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -2623,7 +2670,7 @@ methods:
           description: Project ID or project name
         - id: scopeFilter
           type: <xref uid="azure-devops-extension-api.CustomTestFieldScope" />
-          description: ''
+          description: Scope of custom test fields which are to be returned.
       return:
         description: ''
         type: >-
@@ -3263,7 +3310,7 @@ methods:
   - name: updateCustomField(CustomTestFieldUpdateDefinition, string)
     uid: azure-devops-extension-api.TestResultsRestClient.updateCustomField
     package: azure-devops-extension-api
-    summary: ''
+    summary: Returns details of the custom test field which is updated.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -3276,7 +3323,7 @@ methods:
           type: >-
             <xref
             uid="azure-devops-extension-api.CustomTestFieldUpdateDefinition" />
-          description: ''
+          description: Custom test field which has to be updated.
         - id: project
           type: string
           description: Project ID or project name

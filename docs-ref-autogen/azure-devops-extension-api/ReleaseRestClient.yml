@@ -1540,7 +1540,7 @@ methods:
         ReleaseExpands, artifactTypeId?: string, sourceId?: string,
         artifactVersionId?: string, sourceBranchFilter?: string, isDeleted?:
         boolean, tagFilter?: string[], propertyFilters?: string[],
-        releaseIdFilter?: number[], path?: string): Promise<PagedList<Release>>
+        releaseIdFilter?: number[], path?: string): Promise<Release[]>
       parameters:
         - id: project
           type: string
@@ -1606,7 +1606,9 @@ methods:
             of Build artifactType, it is buildId.
         - id: sourceBranchFilter
           type: string
-          description: Releases with given sourceBranchFilter will be returned.
+          description: >-
+            Releases with given sourceBranchFilter will be returned (Not to be
+            used with environmentStatusFilter).
         - id: isDeleted
           type: boolean
           description: Gets the soft deleted releases, if true.
@@ -1633,9 +1635,7 @@ methods:
           description: Releases under this folder path will be returned
       return:
         description: ''
-        type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
-          />&lt;<xref uid="azure-devops-extension-api.Release" />&gt;&gt;
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Release" />[]&gt;
   - name: getReleaseSettings(string)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseSettings
     package: azure-devops-extension-api

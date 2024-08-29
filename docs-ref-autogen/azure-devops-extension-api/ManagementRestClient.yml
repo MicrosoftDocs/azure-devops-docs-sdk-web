@@ -44,36 +44,6 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: deleteBillingInfo(string)
-    uid: azure-devops-extension-api.ManagementRestClient.deleteBillingInfo
-    package: azure-devops-extension-api
-    summary: Delete the billing info for an organization from config DB.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function deleteBillingInfo(organizationId: string): Promise<void>'
-      parameters:
-        - id: organizationId
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;void&gt;
-  - name: deleteMeterUsageHistory(string)
-    uid: azure-devops-extension-api.ManagementRestClient.deleteMeterUsageHistory
-    package: azure-devops-extension-api
-    summary: Delete the meter usage history from Primary SU for an organization.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function deleteMeterUsageHistory(organizationId: string): Promise<void>'
-      parameters:
-        - id: organizationId
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;void&gt;
   - name: getBillableCommitterDetails(Date)
     uid: >-
       azure-devops-extension-api.ManagementRestClient.getBillableCommitterDetails
@@ -96,21 +66,6 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BillableCommitterDetails" />[]&gt;
-  - name: getBillingInfo(string)
-    uid: azure-devops-extension-api.ManagementRestClient.getBillingInfo
-    package: azure-devops-extension-api
-    summary: Get the billing info for an organization from config DB.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function getBillingInfo(organizationId: string): Promise<BillingInfo>'
-      parameters:
-        - id: organizationId
-          type: string
-          description: Organization ID to get billing info for.
-      return:
-        description: ''
-        type: Promise&lt;<xref uid="azure-devops-extension-api.BillingInfo" />&gt;
   - name: getEstimatedBillablePushersDetailsForOrg()
     uid: >-
       azure-devops-extension-api.ManagementRestClient.getEstimatedBillablePushersDetailsForOrg
@@ -331,26 +286,6 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AdvSecEnablementStatus" />&gt;
-  - name: saveBillingInfo(BillingInfo, string)
-    uid: azure-devops-extension-api.ManagementRestClient.saveBillingInfo
-    package: azure-devops-extension-api
-    summary: Save the billing info for an organization in config DB.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function saveBillingInfo(billingInfo: BillingInfo, organizationId:
-        string): Promise<void>
-      parameters:
-        - id: billingInfo
-          type: <xref uid="azure-devops-extension-api.BillingInfo" />
-          description: ''
-        - id: organizationId
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;void&gt;
   - name: updateOrgEnablementStatus(AdvSecEnablementSettingsUpdate)
     uid: azure-devops-extension-api.ManagementRestClient.updateOrgEnablementStatus
     package: azure-devops-extension-api

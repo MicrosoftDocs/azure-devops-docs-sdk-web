@@ -13,7 +13,7 @@ properties:
   - name: fieldName
     uid: azure-devops-extension-api.CustomTestField.fieldName
     package: azure-devops-extension-api
-    summary: Field Name.
+    summary: Name of the Custom Test Field
     fullName: fieldName
     remarks: ''
     isDeprecated: false
@@ -25,7 +25,20 @@ properties:
   - name: value
     uid: azure-devops-extension-api.CustomTestField.value
     package: azure-devops-extension-api
-    summary: Field value.
+    summary: >-
+      1. If the CustomTestField is registered as Bit data type, value should be
+      sent as case insensitive string - either "true" or "false". 2. If the
+      CustomTestField is registered as Datetime data type, value should be sent
+      as string in the format of "YYYY-MM-DD hh:mm:ss" 3. If the CustomTestField
+      is registered as Int data type, value should be sent as string
+      representation of 32 bit signed integer. Ex: "5". 4. If the
+      CustomTestField is registered as Float data type, value should be sent as
+      string for example "4.237" 5. If the CustomTestField is registered as
+      String data type, Any string up to 1kB is accepted. 6. If the
+      CustomTestField is registered as Guid, value should be sent as case
+      insensitive string representation of GUID in usual format
+      "XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX" where X can be either number 0-9 or
+      letter A-F. For example "f88d6b84-3549-4af0-a4f4-58139cd0a14f".
     fullName: value
     remarks: ''
     isDeprecated: false
