@@ -153,6 +153,52 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
+  - name: getBranches(string, string, AlertType, string, string, number, boolean)
+    uid: azure-devops-extension-api.AlertRestClient.getBranches
+    package: azure-devops-extension-api
+    summary: Returns the branches for which analysis results were submitted.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getBranches(project: string, repository: string, alertType:
+        AlertType, continuationToken?: string, branchNameContains?: string,
+        top?: number, includePullRequestBranches?: boolean): Promise<Branch[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: ''
+        - id: alertType
+          type: <xref uid="azure-devops-extension-api.AlertType" />
+          description: >-
+            The type of alert: Dependency Scanning (1), Secret (2), Code QL (3),
+            etc.
+        - id: continuationToken
+          type: string
+          description: >-
+            A string variable that represents the branch name and is used to
+            fetch branches that follow it in alphabetical order.
+        - id: branchNameContains
+          type: string
+          description: >-
+            A string variable used to fetch branches that contain this string
+            anywhere in the branch name, case insensitive.
+        - id: top
+          type: number
+          description: >-
+            An int variable used to return the top k branches that satisfy the
+            search criteria.
+        - id: includePullRequestBranches
+          type: boolean
+          description: >-
+            A bool variable indicating whether or not to include pull request
+            branches.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Branch" />[]&gt;
   - name: getSarif(number)
     uid: azure-devops-extension-api.AlertRestClient.getSarif
     package: azure-devops-extension-api
