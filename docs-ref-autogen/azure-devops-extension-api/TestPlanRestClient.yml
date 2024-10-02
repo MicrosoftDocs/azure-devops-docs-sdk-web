@@ -402,6 +402,32 @@ methods:
           Promise&lt;<xref
           uid="azure-devops-extension-api.CloneTestPlanOperationInformation"
           />&gt;
+  - name: getDeletedTestPlans(string, string)
+    uid: azure-devops-extension-api.TestPlanRestClient.getDeletedTestPlans
+    package: azure-devops-extension-api
+    summary: Get a list of deleted test plans
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDeletedTestPlans(project: string, continuationToken?:
+        string): Promise<PagedList<TestPlan>>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: continuationToken
+          type: string
+          description: >-
+            If the list of plans returned is not complete, a continuation token
+            to query next batch of plans is included in the response header as
+            "x-ms-continuationtoken". Omit this parameter to get the first batch
+            of test plans.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.TestPlan" />&gt;&gt;
   - name: getPoints(string, number, number, string, boolean, boolean)
     uid: azure-devops-extension-api.TestPlanRestClient.getPoints
     package: azure-devops-extension-api
