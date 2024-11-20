@@ -428,6 +428,76 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
           />&lt;<xref uid="azure-devops-extension-api.TestPlan" />&gt;&gt;
+  - name: getDeletedTestSuitesForPlan(string, number, SuiteExpand, string, boolean)
+    uid: azure-devops-extension-api.TestPlanRestClient.getDeletedTestSuitesForPlan
+    package: azure-devops-extension-api
+    summary: Get Deleted Test Suites for a Test Plan.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDeletedTestSuitesForPlan(project: string, planId: number,
+        expand?: SuiteExpand, continuationToken?: string, asTreeView?: boolean):
+        Promise<PagedList<TestSuite>>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: planId
+          type: number
+          description: ID of the test plan for which suites are requested.
+        - id: expand
+          type: <xref uid="azure-devops-extension-api.SuiteExpand" />
+          description: Include the children suites and testers details.
+        - id: continuationToken
+          type: string
+          description: >-
+            If the list of suites returned is not complete, a continuation token
+            to query next batch of suites is included in the response header as
+            "x-ms-continuationtoken". Omit this parameter to get the first batch
+            of test suites.
+        - id: asTreeView
+          type: boolean
+          description: If the suites returned should be in a tree structure.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.TestSuite" />&gt;&gt;
+  - name: getDeletedTestSuitesForProject(string, SuiteExpand, string, boolean)
+    uid: >-
+      azure-devops-extension-api.TestPlanRestClient.getDeletedTestSuitesForProject
+    package: azure-devops-extension-api
+    summary: Get Deleted Test Suites within a Project.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDeletedTestSuitesForProject(project: string, expand?:
+        SuiteExpand, continuationToken?: string, asTreeView?: boolean):
+        Promise<PagedList<TestSuite>>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: expand
+          type: <xref uid="azure-devops-extension-api.SuiteExpand" />
+          description: Include the children suites and testers details.
+        - id: continuationToken
+          type: string
+          description: >-
+            If the list of suites returned is not complete, a continuation token
+            to query next batch of suites is included in the response header as
+            "x-ms-continuationtoken". Omit this parameter to get the first batch
+            of test suites.
+        - id: asTreeView
+          type: boolean
+          description: If the suites returned should be in a tree structure.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.TestSuite" />&gt;&gt;
   - name: getPoints(string, number, number, string, boolean, boolean)
     uid: azure-devops-extension-api.TestPlanRestClient.getPoints
     package: azure-devops-extension-api
