@@ -29,12 +29,12 @@ properties:
   - name: absoluteUri
     uid: azure-devops-extension-api.Uri.absoluteUri
     package: azure-devops-extension-api
-    summary: Set the absolute uri string for this Uri. Replaces all existing values
+    summary: Get the absolute uri string for this Uri
     fullName: absoluteUri
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'absoluteUri: string'
+      content: string absoluteUri
       return:
         description: ''
         type: string
@@ -46,7 +46,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'hashString: string'
+      content: 'public hashString: string = ""'
       return:
         description: ''
         type: string
@@ -58,7 +58,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'host: string'
+      content: 'public host: string = ""'
       return:
         description: ''
         type: string
@@ -72,7 +72,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'noSchemeSeparator: boolean'
+      content: 'public noSchemeSeparator: boolean = false'
       return:
         description: ''
         type: boolean
@@ -84,7 +84,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'path: string'
+      content: 'public path: string = ""'
       return:
         description: ''
         type: string
@@ -98,7 +98,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'port: number'
+      content: 'public port: number = 0'
       return:
         description: ''
         type: number
@@ -110,19 +110,19 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'queryParameters: IQueryParameter[]'
+      content: 'public queryParameters: IQueryParameter[] = []'
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.IQueryParameter" />[]
   - name: queryString
     uid: azure-devops-extension-api.Uri.queryString
     package: azure-devops-extension-api
-    summary: Set the query string for this Uri. Replaces existing value
+    summary: Get the query string for this Uri.
     fullName: queryString
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'queryString: string'
+      content: string queryString
       return:
         description: ''
         type: string
@@ -134,7 +134,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'scheme: string'
+      content: 'public scheme: string = ""'
       return:
         description: ''
         type: string

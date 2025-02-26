@@ -7,90 +7,123 @@ fullName: PeoplePickerProvider
 remarks: ''
 isDeprecated: false
 type: class
-properties:
-  - name: addIdentitiesToMRU
+methods:
+  - name: addIdentitiesToMRU(IIdentity[])
     uid: azure-devops-extension-api.PeoplePickerProvider.addIdentitiesToMRU
     package: azure-devops-extension-api
-    summary: ''
-    fullName: addIdentitiesToMRU
+    summary: Add identities to the MRU
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'addIdentitiesToMRU: (identities: IIdentity[]) => Promise<boolean>'
+      content: 'function addIdentitiesToMRU(identities: IIdentity[]): Promise<boolean>'
+      parameters:
+        - id: identities
+          type: <xref uid="azure-devops-extension-api.IIdentity" />[]
+          description: ''
       return:
-        description: ''
-        type: '(identities: IIdentity[]) =&gt; Promise&lt;boolean&gt;'
-  - name: getEntityFromUniqueAttribute
+        description: A promise that returns true if successful false otherwise
+        type: Promise&lt;boolean&gt;
+  - name: getEntityFromUniqueAttribute(string)
     uid: >-
       azure-devops-extension-api.PeoplePickerProvider.getEntityFromUniqueAttribute
     package: azure-devops-extension-api
-    summary: ''
-    fullName: getEntityFromUniqueAttribute
+    summary: Request Entity information given an entityId
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        getEntityFromUniqueAttribute: (entityId: string) => IIdentity |
+        function getEntityFromUniqueAttribute(entityId: string): IIdentity |
         PromiseLike<IIdentity>
-      return:
-        description: ''
-        type: '(entityId: string) =&gt; IIdentity | PromiseLike&lt;IIdentity&gt;'
-  - name: onEmptyInputFocus
-    uid: azure-devops-extension-api.PeoplePickerProvider.onEmptyInputFocus
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: onEmptyInputFocus
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'onEmptyInputFocus: () => IIdentity[] | PromiseLike<IIdentity[]>'
-      return:
-        description: ''
-        type: () =&gt; IIdentity[] | PromiseLike&lt;IIdentity[]&gt;
-  - name: onFilterIdentities
-    uid: azure-devops-extension-api.PeoplePickerProvider.onFilterIdentities
-    package: azure-devops-extension-api
-    summary: ''
-    fullName: onFilterIdentities
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        onFilterIdentities: (filter: string, selectedItems?: IIdentity[]) =>
-        IIdentity[] | Promise<IIdentity[]>
+      parameters:
+        - id: entityId
+          type: string
+          description: ''
       return:
         description: ''
         type: >-
-          (filter: string, selectedItems?: IIdentity[]) =&gt; IIdentity[] |
-          Promise&lt;IIdentity[]&gt;
-  - name: onRequestConnectionInformation
+          <xref uid="azure-devops-extension-api.IIdentity" /> |
+          PromiseLike&lt;<xref uid="azure-devops-extension-api.IIdentity" />&gt;
+  - name: onEmptyInputFocus()
+    uid: azure-devops-extension-api.PeoplePickerProvider.onEmptyInputFocus
+    package: azure-devops-extension-api
+    summary: >-
+      If no input is in the search box when clicked, provide a set of identities
+      to show (used for MRU)
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onEmptyInputFocus(): IIdentity[] | PromiseLike<IIdentity[]>'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.IIdentity" />[] |
+          PromiseLike&lt;<xref uid="azure-devops-extension-api.IIdentity"
+          />[]&gt;
+  - name: onFilterIdentities(string, IIdentity[])
+    uid: azure-devops-extension-api.PeoplePickerProvider.onFilterIdentities
+    package: azure-devops-extension-api
+    summary: >-
+      Given a list of currently selected items and a filter string, return a
+      list of suggestions to put in the suggestion list
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function onFilterIdentities(filter: string, selectedItems?:
+        IIdentity[]): IIdentity[] | Promise<IIdentity[]>
+      parameters:
+        - id: filter
+          type: string
+          description: ''
+        - id: selectedItems
+          type: <xref uid="azure-devops-extension-api.IIdentity" />[]
+          description: ''
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.IIdentity" />[] |
+          Promise&lt;<xref uid="azure-devops-extension-api.IIdentity" />[]&gt;
+  - name: onRequestConnectionInformation(IIdentity, boolean)
     uid: >-
       azure-devops-extension-api.PeoplePickerProvider.onRequestConnectionInformation
     package: azure-devops-extension-api
-    summary: ''
-    fullName: onRequestConnectionInformation
+    summary: Request connection information about a given Entity.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        onRequestConnectionInformation: (entity: IIdentity, getDirectReports?:
-        boolean) => IdentitiesGetConnectionsResponseModel |
+        function onRequestConnectionInformation(entity: IIdentity,
+        getDirectReports?: boolean): IdentitiesGetConnectionsResponseModel |
         PromiseLike<IdentitiesGetConnectionsResponseModel>
+      parameters:
+        - id: entity
+          type: <xref uid="azure-devops-extension-api.IIdentity" />
+          description: ''
+        - id: getDirectReports
+          type: boolean
+          description: ''
       return:
         description: ''
         type: >-
-          (entity: IIdentity, getDirectReports?: boolean) =&gt;
-          IdentitiesGetConnectionsResponseModel |
-          PromiseLike&lt;IdentitiesGetConnectionsResponseModel&gt;
-  - name: removeIdentitiesFromMRU
+          <xref
+          uid="azure-devops-extension-api.IdentitiesGetConnectionsResponseModel"
+          /> | PromiseLike&lt;<xref
+          uid="azure-devops-extension-api.IdentitiesGetConnectionsResponseModel"
+          />&gt;
+  - name: removeIdentitiesFromMRU(IIdentity[])
     uid: azure-devops-extension-api.PeoplePickerProvider.removeIdentitiesFromMRU
     package: azure-devops-extension-api
-    summary: ''
-    fullName: removeIdentitiesFromMRU
+    summary: Remove identities from the MRU
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'removeIdentitiesFromMRU: (identities: IIdentity[]) => Promise<boolean>'
+      content: >-
+        function removeIdentitiesFromMRU(identities: IIdentity[]):
+        Promise<boolean>
+      parameters:
+        - id: identities
+          type: <xref uid="azure-devops-extension-api.IIdentity" />[]
+          description: ''
       return:
-        description: ''
-        type: '(identities: IIdentity[]) =&gt; Promise&lt;boolean&gt;'
+        description: A promise that returns true if successful false otherwise
+        type: Promise&lt;boolean&gt;
