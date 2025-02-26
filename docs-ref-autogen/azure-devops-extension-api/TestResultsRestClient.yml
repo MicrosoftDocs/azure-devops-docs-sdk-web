@@ -31,10 +31,12 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'static RESOURCE_AREA_ID: string'
+      content: >-
+        public static RESOURCE_AREA_ID: "c83eaf52-edf3-4034-ae11-17d38f25404c" =
+        "c83eaf52-edf3-4034-ae11-17d38f25404c"
       return:
         description: ''
-        type: string
+        type: '"c83eaf52-edf3-4034-ae11-17d38f25404c"'
 methods:
   - name: addCustomFields(CustomTestFieldDefinition[], string)
     uid: azure-devops-extension-api.TestResultsRestClient.addCustomFields
@@ -3458,6 +3460,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestRun" />&gt;
+  - name: updateTestRunsBySessionId(TestSessionTestRun, string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.updateTestRunsBySessionId
+    package: azure-devops-extension-api
+    summary: Updates Test runs associated to a session
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateTestRunsBySessionId(testRunIds: TestSessionTestRun,
+        project: string, sessionId: number): Promise<number[]>
+      parameters:
+        - id: testRunIds
+          type: <xref uid="azure-devops-extension-api.TestSessionTestRun" />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: sessionId
+          type: number
+          description: Id of TestResults session to update Test Runs for.
+      return:
+        description: ''
+        type: Promise&lt;number[]&gt;
   - name: updateTestRunTags(TestTagsUpdateModel, string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.updateTestRunTags
     package: azure-devops-extension-api
