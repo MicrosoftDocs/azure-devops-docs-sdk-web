@@ -1701,7 +1701,7 @@ methods:
           />&gt;&gt;
   - name: >-
       getTestResultsByPipeline(string, number, string, string, string,
-      TestOutcome[], number, String)
+      TestOutcome[], boolean, number, String)
     uid: azure-devops-extension-api.TestResultsRestClient.getTestResultsByPipeline
     package: azure-devops-extension-api
     summary: Get a list of results.
@@ -1711,8 +1711,8 @@ methods:
       content: >-
         function getTestResultsByPipeline(project: string, pipelineId: number,
         stageName?: string, phaseName?: string, jobName?: string, outcomes?:
-        TestOutcome[], top?: number, continuationToken?: String):
-        Promise<PagedList<ShallowTestCaseResult>>
+        TestOutcome[], includeAllBuildRuns?: boolean, top?: number,
+        continuationToken?: String): Promise<PagedList<ShallowTestCaseResult>>
       parameters:
         - id: project
           type: string
@@ -1739,6 +1739,9 @@ methods:
         - id: outcomes
           type: <xref uid="azure-devops-extension-api.TestOutcome" />[]
           description: List of outcome of results
+        - id: includeAllBuildRuns
+          type: boolean
+          description: Whether to include Test Runs from from all the build runs or not.
         - id: top
           type: number
           description: Maximum number of results to return
@@ -1751,6 +1754,65 @@ methods:
           Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
           />&lt;<xref uid="azure-devops-extension-api.ShallowTestCaseResult"
           />&gt;&gt;
+  - name: >-
+      getTestResultsByPipelineMRX(string, number, string, string, string,
+      TestOutcome[], boolean, number, String)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.getTestResultsByPipelineMRX
+    package: azure-devops-extension-api
+    summary: >-
+      Gets full TestCaseResult objects with 1MRX details for the provided
+      pipelineId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTestResultsByPipelineMRX(project: string, pipelineId:
+        number, stageName?: string, phaseName?: string, jobName?: string,
+        outcomes?: TestOutcome[], includeAllBuildRuns?: boolean, top?: number,
+        continuationToken?: String): Promise<PagedList<TestCaseResult>>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: pipelineId
+          type: number
+          description: Pipeline Id. This is same as build Id.
+        - id: stageName
+          type: string
+          description: >-
+            Name of the stage. Maximum supported length for name is 256
+            character.
+        - id: phaseName
+          type: string
+          description: >-
+            Name of the phase. Maximum supported length for name is 256
+            character.
+        - id: jobName
+          type: string
+          description: >-
+            Matrixing in YAML generates copies of a job with different inputs in
+            matrix. JobName is the name of those input. Maximum supported length
+            for name is 256 character.
+        - id: outcomes
+          type: <xref uid="azure-devops-extension-api.TestOutcome" />[]
+          description: List of outcome of results
+        - id: includeAllBuildRuns
+          type: boolean
+          description: >-
+            Whether to include Test Runs from from all the build runs or not.
+            Defaults to false.
+        - id: top
+          type: number
+          description: Maximum number of results to return. Defaults to 10000.
+        - id: continuationToken
+          type: String
+          description: Header to pass the continuationToken
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.TestCaseResult" />&gt;&gt;
   - name: getTestResultsByQuery(TestResultsQuery, string)
     uid: azure-devops-extension-api.TestResultsRestClient.getTestResultsByQuery
     package: azure-devops-extension-api
