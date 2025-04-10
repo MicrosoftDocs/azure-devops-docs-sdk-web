@@ -31,12 +31,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        public static RESOURCE_AREA_ID: "1814ab31-2f4f-4a9f-8761-f4d77dc5a5d7" =
-        "1814ab31-2f4f-4a9f-8761-f4d77dc5a5d7"
+      content: 'static RESOURCE_AREA_ID: string'
       return:
         description: ''
-        type: '"1814ab31-2f4f-4a9f-8761-f4d77dc5a5d7"'
+        type: string
 methods:
   - name: >-
       addServiceEndpointExecutionRecords(ServiceEndpointExecutionRecordsInput,
@@ -285,7 +283,7 @@ methods:
           />[]&gt;
   - name: >-
       getServiceEndpointDetails(string, string, ServiceEndpointActionFilter,
-      boolean)
+      boolean, boolean)
     uid: >-
       azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpointDetails
     package: azure-devops-extension-api
@@ -296,7 +294,7 @@ methods:
       content: >-
         function getServiceEndpointDetails(project: string, endpointId: string,
         actionFilter?: ServiceEndpointActionFilter, loadConfidetantialData?:
-        boolean): Promise<ServiceEndpoint>
+        boolean, loadConfidentialData?: boolean): Promise<ServiceEndpoint>
       parameters:
         - id: project
           type: string
@@ -312,6 +310,12 @@ methods:
             Action filter for the service connection. It specifies the action
             which can be performed on the service connection.
         - id: loadConfidetantialData
+          type: boolean
+          description: >-
+            Flag to include confidential details of service endpoint. This is
+            for internal use only. [Obsolete] This parameter is obsolete and
+            will be removed. Use loadConfidentialData instead.
+        - id: loadConfidentialData
           type: boolean
           description: >-
             Flag to include confidential details of service endpoint. This is

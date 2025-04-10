@@ -31,12 +31,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        public static RESOURCE_AREA_ID: "69d21c00-f135-441b-b5ce-3626378e0819" =
-        "69d21c00-f135-441b-b5ce-3626378e0819"
+      content: 'static RESOURCE_AREA_ID: string'
       return:
         description: ''
-        type: '"69d21c00-f135-441b-b5ce-3626378e0819"'
+        type: string
 methods:
   - name: addAssetForEditExtensionDraft(string, string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.addAssetForEditExtensionDraft
@@ -889,26 +887,6 @@ methods:
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
-  - name: getContentVerificationLog(string, string)
-    uid: azure-devops-extension-api.GalleryRestClient.getContentVerificationLog
-    package: azure-devops-extension-api
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function getContentVerificationLog(publisherName: string, extensionName:
-        string): Promise<ArrayBuffer>
-      parameters:
-        - id: publisherName
-          type: string
-          description: ''
-        - id: extensionName
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;ArrayBuffer&gt;
   - name: getExtension(string, string, string, ExtensionQueryFlags, string, String)
     uid: azure-devops-extension-api.GalleryRestClient.getExtension
     package: azure-devops-extension-api
@@ -1398,6 +1376,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
+  - name: getVSCodeExtensionLatestVersion(string, string)
+    uid: >-
+      azure-devops-extension-api.GalleryRestClient.getVSCodeExtensionLatestVersion
+    package: azure-devops-extension-api
+    summary: Endpoint to get the latest version(s) of a VS Code extension.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getVSCodeExtensionLatestVersion(publisherName: string,
+        extensionName: string): Promise<PublishedExtension>
+      parameters:
+        - id: publisherName
+          type: string
+          description: The name of the publisher of the requested VS Code extension.
+        - id: extensionName
+          type: string
+          description: The extension name.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PublishedExtension"
+          />&gt;
   - name: incrementExtensionDailyStat(string, string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.incrementExtensionDailyStat
     package: azure-devops-extension-api

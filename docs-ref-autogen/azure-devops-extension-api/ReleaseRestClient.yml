@@ -31,12 +31,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        public static RESOURCE_AREA_ID: "efc2f575-36ef-48e9-b672-0c6fb4a48ac5" =
-        "efc2f575-36ef-48e9-b672-0c6fb4a48ac5"
+      content: 'static RESOURCE_AREA_ID: string'
       return:
         description: ''
-        type: '"efc2f575-36ef-48e9-b672-0c6fb4a48ac5"'
+        type: string
 methods:
   - name: addDefinitionTag(string, number, string)
     uid: azure-devops-extension-api.ReleaseRestClient.addDefinitionTag
@@ -1149,7 +1147,7 @@ methods:
           uid="azure-devops-extension-api.ProjectPipelineReleaseSettings" />&gt;
   - name: >-
       getRelease(string, number, ApprovalFilters, string[],
-      SingleReleaseExpands, number)
+      SingleReleaseExpands, number, boolean)
     uid: azure-devops-extension-api.ReleaseRestClient.getRelease
     package: azure-devops-extension-api
     summary: Get a Release
@@ -1159,7 +1157,8 @@ methods:
       content: >-
         function getRelease(project: string, releaseId: number,
         approvalFilters?: ApprovalFilters, propertyFilters?: string[], expand?:
-        SingleReleaseExpands, topGateRecords?: number): Promise<Release>
+        SingleReleaseExpands, topGateRecords?: number,
+        includeDisabledDefinitions?: boolean): Promise<Release>
       parameters:
         - id: project
           type: string
@@ -1187,6 +1186,11 @@ methods:
         - id: topGateRecords
           type: number
           description: Number of release gate records to get. Default is 5.
+        - id: includeDisabledDefinitions
+          type: boolean
+          description: >-
+            Include disabled definitions (if set to 'false' returns error,
+            default is 'true')
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Release" />&gt;
@@ -1220,7 +1224,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Change" />[]&gt;
-  - name: getReleaseDefinition(string, number, string[])
+  - name: getReleaseDefinition(string, number, string[], boolean)
     uid: azure-devops-extension-api.ReleaseRestClient.getReleaseDefinition
     package: azure-devops-extension-api
     summary: Get a release definition.
@@ -1229,7 +1233,8 @@ methods:
     syntax:
       content: >-
         function getReleaseDefinition(project: string, definitionId: number,
-        propertyFilters?: string[]): Promise<ReleaseDefinition>
+        propertyFilters?: string[], includeDisabled?: boolean):
+        Promise<ReleaseDefinition>
       parameters:
         - id: project
           type: string
@@ -1244,6 +1249,9 @@ methods:
             set, the returned Release Definition will contain values for the
             specified property Ids (if they exist). If not set, properties will
             not be included.
+        - id: includeDisabled
+          type: boolean
+          description: Boolean flag to include disabled definitions.
       return:
         description: ''
         type: >-
