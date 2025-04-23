@@ -1,0 +1,139 @@
+### YamlMime:TSType
+name: CustomTestCaseResultData
+uid: azure-devops-extension-api.CustomTestCaseResultData
+package: azure-devops-extension-api
+summary: >-
+  This data model is used in TestRunDataProvider and provides the
+  TestCaseResultsData for a Test run
+fullName: CustomTestCaseResultData
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: area
+    uid: azure-devops-extension-api.CustomTestCaseResultData.area
+    package: azure-devops-extension-api
+    summary: Reference to area path of test.
+    fullName: area
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'area: ShallowReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ShallowReference" />
+  - name: configuration
+    uid: azure-devops-extension-api.CustomTestCaseResultData.configuration
+    package: azure-devops-extension-api
+    summary: Reference to test configuration. Type ShallowReference.
+    fullName: configuration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'configuration: ShallowReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ShallowReference" />
+  - name: customFields
+    uid: azure-devops-extension-api.CustomTestCaseResultData.customFields
+    package: azure-devops-extension-api
+    summary: >-
+      Array of custom data for additional categorization of the test result.
+      Value of the CustomTestField cannot be more than 1KB.
+    fullName: customFields
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'customFields: CustomTestField[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.CustomTestField" />[]
+  - name: durationInMs
+    uid: azure-devops-extension-api.CustomTestCaseResultData.durationInMs
+    package: azure-devops-extension-api
+    summary: >-
+      Duration of test execution in milliseconds. If not provided value will be
+      set as CompletedDate - StartedDate
+    fullName: durationInMs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'durationInMs: number'
+      return:
+        description: ''
+        type: number
+  - name: id
+    uid: azure-devops-extension-api.CustomTestCaseResultData.id
+    package: azure-devops-extension-api
+    summary: ID of a test result.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: outcome
+    uid: azure-devops-extension-api.CustomTestCaseResultData.outcome
+    package: azure-devops-extension-api
+    summary: >-
+      Test outcome of test result. Valid values = (Unspecified, None, Passed,
+      Failed, Inconclusive, Timeout, Aborted, Blocked, NotExecuted, Warning,
+      Error, NotApplicable, Paused, InProgress, NotImpacted)
+    fullName: outcome
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'outcome: string'
+      return:
+        description: ''
+        type: string
+  - name: owner
+    uid: azure-devops-extension-api.CustomTestCaseResultData.owner
+    package: azure-devops-extension-api
+    summary: Reference to test owner.
+    fullName: owner
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'owner: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+  - name: priority
+    uid: azure-devops-extension-api.CustomTestCaseResultData.priority
+    package: azure-devops-extension-api
+    summary: Priority of test executed.
+    fullName: priority
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'priority: number'
+      return:
+        description: ''
+        type: number
+  - name: testCase
+    uid: azure-devops-extension-api.CustomTestCaseResultData.testCase
+    package: azure-devops-extension-api
+    summary: Reference to the test executed.
+    fullName: testCase
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'testCase: ShallowReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ShallowReference" />
+  - name: testSuite
+    uid: azure-devops-extension-api.CustomTestCaseResultData.testSuite
+    package: azure-devops-extension-api
+    summary: Reference to test suite test case workitem is part of.
+    fullName: testSuite
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'testSuite: ShallowReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ShallowReference" />
