@@ -248,6 +248,31 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.UxFilters" />&gt;
+  - name: initiateValidation(string, string, number)
+    uid: azure-devops-extension-api.AlertRestClient.initiateValidation
+    package: azure-devops-extension-api
+    summary: Initiate the validation process for a given alert
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function initiateValidation(project: string, repository: string,
+        alertId: number): Promise<ValidationStatus>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of a repository
+        - id: alertId
+          type: number
+          description: The ID of the alert
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.ValidationStatus"
+          />&gt;
   - name: updateAlert(AlertStateUpdate, string, number, string)
     uid: azure-devops-extension-api.AlertRestClient.updateAlert
     package: azure-devops-extension-api

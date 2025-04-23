@@ -8,6 +8,18 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: additionalProperties
+    uid: azure-devops-extension-api.Alert.additionalProperties
+    package: azure-devops-extension-api
+    summary: Additional properties of this alert.
+    fullName: additionalProperties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'additionalProperties: {[key: string]: any}'
+      return:
+        description: ''
+        type: '{[key: string]: any}'
   - name: alertId
     uid: azure-devops-extension-api.Alert.alertId
     package: azure-devops-extension-api
@@ -264,3 +276,19 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.ValidationFingerprint" />[]
+  - name: validityDetails
+    uid: azure-devops-extension-api.Alert.validityDetails
+    package: azure-devops-extension-api
+    summary: >-
+      Validity details of an alert. Currently, this is only applicable to secret
+      alerts. In case of secret alerts, the validity status and time is computed
+      by looking at the liveness results for validation fingerprints associated
+      to an alert.
+    fullName: validityDetails
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'validityDetails: AlertValidityInfo'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AlertValidityInfo" />
