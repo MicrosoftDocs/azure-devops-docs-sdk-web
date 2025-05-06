@@ -23,6 +23,34 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
+  - name: createLegalReview(string, string, number, string)
+    uid: azure-devops-extension-api.AlertRestClient.createLegalReview
+    package: azure-devops-extension-api
+    summary: >-
+      Create legal review. This creates the legal review associated with the
+      alert. It include the review work item url.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createLegalReview(project: string, repository: string, alertId:
+        number, ref?: string): Promise<LegalReview>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: Name or id  of a repository for the legal alert
+        - id: alertId
+          type: number
+          description: Advance Security alert id of the legal alert to get the legal review
+        - id: ref
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.LegalReview" />&gt;
   - name: getAlert(string, number, string, string, ExpandOption)
     uid: azure-devops-extension-api.AlertRestClient.getAlert
     package: azure-devops-extension-api
