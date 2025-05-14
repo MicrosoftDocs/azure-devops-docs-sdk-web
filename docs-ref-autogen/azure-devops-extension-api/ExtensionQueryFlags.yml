@@ -137,3 +137,14 @@ fields:
       Include the details if an extension is in conflict list or not Currently
       being used for VSCode extensions.
     numericValue: 32768
+  - name: IncludeLatestPrereleaseAndStableVersionOnly
+    uid: >-
+      azure-devops-extension-api.ExtensionQueryFlags.IncludeLatestPrereleaseAndStableVersionOnly
+    package: azure-devops-extension-api
+    summary: >-
+      When retrieving versions from a query, return the details with both latest
+      prelease and stable version of the extensions that matched, if not
+      prelease version, only return stable version. This is useful when the
+      caller doesn't need all the published versions. It will save a significant
+      size in the returned payload.
+    numericValue: 65536
