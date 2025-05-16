@@ -276,6 +276,31 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.UxFilters" />&gt;
+  - name: getValidityData(string, string, number)
+    uid: azure-devops-extension-api.AlertRestClient.getValidityData
+    package: azure-devops-extension-api
+    summary: Get the validity details for an alert.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getValidityData(project: string, repository: string, alertId:
+        number): Promise<AlertValidityInfo>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of a repository
+        - id: alertId
+          type: number
+          description: The ID of the alert
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AlertValidityInfo"
+          />&gt;
   - name: initiateValidation(string, string, number)
     uid: azure-devops-extension-api.AlertRestClient.initiateValidation
     package: azure-devops-extension-api
