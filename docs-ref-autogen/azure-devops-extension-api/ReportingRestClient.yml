@@ -23,14 +23,20 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
-  - name: getAlertSummaryForOrg()
+  - name: getAlertSummaryForOrg(FilterCriteria)
     uid: azure-devops-extension-api.ReportingRestClient.getAlertSummaryForOrg
     package: azure-devops-extension-api
     summary: Get Alert summary by severity for the org
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getAlertSummaryForOrg(): Promise<OrgAlertSummary>'
+      content: >-
+        function getAlertSummaryForOrg(criteria?: FilterCriteria):
+        Promise<OrgAlertSummary>
+      parameters:
+        - id: criteria
+          type: <xref uid="azure-devops-extension-api.FilterCriteria" />
+          description: ''
       return:
         description: ''
         type: >-
