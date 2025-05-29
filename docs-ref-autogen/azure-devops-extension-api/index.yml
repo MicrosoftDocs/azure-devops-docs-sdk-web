@@ -11,6 +11,7 @@ enums:
   - azure-devops-extension-api.Severity
   - azure-devops-extension-api.TimePeriod
   - azure-devops-extension-api.AlertListExpandOption
+  - azure-devops-extension-api.AlertValidationRequestStatus
   - azure-devops-extension-api.AlertValidityStatus
   - azure-devops-extension-api.AnalysisConfigurationType
   - azure-devops-extension-api.ComponentType
@@ -24,7 +25,7 @@ enums:
   - azure-devops-extension-api.ResultType
   - azure-devops-extension-api.SarifJobStatus
   - azure-devops-extension-api.State
-  - azure-devops-extension-api.ValidationStatus
+  - azure-devops-extension-api.ValidationResult
   - azure-devops-extension-api.BoardItemBatchOperationTypeEnum
   - azure-devops-extension-api.BoardTypeEnum
   - azure-devops-extension-api.AgentStatus
@@ -59,7 +60,6 @@ enums:
   - azure-devops-extension-api.SupportLevel
   - azure-devops-extension-api.TaskResult
   - azure-devops-extension-api.TimelineRecordState
-  - azure-devops-extension-api.ValidationResult
   - azure-devops-extension-api.WorkspaceMappingType
   - azure-devops-extension-api.BuildServiceIds
   - azure-devops-extension-api.CommentExpandOptions
@@ -415,10 +415,12 @@ interfaces:
   - azure-devops-extension-api.FilterCriteria
   - azure-devops-extension-api.OrgAlertSummary
   - azure-devops-extension-api.OrgEnablementSummary
+  - azure-devops-extension-api.Project
   - azure-devops-extension-api.ProjectAlertSummary
   - azure-devops-extension-api.ProjectEnablementSummary
   - azure-devops-extension-api.RepoAlertSummary
   - azure-devops-extension-api.RepoEnablementSummary
+  - azure-devops-extension-api.RiskUXComputedFilters
   - azure-devops-extension-api.ScanTypeSummaryProperties
   - azure-devops-extension-api.ScanTypeSummaryPropertiesData
   - azure-devops-extension-api.Alert
@@ -452,6 +454,7 @@ interfaces:
   - azure-devops-extension-api.Tool
   - azure-devops-extension-api.UxFilters
   - azure-devops-extension-api.ValidationFingerprint
+  - azure-devops-extension-api.ValidationRequestInfo
   - azure-devops-extension-api.VersionControlDetails
   - azure-devops-extension-api.VersionControlFilePath
   - azure-devops-extension-api.VersionControlResult
@@ -1172,6 +1175,7 @@ interfaces:
   - azure-devops-extension-api.LocationServiceData
   - azure-devops-extension-api.ResourceAreaInfo
   - azure-devops-extension-api.ServiceDefinition
+  - azure-devops-extension-api.Plan
   - azure-devops-extension-api.AdvSecEnablementFeatures
   - azure-devops-extension-api.AdvSecEnablementSettings
   - azure-devops-extension-api.AdvSecEnablementSettingsUpdate
@@ -1180,15 +1184,15 @@ interfaces:
   - azure-devops-extension-api.BilledCommitter
   - azure-devops-extension-api.BilledCommittersList
   - azure-devops-extension-api.CodeScanningFeatures
-  - azure-devops-extension-api.CodeScanningMeterUsage
+  - azure-devops-extension-api.EnablementOnCreateSettings
+  - azure-devops-extension-api.EnablementSettings
   - azure-devops-extension-api.MeterUsage
   - azure-devops-extension-api.MeterUsageEstimate
-  - azure-devops-extension-api.MeterUsageSummary
+  - azure-devops-extension-api.MeterUsageForPlan
   - azure-devops-extension-api.OrgEnablementSettings
   - azure-devops-extension-api.ProjectEnablementSettings
   - azure-devops-extension-api.RepoEnablementSettings
   - azure-devops-extension-api.SecretScanningFeatures
-  - azure-devops-extension-api.SecretScanningMeterUsage
   - azure-devops-extension-api.ActorFilter
   - azure-devops-extension-api.ActorNotificationReason
   - azure-devops-extension-api.ArtifactFilter
@@ -2104,7 +2108,6 @@ interfaces:
   - azure-devops-extension-api.Marker
   - azure-devops-extension-api.Member
   - azure-devops-extension-api.ParentChildWIMap
-  - azure-devops-extension-api.Plan
   - azure-devops-extension-api.PlanMetadata
   - azure-devops-extension-api.PlanViewData
   - azure-devops-extension-api.PredefinedQuery
