@@ -7,7 +7,7 @@ fullName: OrgEnablementSettings
 remarks: ''
 isDeprecated: false
 type: interface
-properties:
+inheritedProperties:
   - name: codeScanningEnabled
     uid: azure-devops-extension-api.OrgEnablementSettings.codeScanningEnabled
     package: azure-devops-extension-api
@@ -22,6 +22,9 @@ properties:
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [EnablementSettings.codeScanningEnabled](xref:azure-devops-extension-api.EnablementSettings.codeScanningEnabled)
   - name: codeScanningFeatures
     uid: azure-devops-extension-api.OrgEnablementSettings.codeScanningFeatures
     package: azure-devops-extension-api
@@ -34,38 +37,31 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.CodeScanningFeatures" />
-  - name: enableCodeScanningOnCreate
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [EnablementSettings.codeScanningFeatures](xref:azure-devops-extension-api.EnablementSettings.codeScanningFeatures)
+  - name: enablementOnCreateSettings
     uid: >-
-      azure-devops-extension-api.OrgEnablementSettings.enableCodeScanningOnCreate
+      azure-devops-extension-api.OrgEnablementSettings.enablementOnCreateSettings
     package: azure-devops-extension-api
-    summary: Automatically enable Code Scanning on newly created repositories.
-    fullName: enableCodeScanningOnCreate
+    summary: Auto enablement setting for newly created repositories.
+    fullName: enablementOnCreateSettings
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'enableCodeScanningOnCreate: boolean'
+      content: 'enablementOnCreateSettings: EnablementOnCreateSettings'
       return:
         description: ''
-        type: boolean
-  - name: enableSecretScanningOnCreate
-    uid: >-
-      azure-devops-extension-api.OrgEnablementSettings.enableSecretScanningOnCreate
-    package: azure-devops-extension-api
-    summary: Automatically enable Secret Scanning on newly created repositories.
-    fullName: enableSecretScanningOnCreate
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'enableSecretScanningOnCreate: boolean'
-      return:
-        description: ''
-        type: boolean
+        type: <xref uid="azure-devops-extension-api.EnablementOnCreateSettings" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [EnablementSettings.enablementOnCreateSettings](xref:azure-devops-extension-api.EnablementSettings.enablementOnCreateSettings)
   - name: reposEnablementStatus
     uid: azure-devops-extension-api.OrgEnablementSettings.reposEnablementStatus
     package: azure-devops-extension-api
     summary: >-
       A list of enablement statuses for repositories within the specified
-      organization.
+      organization or project.
     fullName: reposEnablementStatus
     remarks: ''
     isDeprecated: false
@@ -74,6 +70,9 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.RepoEnablementSettings" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [EnablementSettings.reposEnablementStatus](xref:azure-devops-extension-api.EnablementSettings.reposEnablementStatus)
   - name: secretScanningEnabled
     uid: azure-devops-extension-api.OrgEnablementSettings.secretScanningEnabled
     package: azure-devops-extension-api
@@ -88,6 +87,9 @@ properties:
       return:
         description: ''
         type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [EnablementSettings.secretScanningEnabled](xref:azure-devops-extension-api.EnablementSettings.secretScanningEnabled)
   - name: secretScanningFeatures
     uid: azure-devops-extension-api.OrgEnablementSettings.secretScanningFeatures
     package: azure-devops-extension-api
@@ -100,3 +102,7 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.SecretScanningFeatures" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [EnablementSettings.secretScanningFeatures](xref:azure-devops-extension-api.EnablementSettings.secretScanningFeatures)
+extends: <xref uid="azure-devops-extension-api.EnablementSettings" />

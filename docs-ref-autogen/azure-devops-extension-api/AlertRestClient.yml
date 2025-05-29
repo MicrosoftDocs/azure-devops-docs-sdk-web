@@ -285,7 +285,7 @@ methods:
     syntax:
       content: >-
         function getValidityData(project: string, repository: string, alertId:
-        number): Promise<AlertValidityInfo>
+        number): Promise<ValidationRequestInfo>
       parameters:
         - id: project
           type: string
@@ -299,8 +299,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.AlertValidityInfo"
-          />&gt;
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.ValidationRequestInfo" />&gt;
   - name: initiateValidation(string, string, number)
     uid: azure-devops-extension-api.AlertRestClient.initiateValidation
     package: azure-devops-extension-api
@@ -310,7 +310,7 @@ methods:
     syntax:
       content: >-
         function initiateValidation(project: string, repository: string,
-        alertId: number): Promise<ValidationStatus>
+        alertId: number): Promise<AlertValidationRequestStatus>
       parameters:
         - id: project
           type: string
@@ -324,8 +324,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.ValidationStatus"
-          />&gt;
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.AlertValidationRequestStatus" />&gt;
   - name: updateAlert(AlertStateUpdate, string, number, string)
     uid: azure-devops-extension-api.AlertRestClient.updateAlert
     package: azure-devops-extension-api

@@ -295,12 +295,16 @@ properties:
     summary: >-
       If provided, only return alerts with the validity specified here. If the
       validity status is Unknown, fetch alerts of all validity results. \<br
-      /\>Only applicable for secret alerts.
+      /\>Only applicable for secret alerts. \<br /\>Filtering by validity status
+      may cause less alerts to be returned than requested with TOP parameter.
+      \<br /\>Due to this behavior, the ContinuationToken(\<![CDATA[\<header
+      name\>]]\>) in the response header should be relied on to decide if
+      another batch needs to be fetched.
     fullName: validity
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'validity: AlertValidityStatus'
+      content: 'validity: AlertValidityStatus[]'
       return:
         description: ''
-        type: <xref uid="azure-devops-extension-api.AlertValidityStatus" />
+        type: <xref uid="azure-devops-extension-api.AlertValidityStatus" />[]

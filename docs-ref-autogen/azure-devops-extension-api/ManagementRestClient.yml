@@ -44,7 +44,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: createBillingSnapshot2(MeterUsageSummary)
+  - name: createBillingSnapshot2(MeterUsageForPlan, Plan)
     uid: azure-devops-extension-api.ManagementRestClient.createBillingSnapshot2
     package: azure-devops-extension-api
     summary: >-
@@ -58,11 +58,14 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function createBillingSnapshot2(meterUsage: MeterUsageSummary):
-        Promise<void>
+        function createBillingSnapshot2(meterUsage: MeterUsageForPlan, plan:
+        Plan): Promise<void>
       parameters:
         - id: meterUsage
-          type: <xref uid="azure-devops-extension-api.MeterUsageSummary" />
+          type: <xref uid="azure-devops-extension-api.MeterUsageForPlan" />
+          description: ''
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
           description: ''
       return:
         description: ''
@@ -89,7 +92,7 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BillableCommitterDetails" />[]&gt;
-  - name: getBillableCommitterDetails2(Date)
+  - name: getBillableCommitterDetails2(Plan, Date)
     uid: >-
       azure-devops-extension-api.ManagementRestClient.getBillableCommitterDetails2
     package: azure-devops-extension-api
@@ -100,9 +103,14 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getBillableCommitterDetails2(billingDate?: Date):
+        function getBillableCommitterDetails2(plan: Plan, billingDate?: Date):
         Promise<BillableCommitterDetails[]>
       parameters:
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: >-
+            The plan to query. Plans supported: CodeSecurity and
+            SecretProtection. This is a mandatory parameter.
         - id: billingDate
           type: Date
           description: The date to query, or if not provided, today
@@ -366,18 +374,22 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.MeterUsage" />&gt;
-  - name: getLastMeterUsage2()
+  - name: getLastMeterUsage2(Plan)
     uid: azure-devops-extension-api.ManagementRestClient.getLastMeterUsage2
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getLastMeterUsage2(): Promise<MeterUsageSummary>'
+      content: 'function getLastMeterUsage2(plan: Plan): Promise<MeterUsageForPlan>'
+      parameters:
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageSummary"
+          Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageForPlan"
           />&gt;
   - name: getMeterUsage(Date)
     uid: azure-devops-extension-api.ManagementRestClient.getMeterUsage
@@ -394,22 +406,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.MeterUsage" />&gt;
-  - name: getMeterUsage2(Date)
+  - name: getMeterUsage2(Plan, Date)
     uid: azure-devops-extension-api.ManagementRestClient.getMeterUsage2
     package: azure-devops-extension-api
     summary: Get commiters used when calculating billing information.
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getMeterUsage2(billingDate?: Date): Promise<MeterUsageSummary>'
+      content: >-
+        function getMeterUsage2(plan: Plan, billingDate?: Date):
+        Promise<MeterUsageForPlan>
       parameters:
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: >-
+            The plan to query. Plans supported: CodeSecurity and
+            SecretProtection. This is a mandatory parameter.
         - id: billingDate
           type: Date
           description: The date to query, or if not provided, today
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageSummary"
+          Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageForPlan"
           />&gt;
   - name: getOrgEnablementStatus(boolean)
     uid: azure-devops-extension-api.ManagementRestClient.getOrgEnablementStatus
