@@ -20,6 +20,21 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: codeSecurityEnabled
+    uid: azure-devops-extension-api.RepoEnablementSummary.codeSecurityEnabled
+    package: azure-devops-extension-api
+    summary: >-
+      Code Security plan is enabled for the repo. Only present for Azure Dev Ops
+      orgs who had enabled Advanced security after billing sku split has went
+      live.
+    fullName: codeSecurityEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'codeSecurityEnabled: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: repoId
     uid: azure-devops-extension-api.RepoEnablementSummary.repoId
     package: azure-devops-extension-api
@@ -58,3 +73,18 @@ properties:
         type: >-
           {[key: number]: <xref
           uid="azure-devops-extension-api.ScanTypeSummaryProperties" />}
+  - name: secretProtectionEnabled
+    uid: azure-devops-extension-api.RepoEnablementSummary.secretProtectionEnabled
+    package: azure-devops-extension-api
+    summary: >-
+      Secret Protection plan is enabled for the repo. Only present for Azure Dev
+      Ops orgs who had enabled Advanced security after billing sku split has
+      went live.
+    fullName: secretProtectionEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'secretProtectionEnabled: boolean'
+      return:
+        description: ''
+        type: boolean

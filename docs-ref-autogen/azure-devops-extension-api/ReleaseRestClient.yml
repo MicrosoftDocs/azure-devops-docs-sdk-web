@@ -2417,7 +2417,7 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ReleaseApproval"
           />[]&gt;
-  - name: updateReleaseDefinition(ReleaseDefinition, string)
+  - name: updateReleaseDefinition(ReleaseDefinition, string, boolean)
     uid: azure-devops-extension-api.ReleaseRestClient.updateReleaseDefinition
     package: azure-devops-extension-api
     summary: Update a release definition.
@@ -2426,7 +2426,8 @@ methods:
     syntax:
       content: >-
         function updateReleaseDefinition(releaseDefinition: ReleaseDefinition,
-        project: string): Promise<ReleaseDefinition>
+        project: string, skipTasksValidation?: boolean):
+        Promise<ReleaseDefinition>
       parameters:
         - id: releaseDefinition
           type: <xref uid="azure-devops-extension-api.ReleaseDefinition" />
@@ -2434,6 +2435,9 @@ methods:
         - id: project
           type: string
           description: Project ID or project name
+        - id: skipTasksValidation
+          type: boolean
+          description: Skip task validation boolean flag
       return:
         description: ''
         type: >-

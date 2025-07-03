@@ -1,0 +1,52 @@
+### YamlMime:TSType
+name: TestCaseResultsDataExtended
+uid: azure-devops-extension-api.TestCaseResultsDataExtended
+package: azure-devops-extension-api
+summary: >-
+  This data model is used in TestCaseResultsDataProvider for extended data to
+  populates the data required for initial page load
+fullName: TestCaseResultsDataExtended
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: contextPoint
+    uid: azure-devops-extension-api.TestCaseResultsDataExtended.contextPoint
+    package: azure-devops-extension-api
+    summary: >-
+      Point information from where the execution history was viewed. Used to set
+      initial filters.
+    fullName: contextPoint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'contextPoint: TestPointDetailedReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TestPointDetailedReference" />
+  - name: results
+    uid: azure-devops-extension-api.TestCaseResultsDataExtended.results
+    package: azure-devops-extension-api
+    summary: Use to store the results displayed in the table
+    fullName: results
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'results: TestCaseAssociatedResultExtended[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.TestCaseAssociatedResultExtended" />[]
+  - name: testCaseName
+    uid: azure-devops-extension-api.TestCaseResultsDataExtended.testCaseName
+    package: azure-devops-extension-api
+    summary: Test Case Name to be displayed in the table header
+    fullName: testCaseName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'testCaseName: string'
+      return:
+        description: ''
+        type: string
