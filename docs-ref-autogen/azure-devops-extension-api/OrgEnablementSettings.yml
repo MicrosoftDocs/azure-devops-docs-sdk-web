@@ -7,39 +7,19 @@ fullName: OrgEnablementSettings
 remarks: ''
 isDeprecated: false
 type: interface
-inheritedProperties:
-  - name: codeScanningEnabled
-    uid: azure-devops-extension-api.OrgEnablementSettings.codeScanningEnabled
+properties:
+  - name: codeSecurityFeatures
+    uid: azure-devops-extension-api.OrgEnablementSettings.codeSecurityFeatures
     package: azure-devops-extension-api
-    summary: >-
-      Code Scan enablement status set to False when disabled and True when
-      enabled; Null is never explicitly set.
-    fullName: codeScanningEnabled
+    summary: Includes code security features that can be enabled.
+    fullName: codeSecurityFeatures
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'codeScanningEnabled: boolean'
+      content: 'codeSecurityFeatures: CodeSecurityFeatures'
       return:
         description: ''
-        type: boolean
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [EnablementSettings.codeScanningEnabled](xref:azure-devops-extension-api.EnablementSettings.codeScanningEnabled)
-  - name: codeScanningFeatures
-    uid: azure-devops-extension-api.OrgEnablementSettings.codeScanningFeatures
-    package: azure-devops-extension-api
-    summary: Includes code scanning features that can be enabled.
-    fullName: codeScanningFeatures
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'codeScanningFeatures: CodeScanningFeatures'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.CodeScanningFeatures" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [EnablementSettings.codeScanningFeatures](xref:azure-devops-extension-api.EnablementSettings.codeScanningFeatures)
+        type: <xref uid="azure-devops-extension-api.CodeSecurityFeatures" />
   - name: enablementOnCreateSettings
     uid: >-
       azure-devops-extension-api.OrgEnablementSettings.enablementOnCreateSettings
@@ -53,9 +33,6 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.EnablementOnCreateSettings" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [EnablementSettings.enablementOnCreateSettings](xref:azure-devops-extension-api.EnablementSettings.enablementOnCreateSettings)
   - name: reposEnablementStatus
     uid: azure-devops-extension-api.OrgEnablementSettings.reposEnablementStatus
     package: azure-devops-extension-api
@@ -70,39 +47,15 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.RepoEnablementSettings" />[]
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [EnablementSettings.reposEnablementStatus](xref:azure-devops-extension-api.EnablementSettings.reposEnablementStatus)
-  - name: secretScanningEnabled
-    uid: azure-devops-extension-api.OrgEnablementSettings.secretScanningEnabled
+  - name: secretProtectionFeatures
+    uid: azure-devops-extension-api.OrgEnablementSettings.secretProtectionFeatures
     package: azure-devops-extension-api
-    summary: >-
-      Secret Scan enablement status set to False when disabled and True when
-      enabled; Null is never explicitly set.
-    fullName: secretScanningEnabled
+    summary: Includes secret protection features that can be enabled.
+    fullName: secretProtectionFeatures
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'secretScanningEnabled: boolean'
+      content: 'secretProtectionFeatures: SecretProtectionFeatures'
       return:
         description: ''
-        type: boolean
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [EnablementSettings.secretScanningEnabled](xref:azure-devops-extension-api.EnablementSettings.secretScanningEnabled)
-  - name: secretScanningFeatures
-    uid: azure-devops-extension-api.OrgEnablementSettings.secretScanningFeatures
-    package: azure-devops-extension-api
-    summary: Includes secret scanning features that can be enabled.
-    fullName: secretScanningFeatures
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'secretScanningFeatures: SecretScanningFeatures'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.SecretScanningFeatures" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [EnablementSettings.secretScanningFeatures](xref:azure-devops-extension-api.EnablementSettings.secretScanningFeatures)
-extends: <xref uid="azure-devops-extension-api.EnablementSettings" />
+        type: <xref uid="azure-devops-extension-api.SecretProtectionFeatures" />

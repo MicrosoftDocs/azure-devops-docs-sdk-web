@@ -457,6 +457,31 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpoint"
           />[]&gt;
+  - name: getServiceEndpointsByTypeAndOwner(string, string)
+    uid: >-
+      azure-devops-extension-api.ServiceEndpointRestClient.getServiceEndpointsByTypeAndOwner
+    package: azure-devops-extension-api
+    summary: >-
+      Get service endpoints for org by type and owner. Returns only id, name and
+      url and used only internally by licensing service
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getServiceEndpointsByTypeAndOwner(type: string, owner: string):
+        Promise<ServiceEndpoint[]>
+      parameters:
+        - id: type
+          type: string
+          description: Type of the service endpoints.
+        - id: owner
+          type: string
+          description: Owner for service endpoints.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpoint"
+          />[]&gt;
   - name: >-
       getServiceEndpointsWithRefreshedAuthentication(RefreshAuthenticationParameters[],
       string, string[])

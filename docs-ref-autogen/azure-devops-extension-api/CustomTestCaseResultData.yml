@@ -82,20 +82,6 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.ShallowReference" />
-  - name: customFields
-    uid: azure-devops-extension-api.CustomTestCaseResultData.customFields
-    package: azure-devops-extension-api
-    summary: >-
-      Array of custom data for additional categorization of the test result.
-      Value of the CustomTestField cannot be more than 1KB.
-    fullName: customFields
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'customFields: CustomTestField[]'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.CustomTestField" />[]
   - name: durationInMs
     uid: azure-devops-extension-api.CustomTestCaseResultData.durationInMs
     package: azure-devops-extension-api
@@ -134,6 +120,18 @@ properties:
       return:
         description: ''
         type: number
+  - name: iterationPath
+    uid: azure-devops-extension-api.CustomTestCaseResultData.iterationPath
+    package: azure-devops-extension-api
+    summary: Iteration path of test.
+    fullName: iterationPath
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'iterationPath: string'
+      return:
+        description: ''
+        type: string
   - name: outcome
     uid: azure-devops-extension-api.CustomTestCaseResultData.outcome
     package: azure-devops-extension-api
@@ -173,6 +171,18 @@ properties:
       return:
         description: ''
         type: number
+  - name: runBy
+    uid: azure-devops-extension-api.CustomTestCaseResultData.runBy
+    package: azure-devops-extension-api
+    summary: Reference to identity executed the test.
+    fullName: runBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'runBy: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
   - name: stackTrace
     uid: azure-devops-extension-api.CustomTestCaseResultData.stackTrace
     package: azure-devops-extension-api

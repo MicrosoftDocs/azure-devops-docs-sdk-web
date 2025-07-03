@@ -1,15 +1,15 @@
 ### YamlMime:TSType
-name: CodeScanningFeatures
-uid: azure-devops-extension-api.CodeScanningFeatures
+name: CodeSecurityFeatures
+uid: azure-devops-extension-api.CodeSecurityFeatures
 package: azure-devops-extension-api
 summary: ''
-fullName: CodeScanningFeatures
+fullName: CodeSecurityFeatures
 remarks: ''
 isDeprecated: false
 type: interface
 properties:
   - name: codeQLEnabled
-    uid: azure-devops-extension-api.CodeScanningFeatures.codeQLEnabled
+    uid: azure-devops-extension-api.CodeSecurityFeatures.codeQLEnabled
     package: azure-devops-extension-api
     summary: >-
       CodeQL enablement status set to False when disabled and True when enabled;
@@ -22,8 +22,49 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: codeSecurityChangedBy
+    uid: azure-devops-extension-api.CodeSecurityFeatures.codeSecurityChangedBy
+    package: azure-devops-extension-api
+    summary: >-
+      The VSID of the last user who modified the enablement status of Code
+      Security.
+    fullName: codeSecurityChangedBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'codeSecurityChangedBy: string'
+      return:
+        description: ''
+        type: string
+  - name: codeSecurityEnabled
+    uid: azure-devops-extension-api.CodeSecurityFeatures.codeSecurityEnabled
+    package: azure-devops-extension-api
+    summary: >-
+      Code Security enablement status set to False when disabled and True when
+      enabled; Null is never explicitly set.
+    fullName: codeSecurityEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'codeSecurityEnabled: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: codeSecurityEnablementLastChangedDate
+    uid: >-
+      azure-devops-extension-api.CodeSecurityFeatures.codeSecurityEnablementLastChangedDate
+    package: azure-devops-extension-api
+    summary: The last time the status of Code Security for this repository was updated
+    fullName: codeSecurityEnablementLastChangedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'codeSecurityEnablementLastChangedDate: Date'
+      return:
+        description: ''
+        type: Date
   - name: dependabotEnabled
-    uid: azure-devops-extension-api.CodeScanningFeatures.dependabotEnabled
+    uid: azure-devops-extension-api.CodeSecurityFeatures.dependabotEnabled
     package: azure-devops-extension-api
     summary: >-
       Dependabot enablement status set to False when disabled and True when
@@ -41,7 +82,7 @@ properties:
         type: boolean
   - name: dependencyScanningInjectionEnabled
     uid: >-
-      azure-devops-extension-api.CodeScanningFeatures.dependencyScanningInjectionEnabled
+      azure-devops-extension-api.CodeSecurityFeatures.dependencyScanningInjectionEnabled
     package: azure-devops-extension-api
     summary: >-
       Dependency Scanning Injection enablement status set to False when disabled

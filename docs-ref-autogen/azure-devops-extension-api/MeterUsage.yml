@@ -73,6 +73,21 @@ properties:
       return:
         description: ''
         type: Date
+  - name: codeSecurityBilledUsers
+    uid: azure-devops-extension-api.MeterUsage.codeSecurityBilledUsers
+    package: azure-devops-extension-api
+    summary: >-
+      A list of BilledCommitter objects that contain the identityRef of
+      committers that have Code Security Plan enabled. This list is populated
+      only for organizations that can enable or disable the Code Security Plan.
+    fullName: codeSecurityBilledUsers
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'codeSecurityBilledUsers: BilledCommitter[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.BilledCommitter" />[]
   - name: isAdvSecBillable
     uid: azure-devops-extension-api.MeterUsage.isAdvSecBillable
     package: azure-devops-extension-api
@@ -99,6 +114,22 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: secretProtectionBilledUsers
+    uid: azure-devops-extension-api.MeterUsage.secretProtectionBilledUsers
+    package: azure-devops-extension-api
+    summary: >-
+      A list of BilledCommitter objects that contain the identityRef of
+      committers that have Secret Protection Plan enabled. This list is
+      populated only for organizations that can enable or disable the Secret
+      Protection Plan.
+    fullName: secretProtectionBilledUsers
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'secretProtectionBilledUsers: BilledCommitter[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.BilledCommitter" />[]
   - name: tenantId
     uid: azure-devops-extension-api.MeterUsage.tenantId
     package: azure-devops-extension-api

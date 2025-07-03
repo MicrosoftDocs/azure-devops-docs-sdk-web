@@ -8,45 +8,18 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
-  - name: codeScanningEnabled
-    uid: azure-devops-extension-api.RepoEnablementSettings.codeScanningEnabled
+  - name: codeSecurityFeatures
+    uid: azure-devops-extension-api.RepoEnablementSettings.codeSecurityFeatures
     package: azure-devops-extension-api
-    summary: >-
-      Code Scan enablement status set to False when disabled and True when
-      enabled; Null is never explicitly set.
-    fullName: codeScanningEnabled
+    summary: Includes Code Security features that can be enabled.
+    fullName: codeSecurityFeatures
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'codeScanningEnabled: boolean'
+      content: 'codeSecurityFeatures: CodeSecurityFeatures'
       return:
         description: ''
-        type: boolean
-  - name: codeScanningEnablementLastChangedDate
-    uid: >-
-      azure-devops-extension-api.RepoEnablementSettings.codeScanningEnablementLastChangedDate
-    package: azure-devops-extension-api
-    summary: The last time the status of Code Scanning for this repository was updated
-    fullName: codeScanningEnablementLastChangedDate
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'codeScanningEnablementLastChangedDate: Date'
-      return:
-        description: ''
-        type: Date
-  - name: codeScanningFeatures
-    uid: azure-devops-extension-api.RepoEnablementSettings.codeScanningFeatures
-    package: azure-devops-extension-api
-    summary: Includes code scanning features that can be enabled.
-    fullName: codeScanningFeatures
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'codeScanningFeatures: CodeScanningFeatures'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.CodeScanningFeatures" />
+        type: <xref uid="azure-devops-extension-api.CodeSecurityFeatures" />
   - name: isBundledSKU
     uid: azure-devops-extension-api.RepoEnablementSettings.isBundledSKU
     package: azure-devops-extension-api
@@ -85,44 +58,15 @@ properties:
       return:
         description: ''
         type: string
-  - name: secretScanningEnabled
-    uid: azure-devops-extension-api.RepoEnablementSettings.secretScanningEnabled
+  - name: secretProtectionFeatures
+    uid: azure-devops-extension-api.RepoEnablementSettings.secretProtectionFeatures
     package: azure-devops-extension-api
-    summary: >-
-      Secret Scan enablement status set to False when disabled and True when
-      enabled; Null is never explicitly set.
-    fullName: secretScanningEnabled
+    summary: Includes Secret Protection features that can be enabled.
+    fullName: secretProtectionFeatures
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'secretScanningEnabled: boolean'
+      content: 'secretProtectionFeatures: SecretProtectionFeatures'
       return:
         description: ''
-        type: boolean
-  - name: secretScanningEnablementLastChangedDate
-    uid: >-
-      azure-devops-extension-api.RepoEnablementSettings.secretScanningEnablementLastChangedDate
-    package: azure-devops-extension-api
-    summary: >-
-      The last time the status of Secret Scanning for this repository was
-      updated
-    fullName: secretScanningEnablementLastChangedDate
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'secretScanningEnablementLastChangedDate: Date'
-      return:
-        description: ''
-        type: Date
-  - name: secretScanningFeatures
-    uid: azure-devops-extension-api.RepoEnablementSettings.secretScanningFeatures
-    package: azure-devops-extension-api
-    summary: Includes secret scanning features that can be enabled.
-    fullName: secretScanningFeatures
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'secretScanningFeatures: SecretScanningFeatures'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.SecretScanningFeatures" />
+        type: <xref uid="azure-devops-extension-api.SecretProtectionFeatures" />
