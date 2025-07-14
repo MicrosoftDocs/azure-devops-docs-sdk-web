@@ -8,25 +8,75 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
-  - name: advSecEnablementLastChangedDate
-    uid: >-
-      azure-devops-extension-api.AdvSecEnablementStatus.advSecEnablementLastChangedDate
+  - name: changedById
+    uid: azure-devops-extension-api.AdvSecEnablementStatus.changedById
     package: azure-devops-extension-api
-    summary: >-
-      The last time the status of Advanced Security for this repository was
-      updated
-    fullName: advSecEnablementLastChangedDate
+    summary: Enabled by VSID
+    fullName: changedById
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'advSecEnablementLastChangedDate: Date'
+      content: 'changedById: string'
+      return:
+        description: ''
+        type: string
+  - name: changedOnDate
+    uid: azure-devops-extension-api.AdvSecEnablementStatus.changedOnDate
+    package: azure-devops-extension-api
+    summary: Enabled changed on datetime
+    fullName: changedOnDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changedOnDate: Date'
       return:
         description: ''
         type: Date
+  - name: dependabotEnabled
+    uid: azure-devops-extension-api.AdvSecEnablementStatus.dependabotEnabled
+    package: azure-devops-extension-api
+    summary: True if Dependabot is enabled for the repository, false if it is disabled.
+    fullName: dependabotEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dependabotEnabled: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: dependencyScanningInjectionEnabled
+    uid: >-
+      azure-devops-extension-api.AdvSecEnablementStatus.dependencyScanningInjectionEnabled
+    package: azure-devops-extension-api
+    summary: >-
+      True if Dependency Scanning injection is enabled for the repository, false
+      if it is disabled.
+    fullName: dependencyScanningInjectionEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dependencyScanningInjectionEnabled: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: enabled
+    uid: azure-devops-extension-api.AdvSecEnablementStatus.enabled
+    package: azure-devops-extension-api
+    summary: >-
+      Enabled status 0 disabled, 1 enabled, Null never explicitly set, always
+      whatever project is, ya this should probably be an enum somewhere
+    fullName: enabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enabled: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: projectId
     uid: azure-devops-extension-api.AdvSecEnablementStatus.projectId
     package: azure-devops-extension-api
-    summary: ''
+    summary: ProjectId
     fullName: projectId
     remarks: ''
     isDeprecated: false
@@ -38,7 +88,7 @@ properties:
   - name: repositoryId
     uid: azure-devops-extension-api.AdvSecEnablementStatus.repositoryId
     package: azure-devops-extension-api
-    summary: ''
+    summary: RepositoryId
     fullName: repositoryId
     remarks: ''
     isDeprecated: false
@@ -47,57 +97,3 @@ properties:
       return:
         description: ''
         type: string
-inheritedProperties:
-  - name: advSecEnabled
-    uid: azure-devops-extension-api.AdvSecEnablementStatus.advSecEnabled
-    package: azure-devops-extension-api
-    summary: >-
-      Advanced Security enablement status set to False when disabled and True
-      when enabled; Null is never explicitly set.
-    fullName: advSecEnabled
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'advSecEnabled: boolean'
-      return:
-        description: ''
-        type: boolean
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AdvSecEnablementStatusUpdate.advSecEnabled](xref:azure-devops-extension-api.AdvSecEnablementStatusUpdate.advSecEnabled)
-  - name: advSecEnablementFeatures
-    uid: azure-devops-extension-api.AdvSecEnablementStatus.advSecEnablementFeatures
-    package: azure-devops-extension-api
-    summary: >-
-      Includes additional features that can be enabled alongside Advanced
-      Security.
-    fullName: advSecEnablementFeatures
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'advSecEnablementFeatures: AdvSecEnablementFeatures'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.AdvSecEnablementFeatures" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AdvSecEnablementStatusUpdate.advSecEnablementFeatures](xref:azure-devops-extension-api.AdvSecEnablementStatusUpdate.advSecEnablementFeatures)
-  - name: blockPushes
-    uid: azure-devops-extension-api.AdvSecEnablementStatus.blockPushes
-    package: azure-devops-extension-api
-    summary: >-
-      When true, pushes containing secrets will be blocked. \<br /\>When false,
-      pushes are scanned for secrets and are not blocked. \<br /\>If
-      includeAllProperties in the request is false, this value will be null.
-    fullName: blockPushes
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'blockPushes: boolean'
-      return:
-        description: ''
-        type: boolean
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AdvSecEnablementStatusUpdate.blockPushes](xref:azure-devops-extension-api.AdvSecEnablementStatusUpdate.blockPushes)
-extends: <xref uid="azure-devops-extension-api.AdvSecEnablementStatusUpdate" />
