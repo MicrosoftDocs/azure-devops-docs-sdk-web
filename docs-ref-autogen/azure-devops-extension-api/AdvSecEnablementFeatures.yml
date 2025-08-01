@@ -1,0 +1,78 @@
+### YamlMime:TSType
+name: AdvSecEnablementFeatures
+uid: azure-devops-extension-api.AdvSecEnablementFeatures
+package: azure-devops-extension-api
+summary: ''
+fullName: AdvSecEnablementFeatures
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: autoEnableNewProjectOrRepos
+    uid: >-
+      azure-devops-extension-api.AdvSecEnablementFeatures.autoEnableNewProjectOrRepos
+    package: azure-devops-extension-api
+    summary: >-
+      Auto enablement of AdvSec for new projects or repos will be enabled when
+      set to true and will be unchanged when set to false.
+    fullName: autoEnableNewProjectOrRepos
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autoEnableNewProjectOrRepos: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: codeQLEnabled
+    uid: azure-devops-extension-api.AdvSecEnablementFeatures.codeQLEnabled
+    package: azure-devops-extension-api
+    summary: >-
+      CodeQL enablement status set to False when disabled and True when enabled;
+      Null is never explicitly set.
+    fullName: codeQLEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'codeQLEnabled: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: dependabotEnabled
+    uid: azure-devops-extension-api.AdvSecEnablementFeatures.dependabotEnabled
+    package: azure-devops-extension-api
+    summary: >-
+      Dependabot enablement status set to False when disabled and True when
+      enabled; Null is never explicitly set. \<br /\>When true, Dependabot will
+      open PRs to support security updates for outdated dependencies. \<br
+      /\>Setting Dependabot enablement state is only supported for repo
+      enablement and not org or project enablement at this time.
+    fullName: dependabotEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dependabotEnabled: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: dependencyScanningInjectionEnabled
+    uid: >-
+      azure-devops-extension-api.AdvSecEnablementFeatures.dependencyScanningInjectionEnabled
+    package: azure-devops-extension-api
+    summary: >-
+      Dependency Scanning Injection enablement status set to False when disabled
+      and True when enabled; Null is never explicitly set. \<br /\> If Advanced
+      Security is NOT already enabled, behavior will depend on if Advanced
+      Security is to be enabled/disabled. DependencyScanningInjectionEnabled
+      will not affect anything in this scenario. \<br /\> If Advanced Security
+      is to be disabled, the value of DependencyScanningInjectionEnabled will
+      have no effect. \<br /\> Setting Dependency Scanning enablement state is
+      only supported for repo enablement and not org or project enablement at
+      this time.
+    fullName: dependencyScanningInjectionEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dependencyScanningInjectionEnabled: boolean'
+      return:
+        description: ''
+        type: boolean

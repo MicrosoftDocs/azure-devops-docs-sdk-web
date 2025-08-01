@@ -77,8 +77,11 @@ methods:
         - id: expand
           type: <xref uid="azure-devops-extension-api.ExpandOption" />
           description: >-
-            Expand alert attributes. Possible options are
-            {ValidationFingerprint, None}
+            Expand attributes of a secret alert. Possible values are `None` and
+            `ValidationFingerprint`. Defaults to `None`. Be aware that if
+            `expand` is set to `ValidationFingerprint`, the response may contain
+            the secret in its unencrypted form. Please exercise caution when
+            using this data.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;
@@ -185,8 +188,11 @@ methods:
         - id: expand
           type: <xref uid="azure-devops-extension-api.ExpandOption" />
           description: >-
-            Expand alert attributes. Possible options are
-            {ValidationFingerprint, None}
+            Expand attributes of a secret alert. Possible values are `None` and
+            `ValidationFingerprint`. Defaults to `None`. Be aware that if
+            `expand` is set to `ValidationFingerprint`, the response may contain
+            the secret in its unencrypted form. Please exercise caution when
+            using this data.
       return:
         description: ''
         type: Promise&lt;string&gt;
