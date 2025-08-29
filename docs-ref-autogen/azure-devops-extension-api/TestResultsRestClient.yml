@@ -736,6 +736,36 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.SourceViewBuildCoverage" />[]&gt;
+  - name: >-
+      generateTestPlanFromWorkItem(GenerateTestPlanFromWorkItemModel, string,
+      number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.generateTestPlanFromWorkItem
+    package: azure-devops-extension-api
+    summary: Generates manual test plan from a work item using AI
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateTestPlanFromWorkItem(generateTestPlanFromWorkItemModel:
+        GenerateTestPlanFromWorkItemModel, project: string, workItemId: number):
+        Promise<boolean>
+      parameters:
+        - id: generateTestPlanFromWorkItemModel
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.GenerateTestPlanFromWorkItemModel"
+            />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: workItemId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
   - name: getBugsLinkedToTestResult(string, number, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getBugsLinkedToTestResult
     package: azure-devops-extension-api

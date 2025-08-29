@@ -209,6 +209,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TestPlan" />&gt;
+  - name: createTestPlanWithTestCases(TestPlanWithTestCasesCreateParams, string)
+    uid: azure-devops-extension-api.TestPlanRestClient.createTestPlanWithTestCases
+    package: azure-devops-extension-api
+    summary: Create a test plan with test cases by queueing a job.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createTestPlanWithTestCases(creationParams:
+        TestPlanWithTestCasesCreateParams, project: string): Promise<boolean>
+      parameters:
+        - id: creationParams
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.TestPlanWithTestCasesCreateParams"
+            />
+          description: Parameters for creating the test plan and test cases.
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
   - name: createTestSuite(TestSuiteCreateParams, string, number)
     uid: azure-devops-extension-api.TestPlanRestClient.createTestSuite
     package: azure-devops-extension-api
