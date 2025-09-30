@@ -2721,6 +2721,36 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestTagSummary"
           />&gt;
+  - name: getTestWeightedScoreByBuild(string, number, boolean, boolean)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.getTestWeightedScoreByBuild
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTestWeightedScoreByBuild(project: string, buildId: number,
+        includeAllOutcomes?: boolean, onlyFlakyResults?: boolean):
+        Promise<TestCaseResult[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: buildId
+          type: number
+          description: ''
+        - id: includeAllOutcomes
+          type: boolean
+          description: ''
+        - id: onlyFlakyResults
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestCaseResult"
+          />[]&gt;
   - name: publishTestResultDocument(TestResultDocument, string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.publishTestResultDocument
     package: azure-devops-extension-api
