@@ -3789,7 +3789,7 @@ methods:
           />[]&gt;
   - name: >-
       getRefs(string, string, string, boolean, boolean, boolean, boolean,
-      boolean, string)
+      boolean, boolean, string)
     uid: azure-devops-extension-api.GitRestClient.getRefs
     package: azure-devops-extension-api
     summary: Queries the provided repository for its refs and returns them.
@@ -3799,8 +3799,9 @@ methods:
       content: >-
         function getRefs(repositoryId: string, project?: string, filter?:
         string, includeLinks?: boolean, includeStatuses?: boolean,
-        includeMyBranches?: boolean, latestStatusesOnly?: boolean, peelTags?:
-        boolean, filterContains?: string): Promise<PagedList<GitRef>>
+        includeMyBranches?: boolean, includeTargetBranches?: boolean,
+        latestStatusesOnly?: boolean, peelTags?: boolean, filterContains?:
+        string): Promise<PagedList<GitRef>>
       parameters:
         - id: repositoryId
           type: string
@@ -3827,6 +3828,11 @@ methods:
             [optional] Includes only branches that the user owns, the branches
             the user favorites, and the default branch. The default value is
             false. Cannot be combined with the filter parameter.
+        - id: includeTargetBranches
+          type: boolean
+          description: >-
+            [optional] Includes target branches defined by patterns in
+            pull_request_targets.yml.
         - id: latestStatusesOnly
           type: boolean
           description: >-
