@@ -242,6 +242,24 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Branch" />[]&gt;
+  - name: getOrgLevelAlertsByIds(number[])
+    uid: azure-devops-extension-api.AlertRestClient.getOrgLevelAlertsByIds
+    package: azure-devops-extension-api
+    summary: >-
+      Get alerts by their IDs at the organization level. Only retruns alerts
+      that the user has permission to view. Only returns alerts of sku plans
+      that are enabled.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOrgLevelAlertsByIds(alertIds: number[]): Promise<Alert[]>'
+      parameters:
+        - id: alertIds
+          type: number[]
+          description: List of alert IDs to retrieve
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />[]&gt;
   - name: getSarif(number)
     uid: azure-devops-extension-api.AlertRestClient.getSarif
     package: azure-devops-extension-api

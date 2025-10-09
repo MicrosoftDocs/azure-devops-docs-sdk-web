@@ -1581,6 +1581,35 @@ methods:
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
+  - name: processSuitesForStaging(StagedSuitesRequestModel, string, number)
+    uid: azure-devops-extension-api.TestRestClient.processSuitesForStaging
+    package: azure-devops-extension-api
+    summary: >-
+      Processes a collection of test suites and returns a response model
+      containing suite and test case details.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function processSuitesForStaging(request: StagedSuitesRequestModel,
+        project: string, workItemId: number): Promise<StagedSuitesResponseModel>
+      parameters:
+        - id: request
+          type: <xref uid="azure-devops-extension-api.StagedSuitesRequestModel" />
+          description: >-
+            The request model containing the test suites to be processed. Cannot
+            be null.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: workItemId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.StagedSuitesResponseModel" />&gt;
   - name: publishTestResultDocument(TestResultDocument, string, number)
     uid: azure-devops-extension-api.TestRestClient.publishTestResultDocument
     package: azure-devops-extension-api
