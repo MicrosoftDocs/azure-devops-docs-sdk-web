@@ -42,14 +42,20 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.OrgAlertSummary"
           />&gt;
-  - name: getEnablementSummaryForOrg()
+  - name: getEnablementSummaryForOrg(EnablementFilterCriteria)
     uid: azure-devops-extension-api.ReportingRestClient.getEnablementSummaryForOrg
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getEnablementSummaryForOrg(): Promise<OrgEnablementSummary>'
+      content: >-
+        function getEnablementSummaryForOrg(criteria?:
+        EnablementFilterCriteria): Promise<OrgEnablementSummary>
+      parameters:
+        - id: criteria
+          type: <xref uid="azure-devops-extension-api.EnablementFilterCriteria" />
+          description: ''
       return:
         description: ''
         type: >-
