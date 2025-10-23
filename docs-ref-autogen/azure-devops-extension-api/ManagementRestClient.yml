@@ -23,8 +23,8 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
-  - name: createBillingSnapshot3(MeterUsageForPlan, Plan)
-    uid: azure-devops-extension-api.ManagementRestClient.createBillingSnapshot3
+  - name: createBillingSnapshot2(MeterUsageForPlan, Plan)
+    uid: azure-devops-extension-api.ManagementRestClient.createBillingSnapshot2
     package: azure-devops-extension-api
     summary: >-
       During multi-org billing computation in primary scale unit(EUS21), this
@@ -37,7 +37,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function createBillingSnapshot3(meterUsage: MeterUsageForPlan, plan:
+        function createBillingSnapshot2(meterUsage: MeterUsageForPlan, plan:
         Plan): Promise<void>
       parameters:
         - id: meterUsage
@@ -49,9 +49,9 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: getBillableCommitterDetails3(Plan, Date)
+  - name: getBillableCommitterDetails2(Plan, Date)
     uid: >-
-      azure-devops-extension-api.ManagementRestClient.getBillableCommitterDetails3
+      azure-devops-extension-api.ManagementRestClient.getBillableCommitterDetails2
     package: azure-devops-extension-api
     summary: >-
       Get all billable committers details, including those not matched with a
@@ -60,7 +60,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getBillableCommitterDetails3(plan: Plan, billingDate?: Date):
+        function getBillableCommitterDetails2(plan: Plan, billingDate?: Date):
         Promise<BillableCommitterDetails[]>
       parameters:
         - id: plan
@@ -76,9 +76,9 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BillableCommitterDetails" />[]&gt;
-  - name: getEstimatedBillableCommittersDetailsForRepo3(string, string, Plan)
+  - name: getEstimatedBillableCommittersDetailsForRepo2(string, string, Plan)
     uid: >-
-      azure-devops-extension-api.ManagementRestClient.getEstimatedBillableCommittersDetailsForRepo3
+      azure-devops-extension-api.ManagementRestClient.getEstimatedBillableCommittersDetailsForRepo2
     package: azure-devops-extension-api
     summary: >-
       Estimate the pushers that would be added to the customer's usage if
@@ -87,7 +87,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getEstimatedBillableCommittersDetailsForRepo3(project: string,
+        function getEstimatedBillableCommittersDetailsForRepo2(project: string,
         repository: string, plan?: Plan): Promise<MeterUsageEstimate>
       parameters:
         - id: project
@@ -104,9 +104,9 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageEstimate"
           />&gt;
-  - name: getEstimatedBillablePushersDetailsForOrg3(Plan)
+  - name: getEstimatedBillablePushersDetailsForOrg2(Plan)
     uid: >-
-      azure-devops-extension-api.ManagementRestClient.getEstimatedBillablePushersDetailsForOrg3
+      azure-devops-extension-api.ManagementRestClient.getEstimatedBillablePushersDetailsForOrg2
     package: azure-devops-extension-api
     summary: >-
       Estimate the pushers that would be added to the customer's usage if
@@ -115,7 +115,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getEstimatedBillablePushersDetailsForOrg3(plan?: Plan):
+        function getEstimatedBillablePushersDetailsForOrg2(plan?: Plan):
         Promise<MeterUsageEstimate>
       parameters:
         - id: plan
@@ -126,9 +126,9 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageEstimate"
           />&gt;
-  - name: getEstimatedBillablePushersDetailsForProject3(string, Plan)
+  - name: getEstimatedBillablePushersDetailsForProject2(string, Plan)
     uid: >-
-      azure-devops-extension-api.ManagementRestClient.getEstimatedBillablePushersDetailsForProject3
+      azure-devops-extension-api.ManagementRestClient.getEstimatedBillablePushersDetailsForProject2
     package: azure-devops-extension-api
     summary: >-
       Estimate the pushers that would be added to the customer's usage if
@@ -137,7 +137,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getEstimatedBillablePushersDetailsForProject3(project: string,
+        function getEstimatedBillablePushersDetailsForProject2(project: string,
         plan?: Plan): Promise<MeterUsageEstimate>
       parameters:
         - id: project
@@ -151,14 +151,14 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageEstimate"
           />&gt;
-  - name: getLastMeterUsage3(Plan)
-    uid: azure-devops-extension-api.ManagementRestClient.getLastMeterUsage3
+  - name: getLastMeterUsage2(Plan)
+    uid: azure-devops-extension-api.ManagementRestClient.getLastMeterUsage2
     package: azure-devops-extension-api
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getLastMeterUsage3(plan: Plan): Promise<MeterUsageForPlan>'
+      content: 'function getLastMeterUsage2(plan: Plan): Promise<MeterUsageForPlan>'
       parameters:
         - id: plan
           type: <xref uid="azure-devops-extension-api.Plan" />
@@ -168,15 +168,15 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageForPlan"
           />&gt;
-  - name: getMeterUsage3(Plan, Date)
-    uid: azure-devops-extension-api.ManagementRestClient.getMeterUsage3
+  - name: getMeterUsage2(Plan, Date)
+    uid: azure-devops-extension-api.ManagementRestClient.getMeterUsage2
     package: azure-devops-extension-api
     summary: Get commiters used when calculating billing information.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function getMeterUsage3(plan: Plan, billingDate?: Date):
+        function getMeterUsage2(plan: Plan, billingDate?: Date):
         Promise<MeterUsageForPlan>
       parameters:
         - id: plan
@@ -192,15 +192,15 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageForPlan"
           />&gt;
-  - name: getOrgEnablementStatus3(boolean)
-    uid: azure-devops-extension-api.ManagementRestClient.getOrgEnablementStatus3
+  - name: getOrgEnablementStatus2(boolean)
+    uid: azure-devops-extension-api.ManagementRestClient.getOrgEnablementStatus2
     package: azure-devops-extension-api
     summary: Get the current status of Advanced Security for the organization
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function getOrgEnablementStatus3(includeAllProperties?: boolean):
+        function getOrgEnablementStatus2(includeAllProperties?: boolean):
         Promise<OrgEnablementSettings>
       parameters:
         - id: includeAllProperties
@@ -213,16 +213,16 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.OrgEnablementSettings" />&gt;
-  - name: getProjectEnablementStatus3(string, boolean)
+  - name: getProjectEnablementStatus2(string, boolean)
     uid: >-
-      azure-devops-extension-api.ManagementRestClient.getProjectEnablementStatus3
+      azure-devops-extension-api.ManagementRestClient.getProjectEnablementStatus2
     package: azure-devops-extension-api
     summary: Get the current status of Advanced Security for a project
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function getProjectEnablementStatus3(project: string,
+        function getProjectEnablementStatus2(project: string,
         includeAllProperties?: boolean): Promise<ProjectEnablementSettings>
       parameters:
         - id: project
@@ -238,8 +238,8 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ProjectEnablementSettings" />&gt;
-  - name: getRepoEnablementStatus3(string, string, boolean)
-    uid: azure-devops-extension-api.ManagementRestClient.getRepoEnablementStatus3
+  - name: getRepoEnablementStatus2(string, string, boolean)
+    uid: azure-devops-extension-api.ManagementRestClient.getRepoEnablementStatus2
     package: azure-devops-extension-api
     summary: >-
       Determines if Code Security, Secret Protection, and their features are
@@ -248,7 +248,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getRepoEnablementStatus3(project: string, repository: string,
+        function getRepoEnablementStatus2(project: string, repository: string,
         includeAllProperties?: boolean): Promise<RepoEnablementSettings>
       parameters:
         - id: project
@@ -267,15 +267,15 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.RepoEnablementSettings" />&gt;
-  - name: updateOrgEnablementStatus3(OrgEnablementSettings)
-    uid: azure-devops-extension-api.ManagementRestClient.updateOrgEnablementStatus3
+  - name: updateOrgEnablementStatus2(OrgEnablementSettings)
+    uid: azure-devops-extension-api.ManagementRestClient.updateOrgEnablementStatus2
     package: azure-devops-extension-api
     summary: Update the status of Advanced Security for the organization
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function updateOrgEnablementStatus3(orgEnablementSettings:
+        function updateOrgEnablementStatus2(orgEnablementSettings:
         OrgEnablementSettings): Promise<void>
       parameters:
         - id: orgEnablementSettings
@@ -284,16 +284,16 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: updateProjectEnablementStatus3(ProjectEnablementSettings, string)
+  - name: updateProjectEnablementStatus2(ProjectEnablementSettings, string)
     uid: >-
-      azure-devops-extension-api.ManagementRestClient.updateProjectEnablementStatus3
+      azure-devops-extension-api.ManagementRestClient.updateProjectEnablementStatus2
     package: azure-devops-extension-api
     summary: Update the status of Advanced Security for the project
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function updateProjectEnablementStatus3(projectEnablementSettings:
+        function updateProjectEnablementStatus2(projectEnablementSettings:
         ProjectEnablementSettings, project: string): Promise<void>
       parameters:
         - id: projectEnablementSettings
@@ -305,9 +305,9 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: updateRepoAdvSecEnablementStatus3(RepoEnablementSettings, string, string)
+  - name: updateRepoAdvSecEnablementStatus2(RepoEnablementSettings, string, string)
     uid: >-
-      azure-devops-extension-api.ManagementRestClient.updateRepoAdvSecEnablementStatus3
+      azure-devops-extension-api.ManagementRestClient.updateRepoAdvSecEnablementStatus2
     package: azure-devops-extension-api
     summary: >-
       Update the enablement status of Code Security and Secret Protection, along
@@ -316,7 +316,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function updateRepoAdvSecEnablementStatus3(savedAdvSecEnablementStatus:
+        function updateRepoAdvSecEnablementStatus2(savedAdvSecEnablementStatus:
         RepoEnablementSettings, project: string, repository: string):
         Promise<void>
       parameters:
