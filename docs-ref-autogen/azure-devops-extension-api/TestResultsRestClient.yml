@@ -781,6 +781,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
+  - name: getBranchesByFlakyTestCaseRefId(string, number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.getBranchesByFlakyTestCaseRefId
+    package: azure-devops-extension-api
+    summary: Get list of branches where a test case reference id has flaked
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getBranchesByFlakyTestCaseRefId(project: string,
+        testCaseReferenceId: number): Promise<TestCaseFlakinessBranchInfo>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: testCaseReferenceId
+          type: number
+          description: Reference ID of test used by test result
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TestCaseFlakinessBranchInfo" />&gt;
   - name: getBugsLinkedToTestResult(string, number, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getBugsLinkedToTestResult
     package: azure-devops-extension-api
