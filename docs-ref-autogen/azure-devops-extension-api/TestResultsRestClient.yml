@@ -575,6 +575,27 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: deleteFlakyTestCaseRefIdsByBranch(string, BranchInfo)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.deleteFlakyTestCaseRefIdsByBranch
+    package: azure-devops-extension-api
+    summary: Delete flaky test case reference IDs by branch information
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteFlakyTestCaseRefIdsByBranch(project: string, branchInfo:
+        BranchInfo): Promise<number>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: branchInfo
+          type: <xref uid="azure-devops-extension-api.BranchInfo" />
+          description: Branch information containing name and type
+      return:
+        description: ''
+        type: Promise&lt;number&gt;
   - name: deleteTestMethodToWorkItemLink(string, string, number)
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.deleteTestMethodToWorkItemLink
@@ -950,6 +971,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
+  - name: getFlakyTestCaseRefIdsByBranch(string, BranchInfo)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.getFlakyTestCaseRefIdsByBranch
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFlakyTestCaseRefIdsByBranch(project: string, branchInfo:
+        BranchInfo): Promise<TestCaseFlakinessBranchInfo[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: branchInfo
+          type: <xref uid="azure-devops-extension-api.BranchInfo" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TestCaseFlakinessBranchInfo" />[]&gt;
   - name: getFlakyTestResultsByBuildDefinitionId(string, number, Date)
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.getFlakyTestResultsByBuildDefinitionId
@@ -3168,7 +3212,7 @@ methods:
   - name: >-
       queryTestRuns(string, Date, Date, TestRunState, number[], boolean,
       TestRunPublishContext, number[], number[], string, number[], number[],
-      number[], number[], string, number, string)
+      number[], number[], string, number, TestRunSortOrderType, string)
     uid: azure-devops-extension-api.TestResultsRestClient.queryTestRuns
     package: azure-devops-extension-api
     summary: >-
@@ -3184,7 +3228,8 @@ methods:
         buildIds?: number[], buildDefIds?: number[], branchName?: string,
         releaseIds?: number[], releaseDefIds?: number[], releaseEnvIds?:
         number[], releaseEnvDefIds?: number[], runTitle?: string, top?: number,
-        continuationToken?: string): Promise<PagedList<TestRun>>
+        sortOrder?: TestRunSortOrderType, continuationToken?: string):
+        Promise<PagedList<TestRun>>
       parameters:
         - id: project
           type: string
@@ -3250,6 +3295,9 @@ methods:
         - id: top
           type: number
           description: Number of runs to be queried. Limit is 100
+        - id: sortOrder
+          type: <xref uid="azure-devops-extension-api.TestRunSortOrderType" />
+          description: Sort order by LastUpdated for the test runs.
         - id: continuationToken
           type: string
           description: >-
