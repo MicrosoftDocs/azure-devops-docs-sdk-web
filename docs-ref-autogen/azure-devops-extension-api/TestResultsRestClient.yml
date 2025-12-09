@@ -971,7 +971,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: getFlakyTestCaseRefIdsByBranch(string, BranchInfo)
+  - name: getFlakyTestCaseRefIdsByBranch(string, string, BranchInfo)
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.getFlakyTestCaseRefIdsByBranch
     package: azure-devops-extension-api
@@ -980,12 +980,15 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getFlakyTestCaseRefIdsByBranch(project: string, branchInfo:
-        BranchInfo): Promise<TestCaseFlakinessBranchInfo[]>
+        function getFlakyTestCaseRefIdsByBranch(project: string, repositoryId:
+        string, branchInfo: BranchInfo): Promise<TestCaseFlakinessBranchInfo[]>
       parameters:
         - id: project
           type: string
           description: Project ID or project name
+        - id: repositoryId
+          type: string
+          description: ''
         - id: branchInfo
           type: <xref uid="azure-devops-extension-api.BranchInfo" />
           description: ''
