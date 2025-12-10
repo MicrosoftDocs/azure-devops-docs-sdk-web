@@ -1,15 +1,15 @@
 ### YamlMime:TSType
-name: OrgEnablementSettings
-uid: azure-devops-extension-api.OrgEnablementSettings
+name: BulkEnablementSettingsBase
+uid: azure-devops-extension-api.BulkEnablementSettingsBase
 package: azure-devops-extension-api
 summary: ''
-fullName: OrgEnablementSettings
+fullName: BulkEnablementSettingsBase
 remarks: ''
 isDeprecated: false
 type: interface
-inheritedProperties:
+properties:
   - name: codeSecurityFeatures
-    uid: azure-devops-extension-api.OrgEnablementSettings.codeSecurityFeatures
+    uid: azure-devops-extension-api.BulkEnablementSettingsBase.codeSecurityFeatures
     package: azure-devops-extension-api
     summary: Includes code security features that can be enabled.
     fullName: codeSecurityFeatures
@@ -20,12 +20,9 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.CodeSecurityFeatures" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [BulkEnablementSettingsBase.codeSecurityFeatures](xref:azure-devops-extension-api.BulkEnablementSettingsBase.codeSecurityFeatures)
   - name: enablementOnCreateSettings
     uid: >-
-      azure-devops-extension-api.OrgEnablementSettings.enablementOnCreateSettings
+      azure-devops-extension-api.BulkEnablementSettingsBase.enablementOnCreateSettings
     package: azure-devops-extension-api
     summary: Auto enablement setting for newly created repositories.
     fullName: enablementOnCreateSettings
@@ -36,11 +33,8 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.EnablementOnCreateSettings" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [BulkEnablementSettingsBase.enablementOnCreateSettings](xref:azure-devops-extension-api.BulkEnablementSettingsBase.enablementOnCreateSettings)
   - name: isBundledSKU
-    uid: azure-devops-extension-api.OrgEnablementSettings.isBundledSKU
+    uid: azure-devops-extension-api.BulkEnablementSettingsBase.isBundledSKU
     package: azure-devops-extension-api
     summary: >-
       Indicates whether the organization is part of the bundled SKU (old billing
@@ -53,11 +47,9 @@ inheritedProperties:
       return:
         description: ''
         type: boolean
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [BulkEnablementSettingsBase.isBundledSKU](xref:azure-devops-extension-api.BulkEnablementSettingsBase.isBundledSKU)
   - name: reposEnablementStatus
-    uid: azure-devops-extension-api.OrgEnablementSettings.reposEnablementStatus
+    uid: >-
+      azure-devops-extension-api.BulkEnablementSettingsBase.reposEnablementStatus
     package: azure-devops-extension-api
     summary: >-
       A list of enablement statuses for repositories within the specified
@@ -70,11 +62,9 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.RepoEnablementSettings" />[]
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [BulkEnablementSettingsBase.reposEnablementStatus](xref:azure-devops-extension-api.BulkEnablementSettingsBase.reposEnablementStatus)
   - name: secretProtectionFeatures
-    uid: azure-devops-extension-api.OrgEnablementSettings.secretProtectionFeatures
+    uid: >-
+      azure-devops-extension-api.BulkEnablementSettingsBase.secretProtectionFeatures
     package: azure-devops-extension-api
     summary: Includes secret protection features that can be enabled.
     fullName: secretProtectionFeatures
@@ -85,7 +75,3 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.SecretProtectionFeatures" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [BulkEnablementSettingsBase.secretProtectionFeatures](xref:azure-devops-extension-api.BulkEnablementSettingsBase.secretProtectionFeatures)
-extends: <xref uid="azure-devops-extension-api.BulkEnablementSettingsBase" />
