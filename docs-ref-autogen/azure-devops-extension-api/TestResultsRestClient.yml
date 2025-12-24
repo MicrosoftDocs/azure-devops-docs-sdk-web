@@ -575,24 +575,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: deleteFlakyTestCaseRefIdsByBranch(string, BranchInfo)
+  - name: deleteFlakyTestCaseRefIdsByBranch(string, string, BranchInfo)
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.deleteFlakyTestCaseRefIdsByBranch
     package: azure-devops-extension-api
-    summary: Delete flaky test case reference IDs by branch information
+    summary: Delete flaky test case reference IDs by branch and repository information
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function deleteFlakyTestCaseRefIdsByBranch(project: string, branchInfo:
-        BranchInfo): Promise<number>
+        function deleteFlakyTestCaseRefIdsByBranch(project: string,
+        repositoryId: string, branchInfo: BranchInfo): Promise<number>
       parameters:
         - id: project
           type: string
           description: Project ID or project name
+        - id: repositoryId
+          type: string
+          description: Guid of the repository
         - id: branchInfo
           type: <xref uid="azure-devops-extension-api.BranchInfo" />
-          description: Branch information containing name and type
+          description: >-
+            Branch information containing name and type Note: Operations on
+            protected branches such as 'master' or 'main' are not supported.
       return:
         description: ''
         type: Promise&lt;number&gt;
@@ -2806,31 +2811,37 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestTagSummary"
           />&gt;
-  - name: getTestWeightedScoreByBuild(string, number, boolean, boolean)
+  - name: getTestWeightedScoreByTestRun(string, string, boolean, boolean)
     uid: >-
-      azure-devops-extension-api.TestResultsRestClient.getTestWeightedScoreByBuild
+      azure-devops-extension-api.TestResultsRestClient.getTestWeightedScoreByTestRun
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Calculate Test Weighted Score for given comman separated list of Test Runs
+      Ids.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function getTestWeightedScoreByBuild(project: string, buildId: number,
+        function getTestWeightedScoreByTestRun(project: string, runIds: string,
         includeAllOutcomes?: boolean, onlyFlakyResults?: boolean):
         Promise<TestCaseResult[]>
       parameters:
         - id: project
           type: string
           description: Project ID or project name
-        - id: buildId
-          type: number
-          description: ''
+        - id: runIds
+          type: string
+          description: Comman Separated Test Run Ids. Maximum 100 supported.
         - id: includeAllOutcomes
           type: boolean
-          description: ''
+          description: >-
+            Include all test results outcome for TWS Calculation. By default,
+            false is considered
         - id: onlyFlakyResults
           type: boolean
-          description: ''
+          description: >-
+            Option to return only flaky test results identified as flaky. By
+            default, true is passed
       return:
         description: ''
         type: >-

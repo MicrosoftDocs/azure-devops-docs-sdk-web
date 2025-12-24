@@ -116,6 +116,55 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AlertAnalysisInstance" />[]&gt;
+  - name: getAlertMetadata(string, number, string)
+    uid: azure-devops-extension-api.AlertRestClient.getAlertMetadata
+    package: azure-devops-extension-api
+    summary: Get an alert metadata.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAlertMetadata(project: string, alertId: number, repository:
+        string): Promise<AlertMetadata>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: alertId
+          type: number
+          description: ID of alert to retrieve
+        - id: repository
+          type: string
+          description: Name or id  of a repository that alert is part of
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.AlertMetadata" />&gt;
+  - name: getAlertMetadataBatch(AlertMetadataBatchRequest, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.getAlertMetadataBatch
+    package: azure-devops-extension-api
+    summary: Get alerts metadata.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAlertMetadataBatch(alertMetadataBatchRequest:
+        AlertMetadataBatchRequest, project: string, repository: string):
+        Promise<AlertMetadata[]>
+      parameters:
+        - id: alertMetadataBatchRequest
+          type: <xref uid="azure-devops-extension-api.AlertMetadataBatchRequest" />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: Name or id  of a repository that alert is part of
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AlertMetadata"
+          />[]&gt;
   - name: >-
       getAlerts(string, string, number, string, SearchCriteria,
       AlertListExpandOption, string)
