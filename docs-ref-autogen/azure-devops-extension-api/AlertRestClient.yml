@@ -245,6 +245,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
+  - name: getAlertsByIds(AlertBatchRequest, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.getAlertsByIds
+    package: azure-devops-extension-api
+    summary: Get alerts by alert IDs Currently supports fetching secret alerts only.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAlertsByIds(request: AlertBatchRequest, project: string,
+        repository: string): Promise<Alert[]>
+      parameters:
+        - id: request
+          type: <xref uid="azure-devops-extension-api.AlertBatchRequest" />
+          description: Request containing alert IDs and optional alert type filter
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />[]&gt;
   - name: getBranches(string, string, AlertType, string, string, number, boolean)
     uid: azure-devops-extension-api.AlertRestClient.getBranches
     package: azure-devops-extension-api

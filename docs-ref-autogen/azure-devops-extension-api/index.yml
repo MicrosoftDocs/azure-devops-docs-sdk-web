@@ -8,12 +8,14 @@ enums:
   - azure-devops-extension-api.AccountType
   - azure-devops-extension-api.AccountUserStatus
   - azure-devops-extension-api.AlertType
+  - azure-devops-extension-api.AlertValidityStatus
+  - azure-devops-extension-api.DashboardAlertState
   - azure-devops-extension-api.Severity
+  - azure-devops-extension-api.State
   - azure-devops-extension-api.TimePeriod
   - azure-devops-extension-api.AlertListExpandOption
   - azure-devops-extension-api.AlertMetadataErrorPolicy
   - azure-devops-extension-api.AlertValidationRequestStatus
-  - azure-devops-extension-api.AlertValidityStatus
   - azure-devops-extension-api.AnalysisConfigurationType
   - azure-devops-extension-api.ComponentType
   - azure-devops-extension-api.Confidence
@@ -26,7 +28,6 @@ enums:
   - azure-devops-extension-api.MetadataOperation
   - azure-devops-extension-api.ResultType
   - azure-devops-extension-api.SarifJobStatus
-  - azure-devops-extension-api.State
   - azure-devops-extension-api.ValidationResult
   - azure-devops-extension-api.BoardItemBatchOperationTypeEnum
   - azure-devops-extension-api.BoardTypeEnum
@@ -310,6 +311,8 @@ enums:
   - azure-devops-extension-api.TaskOrchestrationPlanState
   - azure-devops-extension-api.VariableGroupQueryOrder
   - azure-devops-extension-api.YamlCheckType
+  - azure-devops-extension-api.AdvancedFlakyDetectionMode
+  - azure-devops-extension-api.AdvancedFlakyDetectionParameterType
   - azure-devops-extension-api.AttachmentType
   - azure-devops-extension-api.BranchType
   - azure-devops-extension-api.CloneOperationState
@@ -320,6 +323,7 @@ enums:
   - azure-devops-extension-api.CustomTestFieldScope
   - azure-devops-extension-api.CustomTestFieldType
   - azure-devops-extension-api.FlakyDetectionType
+  - azure-devops-extension-api.FlakyTestBugMetadata
   - azure-devops-extension-api.Metrics
   - azure-devops-extension-api.ResultDetails
   - azure-devops-extension-api.ResultGroupType
@@ -417,6 +421,9 @@ interfaces:
   - azure-devops-extension-api.AccountPreferencesInternal
   - azure-devops-extension-api.AlertSummaryBySeverity
   - azure-devops-extension-api.AlertSummaryByState
+  - azure-devops-extension-api.CombinedAlertFilterCriteria
+  - azure-devops-extension-api.DashboardAlert
+  - azure-devops-extension-api.DashboardAlertPhysicalLocation
   - azure-devops-extension-api.EnablementFilterCriteria
   - azure-devops-extension-api.EnablementStateTypes
   - azure-devops-extension-api.FilterCriteria
@@ -425,13 +432,16 @@ interfaces:
   - azure-devops-extension-api.Project
   - azure-devops-extension-api.ProjectAlertSummary
   - azure-devops-extension-api.ProjectEnablementSummary
+  - azure-devops-extension-api.Region
   - azure-devops-extension-api.RepoAlertSummary
   - azure-devops-extension-api.RepoEnablementSummary
   - azure-devops-extension-api.ReportingUXComputedFilters
+  - azure-devops-extension-api.ScanTypeSummaryMetadata
   - azure-devops-extension-api.ScanTypeSummaryProperties
   - azure-devops-extension-api.ScanTypeSummaryPropertiesData
   - azure-devops-extension-api.Alert
   - azure-devops-extension-api.AlertAnalysisInstance
+  - azure-devops-extension-api.AlertBatchRequest
   - azure-devops-extension-api.AlertMetadata
   - azure-devops-extension-api.AlertMetadataBatchRequest
   - azure-devops-extension-api.AlertMetadataChange
@@ -452,7 +462,6 @@ interfaces:
   - azure-devops-extension-api.MetadataChange
   - azure-devops-extension-api.PhysicalLocation
   - azure-devops-extension-api.Pipeline
-  - azure-devops-extension-api.Region
   - azure-devops-extension-api.RelationMetadata
   - azure-devops-extension-api.Result
   - azure-devops-extension-api.Rule
@@ -1744,6 +1753,8 @@ interfaces:
   - azure-devops-extension-api.WorkloadIdentityFederationDetailsData
   - azure-devops-extension-api.YamlCheckReference
   - azure-devops-extension-api.AbortTestRunRequest
+  - azure-devops-extension-api.AdvancedFlakyDetectionParameter
+  - azure-devops-extension-api.AdvancedFlakyDetectionSettings
   - azure-devops-extension-api.AfnStrip
   - azure-devops-extension-api.AggregatedDataForResultTrend
   - azure-devops-extension-api.AggregatedResultDetailsByOutcome
@@ -1793,6 +1804,7 @@ interfaces:
   - azure-devops-extension-api.FlakyDetection
   - azure-devops-extension-api.FlakyDetectionPipelines
   - azure-devops-extension-api.FlakySettings
+  - azure-devops-extension-api.FlakyTestBugConfig
   - azure-devops-extension-api.FolderCoverageData
   - azure-devops-extension-api.FunctionCoverage
   - azure-devops-extension-api.FunctionCoverage2
@@ -1884,6 +1896,8 @@ interfaces:
   - azure-devops-extension-api.TestActionResult
   - azure-devops-extension-api.TestActionResult2
   - azure-devops-extension-api.TestActionResultModel
+  - azure-devops-extension-api.TestAgentCallbackRequest
+  - azure-devops-extension-api.TestAgentTriggerRequest
   - azure-devops-extension-api.TestAnalysisFailureGroup
   - azure-devops-extension-api.TestAttachment
   - azure-devops-extension-api.TestAttachmentReference
