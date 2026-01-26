@@ -133,6 +133,26 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemToTestLinks"
           />&gt;
+  - name: callbackTestAgent(TestAgentCallbackRequest, string)
+    uid: azure-devops-extension-api.TestResultsRestClient.callbackTestAgent
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function callbackTestAgent(request: TestAgentCallbackRequest, project:
+        string): Promise<boolean>
+      parameters:
+        - id: request
+          type: <xref uid="azure-devops-extension-api.TestAgentCallbackRequest" />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
   - name: createAnalysis(TestSessionAnalysis[], string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.createAnalysis
     package: azure-devops-extension-api
@@ -3504,6 +3524,26 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestResultsDetails"
           />&gt;
+  - name: triggerTestAgent(TestAgentTriggerRequest, string)
+    uid: azure-devops-extension-api.TestResultsRestClient.triggerTestAgent
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function triggerTestAgent(request: TestAgentTriggerRequest, project:
+        string): Promise<boolean>
+      parameters:
+        - id: request
+          type: <xref uid="azure-devops-extension-api.TestAgentTriggerRequest" />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
   - name: updateCodeCoverageSummary(string, number, CodeCoverageData)
     uid: azure-devops-extension-api.TestResultsRestClient.updateCodeCoverageSummary
     package: azure-devops-extension-api
