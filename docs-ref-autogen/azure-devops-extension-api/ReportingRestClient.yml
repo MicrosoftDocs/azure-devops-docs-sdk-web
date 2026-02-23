@@ -23,6 +23,57 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
+  - name: createAdvancedFilter(AdvancedFilterCreate)
+    uid: azure-devops-extension-api.ReportingRestClient.createAdvancedFilter
+    package: azure-devops-extension-api
+    summary: Creates a new advanced filter for the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAdvancedFilter(filter: AdvancedFilterCreate):
+        Promise<AdvancedFilter>
+      parameters:
+        - id: filter
+          type: <xref uid="azure-devops-extension-api.AdvancedFilterCreate" />
+          description: The advanced filter to create.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AdvancedFilter"
+          />&gt;
+  - name: deleteAdvancedFilter(string)
+    uid: azure-devops-extension-api.ReportingRestClient.deleteAdvancedFilter
+    package: azure-devops-extension-api
+    summary: Deletes an advanced filter.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function deleteAdvancedFilter(filterId: string): Promise<void>'
+      parameters:
+        - id: filterId
+          type: string
+          description: The ID of the advanced filter to delete.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: getAdvancedFilter(string)
+    uid: azure-devops-extension-api.ReportingRestClient.getAdvancedFilter
+    package: azure-devops-extension-api
+    summary: Gets a specific advanced filter by its ID.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAdvancedFilter(filterId: string): Promise<AdvancedFilter>'
+      parameters:
+        - id: filterId
+          type: string
+          description: The ID of the advanced filter to retrieve.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AdvancedFilter"
+          />&gt;
   - name: getAlertSummaryForOrg(FilterCriteria)
     uid: azure-devops-extension-api.ReportingRestClient.getAlertSummaryForOrg
     package: azure-devops-extension-api
@@ -105,4 +156,43 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.ReportingUXComputedFilters" />&gt;
+  - name: listAdvancedFilters(boolean)
+    uid: azure-devops-extension-api.ReportingRestClient.listAdvancedFilters
+    package: azure-devops-extension-api
+    summary: Gets all advanced filters for the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listAdvancedFilters(includeDeleted?: boolean):
+        Promise<AdvancedFilter[]>
+      parameters:
+        - id: includeDeleted
+          type: boolean
+          description: Whether to include soft-deleted filters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AdvancedFilter"
+          />[]&gt;
+  - name: updateAdvancedFilter(AdvancedFilterUpdate, string)
+    uid: azure-devops-extension-api.ReportingRestClient.updateAdvancedFilter
+    package: azure-devops-extension-api
+    summary: Updates an advanced filter. Only the name can be updated.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateAdvancedFilter(filter: AdvancedFilterUpdate, filterId:
+        string): Promise<void>
+      parameters:
+        - id: filter
+          type: <xref uid="azure-devops-extension-api.AdvancedFilterUpdate" />
+          description: The update data containing the new name.
+        - id: filterId
+          type: string
+          description: The ID of the advanced filter to update.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

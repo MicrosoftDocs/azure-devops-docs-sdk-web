@@ -8,6 +8,118 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: alertType
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.alertType
+    package: azure-devops-extension-api
+    summary: If provided, only return alerts of the specified alert type.
+    fullName: alertType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertType: AlertType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AlertType" />
+  - name: alertValidityStatus
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.alertValidityStatus
+    package: azure-devops-extension-api
+    summary: If provided, only return alerts with the specified validity status.
+    fullName: alertValidityStatus
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertValidityStatus: AlertValidityStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AlertValidityStatus" />
+  - name: componentName
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.componentName
+    package: azure-devops-extension-api
+    summary: If provided, only return dependency alerts for the specified package name.
+    fullName: componentName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'componentName: string'
+      return:
+        description: ''
+        type: string
+  - name: componentType
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.componentType
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return dependency alerts for the specified ecosystem
+      (e.g., NuGet, Npm, Maven).
+    fullName: componentType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'componentType: ComponentType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ComponentType" />
+  - name: dismissalTypes
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.dismissalTypes
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts with the specified dismissal type (closure
+      reason). Applicable only when filtering for closed/dismissed alerts.
+    fullName: dismissalTypes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dismissalTypes: DismissalType[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DismissalType" />[]
+  - name: fixedDateEnd
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.fixedDateEnd
+    package: azure-devops-extension-api
+    summary: If provided, only return alerts fixed on or before this date.
+    fullName: fixedDateEnd
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fixedDateEnd: Date'
+      return:
+        description: ''
+        type: Date
+  - name: fixedDateStart
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.fixedDateStart
+    package: azure-devops-extension-api
+    summary: If provided, only return alerts fixed on or after this date.
+    fullName: fixedDateStart
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fixedDateStart: Date'
+      return:
+        description: ''
+        type: Date
+  - name: introducedDateEnd
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.introducedDateEnd
+    package: azure-devops-extension-api
+    summary: If provided, only return alerts introduced on or before this date.
+    fullName: introducedDateEnd
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'introducedDateEnd: Date'
+      return:
+        description: ''
+        type: Date
+  - name: introducedDateStart
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.introducedDateStart
+    package: azure-devops-extension-api
+    summary: If provided, only return alerts introduced on or after this date.
+    fullName: introducedDateStart
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'introducedDateStart: Date'
+      return:
+        description: ''
+        type: Date
   - name: keywords
     uid: azure-devops-extension-api.CombinedAlertFilterCriteria.keywords
     package: azure-devops-extension-api
@@ -20,6 +132,74 @@ properties:
       return:
         description: ''
         type: string
+  - name: projects
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.projects
+    package: azure-devops-extension-api
+    summary: If provided, only return alerts for projects whose names are in this list.
+    fullName: projects
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'projects: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: repositories
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.repositories
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts for repositories whose names are in this
+      list.
+    fullName: repositories
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositories: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: ruleName
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.ruleName
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return code scanning alerts or secret alerts matching
+      the specified rule name.
+    fullName: ruleName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ruleName: string'
+      return:
+        description: ''
+        type: string
+  - name: secretType
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.secretType
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return secret alerts matching the specified secret type
+      (rule friendly name or opaque ID).
+    fullName: secretType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'secretType: string'
+      return:
+        description: ''
+        type: string
+  - name: severities
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.severities
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts with the specified severities. Otherwise,
+      return alerts at any severity.
+    fullName: severities
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'severities: Severity[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Severity" />[]
   - name: state
     uid: azure-devops-extension-api.CombinedAlertFilterCriteria.state
     package: azure-devops-extension-api
@@ -34,3 +214,17 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.DashboardAlertState" />
+  - name: toolName
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.toolName
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return code scanning alerts detected by the specified
+      tool.
+    fullName: toolName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'toolName: string'
+      return:
+        description: ''
+        type: string

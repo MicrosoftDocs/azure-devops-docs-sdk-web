@@ -237,6 +237,26 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AzureSubscriptionQueryResult" />&gt;
+  - name: getFilteredServiceEndpointTypes(string[])
+    uid: >-
+      azure-devops-extension-api.ServiceEndpointRestClient.getFilteredServiceEndpointTypes
+    package: azure-devops-extension-api
+    summary: Get service endpoint types with passed types filter.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFilteredServiceEndpointTypes(typesFilter: string[]):
+        Promise<ServiceEndpointType[]>
+      parameters:
+        - id: typesFilter
+          type: string[]
+          description: Filter to limit returned types
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.ServiceEndpointType"
+          />[]&gt;
   - name: getOAuthConfiguration(string)
     uid: azure-devops-extension-api.ServiceEndpointRestClient.getOAuthConfiguration
     package: azure-devops-extension-api
