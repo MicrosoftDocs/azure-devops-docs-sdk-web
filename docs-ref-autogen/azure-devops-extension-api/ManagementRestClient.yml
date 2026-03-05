@@ -49,6 +49,25 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: getAdvancedSecurityAgentPoolSelection()
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getAdvancedSecurityAgentPoolSelection
+    package: azure-devops-extension-api
+    summary: >-
+      Base URL for getting All Available Agent Pools + Currently Selected Agent
+      Pool This is a read-only operation that does not require manage
+      permissions.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAdvancedSecurityAgentPoolSelection():
+        Promise<AgentPoolDetails>
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AgentPoolDetails"
+          />&gt;
   - name: getBillableCommitterDetails2(Plan, Date)
     uid: >-
       azure-devops-extension-api.ManagementRestClient.getBillableCommitterDetails2
@@ -267,6 +286,29 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.RepoEnablementSettings" />&gt;
+  - name: updateAdvancedSecurityAgentPoolSelection(string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.updateAdvancedSecurityAgentPoolSelection
+    package: azure-devops-extension-api
+    summary: >-
+      Updates Agent Pool Registry Value For the Selected Agent Pool This
+      automatically uses the underlying http client for agent pools to validate
+      that the user has permissions to use that pool
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateAdvancedSecurityAgentPoolSelection(agentPoolName:
+        string): Promise<AgentPoolDetails>
+      parameters:
+        - id: agentPoolName
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AgentPoolDetails"
+          />&gt;
   - name: updateOrgEnablementStatus2(OrgEnablementSettings)
     uid: azure-devops-extension-api.ManagementRestClient.updateOrgEnablementStatus2
     package: azure-devops-extension-api
