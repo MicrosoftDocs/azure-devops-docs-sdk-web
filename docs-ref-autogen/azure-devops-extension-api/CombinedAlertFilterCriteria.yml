@@ -32,38 +32,41 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.AlertValidityStatus" />
-  - name: componentName
-    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.componentName
-    package: azure-devops-extension-api
-    summary: If provided, only return dependency alerts for the specified package name.
-    fullName: componentName
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'componentName: string'
-      return:
-        description: ''
-        type: string
-  - name: componentType
-    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.componentType
+  - name: componentNames
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.componentNames
     package: azure-devops-extension-api
     summary: >-
-      If provided, only return dependency alerts for the specified ecosystem
-      (e.g., NuGet, Npm, Maven).
-    fullName: componentType
+      If provided, only return dependency alerts for the specified package
+      names.
+    fullName: componentNames
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'componentType: ComponentType'
+      content: 'componentNames: string[]'
       return:
         description: ''
-        type: <xref uid="azure-devops-extension-api.ComponentType" />
+        type: string[]
+  - name: componentTypes
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.componentTypes
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return dependency alerts for the specified ecosystems
+      (e.g., NuGet, Npm, Maven).
+    fullName: componentTypes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'componentTypes: ComponentType[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ComponentType" />[]
   - name: dismissalTypes
     uid: azure-devops-extension-api.CombinedAlertFilterCriteria.dismissalTypes
     package: azure-devops-extension-api
     summary: >-
-      If provided, only return alerts with the specified dismissal type (closure
-      reason). Applicable only when filtering for closed/dismissed alerts.
+      If provided, only return alerts with one of the specified dismissal types
+      (closure reasons). Applicable only when filtering for closed/dismissed
+      alerts.
     fullName: dismissalTypes
     remarks: ''
     isDeprecated: false
@@ -158,34 +161,48 @@ properties:
       return:
         description: ''
         type: string[]
-  - name: ruleName
-    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.ruleName
+  - name: repositoryIds
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.repositoryIds
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts for repositories whose IDs
+      (GitRepositoryId) are in this list.
+    fullName: repositoryIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryIds: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: ruleNames
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.ruleNames
     package: azure-devops-extension-api
     summary: >-
       If provided, only return code scanning alerts or secret alerts matching
-      the specified rule name.
-    fullName: ruleName
+      the specified rule names.
+    fullName: ruleNames
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'ruleName: string'
+      content: 'ruleNames: string[]'
       return:
         description: ''
-        type: string
-  - name: secretType
-    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.secretType
+        type: string[]
+  - name: secretTypes
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.secretTypes
     package: azure-devops-extension-api
     summary: >-
-      If provided, only return secret alerts matching the specified secret type
+      If provided, only return secret alerts matching the specified secret types
       (rule friendly name or opaque ID).
-    fullName: secretType
+    fullName: secretTypes
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'secretType: string'
+      content: 'secretTypes: string[]'
       return:
         description: ''
-        type: string
+        type: string[]
   - name: severities
     uid: azure-devops-extension-api.CombinedAlertFilterCriteria.severities
     package: azure-devops-extension-api
@@ -214,17 +231,17 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.DashboardAlertState" />
-  - name: toolName
-    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.toolName
+  - name: toolNames
+    uid: azure-devops-extension-api.CombinedAlertFilterCriteria.toolNames
     package: azure-devops-extension-api
     summary: >-
       If provided, only return code scanning alerts detected by the specified
-      tool.
-    fullName: toolName
+      tools.
+    fullName: toolNames
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'toolName: string'
+      content: 'toolNames: string[]'
       return:
         description: ''
-        type: string
+        type: string[]
