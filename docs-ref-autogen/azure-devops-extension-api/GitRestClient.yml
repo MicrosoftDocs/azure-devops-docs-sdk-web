@@ -3036,6 +3036,55 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.GitConflict" />[]&gt;
+  - name: >-
+      getPullRequestFilesDiff(string, number, string, number, number, number,
+      number)
+    uid: azure-devops-extension-api.GitRestClient.getPullRequestFilesDiff
+    package: azure-devops-extension-api
+    summary: Retrieve the file diffs for all changes in a pull request.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPullRequestFilesDiff(repositoryId: string, pullRequestId:
+        number, project?: string, iteration?: number, baseIteration?: number,
+        top?: number, skip?: number): Promise<GitPullRequestFilesDiff>
+      parameters:
+        - id: repositoryId
+          type: string
+          description: The repository ID of the pull request's target branch.
+        - id: pullRequestId
+          type: number
+          description: ID of the pull request.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: iteration
+          type: number
+          description: >-
+            If specified, file diffs will be retrieved for this iteration. If
+            not specified, uses the latest iteration.
+        - id: baseIteration
+          type: number
+          description: >-
+            If specified, file diffs will be compared against this iteration.
+            The default value is zero which indicates the comparison is made
+            against the common commit between the source and target branches.
+        - id: top
+          type: number
+          description: >-
+            Optional. The number of file diffs to retrieve. The default value is
+            100 and the maximum value is 300.
+        - id: skip
+          type: number
+          description: >-
+            Optional. The number of file diffs to ignore. For example, to
+            retrieve file diffs 101-150, set top to 50 and skip to 100.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.GitPullRequestFilesDiff" />&gt;
   - name: getPullRequestIteration(string, number, number, string)
     uid: azure-devops-extension-api.GitRestClient.getPullRequestIteration
     package: azure-devops-extension-api
