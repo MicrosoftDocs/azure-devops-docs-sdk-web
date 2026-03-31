@@ -1,0 +1,166 @@
+### YamlMime:TSType
+name: Migration
+uid: azure-devops-extension-api.Migration
+package: azure-devops-extension-api
+summary: An Enterprise Live Migration
+fullName: Migration
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: changedBy
+    uid: azure-devops-extension-api.Migration.changedBy
+    package: azure-devops-extension-api
+    summary: The identity that last changed this migration.
+    fullName: changedBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changedBy: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+  - name: changedDate
+    uid: azure-devops-extension-api.Migration.changedDate
+    package: azure-devops-extension-api
+    summary: The UTC date/time this migration was last changed.
+    fullName: changedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: createdBy
+    uid: azure-devops-extension-api.Migration.createdBy
+    package: azure-devops-extension-api
+    summary: The identity that created this migration.
+    fullName: createdBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdBy: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityRef" />
+  - name: createdDate
+    uid: azure-devops-extension-api.Migration.createdDate
+    package: azure-devops-extension-api
+    summary: The UTC date/time this migration was created.
+    fullName: createdDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: errorMessage
+    uid: azure-devops-extension-api.Migration.errorMessage
+    package: azure-devops-extension-api
+    summary: The error that caused this migration to fail.
+    fullName: errorMessage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+  - name: repositoryId
+    uid: azure-devops-extension-api.Migration.repositoryId
+    package: azure-devops-extension-api
+    summary: RepositoryId
+    fullName: repositoryId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryId: string'
+      return:
+        description: ''
+        type: string
+  - name: scheduledCutoverDate
+    uid: azure-devops-extension-api.Migration.scheduledCutoverDate
+    package: azure-devops-extension-api
+    summary: The UTC date/time representing when the cutover is to occur.
+    fullName: scheduledCutoverDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scheduledCutoverDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: status
+    uid: azure-devops-extension-api.Migration.status
+    package: azure-devops-extension-api
+    summary: If the migration is 'active', 'complete', or 'failed'.
+    fullName: status
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'status: MigrationStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.MigrationStatus" />
+  - name: targetOwnerUserId
+    uid: azure-devops-extension-api.Migration.targetOwnerUserId
+    package: azure-devops-extension-api
+    summary: The ID of the user that will end up owning the migrated repository.
+    fullName: targetOwnerUserId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'targetOwnerUserId: string'
+      return:
+        description: ''
+        type: string
+  - name: targetRepository
+    uid: azure-devops-extension-api.Migration.targetRepository
+    package: azure-devops-extension-api
+    summary: URL identifying the destination respository of migration.
+    fullName: targetRepository
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'targetRepository: string'
+      return:
+        description: ''
+        type: string
+  - name: validateOnly
+    uid: azure-devops-extension-api.Migration.validateOnly
+    package: azure-devops-extension-api
+    summary: True if the migration should only perform pre-migration validation.
+    fullName: validateOnly
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'validateOnly: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: validationIssues
+    uid: azure-devops-extension-api.Migration.validationIssues
+    package: azure-devops-extension-api
+    summary: A list of any issues found during pre-migration checks.
+    fullName: validationIssues
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'validationIssues: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: validationWarnings
+    uid: azure-devops-extension-api.Migration.validationWarnings
+    package: azure-devops-extension-api
+    summary: A list of any warnings found during pre-migration checks.
+    fullName: validationWarnings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'validationWarnings: string[]'
+      return:
+        description: ''
+        type: string[]

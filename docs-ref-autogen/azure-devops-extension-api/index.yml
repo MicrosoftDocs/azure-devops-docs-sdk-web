@@ -165,6 +165,7 @@ enums:
   - azure-devops-extension-api.ItemContentType
   - azure-devops-extension-api.IterationReason
   - azure-devops-extension-api.LineDiffBlockChangeType
+  - azure-devops-extension-api.MigrationStatus
   - azure-devops-extension-api.PullRequestAsyncStatus
   - azure-devops-extension-api.PullRequestMergeFailureType
   - azure-devops-extension-api.PullRequestStatus
@@ -956,9 +957,11 @@ interfaces:
   - azure-devops-extension-api.CommentThreadContext
   - azure-devops-extension-api.CommentTrackingCriteria
   - azure-devops-extension-api.CompletionErrorsEvent
+  - azure-devops-extension-api.CreateMigrationRequest
   - azure-devops-extension-api.DiscussionsUpdatedEvent
   - azure-devops-extension-api.FileContentMetadata
   - azure-devops-extension-api.FileDiff
+  - azure-devops-extension-api.FileDiffDetail
   - azure-devops-extension-api.FileDiffParams
   - azure-devops-extension-api.FileDiffsCriteria
   - azure-devops-extension-api.GetAccessibleRepositoriesRequest
@@ -1025,6 +1028,7 @@ interfaces:
   - azure-devops-extension-api.GitPullRequestCommentThread
   - azure-devops-extension-api.GitPullRequestCommentThreadContext
   - azure-devops-extension-api.GitPullRequestCompletionOptions
+  - azure-devops-extension-api.GitPullRequestFilesDiff
   - azure-devops-extension-api.GitPullRequestIteration
   - azure-devops-extension-api.GitPullRequestIterationChanges
   - azure-devops-extension-api.GitPullRequestMergeOptions
@@ -1078,7 +1082,9 @@ interfaces:
   - azure-devops-extension-api.ItemModel
   - azure-devops-extension-api.LabelsUpdatedEvent
   - azure-devops-extension-api.LineDiffBlock
+  - azure-devops-extension-api.LineDiffBlockDetail
   - azure-devops-extension-api.MergeCompletedEvent
+  - azure-devops-extension-api.Migration
   - azure-devops-extension-api.PolicyEvaluationUpdatedEvent
   - azure-devops-extension-api.PullRequestCreatedEvent
   - azure-devops-extension-api.PullRequestTabExtensionConfig
@@ -1121,6 +1127,7 @@ interfaces:
   - azure-devops-extension-api.TfvcStatistics
   - azure-devops-extension-api.TfvcVersionDescriptor
   - azure-devops-extension-api.TitleDescriptionUpdatedEvent
+  - azure-devops-extension-api.UpdateMigrationRequest
   - azure-devops-extension-api.UpdateRefsRequest
   - azure-devops-extension-api.VersionControlProjectInfo
   - azure-devops-extension-api.IVersionControlRepositoryService
@@ -1633,6 +1640,8 @@ interfaces:
   - azure-devops-extension-api.EnvironmentUpdateParameter
   - azure-devops-extension-api.EventsConfig
   - azure-devops-extension-api.ExpressionValidationItem
+  - azure-devops-extension-api.ExternalRepositoryResource
+  - azure-devops-extension-api.FilterDropDownItem
   - azure-devops-extension-api.InputBindingContext
   - azure-devops-extension-api.InputValidationItem
   - azure-devops-extension-api.InputValidationRequest
@@ -2218,6 +2227,8 @@ interfaces:
   - azure-devops-extension-api.ExternalPipeline
   - azure-devops-extension-api.FieldDependentRule
   - azure-devops-extension-api.FieldUpdate
+  - azure-devops-extension-api.GitHubConnectionCreateRequest
+  - azure-devops-extension-api.GitHubConnectionCreateResponse
   - azure-devops-extension-api.GitHubConnectionModel
   - azure-devops-extension-api.GitHubConnectionRepoModel
   - azure-devops-extension-api.GitHubConnectionReposBatchRequest
