@@ -1,0 +1,74 @@
+### YamlMime:TSType
+name: GitItemDescriptor
+uid: azure-devops-extension-api.Git.GitItemDescriptor
+package: azure-devops-extension-api
+summary: ''
+fullName: GitItemDescriptor
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: path
+    uid: azure-devops-extension-api.Git.GitItemDescriptor.path
+    package: azure-devops-extension-api
+    summary: Path to item
+    fullName: path
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'path: string'
+      return:
+        description: ''
+        type: string
+  - name: recursionLevel
+    uid: azure-devops-extension-api.Git.GitItemDescriptor.recursionLevel
+    package: azure-devops-extension-api
+    summary: >-
+      Specifies whether to include children (OneLevel), all descendants (Full),
+      or None
+    fullName: recursionLevel
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'recursionLevel: VersionControlRecursionType'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.Git.VersionControlRecursionType"
+          />
+  - name: version
+    uid: azure-devops-extension-api.Git.GitItemDescriptor.version
+    package: azure-devops-extension-api
+    summary: Version string (interpretation based on VersionType defined in subclass
+    fullName: version
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version: string'
+      return:
+        description: ''
+        type: string
+  - name: versionOptions
+    uid: azure-devops-extension-api.Git.GitItemDescriptor.versionOptions
+    package: azure-devops-extension-api
+    summary: Version modifiers (e.g. previous)
+    fullName: versionOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'versionOptions: GitVersionOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Git.GitVersionOptions" />
+  - name: versionType
+    uid: azure-devops-extension-api.Git.GitItemDescriptor.versionType
+    package: azure-devops-extension-api
+    summary: How to interpret version (branch,tag,commit)
+    fullName: versionType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'versionType: GitVersionType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Git.GitVersionType" />

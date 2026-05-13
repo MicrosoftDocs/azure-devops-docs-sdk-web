@@ -1,0 +1,114 @@
+### YamlMime:TSType
+name: WorkItem
+uid: azure-devops-extension-api.WorkItemTracking.WorkItem
+package: azure-devops-extension-api
+summary: Describes a work item.
+fullName: WorkItem
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: commentVersionRef
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItem.commentVersionRef
+    package: azure-devops-extension-api
+    summary: >-
+      Reference to a specific version of the comment added/edited/deleted in
+      this revision.
+    fullName: commentVersionRef
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'commentVersionRef: WorkItemCommentVersionRef'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.WorkItemTracking.WorkItemCommentVersionRef"
+          />
+  - name: fields
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItem.fields
+    package: azure-devops-extension-api
+    summary: Map of field and values for the work item.
+    fullName: fields
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fields: {[key: string]: any}'
+      return:
+        description: ''
+        type: '{[key: string]: any}'
+  - name: id
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItem.id
+    package: azure-devops-extension-api
+    summary: The work item ID.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: multilineFieldsFormat
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItem.multilineFieldsFormat
+    package: azure-devops-extension-api
+    summary: >-
+      Dictionary describing the Format for multiline fields selected by the last
+      edit user.
+    fullName: multilineFieldsFormat
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'multilineFieldsFormat: {[key: string]: LargeTextCustomHtmlFormat}'
+      return:
+        description: ''
+        type: >-
+          {[key: string]: <xref
+          uid="azure-devops-extension-api.WorkItemTracking.LargeTextCustomHtmlFormat"
+          />}
+  - name: relations
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItem.relations
+    package: azure-devops-extension-api
+    summary: Relations of the work item.
+    fullName: relations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'relations: WorkItemRelation[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.WorkItemTracking.WorkItemRelation"
+          />[]
+  - name: rev
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItem.rev
+    package: azure-devops-extension-api
+    summary: Revision number of the work item.
+    fullName: rev
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rev: number'
+      return:
+        description: ''
+        type: number
+inheritedProperties:
+  - name: url
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItem.url
+    package: azure-devops-extension-api
+    summary: REST URL for the resource.
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTracking.WorkItemTrackingResource.url)
+extends: >-
+  <xref
+  uid="azure-devops-extension-api.WorkItemTracking.WorkItemTrackingResource" />

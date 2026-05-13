@@ -1,0 +1,224 @@
+### YamlMime:TSType
+name: TimelineTeamData
+uid: azure-devops-extension-api.Work.TimelineTeamData
+package: azure-devops-extension-api
+summary: ''
+fullName: TimelineTeamData
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: backlog
+    uid: azure-devops-extension-api.Work.TimelineTeamData.backlog
+    package: azure-devops-extension-api
+    summary: Backlog matching the mapped backlog associated with this team.
+    fullName: backlog
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'backlog: BacklogLevel'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Work.BacklogLevel" />
+  - name: fieldReferenceNames
+    uid: azure-devops-extension-api.Work.TimelineTeamData.fieldReferenceNames
+    package: azure-devops-extension-api
+    summary: The field reference names of the work item data
+    fullName: fieldReferenceNames
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fieldReferenceNames: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: id
+    uid: azure-devops-extension-api.Work.TimelineTeamData.id
+    package: azure-devops-extension-api
+    summary: The id of the team
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: isExpanded
+    uid: azure-devops-extension-api.Work.TimelineTeamData.isExpanded
+    package: azure-devops-extension-api
+    summary: >-
+      Was iteration and work item data retrieved for this team. \<remarks\>
+      Teams with IsExpanded false have not had their iteration, work item, and
+      field related data queried and will never contain this data. If true then
+      these items are queried and, if there are items in the queried range,
+      there will be data. \</remarks\>
+    fullName: isExpanded
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isExpanded: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: iterations
+    uid: azure-devops-extension-api.Work.TimelineTeamData.iterations
+    package: azure-devops-extension-api
+    summary: The iteration data, including the work items, in the queried date range.
+    fullName: iterations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'iterations: TimelineTeamIteration[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Work.TimelineTeamIteration" />[]
+  - name: name
+    uid: azure-devops-extension-api.Work.TimelineTeamData.name
+    package: azure-devops-extension-api
+    summary: The name of the team
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: orderByField
+    uid: azure-devops-extension-api.Work.TimelineTeamData.orderByField
+    package: azure-devops-extension-api
+    summary: The order by field name of this team
+    fullName: orderByField
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'orderByField: string'
+      return:
+        description: ''
+        type: string
+  - name: partiallyPagedFieldReferenceNames
+    uid: >-
+      azure-devops-extension-api.Work.TimelineTeamData.partiallyPagedFieldReferenceNames
+    package: azure-devops-extension-api
+    summary: >-
+      The field reference names of the partially paged work items, such as ID,
+      WorkItemType
+    fullName: partiallyPagedFieldReferenceNames
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'partiallyPagedFieldReferenceNames: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: partiallyPagedWorkItems
+    uid: azure-devops-extension-api.Work.TimelineTeamData.partiallyPagedWorkItems
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: partiallyPagedWorkItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'partiallyPagedWorkItems: any[][]'
+      return:
+        description: ''
+        type: any[][]
+  - name: projectId
+    uid: azure-devops-extension-api.Work.TimelineTeamData.projectId
+    package: azure-devops-extension-api
+    summary: The project id the team belongs team
+    fullName: projectId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+  - name: rollupWorkItemTypes
+    uid: azure-devops-extension-api.Work.TimelineTeamData.rollupWorkItemTypes
+    package: azure-devops-extension-api
+    summary: Work item types for which we will collect roll up data on the client side
+    fullName: rollupWorkItemTypes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rollupWorkItemTypes: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: status
+    uid: azure-devops-extension-api.Work.TimelineTeamData.status
+    package: azure-devops-extension-api
+    summary: Status for this team.
+    fullName: status
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'status: TimelineTeamStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Work.TimelineTeamStatus" />
+  - name: teamFieldDefaultValue
+    uid: azure-devops-extension-api.Work.TimelineTeamData.teamFieldDefaultValue
+    package: azure-devops-extension-api
+    summary: The team field default value
+    fullName: teamFieldDefaultValue
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'teamFieldDefaultValue: string'
+      return:
+        description: ''
+        type: string
+  - name: teamFieldName
+    uid: azure-devops-extension-api.Work.TimelineTeamData.teamFieldName
+    package: azure-devops-extension-api
+    summary: The team field name of this team
+    fullName: teamFieldName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'teamFieldName: string'
+      return:
+        description: ''
+        type: string
+  - name: teamFieldValues
+    uid: azure-devops-extension-api.Work.TimelineTeamData.teamFieldValues
+    package: azure-devops-extension-api
+    summary: The team field values
+    fullName: teamFieldValues
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'teamFieldValues: TeamFieldValue[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Work.TeamFieldValue" />[]
+  - name: workItems
+    uid: azure-devops-extension-api.Work.TimelineTeamData.workItems
+    package: azure-devops-extension-api
+    summary: >-
+      Work items associated with the team that are not under any of the team's
+      iterations
+    fullName: workItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItems: any[][]'
+      return:
+        description: ''
+        type: any[][]
+  - name: workItemTypeColors
+    uid: azure-devops-extension-api.Work.TimelineTeamData.workItemTypeColors
+    package: azure-devops-extension-api
+    summary: Colors for the work item types.
+    fullName: workItemTypeColors
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItemTypeColors: WorkItemColor[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Work.WorkItemColor" />[]

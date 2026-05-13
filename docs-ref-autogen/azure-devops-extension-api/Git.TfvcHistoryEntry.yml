@@ -1,0 +1,93 @@
+### YamlMime:TSType
+name: TfvcHistoryEntry
+uid: azure-devops-extension-api.Git.TfvcHistoryEntry
+package: azure-devops-extension-api
+summary: ''
+fullName: TfvcHistoryEntry
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: encoding
+    uid: azure-devops-extension-api.Git.TfvcHistoryEntry.encoding
+    package: azure-devops-extension-api
+    summary: >-
+      The encoding of the item at this point in history (only relevant for File
+      history, not folders)
+    fullName: encoding
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'encoding: number'
+      return:
+        description: ''
+        type: number
+  - name: fileId
+    uid: azure-devops-extension-api.Git.TfvcHistoryEntry.fileId
+    package: azure-devops-extension-api
+    summary: >-
+      The file id of the item at this point in history (only relevant for File
+      history, not folders)
+    fullName: fileId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fileId: number'
+      return:
+        description: ''
+        type: number
+inheritedProperties:
+  - name: changeList
+    uid: azure-devops-extension-api.Git.TfvcHistoryEntry.changeList
+    package: azure-devops-extension-api
+    summary: The Change list (changeset/commit/shelveset) for this point in history
+    fullName: changeList
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changeList: ChangeList<TfvcItem>'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.Git.ChangeList" />&lt;<xref
+          uid="azure-devops-extension-api.Git.TfvcItem" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [HistoryEntry.changeList](xref:azure-devops-extension-api.Git.HistoryEntry.changeList)
+  - name: itemChangeType
+    uid: azure-devops-extension-api.Git.TfvcHistoryEntry.itemChangeType
+    package: azure-devops-extension-api
+    summary: >-
+      The change made to the item from this change list (only relevant for File
+      history, not folders)
+    fullName: itemChangeType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'itemChangeType: VersionControlChangeType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Git.VersionControlChangeType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [HistoryEntry.itemChangeType](xref:azure-devops-extension-api.Git.HistoryEntry.itemChangeType)
+  - name: serverItem
+    uid: azure-devops-extension-api.Git.TfvcHistoryEntry.serverItem
+    package: azure-devops-extension-api
+    summary: >-
+      The path of the item at this point in history (only relevant for File
+      history, not folders)
+    fullName: serverItem
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'serverItem: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [HistoryEntry.serverItem](xref:azure-devops-extension-api.Git.HistoryEntry.serverItem)
+extends: >-
+  <xref uid="azure-devops-extension-api.Git.HistoryEntry" />&lt;<xref
+  uid="azure-devops-extension-api.Git.TfvcItem" />&gt;

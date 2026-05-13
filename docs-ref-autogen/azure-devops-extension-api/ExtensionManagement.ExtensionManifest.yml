@@ -1,0 +1,214 @@
+### YamlMime:TSType
+name: ExtensionManifest
+uid: azure-devops-extension-api.ExtensionManagement.ExtensionManifest
+package: azure-devops-extension-api
+summary: >-
+  Base class for extension properties which are shared by the extension manifest
+  and the extension model
+fullName: ExtensionManifest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: baseUri
+    uid: azure-devops-extension-api.ExtensionManagement.ExtensionManifest.baseUri
+    package: azure-devops-extension-api
+    summary: Uri used as base for other relative uri's defined in extension
+    fullName: baseUri
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'baseUri: string'
+      return:
+        description: ''
+        type: string
+  - name: constraints
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.ExtensionManifest.constraints
+    package: azure-devops-extension-api
+    summary: List of shared constraints defined by this extension
+    fullName: constraints
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'constraints: ContributionConstraint[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ExtensionManagement.ContributionConstraint"
+          />[]
+  - name: contributions
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.ExtensionManifest.contributions
+    package: azure-devops-extension-api
+    summary: List of contributions made by this extension
+    fullName: contributions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'contributions: Contribution[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ExtensionManagement.Contribution" />[]
+  - name: contributionTypes
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.ExtensionManifest.contributionTypes
+    package: azure-devops-extension-api
+    summary: List of contribution types defined by this extension
+    fullName: contributionTypes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'contributionTypes: ContributionType[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ExtensionManagement.ContributionType"
+          />[]
+  - name: demands
+    uid: azure-devops-extension-api.ExtensionManagement.ExtensionManifest.demands
+    package: azure-devops-extension-api
+    summary: List of explicit demands required by this extension
+    fullName: demands
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'demands: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: eventCallbacks
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.ExtensionManifest.eventCallbacks
+    package: azure-devops-extension-api
+    summary: >-
+      Collection of endpoints that get called when particular extension events
+      occur
+    fullName: eventCallbacks
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'eventCallbacks: ExtensionEventCallbackCollection'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ExtensionManagement.ExtensionEventCallbackCollection"
+          />
+  - name: fallbackBaseUri
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.ExtensionManifest.fallbackBaseUri
+    package: azure-devops-extension-api
+    summary: >-
+      Secondary location that can be used as base for other relative uri's
+      defined in extension
+    fullName: fallbackBaseUri
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fallbackBaseUri: string'
+      return:
+        description: ''
+        type: string
+  - name: language
+    uid: azure-devops-extension-api.ExtensionManagement.ExtensionManifest.language
+    package: azure-devops-extension-api
+    summary: Language Culture Name set by the Gallery
+    fullName: language
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'language: string'
+      return:
+        description: ''
+        type: string
+  - name: licensing
+    uid: azure-devops-extension-api.ExtensionManagement.ExtensionManifest.licensing
+    package: azure-devops-extension-api
+    summary: How this extension behaves with respect to licensing
+    fullName: licensing
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'licensing: ExtensionLicensing'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ExtensionManagement.ExtensionLicensing"
+          />
+  - name: manifestVersion
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.ExtensionManifest.manifestVersion
+    package: azure-devops-extension-api
+    summary: Version of the extension manifest format/content
+    fullName: manifestVersion
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'manifestVersion: number'
+      return:
+        description: ''
+        type: number
+  - name: marketplaceBaseUri
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.ExtensionManifest.marketplaceBaseUri
+    package: azure-devops-extension-api
+    summary: >-
+      Marketplace uri used as base for other relative uris defined in extension.
+      Uri might be the same as BaseUri.
+    fullName: marketplaceBaseUri
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'marketplaceBaseUri: string'
+      return:
+        description: ''
+        type: string
+  - name: restrictedTo
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.ExtensionManifest.restrictedTo
+    package: azure-devops-extension-api
+    summary: >-
+      Default user claims applied to all contributions (except the ones which
+      have been specified restrictedTo explicitly) to control the visibility of
+      a contribution.
+    fullName: restrictedTo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'restrictedTo: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: scopes
+    uid: azure-devops-extension-api.ExtensionManagement.ExtensionManifest.scopes
+    package: azure-devops-extension-api
+    summary: List of all oauth scopes required by this extension
+    fullName: scopes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scopes: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: serviceInstanceType
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.ExtensionManifest.serviceInstanceType
+    package: azure-devops-extension-api
+    summary: >-
+      The ServiceInstanceType(Guid) of the VSTS service that must be available
+      to an account in order for the extension to be installed
+    fullName: serviceInstanceType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'serviceInstanceType: string'
+      return:
+        description: ''
+        type: string

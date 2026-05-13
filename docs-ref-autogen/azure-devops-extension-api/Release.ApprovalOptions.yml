@@ -1,0 +1,97 @@
+### YamlMime:TSType
+name: ApprovalOptions
+uid: azure-devops-extension-api.Release.ApprovalOptions
+package: azure-devops-extension-api
+summary: ''
+fullName: ApprovalOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped
+    uid: >-
+      azure-devops-extension-api.Release.ApprovalOptions.autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped
+    package: azure-devops-extension-api
+    summary: >-
+      Specify whether the approval can be skipped if the same approver approved
+      the previous stage.
+    fullName: autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: enforceIdentityRevalidation
+    uid: >-
+      azure-devops-extension-api.Release.ApprovalOptions.enforceIdentityRevalidation
+    package: azure-devops-extension-api
+    summary: >-
+      Specify whether revalidate identity of approver before completing the
+      approval.
+    fullName: enforceIdentityRevalidation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enforceIdentityRevalidation: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: executionOrder
+    uid: azure-devops-extension-api.Release.ApprovalOptions.executionOrder
+    package: azure-devops-extension-api
+    summary: Approvals execution order.
+    fullName: executionOrder
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'executionOrder: ApprovalExecutionOrder'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.Release.ApprovalExecutionOrder"
+          />
+  - name: releaseCreatorCanBeApprover
+    uid: >-
+      azure-devops-extension-api.Release.ApprovalOptions.releaseCreatorCanBeApprover
+    package: azure-devops-extension-api
+    summary: >-
+      Specify whether the user requesting a release or deployment should allow
+      to approver.
+    fullName: releaseCreatorCanBeApprover
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'releaseCreatorCanBeApprover: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: requiredApproverCount
+    uid: azure-devops-extension-api.Release.ApprovalOptions.requiredApproverCount
+    package: azure-devops-extension-api
+    summary: >-
+      The number of approvals required to move release forward. '0' means all
+      approvals required.
+    fullName: requiredApproverCount
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'requiredApproverCount: number'
+      return:
+        description: ''
+        type: number
+  - name: timeoutInMinutes
+    uid: azure-devops-extension-api.Release.ApprovalOptions.timeoutInMinutes
+    package: azure-devops-extension-api
+    summary: >-
+      Approval timeout. Approval default timeout is 30 days. Maximum allowed
+      timeout is 365 days. '0' means default timeout i.e 30 days.
+    fullName: timeoutInMinutes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timeoutInMinutes: number'
+      return:
+        description: ''
+        type: number

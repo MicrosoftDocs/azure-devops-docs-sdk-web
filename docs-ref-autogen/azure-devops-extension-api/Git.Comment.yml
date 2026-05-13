@@ -1,0 +1,130 @@
+### YamlMime:TSType
+name: Comment
+uid: azure-devops-extension-api.Git.Comment
+package: azure-devops-extension-api
+summary: Represents a comment which is one of potentially many in a comment thread.
+fullName: Comment
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: author
+    uid: azure-devops-extension-api.Git.Comment.author
+    package: azure-devops-extension-api
+    summary: The author of the comment.
+    fullName: author
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'author: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WebApi.IdentityRef" />
+  - name: commentType
+    uid: azure-devops-extension-api.Git.Comment.commentType
+    package: azure-devops-extension-api
+    summary: The comment type at the time of creation.
+    fullName: commentType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'commentType: CommentType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Git.CommentType" />
+  - name: content
+    uid: azure-devops-extension-api.Git.Comment.content
+    package: azure-devops-extension-api
+    summary: The comment content.
+    fullName: content
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'content: string'
+      return:
+        description: ''
+        type: string
+  - name: id
+    uid: azure-devops-extension-api.Git.Comment.id
+    package: azure-devops-extension-api
+    summary: The comment ID. IDs start at 1 and are unique to a pull request.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: isDeleted
+    uid: azure-devops-extension-api.Git.Comment.isDeleted
+    package: azure-devops-extension-api
+    summary: Whether or not this comment was soft-deleted.
+    fullName: isDeleted
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isDeleted: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: lastContentUpdatedDate
+    uid: azure-devops-extension-api.Git.Comment.lastContentUpdatedDate
+    package: azure-devops-extension-api
+    summary: The date the comment's content was last updated.
+    fullName: lastContentUpdatedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastContentUpdatedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: lastUpdatedDate
+    uid: azure-devops-extension-api.Git.Comment.lastUpdatedDate
+    package: azure-devops-extension-api
+    summary: The date the comment was last updated.
+    fullName: lastUpdatedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastUpdatedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: parentCommentId
+    uid: azure-devops-extension-api.Git.Comment.parentCommentId
+    package: azure-devops-extension-api
+    summary: The ID of the parent comment. This is used for replies.
+    fullName: parentCommentId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'parentCommentId: number'
+      return:
+        description: ''
+        type: number
+  - name: publishedDate
+    uid: azure-devops-extension-api.Git.Comment.publishedDate
+    package: azure-devops-extension-api
+    summary: The date the comment was first published.
+    fullName: publishedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'publishedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: usersLiked
+    uid: azure-devops-extension-api.Git.Comment.usersLiked
+    package: azure-devops-extension-api
+    summary: A list of the users who have liked this comment.
+    fullName: usersLiked
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'usersLiked: IdentityRef[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WebApi.IdentityRef" />[]

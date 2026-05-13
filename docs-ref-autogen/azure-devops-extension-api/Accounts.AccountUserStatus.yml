@@ -1,0 +1,50 @@
+### YamlMime:TSEnum
+name: AccountUserStatus
+uid: azure-devops-extension-api.Accounts.AccountUserStatus
+package: azure-devops-extension-api
+summary: ''
+fullName: AccountUserStatus
+remarks: ''
+isDeprecated: false
+fields:
+  - name: None
+    uid: azure-devops-extension-api.Accounts.AccountUserStatus.None
+    package: azure-devops-extension-api
+    summary: ''
+    numericValue: 0
+  - name: Active
+    uid: azure-devops-extension-api.Accounts.AccountUserStatus.Active
+    package: azure-devops-extension-api
+    summary: User has signed in at least once to the VSTS account
+    numericValue: 1
+  - name: Disabled
+    uid: azure-devops-extension-api.Accounts.AccountUserStatus.Disabled
+    package: azure-devops-extension-api
+    summary: >-
+      User cannot sign in; primarily used by admin to temporarily remove a user
+      due to absence or license reallocation
+    numericValue: 2
+  - name: Deleted
+    uid: azure-devops-extension-api.Accounts.AccountUserStatus.Deleted
+    package: azure-devops-extension-api
+    summary: User is removed from the VSTS account by the VSTS account admin
+    numericValue: 3
+  - name: Pending
+    uid: azure-devops-extension-api.Accounts.AccountUserStatus.Pending
+    package: azure-devops-extension-api
+    summary: >-
+      User is invited to join the VSTS account by the VSTS account admin, but
+      has not signed up/signed in yet
+    numericValue: 4
+  - name: Expired
+    uid: azure-devops-extension-api.Accounts.AccountUserStatus.Expired
+    package: azure-devops-extension-api
+    summary: >-
+      User can sign in; primarily used when license is in expired state and we
+      give a grace period
+    numericValue: 5
+  - name: PendingDisabled
+    uid: azure-devops-extension-api.Accounts.AccountUserStatus.PendingDisabled
+    package: azure-devops-extension-api
+    summary: User is disabled; if reenabled, they will still be in the Pending state
+    numericValue: 6

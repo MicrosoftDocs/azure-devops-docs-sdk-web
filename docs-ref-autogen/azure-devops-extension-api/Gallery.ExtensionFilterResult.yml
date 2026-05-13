@@ -1,0 +1,56 @@
+### YamlMime:TSType
+name: ExtensionFilterResult
+uid: azure-devops-extension-api.Gallery.ExtensionFilterResult
+package: azure-devops-extension-api
+summary: >-
+  The FilterResult is the set of extensions that matched a particular query
+  filter.
+fullName: ExtensionFilterResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: extensions
+    uid: azure-devops-extension-api.Gallery.ExtensionFilterResult.extensions
+    package: azure-devops-extension-api
+    summary: This is the set of applications that matched the query filter supplied.
+    fullName: extensions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'extensions: PublishedExtension[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Gallery.PublishedExtension" />[]
+  - name: pagingToken
+    uid: azure-devops-extension-api.Gallery.ExtensionFilterResult.pagingToken
+    package: azure-devops-extension-api
+    summary: >-
+      The PagingToken is returned from a request when more records exist that
+      match the result than were requested or could be returned. A follow-up
+      query with this paging token can be used to retrieve more results.
+    fullName: pagingToken
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pagingToken: string'
+      return:
+        description: ''
+        type: string
+  - name: resultMetadata
+    uid: azure-devops-extension-api.Gallery.ExtensionFilterResult.resultMetadata
+    package: azure-devops-extension-api
+    summary: >-
+      This is the additional optional metadata for the given result. E.g. Total
+      count of results which is useful in case of paged results
+    fullName: resultMetadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resultMetadata: ExtensionFilterResultMetadata[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.Gallery.ExtensionFilterResultMetadata"
+          />[]

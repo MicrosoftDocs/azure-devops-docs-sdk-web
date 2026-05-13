@@ -1,0 +1,305 @@
+### YamlMime:TSType
+name: FeatureManagementRestClient
+uid: azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: FeatureManagementRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: FeatureManagementRestClient(IVssRestClientOptions)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new FeatureManagementRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+methods:
+  - name: getFeature(string)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.getFeature
+    package: azure-devops-extension-api
+    summary: Get a specific feature by its id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getFeature(featureId: string): Promise<ContributedFeature>'
+      parameters:
+        - id: featureId
+          type: string
+          description: The contribution id of the feature
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FeatureManagement.ContributedFeature"
+          />&gt;
+  - name: getFeatures(string)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.getFeatures
+    package: azure-devops-extension-api
+    summary: Get a list of all defined features
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFeatures(targetContributionId?: string):
+        Promise<ContributedFeature[]>
+      parameters:
+        - id: targetContributionId
+          type: string
+          description: >-
+            Optional target contribution. If null/empty, return all features. If
+            specified include the features that target the specified
+            contribution.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FeatureManagement.ContributedFeature"
+          />[]&gt;
+  - name: getFeatureState(string, string)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.getFeatureState
+    package: azure-devops-extension-api
+    summary: Get the state of the specified feature for the given user/all-users scope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFeatureState(featureId: string, userScope: string):
+        Promise<ContributedFeatureState>
+      parameters:
+        - id: featureId
+          type: string
+          description: Contribution id of the feature
+        - id: userScope
+          type: string
+          description: >-
+            User-Scope at which to get the value. Should be "me" for the current
+            user or "host" for all users.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureState"
+          />&gt;
+  - name: getFeatureStateForScope(string, string, string, string)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.getFeatureStateForScope
+    package: azure-devops-extension-api
+    summary: Get the state of the specified feature for the given named scope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFeatureStateForScope(featureId: string, userScope: string,
+        scopeName: string, scopeValue: string): Promise<ContributedFeatureState>
+      parameters:
+        - id: featureId
+          type: string
+          description: Contribution id of the feature
+        - id: userScope
+          type: string
+          description: >-
+            User-Scope at which to get the value. Should be "me" for the current
+            user or "host" for all users.
+        - id: scopeName
+          type: string
+          description: >-
+            Scope at which to get the feature setting for (e.g. "project" or
+            "team")
+        - id: scopeValue
+          type: string
+          description: Value of the scope (e.g. the project or team id)
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureState"
+          />&gt;
+  - name: queryFeatureStates(ContributedFeatureStateQuery)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.queryFeatureStates
+    package: azure-devops-extension-api
+    summary: Get the effective state for a list of feature ids
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryFeatureStates(query: ContributedFeatureStateQuery):
+        Promise<ContributedFeatureStateQuery>
+      parameters:
+        - id: query
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureStateQuery"
+            />
+          description: Features to query along with current scope values
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureStateQuery"
+          />&gt;
+  - name: queryFeatureStatesForDefaultScope(ContributedFeatureStateQuery, string)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.queryFeatureStatesForDefaultScope
+    package: azure-devops-extension-api
+    summary: Get the states of the specified features for the default scope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryFeatureStatesForDefaultScope(query:
+        ContributedFeatureStateQuery, userScope: string):
+        Promise<ContributedFeatureStateQuery>
+      parameters:
+        - id: query
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureStateQuery"
+            />
+          description: Query describing the features to query.
+        - id: userScope
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureStateQuery"
+          />&gt;
+  - name: >-
+      queryFeatureStatesForNamedScope(ContributedFeatureStateQuery, string,
+      string, string)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.queryFeatureStatesForNamedScope
+    package: azure-devops-extension-api
+    summary: Get the states of the specified features for the specific named scope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryFeatureStatesForNamedScope(query:
+        ContributedFeatureStateQuery, userScope: string, scopeName: string,
+        scopeValue: string): Promise<ContributedFeatureStateQuery>
+      parameters:
+        - id: query
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureStateQuery"
+            />
+          description: Query describing the features to query.
+        - id: userScope
+          type: string
+          description: ''
+        - id: scopeName
+          type: string
+          description: ''
+        - id: scopeValue
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureStateQuery"
+          />&gt;
+  - name: setFeatureState(ContributedFeatureState, string, string, string, string)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.setFeatureState
+    package: azure-devops-extension-api
+    summary: Set the state of a feature
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setFeatureState(feature: ContributedFeatureState, featureId:
+        string, userScope: string, reason?: string, reasonCode?: string):
+        Promise<ContributedFeatureState>
+      parameters:
+        - id: feature
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureState"
+            />
+          description: Posted feature state object. Should specify the effective value.
+        - id: featureId
+          type: string
+          description: Contribution id of the feature
+        - id: userScope
+          type: string
+          description: >-
+            User-Scope at which to set the value. Should be "me" for the current
+            user or "host" for all users.
+        - id: reason
+          type: string
+          description: Reason for changing the state
+        - id: reasonCode
+          type: string
+          description: Short reason code
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureState"
+          />&gt;
+  - name: >-
+      setFeatureStateForScope(ContributedFeatureState, string, string, string,
+      string, string, string)
+    uid: >-
+      azure-devops-extension-api.FeatureManagement.FeatureManagementRestClient.setFeatureStateForScope
+    package: azure-devops-extension-api
+    summary: Set the state of a feature at a specific scope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setFeatureStateForScope(feature: ContributedFeatureState,
+        featureId: string, userScope: string, scopeName: string, scopeValue:
+        string, reason?: string, reasonCode?: string):
+        Promise<ContributedFeatureState>
+      parameters:
+        - id: feature
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureState"
+            />
+          description: Posted feature state object. Should specify the effective value.
+        - id: featureId
+          type: string
+          description: Contribution id of the feature
+        - id: userScope
+          type: string
+          description: >-
+            User-Scope at which to set the value. Should be "me" for the current
+            user or "host" for all users.
+        - id: scopeName
+          type: string
+          description: >-
+            Scope at which to get the feature setting for (e.g. "project" or
+            "team")
+        - id: scopeValue
+          type: string
+          description: Value of the scope (e.g. the project or team id)
+        - id: reason
+          type: string
+          description: Reason for changing the state
+        - id: reasonCode
+          type: string
+          description: Short reason code
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FeatureManagement.ContributedFeatureState"
+          />&gt;
+extends: RestClientBase

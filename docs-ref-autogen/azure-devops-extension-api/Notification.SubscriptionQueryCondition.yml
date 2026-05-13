@@ -1,0 +1,83 @@
+### YamlMime:TSType
+name: SubscriptionQueryCondition
+uid: azure-devops-extension-api.Notification.SubscriptionQueryCondition
+package: azure-devops-extension-api
+summary: >-
+  Conditions a subscription must match to qualify for the query result set. Not
+  all fields are required. A subscription must match all conditions specified in
+  order to qualify for the result set.
+fullName: SubscriptionQueryCondition
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: filter
+    uid: azure-devops-extension-api.Notification.SubscriptionQueryCondition.filter
+    package: azure-devops-extension-api
+    summary: >-
+      Filter conditions that matching subscriptions must have. Typically only
+      the filter's type and event type are used for matching.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter: ISubscriptionFilter'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.Notification.ISubscriptionFilter" />
+  - name: flags
+    uid: azure-devops-extension-api.Notification.SubscriptionQueryCondition.flags
+    package: azure-devops-extension-api
+    summary: Flags to specify the type subscriptions to query for.
+    fullName: flags
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'flags: SubscriptionFlags'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.Notification.SubscriptionFlags"
+          />
+  - name: scope
+    uid: azure-devops-extension-api.Notification.SubscriptionQueryCondition.scope
+    package: azure-devops-extension-api
+    summary: Scope that matching subscriptions must have.
+    fullName: scope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scope: string'
+      return:
+        description: ''
+        type: string
+  - name: subscriberId
+    uid: >-
+      azure-devops-extension-api.Notification.SubscriptionQueryCondition.subscriberId
+    package: azure-devops-extension-api
+    summary: >-
+      ID of the subscriber (user or group) that matching subscriptions must be
+      subscribed to.
+    fullName: subscriberId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'subscriberId: string'
+      return:
+        description: ''
+        type: string
+  - name: subscriptionId
+    uid: >-
+      azure-devops-extension-api.Notification.SubscriptionQueryCondition.subscriptionId
+    package: azure-devops-extension-api
+    summary: ID of the subscription to query for.
+    fullName: subscriptionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'subscriptionId: string'
+      return:
+        description: ''
+        type: string

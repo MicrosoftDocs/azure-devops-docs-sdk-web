@@ -1,0 +1,44 @@
+### YamlMime:TSType
+name: EnvironmentExecutionPolicy
+uid: azure-devops-extension-api.Release.EnvironmentExecutionPolicy
+package: azure-devops-extension-api
+summary: >-
+  Defines policy on environment queuing at Release Management side queue. We
+  will send to Environment Runner [creating pre-deploy and other steps] only
+  when the policies mentioned are satisfied.
+fullName: EnvironmentExecutionPolicy
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: concurrencyCount
+    uid: >-
+      azure-devops-extension-api.Release.EnvironmentExecutionPolicy.concurrencyCount
+    package: azure-devops-extension-api
+    summary: >-
+      This policy decides, how many environments would be with Environment
+      Runner.
+    fullName: concurrencyCount
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'concurrencyCount: number'
+      return:
+        description: ''
+        type: number
+  - name: queueDepthCount
+    uid: >-
+      azure-devops-extension-api.Release.EnvironmentExecutionPolicy.queueDepthCount
+    package: azure-devops-extension-api
+    summary: >-
+      Queue depth in the EnvironmentQueue table, this table keeps the
+      environment entries till Environment Runner is free [as per it's policy]
+      to take another environment for running.
+    fullName: queueDepthCount
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'queueDepthCount: number'
+      return:
+        description: ''
+        type: number

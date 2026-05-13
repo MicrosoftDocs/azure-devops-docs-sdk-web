@@ -1,0 +1,179 @@
+### YamlMime:TSType
+name: Plan
+uid: azure-devops-extension-api.Work.Plan
+package: azure-devops-extension-api
+summary: Data contract for the plan definition
+fullName: Plan
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: createdByIdentity
+    uid: azure-devops-extension-api.Work.Plan.createdByIdentity
+    package: azure-devops-extension-api
+    summary: >-
+      Identity that created this plan. Defaults to null for records before
+      upgrading to ScaledAgileViewComponent4.
+    fullName: createdByIdentity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdByIdentity: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WebApi.IdentityRef" />
+  - name: createdDate
+    uid: azure-devops-extension-api.Work.Plan.createdDate
+    package: azure-devops-extension-api
+    summary: Date when the plan was created
+    fullName: createdDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: description
+    uid: azure-devops-extension-api.Work.Plan.description
+    package: azure-devops-extension-api
+    summary: Description of the plan
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+  - name: id
+    uid: azure-devops-extension-api.Work.Plan.id
+    package: azure-devops-extension-api
+    summary: Id of the plan
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: lastAccessed
+    uid: azure-devops-extension-api.Work.Plan.lastAccessed
+    package: azure-devops-extension-api
+    summary: Date when the plan was last accessed. Default is null.
+    fullName: lastAccessed
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastAccessed: Date'
+      return:
+        description: ''
+        type: Date
+  - name: modifiedByIdentity
+    uid: azure-devops-extension-api.Work.Plan.modifiedByIdentity
+    package: azure-devops-extension-api
+    summary: >-
+      Identity that last modified this plan. Defaults to null for records before
+      upgrading to ScaledAgileViewComponent4.
+    fullName: modifiedByIdentity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'modifiedByIdentity: IdentityRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WebApi.IdentityRef" />
+  - name: modifiedDate
+    uid: azure-devops-extension-api.Work.Plan.modifiedDate
+    package: azure-devops-extension-api
+    summary: >-
+      Date when the plan was last modified. Default to CreatedDate when the plan
+      is first created.
+    fullName: modifiedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'modifiedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: name
+    uid: azure-devops-extension-api.Work.Plan.name
+    package: azure-devops-extension-api
+    summary: Name of the plan
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: properties
+    uid: azure-devops-extension-api.Work.Plan.properties
+    package: azure-devops-extension-api
+    summary: >-
+      The PlanPropertyCollection instance associated with the plan. These are
+      dependent on the type of the plan. For example, DeliveryTimelineView, it
+      would be of type DeliveryViewPropertyCollection.
+    fullName: properties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'properties: any'
+      return:
+        description: ''
+        type: any
+  - name: revision
+    uid: azure-devops-extension-api.Work.Plan.revision
+    package: azure-devops-extension-api
+    summary: >-
+      Revision of the plan. Used to safeguard users from overwriting each
+      other's changes.
+    fullName: revision
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'revision: number'
+      return:
+        description: ''
+        type: number
+  - name: type
+    uid: azure-devops-extension-api.Work.Plan.type
+    package: azure-devops-extension-api
+    summary: Type of the plan
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: DeliveryTimelineView'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.Work.PlanType.DeliveryTimelineView" />
+  - name: url
+    uid: azure-devops-extension-api.Work.Plan.url
+    package: azure-devops-extension-api
+    summary: The resource url to locate the plan via rest api
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+  - name: userPermissions
+    uid: azure-devops-extension-api.Work.Plan.userPermissions
+    package: azure-devops-extension-api
+    summary: Bit flag indicating set of permissions a user has to the plan.
+    fullName: userPermissions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'userPermissions: PlanUserPermissions'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Work.PlanUserPermissions" />

@@ -1,0 +1,145 @@
+### YamlMime:TSType
+name: Contribution
+uid: azure-devops-extension-api.Contributions.Contribution
+package: azure-devops-extension-api
+summary: An individual contribution made by an extension
+fullName: Contribution
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: constraints
+    uid: azure-devops-extension-api.Contributions.Contribution.constraints
+    package: azure-devops-extension-api
+    summary: >-
+      List of constraints (filters) that should be applied to the availability
+      of this contribution
+    fullName: constraints
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'constraints: ContributionConstraint[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.Contributions.ContributionConstraint"
+          />[]
+  - name: includes
+    uid: azure-devops-extension-api.Contributions.Contribution.includes
+    package: azure-devops-extension-api
+    summary: >-
+      Includes is a set of contributions that should have this contribution
+      included in their targets list.
+    fullName: includes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includes: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: properties
+    uid: azure-devops-extension-api.Contributions.Contribution.properties
+    package: azure-devops-extension-api
+    summary: Properties/attributes of this contribution
+    fullName: properties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'properties: any'
+      return:
+        description: ''
+        type: any
+  - name: restrictedTo
+    uid: azure-devops-extension-api.Contributions.Contribution.restrictedTo
+    package: azure-devops-extension-api
+    summary: >-
+      List of demanded claims in order for the user to see this contribution
+      (like anonymous, public, member...).
+    fullName: restrictedTo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'restrictedTo: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: targets
+    uid: azure-devops-extension-api.Contributions.Contribution.targets
+    package: azure-devops-extension-api
+    summary: >-
+      The ids of the contribution(s) that this contribution targets. (parent
+      contributions)
+    fullName: targets
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'targets: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: type
+    uid: azure-devops-extension-api.Contributions.Contribution.type
+    package: azure-devops-extension-api
+    summary: Id of the Contribution Type
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: description
+    uid: azure-devops-extension-api.Contributions.Contribution.description
+    package: azure-devops-extension-api
+    summary: Description of the contribution/type
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContributionBase.description](xref:azure-devops-extension-api.Contributions.ContributionBase.description)
+  - name: id
+    uid: azure-devops-extension-api.Contributions.Contribution.id
+    package: azure-devops-extension-api
+    summary: Fully qualified identifier of the contribution/type
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContributionBase.id](xref:azure-devops-extension-api.Contributions.ContributionBase.id)
+  - name: visibleTo
+    uid: azure-devops-extension-api.Contributions.Contribution.visibleTo
+    package: azure-devops-extension-api
+    summary: >-
+      VisibleTo can be used to restrict whom can reference a given
+      contribution/type. This value should be a list of publishers or extensions
+      access is restricted too.  Examples: "ms" - Means only the "ms" publisher
+      can reference this. "ms.vss-web" - Means only the "vss-web" extension from
+      the "ms" publisher can reference this.
+    fullName: visibleTo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visibleTo: string[]'
+      return:
+        description: ''
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContributionBase.visibleTo](xref:azure-devops-extension-api.Contributions.ContributionBase.visibleTo)
+extends: <xref uid="azure-devops-extension-api.Contributions.ContributionBase" />

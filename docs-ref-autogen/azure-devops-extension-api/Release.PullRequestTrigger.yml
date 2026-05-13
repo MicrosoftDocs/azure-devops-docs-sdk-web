@@ -1,0 +1,78 @@
+### YamlMime:TSType
+name: PullRequestTrigger
+uid: azure-devops-extension-api.Release.PullRequestTrigger
+package: azure-devops-extension-api
+summary: ''
+fullName: PullRequestTrigger
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: artifactAlias
+    uid: azure-devops-extension-api.Release.PullRequestTrigger.artifactAlias
+    package: azure-devops-extension-api
+    summary: Artifact alias trigger is linked to.
+    fullName: artifactAlias
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'artifactAlias: string'
+      return:
+        description: ''
+        type: string
+  - name: pullRequestConfiguration
+    uid: >-
+      azure-devops-extension-api.Release.PullRequestTrigger.pullRequestConfiguration
+    package: azure-devops-extension-api
+    summary: Code reference details of pull request.
+    fullName: pullRequestConfiguration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pullRequestConfiguration: PullRequestConfiguration'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.Release.PullRequestConfiguration" />
+  - name: statusPolicyName
+    uid: azure-devops-extension-api.Release.PullRequestTrigger.statusPolicyName
+    package: azure-devops-extension-api
+    summary: Policy name using which status will be published to pull request.
+    fullName: statusPolicyName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'statusPolicyName: string'
+      return:
+        description: ''
+        type: string
+  - name: triggerConditions
+    uid: azure-devops-extension-api.Release.PullRequestTrigger.triggerConditions
+    package: azure-devops-extension-api
+    summary: List of filters applied while trigger.
+    fullName: triggerConditions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'triggerConditions: PullRequestFilter[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Release.PullRequestFilter" />[]
+inheritedProperties:
+  - name: triggerType
+    uid: azure-devops-extension-api.Release.PullRequestTrigger.triggerType
+    package: azure-devops-extension-api
+    summary: Type of release trigger.
+    fullName: triggerType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'triggerType: ReleaseTriggerType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Release.ReleaseTriggerType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ReleaseTriggerBase.triggerType](xref:azure-devops-extension-api.Release.ReleaseTriggerBase.triggerType)
+extends: <xref uid="azure-devops-extension-api.Release.ReleaseTriggerBase" />

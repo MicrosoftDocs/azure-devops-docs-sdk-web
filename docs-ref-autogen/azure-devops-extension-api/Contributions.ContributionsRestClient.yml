@@ -1,0 +1,152 @@
+### YamlMime:TSType
+name: ContributionsRestClient
+uid: azure-devops-extension-api.Contributions.ContributionsRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: ContributionsRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: ContributionsRestClient(IVssRestClientOptions)
+    uid: >-
+      azure-devops-extension-api.Contributions.ContributionsRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new ContributionsRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+properties:
+  - name: RESOURCE_AREA_ID
+    uid: >-
+      azure-devops-extension-api.Contributions.ContributionsRestClient.RESOURCE_AREA_ID
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: RESOURCE_AREA_ID
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static RESOURCE_AREA_ID: "8477aec9-a4c7-4bd4-a456-ba4c53c989cb" =
+        "8477aec9-a4c7-4bd4-a456-ba4c53c989cb"
+      return:
+        description: ''
+        type: '"8477aec9-a4c7-4bd4-a456-ba4c53c989cb"'
+methods:
+  - name: getInstalledExtensionByName(string, string, string[])
+    uid: >-
+      azure-devops-extension-api.Contributions.ContributionsRestClient.getInstalledExtensionByName
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getInstalledExtensionByName(publisherName: string,
+        extensionName: string, assetTypes?: string[]):
+        Promise<InstalledExtension>
+      parameters:
+        - id: publisherName
+          type: string
+          description: ''
+        - id: extensionName
+          type: string
+          description: ''
+        - id: assetTypes
+          type: string[]
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.Contributions.InstalledExtension"
+          />&gt;
+  - name: getInstalledExtensions(string[], boolean, string[])
+    uid: >-
+      azure-devops-extension-api.Contributions.ContributionsRestClient.getInstalledExtensions
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getInstalledExtensions(contributionIds?: string[],
+        includeDisabledApps?: boolean, assetTypes?: string[]):
+        Promise<InstalledExtension[]>
+      parameters:
+        - id: contributionIds
+          type: string[]
+          description: ''
+        - id: includeDisabledApps
+          type: boolean
+          description: ''
+        - id: assetTypes
+          type: string[]
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.Contributions.InstalledExtension"
+          />[]&gt;
+  - name: queryContributionNodes(ContributionNodeQuery)
+    uid: >-
+      azure-devops-extension-api.Contributions.ContributionsRestClient.queryContributionNodes
+    package: azure-devops-extension-api
+    summary: >-
+      Query for contribution nodes and provider details according the parameters
+      in the passed in query object.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryContributionNodes(query: ContributionNodeQuery):
+        Promise<ContributionNodeQueryResult>
+      parameters:
+        - id: query
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.Contributions.ContributionNodeQuery"
+            />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.Contributions.ContributionNodeQueryResult"
+          />&gt;
+  - name: queryDataProviders(DataProviderQuery, string, string)
+    uid: >-
+      azure-devops-extension-api.Contributions.ContributionsRestClient.queryDataProviders
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryDataProviders(query: DataProviderQuery, scopeName?:
+        string, scopeValue?: string): Promise<DataProviderResult>
+      parameters:
+        - id: query
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.Contributions.DataProviderQuery" />
+          description: ''
+        - id: scopeName
+          type: string
+          description: ''
+        - id: scopeValue
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.Contributions.DataProviderResult"
+          />&gt;
+extends: RestClientBase

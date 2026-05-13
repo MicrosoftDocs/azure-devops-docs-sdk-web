@@ -1,0 +1,1346 @@
+### YamlMime:TSType
+name: WorkItemTrackingProcessDefinitionsRestClient
+uid: >-
+  azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient
+package: azure-devops-extension-api
+summary: ''
+fullName: WorkItemTrackingProcessDefinitionsRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: WorkItemTrackingProcessDefinitionsRestClient(IVssRestClientOptions)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new WorkItemTrackingProcessDefinitionsRestClient(options:
+        IVssRestClientOptions)
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+properties:
+  - name: RESOURCE_AREA_ID
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.RESOURCE_AREA_ID
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: RESOURCE_AREA_ID
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static RESOURCE_AREA_ID: "5264459e-e5e0-4bd8-b118-0985e68a4ec5" =
+        "5264459e-e5e0-4bd8-b118-0985e68a4ec5"
+      return:
+        description: ''
+        type: '"5264459e-e5e0-4bd8-b118-0985e68a4ec5"'
+methods:
+  - name: addBehaviorToWorkItemType(WorkItemTypeBehavior, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.addBehaviorToWorkItemType
+    package: azure-devops-extension-api
+    summary: Adds a behavior to the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addBehaviorToWorkItemType(behavior: WorkItemTypeBehavior,
+        processId: string, witRefNameForBehaviors: string):
+        Promise<WorkItemTypeBehavior>
+      parameters:
+        - id: behavior
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeBehavior"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForBehaviors
+          type: string
+          description: Work item type reference name for the behavior
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeBehavior"
+          />&gt;
+  - name: addControlToGroup(Control, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.addControlToGroup
+    package: azure-devops-extension-api
+    summary: Creates a control in a group
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addControlToGroup(control: Control, processId: string,
+        witRefName: string, groupId: string): Promise<Control>
+      parameters:
+        - id: control
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Control"
+            />
+          description: The control
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: groupId
+          type: string
+          description: The ID of the group to add the control to
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Control"
+          />&gt;
+  - name: addFieldToWorkItemType(WorkItemTypeFieldModel2, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.addFieldToWorkItemType
+    package: azure-devops-extension-api
+    summary: Adds a field to the work item type in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addFieldToWorkItemType(field: WorkItemTypeFieldModel2,
+        processId: string, witRefNameForFields: string):
+        Promise<WorkItemTypeFieldModel2>
+      parameters:
+        - id: field
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeFieldModel2"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForFields
+          type: string
+          description: Work item type reference name for the field
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeFieldModel2"
+          />&gt;
+  - name: addGroup(Group, string, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.addGroup
+    package: azure-devops-extension-api
+    summary: Adds a group to the work item form
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addGroup(group: Group, processId: string, witRefName: string,
+        pageId: string, sectionId: string): Promise<Group>
+      parameters:
+        - id: group
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Group"
+            />
+          description: The group
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: pageId
+          type: string
+          description: The ID of the page to add the group to
+        - id: sectionId
+          type: string
+          description: The ID of the section to add the group to
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Group"
+          />&gt;
+  - name: addPage(Page, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.addPage
+    package: azure-devops-extension-api
+    summary: Adds a page to the work item form
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addPage(page: Page, processId: string, witRefName: string):
+        Promise<Page>
+      parameters:
+        - id: page
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Page"
+            />
+          description: The page
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Page"
+          />&gt;
+  - name: createBehavior(BehaviorCreateModel, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.createBehavior
+    package: azure-devops-extension-api
+    summary: Creates a single behavior in the given process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createBehavior(behavior: BehaviorCreateModel, processId:
+        string): Promise<BehaviorModel>
+      parameters:
+        - id: behavior
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.BehaviorCreateModel"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.BehaviorModel"
+          />&gt;
+  - name: createField(FieldModel, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.createField
+    package: azure-devops-extension-api
+    summary: Creates a single field in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createField(field: FieldModel, processId: string):
+        Promise<FieldModel>
+      parameters:
+        - id: field
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.FieldModel"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.FieldModel"
+          />&gt;
+  - name: createList(PickListModel)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.createList
+    package: azure-devops-extension-api
+    summary: Creates a picklist.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function createList(picklist: PickListModel): Promise<PickListModel>'
+      parameters:
+        - id: picklist
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.PickListModel"
+            />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.PickListModel"
+          />&gt;
+  - name: createStateDefinition(WorkItemStateInputModel, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.createStateDefinition
+    package: azure-devops-extension-api
+    summary: Creates a state definition in the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createStateDefinition(stateModel: WorkItemStateInputModel,
+        processId: string, witRefName: string):
+        Promise<WorkItemStateResultModel>
+      parameters:
+        - id: stateModel
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemStateInputModel"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemStateResultModel"
+          />&gt;
+  - name: createWorkItemType(WorkItemTypeModel, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.createWorkItemType
+    package: azure-devops-extension-api
+    summary: Creates a work item type in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createWorkItemType(workItemType: WorkItemTypeModel, processId:
+        string): Promise<WorkItemTypeModel>
+      parameters:
+        - id: workItemType
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeModel"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeModel"
+          />&gt;
+  - name: deleteBehavior(string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.deleteBehavior
+    package: azure-devops-extension-api
+    summary: Removes a behavior in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteBehavior(processId: string, behaviorId: string):
+        Promise<void>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: behaviorId
+          type: string
+          description: The ID of the behavior
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: deleteList(string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.deleteList
+    package: azure-devops-extension-api
+    summary: Removes a picklist.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function deleteList(listId: string): Promise<void>'
+      parameters:
+        - id: listId
+          type: string
+          description: The ID of the list
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: deleteStateDefinition(string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.deleteStateDefinition
+    package: azure-devops-extension-api
+    summary: Removes a state definition in the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteStateDefinition(processId: string, witRefName: string,
+        stateId: string): Promise<void>
+      parameters:
+        - id: processId
+          type: string
+          description: ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: stateId
+          type: string
+          description: ID of the state
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: deleteWorkItemType(string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.deleteWorkItemType
+    package: azure-devops-extension-api
+    summary: Removes a work item type in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteWorkItemType(processId: string, witRefName: string):
+        Promise<void>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: editControl(Control, string, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.editControl
+    package: azure-devops-extension-api
+    summary: Updates a control on the work item form
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function editControl(control: Control, processId: string, witRefName:
+        string, groupId: string, controlId: string): Promise<Control>
+      parameters:
+        - id: control
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Control"
+            />
+          description: The updated control
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: groupId
+          type: string
+          description: The ID of the group
+        - id: controlId
+          type: string
+          description: The ID of the control
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Control"
+          />&gt;
+  - name: editGroup(Group, string, string, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.editGroup
+    package: azure-devops-extension-api
+    summary: Updates a group in the work item form
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function editGroup(group: Group, processId: string, witRefName: string,
+        pageId: string, sectionId: string, groupId: string): Promise<Group>
+      parameters:
+        - id: group
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Group"
+            />
+          description: The updated group
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: pageId
+          type: string
+          description: The ID of the page the group is in
+        - id: sectionId
+          type: string
+          description: The ID of the section the group is in
+        - id: groupId
+          type: string
+          description: The ID of the group
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Group"
+          />&gt;
+  - name: editPage(Page, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.editPage
+    package: azure-devops-extension-api
+    summary: Updates a page on the work item form
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function editPage(page: Page, processId: string, witRefName: string):
+        Promise<Page>
+      parameters:
+        - id: page
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Page"
+            />
+          description: The page
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Page"
+          />&gt;
+  - name: getBehavior(string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getBehavior
+    package: azure-devops-extension-api
+    summary: Returns a single behavior in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getBehavior(processId: string, behaviorId: string):
+        Promise<BehaviorModel>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: behaviorId
+          type: string
+          description: The ID of the behavior
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.BehaviorModel"
+          />&gt;
+  - name: getBehaviorForWorkItemType(string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getBehaviorForWorkItemType
+    package: azure-devops-extension-api
+    summary: Returns a behavior for the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getBehaviorForWorkItemType(processId: string,
+        witRefNameForBehaviors: string, behaviorRefName: string):
+        Promise<WorkItemTypeBehavior>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForBehaviors
+          type: string
+          description: Work item type reference name for the behavior
+        - id: behaviorRefName
+          type: string
+          description: The reference name of the behavior
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeBehavior"
+          />&gt;
+  - name: getBehaviors(string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getBehaviors
+    package: azure-devops-extension-api
+    summary: Returns a list of all behaviors in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getBehaviors(processId: string): Promise<BehaviorModel[]>'
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.BehaviorModel"
+          />[]&gt;
+  - name: getBehaviorsForWorkItemType(string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getBehaviorsForWorkItemType
+    package: azure-devops-extension-api
+    summary: Returns a list of all behaviors for the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getBehaviorsForWorkItemType(processId: string,
+        witRefNameForBehaviors: string): Promise<WorkItemTypeBehavior[]>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForBehaviors
+          type: string
+          description: Work item type reference name for the behavior
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeBehavior"
+          />[]&gt;
+  - name: getFormLayout(string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getFormLayout
+    package: azure-devops-extension-api
+    summary: Gets the form layout
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFormLayout(processId: string, witRefName: string):
+        Promise<FormLayout>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.FormLayout"
+          />&gt;
+  - name: getList(string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getList
+    package: azure-devops-extension-api
+    summary: Returns a picklist.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getList(listId: string): Promise<PickListModel>'
+      parameters:
+        - id: listId
+          type: string
+          description: The ID of the list
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.PickListModel"
+          />&gt;
+  - name: getListsMetadata()
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getListsMetadata
+    package: azure-devops-extension-api
+    summary: Returns meta data of the picklist.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getListsMetadata(): Promise<PickListMetadataModel[]>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.PickListMetadataModel"
+          />[]&gt;
+  - name: getStateDefinition(string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getStateDefinition
+    package: azure-devops-extension-api
+    summary: Returns a state definition in the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getStateDefinition(processId: string, witRefName: string,
+        stateId: string): Promise<WorkItemStateResultModel>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: stateId
+          type: string
+          description: The ID of the state
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemStateResultModel"
+          />&gt;
+  - name: getStateDefinitions(string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getStateDefinitions
+    package: azure-devops-extension-api
+    summary: >-
+      Returns a list of all state definitions in the work item type of the
+      process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getStateDefinitions(processId: string, witRefName: string):
+        Promise<WorkItemStateResultModel[]>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemStateResultModel"
+          />[]&gt;
+  - name: getWorkItemType(string, string, GetWorkItemTypeExpand)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getWorkItemType
+    package: azure-devops-extension-api
+    summary: Returns a work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getWorkItemType(processId: string, witRefName: string, expand?:
+        GetWorkItemTypeExpand): Promise<WorkItemTypeModel>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: expand
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.GetWorkItemTypeExpand"
+            />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeModel"
+          />&gt;
+  - name: getWorkItemTypeField(string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getWorkItemTypeField
+    package: azure-devops-extension-api
+    summary: Returns a single field in the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getWorkItemTypeField(processId: string, witRefNameForFields:
+        string, fieldRefName: string): Promise<WorkItemTypeFieldModel2>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForFields
+          type: string
+          description: Work item type reference name for fields
+        - id: fieldRefName
+          type: string
+          description: The reference name of the field
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeFieldModel2"
+          />&gt;
+  - name: getWorkItemTypeFields(string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getWorkItemTypeFields
+    package: azure-devops-extension-api
+    summary: Returns a list of all fields in the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getWorkItemTypeFields(processId: string, witRefNameForFields:
+        string): Promise<WorkItemTypeFieldModel2[]>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForFields
+          type: string
+          description: Work item type reference name for fields
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeFieldModel2"
+          />[]&gt;
+  - name: getWorkItemTypes(string, GetWorkItemTypeExpand)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.getWorkItemTypes
+    package: azure-devops-extension-api
+    summary: Returns a list of all work item types in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getWorkItemTypes(processId: string, expand?:
+        GetWorkItemTypeExpand): Promise<WorkItemTypeModel[]>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: expand
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.GetWorkItemTypeExpand"
+            />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeModel"
+          />[]&gt;
+  - name: hideStateDefinition(HideStateModel, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.hideStateDefinition
+    package: azure-devops-extension-api
+    summary: Hides a state definition in the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function hideStateDefinition(hideStateModel: HideStateModel, processId:
+        string, witRefName: string, stateId: string):
+        Promise<WorkItemStateResultModel>
+      parameters:
+        - id: hideStateModel
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.HideStateModel"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: stateId
+          type: string
+          description: The ID of the state
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemStateResultModel"
+          />&gt;
+  - name: removeBehaviorFromWorkItemType(string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.removeBehaviorFromWorkItemType
+    package: azure-devops-extension-api
+    summary: Removes a behavior for the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function removeBehaviorFromWorkItemType(processId: string,
+        witRefNameForBehaviors: string, behaviorRefName: string): Promise<void>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForBehaviors
+          type: string
+          description: Work item type reference name for the behavior
+        - id: behaviorRefName
+          type: string
+          description: The reference name of the behavior
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removeControlFromGroup(string, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.removeControlFromGroup
+    package: azure-devops-extension-api
+    summary: Removes a control from the work item form
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function removeControlFromGroup(processId: string, witRefName: string,
+        groupId: string, controlId: string): Promise<void>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: groupId
+          type: string
+          description: The ID of the group
+        - id: controlId
+          type: string
+          description: The ID of the control to remove
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removeFieldFromWorkItemType(string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.removeFieldFromWorkItemType
+    package: azure-devops-extension-api
+    summary: Removes a field in the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function removeFieldFromWorkItemType(processId: string,
+        witRefNameForFields: string, fieldRefName: string): Promise<void>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForFields
+          type: string
+          description: Work item type reference name for fields
+        - id: fieldRefName
+          type: string
+          description: The reference name of the field
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removeGroup(string, string, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.removeGroup
+    package: azure-devops-extension-api
+    summary: Removes a group from the work item form
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function removeGroup(processId: string, witRefName: string, pageId:
+        string, sectionId: string, groupId: string): Promise<void>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: pageId
+          type: string
+          description: The ID of the page the group is in
+        - id: sectionId
+          type: string
+          description: The ID of the section to the group is in
+        - id: groupId
+          type: string
+          description: The ID of the group
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removePage(string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.removePage
+    package: azure-devops-extension-api
+    summary: Removes a page from the work item form
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function removePage(processId: string, witRefName: string, pageId:
+        string): Promise<void>
+      parameters:
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: pageId
+          type: string
+          description: The ID of the page
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: replaceBehavior(BehaviorReplaceModel, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.replaceBehavior
+    package: azure-devops-extension-api
+    summary: Replaces a behavior in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function replaceBehavior(behaviorData: BehaviorReplaceModel, processId:
+        string, behaviorId: string): Promise<BehaviorModel>
+      parameters:
+        - id: behaviorData
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.BehaviorReplaceModel"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: behaviorId
+          type: string
+          description: The ID of the behavior
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.BehaviorModel"
+          />&gt;
+  - name: setControlInGroup(Control, string, string, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.setControlInGroup
+    package: azure-devops-extension-api
+    summary: Moves a control to a new group
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setControlInGroup(control: Control, processId: string,
+        witRefName: string, groupId: string, controlId: string,
+        removeFromGroupId?: string): Promise<Control>
+      parameters:
+        - id: control
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Control"
+            />
+          description: The control
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: groupId
+          type: string
+          description: The ID of the group to move the control to
+        - id: controlId
+          type: string
+          description: The id of the control
+        - id: removeFromGroupId
+          type: string
+          description: The group to remove the control from
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Control"
+          />&gt;
+  - name: >-
+      setGroupInPage(Group, string, string, string, string, string, string,
+      string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.setGroupInPage
+    package: azure-devops-extension-api
+    summary: Moves a group to a different page and section
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setGroupInPage(group: Group, processId: string, witRefName:
+        string, pageId: string, sectionId: string, groupId: string,
+        removeFromPageId: string, removeFromSectionId: string): Promise<Group>
+      parameters:
+        - id: group
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Group"
+            />
+          description: The updated group
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: pageId
+          type: string
+          description: The ID of the page the group is in
+        - id: sectionId
+          type: string
+          description: The ID of the section the group is in
+        - id: groupId
+          type: string
+          description: The ID of the group
+        - id: removeFromPageId
+          type: string
+          description: ID of the page to remove the group from
+        - id: removeFromSectionId
+          type: string
+          description: ID of the section to remove the group from
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Group"
+          />&gt;
+  - name: setGroupInSection(Group, string, string, string, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.setGroupInSection
+    package: azure-devops-extension-api
+    summary: Moves a group to a different section
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setGroupInSection(group: Group, processId: string, witRefName:
+        string, pageId: string, sectionId: string, groupId: string,
+        removeFromSectionId: string): Promise<Group>
+      parameters:
+        - id: group
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Group"
+            />
+          description: The updated group
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: pageId
+          type: string
+          description: The ID of the page the group is in
+        - id: sectionId
+          type: string
+          description: The ID of the section the group is in
+        - id: groupId
+          type: string
+          description: The ID of the group
+        - id: removeFromSectionId
+          type: string
+          description: ID of the section to remove the group from
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.Group"
+          />&gt;
+  - name: updateBehaviorToWorkItemType(WorkItemTypeBehavior, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.updateBehaviorToWorkItemType
+    package: azure-devops-extension-api
+    summary: Updates default work item type for the behavior of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateBehaviorToWorkItemType(behavior: WorkItemTypeBehavior,
+        processId: string, witRefNameForBehaviors: string):
+        Promise<WorkItemTypeBehavior>
+      parameters:
+        - id: behavior
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeBehavior"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForBehaviors
+          type: string
+          description: Work item type reference name for the behavior
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeBehavior"
+          />&gt;
+  - name: updateField(FieldUpdate, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.updateField
+    package: azure-devops-extension-api
+    summary: Updates a given field in the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateField(field: FieldUpdate, processId: string):
+        Promise<FieldModel>
+      parameters:
+        - id: field
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.FieldUpdate"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.FieldModel"
+          />&gt;
+  - name: updateList(PickListModel, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.updateList
+    package: azure-devops-extension-api
+    summary: Updates a list.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateList(picklist: PickListModel, listId: string):
+        Promise<PickListModel>
+      parameters:
+        - id: picklist
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.PickListModel"
+            />
+          description: ''
+        - id: listId
+          type: string
+          description: The ID of the list
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.PickListModel"
+          />&gt;
+  - name: updateStateDefinition(WorkItemStateInputModel, string, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.updateStateDefinition
+    package: azure-devops-extension-api
+    summary: Updates a given state definition in the work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateStateDefinition(stateModel: WorkItemStateInputModel,
+        processId: string, witRefName: string, stateId: string):
+        Promise<WorkItemStateResultModel>
+      parameters:
+        - id: stateModel
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemStateInputModel"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+        - id: stateId
+          type: string
+          description: ID of the state
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemStateResultModel"
+          />&gt;
+  - name: updateWorkItemType(WorkItemTypeUpdateModel, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.updateWorkItemType
+    package: azure-devops-extension-api
+    summary: Updates a work item type of the process.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateWorkItemType(workItemTypeUpdate: WorkItemTypeUpdateModel,
+        processId: string, witRefName: string): Promise<WorkItemTypeModel>
+      parameters:
+        - id: workItemTypeUpdate
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeUpdateModel"
+            />
+          description: ''
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefName
+          type: string
+          description: The reference name of the work item type
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeModel"
+          />&gt;
+  - name: updateWorkItemTypeField(WorkItemTypeFieldModel2, string, string)
+    uid: >-
+      azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTrackingProcessDefinitionsRestClient.updateWorkItemTypeField
+    package: azure-devops-extension-api
+    summary: >-
+      Updates a single field in the scope of the given process and work item
+      type.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateWorkItemTypeField(field: WorkItemTypeFieldModel2,
+        processId: string, witRefNameForFields: string):
+        Promise<WorkItemTypeFieldModel2>
+      parameters:
+        - id: field
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeFieldModel2"
+            />
+          description: The model with which to update the field
+        - id: processId
+          type: string
+          description: The ID of the process
+        - id: witRefNameForFields
+          type: string
+          description: Work item type reference name for fields
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.WorkItemTrackingProcessDefinitions.WorkItemTypeFieldModel2"
+          />&gt;
+extends: RestClientBase

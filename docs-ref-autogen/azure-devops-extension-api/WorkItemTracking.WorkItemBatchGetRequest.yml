@@ -1,0 +1,81 @@
+### YamlMime:TSType
+name: WorkItemBatchGetRequest
+uid: azure-devops-extension-api.WorkItemTracking.WorkItemBatchGetRequest
+package: azure-devops-extension-api
+summary: Describes a request to get a set of work items
+fullName: WorkItemBatchGetRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: $expand
+    uid: >-
+      azure-devops-extension-api.WorkItemTracking.WorkItemBatchGetRequest.$expand
+    package: azure-devops-extension-api
+    summary: >-
+      The expand parameters for work item attributes. Possible options are {
+      None, Relations, Fields, Links, All }
+    fullName: $expand
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: '$expand: WorkItemExpand'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.WorkItemTracking.WorkItemExpand"
+          />
+  - name: asOf
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItemBatchGetRequest.asOf
+    package: azure-devops-extension-api
+    summary: AsOf UTC date time string
+    fullName: asOf
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'asOf: Date'
+      return:
+        description: ''
+        type: Date
+  - name: errorPolicy
+    uid: >-
+      azure-devops-extension-api.WorkItemTracking.WorkItemBatchGetRequest.errorPolicy
+    package: azure-devops-extension-api
+    summary: >-
+      The flag to control error policy in a bulk get work items request.
+      Possible options are {Fail, Omit}.
+    fullName: errorPolicy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorPolicy: WorkItemErrorPolicy'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.WorkItemTracking.WorkItemErrorPolicy"
+          />
+  - name: fields
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItemBatchGetRequest.fields
+    package: azure-devops-extension-api
+    summary: The requested fields
+    fullName: fields
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fields: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: ids
+    uid: azure-devops-extension-api.WorkItemTracking.WorkItemBatchGetRequest.ids
+    package: azure-devops-extension-api
+    summary: The requested work item ids
+    fullName: ids
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ids: number[]'
+      return:
+        description: ''
+        type: number[]

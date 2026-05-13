@@ -1,0 +1,221 @@
+### YamlMime:TSType
+name: IdentityBase
+uid: azure-devops-extension-api.Identities.IdentityBase
+package: azure-devops-extension-api
+summary: >-
+  Base Identity class to allow "trimmed" identity class in the GetConnectionData
+  API Makes sure that on-the-wire representations of the derived classes are
+  compatible with each other (e.g. Server responds with PublicIdentity object
+  while client deserializes it as Identity object) Derived classes should not
+  have additional [DataMember] properties
+fullName: IdentityBase
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: customDisplayName
+    uid: azure-devops-extension-api.Identities.IdentityBase.customDisplayName
+    package: azure-devops-extension-api
+    summary: >-
+      The custom display name for the identity (if any). Setting this property
+      to an empty string will clear the existing custom display name. Setting
+      this property to null will not affect the existing persisted value (since
+      null values do not get sent over the wire or to the database)
+    fullName: customDisplayName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'customDisplayName: string'
+      return:
+        description: ''
+        type: string
+  - name: descriptor
+    uid: azure-devops-extension-api.Identities.IdentityBase.descriptor
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: descriptor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'descriptor: IdentityDescriptor'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.Identities.IdentityDescriptor"
+          />
+  - name: id
+    uid: azure-devops-extension-api.Identities.IdentityBase.id
+    package: azure-devops-extension-api
+    summary: Identity Identifier. Also called Storage Key, or VSID
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: isActive
+    uid: azure-devops-extension-api.Identities.IdentityBase.isActive
+    package: azure-devops-extension-api
+    summary: >-
+      True if the identity has a membership in any Azure Devops group in the
+      organization.
+    fullName: isActive
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isActive: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isContainer
+    uid: azure-devops-extension-api.Identities.IdentityBase.isContainer
+    package: azure-devops-extension-api
+    summary: True if the identity is a group.
+    fullName: isContainer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isContainer: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: masterId
+    uid: azure-devops-extension-api.Identities.IdentityBase.masterId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: masterId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'masterId: string'
+      return:
+        description: ''
+        type: string
+  - name: memberIds
+    uid: azure-devops-extension-api.Identities.IdentityBase.memberIds
+    package: azure-devops-extension-api
+    summary: Id of the members of the identity (groups only).
+    fullName: memberIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'memberIds: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: memberOf
+    uid: azure-devops-extension-api.Identities.IdentityBase.memberOf
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: memberOf
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'memberOf: IdentityDescriptor[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.Identities.IdentityDescriptor"
+          />[]
+  - name: members
+    uid: azure-devops-extension-api.Identities.IdentityBase.members
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: members
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'members: IdentityDescriptor[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.Identities.IdentityDescriptor"
+          />[]
+  - name: metaTypeId
+    uid: azure-devops-extension-api.Identities.IdentityBase.metaTypeId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: metaTypeId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metaTypeId: number'
+      return:
+        description: ''
+        type: number
+  - name: properties
+    uid: azure-devops-extension-api.Identities.IdentityBase.properties
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: properties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'properties: any'
+      return:
+        description: ''
+        type: any
+  - name: providerDisplayName
+    uid: azure-devops-extension-api.Identities.IdentityBase.providerDisplayName
+    package: azure-devops-extension-api
+    summary: >-
+      The display name for the identity as specified by the source identity
+      provider.
+    fullName: providerDisplayName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'providerDisplayName: string'
+      return:
+        description: ''
+        type: string
+  - name: resourceVersion
+    uid: azure-devops-extension-api.Identities.IdentityBase.resourceVersion
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: resourceVersion
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resourceVersion: number'
+      return:
+        description: ''
+        type: number
+  - name: socialDescriptor
+    uid: azure-devops-extension-api.Identities.IdentityBase.socialDescriptor
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: socialDescriptor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'socialDescriptor: string'
+      return:
+        description: ''
+        type: string
+  - name: subjectDescriptor
+    uid: azure-devops-extension-api.Identities.IdentityBase.subjectDescriptor
+    package: azure-devops-extension-api
+    summary: Subject descriptor of a Graph entity.
+    fullName: subjectDescriptor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'subjectDescriptor: string'
+      return:
+        description: ''
+        type: string
+  - name: uniqueUserId
+    uid: azure-devops-extension-api.Identities.IdentityBase.uniqueUserId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: uniqueUserId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'uniqueUserId: number'
+      return:
+        description: ''
+        type: number

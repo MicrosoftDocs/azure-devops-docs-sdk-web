@@ -1,0 +1,45 @@
+### YamlMime:TSType
+name: SubscriptionQuery
+uid: azure-devops-extension-api.Notification.SubscriptionQuery
+package: azure-devops-extension-api
+summary: Notification subscriptions query input.
+fullName: SubscriptionQuery
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: conditions
+    uid: azure-devops-extension-api.Notification.SubscriptionQuery.conditions
+    package: azure-devops-extension-api
+    summary: >-
+      One or more conditions to query on. If more than 2 conditions are
+      specified, the combined results of each condition is returned (i.e.
+      conditions are logically OR'ed).
+    fullName: conditions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'conditions: SubscriptionQueryCondition[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.Notification.SubscriptionQueryCondition"
+          />[]
+  - name: queryFlags
+    uid: azure-devops-extension-api.Notification.SubscriptionQuery.queryFlags
+    package: azure-devops-extension-api
+    summary: >-
+      Flags the refine the types of subscriptions that will be returned from the
+      query.
+    fullName: queryFlags
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'queryFlags: SubscriptionQueryFlags'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.Notification.SubscriptionQueryFlags"
+          />

@@ -1,0 +1,26 @@
+### YamlMime:TSEnum
+name: BuildAuthorizationScope
+uid: azure-devops-extension-api.Build.BuildAuthorizationScope
+package: azure-devops-extension-api
+summary: Represents the desired scope of authorization for a build.
+fullName: BuildAuthorizationScope
+remarks: ''
+isDeprecated: false
+fields:
+  - name: ProjectCollection
+    uid: azure-devops-extension-api.Build.BuildAuthorizationScope.ProjectCollection
+    package: azure-devops-extension-api
+    summary: >-
+      The identity used should have build service account permissions scoped to
+      the project collection. This is useful when resources for a single build
+      are spread across multiple projects.
+    numericValue: 1
+  - name: Project
+    uid: azure-devops-extension-api.Build.BuildAuthorizationScope.Project
+    package: azure-devops-extension-api
+    summary: >-
+      The identity used should have build service account permissions scoped to
+      the project in which the build definition resides. This is useful for
+      isolation of build jobs to a particular team project to avoid any
+      unintentional escalation of privilege attacks during a build.
+    numericValue: 2

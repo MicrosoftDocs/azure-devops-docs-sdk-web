@@ -1,0 +1,72 @@
+### YamlMime:TSType
+name: AcquisitionOperation
+uid: azure-devops-extension-api.ExtensionManagement.AcquisitionOperation
+package: azure-devops-extension-api
+summary: ''
+fullName: AcquisitionOperation
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: operationState
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.AcquisitionOperation.operationState
+    package: azure-devops-extension-api
+    summary: State of the AcquisitionOperation for the current user
+    fullName: operationState
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'operationState: AcquisitionOperationState'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ExtensionManagement.AcquisitionOperationState"
+          />
+  - name: operationType
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.AcquisitionOperation.operationType
+    package: azure-devops-extension-api
+    summary: 'AcquisitionOperationType: install, request, buy, etc...'
+    fullName: operationType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'operationType: AcquisitionOperationType'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ExtensionManagement.AcquisitionOperationType"
+          />
+  - name: reason
+    uid: azure-devops-extension-api.ExtensionManagement.AcquisitionOperation.reason
+    package: azure-devops-extension-api
+    summary: >-
+      Optional reason to justify current state. Typically used with Disallow
+      state.
+    fullName: reason
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'reason: string'
+      return:
+        description: ''
+        type: string
+  - name: reasons
+    uid: >-
+      azure-devops-extension-api.ExtensionManagement.AcquisitionOperation.reasons
+    package: azure-devops-extension-api
+    summary: List of reasons indicating why the operation is not allowed.
+    fullName: reasons
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'reasons: AcquisitionOperationDisallowReason[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.ExtensionManagement.AcquisitionOperationDisallowReason"
+          />[]

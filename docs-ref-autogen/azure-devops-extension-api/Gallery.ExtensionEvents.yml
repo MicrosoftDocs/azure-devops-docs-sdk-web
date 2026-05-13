@@ -1,0 +1,69 @@
+### YamlMime:TSType
+name: ExtensionEvents
+uid: azure-devops-extension-api.Gallery.ExtensionEvents
+package: azure-devops-extension-api
+summary: >-
+  Container object for all extension events. Stores all install and uninstall
+  events related to an extension. The events container is generic so can store
+  data of any type of event. New event types can be added without altering the
+  contract.
+fullName: ExtensionEvents
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: events
+    uid: azure-devops-extension-api.Gallery.ExtensionEvents.events
+    package: azure-devops-extension-api
+    summary: >-
+      Generic container for events data. The dictionary key denotes the type of
+      event and the list contains properties related to that event
+    fullName: events
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'events: {[key: string]: ExtensionEvent[]}'
+      return:
+        description: ''
+        type: >-
+          {[key: string]: <xref
+          uid="azure-devops-extension-api.Gallery.ExtensionEvent" />[]}
+  - name: extensionId
+    uid: azure-devops-extension-api.Gallery.ExtensionEvents.extensionId
+    package: azure-devops-extension-api
+    summary: >-
+      Id of the extension, this will never be sent back to the client. This
+      field will mainly be used when EMS calls into Gallery REST API to update
+      install/uninstall events for various extensions in one go.
+    fullName: extensionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'extensionId: string'
+      return:
+        description: ''
+        type: string
+  - name: extensionName
+    uid: azure-devops-extension-api.Gallery.ExtensionEvents.extensionName
+    package: azure-devops-extension-api
+    summary: Name of the extension
+    fullName: extensionName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'extensionName: string'
+      return:
+        description: ''
+        type: string
+  - name: publisherName
+    uid: azure-devops-extension-api.Gallery.ExtensionEvents.publisherName
+    package: azure-devops-extension-api
+    summary: Name of the publisher
+    fullName: publisherName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'publisherName: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,62 @@
+### YamlMime:TSType
+name: JsonPatchOperation
+uid: azure-devops-extension-api.WebApi.JsonPatchOperation
+package: azure-devops-extension-api
+summary: The JSON model for a JSON Patch operation
+fullName: JsonPatchOperation
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: from
+    uid: azure-devops-extension-api.WebApi.JsonPatchOperation.from
+    package: azure-devops-extension-api
+    summary: The path to copy from for the Move/Copy operation.
+    fullName: from
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'from: string'
+      return:
+        description: ''
+        type: string
+  - name: op
+    uid: azure-devops-extension-api.WebApi.JsonPatchOperation.op
+    package: azure-devops-extension-api
+    summary: The patch operation
+    fullName: op
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'op: Operation'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WebApi.Operation" />
+  - name: path
+    uid: azure-devops-extension-api.WebApi.JsonPatchOperation.path
+    package: azure-devops-extension-api
+    summary: >-
+      The path for the operation. In the case of an array, a zero based index
+      can be used to specify the position in the array (e.g. /biscuits/0/name).
+      The "-" character can be used instead of an index to insert at the end of
+      the array (e.g. /biscuits/-).
+    fullName: path
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'path: string'
+      return:
+        description: ''
+        type: string
+  - name: value
+    uid: azure-devops-extension-api.WebApi.JsonPatchOperation.value
+    package: azure-devops-extension-api
+    summary: The value for the operation. This is either a primitive or a JToken.
+    fullName: value
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'value: any'
+      return:
+        description: ''
+        type: any

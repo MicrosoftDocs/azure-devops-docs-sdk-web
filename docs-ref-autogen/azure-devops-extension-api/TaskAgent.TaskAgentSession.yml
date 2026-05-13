@@ -1,0 +1,87 @@
+### YamlMime:TSType
+name: TaskAgentSession
+uid: azure-devops-extension-api.TaskAgent.TaskAgentSession
+package: azure-devops-extension-api
+summary: Represents a session for performing message exchanges from an agent.
+fullName: TaskAgentSession
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: agent
+    uid: azure-devops-extension-api.TaskAgent.TaskAgentSession.agent
+    package: azure-devops-extension-api
+    summary: Gets or sets the agent which is the target of the session.
+    fullName: agent
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'agent: TaskAgentReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgent.TaskAgentReference" />
+  - name: agentCanHandleOaepSHA256
+    uid: >-
+      azure-devops-extension-api.TaskAgent.TaskAgentSession.agentCanHandleOaepSHA256
+    package: azure-devops-extension-api
+    summary: This will be false in case an old Agent is creating the session.
+    fullName: agentCanHandleOaepSHA256
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'agentCanHandleOaepSHA256: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: encryptionKey
+    uid: azure-devops-extension-api.TaskAgent.TaskAgentSession.encryptionKey
+    package: azure-devops-extension-api
+    summary: Gets the key used to encrypt message traffic for this session.
+    fullName: encryptionKey
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'encryptionKey: TaskAgentSessionKey'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.TaskAgent.TaskAgentSessionKey"
+          />
+  - name: ownerName
+    uid: azure-devops-extension-api.TaskAgent.TaskAgentSession.ownerName
+    package: azure-devops-extension-api
+    summary: >-
+      Gets or sets the owner name of this session. Generally this will be the
+      machine of origination.
+    fullName: ownerName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ownerName: string'
+      return:
+        description: ''
+        type: string
+  - name: sessionId
+    uid: azure-devops-extension-api.TaskAgent.TaskAgentSession.sessionId
+    package: azure-devops-extension-api
+    summary: Gets the unique identifier for this session.
+    fullName: sessionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sessionId: string'
+      return:
+        description: ''
+        type: string
+  - name: systemCapabilities
+    uid: azure-devops-extension-api.TaskAgent.TaskAgentSession.systemCapabilities
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: systemCapabilities
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'systemCapabilities: {[key: string]: string}'
+      return:
+        description: ''
+        type: '{[key: string]: string}'

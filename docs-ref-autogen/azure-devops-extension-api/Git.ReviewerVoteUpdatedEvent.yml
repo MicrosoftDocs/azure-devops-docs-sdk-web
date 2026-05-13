@@ -1,0 +1,43 @@
+### YamlMime:TSType
+name: ReviewerVoteUpdatedEvent
+uid: azure-devops-extension-api.Git.ReviewerVoteUpdatedEvent
+package: azure-devops-extension-api
+summary: Real time event (SignalR) for a reviewer vote update on a pull request
+fullName: ReviewerVoteUpdatedEvent
+remarks: ''
+isDeprecated: false
+type: interface
+inheritedProperties:
+  - name: eventId
+    uid: azure-devops-extension-api.Git.ReviewerVoteUpdatedEvent.eventId
+    package: azure-devops-extension-api
+    summary: >-
+      The id of this event. Can be used to track send/receive state between
+      client and server.
+    fullName: eventId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'eventId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealTimePullRequestEvent.eventId](xref:azure-devops-extension-api.Git.RealTimePullRequestEvent.eventId)
+  - name: pullRequestId
+    uid: azure-devops-extension-api.Git.ReviewerVoteUpdatedEvent.pullRequestId
+    package: azure-devops-extension-api
+    summary: The id of the pull request this event was generated for.
+    fullName: pullRequestId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pullRequestId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [RealTimePullRequestEvent.pullRequestId](xref:azure-devops-extension-api.Git.RealTimePullRequestEvent.pullRequestId)
+extends: <xref uid="azure-devops-extension-api.Git.RealTimePullRequestEvent" />

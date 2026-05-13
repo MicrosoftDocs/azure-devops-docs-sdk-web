@@ -1,0 +1,74 @@
+### YamlMime:TSType
+name: GitForkSyncRequest
+uid: azure-devops-extension-api.Git.GitForkSyncRequest
+package: azure-devops-extension-api
+summary: Request to sync data between two forks.
+fullName: GitForkSyncRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: detailedStatus
+    uid: azure-devops-extension-api.Git.GitForkSyncRequest.detailedStatus
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: detailedStatus
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'detailedStatus: GitForkOperationStatusDetail'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-devops-extension-api.Git.GitForkOperationStatusDetail" />
+  - name: operationId
+    uid: azure-devops-extension-api.Git.GitForkSyncRequest.operationId
+    package: azure-devops-extension-api
+    summary: Unique identifier for the operation.
+    fullName: operationId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'operationId: number'
+      return:
+        description: ''
+        type: number
+  - name: source
+    uid: azure-devops-extension-api.Git.GitForkSyncRequest.source
+    package: azure-devops-extension-api
+    summary: Fully-qualified identifier for the source repository.
+    fullName: source
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'source: GlobalGitRepositoryKey'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Git.GlobalGitRepositoryKey" />
+  - name: sourceToTargetRefs
+    uid: azure-devops-extension-api.Git.GitForkSyncRequest.sourceToTargetRefs
+    package: azure-devops-extension-api
+    summary: >-
+      If supplied, the set of ref mappings to use when performing a "sync" or
+      create. If missing, all refs will be synchronized.
+    fullName: sourceToTargetRefs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sourceToTargetRefs: SourceToTargetRef[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Git.SourceToTargetRef" />[]
+  - name: status
+    uid: azure-devops-extension-api.Git.GitForkSyncRequest.status
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: status
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'status: GitAsyncOperationStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Git.GitAsyncOperationStatus" />
