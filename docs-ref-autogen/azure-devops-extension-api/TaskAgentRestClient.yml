@@ -31,10 +31,12 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'static RESOURCE_AREA_ID: string'
+      content: >-
+        static RESOURCE_AREA_ID: "a85b8835-c1a1-4aac-ae97-1c3d0ba72dbd" =
+        "a85b8835-c1a1-4aac-ae97-1c3d0ba72dbd"
       return:
         description: ''
-        type: string
+        type: '"a85b8835-c1a1-4aac-ae97-1c3d0ba72dbd"'
 methods:
   - name: addAgent(TaskAgent, number)
     uid: azure-devops-extension-api.TaskAgentRestClient.addAgent
@@ -2654,6 +2656,34 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.TaskGroup" />[]&gt;
+  - name: 'getTaskGroupsByIds({[key: string]: string[]}, string, boolean)'
+    uid: azure-devops-extension-api.TaskAgentRestClient.getTaskGroupsByIds
+    package: azure-devops-extension-api
+    summary: Get task groups by their IDs and version specs.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTaskGroupsByIds(groupsVersionsMap: {[key: string]:
+        string[]}, project: string, expand?: boolean): Promise<{[key: string]:
+        TaskAgent.TaskGroup[]}>
+      parameters:
+        - id: groupsVersionsMap
+          type: '{[key: string]: string[]}'
+          description: Group ID to versions map.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: expand
+          type: boolean
+          description: >-
+            The properties that should be expanded. example $expand=Tasks will
+            expand nested task groups.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;{[key: string]: <xref
+          uid="azure-devops-extension-api.TaskGroup" />[]}&gt;
   - name: getTaskHubLicenseDetails(string, boolean, boolean)
     uid: azure-devops-extension-api.TaskAgentRestClient.getTaskHubLicenseDetails
     package: azure-devops-extension-api

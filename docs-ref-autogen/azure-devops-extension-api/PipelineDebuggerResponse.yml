@@ -1,0 +1,41 @@
+### YamlMime:TSType
+name: PipelineDebuggerResponse
+uid: azure-devops-extension-api.PipelineDebuggerResponse
+package: azure-devops-extension-api
+summary: Response DTO returned by the pipeline debugger POST endpoint.
+fullName: PipelineDebuggerResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: analysisResult
+    uid: azure-devops-extension-api.PipelineDebuggerResponse.analysisResult
+    package: azure-devops-extension-api
+    summary: >-
+      When the analysis has already completed for this build, contains the
+      cached result so the caller does not need a separate GET request. Null
+      when the job is newly queued or still in progress.
+    fullName: analysisResult
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'analysisResult: PipelineDebuggerAnalysisOutput'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.PipelineDebuggerAnalysisOutput"
+          />
+  - name: message
+    uid: azure-devops-extension-api.PipelineDebuggerResponse.message
+    package: azure-devops-extension-api
+    summary: >-
+      Human-readable status message (e.g. "queued successfully", "already
+      running", or "Analysis already completed").
+    fullName: message
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        description: ''
+        type: string

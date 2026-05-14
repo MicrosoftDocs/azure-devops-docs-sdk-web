@@ -31,10 +31,12 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'static RESOURCE_AREA_ID: string'
+      content: >-
+        static RESOURCE_AREA_ID: "69d21c00-f135-441b-b5ce-3626378e0819" =
+        "69d21c00-f135-441b-b5ce-3626378e0819"
       return:
         description: ''
-        type: string
+        type: '"69d21c00-f135-441b-b5ce-3626378e0819"'
 methods:
   - name: addAssetForEditExtensionDraft(string, string, string, string, string)
     uid: azure-devops-extension-api.GalleryRestClient.addAssetForEditExtensionDraft
@@ -1565,6 +1567,38 @@ methods:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AzurePublisher"
+          />&gt;
+  - name: queryExtensionByVsixId(string, string, string, string)
+    uid: azure-devops-extension-api.GalleryRestClient.queryExtensionByVsixId
+    package: azure-devops-extension-api
+    summary: >-
+      Query a single VS extension by its VSIX ID, with optional filtering by
+      architecture, version range, and SKU.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryExtensionByVsixId(vsixId: string, arch?: string,
+        versionRange?: string, sku?: string): Promise<ExtensionQueryResult>
+      parameters:
+        - id: vsixId
+          type: string
+          description: The VSIX ID of the extension to query.
+        - id: arch
+          type: string
+          description: Architecture filter (e.g., "amd64", "arm64", "x86").
+        - id: versionRange
+          type: string
+          description: >-
+            Installation target version range formatted as "{min}-{max}". Either
+            bound may be omitted (e.g., "17.0-" or "-18.4").
+        - id: sku
+          type: string
+          description: VS SKU filter (e.g., "VisualStudio"). Defaults to broad match.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.ExtensionQueryResult"
           />&gt;
   - name: queryExtensions(ExtensionQuery, string, String)
     uid: azure-devops-extension-api.GalleryRestClient.queryExtensions

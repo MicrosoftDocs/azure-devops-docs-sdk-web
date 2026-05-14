@@ -31,10 +31,12 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'static RESOURCE_AREA_ID: string'
+      content: >-
+        static RESOURCE_AREA_ID: "965220d5-5bb9-42cf-8d67-9b146df2a5a4" =
+        "965220d5-5bb9-42cf-8d67-9b146df2a5a4"
       return:
         description: ''
-        type: string
+        type: '"965220d5-5bb9-42cf-8d67-9b146df2a5a4"'
 methods:
   - name: addBuildTag(string, number, string)
     uid: azure-devops-extension-api.BuildRestClient.addBuildTag
@@ -1110,6 +1112,69 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.BuildSettings" />&gt;
+  - name: getBuildStageLatestTimeline(string, number, string, number, string)
+    uid: azure-devops-extension-api.BuildRestClient.getBuildStageLatestTimeline
+    package: azure-devops-extension-api
+    summary: Gets the latest timeline for a build filtered to a specific stage.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getBuildStageLatestTimeline(project: string, buildId: number,
+        stageName: string, changeId?: number, planId?: string):
+        Promise<Timeline>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: buildId
+          type: number
+          description: The ID of the build.
+        - id: stageName
+          type: string
+          description: The name of the stage to filter by.
+        - id: changeId
+          type: number
+          description: The change ID to filter by.
+        - id: planId
+          type: string
+          description: The ID of the plan.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Timeline" />&gt;
+  - name: getBuildStageTimeline(string, number, string, string, number, string)
+    uid: azure-devops-extension-api.BuildRestClient.getBuildStageTimeline
+    package: azure-devops-extension-api
+    summary: Gets the timeline for a build filtered to a specific stage.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getBuildStageTimeline(project: string, buildId: number,
+        timelineId: string, stageName: string, changeId?: number, planId?:
+        string): Promise<Timeline>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: buildId
+          type: number
+          description: The ID of the build.
+        - id: timelineId
+          type: string
+          description: The ID of the timeline.
+        - id: stageName
+          type: string
+          description: The name of the stage to filter by.
+        - id: changeId
+          type: number
+          description: The change ID to filter by.
+        - id: planId
+          type: string
+          description: The ID of the plan.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Timeline" />&gt;
   - name: getBuildTags(string, number)
     uid: azure-devops-extension-api.BuildRestClient.getBuildTags
     package: azure-devops-extension-api
@@ -2502,7 +2567,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;string[]&gt;
-  - name: updateDefinition(BuildDefinition, string, number, number, number)
+  - name: updateDefinition(BuildDefinition, string, number, number, number, boolean)
     uid: azure-devops-extension-api.BuildRestClient.updateDefinition
     package: azure-devops-extension-api
     summary: >-
@@ -2517,7 +2582,8 @@ methods:
       content: >-
         function updateDefinition(definition: BuildDefinition, project: string,
         definitionId: number, secretsSourceDefinitionId?: number,
-        secretsSourceDefinitionRevision?: number): Promise<BuildDefinition>
+        secretsSourceDefinitionRevision?: number, cancelPausedBuilds?: boolean):
+        Promise<BuildDefinition>
       parameters:
         - id: definition
           type: <xref uid="azure-devops-extension-api.BuildDefinition" />
@@ -2532,10 +2598,15 @@ methods:
           description: The ID of the definition.
         - id: secretsSourceDefinitionId
           type: number
-          description: ''
+          description: Optional ID of the definition to use as the source for secrets.
         - id: secretsSourceDefinitionRevision
           type: number
-          description: ''
+          description: Optional revision of the secrets source definition.
+        - id: cancelPausedBuilds
+          type: boolean
+          description: >-
+            If true, cancels paused builds when the pipeline is being enabled
+            from a paused or disabled state.
       return:
         description: ''
         type: >-

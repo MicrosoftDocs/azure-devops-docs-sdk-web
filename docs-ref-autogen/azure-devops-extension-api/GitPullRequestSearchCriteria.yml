@@ -32,6 +32,20 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: labels
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.labels
+    package: azure-devops-extension-api
+    summary: >-
+      If set, filters pull requests that have labels matching the specified
+      label names.
+    fullName: labels
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'labels: string[]'
+      return:
+        description: ''
+        type: string[]
   - name: maxTime
     uid: azure-devops-extension-api.GitPullRequestSearchCriteria.maxTime
     package: azure-devops-extension-api
@@ -140,6 +154,21 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.PullRequestStatus" />
+  - name: tagsFilterOperator
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.tagsFilterOperator
+    package: azure-devops-extension-api
+    summary: >-
+      The operator used for filtering by labels. Defaults to And if unset. When
+      And is used, pull requests must have all specified labels. When Or is
+      used, pull requests must have at least one of the specified labels.
+    fullName: tagsFilterOperator
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tagsFilterOperator: TagsFilterOperator'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TagsFilterOperator" />
   - name: targetRefName
     uid: azure-devops-extension-api.GitPullRequestSearchCriteria.targetRefName
     package: azure-devops-extension-api

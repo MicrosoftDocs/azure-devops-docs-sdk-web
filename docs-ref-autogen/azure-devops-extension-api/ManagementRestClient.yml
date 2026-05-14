@@ -23,6 +23,19 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
+  - name: cancelCodeQLJobs()
+    uid: azure-devops-extension-api.ManagementRestClient.cancelCodeQLJobs
+    package: azure-devops-extension-api
+    summary: >-
+      Cancels all running and queued CodeQL jobs and in-flight Dynamic Pipeline
+      runs for the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function cancelCodeQLJobs(): Promise<number>'
+      return:
+        description: ''
+        type: Promise&lt;number&gt;
   - name: createBillingSnapshot2(MeterUsageForPlan, Plan)
     uid: azure-devops-extension-api.ManagementRestClient.createBillingSnapshot2
     package: azure-devops-extension-api
@@ -95,6 +108,49 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.BillableCommitterDetails" />[]&gt;
+  - name: getCodeQLJobCount()
+    uid: azure-devops-extension-api.ManagementRestClient.getCodeQLJobCount
+    package: azure-devops-extension-api
+    summary: >-
+      Gets the count of running and queued CodeQL jobs and in-flight Dynamic
+      Pipeline runs for the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeQLJobCount(): Promise<number>'
+      return:
+        description: ''
+        type: Promise&lt;number&gt;
+  - name: getCodeQLSchedule()
+    uid: azure-devops-extension-api.ManagementRestClient.getCodeQLSchedule
+    package: azure-devops-extension-api
+    summary: >-
+      Gets the current CodeQL default setup schedule configuration for the
+      organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeQLSchedule(): Promise<CodeQLScheduleDetails>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CodeQLScheduleDetails" />&gt;
+  - name: getCodeQLScheduleLegacy()
+    uid: azure-devops-extension-api.ManagementRestClient.getCodeQLScheduleLegacy
+    package: azure-devops-extension-api
+    summary: >-
+      Gets the current CodeQL default setup schedule configuration for the
+      organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeQLScheduleLegacy(): Promise<CodeQLScheduleDetails>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CodeQLScheduleDetails" />&gt;
   - name: getEstimatedBillableCommittersDetailsForRepo2(string, string, Plan)
     uid: >-
       azure-devops-extension-api.ManagementRestClient.getEstimatedBillableCommittersDetailsForRepo2
@@ -309,6 +365,48 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AgentPoolDetails"
           />&gt;
+  - name: updateCodeQLSchedule(number)
+    uid: azure-devops-extension-api.ManagementRestClient.updateCodeQLSchedule
+    package: azure-devops-extension-api
+    summary: >-
+      Sets the day of the week when the CodeQL default setup scan should run for
+      the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateCodeQLSchedule(scheduleDayOfWeek: number):
+        Promise<CodeQLScheduleDetails>
+      parameters:
+        - id: scheduleDayOfWeek
+          type: number
+          description: 'Day of week as an integer: 0=Sunday, 1=Monday, ..., 6=Saturday.'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CodeQLScheduleDetails" />&gt;
+  - name: updateCodeQLScheduleLegacy(number)
+    uid: azure-devops-extension-api.ManagementRestClient.updateCodeQLScheduleLegacy
+    package: azure-devops-extension-api
+    summary: >-
+      Sets the day of the week when the CodeQL default setup scan should run for
+      the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateCodeQLScheduleLegacy(scheduleDayOfWeek: number):
+        Promise<CodeQLScheduleDetails>
+      parameters:
+        - id: scheduleDayOfWeek
+          type: number
+          description: 'Day of week as an integer: 0=Sunday, 1=Monday, ..., 6=Saturday.'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CodeQLScheduleDetails" />&gt;
   - name: updateOrgEnablementStatus2(OrgEnablementSettings)
     uid: azure-devops-extension-api.ManagementRestClient.updateOrgEnablementStatus2
     package: azure-devops-extension-api

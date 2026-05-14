@@ -29,8 +29,6 @@ enums:
   - azure-devops-extension-api.ResultType
   - azure-devops-extension-api.SarifJobStatus
   - azure-devops-extension-api.ValidationResult
-  - azure-devops-extension-api.BoardItemBatchOperationTypeEnum
-  - azure-devops-extension-api.BoardTypeEnum
   - azure-devops-extension-api.AgentStatus
   - azure-devops-extension-api.AuditAction
   - azure-devops-extension-api.BuildAuthorizationScope
@@ -40,6 +38,7 @@ enums:
   - azure-devops-extension-api.BuildReason
   - azure-devops-extension-api.BuildResult
   - azure-devops-extension-api.BuildStatus
+  - azure-devops-extension-api.CommentTriggerOption
   - azure-devops-extension-api.ControllerStatus
   - azure-devops-extension-api.DefinitionQuality
   - azure-devops-extension-api.DefinitionQueryOrder
@@ -165,13 +164,13 @@ enums:
   - azure-devops-extension-api.ItemContentType
   - azure-devops-extension-api.IterationReason
   - azure-devops-extension-api.LineDiffBlockChangeType
-  - azure-devops-extension-api.MigrationStatus
   - azure-devops-extension-api.PullRequestAsyncStatus
   - azure-devops-extension-api.PullRequestMergeFailureType
   - azure-devops-extension-api.PullRequestStatus
   - azure-devops-extension-api.PullRequestTimeRangeType
   - azure-devops-extension-api.RefFavoriteType
   - azure-devops-extension-api.SupportedIdeType
+  - azure-devops-extension-api.TagsFilterOperator
   - azure-devops-extension-api.TfvcVersionOption
   - azure-devops-extension-api.TfvcVersionType
   - azure-devops-extension-api.VersionControlChangeType
@@ -457,6 +456,7 @@ interfaces:
   - azure-devops-extension-api.AnalysisConfigurationDetails
   - azure-devops-extension-api.AnalysisInstance
   - azure-devops-extension-api.AnalysisResult
+  - azure-devops-extension-api.AutofixRequest
   - azure-devops-extension-api.Branch
   - azure-devops-extension-api.Dependency
   - azure-devops-extension-api.DependencyResult
@@ -482,52 +482,6 @@ interfaces:
   - azure-devops-extension-api.VersionControlFilePath
   - azure-devops-extension-api.VersionControlResult
   - azure-devops-extension-api.VersionControlSnippet
-  - azure-devops-extension-api.Board
-  - azure-devops-extension-api.BoardColumn
-  - azure-devops-extension-api.BoardColumnBase
-  - azure-devops-extension-api.BoardColumnCollectionResponse
-  - azure-devops-extension-api.BoardColumnCreate
-  - azure-devops-extension-api.BoardColumnCreateList
-  - azure-devops-extension-api.BoardColumnCreatedRealtimeEvent
-  - azure-devops-extension-api.BoardColumnDeletedRealtimeEvent
-  - azure-devops-extension-api.BoardColumnResponse
-  - azure-devops-extension-api.BoardColumnUpdate
-  - azure-devops-extension-api.BoardColumnUpdatedRealtimeEvent
-  - azure-devops-extension-api.BoardItem
-  - azure-devops-extension-api.BoardItemAction
-  - azure-devops-extension-api.BoardItemActionCreate
-  - azure-devops-extension-api.BoardItemActionUpdate
-  - azure-devops-extension-api.BoardItemAddedRealtimeEvent
-  - azure-devops-extension-api.BoardItemBatchOperation
-  - azure-devops-extension-api.BoardItemCollectionResponse
-  - azure-devops-extension-api.BoardItemIdAndEtag
-  - azure-devops-extension-api.BoardItemMovedRealtimeEvent
-  - azure-devops-extension-api.BoardItemReference
-  - azure-devops-extension-api.BoardItemRemovedRealtimeEvent
-  - azure-devops-extension-api.BoardItemResponse
-  - azure-devops-extension-api.BoardItemSourceIdAndType
-  - azure-devops-extension-api.BoardItemStateSync
-  - azure-devops-extension-api.BoardItemStateSyncCreate
-  - azure-devops-extension-api.BoardItemStateSyncUpdate
-  - azure-devops-extension-api.BoardReference
-  - azure-devops-extension-api.BoardResponse
-  - azure-devops-extension-api.BoardRow
-  - azure-devops-extension-api.BoardRowBase
-  - azure-devops-extension-api.BoardRowCollectionResponse
-  - azure-devops-extension-api.BoardRowCreate
-  - azure-devops-extension-api.BoardRowCreateList
-  - azure-devops-extension-api.BoardRowResponse
-  - azure-devops-extension-api.BoardRowUpdate
-  - azure-devops-extension-api.CreateBoard
-  - azure-devops-extension-api.EntityReference
-  - azure-devops-extension-api.NewBoardItem
-  - azure-devops-extension-api.NoContentResponse
-  - azure-devops-extension-api.PredicateAndAction
-  - azure-devops-extension-api.RealtimeBoardEvent
-  - azure-devops-extension-api.SubTypeAndStateValue
-  - azure-devops-extension-api.UpdateBoard
-  - azure-devops-extension-api.UpdateBoardItem
-  - azure-devops-extension-api.UpdateBoardItemList
   - azure-devops-extension-api.AgentPoolQueue
   - azure-devops-extension-api.AgentPoolQueueReference
   - azure-devops-extension-api.AgentPoolQueueTarget
@@ -697,6 +651,7 @@ interfaces:
   - azure-devops-extension-api.INavigationElement
   - azure-devops-extension-api.IPageRoute
   - azure-devops-extension-api.IPanelOptions
+  - azure-devops-extension-api.IPanelResizeOptions
   - azure-devops-extension-api.IProjectInfo
   - azure-devops-extension-api.IProjectPageService
   - azure-devops-extension-api.IToast
@@ -957,7 +912,6 @@ interfaces:
   - azure-devops-extension-api.CommentThreadContext
   - azure-devops-extension-api.CommentTrackingCriteria
   - azure-devops-extension-api.CompletionErrorsEvent
-  - azure-devops-extension-api.CreateMigrationRequest
   - azure-devops-extension-api.DiscussionsUpdatedEvent
   - azure-devops-extension-api.FileContentMetadata
   - azure-devops-extension-api.FileDiff
@@ -1084,7 +1038,6 @@ interfaces:
   - azure-devops-extension-api.LineDiffBlock
   - azure-devops-extension-api.LineDiffBlockDetail
   - azure-devops-extension-api.MergeCompletedEvent
-  - azure-devops-extension-api.Migration
   - azure-devops-extension-api.PolicyEvaluationUpdatedEvent
   - azure-devops-extension-api.PullRequestCreatedEvent
   - azure-devops-extension-api.PullRequestTabExtensionConfig
@@ -1127,7 +1080,6 @@ interfaces:
   - azure-devops-extension-api.TfvcStatistics
   - azure-devops-extension-api.TfvcVersionDescriptor
   - azure-devops-extension-api.TitleDescriptionUpdatedEvent
-  - azure-devops-extension-api.UpdateMigrationRequest
   - azure-devops-extension-api.UpdateRefsRequest
   - azure-devops-extension-api.VersionControlProjectInfo
   - azure-devops-extension-api.IVersionControlRepositoryService
@@ -1217,6 +1169,7 @@ interfaces:
   - azure-devops-extension-api.BilledCommitter
   - azure-devops-extension-api.BilledCommittersList
   - azure-devops-extension-api.BulkEnablementSettingsBase
+  - azure-devops-extension-api.CodeQLScheduleDetails
   - azure-devops-extension-api.CodeSecurityFeatures
   - azure-devops-extension-api.EnablementOnCreateSettings
   - azure-devops-extension-api.MeterUsage
@@ -1848,6 +1801,9 @@ interfaces:
   - azure-devops-extension-api.NameValuePair
   - azure-devops-extension-api.NewTestResultLoggingSettings
   - azure-devops-extension-api.PhaseReference
+  - azure-devops-extension-api.PipelineDebuggerAnalysisOutput
+  - azure-devops-extension-api.PipelineDebuggerJobState
+  - azure-devops-extension-api.PipelineDebuggerResponse
   - azure-devops-extension-api.PipelineTestMetrics
   - azure-devops-extension-api.PlanUpdateModel
   - azure-devops-extension-api.PointAssignment
@@ -2146,12 +2102,16 @@ interfaces:
   - azure-devops-extension-api.BacklogLevel
   - azure-devops-extension-api.BacklogLevelConfiguration
   - azure-devops-extension-api.BacklogLevelWorkItems
+  - azure-devops-extension-api.Board
   - azure-devops-extension-api.BoardBadge
   - azure-devops-extension-api.BoardCardRuleSettings
   - azure-devops-extension-api.BoardCardSettings
   - azure-devops-extension-api.BoardChart
   - azure-devops-extension-api.BoardChartReference
+  - azure-devops-extension-api.BoardColumn
   - azure-devops-extension-api.BoardFields
+  - azure-devops-extension-api.BoardReference
+  - azure-devops-extension-api.BoardRow
   - azure-devops-extension-api.BoardSuggestedValue
   - azure-devops-extension-api.BoardUserSettings
   - azure-devops-extension-api.CapacityContractBase
@@ -2359,7 +2319,6 @@ classes:
   - azure-devops-extension-api.AccountsRestClient
   - azure-devops-extension-api.ReportingRestClient
   - azure-devops-extension-api.AlertRestClient
-  - azure-devops-extension-api.BoardsRestClient
   - azure-devops-extension-api.BuildRestClient
   - azure-devops-extension-api.RestClientBase
   - azure-devops-extension-api.Uri

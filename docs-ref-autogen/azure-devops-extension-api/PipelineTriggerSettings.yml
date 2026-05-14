@@ -46,6 +46,31 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: forkCommentOption
+    uid: azure-devops-extension-api.PipelineTriggerSettings.forkCommentOption
+    package: azure-devops-extension-api
+    summary: The comment trigger option for pull requests from forks.
+    fullName: forkCommentOption
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'forkCommentOption: CommentTriggerOption'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.CommentTriggerOption" />
+  - name: forkIsCommentRequiredForPullRequest
+    uid: >-
+      azure-devops-extension-api.PipelineTriggerSettings.forkIsCommentRequiredForPullRequest
+    package: azure-devops-extension-api
+    summary: Make comments required to have builds in pull requests from forks.
+    fullName: forkIsCommentRequiredForPullRequest
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'forkIsCommentRequiredForPullRequest: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: forkProtectionEnabled
     uid: azure-devops-extension-api.PipelineTriggerSettings.forkProtectionEnabled
     package: azure-devops-extension-api
@@ -60,11 +85,39 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: internalRepoCommentOption
+    uid: >-
+      azure-devops-extension-api.PipelineTriggerSettings.internalRepoCommentOption
+    package: azure-devops-extension-api
+    summary: The comment trigger option for repository-internal pull requests.
+    fullName: internalRepoCommentOption
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'internalRepoCommentOption: CommentTriggerOption'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.CommentTriggerOption" />
+  - name: internalRepoIsCommentRequiredForPullRequest
+    uid: >-
+      azure-devops-extension-api.PipelineTriggerSettings.internalRepoIsCommentRequiredForPullRequest
+    package: azure-devops-extension-api
+    summary: >-
+      Make comments required to have builds in repository-internal pull
+      requests.
+    fullName: internalRepoIsCommentRequiredForPullRequest
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'internalRepoIsCommentRequiredForPullRequest: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: isCommentRequiredForPullRequest
     uid: >-
       azure-devops-extension-api.PipelineTriggerSettings.isCommentRequiredForPullRequest
     package: azure-devops-extension-api
-    summary: Make comments required to have builds in all pull requests.
+    summary: '[Deprecated] Make comments required to have builds in all pull requests.'
     fullName: isCommentRequiredForPullRequest
     remarks: ''
     isDeprecated: false
@@ -78,8 +131,8 @@ properties:
       azure-devops-extension-api.PipelineTriggerSettings.requireCommentsForNonTeamMemberAndNonContributors
     package: azure-devops-extension-api
     summary: >-
-      Make comments required to have builds in pull requests from non-team
-      members and non-contributors.
+      [Deprecated] Make comments required to have builds in pull requests from
+      non-team members and non-contributors.
     fullName: requireCommentsForNonTeamMemberAndNonContributors
     remarks: ''
     isDeprecated: false
@@ -93,8 +146,8 @@ properties:
       azure-devops-extension-api.PipelineTriggerSettings.requireCommentsForNonTeamMembersOnly
     package: azure-devops-extension-api
     summary: >-
-      Make comments required to have builds in pull requests from non-team
-      members.
+      [Deprecated] Make comments required to have builds in pull requests from
+      non-team members.
     fullName: requireCommentsForNonTeamMembersOnly
     remarks: ''
     isDeprecated: false

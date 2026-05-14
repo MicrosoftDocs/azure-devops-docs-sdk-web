@@ -23,6 +23,31 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
+  - name: createAutofixRequest(string, number, string)
+    uid: azure-devops-extension-api.AlertRestClient.createAutofixRequest
+    package: azure-devops-extension-api
+    summary: Create an autofix request for the specified alert.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAutofixRequest(project: string, alertId: number,
+        repository: string): Promise<AutofixRequest>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: alertId
+          type: number
+          description: The ID of the alert to create an autofix for.
+        - id: repository
+          type: string
+          description: The name or ID of the repository.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AutofixRequest"
+          />&gt;
   - name: createLegalReview(string, string, number, string)
     uid: azure-devops-extension-api.AlertRestClient.createLegalReview
     package: azure-devops-extension-api
@@ -51,6 +76,81 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.LegalReview" />&gt;
+  - name: deleteAllPipelineAnalyses(string, string)
+    uid: azure-devops-extension-api.AlertRestClient.deleteAllPipelineAnalyses
+    package: azure-devops-extension-api
+    summary: >-
+      Soft-deletes analysis data for all pipelines in a repository, cleaning up
+      the associated Advanced Security alerts.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteAllPipelineAnalyses(project: string, repository: string):
+        Promise<void>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: deletePipelineAnalysis(string, string, number)
+    uid: azure-devops-extension-api.AlertRestClient.deletePipelineAnalysis
+    package: azure-devops-extension-api
+    summary: >-
+      Soft-deletes analysis data for a specific pipeline, cleaning up the
+      associated Advanced Security alerts.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deletePipelineAnalysis(project: string, repository: string,
+        adoPipelineId: number): Promise<void>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository.
+        - id: adoPipelineId
+          type: number
+          description: The ID of the ADO pipeline whose analysis data should be cleaned up.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: exportSarif(string, string, number[], string)
+    uid: azure-devops-extension-api.AlertRestClient.exportSarif
+    package: azure-devops-extension-api
+    summary: Export alerts as a single SARIF file
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function exportSarif(project: string, repository: string, alertIds:
+        number[], branchName?: string): Promise<any>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of a repository
+        - id: alertIds
+          type: number[]
+          description: List of alert IDs to export
+        - id: branchName
+          type: string
+          description: >-
+            The branch name of the target alerts. If not specified, the default
+            branch will be used.
+      return:
+        description: ''
+        type: Promise&lt;any&gt;
   - name: getAlert(string, number, string, string, ExpandOption)
     uid: azure-devops-extension-api.AlertRestClient.getAlert
     package: azure-devops-extension-api
@@ -514,4 +614,33 @@ methods:
       return:
         description: ''
         type: Promise&lt;number&gt;
+  - name: uploadSarifToGitHub(string, string, string, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.uploadSarifToGitHub
+    package: azure-devops-extension-api
+    summary: Upload a SARIF to GitHub Code Scanning via a GitOps app.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function uploadSarifToGitHub(content: string, project: string, hostname:
+        string, owner: string, repo: string): Promise<string>
+      parameters:
+        - id: content
+          type: string
+          description: Content to upload
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: hostname
+          type: string
+          description: The GitHub hostname (e.g., github.com or microsoft.ghe.com)
+        - id: owner
+          type: string
+          description: The GitHub repository owner (organization or user)
+        - id: repo
+          type: string
+          description: The GitHub repository name
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
 extends: <xref uid="azure-devops-extension-api.RestClientBase" />

@@ -31,10 +31,12 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'static RESOURCE_AREA_ID: string'
+      content: >-
+        static RESOURCE_AREA_ID: "c83eaf52-edf3-4034-ae11-17d38f25404c" =
+        "c83eaf52-edf3-4034-ae11-17d38f25404c"
       return:
         description: ''
-        type: string
+        type: '"c83eaf52-edf3-4034-ae11-17d38f25404c"'
 methods:
   - name: addCustomFields(CustomTestFieldDefinition[], string)
     uid: azure-devops-extension-api.TestResultsRestClient.addCustomFields
@@ -153,6 +155,30 @@ methods:
       return:
         description: ''
         type: Promise&lt;boolean&gt;
+  - name: completeGitHubAuth(string, string)
+    uid: azure-devops-extension-api.TestResultsRestClient.completeGitHubAuth
+    package: azure-devops-extension-api
+    summary: >-
+      OAuth callback endpoint. GitHub redirects here after user authorizes.
+      Exchanges the authorization code for tokens and stores them in TCM
+      StrongBox. Requires the callback URL to be registered in the GitHub OAuth
+      App settings.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function completeGitHubAuth(project: string, code: string):
+        Promise<string>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: code
+          type: string
+          description: The authorization code returned by GitHub after user consent
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
   - name: createAnalysis(TestSessionAnalysis[], string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.createAnalysis
     package: azure-devops-extension-api
@@ -788,7 +814,10 @@ methods:
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.generateTestPlanFromWorkItem
     package: azure-devops-extension-api
-    summary: Generates manual test plan from a work item using AI
+    summary: >-
+      Generates manual test plan from a work item using AI. If the user has no
+      valid Copilot token, returns needsAuth=true with an authUrl instead of
+      queuing the job.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -827,6 +856,31 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
+  - name: getAnalysisResult(string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.getAnalysisResult
+    package: azure-devops-extension-api
+    summary: >-
+      Retrieves the AI analysis result for a given build. Downloads the analysis
+      JSON from the TCM Log Store (Azure Blob Storage) where it was uploaded by
+      PipelineDebuggerJob upon completion.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAnalysisResult(project: string, buildId: number):
+        Promise<PipelineDebuggerResponse>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: buildId
+          type: number
+          description: Build ID that was analyzed
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.PipelineDebuggerResponse" />&gt;
   - name: getBranchesByFlakyTestCaseRefId(string, number)
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.getBranchesByFlakyTestCaseRefId
@@ -3370,6 +3424,28 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestSummaryForWorkItem" />[]&gt;
+  - name: queueAnalysisJob(string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.queueAnalysisJob
+    package: azure-devops-extension-api
+    summary: Queues a pipeline analysis job to analyze failed pipeline jobs using AI.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queueAnalysisJob(project: string, buildId: number):
+        Promise<PipelineDebuggerResponse>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: buildId
+          type: number
+          description: Build ID to analyze
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.PipelineDebuggerResponse" />&gt;
   - name: >-
       testLogStoreEndpointDetailsForBuild(string, number,
       TestLogStoreOperationType)
