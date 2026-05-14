@@ -1,0 +1,48 @@
+### YamlMime:TSType
+name: TimingGroup
+uid: azure-devops-extension-api.TimingGroup
+package: azure-devops-extension-api
+summary: A set of secured performance timings all keyed off of the same string
+fullName: TimingGroup
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: count
+    uid: azure-devops-extension-api.TimingGroup.count
+    package: azure-devops-extension-api
+    summary: The total number of timing entries associated with this group
+    fullName: count
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'count: number'
+      return:
+        description: ''
+        type: number
+  - name: elapsedTicks
+    uid: azure-devops-extension-api.TimingGroup.elapsedTicks
+    package: azure-devops-extension-api
+    summary: Overall duration of all entries in this group in ticks
+    fullName: elapsedTicks
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'elapsedTicks: number'
+      return:
+        description: ''
+        type: number
+  - name: timings
+    uid: azure-devops-extension-api.TimingGroup.timings
+    package: azure-devops-extension-api
+    summary: >-
+      A list of timing entries in this group. Only the first few entries in each
+      group are collected.
+    fullName: timings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timings: TimingEntry[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TimingEntry" />[]

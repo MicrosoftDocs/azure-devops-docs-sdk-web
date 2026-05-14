@@ -1,0 +1,355 @@
+### YamlMime:TSType
+name: SearchCriteria
+uid: azure-devops-extension-api.SearchCriteria
+package: azure-devops-extension-api
+summary: ''
+fullName: SearchCriteria
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: alertIds
+    uid: azure-devops-extension-api.SearchCriteria.alertIds
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts with the ids specified. \<br /\>Otherwise,
+      return any alert.
+    fullName: alertIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertIds: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: alertType
+    uid: azure-devops-extension-api.SearchCriteria.alertType
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts of this type. Otherwise, return alerts of
+      all types.
+    fullName: alertType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertType: AlertType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AlertType" />
+  - name: confidenceLevels
+    uid: azure-devops-extension-api.SearchCriteria.confidenceLevels
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts at these confidence levels. \<br /\>Both
+      High and Other need to be specified to fetch alerts of all confidence
+      levels. \<br /\>Otherwise, return alerts with high confidence level. \<br
+      /\>Only applicable for secret alerts.
+    fullName: confidenceLevels
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'confidenceLevels: Confidence[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Confidence" />[]
+  - name: dependencyName
+    uid: azure-devops-extension-api.SearchCriteria.dependencyName
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only alerts for this dependency are returned. \<br
+      /\>Otherwise, return alerts for all dependencies. \<br /\>In a sarif
+      submission, a dependency (or a component) is specified in
+      result.RelatedLocations[].logicalLocation. \<br /\>Not applicable for
+      secret alerts.
+    fullName: dependencyName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dependencyName: string'
+      return:
+        description: ''
+        type: string
+  - name: fromDate
+    uid: azure-devops-extension-api.SearchCriteria.fromDate
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts last seen after this date. \<br
+      /\>Otherwise return all alerts.
+    fullName: fromDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fromDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: hasLinkedWorkItems
+    uid: azure-devops-extension-api.SearchCriteria.hasLinkedWorkItems
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, filters alerts based on whether they have linked work items.
+      \<br /\>Set to "true" to return only alerts with linked work items. \<br
+      /\>Set to "false" to return only alerts without linked work items. \<br
+      /\>If not provided, returns all alerts regardless of linked work items.
+      \<br /\>Not applicable for secret and dependency scanning alerts.
+    fullName: hasLinkedWorkItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hasLinkedWorkItems: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isTriaged
+    uid: azure-devops-extension-api.SearchCriteria.isTriaged
+    package: azure-devops-extension-api
+    summary: >-
+      If provided with isTriaged, only return alerts that have been triaged.
+      \<br /\>Otherwise, return alerts regardless of triage status.
+    fullName: isTriaged
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isTriaged: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: keywords
+    uid: azure-devops-extension-api.SearchCriteria.keywords
+    package: azure-devops-extension-api
+    summary: If provided, only return alerts whose titles match this pattern.
+    fullName: keywords
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'keywords: string'
+      return:
+        description: ''
+        type: string
+  - name: licenseName
+    uid: azure-devops-extension-api.SearchCriteria.licenseName
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only alerts created for dependency with this license are
+      returned. \<br /\>Otherwise, return alerts for all licenses. \<br /\>In a
+      sarif submission, license for a dependency (or a component) is specified
+      in result.RelatedLocations[].logicalLocation.properties.license. \<br
+      /\>Not applicable for secret alerts.
+    fullName: licenseName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'licenseName: string'
+      return:
+        description: ''
+        type: string
+  - name: modifiedSince
+    uid: azure-devops-extension-api.SearchCriteria.modifiedSince
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts that were modified since this date. \<br
+      /\>Otherwise return all alerts.
+    fullName: modifiedSince
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'modifiedSince: Date'
+      return:
+        description: ''
+        type: Date
+  - name: onlyDefaultBranch
+    uid: azure-devops-extension-api.SearchCriteria.onlyDefaultBranch
+    package: azure-devops-extension-api
+    summary: >-
+      If true or not set, only return alerts found on the default branch of the
+      repository. \<br /\>If there have been no runs completed on the default
+      branch, the last run is used instead regardless of the branch used for
+      that run. If false, return alerts from all branches. \<br /\>This option
+      is ignored if ref is provided. \<br /\>Not applicable for secret alerts.
+    fullName: onlyDefaultBranch
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onlyDefaultBranch: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: phaseId
+    uid: azure-devops-extension-api.SearchCriteria.phaseId
+    package: azure-devops-extension-api
+    summary: >-
+      If provided with pipelineName, only return alerts detected in this
+      pipeline phase \<br /\>Otherwise, return alerts detected in all phases.
+      \<br /\>Not applicable for secret alerts.
+    fullName: phaseId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'phaseId: string'
+      return:
+        description: ''
+        type: string
+  - name: phaseName
+    uid: azure-devops-extension-api.SearchCriteria.phaseName
+    package: azure-devops-extension-api
+    summary: >-
+      If provided with pipelineName, only return alerts detected in this
+      pipeline phase \<br /\>Otherwise, return alerts detected in all phases.
+      \<br /\>Not applicable for secret alerts.
+    fullName: phaseName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'phaseName: string'
+      return:
+        description: ''
+        type: string
+  - name: pipelineId
+    uid: azure-devops-extension-api.SearchCriteria.pipelineId
+    package: azure-devops-extension-api
+    summary: >-
+      If provided with pipelineId, only return alerts detected in this pipeline
+      \<br /\>Otherwise, return alerts detected in all pipelines.
+    fullName: pipelineId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pipelineId: number'
+      return:
+        description: ''
+        type: number
+  - name: pipelineName
+    uid: azure-devops-extension-api.SearchCriteria.pipelineName
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts detected in this pipeline. \<br
+      /\>Otherwise, return alerts detected in all pipelines. \<br /\>Not
+      applicable for secret alerts.
+    fullName: pipelineName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pipelineName: string'
+      return:
+        description: ''
+        type: string
+  - name: ref
+    uid: azure-devops-extension-api.SearchCriteria.ref
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only include alerts for this ref. \<br /\>If not provided and
+      OnlyDefaultBranch is true, only include alerts found on the default branch
+      or last run branch if there is no analysis configuration for the default
+      branch. \<br /\>Otherwise, include alerts from all branches. \<br /\>Not
+      applicable for secret alerts.
+    fullName: ref
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ref: string'
+      return:
+        description: ''
+        type: string
+  - name: ruleId
+    uid: azure-devops-extension-api.SearchCriteria.ruleId
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts for this rule. \<br /\>Otherwise, return
+      alerts of all rules.
+    fullName: ruleId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ruleId: string'
+      return:
+        description: ''
+        type: string
+  - name: ruleName
+    uid: azure-devops-extension-api.SearchCriteria.ruleName
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts for this rule. \<br /\>Otherwise, return
+      alerts for all rules.
+    fullName: ruleName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ruleName: string'
+      return:
+        description: ''
+        type: string
+  - name: severities
+    uid: azure-devops-extension-api.SearchCriteria.severities
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts at these severities. \<br /\>Otherwise,
+      return alerts at any severity.
+    fullName: severities
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'severities: Severity[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Severity" />[]
+  - name: states
+    uid: azure-devops-extension-api.SearchCriteria.states
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts in these states. \<br /\>Otherwise, return
+      alerts in any state.
+    fullName: states
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'states: State[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.State" />[]
+  - name: toDate
+    uid: azure-devops-extension-api.SearchCriteria.toDate
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts last seen before this date. \<br
+      /\>Otherwise return all alerts.
+    fullName: toDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'toDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: toolName
+    uid: azure-devops-extension-api.SearchCriteria.toolName
+    package: azure-devops-extension-api
+    summary: >-
+      If provided with toolName, only return alerts detected by this tool. \<br
+      /\>Otherwise, return alerts detected by all tools.
+    fullName: toolName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'toolName: string'
+      return:
+        description: ''
+        type: string
+  - name: validity
+    uid: azure-devops-extension-api.SearchCriteria.validity
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts with the validity specified here. If the
+      validity status is Unknown, fetch alerts of all validity results. \<br
+      /\>Only applicable for secret alerts. \<br /\>Filtering by validity status
+      may cause less alerts to be returned than requested with TOP parameter.
+      \<br /\>Due to this behavior, the ContinuationToken(\<![CDATA[\<header
+      name\>]]\>) in the response header should be relied on to decide if
+      another batch needs to be fetched.
+    fullName: validity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'validity: AlertValidityStatus[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AlertValidityStatus" />[]

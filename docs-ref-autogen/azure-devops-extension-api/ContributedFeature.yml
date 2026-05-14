@@ -1,0 +1,184 @@
+### YamlMime:TSType
+name: ContributedFeature
+uid: azure-devops-extension-api.ContributedFeature
+package: azure-devops-extension-api
+summary: A feature that can be enabled or disabled
+fullName: ContributedFeature
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: defaultState
+    uid: azure-devops-extension-api.ContributedFeature.defaultState
+    package: azure-devops-extension-api
+    summary: If true, the feature is enabled unless overridden at some scope
+    fullName: defaultState
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'defaultState: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: defaultValueRules
+    uid: azure-devops-extension-api.ContributedFeature.defaultValueRules
+    package: azure-devops-extension-api
+    summary: >-
+      Rules for setting the default value if not specified by any setting/scope.
+      Evaluated in order until a rule returns an Enabled or Disabled state (not
+      Undefined)
+    fullName: defaultValueRules
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'defaultValueRules: ContributedFeatureValueRule[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.ContributedFeatureValueRule"
+          />[]
+  - name: description
+    uid: azure-devops-extension-api.ContributedFeature.description
+    package: azure-devops-extension-api
+    summary: The description of the feature
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+  - name: featureProperties
+    uid: azure-devops-extension-api.ContributedFeature.featureProperties
+    package: azure-devops-extension-api
+    summary: Extra properties for the feature
+    fullName: featureProperties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'featureProperties: {[key: string]: any}'
+      return:
+        description: ''
+        type: '{[key: string]: any}'
+  - name: featureStateChangedListeners
+    uid: azure-devops-extension-api.ContributedFeature.featureStateChangedListeners
+    package: azure-devops-extension-api
+    summary: >-
+      Handler for listening to setter calls on feature value. These listeners
+      are only invoked after a successful set has occurred
+    fullName: featureStateChangedListeners
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'featureStateChangedListeners: ContributedFeatureListener[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ContributedFeatureListener" />[]
+  - name: id
+    uid: azure-devops-extension-api.ContributedFeature.id
+    package: azure-devops-extension-api
+    summary: The full contribution id of the feature
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: includeAsClaim
+    uid: azure-devops-extension-api.ContributedFeature.includeAsClaim
+    package: azure-devops-extension-api
+    summary: >-
+      If this is set to true, then the id for this feature will be added to the
+      list of claims for the request.
+    fullName: includeAsClaim
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeAsClaim: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: name
+    uid: azure-devops-extension-api.ContributedFeature.name
+    package: azure-devops-extension-api
+    summary: The friendly name of the feature
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: order
+    uid: azure-devops-extension-api.ContributedFeature.order
+    package: azure-devops-extension-api
+    summary: Suggested order to display feature in.
+    fullName: order
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'order: number'
+      return:
+        description: ''
+        type: number
+  - name: overrideRules
+    uid: azure-devops-extension-api.ContributedFeature.overrideRules
+    package: azure-devops-extension-api
+    summary: >-
+      Rules for overriding a feature value. These rules are run before explicit
+      user/host state values are checked. They are evaluated in order until a
+      rule returns an Enabled or Disabled state (not Undefined)
+    fullName: overrideRules
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'overrideRules: ContributedFeatureValueRule[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.ContributedFeatureValueRule"
+          />[]
+  - name: scopes
+    uid: azure-devops-extension-api.ContributedFeature.scopes
+    package: azure-devops-extension-api
+    summary: >-
+      The scopes/levels at which settings can set the enabled/disabled state of
+      this feature
+    fullName: scopes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scopes: ContributedFeatureSettingScope[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.ContributedFeatureSettingScope"
+          />[]
+  - name: serviceInstanceType
+    uid: azure-devops-extension-api.ContributedFeature.serviceInstanceType
+    package: azure-devops-extension-api
+    summary: The service instance id of the service that owns this feature
+    fullName: serviceInstanceType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'serviceInstanceType: string'
+      return:
+        description: ''
+        type: string
+  - name: tags
+    uid: azure-devops-extension-api.ContributedFeature.tags
+    package: azure-devops-extension-api
+    summary: Tags associated with the feature.
+    fullName: tags
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tags: string[]'
+      return:
+        description: ''
+        type: string[]

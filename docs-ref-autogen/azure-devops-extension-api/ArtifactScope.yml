@@ -1,0 +1,54 @@
+### YamlMime:TSType
+name: ArtifactScope
+uid: azure-devops-extension-api.ArtifactScope
+package: azure-devops-extension-api
+summary: Describes the scope a favorited Artifact resides in. e.g. A team project.
+fullName: ArtifactScope
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.ArtifactScope.id
+    package: azure-devops-extension-api
+    summary: >-
+      The identifier of the scope the artifact resides in. For a TFS Project,
+      this refers to the Project GUID string. For a Collection, marked this
+      property with an empty string.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: name
+    uid: azure-devops-extension-api.ArtifactScope.name
+    package: azure-devops-extension-api
+    summary: >-
+      Name of the artifact scope (e.g. Project Name)  Note: This property is a
+      read-only extension over the stored favorite model. This value cannot be
+      overridden on writes.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: type
+    uid: azure-devops-extension-api.ArtifactScope.type
+    package: azure-devops-extension-api
+    summary: >-
+      Type of scope the favorite artifact resides in. Known scopes include
+      "Project" or "Collection"
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string

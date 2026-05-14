@@ -1,0 +1,145 @@
+### YamlMime:TSType
+name: GitPullRequestCompletionOptions
+uid: azure-devops-extension-api.GitPullRequestCompletionOptions
+package: azure-devops-extension-api
+summary: Preferences about how the pull request should be completed.
+fullName: GitPullRequestCompletionOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: autoCompleteIgnoreConfigIds
+    uid: >-
+      azure-devops-extension-api.GitPullRequestCompletionOptions.autoCompleteIgnoreConfigIds
+    package: azure-devops-extension-api
+    summary: >-
+      List of any policy configuration Id's which auto-complete should not wait
+      for. Only applies to optional policies (isBlocking == false).
+      Auto-complete always waits for required policies (isBlocking == true).
+    fullName: autoCompleteIgnoreConfigIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autoCompleteIgnoreConfigIds: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: bypassPolicy
+    uid: azure-devops-extension-api.GitPullRequestCompletionOptions.bypassPolicy
+    package: azure-devops-extension-api
+    summary: >-
+      If true, policies will be explicitly bypassed while the pull request is
+      completed.
+    fullName: bypassPolicy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bypassPolicy: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: bypassReason
+    uid: azure-devops-extension-api.GitPullRequestCompletionOptions.bypassReason
+    package: azure-devops-extension-api
+    summary: If policies are bypassed, this reason is stored as to why bypass was used.
+    fullName: bypassReason
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bypassReason: string'
+      return:
+        description: ''
+        type: string
+  - name: deleteSourceBranch
+    uid: >-
+      azure-devops-extension-api.GitPullRequestCompletionOptions.deleteSourceBranch
+    package: azure-devops-extension-api
+    summary: >-
+      If true, the source branch of the pull request will be deleted after
+      completion.
+    fullName: deleteSourceBranch
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'deleteSourceBranch: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: mergeCommitMessage
+    uid: >-
+      azure-devops-extension-api.GitPullRequestCompletionOptions.mergeCommitMessage
+    package: azure-devops-extension-api
+    summary: If set, this will be used as the commit message of the merge commit.
+    fullName: mergeCommitMessage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mergeCommitMessage: string'
+      return:
+        description: ''
+        type: string
+  - name: mergeStrategy
+    uid: azure-devops-extension-api.GitPullRequestCompletionOptions.mergeStrategy
+    package: azure-devops-extension-api
+    summary: >-
+      Specify the strategy used to merge the pull request during completion. If
+      MergeStrategy is not set to any value, the service selects the first merge
+      strategy not prohibited by the target branch’s policy. If the limit merge
+      type policy is not configured, the default is noFastForward unless the
+      deprecated SquashMerge is true, in which case the default is squash. If an
+      explicit value is provided for MergeStrategy, the SquashMerge property
+      will be ignored.
+    fullName: mergeStrategy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mergeStrategy: GitPullRequestMergeStrategy'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitPullRequestMergeStrategy" />
+  - name: squashMerge
+    uid: azure-devops-extension-api.GitPullRequestCompletionOptions.squashMerge
+    package: azure-devops-extension-api
+    summary: >-
+      SquashMerge is deprecated. You should explicitly set the value of
+      MergeStrategy. This flag is only used when MergeStrategy is not specified
+      and the target branch has no merge-strategy policy configured. In all
+      other cases it is ignored.
+    fullName: squashMerge
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'squashMerge: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: transitionWorkItems
+    uid: >-
+      azure-devops-extension-api.GitPullRequestCompletionOptions.transitionWorkItems
+    package: azure-devops-extension-api
+    summary: >-
+      If true, we will attempt to transition any work items linked to the pull
+      request into the next logical state (i.e. Active -\> Resolved)
+    fullName: transitionWorkItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'transitionWorkItems: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: triggeredByAutoComplete
+    uid: >-
+      azure-devops-extension-api.GitPullRequestCompletionOptions.triggeredByAutoComplete
+    package: azure-devops-extension-api
+    summary: >-
+      If true, the current completion attempt was triggered via auto-complete.
+      Used internally.
+    fullName: triggeredByAutoComplete
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'triggeredByAutoComplete: boolean'
+      return:
+        description: ''
+        type: boolean

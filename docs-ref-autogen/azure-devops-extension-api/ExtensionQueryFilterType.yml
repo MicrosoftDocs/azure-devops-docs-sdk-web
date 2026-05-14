@@ -1,0 +1,196 @@
+### YamlMime:TSEnum
+name: ExtensionQueryFilterType
+uid: azure-devops-extension-api.ExtensionQueryFilterType
+package: azure-devops-extension-api
+summary: Type of extension filters that are supported in the queries.
+fullName: ExtensionQueryFilterType
+remarks: ''
+isDeprecated: false
+fields:
+  - name: Tag
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.Tag
+    package: azure-devops-extension-api
+    summary: >-
+      The values are used as tags. All tags are treated as "OR" conditions with
+      each other. There may be some value put on the number of matched tags from
+      the query.
+    numericValue: 1
+  - name: DisplayName
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.DisplayName
+    package: azure-devops-extension-api
+    summary: >-
+      The Values are an ExtensionName or fragment that is used to match other
+      extension names.
+    numericValue: 2
+  - name: Private
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.Private
+    package: azure-devops-extension-api
+    summary: >-
+      The Filter is one or more tokens that define what scope to return private
+      extensions for.
+    numericValue: 3
+  - name: Id
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.Id
+    package: azure-devops-extension-api
+    summary: >-
+      Retrieve a set of extensions based on their id's. The values should be the
+      extension id's encoded as strings.
+    numericValue: 4
+  - name: Category
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.Category
+    package: azure-devops-extension-api
+    summary: >-
+      The category is unlike other filters. It is AND'd with the other filters
+      instead of being a separate query.
+    numericValue: 5
+  - name: ContributionType
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.ContributionType
+    package: azure-devops-extension-api
+    summary: >-
+      Certain contribution types may be indexed to allow for query by type. User
+      defined types can't be indexed at the moment.
+    numericValue: 6
+  - name: Name
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.Name
+    package: azure-devops-extension-api
+    summary: >-
+      Retrieve an set extension based on the name based identifier. This differs
+      from the internal id (which is being deprecated).
+    numericValue: 7
+  - name: InstallationTarget
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.InstallationTarget
+    package: azure-devops-extension-api
+    summary: >-
+      The InstallationTarget for an extension defines the target consumer for
+      the extension. This may be something like VS, VSOnline, or VSCode
+    numericValue: 8
+  - name: Featured
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.Featured
+    package: azure-devops-extension-api
+    summary: >-
+      Query for featured extensions, no value is allowed when using the query
+      type.
+    numericValue: 9
+  - name: SearchText
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.SearchText
+    package: azure-devops-extension-api
+    summary: The SearchText provided by the user to search for extensions
+    numericValue: 10
+  - name: FeaturedInCategory
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.FeaturedInCategory
+    package: azure-devops-extension-api
+    summary: >-
+      Query for extensions that are featured in their own category, The
+      filterValue for this is name of category of extensions.
+    numericValue: 11
+  - name: ExcludeWithFlags
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.ExcludeWithFlags
+    package: azure-devops-extension-api
+    summary: >-
+      When retrieving extensions from a query, exclude the extensions which are
+      having the given flags. The value specified for this filter should be a
+      string representing the integer values of the flags to be excluded. In
+      case of multiple flags to be specified, a logical OR of the interger
+      values should be given as value for this filter This should be at most one
+      filter of this type. This only acts as a restrictive filter after. In case
+      of having a particular flag in both IncludeWithFlags and ExcludeWithFlags,
+      excludeFlags will remove the included extensions giving empty result for
+      that flag.
+    numericValue: 12
+  - name: IncludeWithFlags
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.IncludeWithFlags
+    package: azure-devops-extension-api
+    summary: >-
+      When retrieving extensions from a query, include the extensions which are
+      having the given flags. The value specified for this filter should be a
+      string representing the integer values of the flags to be included. In
+      case of multiple flags to be specified, a logical OR of the integer values
+      should be given as value for this filter This should be at most one filter
+      of this type. This only acts as a restrictive filter after. In case of
+      having a particular flag in both IncludeWithFlags and ExcludeWithFlags,
+      excludeFlags will remove the included extensions giving empty result for
+      that flag. In case of multiple flags given in IncludeWithFlags in ORed
+      fashion, extensions having any of the given flags will be included.
+    numericValue: 13
+  - name: Lcid
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.Lcid
+    package: azure-devops-extension-api
+    summary: >-
+      Filter the extensions based on the LCID values applicable. Any extensions
+      which are not having any LCID values will also be filtered. This is
+      currently only supported for VS extensions.
+    numericValue: 14
+  - name: InstallationTargetVersion
+    uid: >-
+      azure-devops-extension-api.ExtensionQueryFilterType.InstallationTargetVersion
+    package: azure-devops-extension-api
+    summary: >-
+      Filter to provide the version of the installation target. This filter will
+      be used along with InstallationTarget filter. The value should be a valid
+      version string. Currently supported only if search text is provided.
+    numericValue: 15
+  - name: InstallationTargetVersionRange
+    uid: >-
+      azure-devops-extension-api.ExtensionQueryFilterType.InstallationTargetVersionRange
+    package: azure-devops-extension-api
+    summary: >-
+      Filter type for specifying a range of installation target version. The
+      filter will be used along with InstallationTarget filter. The value should
+      be a pair of well formed version values separated by hyphen(-). Currently
+      supported only if search text is provided.
+    numericValue: 16
+  - name: VsixMetadata
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.VsixMetadata
+    package: azure-devops-extension-api
+    summary: >-
+      Filter type for specifying metadata key and value to be used for
+      filtering.
+    numericValue: 17
+  - name: PublisherName
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.PublisherName
+    package: azure-devops-extension-api
+    summary: >-
+      Filter to get extensions published by a publisher having supplied internal
+      name
+    numericValue: 18
+  - name: PublisherDisplayName
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.PublisherDisplayName
+    package: azure-devops-extension-api
+    summary: >-
+      Filter to get extensions published by all publishers having supplied
+      display name
+    numericValue: 19
+  - name: IncludeWithPublisherFlags
+    uid: >-
+      azure-devops-extension-api.ExtensionQueryFilterType.IncludeWithPublisherFlags
+    package: azure-devops-extension-api
+    summary: >-
+      When retrieving extensions from a query, include the extensions which have
+      a publisher having the given flags. The value specified for this filter
+      should be a string representing the integer values of the flags to be
+      included. In case of multiple flags to be specified, a logical OR of the
+      integer values should be given as value for this filter There should be at
+      most one filter of this type. This only acts as a restrictive filter
+      after. In case of multiple flags given in IncludeWithFlags in ORed
+      fashion, extensions having any of the given flags will be included.
+    numericValue: 20
+  - name: OrganizationSharedWith
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.OrganizationSharedWith
+    package: azure-devops-extension-api
+    summary: Filter to get extensions shared with particular organization
+    numericValue: 21
+  - name: ProductArchitecture
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.ProductArchitecture
+    package: azure-devops-extension-api
+    summary: Filter to get VS IDE extensions by Product Architecture
+    numericValue: 22
+  - name: TargetPlatform
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.TargetPlatform
+    package: azure-devops-extension-api
+    summary: Filter to get VS Code extensions by target platform.
+    numericValue: 23
+  - name: ExtensionName
+    uid: azure-devops-extension-api.ExtensionQueryFilterType.ExtensionName
+    package: azure-devops-extension-api
+    summary: Retrieve an extension based on the extensionName.
+    numericValue: 24

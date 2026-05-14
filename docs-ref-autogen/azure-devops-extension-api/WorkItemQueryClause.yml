@@ -1,0 +1,96 @@
+### YamlMime:TSType
+name: WorkItemQueryClause
+uid: azure-devops-extension-api.WorkItemQueryClause
+package: azure-devops-extension-api
+summary: >-
+  Represents a clause in a work item query. This shows the structure of a work
+  item query.
+fullName: WorkItemQueryClause
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: clauses
+    uid: azure-devops-extension-api.WorkItemQueryClause.clauses
+    package: azure-devops-extension-api
+    summary: Child clauses if the current clause is a logical operator
+    fullName: clauses
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clauses: WorkItemQueryClause[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WorkItemQueryClause" />[]
+  - name: field
+    uid: azure-devops-extension-api.WorkItemQueryClause.field
+    package: azure-devops-extension-api
+    summary: Field associated with condition
+    fullName: field
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'field: WorkItemFieldReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WorkItemFieldReference" />
+  - name: fieldValue
+    uid: azure-devops-extension-api.WorkItemQueryClause.fieldValue
+    package: azure-devops-extension-api
+    summary: Right side of the condition when a field to field comparison
+    fullName: fieldValue
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fieldValue: WorkItemFieldReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WorkItemFieldReference" />
+  - name: isFieldValue
+    uid: azure-devops-extension-api.WorkItemQueryClause.isFieldValue
+    package: azure-devops-extension-api
+    summary: Determines if this is a field to field comparison
+    fullName: isFieldValue
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isFieldValue: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: logicalOperator
+    uid: azure-devops-extension-api.WorkItemQueryClause.logicalOperator
+    package: azure-devops-extension-api
+    summary: Logical operator separating the condition clause
+    fullName: logicalOperator
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'logicalOperator: LogicalOperation'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.LogicalOperation" />
+  - name: operator
+    uid: azure-devops-extension-api.WorkItemQueryClause.operator
+    package: azure-devops-extension-api
+    summary: The field operator
+    fullName: operator
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'operator: WorkItemFieldOperation'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WorkItemFieldOperation" />
+  - name: value
+    uid: azure-devops-extension-api.WorkItemQueryClause.value
+    package: azure-devops-extension-api
+    summary: Right side of the condition when a field to value comparison
+    fullName: value
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'value: string'
+      return:
+        description: ''
+        type: string

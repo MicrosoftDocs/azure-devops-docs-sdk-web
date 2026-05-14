@@ -1,0 +1,99 @@
+### YamlMime:TSType
+name: IWidget
+uid: azure-devops-extension-api.IWidget
+package: azure-devops-extension-api
+summary: All widgets implement this interface
+fullName: IWidget
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: disableWidgetForStakeholders
+    uid: azure-devops-extension-api.IWidget.disableWidgetForStakeholders
+    package: azure-devops-extension-api
+    summary: >-
+      The framework calls this method to determine if the widget should be
+      disabled for users with stakeholder license
+    fullName: disableWidgetForStakeholders
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        disableWidgetForStakeholders?: (widgetSettings: WidgetSettings) =>
+        Promise<boolean>
+      return:
+        description: ''
+        type: '(widgetSettings: WidgetSettings) =&gt; Promise&lt;boolean&gt;'
+  - name: lightbox
+    uid: azure-devops-extension-api.IWidget.lightbox
+    package: azure-devops-extension-api
+    summary: Run widget in lightboxed mode
+    fullName: lightbox
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        lightbox?: (widgetSettings: WidgetSettings, lightboxSize: Size) =>
+        Promise<WidgetStatus>
+      return:
+        description: ''
+        type: >-
+          (widgetSettings: WidgetSettings, lightboxSize: Size) =&gt;
+          Promise&lt;WidgetStatus&gt;
+  - name: listen
+    uid: azure-devops-extension-api.IWidget.listen
+    package: azure-devops-extension-api
+    summary: Listen to message from host
+    fullName: listen
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'listen?: (event: string, eventArgs: EventArgs<T>) => void'
+      return:
+        description: ''
+        type: '(event: string, eventArgs: EventArgs&lt;T&gt;) =&gt; void'
+  - name: load
+    uid: azure-devops-extension-api.IWidget.load
+    package: azure-devops-extension-api
+    summary: >-
+      Widgets use the settings provided as well as server side calls to complete
+      their rendering experience.
+       In the future, widgets are expected to provide a loading experience while the calls are being waited to be completed.
+       Until then, the widget host will provide the loading experience
+    fullName: load
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'load: (widgetSettings: WidgetSettings) => Promise<WidgetStatus>'
+      return:
+        description: ''
+        type: '(widgetSettings: WidgetSettings) =&gt; Promise&lt;WidgetStatus&gt;'
+  - name: onDashboardLoaded
+    uid: azure-devops-extension-api.IWidget.onDashboardLoaded
+    package: azure-devops-extension-api
+    summary: >-
+      Widgets manage any operations that are not necessary for initial load but
+      are required for the full widget experience.
+    fullName: onDashboardLoaded
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onDashboardLoaded?: () => void'
+      return:
+        description: ''
+        type: () =&gt; void
+  - name: preload
+    uid: azure-devops-extension-api.IWidget.preload
+    package: azure-devops-extension-api
+    summary: >-
+      widgets use the settings provided along with the any cached data they may
+      have to paint an interactive state. No network calls should be made by the
+      widget.
+    fullName: preload
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'preload: (widgetSettings: WidgetSettings) => Promise<WidgetStatus>'
+      return:
+        description: ''
+        type: '(widgetSettings: WidgetSettings) =&gt; Promise&lt;WidgetStatus&gt;'

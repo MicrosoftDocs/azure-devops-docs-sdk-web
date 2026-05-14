@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: GitHubConnectionCreateResponse
+uid: azure-devops-extension-api.GitHubConnectionCreateResponse
+package: azure-devops-extension-api
+summary: Response model for GitHub connection creation
+fullName: GitHubConnectionCreateResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: connection
+    uid: azure-devops-extension-api.GitHubConnectionCreateResponse.connection
+    package: azure-devops-extension-api
+    summary: The created GitHub connection
+    fullName: connection
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'connection: GitHubConnectionModel'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitHubConnectionModel" />
+  - name: repositoryResults
+    uid: >-
+      azure-devops-extension-api.GitHubConnectionCreateResponse.repositoryResults
+    package: azure-devops-extension-api
+    summary: >-
+      Results for each repository that was attempted to be added to the
+      connection. Includes repository URL and any error messages.
+    fullName: repositoryResults
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryResults: GitHubConnectionRepoModel[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitHubConnectionRepoModel" />[]
+  - name: serviceEndpointId
+    uid: >-
+      azure-devops-extension-api.GitHubConnectionCreateResponse.serviceEndpointId
+    package: azure-devops-extension-api
+    summary: The ID of the ServiceEndpoint that was used for this connection
+    fullName: serviceEndpointId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'serviceEndpointId: string'
+      return:
+        description: ''
+        type: string

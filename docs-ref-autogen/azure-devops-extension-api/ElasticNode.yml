@@ -1,0 +1,144 @@
+### YamlMime:TSType
+name: ElasticNode
+uid: azure-devops-extension-api.ElasticNode
+package: azure-devops-extension-api
+summary: Data and settings for an elastic node
+fullName: ElasticNode
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: agentId
+    uid: azure-devops-extension-api.ElasticNode.agentId
+    package: azure-devops-extension-api
+    summary: Distributed Task's Agent Id
+    fullName: agentId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'agentId: number'
+      return:
+        description: ''
+        type: number
+  - name: agentState
+    uid: azure-devops-extension-api.ElasticNode.agentState
+    package: azure-devops-extension-api
+    summary: Summary of the state of the agent
+    fullName: agentState
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'agentState: ElasticAgentState'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ElasticAgentState" />
+  - name: computeId
+    uid: azure-devops-extension-api.ElasticNode.computeId
+    package: azure-devops-extension-api
+    summary: Compute Id.  VMSS's InstanceId
+    fullName: computeId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'computeId: string'
+      return:
+        description: ''
+        type: string
+  - name: computeState
+    uid: azure-devops-extension-api.ElasticNode.computeState
+    package: azure-devops-extension-api
+    summary: State of the compute host
+    fullName: computeState
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'computeState: ElasticComputeState'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ElasticComputeState" />
+  - name: desiredState
+    uid: azure-devops-extension-api.ElasticNode.desiredState
+    package: azure-devops-extension-api
+    summary: >-
+      Users can force state changes to specific states (ToReimage, ToDelete,
+      Save)
+    fullName: desiredState
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'desiredState: ElasticNodeState'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ElasticNodeState" />
+  - name: id
+    uid: azure-devops-extension-api.ElasticNode.id
+    package: azure-devops-extension-api
+    summary: Unique identifier since the agent and/or VM may be null
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: name
+    uid: azure-devops-extension-api.ElasticNode.name
+    package: azure-devops-extension-api
+    summary: Computer name. Used to match a scaleset VM with an agent
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: poolId
+    uid: azure-devops-extension-api.ElasticNode.poolId
+    package: azure-devops-extension-api
+    summary: Pool Id that this node belongs to
+    fullName: poolId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'poolId: number'
+      return:
+        description: ''
+        type: number
+  - name: requestId
+    uid: azure-devops-extension-api.ElasticNode.requestId
+    package: azure-devops-extension-api
+    summary: Last job RequestId assigned to this agent
+    fullName: requestId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'requestId: number'
+      return:
+        description: ''
+        type: number
+  - name: state
+    uid: azure-devops-extension-api.ElasticNode.state
+    package: azure-devops-extension-api
+    summary: State of the ElasticNode
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: ElasticNodeState'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ElasticNodeState" />
+  - name: stateChangedOn
+    uid: azure-devops-extension-api.ElasticNode.stateChangedOn
+    package: azure-devops-extension-api
+    summary: Last state change. Only updated by SQL.
+    fullName: stateChangedOn
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateChangedOn: Date'
+      return:
+        description: ''
+        type: Date

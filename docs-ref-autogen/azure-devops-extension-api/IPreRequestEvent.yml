@@ -1,0 +1,60 @@
+### YamlMime:TSType
+name: IPreRequestEvent
+uid: azure-devops-extension-api.IPreRequestEvent
+package: azure-devops-extension-api
+summary: An IPreRequestEvent is sent before a fetch request is made.
+fullName: IPreRequestEvent
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: options
+    uid: azure-devops-extension-api.IPreRequestEvent.options
+    package: azure-devops-extension-api
+    summary: Request settings being used
+    fullName: options
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'options?: RequestInit'
+      return:
+        description: ''
+        type: RequestInit
+  - name: requestId
+    uid: azure-devops-extension-api.IPreRequestEvent.requestId
+    package: azure-devops-extension-api
+    summary: >-
+      A unique id that can be used to track this particular request (id is
+      unique among all clients)
+    fullName: requestId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'requestId: number'
+      return:
+        description: ''
+        type: number
+  - name: requestUrl
+    uid: azure-devops-extension-api.IPreRequestEvent.requestUrl
+    package: azure-devops-extension-api
+    summary: Url of the request that is about to be issued
+    fullName: requestUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'requestUrl: string'
+      return:
+        description: ''
+        type: string
+  - name: vssRequestOptions
+    uid: azure-devops-extension-api.IPreRequestEvent.vssRequestOptions
+    package: azure-devops-extension-api
+    summary: Additional VSS-specific options supplied in the request
+    fullName: vssRequestOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'vssRequestOptions?: IVssRequestOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IVssRequestOptions" />

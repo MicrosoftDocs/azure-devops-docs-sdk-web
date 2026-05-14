@@ -1,0 +1,65 @@
+### YamlMime:TSType
+name: IParsedRouteSegment
+uid: azure-devops-extension-api.IParsedRouteSegment
+package: azure-devops-extension-api
+summary: And individual segment of the route (fixed text or a parameter)
+fullName: IParsedRouteSegment
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: isRequiredParam
+    uid: azure-devops-extension-api.IParsedRouteSegment.isRequiredParam
+    package: azure-devops-extension-api
+    summary: Whether the parameter is required in order for the URL to be valid.
+    fullName: isRequiredParam
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isRequiredParam?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isWildCardParam
+    uid: azure-devops-extension-api.IParsedRouteSegment.isWildCardParam
+    package: azure-devops-extension-api
+    summary: >-
+      For parameters, whether or not this parameter is a wildcard (*) parameter,
+      which means it allows multiple path segments (i.e. don't escape "/")
+    fullName: isWildCardParam
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isWildCardParam?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: paramName
+    uid: azure-devops-extension-api.IParsedRouteSegment.paramName
+    package: azure-devops-extension-api
+    summary: >-
+      If present, the name of the route value parameter to substitute for this
+      segment. Either text or paramName will be defined for a segment, never
+      both.
+    fullName: paramName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'paramName?: string'
+      return:
+        description: ''
+        type: string
+  - name: text
+    uid: azure-devops-extension-api.IParsedRouteSegment.text
+    package: azure-devops-extension-api
+    summary: >-
+      If present, the fixed text for this segement. Either text or paramName
+      will be defined for a segment, never both.
+    fullName: text
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'text?: string'
+      return:
+        description: ''
+        type: string

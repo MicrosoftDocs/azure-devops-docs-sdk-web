@@ -1,0 +1,197 @@
+### YamlMime:TSType
+name: GitPullRequestSearchCriteria
+uid: azure-devops-extension-api.GitPullRequestSearchCriteria
+package: azure-devops-extension-api
+summary: Pull requests can be searched for matching this criteria.
+fullName: GitPullRequestSearchCriteria
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: creatorId
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.creatorId
+    package: azure-devops-extension-api
+    summary: If set, search for pull requests that were created by this identity.
+    fullName: creatorId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'creatorId: string'
+      return:
+        description: ''
+        type: string
+  - name: includeLinks
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.includeLinks
+    package: azure-devops-extension-api
+    summary: Whether to include the _links field on the shallow references
+    fullName: includeLinks
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeLinks: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: labels
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.labels
+    package: azure-devops-extension-api
+    summary: >-
+      If set, filters pull requests that have labels matching the specified
+      label names.
+    fullName: labels
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'labels: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: maxTime
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.maxTime
+    package: azure-devops-extension-api
+    summary: >-
+      If specified, filters pull requests that created/closed before this date
+      based on the queryTimeRangeType specified.
+    fullName: maxTime
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxTime: Date'
+      return:
+        description: ''
+        type: Date
+  - name: minTime
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.minTime
+    package: azure-devops-extension-api
+    summary: >-
+      If specified, filters pull requests that created/closed after this date
+      based on the queryTimeRangeType specified.
+    fullName: minTime
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minTime: Date'
+      return:
+        description: ''
+        type: Date
+  - name: queryTimeRangeType
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.queryTimeRangeType
+    package: azure-devops-extension-api
+    summary: >-
+      The type of time range which should be used for minTime and maxTime.
+      Defaults to Created if unset.
+    fullName: queryTimeRangeType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'queryTimeRangeType: PullRequestTimeRangeType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.PullRequestTimeRangeType" />
+  - name: repositoryId
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.repositoryId
+    package: azure-devops-extension-api
+    summary: >-
+      If set, search for pull requests whose target branch is in this
+      repository.
+    fullName: repositoryId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryId: string'
+      return:
+        description: ''
+        type: string
+  - name: reviewerId
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.reviewerId
+    package: azure-devops-extension-api
+    summary: If set, search for pull requests that have this identity as a reviewer.
+    fullName: reviewerId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'reviewerId: string'
+      return:
+        description: ''
+        type: string
+  - name: sourceRefName
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.sourceRefName
+    package: azure-devops-extension-api
+    summary: If set, search for pull requests from this branch.
+    fullName: sourceRefName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sourceRefName: string'
+      return:
+        description: ''
+        type: string
+  - name: sourceRepositoryId
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.sourceRepositoryId
+    package: azure-devops-extension-api
+    summary: >-
+      If set, search for pull requests whose source branch is in this
+      repository.
+    fullName: sourceRepositoryId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sourceRepositoryId: string'
+      return:
+        description: ''
+        type: string
+  - name: status
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.status
+    package: azure-devops-extension-api
+    summary: >-
+      If set, search for pull requests that are in this state. Defaults to
+      Active if unset.
+    fullName: status
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'status: PullRequestStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.PullRequestStatus" />
+  - name: tagsFilterOperator
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.tagsFilterOperator
+    package: azure-devops-extension-api
+    summary: >-
+      The operator used for filtering by labels. Defaults to And if unset. When
+      And is used, pull requests must have all specified labels. When Or is
+      used, pull requests must have at least one of the specified labels.
+    fullName: tagsFilterOperator
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tagsFilterOperator: TagsFilterOperator'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TagsFilterOperator" />
+  - name: targetRefName
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.targetRefName
+    package: azure-devops-extension-api
+    summary: If set, search for pull requests into this branch.
+    fullName: targetRefName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'targetRefName: string'
+      return:
+        description: ''
+        type: string
+  - name: title
+    uid: azure-devops-extension-api.GitPullRequestSearchCriteria.title
+    package: azure-devops-extension-api
+    summary: >-
+      If set, filters pull requests that contain the specified text in the
+      title.
+    fullName: title
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'title: string'
+      return:
+        description: ''
+        type: string

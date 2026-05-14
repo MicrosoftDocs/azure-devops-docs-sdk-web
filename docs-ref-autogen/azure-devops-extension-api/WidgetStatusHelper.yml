@@ -1,0 +1,74 @@
+### YamlMime:TSType
+name: WidgetStatusHelper
+uid: azure-devops-extension-api.WidgetStatusHelper
+package: azure-devops-extension-api
+summary: ''
+fullName: WidgetStatusHelper
+remarks: ''
+isDeprecated: false
+type: class
+methods:
+  - name: Failure(string, boolean, boolean)
+    uid: azure-devops-extension-api.WidgetStatusHelper.Failure
+    package: azure-devops-extension-api
+    summary: >-
+      method to encapsulate a failed result for a widget loading operation
+      (load, reload, openLightbox etc)
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function Failure(message: string, isUserVisible?: boolean,
+        isRichText?: boolean): Promise<WidgetStatus>
+      parameters:
+        - id: message
+          type: string
+          description: message to display as part within the widget error experience.
+        - id: isUserVisible
+          type: boolean
+          description: >-
+            indicates whether the message should be displayed to the user or a
+            generic error message displayed. Defaults to true.
+        - id: isRichText
+          type: boolean
+          description: >-
+            indicates whether the message is an html that can be rendered as a
+            rich experience. Defaults to false. Only trusted extensions are
+
+            allowed to set this to true. For any 3rd party widgets passing this
+            value as true, it will be ignored.
+      return:
+        description: promise encapsulating the status of the widget loading operations.
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WidgetStatus" />&gt;
+  - name: Success(string)
+    uid: azure-devops-extension-api.WidgetStatusHelper.Success
+    package: azure-devops-extension-api
+    summary: >-
+      method to encapsulate a successful result for a widget loading operation
+      (load, reload, openLightbox etc)
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function Success(state?: string): Promise<WidgetStatus>'
+      parameters:
+        - id: state
+          type: string
+          description: >-
+            any state information to be passed to the initiator of the loading
+            call.
+      return:
+        description: promise encapsulating the status of the widget loading operations.
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WidgetStatus" />&gt;
+  - name: Unconfigured()
+    uid: azure-devops-extension-api.WidgetStatusHelper.Unconfigured
+    package: azure-devops-extension-api
+    summary: >-
+      method to encapsulate a result for a widget loading operation that results
+      in the widget being in an unconfigured state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function Unconfigured(): Promise<WidgetStatus>'
+      return:
+        description: promise encapsulating the status of the widget loading operations.
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WidgetStatus" />&gt;

@@ -1,0 +1,53 @@
+### YamlMime:TSType
+name: CodeQLScheduleDetails
+uid: azure-devops-extension-api.CodeQLScheduleDetails
+package: azure-devops-extension-api
+summary: Contains the CodeQL default setup schedule configuration for an organization.
+fullName: CodeQLScheduleDetails
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: lastRunDate
+    uid: azure-devops-extension-api.CodeQLScheduleDetails.lastRunDate
+    package: azure-devops-extension-api
+    summary: >-
+      The date and time (UTC) when the CodeQL default setup job last ran for
+      this organization. Null if the job has never successfully run.
+    fullName: lastRunDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastRunDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: lastRunResult
+    uid: azure-devops-extension-api.CodeQLScheduleDetails.lastRunResult
+    package: azure-devops-extension-api
+    summary: >-
+      The result code of the last job execution. 0=Succeeded,
+      1=PartiallySucceeded, 2=Failed, etc. Null if the job has never run.
+    fullName: lastRunResult
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lastRunResult: number'
+      return:
+        description: ''
+        type: number
+  - name: scheduleDayOfWeek
+    uid: azure-devops-extension-api.CodeQLScheduleDetails.scheduleDayOfWeek
+    package: azure-devops-extension-api
+    summary: >-
+      The day of the week (0=Sunday through 6=Saturday) when the CodeQL default
+      setup scan should run. A value of -1 means no custom schedule is
+      configured and the job runs on its default cadence.
+    fullName: scheduleDayOfWeek
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scheduleDayOfWeek: number'
+      return:
+        description: ''
+        type: number

@@ -1,0 +1,475 @@
+### YamlMime:TSType
+name: ManagementRestClient
+uid: azure-devops-extension-api.ManagementRestClient
+package: azure-devops-extension-api
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
+fullName: ManagementRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: ManagementRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.ManagementRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new ManagementRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+methods:
+  - name: cancelCodeQLJobs()
+    uid: azure-devops-extension-api.ManagementRestClient.cancelCodeQLJobs
+    package: azure-devops-extension-api
+    summary: >-
+      Cancels all running and queued CodeQL jobs and in-flight Dynamic Pipeline
+      runs for the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function cancelCodeQLJobs(): Promise<number>'
+      return:
+        description: ''
+        type: Promise&lt;number&gt;
+  - name: createBillingSnapshot2(MeterUsageForPlan, Plan)
+    uid: azure-devops-extension-api.ManagementRestClient.createBillingSnapshot2
+    package: azure-devops-extension-api
+    summary: >-
+      During multi-org billing computation in primary scale unit(EUS21), this
+      API is used to create billing snapshot for a specific org. Primary scale
+      unit will call this API for each org in different scsle units to create
+      billing snapshot. Data will be stored in the org specific partition DB -\>
+      billing snapshot table. This is needed as customers will fetch billing
+      data from their org specific partition DB.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createBillingSnapshot2(meterUsage: MeterUsageForPlan, plan:
+        Plan): Promise<void>
+      parameters:
+        - id: meterUsage
+          type: <xref uid="azure-devops-extension-api.MeterUsageForPlan" />
+          description: ''
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: getAdvancedSecurityAgentPoolSelection()
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getAdvancedSecurityAgentPoolSelection
+    package: azure-devops-extension-api
+    summary: >-
+      Base URL for getting All Available Agent Pools + Currently Selected Agent
+      Pool This is a read-only operation that does not require manage
+      permissions.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAdvancedSecurityAgentPoolSelection():
+        Promise<AgentPoolDetails>
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AgentPoolDetails"
+          />&gt;
+  - name: getBillableCommitterDetails2(Plan, Date)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getBillableCommitterDetails2
+    package: azure-devops-extension-api
+    summary: >-
+      Get all billable committers details, including those not matched with a
+      VSID.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getBillableCommitterDetails2(plan: Plan, billingDate?: Date):
+        Promise<BillableCommitterDetails[]>
+      parameters:
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: >-
+            The plan to query. Plans supported: CodeSecurity and
+            SecretProtection. This is a mandatory parameter.
+        - id: billingDate
+          type: Date
+          description: The date to query, or if not provided, today
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.BillableCommitterDetails" />[]&gt;
+  - name: getCodeQLJobCount()
+    uid: azure-devops-extension-api.ManagementRestClient.getCodeQLJobCount
+    package: azure-devops-extension-api
+    summary: >-
+      Gets the count of running and queued CodeQL jobs and in-flight Dynamic
+      Pipeline runs for the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeQLJobCount(): Promise<number>'
+      return:
+        description: ''
+        type: Promise&lt;number&gt;
+  - name: getCodeQLSchedule()
+    uid: azure-devops-extension-api.ManagementRestClient.getCodeQLSchedule
+    package: azure-devops-extension-api
+    summary: >-
+      Gets the current CodeQL default setup schedule configuration for the
+      organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeQLSchedule(): Promise<CodeQLScheduleDetails>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CodeQLScheduleDetails" />&gt;
+  - name: getCodeQLScheduleLegacy()
+    uid: azure-devops-extension-api.ManagementRestClient.getCodeQLScheduleLegacy
+    package: azure-devops-extension-api
+    summary: >-
+      Gets the current CodeQL default setup schedule configuration for the
+      organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeQLScheduleLegacy(): Promise<CodeQLScheduleDetails>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CodeQLScheduleDetails" />&gt;
+  - name: getEstimatedBillableCommittersDetailsForRepo2(string, string, Plan)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getEstimatedBillableCommittersDetailsForRepo2
+    package: azure-devops-extension-api
+    summary: >-
+      Estimate the pushers that would be added to the customer's usage if
+      Advanced Security was enabled for this repository.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEstimatedBillableCommittersDetailsForRepo2(project: string,
+        repository: string, plan?: Plan): Promise<MeterUsageEstimate>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: The plan to query.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageEstimate"
+          />&gt;
+  - name: getEstimatedBillablePushersDetailsForOrg2(Plan)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getEstimatedBillablePushersDetailsForOrg2
+    package: azure-devops-extension-api
+    summary: >-
+      Estimate the pushers that would be added to the customer's usage if
+      Advanced Security was enabled for this organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEstimatedBillablePushersDetailsForOrg2(plan?: Plan):
+        Promise<MeterUsageEstimate>
+      parameters:
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: The plan to query.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageEstimate"
+          />&gt;
+  - name: getEstimatedBillablePushersDetailsForProject2(string, Plan)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getEstimatedBillablePushersDetailsForProject2
+    package: azure-devops-extension-api
+    summary: >-
+      Estimate the pushers that would be added to the customer's usage if
+      Advanced Security was enabled for this project.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEstimatedBillablePushersDetailsForProject2(project: string,
+        plan?: Plan): Promise<MeterUsageEstimate>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageEstimate"
+          />&gt;
+  - name: getLastMeterUsage2(Plan)
+    uid: azure-devops-extension-api.ManagementRestClient.getLastMeterUsage2
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getLastMeterUsage2(plan: Plan): Promise<MeterUsageForPlan>'
+      parameters:
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageForPlan"
+          />&gt;
+  - name: getMeterUsage2(Plan, Date)
+    uid: azure-devops-extension-api.ManagementRestClient.getMeterUsage2
+    package: azure-devops-extension-api
+    summary: Get commiters used when calculating billing information.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getMeterUsage2(plan: Plan, billingDate?: Date):
+        Promise<MeterUsageForPlan>
+      parameters:
+        - id: plan
+          type: <xref uid="azure-devops-extension-api.Plan" />
+          description: >-
+            The plan to query. Plans supported: CodeSecurity and
+            SecretProtection. This is a mandatory parameter.
+        - id: billingDate
+          type: Date
+          description: The date to query, or if not provided, today
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.MeterUsageForPlan"
+          />&gt;
+  - name: getOrgEnablementStatus2(boolean)
+    uid: azure-devops-extension-api.ManagementRestClient.getOrgEnablementStatus2
+    package: azure-devops-extension-api
+    summary: Get the current status of Advanced Security for the organization
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getOrgEnablementStatus2(includeAllProperties?: boolean):
+        Promise<OrgEnablementSettings>
+      parameters:
+        - id: includeAllProperties
+          type: boolean
+          description: >-
+            When true, also determine if pushes are blocked if they contain
+            secrets
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.OrgEnablementSettings" />&gt;
+  - name: getProjectEnablementStatus2(string, boolean)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.getProjectEnablementStatus2
+    package: azure-devops-extension-api
+    summary: Get the current status of Advanced Security for a project
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getProjectEnablementStatus2(project: string,
+        includeAllProperties?: boolean): Promise<ProjectEnablementSettings>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: includeAllProperties
+          type: boolean
+          description: >-
+            When true, also determine if pushes are blocked if they contain
+            secrets
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.ProjectEnablementSettings" />&gt;
+  - name: getRepoEnablementStatus2(string, string, boolean)
+    uid: azure-devops-extension-api.ManagementRestClient.getRepoEnablementStatus2
+    package: azure-devops-extension-api
+    summary: >-
+      Determines if Code Security, Secret Protection, and their features are
+      enabled for the repository.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRepoEnablementStatus2(project: string, repository: string,
+        includeAllProperties?: boolean): Promise<RepoEnablementSettings>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+        - id: includeAllProperties
+          type: boolean
+          description: >-
+            When true, will also determine if pushes are blocked when secrets
+            are detected
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.RepoEnablementSettings" />&gt;
+  - name: updateAdvancedSecurityAgentPoolSelection(string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.updateAdvancedSecurityAgentPoolSelection
+    package: azure-devops-extension-api
+    summary: >-
+      Updates Agent Pool Registry Value For the Selected Agent Pool This
+      automatically uses the underlying http client for agent pools to validate
+      that the user has permissions to use that pool
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateAdvancedSecurityAgentPoolSelection(agentPoolName:
+        string): Promise<AgentPoolDetails>
+      parameters:
+        - id: agentPoolName
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AgentPoolDetails"
+          />&gt;
+  - name: updateCodeQLSchedule(number)
+    uid: azure-devops-extension-api.ManagementRestClient.updateCodeQLSchedule
+    package: azure-devops-extension-api
+    summary: >-
+      Sets the day of the week when the CodeQL default setup scan should run for
+      the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateCodeQLSchedule(scheduleDayOfWeek: number):
+        Promise<CodeQLScheduleDetails>
+      parameters:
+        - id: scheduleDayOfWeek
+          type: number
+          description: 'Day of week as an integer: 0=Sunday, 1=Monday, ..., 6=Saturday.'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CodeQLScheduleDetails" />&gt;
+  - name: updateCodeQLScheduleLegacy(number)
+    uid: azure-devops-extension-api.ManagementRestClient.updateCodeQLScheduleLegacy
+    package: azure-devops-extension-api
+    summary: >-
+      Sets the day of the week when the CodeQL default setup scan should run for
+      the organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateCodeQLScheduleLegacy(scheduleDayOfWeek: number):
+        Promise<CodeQLScheduleDetails>
+      parameters:
+        - id: scheduleDayOfWeek
+          type: number
+          description: 'Day of week as an integer: 0=Sunday, 1=Monday, ..., 6=Saturday.'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.CodeQLScheduleDetails" />&gt;
+  - name: updateOrgEnablementStatus2(OrgEnablementSettings)
+    uid: azure-devops-extension-api.ManagementRestClient.updateOrgEnablementStatus2
+    package: azure-devops-extension-api
+    summary: Update the status of Advanced Security for the organization
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateOrgEnablementStatus2(orgEnablementSettings:
+        OrgEnablementSettings): Promise<void>
+      parameters:
+        - id: orgEnablementSettings
+          type: <xref uid="azure-devops-extension-api.OrgEnablementSettings" />
+          description: The new status
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: updateProjectEnablementStatus2(ProjectEnablementSettings, string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.updateProjectEnablementStatus2
+    package: azure-devops-extension-api
+    summary: Update the status of Advanced Security for the project
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateProjectEnablementStatus2(projectEnablementSettings:
+        ProjectEnablementSettings, project: string): Promise<void>
+      parameters:
+        - id: projectEnablementSettings
+          type: <xref uid="azure-devops-extension-api.ProjectEnablementSettings" />
+          description: The new status
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: updateRepoAdvSecEnablementStatus2(RepoEnablementSettings, string, string)
+    uid: >-
+      azure-devops-extension-api.ManagementRestClient.updateRepoAdvSecEnablementStatus2
+    package: azure-devops-extension-api
+    summary: >-
+      Update the enablement status of Code Security and Secret Protection, along
+      with their respective features, for a given repository.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateRepoAdvSecEnablementStatus2(repoEnablementSettings:
+        RepoEnablementSettings, project: string, repository: string):
+        Promise<void>
+      parameters:
+        - id: repoEnablementSettings
+          type: <xref uid="azure-devops-extension-api.RepoEnablementSettings" />
+          description: new status
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: Name or ID of the repository
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: GraphServicePrincipalOriginIdUpdateContext
+uid: azure-devops-extension-api.GraphServicePrincipalOriginIdUpdateContext
+package: azure-devops-extension-api
+summary: >-
+  Use this type to update an existing service principal using the OriginID as a
+  reference to an existing service principal from an external AAD backed
+  provider. This is the subset of GraphServicePrincipal fields required for
+  creation of a GraphServicePrincipal for AAD use case when looking up the
+  service principal by its unique ID in the backing provider.
+fullName: GraphServicePrincipalOriginIdUpdateContext
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: originId
+    uid: >-
+      azure-devops-extension-api.GraphServicePrincipalOriginIdUpdateContext.originId
+    package: azure-devops-extension-api
+    summary: >-
+      This should be the object id or sid of the service principal from the
+      source AAD provider. Example: d47d025a-ce2f-4a79-8618-e8862ade30dd Azure
+      Devops will communicate with the source provider to fill all other fields
+      on creation.
+    fullName: originId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'originId: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: storageKey
+    uid: >-
+      azure-devops-extension-api.GraphServicePrincipalOriginIdUpdateContext.storageKey
+    package: azure-devops-extension-api
+    summary: Storage key should not be specified in case of updating service principal
+    fullName: storageKey
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'storageKey: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GraphServicePrincipalUpdateContext.storageKey](xref:azure-devops-extension-api.GraphServicePrincipalUpdateContext.storageKey)
+extends: <xref uid="azure-devops-extension-api.GraphServicePrincipalUpdateContext" />

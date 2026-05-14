@@ -1,0 +1,44 @@
+### YamlMime:TSType
+name: WidgetConfigurationSave
+uid: azure-devops-extension-api.WidgetConfigurationSave
+package: azure-devops-extension-api
+summary: ''
+fullName: WidgetConfigurationSave
+remarks: ''
+isDeprecated: false
+type: class
+methods:
+  - name: Invalid()
+    uid: azure-devops-extension-api.WidgetConfigurationSave.Invalid
+    package: azure-devops-extension-api
+    summary: >-
+      method to encapsulate an invalid state that is returned by the widget
+      configuration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function Invalid(): Promise<SaveStatus>'
+      return:
+        description: promise encapsulating the state being returned.
+        type: Promise&lt;<xref uid="azure-devops-extension-api.SaveStatus" />&gt;
+  - name: Valid(CustomSettings)
+    uid: azure-devops-extension-api.WidgetConfigurationSave.Valid
+    package: azure-devops-extension-api
+    summary: >-
+      method to encapsulate a valid state that is returned by the widget
+      configuration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function Valid(customSettings: CustomSettings):
+        Promise<SaveStatus>
+      parameters:
+        - id: customSettings
+          type: <xref uid="azure-devops-extension-api.CustomSettings" />
+          description: >-
+            settings from the widget configuration to be returned as part of
+            this state.
+      return:
+        description: promise encapsulating the state being returned.
+        type: Promise&lt;<xref uid="azure-devops-extension-api.SaveStatus" />&gt;

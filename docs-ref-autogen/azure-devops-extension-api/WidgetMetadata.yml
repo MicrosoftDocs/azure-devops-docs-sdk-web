@@ -1,0 +1,317 @@
+### YamlMime:TSType
+name: WidgetMetadata
+uid: azure-devops-extension-api.WidgetMetadata
+package: azure-devops-extension-api
+summary: Contribution based information describing Dashboard Widgets.
+fullName: WidgetMetadata
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: allowedSizes
+    uid: azure-devops-extension-api.WidgetMetadata.allowedSizes
+    package: azure-devops-extension-api
+    summary: Sizes supported by the Widget.
+    fullName: allowedSizes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'allowedSizes: WidgetSize[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WidgetSize" />[]
+  - name: analyticsServiceRequired
+    uid: azure-devops-extension-api.WidgetMetadata.analyticsServiceRequired
+    package: azure-devops-extension-api
+    summary: >-
+      Opt-in boolean that indicates if the widget requires the Analytics Service
+      to function. Widgets requiring the analytics service are hidden from the
+      catalog if the Analytics Service is not available.
+    fullName: analyticsServiceRequired
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'analyticsServiceRequired: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: catalogIconUrl
+    uid: azure-devops-extension-api.WidgetMetadata.catalogIconUrl
+    package: azure-devops-extension-api
+    summary: Resource for an icon in the widget catalog.
+    fullName: catalogIconUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'catalogIconUrl: string'
+      return:
+        description: ''
+        type: string
+  - name: catalogInfoUrl
+    uid: azure-devops-extension-api.WidgetMetadata.catalogInfoUrl
+    package: azure-devops-extension-api
+    summary: >-
+      Opt-in URL string pointing at widget information. Defaults to extension
+      marketplace URL if omitted
+    fullName: catalogInfoUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'catalogInfoUrl: string'
+      return:
+        description: ''
+        type: string
+  - name: configurationContributionId
+    uid: azure-devops-extension-api.WidgetMetadata.configurationContributionId
+    package: azure-devops-extension-api
+    summary: >-
+      The id of the underlying contribution defining the supplied Widget custom
+      configuration UI. Null if custom configuration UI is not available.
+    fullName: configurationContributionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'configurationContributionId: string'
+      return:
+        description: ''
+        type: string
+  - name: configurationContributionRelativeId
+    uid: >-
+      azure-devops-extension-api.WidgetMetadata.configurationContributionRelativeId
+    package: azure-devops-extension-api
+    summary: >-
+      The relative id of the underlying contribution defining the supplied
+      Widget custom configuration UI. Null if custom configuration UI is not
+      available.
+    fullName: configurationContributionRelativeId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'configurationContributionRelativeId: string'
+      return:
+        description: ''
+        type: string
+  - name: configurationRequired
+    uid: azure-devops-extension-api.WidgetMetadata.configurationRequired
+    package: azure-devops-extension-api
+    summary: >-
+      Indicates if the widget requires configuration before being added to
+      dashboard.
+    fullName: configurationRequired
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'configurationRequired: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: contentUri
+    uid: azure-devops-extension-api.WidgetMetadata.contentUri
+    package: azure-devops-extension-api
+    summary: Uri for the widget content to be loaded from .
+    fullName: contentUri
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'contentUri: string'
+      return:
+        description: ''
+        type: string
+  - name: contributionId
+    uid: azure-devops-extension-api.WidgetMetadata.contributionId
+    package: azure-devops-extension-api
+    summary: The id of the underlying contribution defining the supplied Widget.
+    fullName: contributionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'contributionId: string'
+      return:
+        description: ''
+        type: string
+  - name: defaultSettings
+    uid: azure-devops-extension-api.WidgetMetadata.defaultSettings
+    package: azure-devops-extension-api
+    summary: Optional default settings to be copied into widget settings.
+    fullName: defaultSettings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'defaultSettings: string'
+      return:
+        description: ''
+        type: string
+  - name: description
+    uid: azure-devops-extension-api.WidgetMetadata.description
+    package: azure-devops-extension-api
+    summary: Summary information describing the widget.
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+  - name: isEnabled
+    uid: azure-devops-extension-api.WidgetMetadata.isEnabled
+    package: azure-devops-extension-api
+    summary: >-
+      Widgets can be disabled by the app store.  We'll need to gracefully handle
+      for: - persistence (Allow) - Requests (Tag as disabled, and provide
+      context)
+    fullName: isEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isEnabled: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isNameConfigurable
+    uid: azure-devops-extension-api.WidgetMetadata.isNameConfigurable
+    package: azure-devops-extension-api
+    summary: >-
+      Opt-out boolean that indicates if the widget supports widget name/title
+      configuration. Widgets ignoring the name should set it to false in the
+      manifest.
+    fullName: isNameConfigurable
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isNameConfigurable: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isVisibleFromCatalog
+    uid: azure-devops-extension-api.WidgetMetadata.isVisibleFromCatalog
+    package: azure-devops-extension-api
+    summary: >-
+      Opt-out boolean indicating if the widget is hidden from the catalog.
+      Commonly, this is used to allow developers to disable creation of a
+      deprecated widget. A widget must have a functional default state, or have
+      a configuration experience, in order to be visible from the catalog.
+    fullName: isVisibleFromCatalog
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isVisibleFromCatalog: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: keywords
+    uid: azure-devops-extension-api.WidgetMetadata.keywords
+    package: azure-devops-extension-api
+    summary: Keywords associated with this widget, non-filterable and invisible
+    fullName: keywords
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'keywords: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: lightboxOptions
+    uid: azure-devops-extension-api.WidgetMetadata.lightboxOptions
+    package: azure-devops-extension-api
+    summary: >-
+      Opt-in properties for customizing widget presentation in a "lightbox"
+      dialog.
+    fullName: lightboxOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lightboxOptions: LightboxOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.LightboxOptions" />
+  - name: loadingImageUrl
+    uid: azure-devops-extension-api.WidgetMetadata.loadingImageUrl
+    package: azure-devops-extension-api
+    summary: Resource for a loading placeholder image on dashboard
+    fullName: loadingImageUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'loadingImageUrl: string'
+      return:
+        description: ''
+        type: string
+  - name: name
+    uid: azure-devops-extension-api.WidgetMetadata.name
+    package: azure-devops-extension-api
+    summary: >-
+      User facing name of the widget type. Each widget must use a unique value
+      here.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: publisherName
+    uid: azure-devops-extension-api.WidgetMetadata.publisherName
+    package: azure-devops-extension-api
+    summary: Publisher Name of this kind of widget.
+    fullName: publisherName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'publisherName: string'
+      return:
+        description: ''
+        type: string
+  - name: supportedScopes
+    uid: azure-devops-extension-api.WidgetMetadata.supportedScopes
+    package: azure-devops-extension-api
+    summary: >-
+      Data contract required for the widget to function and to work in its
+      container.
+    fullName: supportedScopes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'supportedScopes: WidgetScope[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WidgetScope" />[]
+  - name: tags
+    uid: azure-devops-extension-api.WidgetMetadata.tags
+    package: azure-devops-extension-api
+    summary: Tags associated with this widget, visible on each widget and filterable.
+    fullName: tags
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tags: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: targets
+    uid: azure-devops-extension-api.WidgetMetadata.targets
+    package: azure-devops-extension-api
+    summary: Contribution target IDs
+    fullName: targets
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'targets: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: typeId
+    uid: azure-devops-extension-api.WidgetMetadata.typeId
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated: locally unique developer-facing id of this kind of widget.
+      ContributionId provides a globally unique identifier for widget types.
+    fullName: typeId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'typeId: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,102 @@
+### YamlMime:TSType
+name: BuildCompletedEvent
+uid: azure-devops-extension-api.BuildCompletedEvent
+package: azure-devops-extension-api
+summary: ''
+fullName: BuildCompletedEvent
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: changes
+    uid: azure-devops-extension-api.BuildCompletedEvent.changes
+    package: azure-devops-extension-api
+    summary: Changes associated with a build used for build notifications
+    fullName: changes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changes: Change[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Change" />[]
+  - name: pullRequest
+    uid: azure-devops-extension-api.BuildCompletedEvent.pullRequest
+    package: azure-devops-extension-api
+    summary: Pull request for the build used for build notifications
+    fullName: pullRequest
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pullRequest: PullRequest'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.PullRequest" />
+  - name: testResults
+    uid: azure-devops-extension-api.BuildCompletedEvent.testResults
+    package: azure-devops-extension-api
+    summary: Test results associated with a build used for build notifications
+    fullName: testResults
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'testResults: AggregatedResultsAnalysis'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AggregatedResultsAnalysis" />
+  - name: timelineRecords
+    uid: azure-devops-extension-api.BuildCompletedEvent.timelineRecords
+    package: azure-devops-extension-api
+    summary: Timeline records associated with a build used for build notifications
+    fullName: timelineRecords
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timelineRecords: TimelineRecord[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TimelineRecord" />[]
+  - name: workItems
+    uid: azure-devops-extension-api.BuildCompletedEvent.workItems
+    package: azure-devops-extension-api
+    summary: Work items associated with a build used for build notifications
+    fullName: workItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItems: AssociatedWorkItem[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AssociatedWorkItem" />[]
+inheritedProperties:
+  - name: build
+    uid: azure-devops-extension-api.BuildCompletedEvent.build
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: build
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'build: Build'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.Build" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildUpdatedEvent.build](xref:azure-devops-extension-api.BuildUpdatedEvent.build)
+  - name: buildId
+    uid: azure-devops-extension-api.BuildCompletedEvent.buildId
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: buildId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'buildId: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BuildUpdatedEvent.buildId](xref:azure-devops-extension-api.BuildUpdatedEvent.buildId)
+extends: <xref uid="azure-devops-extension-api.BuildUpdatedEvent" />

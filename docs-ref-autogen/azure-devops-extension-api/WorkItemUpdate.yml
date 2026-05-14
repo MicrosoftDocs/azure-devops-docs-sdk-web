@@ -1,0 +1,113 @@
+### YamlMime:TSType
+name: WorkItemUpdate
+uid: azure-devops-extension-api.WorkItemUpdate
+package: azure-devops-extension-api
+summary: Describes an update to a work item.
+fullName: WorkItemUpdate
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: fields
+    uid: azure-devops-extension-api.WorkItemUpdate.fields
+    package: azure-devops-extension-api
+    summary: List of updates to fields.
+    fullName: fields
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fields: {[key: string]: WorkItemFieldUpdate}'
+      return:
+        description: ''
+        type: >-
+          {[key: string]: <xref
+          uid="azure-devops-extension-api.WorkItemFieldUpdate" />}
+  - name: id
+    uid: azure-devops-extension-api.WorkItemUpdate.id
+    package: azure-devops-extension-api
+    summary: ID of update.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: relations
+    uid: azure-devops-extension-api.WorkItemUpdate.relations
+    package: azure-devops-extension-api
+    summary: List of updates to relations.
+    fullName: relations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'relations: WorkItemRelationUpdates'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.WorkItemRelationUpdates" />
+  - name: rev
+    uid: azure-devops-extension-api.WorkItemUpdate.rev
+    package: azure-devops-extension-api
+    summary: The revision number of work item update.
+    fullName: rev
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rev: number'
+      return:
+        description: ''
+        type: number
+  - name: revisedBy
+    uid: azure-devops-extension-api.WorkItemUpdate.revisedBy
+    package: azure-devops-extension-api
+    summary: Identity for the work item update.
+    fullName: revisedBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'revisedBy: IdentityReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.IdentityReference" />
+  - name: revisedDate
+    uid: azure-devops-extension-api.WorkItemUpdate.revisedDate
+    package: azure-devops-extension-api
+    summary: The work item updates revision date.
+    fullName: revisedDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'revisedDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: workItemId
+    uid: azure-devops-extension-api.WorkItemUpdate.workItemId
+    package: azure-devops-extension-api
+    summary: The work item ID.
+    fullName: workItemId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workItemId: number'
+      return:
+        description: ''
+        type: number
+inheritedProperties:
+  - name: url
+    uid: azure-devops-extension-api.WorkItemUpdate.url
+    package: azure-devops-extension-api
+    summary: REST URL for the resource.
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WorkItemTrackingResource.url](xref:azure-devops-extension-api.WorkItemTrackingResource.url)
+extends: <xref uid="azure-devops-extension-api.WorkItemTrackingResource" />

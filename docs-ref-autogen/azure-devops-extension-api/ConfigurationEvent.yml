@@ -1,0 +1,93 @@
+### YamlMime:TSType
+name: ConfigurationEvent
+uid: azure-devops-extension-api.ConfigurationEvent
+package: azure-devops-extension-api
+summary: ''
+fullName: ConfigurationEvent
+remarks: ''
+isDeprecated: false
+type: class
+properties:
+  - name: ConfigurationChange
+    uid: azure-devops-extension-api.ConfigurationEvent.ConfigurationChange
+    package: azure-devops-extension-api
+    summary: >-
+      Configuration has changed. When this event is notified, the preview is
+      updated and Save button is enabled.
+
+
+      The payload expected when notifying this event: { data: customSettings }
+
+
+      {customSettings} is the serialized custom config settings pertaining to
+      the widget.
+    fullName: ConfigurationChange
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ConfigurationChange: string'
+      return:
+        description: ''
+        type: string
+  - name: ConfigurationError
+    uid: azure-devops-extension-api.ConfigurationEvent.ConfigurationError
+    package: azure-devops-extension-api
+    summary: >-
+      Configuration tries to execute API calls and fails. When this event is
+      notified, the config does not render a view and we pass an error message
+      to the configuration host.
+
+
+      The payload expected when notifying this event: { data: string }
+
+
+      {string} is the error message that is displayed at the top of the
+      configuration.
+    fullName: ConfigurationError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ConfigurationError: string'
+      return:
+        description: ''
+        type: string
+  - name: GeneralSettingsChanged
+    uid: azure-devops-extension-api.ConfigurationEvent.GeneralSettingsChanged
+    package: azure-devops-extension-api
+    summary: >-
+      Widget configuration general settings changed. When this event is
+      notified, the widget name or widget size is updated.
+
+
+      The payload expected when notifying this event: { data: { IGeneralSettings
+      } }
+
+
+      {generalSettings} is the serialized object containing WidgetName and
+      WidgetSize
+    fullName: GeneralSettingsChanged
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static GeneralSettingsChanged: string'
+      return:
+        description: ''
+        type: string
+methods:
+  - name: Args<T>(T)
+    uid: azure-devops-extension-api.ConfigurationEvent.Args
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function Args<T>(payload: T): EventArgs<T>'
+      parameters:
+        - id: payload
+          type: T
+          description: >-
+            the event arguments we pass when we want to notify the
+            configuration.
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.EventArgs" />&lt;T&gt;

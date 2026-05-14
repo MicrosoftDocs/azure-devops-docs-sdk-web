@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: ExpressionFilterModel
+uid: azure-devops-extension-api.ExpressionFilterModel
+package: azure-devops-extension-api
+summary: >-
+  This class represents the Subscription Filter associated with a subscription
+  in a user readable format e.g. "filterModel":{ "clauses":[ {
+  "logicalOperator":"", "fieldName":"PortfolioProject", "operator":"=",
+  "value":"@@MyProjectName@@", "index":1 } ], "groups":[ ], "maxGroupLevel":0 }
+fullName: ExpressionFilterModel
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: clauses
+    uid: azure-devops-extension-api.ExpressionFilterModel.clauses
+    package: azure-devops-extension-api
+    summary: Flat list of clauses in this subscription
+    fullName: clauses
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clauses: ExpressionFilterClause[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExpressionFilterClause" />[]
+  - name: groups
+    uid: azure-devops-extension-api.ExpressionFilterModel.groups
+    package: azure-devops-extension-api
+    summary: Grouping of clauses in the subscription
+    fullName: groups
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'groups: ExpressionFilterGroup[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExpressionFilterGroup" />[]
+  - name: maxGroupLevel
+    uid: azure-devops-extension-api.ExpressionFilterModel.maxGroupLevel
+    package: azure-devops-extension-api
+    summary: Max depth of the Subscription tree
+    fullName: maxGroupLevel
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxGroupLevel: number'
+      return:
+        description: ''
+        type: number

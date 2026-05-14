@@ -1,0 +1,77 @@
+### YamlMime:TSType
+name: IWidgetConfiguration
+uid: azure-devops-extension-api.IWidgetConfiguration
+package: azure-devops-extension-api
+summary: Widget authors implement this interface for their configuration.
+fullName: IWidgetConfiguration
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: listen
+    uid: azure-devops-extension-api.IWidgetConfiguration.listen
+    package: azure-devops-extension-api
+    summary: Listen to message from host
+    fullName: listen
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'listen?: (event: string, eventArgs: EventArgs<T>) => void'
+      return:
+        description: ''
+        type: '(event: string, eventArgs: EventArgs&lt;T&gt;) =&gt; void'
+  - name: load
+    uid: azure-devops-extension-api.IWidgetConfiguration.load
+    package: azure-devops-extension-api
+    summary: >-
+      Called by the host to setup the widget configuration, which uses the
+      settings shared with the widget to complete its rendering experience.
+    fullName: load
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        load: (widgetSettings: WidgetSettings, widgetConfigurationContext:
+        IWidgetConfigurationContext) => Promise<WidgetStatus>
+      return:
+        description: ''
+        type: >-
+          (widgetSettings: WidgetSettings, widgetConfigurationContext:
+          IWidgetConfigurationContext) =&gt; Promise&lt;WidgetStatus&gt;
+  - name: onSave
+    uid: azure-devops-extension-api.IWidgetConfiguration.onSave
+    package: azure-devops-extension-api
+    summary: >-
+      Called by the host when the user clicks on the Save button.
+
+      Widget author is expected to run validations if needed.
+
+      If ready to save, then use WidgetHelpers.WidgetConfigurationSave.Valid()
+      to return the serialized custom settings of the widget from the
+      configuraton.
+
+      If custom settings are not valid and so not ready to save, then  use
+      WidgetHelpers.WidgetConfigurationSave.Invalid() to notify the host to stop
+      save.
+    fullName: onSave
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onSave: () => Promise<SaveStatus>'
+      return:
+        description: ''
+        type: () =&gt; Promise&lt;SaveStatus&gt;
+  - name: onSaveComplete
+    uid: azure-devops-extension-api.IWidgetConfiguration.onSaveComplete
+    package: azure-devops-extension-api
+    summary: >-
+      (Optional) Called by the host when the configuration is ready to be saved
+      (when the user clicks the save button on the configuration panel)
+    fullName: onSaveComplete
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onSaveComplete?: () => void'
+      return:
+        description: ''
+        type: () =&gt; void

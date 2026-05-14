@@ -1,0 +1,250 @@
+### YamlMime:TSType
+name: GitQueryCommitsCriteria
+uid: azure-devops-extension-api.GitQueryCommitsCriteria
+package: azure-devops-extension-api
+summary: ''
+fullName: GitQueryCommitsCriteria
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: $skip
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.$skip
+    package: azure-devops-extension-api
+    summary: Number of entries to skip
+    fullName: $skip
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: '$skip: number'
+      return:
+        description: ''
+        type: number
+  - name: $top
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.$top
+    package: azure-devops-extension-api
+    summary: Maximum number of entries to retrieve
+    fullName: $top
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: '$top: number'
+      return:
+        description: ''
+        type: number
+  - name: author
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.author
+    package: azure-devops-extension-api
+    summary: Alias or display name of the author
+    fullName: author
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'author: string'
+      return:
+        description: ''
+        type: string
+  - name: compareVersion
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.compareVersion
+    package: azure-devops-extension-api
+    summary: >-
+      Only applicable when ItemVersion specified. If provided, start walking
+      history starting at this commit.
+    fullName: compareVersion
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'compareVersion: GitVersionDescriptor'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />
+  - name: excludeDeletes
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.excludeDeletes
+    package: azure-devops-extension-api
+    summary: >-
+      Only applies when an itemPath is specified. This determines whether to
+      exclude delete entries of the specified path.
+    fullName: excludeDeletes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'excludeDeletes: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: fromCommitId
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.fromCommitId
+    package: azure-devops-extension-api
+    summary: If provided, a lower bound for filtering commits alphabetically
+    fullName: fromCommitId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fromCommitId: string'
+      return:
+        description: ''
+        type: string
+  - name: fromDate
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.fromDate
+    package: azure-devops-extension-api
+    summary: If provided, only include history entries created after this date (string)
+    fullName: fromDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fromDate: string'
+      return:
+        description: ''
+        type: string
+  - name: historyMode
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.historyMode
+    package: azure-devops-extension-api
+    summary: >-
+      What Git history mode should be used. This only applies to the search
+      criteria when Ids = null and an itemPath is specified.
+    fullName: historyMode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'historyMode: GitHistoryMode'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitHistoryMode" />
+  - name: ids
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.ids
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, specifies the exact commit ids of the commits to fetch. May
+      not be combined with other parameters.
+    fullName: ids
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ids: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: includeLinks
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.includeLinks
+    package: azure-devops-extension-api
+    summary: Whether to include the _links field on the shallow references
+    fullName: includeLinks
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeLinks: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: includePushData
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.includePushData
+    package: azure-devops-extension-api
+    summary: Whether to include the push information
+    fullName: includePushData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includePushData: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: includeUserImageUrl
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.includeUserImageUrl
+    package: azure-devops-extension-api
+    summary: Whether to include the image Url for committers and authors
+    fullName: includeUserImageUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeUserImageUrl: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: includeWorkItems
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.includeWorkItems
+    package: azure-devops-extension-api
+    summary: Whether to include linked work items
+    fullName: includeWorkItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeWorkItems: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: itemPath
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.itemPath
+    package: azure-devops-extension-api
+    summary: Path of item to search under
+    fullName: itemPath
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'itemPath: string'
+      return:
+        description: ''
+        type: string
+  - name: itemVersion
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.itemVersion
+    package: azure-devops-extension-api
+    summary: If provided, identifies the commit or branch to search
+    fullName: itemVersion
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'itemVersion: GitVersionDescriptor'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />
+  - name: showOldestCommitsFirst
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.showOldestCommitsFirst
+    package: azure-devops-extension-api
+    summary: >-
+      If enabled, this option will ignore the itemVersion and compareVersion
+      parameters
+    fullName: showOldestCommitsFirst
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'showOldestCommitsFirst: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: toCommitId
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.toCommitId
+    package: azure-devops-extension-api
+    summary: If provided, an upper bound for filtering commits alphabetically
+    fullName: toCommitId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'toCommitId: string'
+      return:
+        description: ''
+        type: string
+  - name: toDate
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.toDate
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only include history entries created before this date
+      (string)
+    fullName: toDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'toDate: string'
+      return:
+        description: ''
+        type: string
+  - name: user
+    uid: azure-devops-extension-api.GitQueryCommitsCriteria.user
+    package: azure-devops-extension-api
+    summary: Alias or display name of the committer
+    fullName: user
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'user: string'
+      return:
+        description: ''
+        type: string

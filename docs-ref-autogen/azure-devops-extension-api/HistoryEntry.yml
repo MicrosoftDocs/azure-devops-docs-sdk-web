@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: HistoryEntry
+uid: azure-devops-extension-api.HistoryEntry
+package: azure-devops-extension-api
+summary: ''
+fullName: HistoryEntry<T>
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: changeList
+    uid: azure-devops-extension-api.HistoryEntry.changeList
+    package: azure-devops-extension-api
+    summary: The Change list (changeset/commit/shelveset) for this point in history
+    fullName: changeList
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'changeList: ChangeList<T>'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ChangeList" />&lt;T&gt;
+  - name: itemChangeType
+    uid: azure-devops-extension-api.HistoryEntry.itemChangeType
+    package: azure-devops-extension-api
+    summary: >-
+      The change made to the item from this change list (only relevant for File
+      history, not folders)
+    fullName: itemChangeType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'itemChangeType: VersionControlChangeType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.VersionControlChangeType" />
+  - name: serverItem
+    uid: azure-devops-extension-api.HistoryEntry.serverItem
+    package: azure-devops-extension-api
+    summary: >-
+      The path of the item at this point in history (only relevant for File
+      history, not folders)
+    fullName: serverItem
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'serverItem: string'
+      return:
+        description: ''
+        type: string

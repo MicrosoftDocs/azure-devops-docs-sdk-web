@@ -1,0 +1,42 @@
+### YamlMime:TSEnum
+name: AlertValidationRequestStatus
+uid: azure-devops-extension-api.AlertValidationRequestStatus
+package: azure-devops-extension-api
+summary: ''
+fullName: AlertValidationRequestStatus
+remarks: ''
+isDeprecated: false
+fields:
+  - name: None
+    uid: azure-devops-extension-api.AlertValidationRequestStatus.None
+    package: azure-devops-extension-api
+    summary: Default, when the request status is not set/applicable.
+    numericValue: 0
+  - name: Created
+    uid: azure-devops-extension-api.AlertValidationRequestStatus.Created
+    package: azure-devops-extension-api
+    summary: >-
+      First validation request for the alert's validation fingerprints, created
+      when the sarif is submitted for processing.
+    numericValue: 1
+  - name: InProgress
+    uid: azure-devops-extension-api.AlertValidationRequestStatus.InProgress
+    package: azure-devops-extension-api
+    summary: >-
+      The secret validation jobs for the alert's validation fingerprints have
+      been manually queued and at least one is still in progress.
+    numericValue: 2
+  - name: Completed
+    uid: azure-devops-extension-api.AlertValidationRequestStatus.Completed
+    package: azure-devops-extension-api
+    summary: >-
+      All the secret validation jobs for the alert's validation fingerprints
+      have returned Completed or Failed.
+    numericValue: 3
+  - name: Failed
+    uid: azure-devops-extension-api.AlertValidationRequestStatus.Failed
+    package: azure-devops-extension-api
+    summary: >-
+      This status is set only when there is an exception in the
+      ValidationService.
+    numericValue: 4

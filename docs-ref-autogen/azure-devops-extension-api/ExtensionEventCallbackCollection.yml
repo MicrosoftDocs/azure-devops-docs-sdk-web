@@ -1,0 +1,112 @@
+### YamlMime:TSType
+name: ExtensionEventCallbackCollection
+uid: azure-devops-extension-api.ExtensionEventCallbackCollection
+package: azure-devops-extension-api
+summary: >-
+  Collection of event callbacks - endpoints called when particular extension
+  events occur.
+fullName: ExtensionEventCallbackCollection
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: postDisable
+    uid: azure-devops-extension-api.ExtensionEventCallbackCollection.postDisable
+    package: azure-devops-extension-api
+    summary: >-
+      Optional.  Defines an endpoint that gets called via a POST request to
+      notify that an extension disable has occurred.
+    fullName: postDisable
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'postDisable: ExtensionEventCallback'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExtensionEventCallback" />
+  - name: postEnable
+    uid: azure-devops-extension-api.ExtensionEventCallbackCollection.postEnable
+    package: azure-devops-extension-api
+    summary: >-
+      Optional.  Defines an endpoint that gets called via a POST request to
+      notify that an extension enable has occurred.
+    fullName: postEnable
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'postEnable: ExtensionEventCallback'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExtensionEventCallback" />
+  - name: postInstall
+    uid: azure-devops-extension-api.ExtensionEventCallbackCollection.postInstall
+    package: azure-devops-extension-api
+    summary: >-
+      Optional.  Defines an endpoint that gets called via a POST request to
+      notify that an extension install has completed.
+    fullName: postInstall
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'postInstall: ExtensionEventCallback'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExtensionEventCallback" />
+  - name: postUninstall
+    uid: azure-devops-extension-api.ExtensionEventCallbackCollection.postUninstall
+    package: azure-devops-extension-api
+    summary: >-
+      Optional.  Defines an endpoint that gets called via a POST request to
+      notify that an extension uninstall has occurred.
+    fullName: postUninstall
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'postUninstall: ExtensionEventCallback'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExtensionEventCallback" />
+  - name: postUpdate
+    uid: azure-devops-extension-api.ExtensionEventCallbackCollection.postUpdate
+    package: azure-devops-extension-api
+    summary: >-
+      Optional.  Defines an endpoint that gets called via a POST request to
+      notify that an extension update has occurred.
+    fullName: postUpdate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'postUpdate: ExtensionEventCallback'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExtensionEventCallback" />
+  - name: preInstall
+    uid: azure-devops-extension-api.ExtensionEventCallbackCollection.preInstall
+    package: azure-devops-extension-api
+    summary: >-
+      Optional.  Defines an endpoint that gets called via a POST request to
+      notify that an extension install is about to occur.  Response indicates
+      whether to proceed or abort.
+    fullName: preInstall
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'preInstall: ExtensionEventCallback'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExtensionEventCallback" />
+  - name: versionCheck
+    uid: azure-devops-extension-api.ExtensionEventCallbackCollection.versionCheck
+    package: azure-devops-extension-api
+    summary: >-
+      For multi-version extensions, defines an endpoint that gets called via an
+      OPTIONS request to determine the particular version of the extension to be
+      used
+    fullName: versionCheck
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'versionCheck: ExtensionEventCallback'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ExtensionEventCallback" />

@@ -1,0 +1,104 @@
+### YamlMime:TSType
+name: ContributionType
+uid: azure-devops-extension-api.ContributionType
+package: azure-devops-extension-api
+summary: A contribution type, given by a json schema
+fullName: ContributionType
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: indexed
+    uid: azure-devops-extension-api.ContributionType.indexed
+    package: azure-devops-extension-api
+    summary: >-
+      Controls whether or not contributions of this type have the type indexed
+      for queries. This allows clients to find all extensions that have a
+      contribution of this type.  NOTE: Only TrustedPartners are allowed to
+      specify indexed contribution types.
+    fullName: indexed
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'indexed: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: name
+    uid: azure-devops-extension-api.ContributionType.name
+    package: azure-devops-extension-api
+    summary: Friendly name of the contribution/type
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: properties
+    uid: azure-devops-extension-api.ContributionType.properties
+    package: azure-devops-extension-api
+    summary: Describes the allowed properties for this contribution type
+    fullName: properties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'properties: {[key: string]: ContributionPropertyDescription}'
+      return:
+        description: ''
+        type: >-
+          {[key: string]: <xref
+          uid="azure-devops-extension-api.ContributionPropertyDescription" />}
+inheritedProperties:
+  - name: description
+    uid: azure-devops-extension-api.ContributionType.description
+    package: azure-devops-extension-api
+    summary: Description of the contribution/type
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContributionBase.description](xref:azure-devops-extension-api.ContributionBase.description)
+  - name: id
+    uid: azure-devops-extension-api.ContributionType.id
+    package: azure-devops-extension-api
+    summary: Fully qualified identifier of the contribution/type
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContributionBase.id](xref:azure-devops-extension-api.ContributionBase.id)
+  - name: visibleTo
+    uid: azure-devops-extension-api.ContributionType.visibleTo
+    package: azure-devops-extension-api
+    summary: >-
+      VisibleTo can be used to restrict whom can reference a given
+      contribution/type. This value should be a list of publishers or extensions
+      access is restricted too.  Examples: "ms" - Means only the "ms" publisher
+      can reference this. "ms.vss-web" - Means only the "vss-web" extension from
+      the "ms" publisher can reference this.
+    fullName: visibleTo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visibleTo: string[]'
+      return:
+        description: ''
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContributionBase.visibleTo](xref:azure-devops-extension-api.ContributionBase.visibleTo)
+extends: <xref uid="azure-devops-extension-api.ContributionBase" />

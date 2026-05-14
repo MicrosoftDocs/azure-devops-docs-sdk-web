@@ -1,0 +1,101 @@
+### YamlMime:TSType
+name: TeamSetting
+uid: azure-devops-extension-api.TeamSetting
+package: azure-devops-extension-api
+summary: Data contract for TeamSettings
+fullName: TeamSetting
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: backlogIteration
+    uid: azure-devops-extension-api.TeamSetting.backlogIteration
+    package: azure-devops-extension-api
+    summary: Backlog Iteration
+    fullName: backlogIteration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'backlogIteration: TeamSettingsIteration'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TeamSettingsIteration" />
+  - name: backlogVisibilities
+    uid: azure-devops-extension-api.TeamSetting.backlogVisibilities
+    package: azure-devops-extension-api
+    summary: Information about categories that are visible on the backlog.
+    fullName: backlogVisibilities
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'backlogVisibilities: {[key: string]: boolean}'
+      return:
+        description: ''
+        type: '{[key: string]: boolean}'
+  - name: bugsBehavior
+    uid: azure-devops-extension-api.TeamSetting.bugsBehavior
+    package: azure-devops-extension-api
+    summary: BugsBehavior (Off, AsTasks, AsRequirements, ...)
+    fullName: bugsBehavior
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bugsBehavior: BugsBehavior'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.BugsBehavior" />
+  - name: defaultIteration
+    uid: azure-devops-extension-api.TeamSetting.defaultIteration
+    package: azure-devops-extension-api
+    summary: >-
+      Default Iteration, the iteration used when creating a new work item on the
+      queries page.
+    fullName: defaultIteration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'defaultIteration: TeamSettingsIteration'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TeamSettingsIteration" />
+  - name: defaultIterationMacro
+    uid: azure-devops-extension-api.TeamSetting.defaultIterationMacro
+    package: azure-devops-extension-api
+    summary: Default Iteration macro (if any)
+    fullName: defaultIterationMacro
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'defaultIterationMacro: string'
+      return:
+        description: ''
+        type: string
+  - name: workingDays
+    uid: azure-devops-extension-api.TeamSetting.workingDays
+    package: azure-devops-extension-api
+    summary: Days that the team is working
+    fullName: workingDays
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'workingDays: DayOfWeek[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DayOfWeek" />[]
+inheritedProperties:
+  - name: url
+    uid: azure-devops-extension-api.TeamSetting.url
+    package: azure-devops-extension-api
+    summary: Full http link to the resource
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TeamSettingsDataContractBase.url](xref:azure-devops-extension-api.TeamSettingsDataContractBase.url)
+extends: <xref uid="azure-devops-extension-api.TeamSettingsDataContractBase" />

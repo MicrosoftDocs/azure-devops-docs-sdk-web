@@ -1,0 +1,41 @@
+### YamlMime:TSType
+name: CustomSettings
+uid: azure-devops-extension-api.CustomSettings
+package: azure-devops-extension-api
+summary: >-
+  settings of the widget that encapsulate their serialized data and version
+  support.
+fullName: CustomSettings
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: data
+    uid: azure-devops-extension-api.CustomSettings.data
+    package: azure-devops-extension-api
+    summary: the settings data serialized as a string.
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data: string'
+      return:
+        description: ''
+        type: string
+  - name: version
+    uid: azure-devops-extension-api.CustomSettings.version
+    package: azure-devops-extension-api
+    summary: >-
+      (Optional) version for the settings represented as a semantic version
+      object.
+
+      If none is available, the version defaults to {major:1, minor:0, patch:0}
+      or "1.0.0"
+    fullName: version
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version?: SemanticVersion'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.SemanticVersion" />

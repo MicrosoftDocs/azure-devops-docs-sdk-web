@@ -1,0 +1,304 @@
+### YamlMime:TSType
+name: FavoriteRestClient
+uid: azure-devops-extension-api.FavoriteRestClient
+package: azure-devops-extension-api
+summary: >-
+  Base class that should be used (derived from) to make requests to VSS REST
+  apis
+fullName: FavoriteRestClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: FavoriteRestClient(IVssRestClientOptions)
+    uid: azure-devops-extension-api.FavoriteRestClient.constructor
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new FavoriteRestClient(options: IVssRestClientOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
+          description: ''
+methods:
+  - name: createFavorite(FavoriteCreateParameters)
+    uid: azure-devops-extension-api.FavoriteRestClient.createFavorite
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createFavorite(favorite: FavoriteCreateParameters):
+        Promise<Favorite>
+      parameters:
+        - id: favorite
+          type: <xref uid="azure-devops-extension-api.FavoriteCreateParameters" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Favorite" />&gt;
+  - name: createFavoriteOfOwner(FavoriteCreateParameters, string, string)
+    uid: azure-devops-extension-api.FavoriteRestClient.createFavoriteOfOwner
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createFavoriteOfOwner(favorite: FavoriteCreateParameters,
+        ownerScopeType: string, ownerScopeId: string): Promise<Favorite>
+      parameters:
+        - id: favorite
+          type: <xref uid="azure-devops-extension-api.FavoriteCreateParameters" />
+          description: ''
+        - id: ownerScopeType
+          type: string
+          description: ''
+        - id: ownerScopeId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Favorite" />&gt;
+  - name: deleteFavoriteById(string, string, string, string)
+    uid: azure-devops-extension-api.FavoriteRestClient.deleteFavoriteById
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteFavoriteById(favoriteId: string, artifactType: string,
+        artifactScopeType: string, artifactScopeId?: string): Promise<void>
+      parameters:
+        - id: favoriteId
+          type: string
+          description: ''
+        - id: artifactType
+          type: string
+          description: ''
+        - id: artifactScopeType
+          type: string
+          description: ''
+        - id: artifactScopeId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: deleteFavoriteOfOwnerById(string, string, string, string, string, string)
+    uid: azure-devops-extension-api.FavoriteRestClient.deleteFavoriteOfOwnerById
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteFavoriteOfOwnerById(favoriteId: string, ownerScopeType:
+        string, ownerScopeId: string, artifactType: string, artifactScopeType:
+        string, artifactScopeId?: string): Promise<void>
+      parameters:
+        - id: favoriteId
+          type: string
+          description: ''
+        - id: ownerScopeType
+          type: string
+          description: ''
+        - id: ownerScopeId
+          type: string
+          description: ''
+        - id: artifactType
+          type: string
+          description: ''
+        - id: artifactScopeType
+          type: string
+          description: ''
+        - id: artifactScopeId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: getFavoriteByArtifact(string, string, string, string, boolean)
+    uid: azure-devops-extension-api.FavoriteRestClient.getFavoriteByArtifact
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFavoriteByArtifact(artifactType: string, artifactId: string,
+        artifactScopeType: string, artifactScopeId?: string,
+        includeExtendedDetails?: boolean): Promise<Favorite>
+      parameters:
+        - id: artifactType
+          type: string
+          description: ''
+        - id: artifactId
+          type: string
+          description: ''
+        - id: artifactScopeType
+          type: string
+          description: ''
+        - id: artifactScopeId
+          type: string
+          description: ''
+        - id: includeExtendedDetails
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Favorite" />&gt;
+  - name: getFavoriteById(string, string, string, string, boolean)
+    uid: azure-devops-extension-api.FavoriteRestClient.getFavoriteById
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFavoriteById(favoriteId: string, artifactScopeType: string,
+        artifactType: string, artifactScopeId?: string, includeExtendedDetails?:
+        boolean): Promise<Favorite>
+      parameters:
+        - id: favoriteId
+          type: string
+          description: ''
+        - id: artifactScopeType
+          type: string
+          description: ''
+        - id: artifactType
+          type: string
+          description: ''
+        - id: artifactScopeId
+          type: string
+          description: ''
+        - id: includeExtendedDetails
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Favorite" />&gt;
+  - name: >-
+      getFavoriteOfOwnerById(string, string, string, string, string, string,
+      boolean)
+    uid: azure-devops-extension-api.FavoriteRestClient.getFavoriteOfOwnerById
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFavoriteOfOwnerById(favoriteId: string, ownerScopeType:
+        string, ownerScopeId: string, artifactScopeType: string, artifactType:
+        string, artifactScopeId?: string, includeExtendedDetails?: boolean):
+        Promise<Favorite>
+      parameters:
+        - id: favoriteId
+          type: string
+          description: ''
+        - id: ownerScopeType
+          type: string
+          description: ''
+        - id: ownerScopeId
+          type: string
+          description: ''
+        - id: artifactScopeType
+          type: string
+          description: ''
+        - id: artifactType
+          type: string
+          description: ''
+        - id: artifactScopeId
+          type: string
+          description: ''
+        - id: includeExtendedDetails
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Favorite" />&gt;
+  - name: getFavoriteProviders(boolean)
+    uid: azure-devops-extension-api.FavoriteRestClient.getFavoriteProviders
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFavoriteProviders(faultInMissingHost?: boolean):
+        Promise<FavoriteProvider[]>
+      parameters:
+        - id: faultInMissingHost
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.FavoriteProvider"
+          />[]&gt;
+  - name: getFavorites(string, string, string, boolean)
+    uid: azure-devops-extension-api.FavoriteRestClient.getFavorites
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFavorites(artifactType?: string, artifactScopeType?: string,
+        artifactScopeId?: string, includeExtendedDetails?: boolean):
+        Promise<Favorite[]>
+      parameters:
+        - id: artifactType
+          type: string
+          description: ''
+        - id: artifactScopeType
+          type: string
+          description: ''
+        - id: artifactScopeId
+          type: string
+          description: ''
+        - id: includeExtendedDetails
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Favorite" />[]&gt;
+  - name: getFavoritesOfOwner(string, string, string, string, string, boolean)
+    uid: azure-devops-extension-api.FavoriteRestClient.getFavoritesOfOwner
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFavoritesOfOwner(ownerScopeType: string, ownerScopeId:
+        string, artifactType?: string, artifactScopeType?: string,
+        artifactScopeId?: string, includeExtendedDetails?: boolean):
+        Promise<Favorite[]>
+      parameters:
+        - id: ownerScopeType
+          type: string
+          description: ''
+        - id: ownerScopeId
+          type: string
+          description: ''
+        - id: artifactType
+          type: string
+          description: ''
+        - id: artifactScopeType
+          type: string
+          description: ''
+        - id: artifactScopeId
+          type: string
+          description: ''
+        - id: includeExtendedDetails
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Favorite" />[]&gt;
+extends: <xref uid="azure-devops-extension-api.RestClientBase" />

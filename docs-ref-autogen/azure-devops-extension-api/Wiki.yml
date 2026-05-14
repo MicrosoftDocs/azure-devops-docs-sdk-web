@@ -1,0 +1,82 @@
+### YamlMime:TSType
+name: Wiki
+uid: azure-devops-extension-api.Wiki
+package: azure-devops-extension-api
+summary: >-
+  Defines a wiki repository which encapsulates the git repository backing the
+  wiki.
+fullName: Wiki
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: headCommit
+    uid: azure-devops-extension-api.Wiki.headCommit
+    package: azure-devops-extension-api
+    summary: The head commit associated with the git repository backing up the wiki.
+    fullName: headCommit
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'headCommit: string'
+      return:
+        description: ''
+        type: string
+  - name: id
+    uid: azure-devops-extension-api.Wiki.id
+    package: azure-devops-extension-api
+    summary: >-
+      The ID of the wiki which is same as the ID of the Git repository that it
+      is backed by.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: repository
+    uid: azure-devops-extension-api.Wiki.repository
+    package: azure-devops-extension-api
+    summary: The git repository that backs up the wiki.
+    fullName: repository
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repository: GitRepository'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitRepository" />
+inheritedProperties:
+  - name: name
+    uid: azure-devops-extension-api.Wiki.name
+    package: azure-devops-extension-api
+    summary: Wiki name.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiCreateParameters.name](xref:azure-devops-extension-api.WikiCreateParameters.name)
+  - name: projectId
+    uid: azure-devops-extension-api.Wiki.projectId
+    package: azure-devops-extension-api
+    summary: ID of the project in which the wiki is to be created.
+    fullName: projectId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [WikiCreateParameters.projectId](xref:azure-devops-extension-api.WikiCreateParameters.projectId)
+extends: <xref uid="azure-devops-extension-api.WikiCreateParameters" />

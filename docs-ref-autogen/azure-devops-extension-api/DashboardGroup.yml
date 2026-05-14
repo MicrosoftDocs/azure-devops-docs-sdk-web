@@ -1,0 +1,66 @@
+### YamlMime:TSType
+name: DashboardGroup
+uid: azure-devops-extension-api.DashboardGroup
+package: azure-devops-extension-api
+summary: >-
+  Describes a list of dashboards associated to an owner. Currently, teams own
+  dashboard groups.
+fullName: DashboardGroup
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: dashboardEntries
+    uid: azure-devops-extension-api.DashboardGroup.dashboardEntries
+    package: azure-devops-extension-api
+    summary: A list of Dashboards held by the Dashboard Group
+    fullName: dashboardEntries
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dashboardEntries: DashboardGroupEntry[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DashboardGroupEntry" />[]
+  - name: permission
+    uid: azure-devops-extension-api.DashboardGroup.permission
+    package: azure-devops-extension-api
+    summary: >-
+      Deprecated: The old permission model describing the level of permissions
+      for the current team. Pre-M125.
+    fullName: permission
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'permission: GroupMemberPermission'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GroupMemberPermission" />
+  - name: teamDashboardPermission
+    uid: azure-devops-extension-api.DashboardGroup.teamDashboardPermission
+    package: azure-devops-extension-api
+    summary: >-
+      A permissions bit mask describing the security permissions of the current
+      team for dashboards. When this permission is the value None, use
+      GroupMemberPermission. Permissions are evaluated based on the presence of
+      a value other than None, else the GroupMemberPermission will be saved.
+    fullName: teamDashboardPermission
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'teamDashboardPermission: TeamDashboardPermission'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TeamDashboardPermission" />
+  - name: url
+    uid: azure-devops-extension-api.DashboardGroup.url
+    package: azure-devops-extension-api
+    summary: ''
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string

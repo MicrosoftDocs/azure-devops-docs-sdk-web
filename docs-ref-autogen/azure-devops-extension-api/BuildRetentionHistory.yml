@@ -1,0 +1,28 @@
+### YamlMime:TSType
+name: BuildRetentionHistory
+uid: azure-devops-extension-api.BuildRetentionHistory
+package: azure-devops-extension-api
+summary: >-
+  A historical overview of build retention information. This includes a list of
+  snapshots taken about build retention usage, and a list of builds that have
+  exceeded the default 30 day retention policy.
+fullName: BuildRetentionHistory
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: buildRetentionSamples
+    uid: azure-devops-extension-api.BuildRetentionHistory.buildRetentionSamples
+    package: azure-devops-extension-api
+    summary: >-
+      A list of builds that are older than the default retention policy, but are
+      not marked as retained. Something is causing these builds to not get
+      cleaned up.
+    fullName: buildRetentionSamples
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'buildRetentionSamples: BuildRetentionSample[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.BuildRetentionSample" />[]
