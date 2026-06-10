@@ -1,0 +1,40 @@
+### YamlMime:TSType
+name: TaskAgentSkuUsageSummaryResult
+uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryResult
+package: azure-devops-extension-api
+summary: >-
+  Result of a SKU usage query. Contains the original query and the ranked usage
+  rows.
+fullName: TaskAgentSkuUsageSummaryResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: query
+    uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryResult.query
+    package: azure-devops-extension-api
+    summary: The query that produced this result.
+    fullName: query
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'query: TaskAgentSkuUsageSummaryQuery'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery"
+          />
+  - name: usages
+    uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryResult.usages
+    package: azure-devops-extension-api
+    summary: >-
+      Ranked usage rows, ordered by MeterId then rank. Each SKU has its own
+      independent top-N ranking.
+    fullName: usages
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'usages: TaskAgentSkuUsageRow[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentSkuUsageRow" />[]

@@ -1,0 +1,38 @@
+### YamlMime:TSEnum
+name: AutofixRequestStatus
+uid: azure-devops-extension-api.AutofixRequestStatus
+package: azure-devops-extension-api
+summary: >-
+  Indicates the lifecycle status of an autofix request. Maps to TINYINT in the
+  database.
+fullName: AutofixRequestStatus
+remarks: ''
+isDeprecated: false
+fields:
+  - name: None
+    uid: azure-devops-extension-api.AutofixRequestStatus.None
+    package: azure-devops-extension-api
+    summary: Default sentinel value; not a valid operational status.
+    numericValue: 0
+  - name: Pending
+    uid: azure-devops-extension-api.AutofixRequestStatus.Pending
+    package: azure-devops-extension-api
+    summary: >-
+      The request has been created and is waiting for a pipeline to be
+      triggered.
+    numericValue: 1
+  - name: PipelineRunning
+    uid: azure-devops-extension-api.AutofixRequestStatus.PipelineRunning
+    package: azure-devops-extension-api
+    summary: The pipeline has been triggered and is currently running.
+    numericValue: 2
+  - name: Done
+    uid: azure-devops-extension-api.AutofixRequestStatus.Done
+    package: azure-devops-extension-api
+    summary: The pipeline completed successfully and a pull request was created.
+    numericValue: 3
+  - name: Failed
+    uid: azure-devops-extension-api.AutofixRequestStatus.Failed
+    package: azure-devops-extension-api
+    summary: The pipeline or post-processing failed.
+    numericValue: 4

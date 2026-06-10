@@ -1,0 +1,48 @@
+### YamlMime:TSType
+name: TaskAgentSkuUsageRow
+uid: azure-devops-extension-api.TaskAgentSkuUsageRow
+package: azure-devops-extension-api
+summary: A single ranked usage entry for one dimension value within one SKU.
+fullName: TaskAgentSkuUsageRow
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: dimensionValue
+    uid: azure-devops-extension-api.TaskAgentSkuUsageRow.dimensionValue
+    package: azure-devops-extension-api
+    summary: >-
+      The value of the grouped dimension for this row (e.g. a project GUID
+      string, a definition ID string).
+    fullName: dimensionValue
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dimensionValue: string'
+      return:
+        description: ''
+        type: string
+  - name: rank
+    uid: azure-devops-extension-api.TaskAgentSkuUsageRow.rank
+    package: azure-devops-extension-api
+    summary: Rank within its SKU (1 = highest usage).
+    fullName: rank
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rank: number'
+      return:
+        description: ''
+        type: number
+  - name: usage
+    uid: azure-devops-extension-api.TaskAgentSkuUsageRow.usage
+    package: azure-devops-extension-api
+    summary: 'The usage data: MeterId, SkuName, unit, and total value.'
+    fullName: usage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'usage: TaskAgentSkuUsage'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentSkuUsage" />
