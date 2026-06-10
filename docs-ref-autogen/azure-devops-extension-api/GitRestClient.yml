@@ -4359,6 +4359,27 @@ methods:
       return:
         description: ''
         type: Promise&lt;ArrayBuffer&gt;
+  - name: initializeAutofixIdentity(string)
+    uid: azure-devops-extension-api.GitRestClient.initializeAutofixIdentity
+    package: azure-devops-extension-api
+    summary: >-
+      POST Creates (if needed) the AdvSec Autofix framework identity and grants
+      it permissions. If projectId is provided, grants scoped to that project
+      only. Otherwise initializes the identity for every project in the
+      organization.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function initializeAutofixIdentity(projectId?: string): Promise<void>'
+      parameters:
+        - id: projectId
+          type: string
+          description: >-
+            Optional project GUID. When omitted, all projects in the
+            organization are initialized.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: queryImportRequests(string, string, boolean)
     uid: azure-devops-extension-api.GitRestClient.queryImportRequests
     package: azure-devops-extension-api

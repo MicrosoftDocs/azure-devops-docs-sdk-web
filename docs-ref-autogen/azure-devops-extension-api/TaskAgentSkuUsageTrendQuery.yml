@@ -1,0 +1,88 @@
+### YamlMime:TSType
+name: TaskAgentSkuUsageTrendQuery
+uid: azure-devops-extension-api.TaskAgentSkuUsageTrendQuery
+package: azure-devops-extension-api
+summary: >-
+  Query for daily SKU usage trend data on an agent cloud pool. Returns one row
+  per day per meter with total billed minutes.
+fullName: TaskAgentSkuUsageTrendQuery
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: endTimeExclusive
+    uid: azure-devops-extension-api.TaskAgentSkuUsageTrendQuery.endTimeExclusive
+    package: azure-devops-extension-api
+    summary: End of the time range (exclusive).
+    fullName: endTimeExclusive
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'endTimeExclusive: Date'
+      return:
+        description: ''
+        type: Date
+  - name: meterIds
+    uid: azure-devops-extension-api.TaskAgentSkuUsageTrendQuery.meterIds
+    package: azure-devops-extension-api
+    summary: >-
+      Optional list of SKU meter IDs to get trend data for. When empty, all
+      meters are returned.
+    fullName: meterIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'meterIds: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: poolId
+    uid: azure-devops-extension-api.TaskAgentSkuUsageTrendQuery.poolId
+    package: azure-devops-extension-api
+    summary: The pool to query usage for.
+    fullName: poolId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'poolId: number'
+      return:
+        description: ''
+        type: number
+  - name: queueId
+    uid: azure-devops-extension-api.TaskAgentSkuUsageTrendQuery.queueId
+    package: azure-devops-extension-api
+    summary: 'Optional: restrict to a specific queue.'
+    fullName: queueId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'queueId: number'
+      return:
+        description: ''
+        type: number
+  - name: resolutionMinutes
+    uid: azure-devops-extension-api.TaskAgentSkuUsageTrendQuery.resolutionMinutes
+    package: azure-devops-extension-api
+    summary: >-
+      Time bucket size in minutes. 60=hourly, 360=6h, 720=12h, 1440=daily.
+      Defaults to 1440 (daily).
+    fullName: resolutionMinutes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resolutionMinutes: number'
+      return:
+        description: ''
+        type: number
+  - name: startTimeInclusive
+    uid: azure-devops-extension-api.TaskAgentSkuUsageTrendQuery.startTimeInclusive
+    package: azure-devops-extension-api
+    summary: Start of the time range (inclusive).
+    fullName: startTimeInclusive
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'startTimeInclusive: Date'
+      return:
+        description: ''
+        type: Date

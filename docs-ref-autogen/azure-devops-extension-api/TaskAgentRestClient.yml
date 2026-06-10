@@ -3743,6 +3743,35 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.EnvironmentInstance"
           />&gt;
+  - name: >-
+      updateQueueRestrictedImageLabels(TaskAgentQueueRestrictions, string,
+      number)
+    uid: >-
+      azure-devops-extension-api.TaskAgentRestClient.updateQueueRestrictedImageLabels
+    package: azure-devops-extension-api
+    summary: Update the restricted image labels for an agent queue.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateQueueRestrictedImageLabels(restriction:
+        TaskAgentQueueRestrictions, project: string, queueId: number):
+        Promise<TaskAgentQueueRestrictions>
+      parameters:
+        - id: restriction
+          type: <xref uid="azure-devops-extension-api.TaskAgentQueueRestrictions" />
+          description: The restricted image labels wrapper
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: queueId
+          type: number
+          description: The agent queue to update
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TaskAgentQueueRestrictions" />&gt;
   - name: updateSecureFile(SecureFile, string, string)
     uid: azure-devops-extension-api.TaskAgentRestClient.updateSecureFile
     package: azure-devops-extension-api

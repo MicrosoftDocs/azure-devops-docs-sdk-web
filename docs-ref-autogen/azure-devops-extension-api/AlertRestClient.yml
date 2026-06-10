@@ -23,6 +23,37 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
+  - name: autofixCallback(AutofixCallbackRequest, string, string, number)
+    uid: azure-devops-extension-api.AlertRestClient.autofixCallback
+    package: azure-devops-extension-api
+    summary: >-
+      Receives a callback from the autofix pipeline with the outcome of the run.
+      Idempotent: repeated calls for a request already in a terminal state
+      return 200 without changes.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function autofixCallback(callbackRequest: AutofixCallbackRequest,
+        project: string, repository: string, alertId: number): Promise<void>
+      parameters:
+        - id: callbackRequest
+          type: <xref uid="azure-devops-extension-api.AutofixCallbackRequest" />
+          description: >-
+            The callback payload containing requestId, status, and optional
+            pullRequestId.
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository.
+        - id: alertId
+          type: number
+          description: The ID of the alert to create an autofix for.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: createAutofixRequest(string, number, string)
     uid: azure-devops-extension-api.AlertRestClient.createAutofixRequest
     package: azure-devops-extension-api
@@ -368,6 +399,31 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />[]&gt;
+  - name: getAutofixRequestsByAlertId(string, number, string)
+    uid: azure-devops-extension-api.AlertRestClient.getAutofixRequestsByAlertId
+    package: azure-devops-extension-api
+    summary: Get all autofix requests for the specified alert.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAutofixRequestsByAlertId(project: string, alertId: number,
+        repository: string): Promise<AutofixRequest[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: alertId
+          type: number
+          description: The ID of the alert.
+        - id: repository
+          type: string
+          description: The name or ID of the repository.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.AutofixRequest"
+          />[]&gt;
   - name: getBranches(string, string, AlertType, string, string, number, boolean)
     uid: azure-devops-extension-api.AlertRestClient.getBranches
     package: azure-devops-extension-api

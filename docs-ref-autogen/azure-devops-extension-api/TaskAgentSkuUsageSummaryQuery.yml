@@ -1,0 +1,117 @@
+### YamlMime:TSType
+name: TaskAgentSkuUsageSummaryQuery
+uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery
+package: azure-devops-extension-api
+summary: >-
+  Query for SKU usage statistics on an agent cloud pool. Groups billing data by
+  a specified dimension and returns the top N consumers per SKU, ranked by total
+  billed minutes.
+fullName: TaskAgentSkuUsageSummaryQuery
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: endTimeExclusive
+    uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery.endTimeExclusive
+    package: azure-devops-extension-api
+    summary: End of the time range (exclusive).
+    fullName: endTimeExclusive
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'endTimeExclusive: Date'
+      return:
+        description: ''
+        type: Date
+  - name: groupBy
+    uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery.groupBy
+    package: azure-devops-extension-api
+    summary: The billing dimension to group and rank results by.
+    fullName: groupBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'groupBy: TaskAgentSkuUsageDimension'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentSkuUsageDimension" />
+  - name: meterIds
+    uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery.meterIds
+    package: azure-devops-extension-api
+    summary: >-
+      Optional: restrict to specific SKUs. Null or empty means all SKUs. When
+      multiple MeterIds are provided, results are ranked independently per SKU.
+    fullName: meterIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'meterIds: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: poolId
+    uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery.poolId
+    package: azure-devops-extension-api
+    summary: The pool to query usage for.
+    fullName: poolId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'poolId: number'
+      return:
+        description: ''
+        type: number
+  - name: queueId
+    uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery.queueId
+    package: azure-devops-extension-api
+    summary: >-
+      Optional: narrow results to a specific queue before grouping. Only valid
+      when GroupBy is DefinitionId. The queue implicitly identifies the project.
+    fullName: queueId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'queueId: number'
+      return:
+        description: ''
+        type: number
+  - name: scopeIdentifier
+    uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery.scopeIdentifier
+    package: azure-devops-extension-api
+    summary: >-
+      Optional: narrow results to a specific project before grouping. Typically
+      used when drilling down from pool → project, with GroupBy set to
+      DefinitionId to see pipelines within that project.
+    fullName: scopeIdentifier
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scopeIdentifier: string'
+      return:
+        description: ''
+        type: string
+  - name: startTimeInclusive
+    uid: >-
+      azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery.startTimeInclusive
+    package: azure-devops-extension-api
+    summary: Start of the time range (inclusive).
+    fullName: startTimeInclusive
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'startTimeInclusive: Date'
+      return:
+        description: ''
+        type: Date
+  - name: topN
+    uid: azure-devops-extension-api.TaskAgentSkuUsageSummaryQuery.topN
+    package: azure-devops-extension-api
+    summary: Maximum results per SKU. Defaults to 5 server-side.
+    fullName: topN
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'topN: number'
+      return:
+        description: ''
+        type: number

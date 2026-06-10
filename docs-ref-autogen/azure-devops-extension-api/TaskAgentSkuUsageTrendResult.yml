@@ -1,0 +1,40 @@
+### YamlMime:TSType
+name: TaskAgentSkuUsageTrendResult
+uid: azure-devops-extension-api.TaskAgentSkuUsageTrendResult
+package: azure-devops-extension-api
+summary: >-
+  Result of a SKU usage trend query. Contains the original query and the daily
+  usage data points.
+fullName: TaskAgentSkuUsageTrendResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: points
+    uid: azure-devops-extension-api.TaskAgentSkuUsageTrendResult.points
+    package: azure-devops-extension-api
+    summary: >-
+      Usage data points, ordered by date ascending. Buckets with no usage are
+      not included.
+    fullName: points
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'points: TaskAgentSkuUsageTrendPoint[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.TaskAgentSkuUsageTrendPoint"
+          />[]
+  - name: query
+    uid: azure-devops-extension-api.TaskAgentSkuUsageTrendResult.query
+    package: azure-devops-extension-api
+    summary: The query that produced this result.
+    fullName: query
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'query: TaskAgentSkuUsageTrendQuery'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.TaskAgentSkuUsageTrendQuery" />
