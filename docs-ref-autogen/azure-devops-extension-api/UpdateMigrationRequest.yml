@@ -1,0 +1,81 @@
+### YamlMime:TSType
+name: UpdateMigrationRequest
+uid: azure-devops-extension-api.UpdateMigrationRequest
+package: azure-devops-extension-api
+summary: Request to update an Enterprise Live Migration.
+fullName: UpdateMigrationRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: cutoverFailureAcceptedCount
+    uid: >-
+      azure-devops-extension-api.UpdateMigrationRequest.cutoverFailureAcceptedCount
+    package: azure-devops-extension-api
+    summary: >-
+      The number of failed and blocked resources the user has reviewed and
+      accepted. Required when approving cutover for a migration in the
+      ReviewForCutover stage. Must match the current total failure count;
+      rejected if the count has changed. Set to int.MaxValue to accept all
+      failures (requires AllowBlanketCutoverApproval feature flag).
+    fullName: cutoverFailureAcceptedCount
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cutoverFailureAcceptedCount: number'
+      return:
+        description: ''
+        type: number
+  - name: pipelinesVerified
+    uid: azure-devops-extension-api.UpdateMigrationRequest.pipelinesVerified
+    package: azure-devops-extension-api
+    summary: >-
+      Set to true to acknowledge that all rewired pipelines have been verified.
+      Required for cutover when RequiresPipelineVerificationAcknowledgment is
+      true. Independent of CutoverFailureAcceptedCount.
+    fullName: pipelinesVerified
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pipelinesVerified: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: scheduledCutoverDate
+    uid: azure-devops-extension-api.UpdateMigrationRequest.scheduledCutoverDate
+    package: azure-devops-extension-api
+    summary: The UTC date/time representing when the cutover is to occur.
+    fullName: scheduledCutoverDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scheduledCutoverDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: statusRequested
+    uid: azure-devops-extension-api.UpdateMigrationRequest.statusRequested
+    package: azure-devops-extension-api
+    summary: >-
+      The status requested for the migration. Allowed values are "Active" and
+      "Paused".
+    fullName: statusRequested
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'statusRequested: MigrationStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.MigrationStatus" />
+  - name: validateOnly
+    uid: azure-devops-extension-api.UpdateMigrationRequest.validateOnly
+    package: azure-devops-extension-api
+    summary: True if the migration should only perform pre-migration validation.
+    fullName: validateOnly
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'validateOnly: boolean'
+      return:
+        description: ''
+        type: boolean

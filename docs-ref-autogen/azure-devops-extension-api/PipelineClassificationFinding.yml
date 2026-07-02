@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: PipelineClassificationFinding
+uid: azure-devops-extension-api.PipelineClassificationFinding
+package: azure-devops-extension-api
+summary: >-
+  A classification finding for a pipeline. Each finding represents a
+  characteristic that makes the pipeline complex (e.g., cross-repo references,
+  multi-checkout). A pipeline with zero findings is Simple.
+fullName: PipelineClassificationFinding
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: affectedRepositories
+    uid: >-
+      azure-devops-extension-api.PipelineClassificationFinding.affectedRepositories
+    package: azure-devops-extension-api
+    summary: External repositories involved in the finding, if any.
+    fullName: affectedRepositories
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'affectedRepositories: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: description
+    uid: azure-devops-extension-api.PipelineClassificationFinding.description
+    package: azure-devops-extension-api
+    summary: User-facing description of the issue.
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description: string'
+      return:
+        description: ''
+        type: string
+  - name: ruleName
+    uid: azure-devops-extension-api.PipelineClassificationFinding.ruleName
+    package: azure-devops-extension-api
+    summary: Short stable identifier for the rule that produced this finding.
+    fullName: ruleName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ruleName: string'
+      return:
+        description: ''
+        type: string

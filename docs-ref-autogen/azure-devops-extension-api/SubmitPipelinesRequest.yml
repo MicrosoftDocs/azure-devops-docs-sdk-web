@@ -1,0 +1,55 @@
+### YamlMime:TSType
+name: SubmitPipelinesRequest
+uid: azure-devops-extension-api.SubmitPipelinesRequest
+package: azure-devops-extension-api
+summary: >-
+  Request to submit pipelines for rewiring as part of an Enterprise Live
+  Migration.
+fullName: SubmitPipelinesRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: pipelineIds
+    uid: azure-devops-extension-api.SubmitPipelinesRequest.pipelineIds
+    package: azure-devops-extension-api
+    summary: The build definition IDs of the pipelines to rewire.
+    fullName: pipelineIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pipelineIds: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: repositoryMappings
+    uid: azure-devops-extension-api.SubmitPipelinesRequest.repositoryMappings
+    package: azure-devops-extension-api
+    summary: >-
+      Optional mappings for cross-repo references. When a pipeline's YAML
+      references another AzDO repository (via resources.repositories), this
+      mapping tells us which GitHub repository it corresponds to. Not required
+      for simple pipelines.
+    fullName: repositoryMappings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryMappings: RepositoryMapping[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.RepositoryMapping" />[]
+  - name: serviceConnectionId
+    uid: azure-devops-extension-api.SubmitPipelinesRequest.serviceConnectionId
+    package: azure-devops-extension-api
+    summary: >-
+      The ID of the GitHub service connection to use for the rewired pipelines.
+      This must be a project-scoped service connection with access to the target
+      GitHub org. This is separate from the migration-level ServiceEndpointId.
+    fullName: serviceConnectionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'serviceConnectionId: string'
+      return:
+        description: ''
+        type: string

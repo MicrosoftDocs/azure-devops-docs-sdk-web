@@ -140,6 +140,7 @@ enums:
   - azure-devops-extension-api.IndentAction
   - azure-devops-extension-api.CommentThreadStatus
   - azure-devops-extension-api.CommentType
+  - azure-devops-extension-api.ElmMigrationOption
   - azure-devops-extension-api.GitAsyncOperationStatus
   - azure-devops-extension-api.GitAsyncRefOperationFailureStatus
   - azure-devops-extension-api.GitConflictType
@@ -166,11 +167,16 @@ enums:
   - azure-devops-extension-api.ItemContentType
   - azure-devops-extension-api.IterationReason
   - azure-devops-extension-api.LineDiffBlockChangeType
+  - azure-devops-extension-api.MigrationStage
+  - azure-devops-extension-api.MigrationStatus
+  - azure-devops-extension-api.PipelineClassification
+  - azure-devops-extension-api.PipelineRewireStatus
   - azure-devops-extension-api.PullRequestAsyncStatus
   - azure-devops-extension-api.PullRequestMergeFailureType
   - azure-devops-extension-api.PullRequestStatus
   - azure-devops-extension-api.PullRequestTimeRangeType
   - azure-devops-extension-api.RefFavoriteType
+  - azure-devops-extension-api.SkipValidationPolicy
   - azure-devops-extension-api.SupportedIdeType
   - azure-devops-extension-api.TagsFilterOperator
   - azure-devops-extension-api.TfvcVersionOption
@@ -916,7 +922,12 @@ interfaces:
   - azure-devops-extension-api.CommentThreadContext
   - azure-devops-extension-api.CommentTrackingCriteria
   - azure-devops-extension-api.CompletionErrorsEvent
+  - azure-devops-extension-api.CreateMigrationRequest
+  - azure-devops-extension-api.CutoverReviewItem
+  - azure-devops-extension-api.CutoverReviewResponse
   - azure-devops-extension-api.DiscussionsUpdatedEvent
+  - azure-devops-extension-api.ElmConfigOptions
+  - azure-devops-extension-api.ElmSkipValidationOptions
   - azure-devops-extension-api.FileContentMetadata
   - azure-devops-extension-api.FileDiff
   - azure-devops-extension-api.FileDiffDetail
@@ -1042,10 +1053,16 @@ interfaces:
   - azure-devops-extension-api.LineDiffBlock
   - azure-devops-extension-api.LineDiffBlockDetail
   - azure-devops-extension-api.MergeCompletedEvent
+  - azure-devops-extension-api.Migration
+  - azure-devops-extension-api.PipelineClassificationFinding
+  - azure-devops-extension-api.PipelineRewireEntry
+  - azure-devops-extension-api.PipelineRewireResponse
   - azure-devops-extension-api.PolicyEvaluationUpdatedEvent
   - azure-devops-extension-api.PullRequestCreatedEvent
   - azure-devops-extension-api.PullRequestTabExtensionConfig
   - azure-devops-extension-api.RealTimePullRequestEvent
+  - azure-devops-extension-api.RepositoryMapping
+  - azure-devops-extension-api.RepositoryReference
   - azure-devops-extension-api.RetargetEvent
   - azure-devops-extension-api.ReviewerVoteUpdatedEvent
   - azure-devops-extension-api.ReviewersUpdatedEvent
@@ -1055,6 +1072,7 @@ interfaces:
   - azure-devops-extension-api.StatusAddedEvent
   - azure-devops-extension-api.StatusUpdatedEvent
   - azure-devops-extension-api.StatusesDeletedEvent
+  - azure-devops-extension-api.SubmitPipelinesRequest
   - azure-devops-extension-api.SupportedIde
   - azure-devops-extension-api.TfvcBranch
   - azure-devops-extension-api.TfvcBranchMapping
@@ -1084,6 +1102,8 @@ interfaces:
   - azure-devops-extension-api.TfvcStatistics
   - azure-devops-extension-api.TfvcVersionDescriptor
   - azure-devops-extension-api.TitleDescriptionUpdatedEvent
+  - azure-devops-extension-api.UpdateMigrationRequest
+  - azure-devops-extension-api.UpdatePipelinesRequest
   - azure-devops-extension-api.UpdateRefsRequest
   - azure-devops-extension-api.VersionControlProjectInfo
   - azure-devops-extension-api.IVersionControlRepositoryService

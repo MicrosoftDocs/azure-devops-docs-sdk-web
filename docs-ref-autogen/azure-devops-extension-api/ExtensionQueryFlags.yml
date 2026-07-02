@@ -153,3 +153,13 @@ fields:
     package: azure-devops-extension-api
     summary: Include deleted extensions in the result set, and usage is only internal.
     numericValue: 131072
+  - name: PreferLatestVsApiVersion
+    uid: azure-devops-extension-api.ExtensionQueryFlags.PreferLatestVsApiVersion
+    package: azure-devops-extension-api
+    summary: >-
+      VS extensions define an "API Version" as the min version of VS that the
+      extension supports. This is relevant for multiple payloads per entry with
+      VS extensions, where the VS IDE wants to prioritize matching the closest
+      VS API version over the latest extension version. With this flag set,
+      newest extension version is the second dimension used for sorting.
+    numericValue: 262144

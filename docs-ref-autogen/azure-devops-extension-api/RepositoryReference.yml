@@ -1,0 +1,51 @@
+### YamlMime:TSType
+name: RepositoryReference
+uid: azure-devops-extension-api.RepositoryReference
+package: azure-devops-extension-api
+summary: >-
+  Describes a repository referenced by a pipeline that may need a mapping for
+  cross-repo rewiring. Surfaced in RequiredMappings when the pipeline status is
+  NeedsMappings.
+fullName: RepositoryReference
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: repositoryId
+    uid: azure-devops-extension-api.RepositoryReference.repositoryId
+    package: azure-devops-extension-api
+    summary: The AzDO repository GUID, if resolvable.
+    fullName: repositoryId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryId: string'
+      return:
+        description: ''
+        type: string
+  - name: repositoryName
+    uid: azure-devops-extension-api.RepositoryReference.repositoryName
+    package: azure-devops-extension-api
+    summary: >-
+      The repository name as referenced in the YAML (e.g.
+      "MyProject/TemplatesRepo").
+    fullName: repositoryName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryName: string'
+      return:
+        description: ''
+        type: string
+  - name: repositoryType
+    uid: azure-devops-extension-api.RepositoryReference.repositoryType
+    package: azure-devops-extension-api
+    summary: The repository type as declared in the YAML (e.g. "git", "github").
+    fullName: repositoryType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryType: string'
+      return:
+        description: ''
+        type: string

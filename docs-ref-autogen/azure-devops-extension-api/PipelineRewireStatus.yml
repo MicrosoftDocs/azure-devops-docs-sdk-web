@@ -1,0 +1,70 @@
+### YamlMime:TSEnum
+name: PipelineRewireStatus
+uid: azure-devops-extension-api.PipelineRewireStatus
+package: azure-devops-extension-api
+summary: The rewiring status of a pipeline.
+fullName: PipelineRewireStatus
+remarks: ''
+isDeprecated: false
+fields:
+  - name: Pending
+    uid: azure-devops-extension-api.PipelineRewireStatus.Pending
+    package: azure-devops-extension-api
+    summary: Pipeline has been submitted but classification has not started.
+    numericValue: 0
+  - name: Classifying
+    uid: azure-devops-extension-api.PipelineRewireStatus.Classifying
+    package: azure-devops-extension-api
+    summary: Pipeline is being classified.
+    numericValue: 1
+  - name: PreCheckPassed
+    uid: azure-devops-extension-api.PipelineRewireStatus.PreCheckPassed
+    package: azure-devops-extension-api
+    summary: Pre-checks passed. Ready for rewiring.
+    numericValue: 2
+  - name: PreCheckFailed
+    uid: azure-devops-extension-api.PipelineRewireStatus.PreCheckFailed
+    package: azure-devops-extension-api
+    summary: Pre-checks failed.
+    numericValue: 3
+  - name: NeedsMappings
+    uid: azure-devops-extension-api.PipelineRewireStatus.NeedsMappings
+    package: azure-devops-extension-api
+    summary: >-
+      Pipeline has cross-repo references that require repository mappings from
+      the user.
+    numericValue: 4
+  - name: CloneCreated
+    uid: azure-devops-extension-api.PipelineRewireStatus.CloneCreated
+    package: azure-devops-extension-api
+    summary: A clone definition has been created for testing.
+    numericValue: 5
+  - name: Rewired
+    uid: azure-devops-extension-api.PipelineRewireStatus.Rewired
+    package: azure-devops-extension-api
+    summary: >-
+      Rewiring is complete — clone created and ready or original swapped at
+      cutover.
+    numericValue: 8
+  - name: SwapComplete
+    uid: azure-devops-extension-api.PipelineRewireStatus.SwapComplete
+    package: azure-devops-extension-api
+    summary: >-
+      The original pipeline has been swapped to point at GitHub. Cutover
+      complete.
+    numericValue: 9
+  - name: Failed
+    uid: azure-devops-extension-api.PipelineRewireStatus.Failed
+    package: azure-devops-extension-api
+    summary: Rewiring failed.
+    numericValue: 10
+  - name: AwaitingCodeSync
+    uid: azure-devops-extension-api.PipelineRewireStatus.AwaitingCodeSync
+    package: azure-devops-extension-api
+    summary: >-
+      Clone YAML has been written to the AzDO source repo's
+      \<c\>elm/migrations\</c\> branch and is waiting for ELM code sync to
+      mirror it to GitHub before the clone BuildDefinition can be created. Each
+      sync cycle re-checks GitHub for the snapshotted commit; once visible the
+      entry advances to CloneCreated.
+    numericValue: 11
