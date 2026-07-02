@@ -24,10 +24,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'sdkVersion: 4.2'
+      content: 'sdkVersion: 5'
       return:
         description: ''
-        type: <xref uid="4.2" />
+        type: '5'
 functions:
   - name: 'applyTheme({[varName: string]: string})'
     uid: azure-devops-extension-sdk.applyTheme
@@ -41,6 +41,51 @@ functions:
         - id: themeData
           type: '{[varName: string]: string}'
           description: ''
+  - name: disableNestedAppAuth()
+    uid: azure-devops-extension-sdk.disableNestedAppAuth
+    package: azure-devops-extension-sdk
+    summary: |-
+      Disables the Nested App Authentication bridge. After this call, any MSAL
+      token requests will receive a `BridgeDisabled` error. The bridge object
+      remains on `window.nestedAppAuthBridge` so existing MSAL listeners are
+      not orphaned. Call `enableNestedAppAuth()` to re-enable.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function disableNestedAppAuth()
+  - name: enableNestedAppAuth()
+    uid: azure-devops-extension-sdk.enableNestedAppAuth
+    package: azure-devops-extension-sdk
+    summary: |+
+      Enable Nested App Authentication (NAA) for this extension.
+
+      Sets up `window.nestedAppAuthBridge` so that MSAL's
+      `createNestablePublicClientApplication` can delegate token acquisition
+      to the Azure DevOps host frame. This avoids cross-origin
+      BroadcastChannel issues that block popup-based auth in iframes.
+
+      Call this after `init()` and before creating an MSAL instance.
+      Requires the host to have NAA support enabled.
+
+      **Example**
+
+      ```
+      await SDK.init();
+      await SDK.enableNestedAppAuth();
+      const pca = await createNestablePublicClientApplication({
+          auth: { clientId: "your-entra-client-id" }
+      });
+      ```
+
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function enableNestedAppAuth(): Promise<void>'
+      return:
+        description: |-
+          A promise that resolves when the bridge is ready, or rejects
+                   if the host does not support NAA.
+        type: Promise&lt;void&gt;
   - name: getAccessToken()
     uid: azure-devops-extension-sdk.getAccessToken
     package: azure-devops-extension-sdk

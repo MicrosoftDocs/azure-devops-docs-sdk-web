@@ -1,0 +1,145 @@
+### YamlMime:TSType
+name: CreateMigrationRequest
+uid: azure-devops-extension-api.CreateMigrationRequest
+package: azure-devops-extension-api
+summary: Request to create an Enterprise Live Migration.
+fullName: CreateMigrationRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: agentPoolName
+    uid: azure-devops-extension-api.CreateMigrationRequest.agentPoolName
+    package: azure-devops-extension-api
+    summary: >-
+      Optional name of the agent pool to run the migration pipeline. When not
+      specified, the pool is determined by region.
+    fullName: agentPoolName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'agentPoolName: string'
+      return:
+        description: ''
+        type: string
+  - name: configOptions
+    uid: azure-devops-extension-api.CreateMigrationRequest.configOptions
+    package: azure-devops-extension-api
+    summary: Optional configuration options for the migration. See ElmConfigOptions.
+    fullName: configOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'configOptions: ElmConfigOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ElmConfigOptions" />
+  - name: gitHubUserToken
+    uid: azure-devops-extension-api.CreateMigrationRequest.gitHubUserToken
+    package: azure-devops-extension-api
+    summary: >-
+      GitHub token (Device Flow or PAT with read:org scope) proving the identity
+      of the migration owner.
+    fullName: gitHubUserToken
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'gitHubUserToken: string'
+      return:
+        description: ''
+        type: string
+  - name: pipelineServiceConnectionId
+    uid: >-
+      azure-devops-extension-api.CreateMigrationRequest.pipelineServiceConnectionId
+    package: azure-devops-extension-api
+    summary: >-
+      Optional. The ID of a GitHub Enterprise service connection to use for
+      pipeline rewiring. May be supplied at create time or attached later via
+      PUT /pipelines. When EnableAutoDiscoverPipelines is opted in but no
+      connection is attached, auto-discovery and clone-definition creation no-op
+      during sync, and cutover is blocked by the cutover-readiness check until a
+      connection is attached.
+    fullName: pipelineServiceConnectionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pipelineServiceConnectionId: string'
+      return:
+        description: ''
+        type: string
+  - name: scheduledCutoverDate
+    uid: azure-devops-extension-api.CreateMigrationRequest.scheduledCutoverDate
+    package: azure-devops-extension-api
+    summary: The UTC date/time representing when the cutover is to occur.
+    fullName: scheduledCutoverDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scheduledCutoverDate: Date'
+      return:
+        description: ''
+        type: Date
+  - name: serviceEndpointId
+    uid: azure-devops-extension-api.CreateMigrationRequest.serviceEndpointId
+    package: azure-devops-extension-api
+    summary: >-
+      Optional. ID of a GitHub Enterprise Server-typed service connection whose
+      PAT has ELM API access on the target GHES instance.
+    fullName: serviceEndpointId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'serviceEndpointId: string'
+      return:
+        description: ''
+        type: string
+  - name: skipValidation
+    uid: azure-devops-extension-api.CreateMigrationRequest.skipValidation
+    package: azure-devops-extension-api
+    summary: Optional. The set of pre-migration validation policies to skip.
+    fullName: skipValidation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'skipValidation: SkipValidationPolicy'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.SkipValidationPolicy" />
+  - name: targetOwnerUserId
+    uid: azure-devops-extension-api.CreateMigrationRequest.targetOwnerUserId
+    package: azure-devops-extension-api
+    summary: >-
+      The GitHub login of the migration owner. Set by the server when
+      GitHubUserToken is provided.
+    fullName: targetOwnerUserId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'targetOwnerUserId: string'
+      return:
+        description: ''
+        type: string
+  - name: targetRepository
+    uid: azure-devops-extension-api.CreateMigrationRequest.targetRepository
+    package: azure-devops-extension-api
+    summary: URL identifying the destination respository of migration.
+    fullName: targetRepository
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'targetRepository: string'
+      return:
+        description: ''
+        type: string
+  - name: validateOnly
+    uid: azure-devops-extension-api.CreateMigrationRequest.validateOnly
+    package: azure-devops-extension-api
+    summary: True if the migration should only perform pre-migration validation.
+    fullName: validateOnly
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'validateOnly: boolean'
+      return:
+        description: ''
+        type: boolean

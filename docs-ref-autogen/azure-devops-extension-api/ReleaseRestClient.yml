@@ -1547,7 +1547,9 @@ methods:
           description: Releases from this release definition Id.
         - id: definitionEnvironmentId
           type: number
-          description: ''
+          description: >-
+            Id of the definition environment. Required when using
+            environmentStatusFilter.
         - id: searchText
           type: string
           description: Releases with names containing searchText.
@@ -1559,7 +1561,13 @@ methods:
           description: Releases that have this status.
         - id: environmentStatusFilter
           type: number
-          description: ''
+          description: >-
+            Filters releases by environment status. Must be used with
+            definitionEnvironmentId. Values: Undefined (0), NotStarted (1),
+            InProgress (2), Succeeded (4), Canceled (8), Rejected (16), Queued
+            (32), Scheduled (64), PartiallySucceeded (128). These are [Flags]
+            values and can be combined (e.g. 4|16 = 20 for Succeeded or
+            Rejected). Cannot be used with sourceBranchFilter.
         - id: minCreatedTime
           type: Date
           description: Releases that were created after this time.

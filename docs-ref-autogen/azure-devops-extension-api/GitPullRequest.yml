@@ -37,6 +37,48 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.IdentityRef" />
+  - name: baseBranchCommit
+    uid: azure-devops-extension-api.GitPullRequest.baseBranchCommit
+    package: azure-devops-extension-api
+    summary: >-
+      The commit of the base branch at the time it was recorded. Used for merge
+      base override and movement detection.
+    fullName: baseBranchCommit
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'baseBranchCommit: GitCommitRef'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.GitCommitRef" />
+  - name: baseBranchName
+    uid: azure-devops-extension-api.GitPullRequest.baseBranchName
+    package: azure-devops-extension-api
+    summary: >-
+      The name of the base branch for stacked pull requests. The diff is
+      computed as base..source.
+    fullName: baseBranchName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'baseBranchName: string'
+      return:
+        description: ''
+        type: string
+  - name: basePullRequestId
+    uid: azure-devops-extension-api.GitPullRequest.basePullRequestId
+    package: azure-devops-extension-api
+    summary: >-
+      The ID of the base pull request in a stack. When set, this PR is stacked
+      on top of the specified PR.
+    fullName: basePullRequestId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'basePullRequestId: number'
+      return:
+        description: ''
+        type: number
   - name: closedBy
     uid: azure-devops-extension-api.GitPullRequest.closedBy
     package: azure-devops-extension-api

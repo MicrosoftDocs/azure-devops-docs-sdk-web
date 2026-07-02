@@ -1,0 +1,87 @@
+### YamlMime:TSType
+name: ElmConfigOptions
+uid: azure-devops-extension-api.ElmConfigOptions
+package: azure-devops-extension-api
+summary: >-
+  Strongly-typed configuration options for an Enterprise Live Migration. Sent on
+  \<c\>CreateMigrationRequest.ConfigOptions\</c\> and echoed back on
+  \<c\>Migration.ConfigOptions\</c\>. All members are optional so the contract
+  can grow additively.
+fullName: ElmConfigOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: enableAutoDiscoverPipelines
+    uid: azure-devops-extension-api.ElmConfigOptions.enableAutoDiscoverPipelines
+    package: azure-devops-extension-api
+    summary: >-
+      Enable auto-discovery of pipelines for the repository. When unset
+      (default), pipelines must be submitted manually via the POST /pipelines
+      API.
+    fullName: enableAutoDiscoverPipelines
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enableAutoDiscoverPipelines: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: enableBoardsGitHubConnection
+    uid: azure-devops-extension-api.ElmConfigOptions.enableBoardsGitHubConnection
+    package: azure-devops-extension-api
+    summary: >-
+      Opt in to automatic Azure Boards GitHub connection provisioning on
+      cutover. Disabled by default.
+    fullName: enableBoardsGitHubConnection
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enableBoardsGitHubConnection: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: skipBranchPolicyMigration
+    uid: azure-devops-extension-api.ElmConfigOptions.skipBranchPolicyMigration
+    package: azure-devops-extension-api
+    summary: >-
+      When \<c\>true\</c\>, branch policies will not be migrated to GitHub
+      rulesets during cutover.
+    fullName: skipBranchPolicyMigration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'skipBranchPolicyMigration: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: skipSourceRepoLockdown
+    uid: azure-devops-extension-api.ElmConfigOptions.skipSourceRepoLockdown
+    package: azure-devops-extension-api
+    summary: >-
+      When \<c\>true\</c\>, the source ADO repository will not be set to
+      read-only (maintenance mode) during cutover.
+    fullName: skipSourceRepoLockdown
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'skipSourceRepoLockdown: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: skipValidation
+    uid: azure-devops-extension-api.ElmConfigOptions.skipValidation
+    package: azure-devops-extension-api
+    summary: >-
+      Pre-migration validation policies to skip. Only honored when the
+      \<c\>Git.EnterpriseLiveMigration.EnableConfigOptionsSkipValidation\</c\>
+      feature flag is on; when honored, overwrites the legacy top-level
+      \<c\>CreateMigrationRequest.SkipValidation\</c\> bitmask.
+    fullName: skipValidation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'skipValidation: ElmSkipValidationOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.ElmSkipValidationOptions" />

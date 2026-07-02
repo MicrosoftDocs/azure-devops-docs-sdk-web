@@ -1,0 +1,93 @@
+### YamlMime:TSType
+name: UpdatePipelinesRequest
+uid: azure-devops-extension-api.UpdatePipelinesRequest
+package: azure-devops-extension-api
+summary: >-
+  Request to update the pipeline rewiring configuration for a migration. All
+  fields are optional — only provided fields are applied.
+fullName: UpdatePipelinesRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: acknowledgePipelineIds
+    uid: azure-devops-extension-api.UpdatePipelinesRequest.acknowledgePipelineIds
+    package: azure-devops-extension-api
+    summary: >-
+      Pipeline definition IDs to acknowledge. Acknowledged pipelines (including
+      complex or failed ones) do not block cutover.
+    fullName: acknowledgePipelineIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'acknowledgePipelineIds: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: addPipelineIds
+    uid: azure-devops-extension-api.UpdatePipelinesRequest.addPipelineIds
+    package: azure-devops-extension-api
+    summary: Pipeline definition IDs to add to the rewiring selection.
+    fullName: addPipelineIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'addPipelineIds: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: removePipelineIds
+    uid: azure-devops-extension-api.UpdatePipelinesRequest.removePipelineIds
+    package: azure-devops-extension-api
+    summary: >-
+      Pipeline definition IDs to remove from the rewiring selection. If a clone
+      exists for a removed pipeline, it will be deleted.
+    fullName: removePipelineIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'removePipelineIds: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: repositoryMappings
+    uid: azure-devops-extension-api.UpdatePipelinesRequest.repositoryMappings
+    package: azure-devops-extension-api
+    summary: >-
+      Repository mappings to add or update. Merged by SourceRepositoryId — if a
+      mapping for the same source repo already exists, it is replaced.
+    fullName: repositoryMappings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'repositoryMappings: RepositoryMapping[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.RepositoryMapping" />[]
+  - name: retryFailedPipelineIds
+    uid: azure-devops-extension-api.UpdatePipelinesRequest.retryFailedPipelineIds
+    package: azure-devops-extension-api
+    summary: >-
+      Pipeline definition IDs to retry. Matching entries in Failed status are
+      reset so the next sync cycle retries them. One-shot: the reset happens
+      immediately and the IDs are not persisted.
+    fullName: retryFailedPipelineIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'retryFailedPipelineIds: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: serviceConnectionId
+    uid: azure-devops-extension-api.UpdatePipelinesRequest.serviceConnectionId
+    package: azure-devops-extension-api
+    summary: Updated GitHub service connection ID.
+    fullName: serviceConnectionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'serviceConnectionId: string'
+      return:
+        description: ''
+        type: string

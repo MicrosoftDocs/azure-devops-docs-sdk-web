@@ -1,0 +1,50 @@
+### YamlMime:TSEnum
+name: PipelineClassification
+uid: azure-devops-extension-api.PipelineClassification
+package: azure-devops-extension-api
+summary: Classification of a pipeline being rewired.
+fullName: PipelineClassification
+remarks: ''
+isDeprecated: false
+fields:
+  - name: Unknown
+    uid: azure-devops-extension-api.PipelineClassification.Unknown
+    package: azure-devops-extension-api
+    summary: Classification has not been determined yet.
+    numericValue: 0
+  - name: Simple
+    uid: azure-devops-extension-api.PipelineClassification.Simple
+    package: azure-devops-extension-api
+    summary: >-
+      Pipeline is in the same project, uses only self repo, no cross-repo
+      templates.
+    numericValue: 1
+  - name: SameRepoTemplates
+    uid: azure-devops-extension-api.PipelineClassification.SameRepoTemplates
+    package: azure-devops-extension-api
+    summary: Pipeline uses extends/template from the same repo (resolves via self).
+    numericValue: 2
+  - name: CrossRepoTemplates
+    uid: azure-devops-extension-api.PipelineClassification.CrossRepoTemplates
+    package: azure-devops-extension-api
+    summary: >-
+      Pipeline references templates from another repo via
+      resources.repositories.
+    numericValue: 3
+  - name: MultiRepoCheckout
+    uid: azure-devops-extension-api.PipelineClassification.MultiRepoCheckout
+    package: azure-devops-extension-api
+    summary: Pipeline checks out multiple repos including the migrated one.
+    numericValue: 4
+  - name: SeparatePipelineRepo
+    uid: azure-devops-extension-api.PipelineClassification.SeparatePipelineRepo
+    package: azure-devops-extension-api
+    summary: >-
+      Pipeline YAML lives in a different repo; the migrated repo is referenced
+      in resources.
+    numericValue: 5
+  - name: CrossProject
+    uid: azure-devops-extension-api.PipelineClassification.CrossProject
+    package: azure-devops-extension-api
+    summary: Pipeline is in a different AzDO project than the migrated repo.
+    numericValue: 6

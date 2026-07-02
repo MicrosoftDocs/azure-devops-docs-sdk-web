@@ -1,0 +1,189 @@
+### YamlMime:TSType
+name: PipelineRewireEntry
+uid: azure-devops-extension-api.PipelineRewireEntry
+package: azure-devops-extension-api
+summary: Represents the rewiring state of a single pipeline within a migration.
+fullName: PipelineRewireEntry
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: acknowledged
+    uid: azure-devops-extension-api.PipelineRewireEntry.acknowledged
+    package: azure-devops-extension-api
+    summary: >-
+      True if the user has acknowledged this pipeline (e.g., confirmed a complex
+      pipeline has been manually fixed). Acknowledged pipelines do not block
+      cutover.
+    fullName: acknowledged
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'acknowledged: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: classification
+    uid: azure-devops-extension-api.PipelineRewireEntry.classification
+    package: azure-devops-extension-api
+    summary: The classification of the pipeline.
+    fullName: classification
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'classification: PipelineClassification'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.PipelineClassification" />
+  - name: cloneDefinitionId
+    uid: azure-devops-extension-api.PipelineRewireEntry.cloneDefinitionId
+    package: azure-devops-extension-api
+    summary: The build definition ID of the clone pipeline, if one has been created.
+    fullName: cloneDefinitionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cloneDefinitionId: number'
+      return:
+        description: ''
+        type: number
+  - name: cloneYamlFile
+    uid: azure-devops-extension-api.PipelineRewireEntry.cloneYamlFile
+    package: azure-devops-extension-api
+    summary: >-
+      The YAML filename of the clone on the elm/migrations branch (for complex
+      cases only).
+    fullName: cloneYamlFile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cloneYamlFile: string'
+      return:
+        description: ''
+        type: string
+  - name: definitionId
+    uid: azure-devops-extension-api.PipelineRewireEntry.definitionId
+    package: azure-devops-extension-api
+    summary: The build definition ID of the pipeline.
+    fullName: definitionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'definitionId: number'
+      return:
+        description: ''
+        type: number
+  - name: errorMessage
+    uid: azure-devops-extension-api.PipelineRewireEntry.errorMessage
+    package: azure-devops-extension-api
+    summary: Error message if the pipeline rewiring failed.
+    fullName: errorMessage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+  - name: findings
+    uid: azure-devops-extension-api.PipelineRewireEntry.findings
+    package: azure-devops-extension-api
+    summary: >-
+      Classification findings that describe why this pipeline is complex. Empty
+      for Simple pipelines.
+    fullName: findings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'findings: PipelineClassificationFinding[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-devops-extension-api.PipelineClassificationFinding"
+          />[]
+  - name: name
+    uid: azure-devops-extension-api.PipelineRewireEntry.name
+    package: azure-devops-extension-api
+    summary: The name of the pipeline definition.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: path
+    uid: azure-devops-extension-api.PipelineRewireEntry.path
+    package: azure-devops-extension-api
+    summary: The folder path of the pipeline definition.
+    fullName: path
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'path: string'
+      return:
+        description: ''
+        type: string
+  - name: projectId
+    uid: azure-devops-extension-api.PipelineRewireEntry.projectId
+    package: azure-devops-extension-api
+    summary: The project ID containing this pipeline.
+    fullName: projectId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'projectId: string'
+      return:
+        description: ''
+        type: string
+  - name: projectName
+    uid: azure-devops-extension-api.PipelineRewireEntry.projectName
+    package: azure-devops-extension-api
+    summary: The project name containing this pipeline.
+    fullName: projectName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'projectName: string'
+      return:
+        description: ''
+        type: string
+  - name: requiredMappings
+    uid: azure-devops-extension-api.PipelineRewireEntry.requiredMappings
+    package: azure-devops-extension-api
+    summary: >-
+      List of repositories referenced by this pipeline that need mappings.
+      Populated when Status is "needsMappings".
+    fullName: requiredMappings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'requiredMappings: RepositoryReference[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.RepositoryReference" />[]
+  - name: status
+    uid: azure-devops-extension-api.PipelineRewireEntry.status
+    package: azure-devops-extension-api
+    summary: The current rewiring status.
+    fullName: status
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'status: PipelineRewireStatus'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.PipelineRewireStatus" />
+  - name: yamlFilename
+    uid: azure-devops-extension-api.PipelineRewireEntry.yamlFilename
+    package: azure-devops-extension-api
+    summary: The YAML filename used by the pipeline definition.
+    fullName: yamlFilename
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'yamlFilename: string'
+      return:
+        description: ''
+        type: string

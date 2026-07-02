@@ -1,0 +1,57 @@
+### YamlMime:TSEnum
+name: MigrationStage
+uid: azure-devops-extension-api.MigrationStage
+package: azure-devops-extension-api
+summary: The current stage of an Enterprise Live Migration.
+fullName: MigrationStage
+remarks: ''
+isDeprecated: false
+fields:
+  - name: Queued
+    uid: azure-devops-extension-api.MigrationStage.Queued
+    package: azure-devops-extension-api
+    summary: >-
+      The migration has been created but pre-check validation has not started
+      yet.
+    numericValue: 0
+  - name: Validation
+    uid: azure-devops-extension-api.MigrationStage.Validation
+    package: azure-devops-extension-api
+    summary: Pre-check validation is in progress.
+    numericValue: 1
+  - name: Synchronization
+    uid: azure-devops-extension-api.MigrationStage.Synchronization
+    package: azure-devops-extension-api
+    summary: Code and PR synchronization is in progress.
+    numericValue: 2
+  - name: Cutover
+    uid: azure-devops-extension-api.MigrationStage.Cutover
+    package: azure-devops-extension-api
+    summary: The migration is in the cutover phase.
+    numericValue: 3
+  - name: Migrated
+    uid: azure-devops-extension-api.MigrationStage.Migrated
+    package: azure-devops-extension-api
+    summary: The migration has been fully migrated.
+    numericValue: 4
+  - name: ReadyForCutover
+    uid: azure-devops-extension-api.MigrationStage.ReadyForCutover
+    package: azure-devops-extension-api
+    summary: >-
+      Initial backfill is complete. Delta synchronization continues until
+      cutover is scheduled.
+    numericValue: 5
+  - name: Degraded
+    uid: azure-devops-extension-api.MigrationStage.Degraded
+    package: azure-devops-extension-api
+    summary: >-
+      GitHub migration provisioning failed; the migration will retry
+      synchronization on the next job run without re-running validation.
+    numericValue: 6
+  - name: ReviewForCutover
+    uid: azure-devops-extension-api.MigrationStage.ReviewForCutover
+    package: azure-devops-extension-api
+    summary: >-
+      Cutover is blocked because failed or blocked resources were detected. The
+      user must review failures and approve before cutover can proceed.
+    numericValue: 7
