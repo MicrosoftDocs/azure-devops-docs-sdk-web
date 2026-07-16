@@ -20,6 +20,31 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: commentOptionForks
+    uid: azure-devops-extension-api.PipelineTriggerSettings.commentOptionForks
+    package: azure-devops-extension-api
+    summary: The comment trigger option for pull requests from forks.
+    fullName: commentOptionForks
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'commentOptionForks: CommentTriggerOption'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.CommentTriggerOption" />
+  - name: commentOptionInternalRepos
+    uid: >-
+      azure-devops-extension-api.PipelineTriggerSettings.commentOptionInternalRepos
+    package: azure-devops-extension-api
+    summary: The comment trigger option for repository-internal pull requests.
+    fullName: commentOptionInternalRepos
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'commentOptionInternalRepos: CommentTriggerOption'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.CommentTriggerOption" />
   - name: enforceJobAuthScopeForForks
     uid: >-
       azure-devops-extension-api.PipelineTriggerSettings.enforceJobAuthScopeForForks
@@ -46,31 +71,6 @@ properties:
       return:
         description: ''
         type: boolean
-  - name: forkCommentOption
-    uid: azure-devops-extension-api.PipelineTriggerSettings.forkCommentOption
-    package: azure-devops-extension-api
-    summary: The comment trigger option for pull requests from forks.
-    fullName: forkCommentOption
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'forkCommentOption: CommentTriggerOption'
-      return:
-        description: ''
-        type: <xref uid="azure-devops-extension-api.CommentTriggerOption" />
-  - name: forkIsCommentRequiredForPullRequest
-    uid: >-
-      azure-devops-extension-api.PipelineTriggerSettings.forkIsCommentRequiredForPullRequest
-    package: azure-devops-extension-api
-    summary: Make comments required to have builds in pull requests from forks.
-    fullName: forkIsCommentRequiredForPullRequest
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'forkIsCommentRequiredForPullRequest: boolean'
-      return:
-        description: ''
-        type: boolean
   - name: forkProtectionEnabled
     uid: azure-devops-extension-api.PipelineTriggerSettings.forkProtectionEnabled
     package: azure-devops-extension-api
@@ -85,31 +85,31 @@ properties:
       return:
         description: ''
         type: boolean
-  - name: internalRepoCommentOption
+  - name: isCommentRequiredForForkedPullRequests
     uid: >-
-      azure-devops-extension-api.PipelineTriggerSettings.internalRepoCommentOption
+      azure-devops-extension-api.PipelineTriggerSettings.isCommentRequiredForForkedPullRequests
     package: azure-devops-extension-api
-    summary: The comment trigger option for repository-internal pull requests.
-    fullName: internalRepoCommentOption
+    summary: Make comments required to have builds in pull requests from forks.
+    fullName: isCommentRequiredForForkedPullRequests
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'internalRepoCommentOption: CommentTriggerOption'
+      content: 'isCommentRequiredForForkedPullRequests: boolean'
       return:
         description: ''
-        type: <xref uid="azure-devops-extension-api.CommentTriggerOption" />
-  - name: internalRepoIsCommentRequiredForPullRequest
+        type: boolean
+  - name: isCommentRequiredForInternalRepoPRs
     uid: >-
-      azure-devops-extension-api.PipelineTriggerSettings.internalRepoIsCommentRequiredForPullRequest
+      azure-devops-extension-api.PipelineTriggerSettings.isCommentRequiredForInternalRepoPRs
     package: azure-devops-extension-api
     summary: >-
       Make comments required to have builds in repository-internal pull
       requests.
-    fullName: internalRepoIsCommentRequiredForPullRequest
+    fullName: isCommentRequiredForInternalRepoPRs
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'internalRepoIsCommentRequiredForPullRequest: boolean'
+      content: 'isCommentRequiredForInternalRepoPRs: boolean'
       return:
         description: ''
         type: boolean

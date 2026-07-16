@@ -25,6 +25,18 @@ properties:
         type: >-
           <xref uid="azure-devops-extension-api.PipelineDebuggerAnalysisOutput"
           />
+  - name: authUrl
+    uid: azure-devops-extension-api.PipelineDebuggerResponse.authUrl
+    package: azure-devops-extension-api
+    summary: GitHub OAuth authorization URL. Present only when NeedsAuth is true.
+    fullName: authUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authUrl: string'
+      return:
+        description: ''
+        type: string
   - name: message
     uid: azure-devops-extension-api.PipelineDebuggerResponse.message
     package: azure-devops-extension-api
@@ -39,3 +51,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: needsAuth
+    uid: azure-devops-extension-api.PipelineDebuggerResponse.needsAuth
+    package: azure-devops-extension-api
+    summary: >-
+      True when the user needs to authorize the GitHub Copilot app before
+      analysis can proceed. The client should open a popup to AuthUrl and retry
+      after authorization completes.
+    fullName: needsAuth
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'needsAuth: boolean'
+      return:
+        description: ''
+        type: boolean

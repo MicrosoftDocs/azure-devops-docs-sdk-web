@@ -1,0 +1,60 @@
+### YamlMime:TSType
+name: AlertStateUpdateForAlert
+uid: azure-devops-extension-api.AlertStateUpdateForAlert
+package: azure-devops-extension-api
+summary: Represents a state update for a single alert within a batch request.
+fullName: AlertStateUpdateForAlert
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: alertId
+    uid: azure-devops-extension-api.AlertStateUpdateForAlert.alertId
+    package: azure-devops-extension-api
+    summary: The ID of the alert to update.
+    fullName: alertId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertId: number'
+      return:
+        description: ''
+        type: number
+  - name: dismissedComment
+    uid: azure-devops-extension-api.AlertStateUpdateForAlert.dismissedComment
+    package: azure-devops-extension-api
+    summary: Comment for dismissal (e.g., "Dismissed by AI scan validation").
+    fullName: dismissedComment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dismissedComment: string'
+      return:
+        description: ''
+        type: string
+  - name: dismissedReason
+    uid: azure-devops-extension-api.AlertStateUpdateForAlert.dismissedReason
+    package: azure-devops-extension-api
+    summary: Reason for dismissal. Required when State == Dismissed.
+    fullName: dismissedReason
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dismissedReason: DismissalType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DismissalType" />
+  - name: state
+    uid: azure-devops-extension-api.AlertStateUpdateForAlert.state
+    package: azure-devops-extension-api
+    summary: >-
+      The state to transition the alert to (Active, Dismissed, or Draft). Draft
+      means the alert is indeterminate and should remain in its current state.
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: State'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.State" />
