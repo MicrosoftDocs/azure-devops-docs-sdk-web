@@ -55,10 +55,9 @@ properties:
     summary: >-
       Optional. The ID of a GitHub Enterprise service connection to use for
       pipeline rewiring. May be supplied at create time or attached later via
-      PUT /pipelines. When EnableAutoDiscoverPipelines is opted in but no
-      connection is attached, auto-discovery and clone-definition creation no-op
-      during sync, and cutover is blocked by the cutover-readiness check until a
-      connection is attached.
+      PUT /pipelines. Required at create time when EnableAutoDiscoverPipelines
+      is opted in: a create request that enables auto-discovery without a
+      pipeline service connection is rejected with HTTP 400.
     fullName: pipelineServiceConnectionId
     remarks: ''
     isDeprecated: false

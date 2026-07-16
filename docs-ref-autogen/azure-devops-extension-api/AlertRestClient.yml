@@ -54,7 +54,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: createAutofixRequest(string, number, string)
+  - name: createAutofixRequest(string, number, string, string)
     uid: azure-devops-extension-api.AlertRestClient.createAutofixRequest
     package: azure-devops-extension-api
     summary: Create an autofix request for the specified alert.
@@ -63,7 +63,7 @@ methods:
     syntax:
       content: >-
         function createAutofixRequest(project: string, alertId: number,
-        repository: string): Promise<AutofixRequest>
+        repository: string, ref?: string): Promise<AutofixRequest>
       parameters:
         - id: project
           type: string
@@ -74,6 +74,11 @@ methods:
         - id: repository
           type: string
           description: The name or ID of the repository.
+        - id: ref
+          type: string
+          description: >-
+            Optional Git ref (e.g. refs/heads/feature/x) the autofix should
+            target. When omitted, the repository's default branch is used.
       return:
         description: ''
         type: >-
@@ -376,7 +381,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: getAlertsByIds(AlertBatchRequest, string, string)
+  - name: getAlertsByIds(AlertBatchRequest, string, string, boolean)
     uid: azure-devops-extension-api.AlertRestClient.getAlertsByIds
     package: azure-devops-extension-api
     summary: Get alerts by alert IDs Currently supports fetching secret alerts only.
@@ -385,7 +390,8 @@ methods:
     syntax:
       content: >-
         function getAlertsByIds(request: AlertBatchRequest, project: string,
-        repository: string): Promise<Alert[]>
+        repository: string, includeSensitiveInformation?: boolean):
+        Promise<Alert[]>
       parameters:
         - id: request
           type: <xref uid="azure-devops-extension-api.AlertBatchRequest" />
@@ -396,10 +402,19 @@ methods:
         - id: repository
           type: string
           description: The name or ID of the repository
+        - id: includeSensitiveInformation
+          type: boolean
+          description: >-
+            Applies to secret alerts only. When false (the default), the
+            'ValidationFingerprintJson' of each secret alert's validation
+            fingerprints is omitted from the response. Set to true to include
+            it; be aware that the validation fingerprint JSON may contain the
+            unencrypted secret and other sensitive data, so exercise caution
+            when requesting it.
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />[]&gt;
-  - name: getAutofixRequestsByAlertId(string, number, string)
+  - name: getAutofixRequestsByAlertId(string, number, string, string)
     uid: azure-devops-extension-api.AlertRestClient.getAutofixRequestsByAlertId
     package: azure-devops-extension-api
     summary: Get all autofix requests for the specified alert.
@@ -408,7 +423,7 @@ methods:
     syntax:
       content: >-
         function getAutofixRequestsByAlertId(project: string, alertId: number,
-        repository: string): Promise<AutofixRequest[]>
+        repository: string, ref?: string): Promise<AutofixRequest[]>
       parameters:
         - id: project
           type: string
@@ -419,6 +434,11 @@ methods:
         - id: repository
           type: string
           description: The name or ID of the repository.
+        - id: ref
+          type: string
+          description: >-
+            Optional Git ref (e.g. refs/heads/feature/x) the autofix should
+            target. When omitted, the repository's default branch is used.
       return:
         description: ''
         type: >-
@@ -505,6 +525,21 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.SarifUploadStatus"
           />&gt;
+  - name: getSarifContent(number)
+    uid: azure-devops-extension-api.AlertRestClient.getSarifContent
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getSarifContent(submissionId: number): Promise<any>'
+      parameters:
+        - id: submissionId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;any&gt;
   - name: getUxFilters(string, string, AlertType)
     uid: azure-devops-extension-api.AlertRestClient.getUxFilters
     package: azure-devops-extension-api
@@ -604,6 +639,34 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;
+  - name: updateAlertsBatch(AlertBatchStateUpdateRequest, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.updateAlertsBatch
+    package: azure-devops-extension-api
+    summary: >-
+      Batch update alert states. Internal use only — used by proof scanners to
+      transition AI-generated draft alerts to Active or Dismissed. Alerts marked
+      as Draft (indeterminate) are left unchanged.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateAlertsBatch(request: AlertBatchStateUpdateRequest,
+        project: string, repository: string): Promise<Alert[]>
+      parameters:
+        - id: request
+          type: >-
+            <xref uid="azure-devops-extension-api.AlertBatchStateUpdateRequest"
+            />
+          description: Request containing alert state updates
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.Alert" />[]&gt;
   - name: updateAlertsMetadata(AlertMetadata[], string, string)
     uid: azure-devops-extension-api.AlertRestClient.updateAlertsMetadata
     package: azure-devops-extension-api

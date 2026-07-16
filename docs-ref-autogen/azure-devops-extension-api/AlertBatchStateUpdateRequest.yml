@@ -1,0 +1,39 @@
+### YamlMime:TSType
+name: AlertBatchStateUpdateRequest
+uid: azure-devops-extension-api.AlertBatchStateUpdateRequest
+package: azure-devops-extension-api
+summary: Request model for batch-updating alert states.
+fullName: AlertBatchStateUpdateRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: alertStateUpdateList
+    uid: >-
+      azure-devops-extension-api.AlertBatchStateUpdateRequest.alertStateUpdateList
+    package: azure-devops-extension-api
+    summary: >-
+      The list of individual alert state changes to apply. Max 100 items per
+      request.
+    fullName: alertStateUpdateList
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertStateUpdateList: AlertStateUpdateForAlert[]'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AlertStateUpdateForAlert" />[]
+  - name: alertType
+    uid: azure-devops-extension-api.AlertBatchStateUpdateRequest.alertType
+    package: azure-devops-extension-api
+    summary: >-
+      The alert type of the alerts being updated. Defaults to AICode if not
+      specified.
+    fullName: alertType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'alertType: AlertType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AlertType" />

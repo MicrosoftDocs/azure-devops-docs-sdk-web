@@ -155,6 +155,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;boolean&gt;
+  - name: completeAnalysisJob(TestAgentCallbackRequest, string)
+    uid: azure-devops-extension-api.TestResultsRestClient.completeAnalysisJob
+    package: azure-devops-extension-api
+    summary: >-
+      Callback endpoint invoked by ADOTestAgent when pipeline debug analysis
+      completes. Writes the result to blob storage and fires a SignalR
+      notification to the UI.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function completeAnalysisJob(request: TestAgentCallbackRequest, project:
+        string): Promise<boolean>
+      parameters:
+        - id: request
+          type: <xref uid="azure-devops-extension-api.TestAgentCallbackRequest" />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
   - name: completeGitHubAuth(string, string)
     uid: azure-devops-extension-api.TestResultsRestClient.completeGitHubAuth
     package: azure-devops-extension-api

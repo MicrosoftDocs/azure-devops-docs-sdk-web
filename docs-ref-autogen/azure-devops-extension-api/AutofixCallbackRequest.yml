@@ -8,6 +8,36 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: errorDetails
+    uid: azure-devops-extension-api.AutofixCallbackRequest.errorDetails
+    package: azure-devops-extension-api
+    summary: >-
+      Optional diagnostic detail captured by the pipeline when the run fails —
+      the tail of the pipeline run log (where the failing step's output is),
+      bounded by the pipeline to fit the trace message size limit. Null or empty
+      for successful runs or when no output was captured.
+    fullName: errorDetails
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorDetails: string'
+      return:
+        description: ''
+        type: string
+  - name: pipelinePlanId
+    uid: azure-devops-extension-api.AutofixCallbackRequest.pipelinePlanId
+    package: azure-devops-extension-api
+    summary: >-
+      Orchestration plan id (System.PlanId) of the pipeline run reporting this
+      callback.
+    fullName: pipelinePlanId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pipelinePlanId: string'
+      return:
+        description: ''
+        type: string
   - name: pullRequestId
     uid: azure-devops-extension-api.AutofixCallbackRequest.pullRequestId
     package: azure-devops-extension-api
@@ -44,3 +74,15 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-devops-extension-api.AutofixCallbackStatus" />
+  - name: tokenUsage
+    uid: azure-devops-extension-api.AutofixCallbackRequest.tokenUsage
+    package: azure-devops-extension-api
+    summary: Total nanoAIU consumed by the autofix binary.
+    fullName: tokenUsage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tokenUsage: number'
+      return:
+        description: ''
+        type: number
