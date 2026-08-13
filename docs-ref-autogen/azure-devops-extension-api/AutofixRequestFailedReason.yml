@@ -1,0 +1,44 @@
+### YamlMime:TSEnum
+name: AutofixRequestFailedReason
+uid: azure-devops-extension-api.AutofixRequestFailedReason
+package: azure-devops-extension-api
+summary: >-
+  Indicates the reason an autofix request failed. Maps to TINYINT (nullable) in
+  the database.
+fullName: AutofixRequestFailedReason
+remarks: ''
+isDeprecated: false
+fields:
+  - name: None
+    uid: azure-devops-extension-api.AutofixRequestFailedReason.None
+    package: azure-devops-extension-api
+    summary: Default sentinel value; not a valid failure reason.
+    numericValue: 0
+  - name: PipelineFailed
+    uid: azure-devops-extension-api.AutofixRequestFailedReason.PipelineFailed
+    package: azure-devops-extension-api
+    summary: The autofix pipeline run completed with a failure status.
+    numericValue: 1
+  - name: PipelineTimedOut
+    uid: azure-devops-extension-api.AutofixRequestFailedReason.PipelineTimedOut
+    package: azure-devops-extension-api
+    summary: The autofix pipeline did not complete within the allowed time window.
+    numericValue: 2
+  - name: CallbackNotReceived
+    uid: azure-devops-extension-api.AutofixRequestFailedReason.CallbackNotReceived
+    package: azure-devops-extension-api
+    summary: The expected callback from the pipeline was never received.
+    numericValue: 3
+  - name: ProcessorJobFailed
+    uid: azure-devops-extension-api.AutofixRequestFailedReason.ProcessorJobFailed
+    package: azure-devops-extension-api
+    summary: The processor job encountered an error.
+    numericValue: 4
+  - name: NoChanges
+    uid: azure-devops-extension-api.AutofixRequestFailedReason.NoChanges
+    package: azure-devops-extension-api
+    summary: >-
+      The pipeline completed successfully but produced no changes, so no pull
+      request was created. A valid terminal outcome surfaced as a failure with
+      this distinct reason.
+    numericValue: 5

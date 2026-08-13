@@ -1,0 +1,95 @@
+### YamlMime:TSType
+name: TestAttachmentMetadataRequestModel
+uid: azure-devops-extension-api.TestAttachmentMetadataRequestModel
+package: azure-devops-extension-api
+summary: >-
+  Request model used by the pipeline agent to register a test attachment whose
+  content has already been uploaded by the caller. Unlike
+  TestAttachmentRequestModel this model carries no file bytes -- only the
+  metadata required to persist a \<c\>tbl_LogStoreAttachmentMapper\</c\> row.
+fullName: TestAttachmentMetadataRequestModel
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: attachmentType
+    uid: >-
+      azure-devops-extension-api.TestAttachmentMetadataRequestModel.attachmentType
+    package: azure-devops-extension-api
+    summary: Attachment type. Defaults to GeneralAttachment.
+    fullName: attachmentType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'attachmentType: string'
+      return:
+        description: ''
+        type: string
+  - name: comment
+    uid: azure-devops-extension-api.TestAttachmentMetadataRequestModel.comment
+    package: azure-devops-extension-api
+    summary: Comment associated with the attachment.
+    fullName: comment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        description: ''
+        type: string
+  - name: dedupId
+    uid: azure-devops-extension-api.TestAttachmentMetadataRequestModel.dedupId
+    package: azure-devops-extension-api
+    summary: >-
+      VsoHash BlobIdentifier value (\<c\>BlobIdentifier.ValueString\</c\>) of
+      the content already published to BlobStore dedup storage by the agent.
+      Required -- the server rejects the request when it is null or empty.
+    fullName: dedupId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dedupId: string'
+      return:
+        description: ''
+        type: string
+  - name: domainId
+    uid: azure-devops-extension-api.TestAttachmentMetadataRequestModel.domainId
+    package: azure-devops-extension-api
+    summary: >-
+      Optional id of the BlobStore dedup domain (ShardSet / ContainerSet) the
+      content was published to. Reserved for the read path to resolve the
+      correct dedup domain; not persisted yet, so it may be omitted.
+    fullName: domainId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'domainId: string'
+      return:
+        description: ''
+        type: string
+  - name: fileName
+    uid: azure-devops-extension-api.TestAttachmentMetadataRequestModel.fileName
+    package: azure-devops-extension-api
+    summary: Attachment filename.
+    fullName: fileName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fileName: string'
+      return:
+        description: ''
+        type: string
+  - name: length
+    uid: azure-devops-extension-api.TestAttachmentMetadataRequestModel.length
+    package: azure-devops-extension-api
+    summary: >-
+      Size in bytes of the stored content, as reported by the BlobStore publish
+      result.
+    fullName: length
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'length: number'
+      return:
+        description: ''
+        type: number
