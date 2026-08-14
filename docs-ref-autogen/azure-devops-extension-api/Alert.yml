@@ -8,6 +8,21 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: additionalInformationMessage
+    uid: azure-devops-extension-api.Alert.additionalInformationMessage
+    package: azure-devops-extension-api
+    summary: >-
+      Additional information message to display for this alert. For ASAN tools,
+      contains crash details formatted in code blocks. For AI code scanning
+      tools, contains markdown content from result.message.markdown.
+    fullName: additionalInformationMessage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'additionalInformationMessage: string'
+      return:
+        description: ''
+        type: string
   - name: additionalProperties
     uid: azure-devops-extension-api.Alert.additionalProperties
     package: azure-devops-extension-api
@@ -20,6 +35,21 @@ properties:
       return:
         description: ''
         type: '{[key: string]: any}'
+  - name: aiMetadataBlobReference
+    uid: azure-devops-extension-api.Alert.aiMetadataBlobReference
+    package: azure-devops-extension-api
+    summary: >-
+      Reference to the AI metadata blob associated with the alert (AI code
+      alerts only). Only returned on demand in Get API with Expand parameter set
+      to be AIMetadataBlobReference (not returned in List API).
+    fullName: aiMetadataBlobReference
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'aiMetadataBlobReference: AIMetadataBlobReference'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AIMetadataBlobReference" />
   - name: alertId
     uid: azure-devops-extension-api.Alert.alertId
     package: azure-devops-extension-api
@@ -153,6 +183,21 @@ properties:
     isDeprecated: false
     syntax:
       content: 'isAutoFixable: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isDevDependency
+    uid: azure-devops-extension-api.Alert.isDevDependency
+    package: azure-devops-extension-api
+    summary: >-
+      Value indicates whether the alert was generated for a development
+      dependency. True indicates development dependency, false indicates runtime
+      dependency, and null indicates unknown or not applicable.
+    fullName: isDevDependency
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isDevDependency: boolean'
       return:
         description: ''
         type: boolean

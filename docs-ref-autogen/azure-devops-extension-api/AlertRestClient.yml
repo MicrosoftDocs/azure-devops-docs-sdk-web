@@ -187,6 +187,29 @@ methods:
       return:
         description: ''
         type: Promise&lt;any&gt;
+  - name: getAiMetadataContent(string, number, string)
+    uid: azure-devops-extension-api.AlertRestClient.getAiMetadataContent
+    package: azure-devops-extension-api
+    summary: Download the full AI metadata blob for an AI code alert.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAiMetadataContent(project: string, alertId: number,
+        repository: string): Promise<any>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: alertId
+          type: number
+          description: ID of the alert whose AI metadata blob should be downloaded.
+        - id: repository
+          type: string
+          description: Name or id of the repository that the alert is part of.
+      return:
+        description: ''
+        type: Promise&lt;any&gt;
   - name: getAlert(string, number, string, string, ExpandOption)
     uid: azure-devops-extension-api.AlertRestClient.getAlert
     package: azure-devops-extension-api

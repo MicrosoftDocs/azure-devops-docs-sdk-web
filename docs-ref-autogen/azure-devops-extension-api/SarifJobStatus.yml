@@ -39,3 +39,20 @@ fields:
       The job is currently being processed in the concurrent processing workflow
       exclusive for no autofix flows
     numericValue: 5
+  - name: Consolidated
+    uid: azure-devops-extension-api.SarifJobStatus.Consolidated
+    package: azure-devops-extension-api
+    summary: >-
+      The original AI SARIF has been superseded by a consolidated SARIF (AI
+      alert consolidation experiment). Terminal status: the original is never
+      processed for alerts and is never re-consolidated.
+    numericValue: 6
+  - name: WaitingConsolidation
+    uid: azure-devops-extension-api.SarifJobStatus.WaitingConsolidation
+    package: azure-devops-extension-api
+    summary: >-
+      An original AI SARIF awaiting consolidation (AI alert consolidation
+      experiment). Excluded from normal alert processing; selected by the
+      consolidation job, which moves it to Consolidated once it has launched the
+      consolidation pipeline.
+    numericValue: 7

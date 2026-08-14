@@ -69,6 +69,21 @@ properties:
       return:
         description: ''
         type: string
+  - name: dependencyScope
+    uid: azure-devops-extension-api.SearchCriteria.dependencyScope
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only alerts for dependencies in this scope are returned. \<br
+      /\>Otherwise, return alerts regardless of scope. \<br /\>Only applicable
+      for dependency alerts.
+    fullName: dependencyScope
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dependencyScope: DependencyScope'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.DependencyScope" />
   - name: fromDate
     uid: azure-devops-extension-api.SearchCriteria.fromDate
     package: azure-devops-extension-api
@@ -334,6 +349,21 @@ properties:
       return:
         description: ''
         type: string
+  - name: toolNames
+    uid: azure-devops-extension-api.SearchCriteria.toolNames
+    package: azure-devops-extension-api
+    summary: >-
+      If provided, only return alerts detected by these tools. \<br /\>Takes
+      precedence over ToolName when populated. \<br /\>Requires the
+      EnableMultiToolSelection feature flag.
+    fullName: toolNames
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'toolNames: string[]'
+      return:
+        description: ''
+        type: string[]
   - name: validity
     uid: azure-devops-extension-api.SearchCriteria.validity
     package: azure-devops-extension-api

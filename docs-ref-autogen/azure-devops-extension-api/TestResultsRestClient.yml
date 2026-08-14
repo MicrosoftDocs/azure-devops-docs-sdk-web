@@ -425,6 +425,46 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
+  - name: >-
+      createTestResultAttachmentMetadata(TestAttachmentMetadataRequestModel,
+      string, number, number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.createTestResultAttachmentMetadata
+    package: azure-devops-extension-api
+    summary: >-
+      Registers metadata for a result-level test attachment whose content has
+      already been uploaded to dedup storage by the caller. The request carries
+      only the attachment metadata (dedup id, size, file name, type etc) and no
+      file bytes.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function
+        createTestResultAttachmentMetadata(attachmentMetadataRequestModel:
+        TestAttachmentMetadataRequestModel, project: string, runId: number,
+        testCaseResultId: number): Promise<TestAttachmentReference>
+      parameters:
+        - id: attachmentMetadataRequestModel
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.TestAttachmentMetadataRequestModel"
+            />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ''
+        - id: testCaseResultId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
   - name: createTestResultMachines(TestResultMachine[], string, number)
     uid: azure-devops-extension-api.TestResultsRestClient.createTestResultMachines
     package: azure-devops-extension-api
@@ -482,6 +522,42 @@ methods:
       parameters:
         - id: attachmentRequestModel
           type: <xref uid="azure-devops-extension-api.TestAttachmentRequestModel" />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
+  - name: >-
+      createTestRunAttachmentMetadata(TestAttachmentMetadataRequestModel,
+      string, number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.createTestRunAttachmentMetadata
+    package: azure-devops-extension-api
+    summary: >-
+      Registers metadata for a run-level test attachment whose content has
+      already been uploaded to dedup storage by the caller. The request carries
+      only the attachment metadata (dedup id, size, file name, type etc) and no
+      file bytes.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createTestRunAttachmentMetadata(attachmentMetadataRequestModel:
+        TestAttachmentMetadataRequestModel, project: string, runId: number):
+        Promise<TestAttachmentReference>
+      parameters:
+        - id: attachmentMetadataRequestModel
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.TestAttachmentMetadataRequestModel"
+            />
           description: ''
         - id: project
           type: string
@@ -584,6 +660,50 @@ methods:
       parameters:
         - id: attachmentRequestModel
           type: <xref uid="azure-devops-extension-api.TestAttachmentRequestModel" />
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ''
+        - id: testCaseResultId
+          type: number
+          description: ''
+        - id: testSubResultId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TestAttachmentReference" />&gt;
+  - name: >-
+      createTestSubResultAttachmentMetadata(TestAttachmentMetadataRequestModel,
+      string, number, number, number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.createTestSubResultAttachmentMetadata
+    package: azure-devops-extension-api
+    summary: >-
+      Registers metadata for a sub-result-level test attachment whose content
+      has already been uploaded to dedup storage by the caller. The request
+      carries only the attachment metadata (dedup id, size, file name, type etc)
+      and no file bytes.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function
+        createTestSubResultAttachmentMetadata(attachmentMetadataRequestModel:
+        TestAttachmentMetadataRequestModel, project: string, runId: number,
+        testCaseResultId: number, testSubResultId: number):
+        Promise<TestAttachmentReference>
+      parameters:
+        - id: attachmentMetadataRequestModel
+          type: >-
+            <xref
+            uid="azure-devops-extension-api.TestAttachmentMetadataRequestModel"
+            />
           description: ''
         - id: project
           type: string
@@ -803,6 +923,33 @@ methods:
           type: string
           description: Project ID or project name
         - id: testSettingsId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: enhanceCoverage(string, string, number)
+    uid: azure-devops-extension-api.TestResultsRestClient.enhanceCoverage
+    package: azure-devops-extension-api
+    summary: >-
+      Browser-clickable entry point for the "Enhance diff coverage" link
+      rendered in PR coverage comments. Dispatches a coverage_test_generation
+      task to ADOTestAgent for the given pull request and redirects the user
+      back to the pull request page.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function enhanceCoverage(project: string, repository: string,
+        pullRequestId: number): Promise<void>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: ''
+        - id: pullRequestId
           type: number
           description: ''
       return:
@@ -1692,7 +1839,9 @@ methods:
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.getTestResultDetailsForBuild
     package: azure-devops-extension-api
-    summary: ''
+    summary: >-
+      Get a summary of test results for a build. To fetch the full
+      TestCaseResult, call Results - Get.
     remarks: ''
     isDeprecated: false
     syntax:
