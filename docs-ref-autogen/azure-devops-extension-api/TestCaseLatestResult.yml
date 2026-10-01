@@ -1,0 +1,114 @@
+### YamlMime:TSType
+name: TestCaseLatestResult
+uid: azure-devops-extension-api.TestCaseLatestResult
+package: azure-devops-extension-api
+summary: >-
+  The latest execution result for a single TestCaseId, returned by the batch
+  "latest result per test case" API (POST testresults/results/latestresults).
+  One instance is returned per requested TestCaseId that has at least one result
+  in a non-deleted run; test cases that were never executed are omitted from the
+  response.
+fullName: TestCaseLatestResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: configurationId
+    uid: azure-devops-extension-api.TestCaseLatestResult.configurationId
+    package: azure-devops-extension-api
+    summary: Configuration that ran most recently for this test case.
+    fullName: configurationId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'configurationId: number'
+      return:
+        description: ''
+        type: number
+  - name: dateCompleted
+    uid: azure-devops-extension-api.TestCaseLatestResult.dateCompleted
+    package: azure-devops-extension-api
+    summary: When the result completed. Null for in-progress results.
+    fullName: dateCompleted
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dateCompleted: Date'
+      return:
+        description: ''
+        type: Date
+  - name: dateStarted
+    uid: azure-devops-extension-api.TestCaseLatestResult.dateStarted
+    package: azure-devops-extension-api
+    summary: When the result started. May be null.
+    fullName: dateStarted
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dateStarted: Date'
+      return:
+        description: ''
+        type: Date
+  - name: outcome
+    uid: azure-devops-extension-api.TestCaseLatestResult.outcome
+    package: azure-devops-extension-api
+    summary: >-
+      The factual last execution outcome (e.g. "Passed", "Failed",
+      "NotExecuted", "Blocked"). This is the stored result outcome and is not
+      subject to ResetToActive suppression.
+    fullName: outcome
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'outcome: string'
+      return:
+        description: ''
+        type: string
+  - name: resultId
+    uid: azure-devops-extension-api.TestCaseLatestResult.resultId
+    package: azure-devops-extension-api
+    summary: Id of the latest result within the run.
+    fullName: resultId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resultId: number'
+      return:
+        description: ''
+        type: number
+  - name: runId
+    uid: azure-devops-extension-api.TestCaseLatestResult.runId
+    package: azure-devops-extension-api
+    summary: Id of the run that contains the latest result.
+    fullName: runId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'runId: number'
+      return:
+        description: ''
+        type: number
+  - name: testCaseId
+    uid: azure-devops-extension-api.TestCaseLatestResult.testCaseId
+    package: azure-devops-extension-api
+    summary: The requested TestCaseId (work item id) this result belongs to.
+    fullName: testCaseId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'testCaseId: number'
+      return:
+        description: ''
+        type: number
+  - name: testPointId
+    uid: azure-devops-extension-api.TestCaseLatestResult.testPointId
+    package: azure-devops-extension-api
+    summary: Test point via which the latest result ran.
+    fullName: testPointId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'testPointId: number'
+      return:
+        description: ''
+        type: number

@@ -1,0 +1,53 @@
+### YamlMime:TSType
+name: WikiPageRef
+uid: azure-devops-extension-api.WikiPageRef
+package: azure-devops-extension-api
+summary: >-
+  A lightweight reference to a wiki page (or a folder node derived from page
+  paths) used by the SQL-backed page-paths listing that powers filter-by-title
+  and page-move scenarios.
+fullName: WikiPageRef
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-devops-extension-api.WikiPageRef.id
+    package: azure-devops-extension-api
+    summary: >-
+      Permanent page id, or \<c\>null\</c\> for a folder-only node derived from
+      page paths (a folder that has no backing .md page of its own).
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+  - name: isParentPage
+    uid: azure-devops-extension-api.WikiPageRef.isParentPage
+    package: azure-devops-extension-api
+    summary: >-
+      True when this entry has descendants (i.e. it is an ancestor of at least
+      one page).
+    fullName: isParentPage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isParentPage: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: path
+    uid: azure-devops-extension-api.WikiPageRef.path
+    package: azure-devops-extension-api
+    summary: Readable path of the page or folder, relative to the wiki root.
+    fullName: path
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'path: string'
+      return:
+        description: ''
+        type: string

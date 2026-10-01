@@ -1,0 +1,28 @@
+### YamlMime:TSType
+name: TestCaseLatestResultsQuery
+uid: azure-devops-extension-api.TestCaseLatestResultsQuery
+package: azure-devops-extension-api
+summary: >-
+  Request body for the batch "latest result per test case" API (POST
+  testresults/results/latestresults). Carries the set of TestCaseIds (work item
+  ids) for which the most recent execution outcome is required.
+fullName: TestCaseLatestResultsQuery
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: testCaseIds
+    uid: azure-devops-extension-api.TestCaseLatestResultsQuery.testCaseIds
+    package: azure-devops-extension-api
+    summary: >-
+      The TestCaseIds (work item ids) to fetch the latest result for. Must
+      contain at least one id and at most the server-configured batch ceiling;
+      requests outside this range are rejected with HTTP 400.
+    fullName: testCaseIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'testCaseIds: number[]'
+      return:
+        description: ''
+        type: number[]

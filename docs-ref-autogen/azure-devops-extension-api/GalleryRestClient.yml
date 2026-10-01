@@ -99,6 +99,28 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.ExtensionDraftAsset"
           />&gt;
+  - name: addPolicy(FederatedCredentialPolicy, string)
+    uid: azure-devops-extension-api.GalleryRestClient.addPolicy
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addPolicy(policy: FederatedCredentialPolicy, publisherName:
+        string): Promise<FederatedCredentialPolicy>
+      parameters:
+        - id: policy
+          type: <xref uid="azure-devops-extension-api.FederatedCredentialPolicy" />
+          description: ''
+        - id: publisherName
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FederatedCredentialPolicy" />&gt;
   - name: associateAzurePublisher(string, string)
     uid: azure-devops-extension-api.GalleryRestClient.associateAzurePublisher
     package: azure-devops-extension-api
@@ -389,6 +411,26 @@ methods:
           description: ''
         - id: version
           type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: deletePolicy(string, number)
+    uid: azure-devops-extension-api.GalleryRestClient.deletePolicy
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deletePolicy(publisherName: string, policyId: number):
+        Promise<void>
+      parameters:
+        - id: publisherName
+          type: string
+          description: ''
+        - id: policyId
+          type: number
           description: ''
       return:
         description: ''
@@ -1431,6 +1473,25 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: listPolicies(string)
+    uid: azure-devops-extension-api.GalleryRestClient.listPolicies
+    package: azure-devops-extension-api
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listPolicies(publisherName: string):
+        Promise<FederatedCredentialPolicy[]>
+      parameters:
+        - id: publisherName
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.FederatedCredentialPolicy" />[]&gt;
   - name: >-
       performEditExtensionDraftOperation(ExtensionDraftPatch, string, string,
       string)

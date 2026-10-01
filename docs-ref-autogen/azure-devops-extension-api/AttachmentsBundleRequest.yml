@@ -1,0 +1,39 @@
+### YamlMime:TSType
+name: AttachmentsBundleRequest
+uid: azure-devops-extension-api.AttachmentsBundleRequest
+package: azure-devops-extension-api
+summary: >-
+  Describes a request to download a set of a work item's attachments as a single
+  bundle.
+fullName: AttachmentsBundleRequest
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: attachmentIds
+    uid: azure-devops-extension-api.AttachmentsBundleRequest.attachmentIds
+    package: azure-devops-extension-api
+    summary: >-
+      The ids of the attachments to include in the bundle. Each must reference
+      an attachment on the target work item's Attachments tab. The maximum
+      number allowed per request is enforced by the server.
+    fullName: attachmentIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'attachmentIds: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: format
+    uid: azure-devops-extension-api.AttachmentsBundleRequest.format
+    package: azure-devops-extension-api
+    summary: The format of the bundle.
+    fullName: format
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'format: Zip'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.BundleFormat.Zip" />

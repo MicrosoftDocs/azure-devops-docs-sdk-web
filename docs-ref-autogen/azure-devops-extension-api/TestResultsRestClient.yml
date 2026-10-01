@@ -155,29 +155,6 @@ methods:
       return:
         description: ''
         type: Promise&lt;boolean&gt;
-  - name: completeAnalysisJob(TestAgentCallbackRequest, string)
-    uid: azure-devops-extension-api.TestResultsRestClient.completeAnalysisJob
-    package: azure-devops-extension-api
-    summary: >-
-      Callback endpoint invoked by ADOTestAgent when pipeline debug analysis
-      completes. Writes the result to blob storage and fires a SignalR
-      notification to the UI.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function completeAnalysisJob(request: TestAgentCallbackRequest, project:
-        string): Promise<boolean>
-      parameters:
-        - id: request
-          type: <xref uid="azure-devops-extension-api.TestAgentCallbackRequest" />
-          description: ''
-        - id: project
-          type: string
-          description: Project ID or project name
-      return:
-        description: ''
-        type: Promise&lt;boolean&gt;
   - name: completeGitHubAuth(string, string)
     uid: azure-devops-extension-api.TestResultsRestClient.completeGitHubAuth
     package: azure-devops-extension-api
@@ -934,8 +911,8 @@ methods:
     summary: >-
       Browser-clickable entry point for the "Enhance diff coverage" link
       rendered in PR coverage comments. Dispatches a coverage_test_generation
-      task to ADOTestAgent for the given pull request and redirects the user
-      back to the pull request page.
+      task to ADOAgenticService for the given pull request and redirects the
+      user back to the pull request page.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1026,31 +1003,6 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: getAnalysisResult(string, number)
-    uid: azure-devops-extension-api.TestResultsRestClient.getAnalysisResult
-    package: azure-devops-extension-api
-    summary: >-
-      Retrieves the AI analysis result for a given build. Downloads the analysis
-      JSON from the TCM Log Store (Azure Blob Storage) where it was uploaded by
-      PipelineDebuggerJob upon completion.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function getAnalysisResult(project: string, buildId: number):
-        Promise<PipelineDebuggerResponse>
-      parameters:
-        - id: project
-          type: string
-          description: Project ID or project name
-        - id: buildId
-          type: number
-          description: Build ID that was analyzed
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="azure-devops-extension-api.PipelineDebuggerResponse" />&gt;
   - name: getBranchesByFlakyTestCaseRefId(string, number)
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.getBranchesByFlakyTestCaseRefId
@@ -1295,6 +1247,33 @@ methods:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestCaseResult"
+          />[]&gt;
+  - name: getLatestTestResultsByTestCaseIds(TestCaseLatestResultsQuery, string)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.getLatestTestResultsByTestCaseIds
+    package: azure-devops-extension-api
+    summary: >-
+      Get the latest result for each requested TestCaseId. Test cases that were
+      never executed (no result in a non-deleted run) are omitted from the
+      response - the caller treats their absence as "never run".
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getLatestTestResultsByTestCaseIds(query:
+        TestCaseLatestResultsQuery, project: string):
+        Promise<TestCaseLatestResult[]>
+      parameters:
+        - id: query
+          type: <xref uid="azure-devops-extension-api.TestCaseLatestResultsQuery" />
+          description: TestCaseLatestResultsQuery carrying the TestCaseIds to look up.
+        - id: project
+          type: string
+          description: Project ID or project name
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.TestCaseLatestResult"
           />[]&gt;
   - name: getResultGroupsByBuild(string, number, string, string[], string)
     uid: azure-devops-extension-api.TestResultsRestClient.getResultGroupsByBuild
@@ -2385,6 +2364,32 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestAttachment"
           />[]&gt;
+  - name: getTestRunAttachmentUploadDetails(string, number)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.getTestRunAttachmentUploadDetails
+    package: azure-devops-extension-api
+    summary: >-
+      Pre-flight for a direct-to-BlobStore run attachment upload: enforces
+      publish permission and returns the dedup domain to publish to. The agent
+      calls this before uploading any bytes.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTestRunAttachmentUploadDetails(project: string, runId:
+        number): Promise<TestAttachmentUploadDetails>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.TestAttachmentUploadDetails" />&gt;
   - name: getTestRunAttachmentZip(string, number, number)
     uid: azure-devops-extension-api.TestResultsRestClient.getTestRunAttachmentZip
     package: azure-devops-extension-api
@@ -3243,6 +3248,51 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.TestToWorkItemLinks"
           />&gt;
+  - name: >-
+      queryTestResultAttachmentsMetadata(string, number, number, string, string,
+      number, boolean)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.queryTestResultAttachmentsMetadata
+    package: azure-devops-extension-api
+    summary: >-
+      Returns metadata for the result-level BlobStore-backed test attachments
+      whose file name starts with fileNamePrefix, or the single attachment
+      identified by attachmentId when it is supplied.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryTestResultAttachmentsMetadata(project: string, runId:
+        number, testCaseResultId: number, attachmentType?: string,
+        fileNamePrefix?: string, attachmentId?: number, fetchMetaData?:
+        boolean): Promise<BlobStoreTestAttachment[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ''
+        - id: testCaseResultId
+          type: number
+          description: ''
+        - id: attachmentType
+          type: string
+          description: ''
+        - id: fileNamePrefix
+          type: string
+          description: ''
+        - id: attachmentId
+          type: number
+          description: ''
+        - id: fetchMetaData
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.BlobStoreTestAttachment" />[]&gt;
   - name: queryTestResultHistory(ResultsFilter, string)
     uid: azure-devops-extension-api.TestResultsRestClient.queryTestResultHistory
     package: azure-devops-extension-api
@@ -3483,6 +3533,49 @@ methods:
           Promise&lt;<xref uid="azure-devops-extension-api.WorkItemReference"
           />[]&gt;
   - name: >-
+      queryTestRunAttachmentsMetadata(string, number, string, string, number,
+      boolean)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.queryTestRunAttachmentsMetadata
+    package: azure-devops-extension-api
+    summary: >-
+      Returns metadata for the run-level BlobStore-backed test attachments whose
+      file name starts with fileNamePrefix, or the single attachment identified
+      by attachmentId when it is supplied. The agent uses this to enumerate
+      BlobStore (dedup) test logs, which are not present in the classic LogStore
+      SAS container and so cannot be listed by the agent directly.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryTestRunAttachmentsMetadata(project: string, runId: number,
+        attachmentType?: string, fileNamePrefix?: string, attachmentId?: number,
+        fetchMetaData?: boolean): Promise<BlobStoreTestAttachment[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ''
+        - id: attachmentType
+          type: string
+          description: ''
+        - id: fileNamePrefix
+          type: string
+          description: ''
+        - id: attachmentId
+          type: number
+          description: ''
+        - id: fetchMetaData
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.BlobStoreTestAttachment" />[]&gt;
+  - name: >-
       queryTestRuns(string, Date, Date, TestRunState, number[], boolean,
       TestRunPublishContext, number[], number[], string, number[], number[],
       number[], number[], string, number, TestRunSortOrderType, string)
@@ -3582,6 +3675,54 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
           />&lt;<xref uid="azure-devops-extension-api.TestRun" />&gt;&gt;
+  - name: >-
+      queryTestSubResultAttachmentsMetadata(string, number, number, number,
+      string, string, number, boolean)
+    uid: >-
+      azure-devops-extension-api.TestResultsRestClient.queryTestSubResultAttachmentsMetadata
+    package: azure-devops-extension-api
+    summary: >-
+      Returns metadata for the sub-result-level BlobStore-backed test
+      attachments whose file name starts with fileNamePrefix, or the single
+      attachment identified by attachmentId when it is supplied.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryTestSubResultAttachmentsMetadata(project: string, runId:
+        number, testCaseResultId: number, testSubResultId: number,
+        attachmentType?: string, fileNamePrefix?: string, attachmentId?: number,
+        fetchMetaData?: boolean): Promise<BlobStoreTestAttachment[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: runId
+          type: number
+          description: ''
+        - id: testCaseResultId
+          type: number
+          description: ''
+        - id: testSubResultId
+          type: number
+          description: ''
+        - id: attachmentType
+          type: string
+          description: ''
+        - id: fileNamePrefix
+          type: string
+          description: ''
+        - id: attachmentId
+          type: number
+          description: ''
+        - id: fetchMetaData
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-devops-extension-api.BlobStoreTestAttachment" />[]&gt;
   - name: queryTestSummaryByRequirement(TestResultsContext, string, number[])
     uid: >-
       azure-devops-extension-api.TestResultsRestClient.queryTestSummaryByRequirement
@@ -3609,28 +3750,6 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.TestSummaryForWorkItem" />[]&gt;
-  - name: queueAnalysisJob(string, number)
-    uid: azure-devops-extension-api.TestResultsRestClient.queueAnalysisJob
-    package: azure-devops-extension-api
-    summary: Queues a pipeline analysis job to analyze failed pipeline jobs using AI.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function queueAnalysisJob(project: string, buildId: number):
-        Promise<PipelineDebuggerResponse>
-      parameters:
-        - id: project
-          type: string
-          description: Project ID or project name
-        - id: buildId
-          type: number
-          description: Build ID to analyze
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="azure-devops-extension-api.PipelineDebuggerResponse" />&gt;
   - name: >-
       testLogStoreEndpointDetailsForBuild(string, number,
       TestLogStoreOperationType)

@@ -45,10 +45,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'onEmptyInputFocus?: () => null | IIdentity[] | PromiseLike<IIdentity[]>'
+      content: 'onEmptyInputFocus?: () => IIdentity[] | PromiseLike<IIdentity[]> | null'
       return:
         description: ''
-        type: () =&gt; null | IIdentity[] | PromiseLike&lt;IIdentity[]&gt;
+        type: () =&gt; IIdentity[] | PromiseLike&lt;IIdentity[]&gt; | null
   - name: onFilterIdentities
     uid: azure-devops-extension-api.IPeoplePickerProvider.onFilterIdentities
     package: azure-devops-extension-api
@@ -61,12 +61,12 @@ properties:
     syntax:
       content: >-
         onFilterIdentities: (filter: string, selectedItems?: IIdentity[]) =>
-        null | IIdentity[] | PromiseLike<IIdentity[]>
+        IIdentity[] | PromiseLike<IIdentity[]> | null
       return:
         description: ''
         type: >-
-          (filter: string, selectedItems?: IIdentity[]) =&gt; null | IIdentity[]
-          | PromiseLike&lt;IIdentity[]&gt;
+          (filter: string, selectedItems?: IIdentity[]) =&gt; IIdentity[] |
+          PromiseLike&lt;IIdentity[]&gt; | null
   - name: onRequestConnectionInformation
     uid: >-
       azure-devops-extension-api.IPeoplePickerProvider.onRequestConnectionInformation
