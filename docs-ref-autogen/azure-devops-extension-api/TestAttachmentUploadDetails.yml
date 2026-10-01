@@ -1,0 +1,54 @@
+### YamlMime:TSType
+name: TestAttachmentUploadDetails
+uid: azure-devops-extension-api.TestAttachmentUploadDetails
+package: azure-devops-extension-api
+summary: >-
+  Response of the pre-flight endpoint the agent calls before publishing an
+  attachment directly to BlobStore dedup storage: it confirms the caller is
+  authorized and returns where to publish.
+fullName: TestAttachmentUploadDetails
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: domainId
+    uid: azure-devops-extension-api.TestAttachmentUploadDetails.domainId
+    package: azure-devops-extension-api
+    summary: >-
+      Dedup domain (ShardSet) id to publish the content to. Populated only when
+      enabled.
+    fullName: domainId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'domainId: string'
+      return:
+        description: ''
+        type: string
+  - name: isBlobStoreUploadEnabled
+    uid: >-
+      azure-devops-extension-api.TestAttachmentUploadDetails.isBlobStoreUploadEnabled
+    package: azure-devops-extension-api
+    summary: >-
+      Whether direct-to-BlobStore upload is enabled for this run; if false, use
+      the classic (SAS) path.
+    fullName: isBlobStoreUploadEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isBlobStoreUploadEnabled: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: testRunId
+    uid: azure-devops-extension-api.TestAttachmentUploadDetails.testRunId
+    package: azure-devops-extension-api
+    summary: The test run these details apply to.
+    fullName: testRunId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'testRunId: number'
+      return:
+        description: ''
+        type: number

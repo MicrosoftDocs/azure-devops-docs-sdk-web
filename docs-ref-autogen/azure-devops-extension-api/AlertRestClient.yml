@@ -23,7 +23,7 @@ constructors:
           type: <xref uid="azure-devops-extension-api.IVssRestClientOptions" />
           description: ''
 methods:
-  - name: autofixCallback(AutofixCallbackRequest, string, string, number)
+  - name: autofixCallback(AutofixCallbackRequest, string, string)
     uid: azure-devops-extension-api.AlertRestClient.autofixCallback
     package: azure-devops-extension-api
     summary: >-
@@ -35,7 +35,7 @@ methods:
     syntax:
       content: >-
         function autofixCallback(callbackRequest: AutofixCallbackRequest,
-        project: string, repository: string, alertId: number): Promise<void>
+        project: string, repository: string): Promise<void>
       parameters:
         - id: callbackRequest
           type: <xref uid="azure-devops-extension-api.AutofixCallbackRequest" />
@@ -48,9 +48,6 @@ methods:
         - id: repository
           type: string
           description: The name or ID of the repository.
-        - id: alertId
-          type: number
-          description: The ID of the alert to create an autofix for.
       return:
         description: ''
         type: Promise&lt;void&gt;
@@ -63,7 +60,7 @@ methods:
     syntax:
       content: >-
         function createAutofixRequest(project: string, alertId: number,
-        repository: string, ref?: string): Promise<AutofixRequest>
+        repository: string, ref: string): Promise<AutofixRequest>
       parameters:
         - id: project
           type: string
@@ -76,14 +73,35 @@ methods:
           description: The name or ID of the repository.
         - id: ref
           type: string
-          description: >-
-            Optional Git ref (e.g. refs/heads/feature/x) the autofix should
-            target. When omitted, the repository's default branch is used.
+          description: The Git ref (e.g. refs/heads/feature/x) the autofix should target.
       return:
         description: ''
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AutofixRequest"
           />&gt;
+  - name: createJob(any, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.createJob
+    package: azure-devops-extension-api
+    summary: Create an alert job.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createJob(body: any, project: string, repository: string):
+        Promise<AlertJob>
+      parameters:
+        - id: body
+          type: any
+          description: ''
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.AlertJob" />&gt;
   - name: createLegalReview(string, string, number, string)
     uid: azure-devops-extension-api.AlertRestClient.createLegalReview
     package: azure-devops-extension-api
@@ -446,7 +464,7 @@ methods:
     syntax:
       content: >-
         function getAutofixRequestsByAlertId(project: string, alertId: number,
-        repository: string, ref?: string): Promise<AutofixRequest[]>
+        repository: string, ref: string): Promise<AutofixRequest[]>
       parameters:
         - id: project
           type: string
@@ -459,9 +477,7 @@ methods:
           description: The name or ID of the repository.
         - id: ref
           type: string
-          description: >-
-            Optional Git ref (e.g. refs/heads/feature/x) the autofix should
-            target. When omitted, the repository's default branch is used.
+          description: The Git ref (e.g. refs/heads/feature/x) the autofix should target.
       return:
         description: ''
         type: >-
@@ -513,6 +529,101 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="azure-devops-extension-api.Branch" />[]&gt;
+  - name: getDraftAlerts(string, string, number, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.getDraftAlerts
+    package: azure-devops-extension-api
+    summary: Get Draft alerts for a repository.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDraftAlerts(project: string, repository: string, top?:
+        number, orderBy?: string, continuationToken?: string):
+        Promise<PagedList<Alert>>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+        - id: top
+          type: number
+          description: The maximum number of alerts to return
+        - id: orderBy
+          type: string
+          description: >-
+            Must be "id", "firstSeen", "lastSeen", "fixedOn", or "severity".
+            Defaults to "id"
+        - id: continuationToken
+          type: string
+          description: >-
+            If there are more alerts than can be returned, a continuation token
+            is placed in the "x-ms-continuationtoken" header. Use that token
+            here to get the next page of alerts
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;&gt;
+  - name: getJob(string, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.getJob
+    package: azure-devops-extension-api
+    summary: Get an alert job by ID.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getJob(project: string, repository: string, jobId: string):
+        Promise<AlertJob>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+        - id: jobId
+          type: string
+          description: The provider-assigned job identifier
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.AlertJob" />&gt;
+  - name: getJobsForAlert(string, string, number, number, string)
+    uid: azure-devops-extension-api.AlertRestClient.getJobsForAlert
+    package: azure-devops-extension-api
+    summary: Get the alert jobs associated with an alert.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getJobsForAlert(project: string, repository: string, alertId:
+        number, top?: number, continuationToken?: string):
+        Promise<PagedList<AlertJob>>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+        - id: alertId
+          type: number
+          description: The ID of the alert
+        - id: top
+          type: number
+          description: The maximum number of jobs to return
+        - id: continuationToken
+          type: string
+          description: >-
+            If there are more jobs than can be returned, a continuation token is
+            placed in the "x-ms-continuationtoken" header. Use that token here
+            to get the next page of jobs
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.AlertJob" />&gt;&gt;
   - name: getOrgLevelAlertsByIds(number[])
     uid: azure-devops-extension-api.AlertRestClient.getOrgLevelAlertsByIds
     package: azure-devops-extension-api
@@ -636,6 +747,54 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="azure-devops-extension-api.AlertValidationRequestStatus" />&gt;
+  - name: >-
+      queryAlerts(AlertMetadataQueryCriteria, string, string, number, string,
+      AlertListExpandOption, string)
+    uid: azure-devops-extension-api.AlertRestClient.queryAlerts
+    package: azure-devops-extension-api
+    summary: Query alerts for a repository by metadata type linkage.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function queryAlerts(criteria: AlertMetadataQueryCriteria, project:
+        string, repository: string, top?: number, orderBy?: string, expand?:
+        AlertListExpandOption, continuationToken?: string):
+        Promise<PagedList<Alert>>
+      parameters:
+        - id: criteria
+          type: <xref uid="azure-devops-extension-api.AlertMetadataQueryCriteria" />
+          description: Metadata type filters to limit the alerts returned
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+        - id: top
+          type: number
+          description: The maximum number of alerts to return
+        - id: orderBy
+          type: string
+          description: >-
+            Must be "id" "firstSeen" "lastSeen" "fixedOn" or "severity" 
+            Defaults to "id"
+        - id: expand
+          type: <xref uid="azure-devops-extension-api.AlertListExpandOption" />
+          description: >-
+            Options to expand the response, e.g. returning alert counts instead
+            of alerts
+        - id: continuationToken
+          type: string
+          description: >-
+            If there are more alerts than can be returned, a continuation token
+            is placed in the "x-ms-continuationtoken" header.  Use that token
+            here to get the next page of alerts
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-devops-extension-api.PagedList"
+          />&lt;<xref uid="azure-devops-extension-api.Alert" />&gt;&gt;
   - name: updateAlert(AlertStateUpdate, string, number, string)
     uid: azure-devops-extension-api.AlertRestClient.updateAlert
     package: azure-devops-extension-api
@@ -715,6 +874,32 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.AlertMetadataChange"
           />[]&gt;
+  - name: updateJob(any, string, string, string)
+    uid: azure-devops-extension-api.AlertRestClient.updateJob
+    package: azure-devops-extension-api
+    summary: Update an alert job.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateJob(patch: any, project: string, repository: string,
+        jobId: string): Promise<AlertJob>
+      parameters:
+        - id: patch
+          type: any
+          description: The patch describing the fields to update
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: repository
+          type: string
+          description: The name or ID of the repository
+        - id: jobId
+          type: string
+          description: The provider-assigned job identifier
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.AlertJob" />&gt;
   - name: uploadOrgSarif(string)
     uid: azure-devops-extension-api.AlertRestClient.uploadOrgSarif
     package: azure-devops-extension-api

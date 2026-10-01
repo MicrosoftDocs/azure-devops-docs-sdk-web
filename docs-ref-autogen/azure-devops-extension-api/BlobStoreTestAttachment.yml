@@ -1,0 +1,145 @@
+### YamlMime:TSType
+name: BlobStoreTestAttachment
+uid: azure-devops-extension-api.BlobStoreTestAttachment
+package: azure-devops-extension-api
+summary: >-
+  A TestAttachment enriched with the dedup storage coordinates needed to
+  download the content directly from BlobStore. Returned only by the internal
+  BlobStore attachment-metadata query; the coordinates live on this derived type
+  so the base TestAttachment contract is unchanged.
+fullName: BlobStoreTestAttachment
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: dedupId
+    uid: azure-devops-extension-api.BlobStoreTestAttachment.dedupId
+    package: azure-devops-extension-api
+    summary: VsoHash dedup id (BlobIdentifier.ValueString) of the stored content.
+    fullName: dedupId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dedupId: string'
+      return:
+        description: ''
+        type: string
+  - name: domainId
+    uid: azure-devops-extension-api.BlobStoreTestAttachment.domainId
+    package: azure-devops-extension-api
+    summary: Dedup domain (ShardSet / ContainerSet) id the content was published to.
+    fullName: domainId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'domainId: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: attachmentType
+    uid: azure-devops-extension-api.BlobStoreTestAttachment.attachmentType
+    package: azure-devops-extension-api
+    summary: Attachment type.
+    fullName: attachmentType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'attachmentType: AttachmentType'
+      return:
+        description: ''
+        type: <xref uid="azure-devops-extension-api.AttachmentType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestAttachment.attachmentType](xref:azure-devops-extension-api.TestAttachment.attachmentType)
+  - name: comment
+    uid: azure-devops-extension-api.BlobStoreTestAttachment.comment
+    package: azure-devops-extension-api
+    summary: Comment associated with attachment.
+    fullName: comment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'comment: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestAttachment.comment](xref:azure-devops-extension-api.TestAttachment.comment)
+  - name: createdDate
+    uid: azure-devops-extension-api.BlobStoreTestAttachment.createdDate
+    package: azure-devops-extension-api
+    summary: Attachment created date.
+    fullName: createdDate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'createdDate: Date'
+      return:
+        description: ''
+        type: Date
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestAttachment.createdDate](xref:azure-devops-extension-api.TestAttachment.createdDate)
+  - name: fileName
+    uid: azure-devops-extension-api.BlobStoreTestAttachment.fileName
+    package: azure-devops-extension-api
+    summary: Attachment file name
+    fullName: fileName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fileName: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestAttachment.fileName](xref:azure-devops-extension-api.TestAttachment.fileName)
+  - name: id
+    uid: azure-devops-extension-api.BlobStoreTestAttachment.id
+    package: azure-devops-extension-api
+    summary: ID of the attachment.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestAttachment.id](xref:azure-devops-extension-api.TestAttachment.id)
+  - name: size
+    uid: azure-devops-extension-api.BlobStoreTestAttachment.size
+    package: azure-devops-extension-api
+    summary: Attachment size.
+    fullName: size
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'size: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestAttachment.size](xref:azure-devops-extension-api.TestAttachment.size)
+  - name: url
+    uid: azure-devops-extension-api.BlobStoreTestAttachment.url
+    package: azure-devops-extension-api
+    summary: Attachment Url.
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TestAttachment.url](xref:azure-devops-extension-api.TestAttachment.url)
+extends: <xref uid="azure-devops-extension-api.TestAttachment" />

@@ -139,7 +139,7 @@ properties:
         description: ''
         type: string
 methods:
-  - name: addQueryParam(string, null | string, boolean)
+  - name: addQueryParam(string, string | null, boolean)
     uid: azure-devops-extension-api.Uri.addQueryParam
     package: azure-devops-extension-api
     summary: Adds a query string parameter to the current uri
@@ -147,14 +147,14 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function addQueryParam(name: string, value: null | string,
+        function addQueryParam(name: string, value: string | null,
         replaceExisting?: boolean)
       parameters:
         - id: name
           type: string
           description: The Query parameter name
         - id: value
-          type: null | string
+          type: string | null
           description: The Query parameter value
         - id: replaceExisting
           type: boolean
@@ -201,14 +201,14 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getQueryParam(name: string): undefined | null | string'
+      content: 'function getQueryParam(name: string): string | null | undefined'
       parameters:
         - id: name
           type: string
           description: Query parameter name
       return:
         description: ''
-        type: undefined | null | string
+        type: string | null | undefined
   - name: removeQueryParam(string)
     uid: azure-devops-extension-api.Uri.removeQueryParam
     package: azure-devops-extension-api

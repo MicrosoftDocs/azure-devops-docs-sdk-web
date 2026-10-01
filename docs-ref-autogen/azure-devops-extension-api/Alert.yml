@@ -40,8 +40,8 @@ properties:
     package: azure-devops-extension-api
     summary: >-
       Reference to the AI metadata blob associated with the alert (AI code
-      alerts only). Only returned on demand in Get API with Expand parameter set
-      to be AIMetadataBlobReference (not returned in List API).
+      alerts only). Only returned on demand when the Expand parameter is set to
+      AIMetadataBlobReference.
     fullName: aiMetadataBlobReference
     remarks: ''
     isDeprecated: false
@@ -174,10 +174,11 @@ properties:
     uid: azure-devops-extension-api.Alert.isAutoFixable
     package: azure-devops-extension-api
     summary: >-
-      Value indicates whether the alert can be auto-fixed by Copilot Autofix.
-      True when the alert is a code scanning alert detected by CodeQL with a
-      supported rule. Null when the value has not been computed for this code
-      path.
+      Value indicates whether Copilot Autofix can currently be run on the alert.
+      True when Copilot Autofix is available for the organization and enabled on
+      the repository, the alert is a code scanning alert detected by CodeQL with
+      a supported rule, and the alert's ref is eligible. Null when the value has
+      not been computed for this code path.
     fullName: isAutoFixable
     remarks: ''
     isDeprecated: false
@@ -325,7 +326,7 @@ properties:
     package: azure-devops-extension-api
     summary: >-
       Title will only be rendered as text and does not support markdown
-      formatting. There is a maximum character limit of 256.
+      formatting. There is a maximum character limit of 512.
     fullName: title
     remarks: ''
     isDeprecated: false

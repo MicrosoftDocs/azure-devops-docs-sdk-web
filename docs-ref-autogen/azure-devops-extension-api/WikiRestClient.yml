@@ -491,6 +491,31 @@ methods:
         type: >-
           Promise&lt;<xref uid="azure-devops-extension-api.WikiPageDetail"
           />&gt;
+  - name: getPagePaths(string, string, GitVersionDescriptor)
+    uid: azure-devops-extension-api.WikiRestClient.getPagePaths
+    package: azure-devops-extension-api
+    summary: Gets the list of page paths for all pages in the specified wiki version.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPagePaths(project: string, wikiIdentifier: string,
+        versionDescriptor?: GitVersionDescriptor): Promise<WikiPageRef[]>
+      parameters:
+        - id: project
+          type: string
+          description: Project ID or project name
+        - id: wikiIdentifier
+          type: string
+          description: Wiki ID or wiki name.
+        - id: versionDescriptor
+          type: <xref uid="azure-devops-extension-api.GitVersionDescriptor" />
+          description: >-
+            GitVersionDescriptor for the wiki branch. Defaults to the default
+            branch for ProjectWiki. Required for CodeWiki.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-devops-extension-api.WikiPageRef" />[]&gt;
   - name: getPagesBatch(WikiPagesBatchRequest, string, string, GitVersionDescriptor)
     uid: azure-devops-extension-api.WikiRestClient.getPagesBatch
     package: azure-devops-extension-api

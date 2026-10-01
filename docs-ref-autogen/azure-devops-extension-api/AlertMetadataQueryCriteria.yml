@@ -1,0 +1,28 @@
+### YamlMime:TSType
+name: AlertMetadataQueryCriteria
+uid: azure-devops-extension-api.AlertMetadataQueryCriteria
+package: azure-devops-extension-api
+summary: >-
+  Criteria for the POST alerts query endpoint. Only metadata type filtering is
+  supported here; use GET alerts with SearchCriteria for other filters.
+fullName: AlertMetadataQueryCriteria
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: metadataTypeFilters
+    uid: azure-devops-extension-api.AlertMetadataQueryCriteria.metadataTypeFilters
+    package: azure-devops-extension-api
+    summary: >-
+      Filters alerts by linkage to specific metadata types (e.g. "pullRequest",
+      "WorkItem"). A value of "true" requires the alert to be linked to that
+      metadata type, "false" requires it not be linked. All entries must be
+      satisfied for an alert to be returned.
+    fullName: metadataTypeFilters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metadataTypeFilters: {[key: string]: boolean}'
+      return:
+        description: ''
+        type: '{[key: string]: boolean}'
